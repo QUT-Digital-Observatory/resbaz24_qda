@@ -1,0 +1,155 @@
+Your job is to analye a series of Reddit Comments are drawn from sbumissions related to the 2024 Queensland State Election. The comments are drawn from a collection of comments before, during and after the election itself on the 26th of October. The parties that sought election were the Australian Labor Party (ALP), the Liberal National Party (LNP), the Queensland Greens (Greens), One Nation and Katter's Australian Party. The LNP prevailed in the election, with David Crisafulli becoming the new Premier of Queensland. 
+We have identified several key issues that the major parties campaigned on during the 2024 Queensland State Election: Youth Crime (YC), Cost of Living (COL), Health (H), Energy and Infrastructure (EI), and Abortion Laws (AL). Below is a summary of each party's position on these issues:
+Youth Crime (YC):
+- LNP: Advocated for stricter penalties for young offenders, including the 'Adult Crime, Adult Time' policy, proposing that serious offenses committed by youths be met with adult sentencing. 
+- Labor: Focused on rehabilitation and prevention programs, aiming to address the root causes of youth crime through community engagement and support services.
+
+Cost of Living (COL):
+- LNP: Proposed measures such as abolishing stamp duty on new builds for first home buyers and re-establishing the productivity commission to review building industry regulations, aiming to alleviate housing costs. 
+- Labor: Introduced initiatives like 50-cent public transport fares, a $1,000 energy rebate, and free lunches for state primary school students to ease cost-of-living pressures.
+
+Health (H):
+- LNP: Committed $590 million to an 'Easier Access to Health Services Plan,' aiming to reduce ambulance ramping and hire additional healthcare workers. 
+- Labor: Focused on maintaining and expanding healthcare services, addressing hospital capacity issues, and investing in new health infrastructure.
+
+Energy and Infrastructure (EI):
+- LNP: Criticized Labor's Pioneer-Burdekin Pumped Hydro Project as financially unviable and canceled it upon taking office, opting to explore smaller-scale hydro projects instead. 
+- Labor: Proposed large-scale renewable energy projects, including the Pioneer-Burdekin Pumped Hydro Project, to transition towards 80% renewable energy by 2035.
+
+Abortion Laws (AL):
+- LNP: Stated there would be 'no changes' to abortion laws under their government, maintaining the status quo established in 2018. 
+- Labor Party: Supported the existing abortion laws and opposed any attempts to repeal or amend them. Asserts that LNP intend to restrict access to abortion services based on the views of some of their members.
+
+Analyze Reddit comments and code them based on the positions they support or oppose concerning these issues. You will output JSON, so valid values are strings or null. Use the following codes: YC, COL, H, EI, AL. If a comment's position is unclear or does not pertain to these issues, output null.
+
+Secondly identify which party the comment appears to support. Use the party code ALP, LNP, Greens, ON, KAP if this can be determined, otherwise a null value if undetermined.
+
+Output JSON as a list of objects where each object has an "id" (integer) property of the comment id, an "issue" property set to the issue code string (or null value), and a "party" property set to the party code string or null value. Null means JSON null, not a string. Values MUST be quoted, e.g. {"party": "LNP"} unless they are null, e.g. {"party": null}. Comments follow:
+
+1. I really hope they keep it. This is coming from someone who never uses public transport. I would say it's been 5+ years since I have sat on a bus/train/ferry etc. So no vested interest here. First thing is public transport is a loss to the government. It always has been and always will be. The cost of maintaining the infrastructure, be it rail, the vehicles (rail, bus, ferry), terminals etc, it's always going to cost more than the income it makes. Just accept it. Just like schools, hospitals, roads, you are all paying for stuff you may not need right now. I get the whole "user pays" thing, but when you are taxing people sometimes $10 each way to get to work, it can hurt. Not too bad if you are headed to an ok paid job in the city, but if you are a struggling family, and you need to cross town to get to your second/third job for a few hour shift, that shit must hurt. The biggest thing I see from this and I hope those who need it use it. The families who are struggling to make ends meet. I am really hoping they take advantage of the 50c fares to go out on a weekend. Whilst a lot of us take it for granted that you just fill up the car and go somewhere, that $50 to get to the coast and back isn't a reality for some people. Being able to take your family of 4 to the coast and back for $4 is amazing I think. (I am assuming you can get to Surfers etc on the 50c fares). Anyway, like a lot of other people, assume it will get cut next budget. I really hope LNP has turned a page and actually does what is right for it's people this time round. They know what happens if they march in with there "cut everything attitude".
+2. I still can't believe people were dumb enough to vote these pricks into power. Guarantee they scrap the 50c fares and then look to sell off more of our critical assets.
+3. It sucks that the good ideas are on pause for 4 years. Now we need to wait it out, undo the bs the LNP implements when Labor wins the next election (I do predict a one term government with buyers remorse being obvious within 6mths).. then we have to win again to start making real progress. Already waiting for the 2032 election, then.
+4. I hope so 🙏 But who knows tbh
+5. It's 100% on the way out the moment they think they can get away with it. LNP BCC was livid, absolutely *furious* about the change - there's no way they're not in the ear of their cousins. But admitting to scrapping it would've cost LNP the election, even with the absurd 'youth crime' beat-up.
+6. lol.... 6 months then can't afford it... jack up prices higher than the old rate
+7. Fuck no are you kidding me? That would involve caring about the poors and acknowledging that the government has a responsibility and citizens lives are negatively affected by things outside their control. None of that makes money for any of the LNP politicians.
+8. They will not continue. Various LNP members have already started playing it up as motorists subsidising transit users. Once it becomes enough of an identity issue they'll take it away.
+9. Yes it will. He broke the promise of quitting if youth crime doesn't go down before the election even finished. If you want an idea of what to expect, look at Campell Newman and what the LNP did back then. If you are struggling now, it is only going to get worse as we lose public services to pay for tax cuts to the rich.
+10. They will keep it until theyve destroyed the budget with privatisation and benefits for their mates at which point they'll blame Labor for a budget mess and fuck the taxpayers with cuts to services. This will be first to go. Alternatively, they'll sell off the contract to their mates for an absolute song and pennies on the dollar (because the fares are only 50c which devalues the rev line) and then the privatisation will lead to jacking the prices up beyond what they used to be.
+11. Nope. They’ll keep it for the original 6 month trial at best. Which should end in Feb.
+12. They said they would match 50c fares. Then it was “we will keep it for the first term”, except - they never said what term. So I reckon it means “they’ll keep it for the remaining term of the trial” which is like… only a few months more of the original 6 months. 5th of August to 5th of Feb.
+13. It's a Labor policy. There's no chance that LNP will accept that it's good policy... Better fiscal manager yada yada something something or whatever....
+14. Nope. Transurban are losing too many "future profits" and will ask the LNP to scrap it. The LNP don't have the spine to say no.
+15. One of the talking points against ALP in my circles from LNP voters is that the 50 cents fair could of been free if the ALP turned off the go cards. Now to throw around that rhetoric and not factor in that the usage data is linked to tickets and go cards which will help provide the direction for the future was a bit silly to me. The key point of the trial was to see how the public would change their habits which I have interpreted as catch as much PT as I can to see real significant change in the PT network. The investigations have to happen, our economy can't afford to pay to sit in traffic.
+16. Your lefty fear-mongering friends are wrong. They have already said they will keep it. [https://www.abc.net.au/news/2024-09-15/qld-50-cent-public-transport-fares-trial-extended-permanent/104353220](https://www.abc.net.au/news/2024-09-15/qld-50-cent-public-transport-fares-trial-extended-permanent/104353220)
+17. I’m pretty sure they said it would stay for 4 years
+18. They promised they'd keep it but I give it 6 months.
+19. ![gif](giphy|h06qlhGBIYvTQY4oPw)
+20. Hell No! LNP is all about the $$$
+21. No.
+22. My guess is no. The LNP are scrapping the mining royalties as well as numerous other taxes like GP payroll tax. I'm not sure how Crisafulli is planning to pay for any of his promises given QLD will be billions of dollars poorer under him 🤷
+23. Non core promises
+24. Libs will weasel out of it, send them money to rich miners instead.
+25. LNP masters will want what they paid for and the resources rent tax will be removed. Without it the 50cents have no funding LNP will claim Labor couldn't afford it and it has to stop. No more cost of living relief with power bills either. It only gets worse from here.
+26. Nope. Once they cut the mining royalties the 50 cent fares will go with them.
+27. If they keep it, cool. If they don't, it'll be an unpopular move because not only can Labor go to the next election promising to restore it, Labor can run the line that the traffic congestion is because the 50c fares were abolished. Labor knew this when they introduced it. It's a trap, in the same way that Morrison did with AUKUS.
+28. I will be destroyed if 50c fares on public transport are scrapped.
+29. They said they would continue so they should but then this is politics so….
+30. The LNP said they'll keep it but I'm pretty sure that's a blatant lie. They're likely to cut the coal royalties that fund it, and they've been pretty shifty about how they're going to fund anything (which probably means they actually plan to make huge cuts to public services). Newman 2.0. Hope I'm wrong though.
+31. I’d love to see how much trade has increased in the CBD and West End etc since the fares were set, I bet it’s a net positive
+32. It should just be free. It would get rid of the need for cards, the payment infrastructure, paying partners like news agents, the need for inspectors, card readers, service for the infrastructure and the web site.
+33. The LNP have commited to 50 cent fares until the end of there 1st term If they actually stick to that promise, we will have to wait and see
+34. I live on the GC but my solicitor is in Brisbane CBD. I’ve had to make multiple trips up in the last few weeks, & it’s been sooooo wonderful to a) only pay 50c, & b) not have to drive & pay for parking. It’s been fantastic. I truly hope Crisafullashit keeps it in place. I did not vote for him. But if he keeps this promise I might respect him more.
+35. Cynical me says it was always going back to normal at the end of the trial no matter who won. Labor tried to use it to simply buy votes and LNP will view it as an unsustainable.
+36. RemindMe! 6 months
+37. Probably not, but I really really hope it does!
+38. Hasn't really done much since 'in da club' but who knows he might give it another crack
+39. I imagine it will be phased out or not renewed at the end of the trial period.
+40. Well if they are, it would be one of the few times a political party kept its promise.
+41. It’s a keeper!
+42. Yes, they said they would keep it.
+43. They'll disappear by March.
+44. From $12 return a day to the city to $1 return a day, with free rail parking has been bliss. I’ll be fuming if they take it away. With grocery and rent prices so high, it’s been a small relief
+45. They'll continue for a while. Then they'll quietly scrap them in the next budget.
+46. They are giving $4 billion per year back to the mining companies so it’s going to be hard to keep funding anything nice.
+47. Hahahahhahaha nothings gonna be kept. Im looking forward to paying 1500 bucks for a 20 minute ambulance ride fuck the LNP
+48. Recognising that this is a Brisbane sub, but the 50c fares are only a winner for people with access to public transport. I am a big supporter of affordable public transport: we should have more routes and low fares. But here in Toowoomba the busses are slower than walking (according to my Google Maps searches when the 50c fare thing began) so the impact up here has been minimal. I fear that the LNP will be able to stick to the 50c fares for a long period, but cut services so "save money". Big quote marks around that last part because public transport is an investment that reduces spending on roads and healthcare.
+49. I hope so!
+50. this popped up on my feed and for a second i thought you were talking about the rapper 50 cent
+51. Sure. Services will now run once an hour.
+52. Nope. They will scrap it once the trial ends citing “a shit budget”
+53. I think it will be kept. The election was far closer than anyone thought it would be, and Crisafulli would want to be on a far stronger majority than he currently is in order to be the Grinch Who Stole 50c Fares.
+54. I think given the popularity of this, especially in some of the outer Brisbane, Gold and Sunshine Coast areas where big savings are at stake for commuters, they won’t get rid of the cheaper fares. They may not ideologically agree with the policy but will keep it out of self preservation.
+55. They can at least wait until after new year or Easter, give folks a chance to save $50-90 a week, catch up on bills or spend it on another priority. Also a great RTO incentive (would prefer an office or view window and less Teams racket) Transport is increasingly becoming subsidised in many countries and cities around the world [Wikipedia](https://en.m.wikipedia.org/wiki/Free_public_transport)
+56. Is Curtis Jackson in the transport industry now? What doesn’t he do?
+57. Sure they'll cut some other services somewhere to pay for it. Probably in regional areas so Brisbane people don't notice.
+58. I think they will keep them. The LNP would be able to spin it to the mining companies as a long term investment in the LNP maintaining power more than it being a hindrance or of public benefit. IIRC, Townsville wants a light rail as well, and they are in the review stages of the process now. So that's another potential reason for them to keep them if that gets built.
+59. If there’s enough money left over once Crisafuckli has given it all to fossil fuel companies, we might have a chance.
+60. They promised they'd keep it a term. I think the numbers would be pretty irrefutable from a purely money saving (and we know that's what the LNP love) standpoint, even without considering the long term social and mental health savings - less money spent on catching fare evaders, more people into the CBD (what they've been crowing about for years), less money cleaning up after car crashes, less money spent on fixing roads due to less cars etc etc etc
+61. Lots of unions want it to be kept and not to mention the LNP said they'll keep it permanently too. If it gets axed a huge uproar will happen and will be forced to keep the 50 cent fares unless they lower it to 25 cents.
+62. I really hope they continue the 50 cent fares. It's been such a game changer for so many, making public transport so much more accessible
+63. I hope so. We have been going into the city and surrounding areas more.
+64. It's simple, if they take away 50c fares everyone will go back the old method, free fares. It's better to get 50c from everyone than nothing from most people.
+65. I think LNP voters will like this as much as anyone else. I mean while you drive your Monopoly Man car to work, wouldn't you rather all the poors on the train or crammed into buses?
+66. He will get rid of 50c fares electricity rebate etc etc but mining companies will get all there taxes decreased - I can’t believe Qlders fell for his BS
+67. They promised to keep it. But they also promised to scrap the minerals taxes that pay for it. So don't count me as confident. The reality is they will likely prioritise repealing the minerals taxes and then just claim that they really wanted to keep the 50 cent fares but they just can't afford it. Rememeber their voters are largely regional and don't get to benefit as much from the fares as those in the SE. They will only pay a minor penalty electorally if they get rid of them.
+68. Doesn't it effectively put the roaming fare checkers out of the job though? Not much point checking for 50 cent fares. May as well make it FREE.
+69. LNP committed to the first term at least but it's not like they haven't gone back on promises before so the only thing we can do is wait and see. With Crisafulli seeming to want a 2nd term after four years, I don't see them doing anything too crazy in their first term.
+70. My prediction; Gov will drop royalties, maybe packaged with a small increase to Gas royalties for political expedience. They'll then blame Labor for budget miss management and repeal everything but the electricity subsidy, and use it as an excuse to cut the public sector. We will boot them out in 4, 8 if they kick the slashing out a term, and do the same cycle again.
+71. I'm more interested how is its going to remain viable. if it can be viable then perhaps other states could look at this. TBH I don't think its viable especially over the long term of maintenance costs, otherwise it would have to come out of the pocket of something else.
+72. 0% chance keeping
+73. Greatest thing the qld government have done in recent time that actually affects me in a positive way.
+74. Maybe but we can guarantee we are never seeing any other cost of living relief
+75. It's the LNP, what do you think?
+76. 50c fares will be gone by Xmas.
+77. Probably not - they will have a review (with pre-determined outcomes) and then use the findings to change whatever they want.
+78. I can't imagine them choosing to get rid of 50c fares. While it doesn't matter much to their regional seats, it matters a huge amount to many of their SEQ seats. It would be hard to win back all their Gold Coast seats for instance if they were the party that made traveling to work $100 more expensive each week. Even losing 2 Gold Coast seats is all they need to be potentially looking at a hung government at the next election... so it stands to reason they will want to avoid that political poison. What it sounds like they will do is try to take a "make the regions appreciate the 50c fares" approach. What form this will come in, I'm not too sure, but my guess would be that it involves instructing Translink to purchase more bus companies operating in the regions and running more buses there. If they manage to get the rail built all the way to Maroochydore and implement the busway plan there that will also get the Sunshine Coast hooked on 50c fares over time.
+79. Nope
+80. They'll use "fiscally responsible choices" to cut everything the mining tax paid for. Promises made, promises dropped.
+81. Nah.
+82. i think it’ll stick around until next august, then they’ll pull them and say the budget has to go elsewhere (mining, most likely)
+83. It was only an election ploy
+84. it was only a temp thing to get votes so no
+85. I think they'll keep their promise on this one. It's such an easy vote winner and their plan is to win a second term by matching Labor on all of their policies, including health.
+86. Nope. With the change of government, their vested interests in the Queensland Resources Council, that party's policies and past decisions, With natural resource royalties likely about to be cut that funds this initiative, I fully expect to be paying $6 one way again.
+87. Of course they’ll scrap it. Then they’ll double the original fairs to get the money back. It’s LNP. Anyway they can screw over the working class.
+88. It would certainly be a pretty stupid move politically to get rid of the policy. But so was sacking half the public service, and that’s what Newman did. Don’t underestimate the stupidity of the QLD LNP. They didn’t get in by being politically shrewd. They know how to play the ‘tough on crime’ card and not much else, to be honest.
+89. No. I think it will go as will the 20% off rego and $1000 off electricity bill. 💸
+90. Nope
+91. I don’t think it will happen
+92. I can’t write it off. The Vic Liberals proposed $2 PT fares full price and $1 for concession as an election pitch in 2022. They were laughed out of the room by Vic Labor. To be fair, their campaign was piss poor. Regardless, it’s not an exclusively left or right idea. I’d hope they keep it.
+93. It’s on the 100 list to make permanent
+94. Unpopular opinion here but my view is that fares could be higher than $0.50…(I.e. $2 flat for adults and $1 for concession) but still lower than the old model. Let’s be fare, most people could afford the public transport at full rates which was still pretty cheap (and heavily subsidised by tax/rate payers), and perhaps $0.50 was just a nice number. It’s an economics question about what drives more people to choose public and active transport vs driving, parking etc and the corresponding need for more roads. Not to mention the lost productivity from commuting to work in traffic. Whatever the optimal revenue/patronage model comes out as, funding will be needed to build additional transit infrastructure and enhancements, turning the flywheel to make public transport better and more widely used…. Increasing patronage revenues and reducing the need for more and more (soon to be congested roads) Not sure which level of government or political party will master it, however Brisbane and Australia at large, needs steady, consistent and targeted funding for public transport infrastructure into every major city over many many years to come
+95. Probably not after 12 months but I don't expect it to go back to where it was. $2 fares is what they will settle on as a compromise between budget position, cost of living and bringing more business into the CBD
+96. Hopefully but also hope they put on more services to cope with the extra demand on some routes (like mine that never shows up anymore) but that'd be too much to ask right!!
+97. i hope it stays...
+98. I really hope so but don’t think so
+99. I hope so. It’s one of the best government initiatives I’ve seen for a long time.. actually that I can remember. Benefits the wider community, gets cars off the road, promotes use of public transport, saves money for those that need it most
+100. I’m sorry you have to ask this. It’s absolutely going. They’re saying it won’t. But it’s going.
+101. The LNP aren't exactly known for having the integrity to stick with a promise. It'll be scraped the moment they need to funnel money citing "Queensland can't afford this, because mining corporations need the extra skim off the top"
+102. While I’m all for 50c fares staying (albeit it is a bit hard on our regional constituents who don’t have access to it) you do all realise that Labor was in power for over a decade with the power to do this and only enacted this policy six months before an election they were expecting a bloodbath in? It was all just a political vote grab.
+103. LNP never looked after anyone not wealthy. It'll be scrapped.
+104. I doubt it just an election gimmick to get power.you wat h oh we looked at the budget unfortunately we can't sustain the loss for sure
+105. Yes! Please do keep them.
+106. Nope, the elections are over. You don’t need to be bribed any more. As you were, ~~soldier~~ citizen.
+107. Everyone talking about 50c fares like they are life changing but then they go out and spend $6 on a coffee like it's nothing lol.
+108. Cheaper tolls would help our family I get free train fares anyways..
+109. I think it’s good policy - however it did nothing for the people of regional Queensland… remember this is where LNP won the election and sent a clear message to ALP… so time will tell
+110. Will the coal royalties still be paying for it noting the donors that helped the LNP?
+111. Look we just don’t have the train infrastructure and I voted ALP. It was stupid to be honest. Buses, well I can only say for sunny coast, but trains? Are you kidding? We never had enough trains running often enough to compete with peak traffic in and out of the CBD but not it’s a shit-fight
+112. If they take it away I’m going to find another country to live.
+113. It’s going to be kept for the full 4 year term
+114. How would you be able to keep something that is losing money hand over fist?
+115. You forget fairs were cheaper until labour massively increased them up against all advice about pushing people back into cars. Their stunt did not work......
+116. they said they would continue them. Long term i dont necessarily agree it's the best use of $1.2billion, if it were a choice between that and funding 15min frequency on rail lines through off-peak as well as peak, in addition to extra BUZ services and infrastructure upgrades, i think i'd prefer the later. But understand my situation is different to others, i dont have the expensive long commutes of some.
+117. It is in their costings report that they will keep it permanently and they actually have a higher budget amount for 50 cents than Labor.
+118. I would increase it to $2 per trip, still cheap but hopefully break even.
+119. Dunno mate. Have to ask yourself what Hitler or a dictator would do because all I’ve seen on here is people comparing the current party to him.
+120. 50c is ridiculous. Should be $5 a day and 1/2 for concession. Why should taxpayers pay for public transport? The user pays for road tolls. Should the taxpayer buy me a car? Or 50c taxi fare because PT is not available. Why should tax payers who don't use it pay for the whole network running and maintenance costs.
+121. Train fares may as well be free, I haven’t used my card in years, just walk past the scanner.
+122. Yes yes yes! I hope it also increases people using public facilities like the state library and museum. Now it's only 50 cents for me to get to the city Ive been randomly going in with my baby just for something to do. Its way easier than packing up the car, sitting on the M1, trying to find a park (and paying for it).
+123. Yeah, I hope it keeps going. My very first trip I met a single mum and her kids and the kids friends going in to Southbank for the day, and the kids had never been on a train before. Would have been quite an experience.
+124. > It was promised to be kept. We'll find out if it was one of those core or non-core promises.
+125. PT is increasingly becoming subsidised in many countries and cities around the world [Wikipedia](https://en.m.wikipedia.org/wiki/Free_public_transport)
+126. Did DC actually promise to keep it??
+127. Probably good for a lot of small businesses near stations as they'd be getting a lot more spontaneous foot traffic as opposed to people just driving by

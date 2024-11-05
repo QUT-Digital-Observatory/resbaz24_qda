@@ -1,0 +1,177 @@
+Your job is to analye a series of Reddit Comments are drawn from sbumissions related to the 2024 Queensland State Election. The comments are drawn from a collection of comments before, during and after the election itself on the 26th of October. The parties that sought election were the Australian Labor Party (ALP), the Liberal National Party (LNP), the Queensland Greens (Greens), One Nation and Katter's Australian Party. The LNP prevailed in the election, with David Crisafulli becoming the new Premier of Queensland. 
+We have identified several key issues that the major parties campaigned on during the 2024 Queensland State Election: Youth Crime (YC), Cost of Living (COL), Health (H), Energy and Infrastructure (EI), and Abortion Laws (AL). Below is a summary of each party's position on these issues:
+Youth Crime (YC):
+- LNP: Advocated for stricter penalties for young offenders, including the 'Adult Crime, Adult Time' policy, proposing that serious offenses committed by youths be met with adult sentencing. 
+- Labor: Focused on rehabilitation and prevention programs, aiming to address the root causes of youth crime through community engagement and support services.
+
+Cost of Living (COL):
+- LNP: Proposed measures such as abolishing stamp duty on new builds for first home buyers and re-establishing the productivity commission to review building industry regulations, aiming to alleviate housing costs. 
+- Labor: Introduced initiatives like 50-cent public transport fares, a $1,000 energy rebate, and free lunches for state primary school students to ease cost-of-living pressures.
+
+Health (H):
+- LNP: Committed $590 million to an 'Easier Access to Health Services Plan,' aiming to reduce ambulance ramping and hire additional healthcare workers. 
+- Labor: Focused on maintaining and expanding healthcare services, addressing hospital capacity issues, and investing in new health infrastructure.
+
+Energy and Infrastructure (EI):
+- LNP: Criticized Labor's Pioneer-Burdekin Pumped Hydro Project as financially unviable and canceled it upon taking office, opting to explore smaller-scale hydro projects instead. 
+- Labor: Proposed large-scale renewable energy projects, including the Pioneer-Burdekin Pumped Hydro Project, to transition towards 80% renewable energy by 2035.
+
+Abortion Laws (AL):
+- LNP: Stated there would be 'no changes' to abortion laws under their government, maintaining the status quo established in 2018. 
+- Labor Party: Supported the existing abortion laws and opposed any attempts to repeal or amend them. Asserts that LNP intend to restrict access to abortion services based on the views of some of their members.
+
+Analyze Reddit comments and code them based on the positions they support or oppose concerning these issues. You will output JSON, so valid values are strings or null. Use the following codes: YC, COL, H, EI, AL. If a comment's position is unclear or does not pertain to these issues, output null.
+
+Secondly identify which party the comment appears to support. Use the party code ALP, LNP, Greens, ON, KAP if this can be determined, otherwise a null value if undetermined.
+
+Output JSON as a list of objects where each object has an "id" (integer) property of the comment id, an "issue" property set to the issue code string (or null value), and a "party" property set to the party code string or null value. Null means JSON null, not a string. Values MUST be quoted, e.g. {"party": "LNP"} unless they are null, e.g. {"party": null}. Comments follow:
+
+1. Unlike you, i did the research. I read the balance sheet from the auditor general from when pallachook was elected to this last budget. I think you represent the other side extremely well. Shooting off at the mouth will your head wedged up your arse while doing alap.
+2. Respectfully, you need to log off for a while
+3. You do what you like. As for me, I'm judging the book by the pages I've already read.
+4. >What a sad existence to be so determined to be so stubborn. What's the line about keeping an open mind, but not so open your brain falls out? Feels rather fitting here.
+5. >Federal LNP government I was no fan of, but don’t pretend the huge majority of restrictions weren’t Labor state based decisions. And those Labour decisions objectively saved lives. >And it’s not “absolutely objectively”, it’s “absolutely subjectively”. I don’t understand why labor types think they can decide their opinion is fact What are you even talking about? It's only subjective if you ignore reality. Youth crime is at its lowest rate, down 18% since 2012/13 in Queensland. Like, have a cry mate, but don't kid yourself about anything coming out of your mouth being true. Congrats, you owned the woke left labour government, now you get to watch the Liberals strip your social services, your environmental protections, destroy the great barrier reef and sell national assets to the highest bidder lol.
+6. Brother I posted a meme and you chowed down on it with a rant. I'm sitting here watching the UFC and you keep lighting up my notifications
+7. So you don’t agree, that’s sad for you
+8. Wise words, though I’d rather risk a bit of openness than live in an echo chamber
+9. All of which is your subjective opinion. And to be clear your opinions mean SFA. Oh and yes, those Labor decisions also objectively cost lives. But feel free to cherry pick. Oh look, you already have. Standard
+10. Even more reason to log off
+11. Yawn. Performative civility in bad faith invitations. I avoided your question, I didn't answer it. You'd know that if you were asking it with any actual sincerity. You can be sad for me all you like, it's a waste of time but go ahead and waste your time.
+12. Heeding warnings based on historical precedent, policy promises and what we know to be true and likely outcomes of the implementation of said policies, is not living in an echo chamber. Although looking at your post history concerning Covid and vaccines, this all becomes far clearer. You're not open-minded, you just believe yourself to be a deeper, more critical thinker than you really are. Good luck with that.
+13. >All of which is your subjective opinion. Not at all, but I can understand how hard it would be for a liberal to figure out the difference between subjective and objective, you guys have always been more concerned with feelings than reality. > yes, those Labor decisions also objectively cost lives An infinitely smaller amount than Covid would have claimed if it had been allowed to run rampant through an unvaccinated community, and you know that, but you want to pretend like there's some level of parity there.
+14. Yawn
+15. lol had a look at yours too. Timeline goes something like this: - got 3 jabs - got Covid - got at least one more jab (ignoring warnings based on historical precedent) - got Covid AGAIN lol at least one more time - despite the above, goes on to argue for mandatory jabs for healthcare workers because they definitely work - thinks everyone else isn’t open minded The brain fog is real. Meanwhile, no Covid here :-) I can smell your dissonance. Good luck with that.
+16. 1. Not a liberal. Never have been never will be. Or any other party. Objective fact. Cope. 2. [Open this graph](https://imgur.com/a/j2Kgmzs). Mark a line on it when approximately most people in Australia got jabbed. Then revisit your comment and realise how retarded it sounds. bUt it wOuLd hAvE bEeN wOrSe. Says who? The TV? Your moronic political party? Your feelings? Wake up
+17. I think I’ve mentioned my own experience, what, two or three times however long I’ve been on Reddit? And the ‘at least one more jab’ was based entirely on precedent, since the vaccines likely played a role in just how minor the first infection was (as evidence shows is widely the case). Anyway, I’ll continue to defer to the expertise of the overwhelming majority of medical professionals - and, you know, evidence - since it’s clear neither of us are qualified in this area, and you don’t even seem to know what it is vaccines are designed to achieve. And you do you.
+18. So you're just an anti-vax idiot. Way to blow any legitimacy your arguments had. Have you spent years studying virology? Conducted many double-blind studies? Excuse me if I don't find your afternoon of 'research' on Google and YouTube compelling evidence.
+19. >1. Not a liberal. Never have been never will be. Or any other party. Objective fact. Cope. He says while actively dickriding the liberal party so hard they're collectively worried about ending up with broken hips. 2. Open this graph. Mark a line on it when approximately most people in Australia got jabbed. Then revisit your comment and realise how retarded it sounds. The graph doesn't help you though? You do realise that even the initial Pfizer and Astra-zeneca vaccines were astoundingly effective at protecting against death and serious illness from Covid right? Your graph literally shows that by the time we had a majority of the population vaccinated (before December in 2021) lockdowns, masking and social distancing were insanely effective stopping covid deaths and infection, and that even with a high vaccination rate covid was still deadly enough to kill 25k people per year since lockdowns ended. >bUt it wOuLd hAvE bEeN wOrSe. Says who? The TV? Your moronic political party? Your feelings? Wake up Pretty much every single global health organisation, medical association, and its the current consensus in virology and infectious disease specialists. Are you stupid? RFK jr isn't going to marry you bud.
+20. Haha yeah the old “I got multiple jabs but then I got Covid but it could have been worse!” chestnut. Followed by the almighty “so then I got another jab and then I got Covid again yes these jabs are sooooo good… it’s science I tells ya!” Makes me laugh. Here I am, couldn’t get Covid if I tried. So yeah, me doing me sounds like a much better idea. I’ll just let you selfishly repeatedly transmit Covid into the community while I enjoy my healthy lifestyle
+21. lol have you? Or do you just inject drugs multiple times because you were told to do so. Had Covid yet?
+22. Haha you think someone making fun of leftwit drug addicts is liberal dickriding? Your tears are extra salty this morning, recommend you have a nice rest
+23. Mate I have treated COVID. It's all imaginary to you, but there's real people out there dying while you decide to gut public health on a fairy tale. So if you're not gonna contribute, please fuck right off.
+24. >Haha you think someone making fun of leftwit drug addicts is liberal dickriding? Oh yeah, there you go full mask off now you little nazi >Your tears are extra salty this morning, recommend you have a nice rest The salt your tasting isn't from tears, it's the result of all that LNP dickriding. Edit:/
+25. Haha and all the people you treat are unvaccinated, right. RIGHT? Of course you’ve had Covid too (after multiple jabs) and are too shit weak to admit it. SMD and have a lovely Sunday
+26. Haha not sure what you mean “full mask” but yeah, I can imagine you’d be the type to still be wearing one 😷 How you gonna be next Wednesday? Got a mop for your tears?
+27. What are you on about? Do you seriously think that we made up a vaccine for a disease that didn't exist? Yes, I've had COVID, and my symptoms were mild. No one has ever said the vaccine prevents you from getting infected 100%, but there's clear data that it improves outcomes significantly. Queensland had one of the global best responses to the pandemic, and had a blissfully and enviably easy time of it compared to the rest of the world. Do you think that just happened by accident? It's all fun and games until Grandpa is choking on his own lungs — real people do real work to protect the community. Why do you insist on undermining that?
+28. >Haha not sure what you mean “full mask” but yeah, I can imagine you’d be the type to still be wearing one Lol yeah that's not what I said but okay >How you gonna be next Wednesday? Got a mop for your tears? Why? Crying men the only way you can cum?
+29. As I’ve not had Covid you can’t accuse me of passing it on to anyone. Unlike you…
+30. Yeah that’s [literally what you said](https://imgur.com/a/3aXGeRc). Why do you hate facts so much? Because they make you look like a FW?
+31. Not a great argument mate, I'm the one actually engaging with the recommended precautions. Also, Google 'asymptomatic carrier'. If it was always obvious who was spreading the virus we wouldn't have been in such a mess. Why do you think you know better than the united global science community??? Certainly got plenty of self-esteem.
+32. Lol I missed an F bruh, if that's your idea of a powerful refutation maybe you should just put the phone down and focus on your job servicing gloryholes. >Why do you hate facts so much? You haven't presented any, you've just spent the entire time dickriding the party of reactionary babies.
+33. Actual science gets questioned all the time, despite what your propaganda tells you it’s not a united community. Yeah pretty sure I’ve got the asymptomatic flu right now. And an asymptomatic sore back. Had an asymptomatic headache last week. And Covid is so scary that you hope I’ve had it… it’s just that I didn’t know it. Would have been better if I was vaccinated! Speaking of which now I have asymptomatic long-COVID together with an asymptomatic vaccine injury. Lol want me to keep going? You don’t realise how retarded your replies sound. You killed grandpa, not me. Cope.
+34. You missed an “f” when you said “full mask”? Ffull mask? Full masfk? Lol you keep digging that hole of yours, glory or not
+35. I love it when people think they're the first person to question something, like it hasn't occurred to all the very smart people in the scientific community to check and make sure something is actually working. You're not really making any sensical argument. Yes, being asymptomatic is relevant when talking about an infectious pathogen lol. Our own perception isn't enough to justify life-altering policy; we have to actually test things and measure the outcomes. It's a bit harder then blocking your eyes and ears but I promise it's more rewarding. Do you have any experience in the science community? Because it sounds like you have no idea what you're talking about.
+36. Lol, you mean you weren't even talking about my actual error. "Full Mask Off." I originally wrote "Full Mask Of." That's the missing "F". Holy shit I thought you were smart enough to realise what I was saying from the context of my sentence. Why the fuck would I say "Full Mask of," that doesn't even make sense?
+37. Lol you’re the one desperately trying to blame me, knowing full well you’re the one with repeated covid infections, and therefore likely a superspreader. Yes, a bachelors science degree. Not enough for you I suppose? Science is all about asking questions regardless of how your feelings respond to them. I’m glad you “love it”, expect more of it over the coming years
+38. “Full mask off” also doesn’t make sense, so…
+39. Firstly, kudos on the degree — always an achievement worth celebrating. Though I gotta say it's a grim reflection on your institution when, after all that time and money, you still don't grasp how vaccines work. Science isn't only about asking questions: it's about seeking real and tangible answers. Just throwing random shit out there and going with what feels the most true isn't science. If that's something you are passionate about you're welcome to pursue some higher learning and join the thousands of researchers actually studying this. And I really don't know why you keep trying to make this about personal blame. I don't know you; I'm only critical because of your seemingly fragrant disregard of the institution of public health. I don't know and don't care if you have caught or spread COVID: much of the population has, through no fault of their own. You can call me a 'super-spreader' all you like, but luckily (for all of us) the precautions taken within the health system aren't as flimsy as you imagine. Can we at least agree that we want people to not die from preventable infection?
+40. It does if you go back and read the previous messages dipshit. Holy crap you might actually need support
+41. >you still don't grasp how vaccines work In the context of the C19 jabs, they didn't. >Just throwing random shit out there and going with what feels the most true isn't science. Exactly! You're disregarding your own lived experience because you've been taught to. The cognitive dissonance is unreal to watch from a distance. Good luck with that.
+42. Nope, incoherent nonsense. On that basis I think I’ll let you continue on with your meltdown… Have a lovely week ahead
+43. Sure bro. How about you keep patting yourself on the back and I'll keep trying to save lives.
+44. Lol are you seriously trying to step out like you did anything other than act like an ignorant baby? You conservatives are a special bunch. Also, are you seriously such a little baby that you went back and edited your message? Fuck man you really are desperate.
+45. Sounds a lot like you’re the one patting yourself on the back and I’m the one preventing lives needing to be saved. All the best with your high horse
+46. Lol just laughing at you not with you, cooker. Cope
+47. Whatever helps you sleep 😴👍
+48. >cooker Uh, excuse me? >Cooker – a derogatory term for conspiracy theorist; according to the National Dictionary Centre, "a derogatory term for a person involved in protests against vaccine mandates, lockdowns and a range of other issues perceived to be infringing on personal freedom". That's literally you lol. Oh wait, sorry, I keep forgetting you're trying to play enlightened centrist. Nobody is buying it princess, and we're all laughing at you.
+49. Woke cooker says what?
+50. Privatisation here we go! Ambulances and power poles now up for sale.
+51. 90's economy with 2050 prices. At least the kids will be in jail though
+52. I was pretty excited for a renewable future for qld...goodbye to that.
+53. Oh mining company economy will be booming though. That’s all that matters for LNP.
+54. RIP to our publicly held assets and public services. Oh and fuck the environment and any renewables projects as well.
+55. Fk sake Qld. I’m tired of fighting and now I feel I have to for 4 years. I lived through the Newman era and it sucked.
+56. I'd like to see statistics of how much of the population moved interstate to QLD since Covid compared to the amount of overall vote swing to LNP.
+57. There goes our 50c fares. All the fee-free and subsidised TAFE. Mining royalties tax. Publicly owned petrol stations etc.
+58. To be honest I think they will knife him 2 years in, they know they are one termer's and they will take that weak lamb to the slaughter in an attempt to stay at the trough.
+59. Bye-bye publicly owned assets 🥲👋
+60. Nothing ever changes
+61. [removed]
+62. Woo mining won the election great. Wonder if I can get a kushy board job as soon as I step down from a public office job. Cough gamblenewman
+63. Be prepared for more condos belonging to lnp cronies and a reduction in environmental legislation. We're fucked.
+64. Happy days ahead for fatcats thanks to their plant, Crissi
+65. Don't you get it!? All you have to do is post a lovely photo of nonno and nonna and family blah blah so no one sees the rotten money deals and corruption!
+66. I swear, LNP Voters must have a similar mindset to conservative voters in the USA. They don't fucking care if they suffer, just as long as the people they hate the most suffer more.
+67. The year is 2026. With 90 of teenagers and children in prison. Qld has officially ended homelessness. Every child and teenager is fed and prison hecs debts are established so that those released can pay back society
+68. RIP to the Great Barrier Reef
+69. I have said here and everywhere that we should let the north Queensland collective of turds become their own state... So ok, break off. Do it. Do it do it do it go on please
+70. F
+71. Are we surprised? I remember the Scott Morrison election, it all started to go wrong in QLD.. They keep voting in Bob Katter.. says it all.
+72. how the actual fuck did this happen
+73. Let’s wait a year and see if there’s any improvement … or if it’s worse. As usual there’ll be a blaming of previous govt so we can’t do certain things/need to privatise etc.
+74. I’m going miss 50c buses and the electricity rebate. That has what has stopped us tilting over. Pretty sure we aren’t the only ones.
+75. Need to break away from Labor/Liberal, I never vote for any of them
+76. Fuck North QLD
+77. Wow nice one dumb qlders we are fucked now ..... LNP is in power, start finding a new job....... Remindme!in 1 year
+78. Fucked
+79. I love democracy
+80. I remember when they reduced the age of adult criminal responsibility to 17
+81. Us landlords are going to gut renters now ahahahah
+82. Regardless of who gets voted in, they are only im it for themselves
+83. Yep we're actually not in a cost of living high inflation economy it's just a dream yeah
+84. lol who’s idea was it to make us have the olympics in QLD. It was a vote against what palachook did more than a vote for LNP
+85. Looking forward to watching leftists and treehuggers struggle for 4 years. 🍿
+86. The change qld needed to have
+87. Couldn't do worse than the current mob, housing and cost of living are a shitfight.
+88. Great outcome this morning. Here is to moving forward. Goodbye, good riddance.
+89. lol get over it lefties
+90. At least Cairns didn't let that evil head witch win. Thank God
+91. QLD economy will thrive now this is a wonderful result. Thank you to all of the supportive QLD voters.
+92. [removed]
+93. Catastrophizing is a cognitive distortion that prompts people to jump to the worst possible conclusion, usually with very limited information or objective reason to despair. When a situation is upsetting, but not necessarily catastrophic, they still feel like they are in the midst of a crisis.
+94. So funny, god you are sore losers. Off to the dole queue Labor staffers!
+95. Quite the opposite, there is hope for a change. Miles and Palaszsucked were absolutely horrendous.
+96. What are you talking about? we don't have a big spender anymore it's safe for now
+97. Hopefully he criminalises abortion
+98. LOL nothing as sweet as a cup of leftist tears 😢
+99. Rip. It’s been dead for a while due to 10 years of useless labour governments.
+100. Wut? Labor was able to “fix” the economy by beefing up the public service and giving away free shit. But TANSTAAFL my friend. It has to be paid for by the tax payer.
+101. Aurizon enters the chat…. lol. See what happens.
+102. Any stock tips?
+103. You had Privatisation under ALP to quite alot of it.
+104. Then they’ll complain about how much we spend on prisons
+105. Renewables won’t go anywhere, commercially, people want them. There’s money to be made
+106. Oh yeah you want a gigantic useless wind turbine in your back yard?
+107. Don’t forget the hundred jobs the company will put on. That’s it, 100.
+108. Whether you like it or not it was what mattered to the labor party too. They just make you feel warm and fuzzy inside but still reap the rewards of record coal prices to fund the services that you think just get paid for by the magic money tree at the botanic gardens.
+109. LET’S GOOO SCRAPPING PIONEER-BURDEKIN WITH NO REPLACEMENT AND NO COSTINGS
+110. That’s right FUCK RENEWABLES!!!! Coal for the win baby yeeewwww
+111. I feel this so much.
+112. We’re going to be okay baby. We are the revolution.
+113. Go polish your medals up warrior we will erect a monument for your hard lost fight 😂😂😂😂
+114. I was thinking the same thing... Abandoned their Liberal held state that was a nightmare and voted LNP here.
+115. Of all the shit takes from last night, this is the worst. People moving from less conservative states somehow causing all of regional Qld to elect a conservative government? Most of the intrastate migration is to SEQ. If you're drawing a long bow, intrastate migrants contributed to a better than predicted greater Brisbane performance.
+116. I honestly don’t think interstate people is where the swing is from. The only LNP voters I know where born and bred in QLD. Myself and my friends who’ve moved here from elsewhere vote Labor/Greens. Someone needs to do this research though. As a southerner who moved here 14years ago, I’m a bit tired of being blamed for all of QLDs problems - QLDers do this to themselves.
+117. how did the Greens not get a massive increase in seats, the majority of covid mexicans are self proclaimed socialists.
+118. Most interstate migration was to the southeast, yet the biggest swings to LNP were outside the southeast. If your theory was correct, the largest swings would have occurred where there was more interstate migration. The opposite is true.
+119. I’m in the GC hinterland and surrounded by entitled boomers. I think more entitled interstate boomers moved here
+120. When I lived in WA and in VIC, QLD was shown in the media as the state that gave the country Pauline Hanson and her party - and as a stronghold for national party. Not as a progressive state. I came here expecting to be in a minority voting left - and it looks like I was - but I sure didn’t bring LNP ideals up here. Just saying - don’t blame us all for this.
+121. We moved from Syd in 2022 and I just voted greens/Labor. But yeah that's just us, there were a lot of LNP fuck wits in Sydney. So I suppose it's not a Qld thing that they got in, it's just there's a lot of gullible/ignorant/malicious people in general.
+122. Isn't the free tafe a federal policy?
+123. I thought the 50c was committee to by both parties. Yep found it, LNP made it an election commitment.
+124. There was never going to be publicly owned petrol stations ya goose....how gullible can you be??
+125. Amanda Stoker will take his place within 12months
+126. I wouldn't be surprised if he genuinely tries to keep his abortion promise, but his party has made it clear they want to get rid of it and they knife him over it.
+127. Years or months?
+128. which party sold off the Cairns and Mackay airports to Jp Morgan ect? for a lazy 500mil / 200mil and that are now on the market for $3 billion?
+129. I'll help you
+130. lol no one wants to rape your wife mate
+131. WTF are you on man, get off it cold turkey
+132. Dude they are not going to criminalise abortion, even before decimalisation of abortion, abortion still could happen under certain conditions prior to 2018.
+133. yay fire ants for everyone! that won't have huge economic implications in agriculture
+134. Yup. All you have to do is have the corrupt mainstream media support you and have a generally politically uneducated voter base who is very impressionable as a result.
+135. There would be way more than 90 I reckon
+136. Split it at the Tropic of Capricorn, or just before Gympie? It's tricky to decide where.
+137. I live up here and the last thing we need is another state government. I would be happy to abolish all sites and just have local and fedral
+138. deal ! and you can keep the Green voters in SE qld. We will get to work building dams and mines.
+139. That's the problem lol, that's how we end up with LNP government and more newman
+140. Who is the viable alternative?
+141. They’ve fucked themselves with this own goal tbh. What sky news does to a person lol
+142. ^ The reason Labor lost
+143. your welcome 🙏 ✅preferential vote repeal will screw the left even harder up here btw
+144. I will be messaging you in 1 year on [**2025-10-26 20:05:11 UTC**](http://www.wolframalpha.com/input/?i=2025-10-26%2020:05:11%20UTC%20To%20Local%20Time) to remind you of [**this link**](https://www.reddit.com/r/queensland/comments/1gck7hb/rip_to_the_qld_economy/ltwh991/?context=3) [**1 OTHERS CLICKED THIS LINK**](https://www.reddit.com/message/compose/?to=RemindMeBot&subject=Reminder&message=%5Bhttps%3A%2F%2Fwww.reddit.com%2Fr%2Fqueensland%2Fcomments%2F1gck7hb%2Frip_to_the_qld_economy%2Fltwh991%2F%5D%0A%0ARemindMe%21%202025-10-26%2020%3A05%3A11%20UTC) to send a PM to also be reminded and to reduce spam. ^(Parent commenter can ) [^(delete this message to hide from others.)](https://www.reddit.com/message/compose/?to=RemindMeBot&subject=Delete%20Comment&message=Delete%21%201gck7hb) ***** |[^(Info)](https://www.reddit.com/r/RemindMeBot/comments/e1bko7/remindmebot_info_v21/)|[^(Custom)](https://www.reddit.com/message/compose/?to=RemindMeBot&subject=Reminder&message=%5BLink%20or%20message%20inside%20square%20brackets%5D%0A%0ARemindMe%21%20Time%20period%20here)|[^(Your Reminders)](https://www.reddit.com/message/compose/?to=RemindMeBot&subject=List%20Of%20Reminders&message=MyReminders%21)|[^(Feedback)](https://www.reddit.com/message/compose/?to=Watchful1&subject=RemindMeBot%20Feedback)| |-|-|-|-|
+145. Democracy is there but it’s the religious and boomers voted him in, there’s plenty there. Spoke to a few boomers at work. They been loyal LNP voters for ages and/or religious so against abortion. Try changing a boomers mind is near impossible. Also don’t think Miles was a strong opposition. I feel sorry for QLD!
+146. How good is it!
+147. This. 100% totally agree. All want the golden handshake. I really wish people could see through rather than alp vs lnp. So dumb
+148. You mean like the rest of the world? Its not a QLD centric issue.
+149. Did you struggle for the last 8?

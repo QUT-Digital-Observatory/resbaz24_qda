@@ -1,0 +1,152 @@
+Your job is to analye a series of Reddit Comments are drawn from sbumissions related to the 2024 Queensland State Election. The comments are drawn from a collection of comments before, during and after the election itself on the 26th of October. The parties that sought election were the Australian Labor Party (ALP), the Liberal National Party (LNP), the Queensland Greens (Greens), One Nation and Katter's Australian Party. The LNP prevailed in the election, with David Crisafulli becoming the new Premier of Queensland. 
+We have identified several key issues that the major parties campaigned on during the 2024 Queensland State Election: Youth Crime (YC), Cost of Living (COL), Health (H), Energy and Infrastructure (EI), and Abortion Laws (AL). Below is a summary of each party's position on these issues:
+Youth Crime (YC):
+- LNP: Advocated for stricter penalties for young offenders, including the 'Adult Crime, Adult Time' policy, proposing that serious offenses committed by youths be met with adult sentencing. 
+- Labor: Focused on rehabilitation and prevention programs, aiming to address the root causes of youth crime through community engagement and support services.
+
+Cost of Living (COL):
+- LNP: Proposed measures such as abolishing stamp duty on new builds for first home buyers and re-establishing the productivity commission to review building industry regulations, aiming to alleviate housing costs. 
+- Labor: Introduced initiatives like 50-cent public transport fares, a $1,000 energy rebate, and free lunches for state primary school students to ease cost-of-living pressures.
+
+Health (H):
+- LNP: Committed $590 million to an 'Easier Access to Health Services Plan,' aiming to reduce ambulance ramping and hire additional healthcare workers. 
+- Labor: Focused on maintaining and expanding healthcare services, addressing hospital capacity issues, and investing in new health infrastructure.
+
+Energy and Infrastructure (EI):
+- LNP: Criticized Labor's Pioneer-Burdekin Pumped Hydro Project as financially unviable and canceled it upon taking office, opting to explore smaller-scale hydro projects instead. 
+- Labor: Proposed large-scale renewable energy projects, including the Pioneer-Burdekin Pumped Hydro Project, to transition towards 80% renewable energy by 2035.
+
+Abortion Laws (AL):
+- LNP: Stated there would be 'no changes' to abortion laws under their government, maintaining the status quo established in 2018. 
+- Labor Party: Supported the existing abortion laws and opposed any attempts to repeal or amend them. Asserts that LNP intend to restrict access to abortion services based on the views of some of their members.
+
+Analyze Reddit comments and code them based on the positions they support or oppose concerning these issues. You will output JSON, so valid values are strings or null. Use the following codes: YC, COL, H, EI, AL. If a comment's position is unclear or does not pertain to these issues, output null.
+
+Secondly identify which party the comment appears to support. Use the party code ALP, LNP, Greens, ON, KAP if this can be determined, otherwise a null value if undetermined.
+
+Output JSON as a list of objects where each object has an "id" (integer) property of the comment id, an "issue" property set to the issue code string (or null value), and a "party" property set to the party code string or null value. Null means JSON null, not a string. Values MUST be quoted, e.g. {"party": "LNP"} unless they are null, e.g. {"party": null}. Comments follow:
+
+1. >Who are you? A third alt account? I'm not sure how to break this news to you but there's more than one person on reddit. Different people have different accounts you see and with the posts and comments being open conversations to anyone on the site, you're bound to have multiple people replying to the same thing. Hope this helps.
+2. > Who are you? A third alt account? I am another alt account come to share my story about how I also didn't really like miles during covid but have come around to him since.
+3. Is this your first day on Reddit? It’s an open forum, anyone can reply to anyone here mate, it’s not Parliament.
+4. Lol what
+5. Someone forget to give grandpa his meds again, you’re not making any sense mate. No one cares that you’re mad at them for posting their opinion.
+6. Comments that are clearly meant as hate speech will be removed immediately and users banned. https://www.redditinc.com/policies/content-policy
+7. Comments that are clearly meant as hate speech will be removed immediately and users banned. https://www.redditinc.com/policies/content-policy
+8. conservatism? Dude, that guy is going on about fascism and calling people cunts and saying anyone who doesn't vote his way hates women etc etc it's unhinged behaviour that's completely out of touch with reality and largely borne out of spending too much time in an online echo chamber dehumanising people keep going on about "conservatism" but this rhetoric is right here on display for everyone to see i don't need to manufacture a boogie man to make my point it's right there \^
+9. Having a degree doesn’t make you more right, or mean that priorities living outside urban centres are somehow inferior to city concerns.
+10. 1. The alternative was Miles who rejected the proposal already. As I said, I would have voted for LNP if they came out and backed Vic Park but they didn’t thus I had no candidates I felt I could vote for. Ultimately I left it to the QLD public to decide. 2. I do blame LNP for once again wasting money. As I said in my OP I wished they would start building tomorrow. However, building in 100 days is better than not building at all. 3. If you have the right to vote, you have the right not to vote. No one should be able to force you to vote against your will.
+11. Quite high. That's as many times as the entire MCG last year (the most utilised stadium in Australia by a fair way). Grass needs time to grow and it often doesn't get the opportunity. It's not been helped by the Dolphins playing the majority of their games at Suncorp (instead of their local stadium in Redcliffe) and the concert cap at Suncorp has been increased too so it's going to get even worse. We probably don't need all these events to be at Suncorp either. Most Queensland Reds and Roar games def. don't need to be in a 52,000 seater stadium that's 2/3 -3/4 empty but cost those sides an arm and a leg to rent from Stadiums Queensland.
+12. Apparently?
+13. They're 16 seats ahead of Labor.
+14. And then that changed to neck and neck in the past few days. Now it's a 16 seat difference.
+15. Alright, I’ll bite. I’m staunchly against ALP’s plan for the Olympics. Represents terrible value for money and I would prefer any alternative of the Gabba, Victoria park or Hamilton. Libs haven’t committed to anything but I’d rather a chance at something better than the states biggest white elephant ever.
+16. Well vague memories are exactly that.
+17. *Labour. Oh and you are either incredibly ignorant or incredibly stupid if you don’t think they exacerbated it. You’d be embarrassed to say it wasn’t.
+18. Never. But some people think it’s acceptable to have a last trimester abortion. It’s their opinion.
+19. ?? [Only fear mongering happening is anyone saying if anything different to the status quo.](https://amp.abc.net.au/article/104506014)
+20. China is investing more in renewables than any other country.
+21. Be the change you want Think global, act local Leave no trace Whether you choose to ignore the actual science that has been proven correct for the past 30 yr or not, at the end of the day we are talking about forms of pollution, and its embarrassing to invite guests to your home with litter, rubbish and filth lying around. The same principal applies to the land, air and water
+22. We should care about climate change because we fucking live here.
+23. lol, these are 2021 statistics https://www.weforum.org/agenda/2022/02/ranked-10-countries-energy-transition-investment/ they very much do care. India is also leading the charge on research into Thorium reactors
+24. It’s worse. Under “cost of living” it says: >We will *remove Net Zero regulations* that are strangling our farmers, and in turn driving up the cost of farming while making electricity unaffordable. > >We have led the charge and long advocated for the removal of state government excise on insurance premiums to help with one of the most important costs many families face. We will also *end taxpayers’ subsidies for inefficient and unreliable solar and wind power. New power plants would be built using coal* to meet the rising demand for affordable and reliable power.
+25. They also want to restore the upper house I think it’s a good idea and honestly I’m willing to give them a shot Btw sorry I’m not good at explaining stuff I’m not very good at talking to people
+26. yes.. because the town that are literally a pub, petrol stations, a school and houses have local bakery. Good lucky finding a local dairy farm. It funny you basically saying the kids aren't getting fed, when regional kids are most likely being fed better than city kids. So you saying regional qlders are neglecting their children?
+27. Thanks, good to know.
+28. I’m not struggling
+29. Ah interesting. I guess I've been lucky then.
+30. I can only speak to the labor party’s system but I believe if you request not to be called the system will remove your number for 5 years I believe
+31. Looking at the results of the official pill testing is actually reassuring with very few ecstasy pills containing adulterants The fear of bunk pills with dangerous cuts seems to have disappeared since the dark net took over. Market pressures has had a positive affect it would seem
+32. They can ask my son
+33. I'll be surprised if he hasn't spent the last month of swot vac gleaning my prescription stash
+34. Not sure why you feel so entitled to talk down to other users. But I guess that’s the kind of person you are 🙄
+35. … The only chiming in is everyone having a go at me - which makes a lot more sense if it’s just one person using alt accounts. It doesn’t make sense that this thread keeps getting new views, who are all so sure I’m wrong and deserved to be shit on. That’s not how the reddit app works anyways.. Sorry to edit but mods banned me then muted me. You aren’t allowed to explain your point of view 🙄
+36. Reproductive rights are a human right. An attempt to eliminate them is a fascist move, as fascism loves control, and control is authoritarianism. So yes, you're a cunt. any one who votes for the erosion of human rights is a cunt and a fascist. And you wanna wave a flag for dehumanisation? Removing a person's choice is the ultimate dehumanising thing you can do. You're a bloke who won't get pregnant, won't have your body wrecked from it. Won't face risk of death, won't be forced to carry a child you don't want. All you fascist fucks are the same, can't see past your dick.
+37. 1. There are more than 2 parties in Australia. 2. They pride themselves on being the "best fiscal managers", yet they are literally fucking around with the money before they even get in. By the time they've finished with all their spending where do you think the money comes from to build the stadium? Keep an eye out on cuts. They're going to start by scrapping the mining royalties. 3. It's not about forcing someone to vote. It's a lament on the foolhardy nature with which countries value their democracy. Anyway, I'm sure this discussion can go on forever. I'm exhausted. Today my state told me they don't value the sanctity of my female friends, and that my very being holds little value. Have a good evening!
+38. Instead of talking about winning all you did was troll ALP supporters. I'm not wrong.
+39. So it changed at the last moment after a lot of the votes had already been cast? I don't know, maybe it's because I've watched months of doomposting about the incoming ALP wipeout but this really doesn't seem like a surprising result.
+40. We asked for something positive about the LNP. It's good they don't have a plan? Also I think you'll find the Olympics being a massive waste of money is a very popular position in the echo chamber.
+41. https://queenslandlabor.org/ They adopted the US spelling to differentiate themselves from UK *Labour. Now about the "incredibly stupid" comment. Would you like to back track some?
+42. It's all or nothing though isn't it. Conservatives want it banned completely many even in instances of rape as per the USA. That's what we're fighting
+43. Do you understand what a conscience vote is? Crisafulli's personal stance is irrelevant.
+44. When they focus on themselves lmk
+45. No worries, friend :) Thanks for sharing your perspective
+46. Well if a town only has a pub and a petrol station, how many primary school kids are attending the school? That makes it even easier, you give the school a budget and get the staff to organise it themselves. You're looking for an obstacle when it's not there
+47. Huh? Do you not know about the [generic you](https://en.m.wikipedia.org/wiki/Generic_you)?
+48. Neither my wife or I have received a single political ad SMS or call either. We are on the do not call registry.
+49. Pill testing is still something that saves lives and doesn't cost a lot to implement. Even if it only saves 1 life it's still worth it. You'd think the party of 'family values' and supposedly caring about kids would want kids to be protected more.
+50. lmao take the L my guy
+51. No one was pretending to be the OP, they were just chiming in. And the person who was originally asked can still answer if they wanted, you don’t seem to understand how this website works. No one was locked out of replying to a comment just because someone else did it first. Why has this upset you so much?
+52. you are just copying and pasting hyperbolic talking points that aren't based in any reality mate, no major party in queensland has abortion on their platform, no one is coming after reproductive rights and if they did it would stand no chance in the parliament People who disagree with things you say aren't automatically "fascists" again you just sound extremely online and divorced from reality, go for a walk friend get some air
+53. Look at the the comments of the past couple of months.
+54. The plan is a 100 day review but sure whatever narrative suits you 👍
+55. Yeah exactly. Confirms the stupidity. Australians thinking they are American. I’m well aware what they call themselves, doesn’t mean it’s not how it is spelt in Australian English.
+56. But that’s not what it’s about here is it. You know that, we know that. Fear mongering if you even remotely distribute that.
+57. Np man
+58. Oh for sure, I have been a tester at doors and festivals for 30 yr. As a stand alone election policy to decide who gets into power I accept it a minor policy lost.
+59. In fact this is your first comment reply in r/Brisbane in over a year and you specifically come all the way down this thread to tell me “take the L” like some kind of forrnite 12 year old. That’s really sus. I bet I’ll get an interesting result if I pull a report on every different account used to send me a one off reply to this thread. It’s way too coordinated to be incidental.
+60. Another random account joining in? I can barely find my replies thread since all my responses are kindly buried in down votes … how the hell are you so far down the thread just to bully me and why?? What’s this mess to you?
+61. are you somehow new? do you not understand political parties enact change that aren't on their promised political platform? we all know a LNP government will attempt an overturn of abortion rights. i specifically hightlighted that singular point. there is many, and much more damaging policies they will enact if they govern. you do understand how the westminster political system works right? a majority government with sufficient votes can will enact change. fascists never do like being spotlighted, just like crisaufulli couldn't engage with a women over bodily automy, instead othering her. you don't like being ascribed? i wonder why that is?
+62. But you didn't say anything about that. You wrote about the Olympics. Also, if there's no plan what will they review?
+63. It actually does considering it's a title/name. Anyway I don't think you have the prerequisites for this discussion. Jog on
+64. you’re right, these are all my alts, couldn’t be that people think you’re a twat
+65. try not being such a prick to people and you might find that people aren’t so quick to call you out on it /2c
+66. Probably review the plan the ALP did and then subsequently ignored and pushed ahead with QSAC
+67. Correct. For this conversation to continue, I think my IQ would need to be sub 90, maybe sub 80. So yeah you’re right, I don’t have the prerequisites.
+68. I feel they could have done that already and formed their own policy.
+69. Is that why you're trying to continue it?
+70. Yep agree, they could have and should have. But I’d still take a chance at a better option than the ALPs commitment to QSAC IMO
+71. It would have been nice to see more of this kind of pushback against the youth crime narrative earlier than the last possible minute before the election.
+72. "Adult crime, adult time" would be a fucked primary policy platform even if the state *was* experiencing elevated levels of youth crime Blatantly exploiting and encouraging fear, ignorance and divisiveness in order to win power - fuck every cunt who participates in this
+73. Data always gets misused to suit the wanted narrative. It's a pity journalists don't highlight this more often.
+74. What's really rich is Crisafulli just today [walked back his promise to resign if victim numbers don't go down.](https://www.brisbanetimes.com.au/national/queensland/crisafulli-walks-back-key-crime-commitment-on-election-eve-20241025-p5kldd.html) > The opposition leader added a significant caveat to his earlier promise to resign if victim numbers don't go down in an LNP government's first term, saying the statistics would be adjusted for population growth. > "It will be tied to population growth, of course," he told reporters on the Sunshine Coast on Friday. > "As a population expands, it's commensurate. You want less victims as a ratio of your population." I guess he prefers population-based statistics when it comes to his own career.
+75. It's all a game. Politics is not a contest of ideas, it is a contest of vested interests with the politicians being pawns pushing their given agendas. I've met people that work in the offices, it's all 'the greater good' excuses for the morally bankrupt stuff they get up to, and the media orgs are not in a great place at the moment so they will just take what ever is given to them and regurgitate it to fill columns and air-time. It's nobodies fault, it's just the structure of the system we live in where money controls everything.
+76. I mean its not like youth crime, particularly brazen robberies, home invasions and wild motor vehicle theft doesnt exist. Doesnt help that these kids are now targetting previously affluent suburbs plus posting it on line The actual numbers of crime might be the same, it might be lower but Even if it was just a handful of kids youd want some sort of government intervention
+77. Media like the ABC are complacent in this. The QLD have been doing this for longer than the election cycle, and it's only really been in the last two weeks that any pressure has been put on Crisafulli to back up his claims. Instead, Media gave him a platform at the Prime evening news hours to stand their, using victims of crime as political props so that he could deceive the people of Queensland.
+78. https://www.qgso.qld.gov.au/issues/7856/crime-report-qld-2022-23.pdf there the raw numbers 225 pages worth without any news bias. It was pretty sad reading. Most crimes had increased, some stay the same not many, went down. They justified the youth crime numbers by saying they had more enforcement. anyone have the 23-24 one? also interesting the public data on crime goes from 2001 to 22. can't access 23,24 but maybe that's normal. edit: quote from the paper. >Total number of child offenders proceeded against by police increased by 8.6% and the number of unique child offenders by 5.2% (+557 individuals) compared with 2021–22. • Young female unique offenders increased by 10.3%. • Child offenders were twice as likely as adult offenders to be proceeded against by police for property offences.
+79. And they publish this at 5:15pm, Fri evening before polls open. ABC is just openly pulling the piss now. When Abbott appointed buttrose, that was the beginning of the newscorpse-ing of ABC, and things have only gotten more toxic since then. Pains me to say, ABC is fcked and beyond repair or redemption. The ABC of our youth, the ABC as the lifeline to rural Australians is no more. Uncle rupert has won that war. So as far as I can see, we no longer have a genuine non bias national broadcaster.
+80. This link has been shared 1 time. First Seen [Here](https://redd.it/1gbos2h) on 2024-10-25. --- **Scope:** Reddit | **Check Title:** False | **Max Age:** None | **Searched Links:** 0 | **Search Time:** 0.00218s
+81. Sad that qld is full of so many cookers now.
+82. At the end of the day this will be Labor's downfall especially in Logan and Ipswich. They should have been building more youth detention centres or even announcing the wellcamp as a detention centre as well. A lot of these youth needed to do time and that in turn would have reduced the pressure on the education system to act as their watchers rather than educators
+83. Wait what. We had a youth crime narrative in NZ too that led to the election of a right leaning government.
+84. Only speaking out now doesn’t really make the case for not wanting to defund the ABC. They have to do better
+85. Oh good. We were running short on dorky political posts.
+86. [deleted]
+87. Apart from the editorialised headline, how is this about Brisbane as per rule 1?
+88. Kenji (the journalist who wrote this story) has been covering this topic for 12 months. Here’s a story from September last year: https://www.abc.net.au/news/2023-09-30/queensland-youth-crime-long-term-data-downward-abs-police/102917994 Here’s a story from October last year: https://www.abc.net.au/news/2023-10-13/queensland-historical-media-reports-crime-waves-youth-crime/102957034 Here’s a story from six months ago: https://www.abc.net.au/news/2024-04-22/queensland-violence-on-rise-report-shows-not-just-youth-crime/103751192 Here’s a story from two weeks ago: https://www.abc.net.au/news/2024-10-13/criminologists-debunk-youth-crime-crisis-claims/104445432
+89. It was there but largely ignored. The bipartisan youth crime committee fell apart back in April because of it - they recommended regulations on media reporting misinforming the public about the nonexistent youth crime epidemic to stop youths being ostracised and demonised ironically leading to crime. As soon as they came out with that though the LNP dropped their support for the youth crime committee they so desperately demanded last year. They don't want their bullshit to be fact checked and want to continue to lie to the public.
+90. It’s pathetic isn’t it. Just lip service to say that they’d been fair and equitable.
+91. Fucking ironic when this sub does it all the time the other way. 'Less kids are committing crime' Sure but the ones committing crime are committing 10x more and escalate in seriousness earlier to take advantage of low repercussions 'But crime has gone down' Call 131 444 and tell me how long you wait on hold Have crime reporting rates gone down or up?
+92. Yeah are they gonna start throwing 13yo kids in adult prisons??
+93. I'm just curious what they think "adult time" means. The most "adult" crimes of all, those are committed almost exclusively by adults and never by children, are things like embezzlement, fraud, insider trading, insolvent trading (I wonder who did this one, hmmm), and so on. And the "adult time" that most offenders get for these is pitiful. So is their policy to give youth criminals *no* time, just like the perpetrators of the most "adult" crimes?
+94. > "Adult crime, adult time" What's even more fucked is that it's literal fascist rhetoric, the billboards with it splayed across and Crisafulli in the corner looking all "heroic" would give Mussolini a heart attack with how blatant it is.
+95. I wonder if abortion will be considered an adult crime when they recriminalise it
+96. So all politicians from all parties?
+97. There's no such thing as journalism anymore. They can't even spell check the stuff they copy-paste.
+98. Suddenly a stats wizard I see David
+99. I’d prefer they use ratios rather than total numbers, as it gives a fairer view in my opinion. I do not believe harsher punishment will deliver less victims. Short, medium or long term. I’m no expert but as I understand it, markedly more policing may get an uplift in these kinds of things the short term. However only social policy reform will shift the dial in the long term.
+100. If you’d recently been a victim of youth crime, as I have, you’d stop downplaying it. Have a sense of common decency for victims of youth crime and stop using it to push your political agenda.
+101. > complacent *[complicit](https://dictionary.cambridge.org/dictionary/english/complicit)*.
+102. Cheers. Looks like crime decreased in south east Queensland over the previous 10 years, but increased in other regions.
+103. Kenji Sato has been reporting on this issue [throughout the campaign](https://www.abc.net.au/news/2024-10-13/criminologists-debunk-youth-crime-crisis-claims/104445432) and [for many months prior.](https://www.facebook.com/watch/?v=454772507211483)
+104. 100%.\ Ita really needs to be removed for the hood of the ABC and Australia.
+105. Mate the current youth detention centers are badly under staffed, so where do you think they are going to find the staff for the other new centres that you want to build? It is never that simple
+106. You want to defund the ABC?
+107. Copy pasta?
+108. appreciate you doing the basics.
+109. it's interesting that his articles are misusing data to make a narrative. here a quote from 21-22 report, that was being used for data (I posted 22-23 one earlier) >Queensland Police Service recorded 64,540 victims of offences against the person in 2021–22, a 49.2% increase on the previous year (43,260 recorded victims in 2020–21) (Figure 22). This has seen the total number of recorded victims more than double over the past ten years, from 28,012 in 2012–13, with the two most recent years accounting for a combined 79.6% of the total increase another quote >Both the count and rate of unique victims of personal offences reached a 10-year high in 2021–22 another >Child offenders comprised over half of all offenders proceeded against for unlawful use of motor vehicle, robbery, and unlawful entry in 2021–22. cherry picking the low offender numbers but not mentioning that there are more unique victims isn't right. People are worried about being a victim of crime, and the data is saying you are statistically more likely to be a victim of crime now than you were 10 years ago.
+110. [The ABC has pushed back](https://www.reddit.com/r/brisbane/comments/1gbp08i/abc_brisbane_how_politicians_and_the_media_misuse/ltnw2ta/), but the people who need to hear it are probably anti-ABC, by design.
+111. People just want to bury their heads in the sand. Right wingers harp on the fact that crime is up to an almost annoying degree (regardless, crime is at an all time high) so leftists just recorrect way too hard and say the issue is fake and doesn't exist. Classic you go high we go low.
+112. Seems to be the plan.
+113. Almost like there might be a middle ground between doing nothing each time they appear in court and incarceration in an adult prison
+114. Go check out r/Australian if you want honest answers to that...
+115. They want to repeal the three strikes drug laws but still want their three strikes on white collar crime.
+116. Fascist?
+117. I drove out to Ipswich and they had that billboard just past Wacol which made me chuckle but also made me sad.
+118. Let's be honest, it's mostly on one side of the political spectrum that blatantly lies about shit and stokes fear to get elected because they know their policies won't do it.
+119. Man you must be ropeable at Chrisafulli using your circumstance for his own politcal agenda then.
+120. Cheers.
+121. no place had a decrease of crime rate (crime per 100 000) even Brisbane south and Brisbane north had a 30% increase, outback and Townsville with near 50%. Was surprised at Brisbane west staying stable (note, this is all crime not just youth). ~~the other interesting thing was that there is half as many unique youth offenders but they are committing twice as many crimes as 9 years ago. so basically they are committing 4 times as much crime per youth. Which suggest whatever solutions we have aren't working.~~ misreading a date on one of the pages. There is still as many unique youth offenders but they are still committing more crime per youth. Page 52. >Furthermore, there has been a notable increase in the average number of offences per unique offender actioned by police compared with ten years prior, more so for child offenders (+44.4%, from 2.7 to 3.9) but also for adults (+22.7%, 2.2 to 2.7).
+122. Thx u for those links🙏🏽 appreciate that
+123. Ita Buttrose hasn't been chair of the ABC since March.
+124. Ita is gone but as far as I know, another X newcorps stooge got the spot

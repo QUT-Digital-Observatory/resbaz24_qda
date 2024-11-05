@@ -1,0 +1,157 @@
+Your job is to analye a series of Reddit Comments are drawn from sbumissions related to the 2024 Queensland State Election. The comments are drawn from a collection of comments before, during and after the election itself on the 26th of October. The parties that sought election were the Australian Labor Party (ALP), the Liberal National Party (LNP), the Queensland Greens (Greens), One Nation and Katter's Australian Party. The LNP prevailed in the election, with David Crisafulli becoming the new Premier of Queensland. 
+We have identified several key issues that the major parties campaigned on during the 2024 Queensland State Election: Youth Crime (YC), Cost of Living (COL), Health (H), Energy and Infrastructure (EI), and Abortion Laws (AL). Below is a summary of each party's position on these issues:
+Youth Crime (YC):
+- LNP: Advocated for stricter penalties for young offenders, including the 'Adult Crime, Adult Time' policy, proposing that serious offenses committed by youths be met with adult sentencing. 
+- Labor: Focused on rehabilitation and prevention programs, aiming to address the root causes of youth crime through community engagement and support services.
+
+Cost of Living (COL):
+- LNP: Proposed measures such as abolishing stamp duty on new builds for first home buyers and re-establishing the productivity commission to review building industry regulations, aiming to alleviate housing costs. 
+- Labor: Introduced initiatives like 50-cent public transport fares, a $1,000 energy rebate, and free lunches for state primary school students to ease cost-of-living pressures.
+
+Health (H):
+- LNP: Committed $590 million to an 'Easier Access to Health Services Plan,' aiming to reduce ambulance ramping and hire additional healthcare workers. 
+- Labor: Focused on maintaining and expanding healthcare services, addressing hospital capacity issues, and investing in new health infrastructure.
+
+Energy and Infrastructure (EI):
+- LNP: Criticized Labor's Pioneer-Burdekin Pumped Hydro Project as financially unviable and canceled it upon taking office, opting to explore smaller-scale hydro projects instead. 
+- Labor: Proposed large-scale renewable energy projects, including the Pioneer-Burdekin Pumped Hydro Project, to transition towards 80% renewable energy by 2035.
+
+Abortion Laws (AL):
+- LNP: Stated there would be 'no changes' to abortion laws under their government, maintaining the status quo established in 2018. 
+- Labor Party: Supported the existing abortion laws and opposed any attempts to repeal or amend them. Asserts that LNP intend to restrict access to abortion services based on the views of some of their members.
+
+Analyze Reddit comments and code them based on the positions they support or oppose concerning these issues. You will output JSON, so valid values are strings or null. Use the following codes: YC, COL, H, EI, AL. If a comment's position is unclear or does not pertain to these issues, output null.
+
+Secondly identify which party the comment appears to support. Use the party code ALP, LNP, Greens, ON, KAP if this can be determined, otherwise a null value if undetermined.
+
+Output JSON as a list of objects where each object has an "id" (integer) property of the comment id, an "issue" property set to the issue code string (or null value), and a "party" property set to the party code string or null value. Null means JSON null, not a string. Values MUST be quoted, e.g. {"party": "LNP"} unless they are null, e.g. {"party": null}. Comments follow:
+
+1. It’s not easy however giving up isn’t the way either. - Remain politically engaged. - use public interest disclosures if something is genuinely corrupt - support non Murdoch media - don’t be shy about your views amongst conservative friends - participate on in your union if relevant - utilise the 50c public transport - go to the media if you lose access to a public service - be a helpful citizen where you can. volunteer with or donate to homelessness organisations that are about to be scraped. If you know of a young person at risk getting involved in criminal activities and you can help them or their parent, do. Ask Gina and Co to help as well. - demand better from business and corporations. If you know of profitable businesses not appropriately paying workers or evading tax, dob them in.
+2. Yea bro, LNP will also cause a nuclear war if they win every state also.
+3. That's cause you are terminally online
+4. What is your position based on here, do you understand how the royalties regime works in QLD? Royalties are based on the market price of coal - if the price is up they pay more dollars & a higher %, if the price is down they pay a lower %. Currently the price of coal is $139/t which means they pay up to 12.5%. The 40% tier was achieved only when the price went to a once in a lifetime price. The amount of income for QLD would be exactly the same whether the changes labor made were in or not…the one time sugar hit is gone, that’s what paid for the one of things like $1,000 rebates etc. More on the royalties regime on the Government website if you’d like to know more. https://qro.qld.gov.au/royalty/calculate-mineral/rates/
+5. To be fair, people in regional QLD with fuck all public transport do not give a shit about 50c fares.
+6. So they’re going to reduce them from the 2013 mineral resources regulation. Wow………
+7. Oh no, how dare people care about where they actually fucking live. You are so out of touch it's incredible. You lose the election and still think you haven't done anything wrong. You lost *Mackay and Rockhampton*, that's how badly you fucked up haha Seriously, is there no introspection in the Labor party these days?
+8. You think that the LNP or KAP gives a fuck about you?
+9. I think you’re correct about business confidence, but if there’s no legal reason that prevents an incoming government from changing the royalties agreement then it should be changed. My gut feeling is that Labor were happy to forgo the royalties for whatever reason but decided to increase them with the end of the contract because they knew that the voters were getting agitated towards them. Maybe I’m being cynical, but I don’t think so.
+10. Any evidence for this ownership of the judiciary?
+11. It IS comparable to the take-over of Gondwana Lands though.
+12. No they don’t they buy the majority of our iron ore(WA),they banned our coal exports and Japan and Korea picked up the slack. You probably don’t realise this but most of Queensland’s coal is for steel making. It’s NSW that produces largely thermal coal for power.
+13. That's not how the LNP works, they legitimately broke the state last time, I expect it will be worse this go around.
+14. They've made cuts before
+15. Bye bye public services
+16. If it comes down to 50c fares vs mining royalties, then they will slash services elsewhere. They get to have their cake and eat it too, then (keeping 50c fares while undoing the royalties).
+17. That's a good point.
+18. But that's the problem. Historically they don't..they've had plenty of chances, maybe not in this state but elsewhere. And they fuck it up. Every.god.damn.time... pun intended
+19. Well the federal lot does want nuclear power. I doubt a war, but a nuclear disaster wouldn’t surprise me at all. The mob that can’t even build a car park without stuffing it up want to play with uranium, yeah, nah.
+20. Or it’s because I’m not an idiot and know that most politicians/parties say one thing and then end up not doing it.
+21. So you support pork barrelling? Since when did Bruz relocated to Queensland?
+22. [deleted]
+23. Ahh ok I knew they bought something from us couldn't remember what. I knew it was used in steel making too as a company I used to work for had dealings with blue scope... but thought that was only a small chunk of the coal market. I thought most of our coal mines here was exported to china
+24. I don’t disagree. I’m just hopeful. Realistically they aren’t going to want to be as unpopular as last time they were in, as presumably they want to serve another term. Royalties gives them more money to deliver their promises, so they may well keep them. Even the Newman gov only froze royalties. Also they’ll have to change legislation to get rid of the royalties https://statements.qld.gov.au/statements/101332 My feeling is they’ll start working on youth justice legislation first, as this is one of their more popular platforms (I don’t agree with it, but it’s the main one that swung people over). They will likely also look to roll back entitlements for public servants and where they can and scrap as many temporary staff as possible.
+25. I don’t disagree. But he did say he won’t change coal royalties this term. There will definitely be other cuts though. Seems like they are going to swap homelessness services for a more expensive stadium.
+26. Yea why build anything then ? Why invest in one of the most well known, well understood energy sources ? It's not like we have one of the largest uranium reserves in the world to exploit....
+27. Ok nice one bro, you're very smart and not an idiot
+28. Thanks for that. It’s amazing that any State government would agree to a $1 billion penalty on a contract. I can understand $100,000 because of possible leasing commitments for equipment, but $1 billion is beyond my comprehension. Again maybe I’m being cynical, but I wonder if any soon to retire politician or senior public servant signed-off on that, then stepped across to a well-paid position within that company?
+29. To be fair the seaborne coal market is pretty small when you compare it to the amount China/mongolia produce. But your steel makers in Japan and Korea need it, then China and India use it as a top up when they need to.
+30. > Also they’ll have to change legislation to get rid of the royalties If they have a majority they can do this without any issue, we don't have an upper house that they'd need to negotiate with. We basically elect a dictator for 4 year terms in this state, the only thing holding them back is public perception and Murdoch will be more than happy to run interference for them on that front.
+31. Sorry to say but that's delusional thinking. What's going to happen is they're going to lower the royalties, probably legislate another decade long freeze, then they're going to hit us with the old "the state budget is in worse straits than we thought, so we need to make some cuts" then they're going to start asset stripping the state. They did it under literally every government they've lead in the state since Joh.
+32. Mate you’re off your rocker. Calling it now but one of the first things gone is 50c fares
+33. Yea they will start there. Crissafullofshit has said he will resign in 12 months if youth crime is not down. But it already is down and trending down. So they probably won't do shit and just regurgitate all of the current stats that show it's down and say it's all due to them. Funny if they do implement shit and it skyrockets though 🤷
+34. We totally should have nuclear power but the LNP are the last ones I trust to be able to do so effectively and it would be way too easy for them to deliberately miss handle such a project, claim nuclear actually was never viable and use the decade or two they wasted pulling such a charade to let their coal interests carry on with reduced threat from climate action
+35. You keep thinking I’m an idiot. Send me your apology within the next 4 years. I’ll be waiting.
+36. Federally top not just state. it's 100% how the LNP works. Why people ever believe they are EVER going to be any different
+37. 100% the NBN are calling and want a word... Fuck that for a joke.
+38. !remind me 4 years
+39. I know you'll be waiting, you are terminally online lol
+40. I will be messaging you in 4 years on [**2028-10-27 01:29:34 UTC**](http://www.wolframalpha.com/input/?i=2028-10-27%2001:29:34%20UTC%20To%20Local%20Time) to remind you of [**this link**](https://www.reddit.com/r/queensland/comments/1gcn732/the_real_winner_of_the_election/ltxz4z4/?context=3) [**1 OTHERS CLICKED THIS LINK**](https://www.reddit.com/message/compose/?to=RemindMeBot&subject=Reminder&message=%5Bhttps%3A%2F%2Fwww.reddit.com%2Fr%2Fqueensland%2Fcomments%2F1gcn732%2Fthe_real_winner_of_the_election%2Fltxz4z4%2F%5D%0A%0ARemindMe%21%202028-10-27%2001%3A29%3A34%20UTC) to send a PM to also be reminded and to reduce spam. ^(Parent commenter can ) [^(delete this message to hide from others.)](https://www.reddit.com/message/compose/?to=RemindMeBot&subject=Delete%20Comment&message=Delete%21%201gcn732) ***** |[^(Info)](https://www.reddit.com/r/RemindMeBot/comments/e1bko7/remindmebot_info_v21/)|[^(Custom)](https://www.reddit.com/message/compose/?to=RemindMeBot&subject=Reminder&message=%5BLink%20or%20message%20inside%20square%20brackets%5D%0A%0ARemindMe%21%20Time%20period%20here)|[^(Your Reminders)](https://www.reddit.com/message/compose/?to=RemindMeBot&subject=List%20Of%20Reminders&message=MyReminders%21)|[^(Feedback)](https://www.reddit.com/message/compose/?to=Watchful1&subject=RemindMeBot%20Feedback)| |-|-|-|-|
+41. Keep repeating the same tired line.
+42. Don’t ya know LNP is gonna end homelessness so no need for support workers. /s and good luck with the redundancy package incoming.
+43. Screw the poor, the homeless, the young. It’s the LNP mantra.
+44. There hasn't been much talking or thinking at all between LNP voters
+45. After cutting the Brisbane-centralised funding for services, the biggest excuse for not moving on the tent cities will be gone. The homeless can be rounded up and shipped out to the country/coast where no-one will count them. Also, a bunch of you "disabled" folks are going to receive the same treatment. This won't be the first or the last shake-up in the shape of our society. So remember, we voted for this.
+46. Not at all surprised to see none of the LNP cope and seethe troll posters are here to actually try and defend this shit. This next 4 years is going to be hard for so many people and it makes me truly sad even thinking about it
+47. My partner works in the public health system. Fucking bracing myself
+48. Where's the link for this? I'm curious But anyways, homeless people never vote for the lnp. So, lnp being lnp, they're not going to care and cut without regret if this is true.
+49. The LNp is gonna add more to the homeless numbers because he is gonna reduce the number of employees in the government to give more work and $$ to the property developers to get the homeless people housi that they are not gonna be able to afford. Do the adult crime do the adult time, but he won't say anything about trading insolvent . Christafullofshit
+50. Do you have a source? Genuinely interested.
+51. So people can live without paying rent or buying house ? That’s seems like free rider
+52. We could just criminalise them all, a prison cell is still four walls!
+53. Great day to be a CEO
+54. “We won, we won, we won, we won”… that’s the only thing they think and talk about. They are brain dead.
+55. California super cool to the homeless
+56. The impacts will be felt by the poorest and most disadvantaged in the community. And then guess what… we might actually see an increase in crime.
+57. Ah another leach to society government job.
+58. Specialist homelessness services don’t give people a free ride, they help them access accommodation. But thanks for your 2 cents.
+59. Just make it illegal to be homeless. Seems to work for so many. Oh wait we already have so many charges related to being homeless that LNP can fill there new for profit prisons they wanted to tender out.
+60. Already is, it's illegal to camp anywhere but official camp grounds, legally camping is any form of sleeping outside of a building, so homelessness is already illegal in Queensland.
+61. Yep. And there's breakfast, lunch, and a hot dinner. Tv, movie channels, and hot showers in your cell.
+62. Yeah, it’s heartbreaking. Lower the crime by helping families and support for youth and communities, nah let’s lock them up and let them spend time with more hardened criminals for when they get out. That’ll help curb criminality :/
+63. And what do you do with yourself that contributes so greatly to society ya grub?
+64. Just to correct this - many local governments have amendments to local laws requiring rough sleepers to apply for housing. Sometimes public pressure can win over and you see situations like the BNE LM shutting off power to sites. In Moreton Bay they switch off the water and lock the toilets 😂 Lots of amazing people work in the local councils and promote great research based initiatives. Local rangers do a great job too and often have good relationships with the rough sleepers.
+65. If they got life instead we’d never have a second offender and their families might get scared straight.
+66. Nun ya. Government jobs aren’t a contribution to society.
+67. Unhinged take
+68. Nice to meet someone who believes they will never use a public service in their lives. You must be quite a unique individual.
+69. these initiatives will probably open up in time depending on how things go for the next few months, there’s not heaps you can do right now aside from pressuring your mp and making sure this isn’t swept under the rug once the media gets bored. definitely keep an eye on how things are going in parliament, if talk starts to ramp up about abortion you’ll know it’s time to start searching for initiatives/organisations and asking around. pretty much just use your voice and watch this space
+70. Write to your local member, if they are LNP. Or if not, write to whichever LNP minister is in charge of any hypothetical changes that may or may not eventuate.
+71. March if and when it happens. Don’t worry, this government will give us a few reasons to protest.
+72. Met many of them for business over the years. Privately they will do anything to make a ban happen. It’s just when not if
+73. Youth crime may not be an issue in inner city Brisbane or the slight outlying suburbs but you got north and south and west and it is an issue. Talk to anyone in Townsville, cairns, Toowoomba, Mackay and they will know someone, if they haven’t themselves, been a victim of a break in or theft of property. If it wasn’t a problem there wouldn’t be specialist police teams sent to areas to curb it.
+74. Talk to the people around you and talk to the LNP candidate for your area. The people around you are going to vote. Let them know the issue exists, because not everyone keeps up. You can start with a "I can't fucking believe we're following that American wank around abortion/choice/whatever" as a breaker if you don't normally talk politics. The LNP candidate wants a job, so let them know that choice matters as a policy in your electorate.
+75. The average person has done a lot already. Crisafulli was supposed to win in a landslide but just squeaked over the line. LNP centrists, state and federal, must be petrified of Katter and their own right wing continuing to push this, would be electoral suicide.
+76. Isnt he only against late term abortions? Shouldnt we all be? And hes expressed there wont be a change to the abortion law regardless of his position on the matter. Why worry now? Worry if he goes back on his word and vote against him
+77. This state is so backward it’s scary. Full of trump supporters
+78. How about you all take it easy - no one is doing anything at the moment as they’re still counting. You won’t wake up on Monday & abortion is illegal…people going on about having protests & things when no indication anything is changing
+79. They said the law isn’t changing. If they break the election promise, vote against them. Can we stop talking about this now.
+80. Pretty sure that Labor voters are the ones keeping this alive as an issue for their own political ends. Was taken off the table by state and federal LNP
+81. Marry well, don’t divorce, love your children and don’t kill them. Also donate to Israel.
+82. Definitely this. Write to your member and say it's an important issue for you. If enough people do this it usually makes the point loud and clear to whichever MP.
+83. You meet a politician for ‘business’ & all they want to tell you is secretly their number 1 goal is to ban abortion? Are they there in the room with you now?
+84. Surely they wouldn't go so far as to ban out of state abortions though, which is what I'm hoping to support if in-state abortions become illegal. Or, do I think too highly of the LNP?
+85. Stop trying to feed the fear. They will not be touching abortion.
+86. Interesting you include Toowoomba. My entire family lives there. My husband's too. Haven't heard of anything crazy happening there the last few years youth crime wise worse than what goes on in Brisbane. Seems pretty tame there still. And the statistics certainly don't show it.
+87. Its literally the only thing labor voters have to cling onto, they said they would not change it, while the labor media machine was screaming from the rooftops they will, so either the liberals are lying (which is unlikely they would risk their entire political party on a single fucking law) or labor is running a fear campaign, and will fall on their face next election when all LNP has to do is point out said fear campaign
+88. Yes the law is changing, We know that for a fact the LNP are a pack of liars and full of corruption.
+89. No we cannot. While some have it in their head that they have a god-ordained right to interfere in another person’s life, especially when faced with such a difficult choice, then it must never be silenced.
+90. No. Women's right to healthcare is an incredibly important issue. If they break this promise, how many women do you think are going to be forced to go through pregnancies they do not want and are not prepared for?
+91. 0/10 ragebait, maybe try therapy
+92. This isn't about me. This is about supporting other people. How does marrying well, no divorce, or loving children (I'm not in a relationship) help anyone that needs to terminate a pregnancy? What does Israel have to do with this?
+93. Bot
+94. If you ever got out of the basement and turned off the xbox you would know the corporates and pollies have a thing called after industry event drinks where hot topics gets discussed
+95. They’re a state government. We have federal levels and a high court. I know the outcome wasn’t good but you guys need to chill
+96. Katter will. And they will vote to get rid of it exactly like they did in 2016. You must live a sad existence believing liars.
+97. It has a crime rate of 12/1000 residents when the QLD average is 10/1000. There has been a few high profile issues up there, including the death of a 75 year old man by a 17 year old during a robbery last year.
+98. Are you a man or a woman?
+99. If the law doesn't change in the next 4 years, will you accept your wrong and delete your entire reddit account instead of deleting comments every single time your arguments get pulled apart?
+100. Do you even know what changes Katter wanted. Have you actually heard the whole thing from him directly? Or just what you've been told online?
+101. The law isn't changing. You fell for Miles' scare campaign. And you might not realise this, but before 2018 legislation was passed, there were 14000 abortions performed every year in QLD.
+102. Antisemite.
+103. The basement is nice - mum brings me chicken tendies
+104. Health is a state remit and it would take a long process before it got to the High Court. If it did. Abortion is banned if a bill is tabled here and it passes. The federal government can’t do a thing about it.
+105. Stupid argument. Katter has zero chance of ever being in power.
+106. No worse than my suburb in Brisbane. The 75 year old I heard about and was awful but overall the statistics seem average for Toowoomba. Not counting Toowoomba city which would be because of Grand Central.
+107. It doesn't matter whether you are a man or woman, Making sure abortions remain legal is a basic human right.
+108. Unfortunately, If the Katters put up the private members bill it is likely to pass given that the LNP last time voted in favour of it apart from 3 people who have common sense. I know the facts aren't your strong suit here champion, so pipe down while you can.
+109. Katter doesn’t need to be in power to introduce a private bill.
+110. So will you delete your account? And here's something that might blow your mind, before 2018 there were 14000 abortions performed in QLD every single year already, so could it be that those who voted against the legislation simply thought it was going too far and wanted something a bit more moderate which would be in line with most of Western Europe?
+111. You misinformed clown. They voted against that specific bill which has significant conflicting evidence with substandard patient care. No one supports decriminalising abortion. This will sting for you when the law does not change.
+112. It never gets through. You're wasting mental and emotional energy on an event that is not going to happen.
+113. It doesn't matter how many or how little abortions there were, Its a basic health right that shouldn't be impeded upon. Its not you nor I's choice to decide whether they should be allowed or not, Its a basic health right that needs to stay permanently.
+114. I said nothing about whether it will or won’t get through, just stating that whether he is “in power” or not has nothing to do with whether he can push it forward in the first place.
+115. Or maybe those who fall Pregnant out of laziness should start using proper protection. It’s not just about those that have been raped sick to death of women falling pregnant because they couldn’t be assed to protect themselves and think they can just abort and that will solve the problem!!! 14000 abortions that’s ridiculous. It’s a baby too not just about the irresponsible woman!!!!
+116. So it still doesn't matter? Ok. Good argument.
+117. It doesn't matter how many or how little abortions there were, Its a basic health right that shouldn't be impeded upon. Its not you nor I's choice to decide whether they should be allowed or not, Its a basic health right that needs to stay permanently.
+118. [removed]
+119. Unfortunately you do not get to decide whats a basic health right or not, Move on. It doesn't matter how many or how little abortions there were, Its a basic health right that shouldn't be impeded upon.
+120. Tell us you’re an arsehole without telling us…
+121. And you’re saying the same thing LNP got in big changes about to take place and I can’t wait!!!
+122. It’s more because while support for the greens remains steady and has likely even grown, that support is pretty spread out across electorates. In much the same way 2.5% of voters voting for KAP managed to get 3 seats because those voters were extremely concentrated to a few electorates, the much larger voter base of the greens is spread across many more electorates, and under our current voting system means that it’s quite possible they win 0 seats.
+123. Great. Mining companies won. Clap clap QLD.
+124. My personal opinion: they got a little too big for their boots, letting perfect be the enemy of good. They’ve been pissing people off on a federal level stomping on just about anything that’s proposed because it’s not perfect. They’ve pushed away their core voter base that just wants to see stronger climate action for the sake of pandering to the Israel Palestine conflict. Out of touch and out of line. Less gay aboriginals for Palestine and more climate and housing policy.
+125. I'm sad that Michael Berkman lost his seat. He was exactly the kind of candidate that the Greens need if they are going to win --more-- seats. I care about climate change, human rights and most of the things the Greens stand for. I don't believe that the candidates they offer me in my electorate would be strong enough to make the changes necessary if they gained power. Give me a strong candidate and I'll vote for them.
+126. I vote Green because they support Green issues. Climate, environment. When their flyer hit my table there was nothing about the environment, it was woofy hand wavy things. Fight for Green issues, Greens
+127. Berkman and McMahon were really decent as state MPs. I didn’t vote Green but I thought they were a good presence in parliament. Labor actually adopted many of their policies in recent times which is a huge credit to them. My feeling is the federal Greens might be having a negative impact on the state brand. People are desperate for actual progress and practical outcomes, not just endless chasing of perfection and grandstanding. Max Chandler-Mather needs to get his hubris under control too. He’s so very unlikable.
+128. I’m not sure why the ABC commentators were so certain that the Greens lost Maiwar. The LNP will only win the seat if Labor preferences flow to them. Or maybe I’m missing something. Anyway, I suspect that we’ll see some Teals filling the gaps…Greens won by default in the federal election, presumably because no one thought a teal candidate would stand a chance in QLD.
+129. The Greens have gained votes and currently have 1 seat. The counting isnt even over what are you talking about?

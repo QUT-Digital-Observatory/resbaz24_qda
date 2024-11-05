@@ -1,0 +1,175 @@
+Your job is to analye a series of Reddit Comments are drawn from sbumissions related to the 2024 Queensland State Election. The comments are drawn from a collection of comments before, during and after the election itself on the 26th of October. The parties that sought election were the Australian Labor Party (ALP), the Liberal National Party (LNP), the Queensland Greens (Greens), One Nation and Katter's Australian Party. The LNP prevailed in the election, with David Crisafulli becoming the new Premier of Queensland. 
+We have identified several key issues that the major parties campaigned on during the 2024 Queensland State Election: Youth Crime (YC), Cost of Living (COL), Health (H), Energy and Infrastructure (EI), and Abortion Laws (AL). Below is a summary of each party's position on these issues:
+Youth Crime (YC):
+- LNP: Advocated for stricter penalties for young offenders, including the 'Adult Crime, Adult Time' policy, proposing that serious offenses committed by youths be met with adult sentencing. 
+- Labor: Focused on rehabilitation and prevention programs, aiming to address the root causes of youth crime through community engagement and support services.
+
+Cost of Living (COL):
+- LNP: Proposed measures such as abolishing stamp duty on new builds for first home buyers and re-establishing the productivity commission to review building industry regulations, aiming to alleviate housing costs. 
+- Labor: Introduced initiatives like 50-cent public transport fares, a $1,000 energy rebate, and free lunches for state primary school students to ease cost-of-living pressures.
+
+Health (H):
+- LNP: Committed $590 million to an 'Easier Access to Health Services Plan,' aiming to reduce ambulance ramping and hire additional healthcare workers. 
+- Labor: Focused on maintaining and expanding healthcare services, addressing hospital capacity issues, and investing in new health infrastructure.
+
+Energy and Infrastructure (EI):
+- LNP: Criticized Labor's Pioneer-Burdekin Pumped Hydro Project as financially unviable and canceled it upon taking office, opting to explore smaller-scale hydro projects instead. 
+- Labor: Proposed large-scale renewable energy projects, including the Pioneer-Burdekin Pumped Hydro Project, to transition towards 80% renewable energy by 2035.
+
+Abortion Laws (AL):
+- LNP: Stated there would be 'no changes' to abortion laws under their government, maintaining the status quo established in 2018. 
+- Labor Party: Supported the existing abortion laws and opposed any attempts to repeal or amend them. Asserts that LNP intend to restrict access to abortion services based on the views of some of their members.
+
+Analyze Reddit comments and code them based on the positions they support or oppose concerning these issues. You will output JSON, so valid values are strings or null. Use the following codes: YC, COL, H, EI, AL. If a comment's position is unclear or does not pertain to these issues, output null.
+
+Secondly identify which party the comment appears to support. Use the party code ALP, LNP, Greens, ON, KAP if this can be determined, otherwise a null value if undetermined.
+
+Output JSON as a list of objects where each object has an "id" (integer) property of the comment id, an "issue" property set to the issue code string (or null value), and a "party" property set to the party code string or null value. Null means JSON null, not a string. Values MUST be quoted, e.g. {"party": "LNP"} unless they are null, e.g. {"party": null}. Comments follow:
+
+1. So the stadium just hovers above the flooded areas? I've been working in floodplain management for 20+ years. I've looked at heaps of situations like this. It won't work unless neighbouring properties are okay with water levels in their houses being higher than they are now. I mean, we all sit here and go "weren't the people who designed Brisbane fucked in the head when they put all the properties in a floodplain" and yet there are people in this thread going "Yeah, this site is fucked by flooding so we should build critical infrastructure on it" There are better uses for this land than a sports stadium. I can only assume anyone who wants this lives in the immediate area.
+2. You would cut back the existing toombul carpark to lower the height to closer to the creek height, and then have the floor plate of the stadium on columns raised to the height of toombul station. This would increase the width of the flood area at the stadium location dropping the velocity dramatically and reducing flood impacts around it. The stadium would be miles above the flood line, as are all road and rail access points.
+3. So, uh, water just hits the columns hey? Anyway, you'd need about a diameter of 300m to allow for a stadium of similar size to the new one in Perth. It's about that from Grace Street to the railway line, but there'd be a buffer from the rail line. So unless you want a super skinny stadium or to acquire private residential dwellings, it can't fit. It's just a really shit place to put critical infrastructure.
+4. Yes. Like every single bridge over a waterway. And Perth stadium is 300 x 250. And the gabba's widest part is 250m including buildings. But I get it, you don't like the location. But there is nothing stopping it's construction there from an engineering perspective.
+5. Anything can be constructed from an engineering perspective. You could possibly fit a stadium in there but you certainly couldn't fit in the forecourt area or anything else to attract people to the site. This site is only marginally better than having it at QSAC. At least that shit hole is on a hill.
+6. In the nicest way possible, you might want to take your comments to the Townsville, Rockhampton, Sunshine Coast, Maryborough, or Hervey Bay subreddits instead. Brisbane and a good portion of the outer "Greater Brisbane" areas voted Labor, which stopped a total LNP landslide. So maybe it's time to go eat a crow—or whatever it is South Australians do.
+7. You aren't here for a discussion clearly or you wouldn't limit the discussion to only people who agree with you. Don't see the point of this post at all
+8. Some people are not social democrats and never will be, they firmly believe Australia is a strictly capitalist country. The idea of using taxes to ensure everyone is housed and fed, is anathema to them. They put business and strict economic prosperity above society. So they voted ALP out. Some of my friends honestly feel this way. I don't like it but there it is
+9. So what is the point of this post for? Are you giving people here a lecture or what?
+10. One could just as easily ask "*why the hell did you guys put Marshall in charge?*" (And if your response to that is "*we got rid of him as soon as we could*", I'll point out Qld did the same thing with Newman several years earlier.)
+11. Because this happened in 2021 https://preview.redd.it/0jjxp6sngdxd1.png?width=3840&format=png&auto=webp&s=407530fd14e8c8bb95cd6e31f02ae996f0fd428a
+12. Maybe everyone's missing the point the blame here falls on the shoulders of Anastasia she fucked it up royally and ran away then someone else jump the que and said I can win and lost because she fucked it up royal it's on her and not one person in the news has pointed to her.
+13. Well Qld doesn't like steven miles
+14. About a month ago I said how entertaining the cope from the fallout of Labor losing would be, and I've not been disappointed 🤣
+15. We literally aren’t in control. It doesn’t matter who we vote for, powers at be wanted this to happen exactly how it played out. We just gotta ride the wave of dumbfuckery.
+16. Never have I been more convinced than in this election, that votes simply do not matter. No reasonable person I have spoken to wanted them in charge, and I was immediately suspicious when I went to do my early voting and saw that the booths were once again only offering pencils to write with. You'd think we would have learned, but welcome to the most apathetic country in the world I guess.
+17. lmfao eat a crow
+18. I'm not taking my comments elsewhere, thank you very much. Just because it makes you uncomfortable doesn't mean you have to push it away.
+19. > If you're going to comment "Go bother about your own state's politics", "Bugger off, you've got know business crying about our state government" Which one of those means "If you disagree with me?"
+20. Ah yes, the ambulance rammer. I honestly keep forgetting that Marshall was in charge, he's just that forgetable lol. My mind goes Jay Weatherill... guy with glasses.. Malinauskas. Also, may I ask, what's the Newman lore? Or is it that politically traumatic? I wouldn't blame you, guy sounds like a c\*nt. Edit: Holy shit. What an embarassing, sad man. *Bootcamps??* You're kidding.
+21. Have you seen his gym videos??
+22. Yeah, it's been a nice read. Watching people argue about how the greens failed was also a good read. Lots of seethe. I'm pretty sure most leftists don't understand there is a Queensland north and west of the local bus network. The next Federal election will be good value as well.
+23. > only offering pencils to write with Why is that an issue?
+24. Are you suggesting it was rigged? Are you so blind to the fact that policy effects all people of all circumstance and what is important to you means nothing to others? The majority voted for the policies that most affect them and you can blame ignorance or sky news all you like. How many people and from what walk of life did you speak to out of interest? Over 2 million?
+25. I'm going to have to disagree here. I know that I'm coming into an age where I am going to be labelled as a "doofus" for my strong yet naive political opinions, but I do know this - voter apathy is the death of democracy. If we all were to succumb to this mentality, then we become complacent to the bullshit that some political groups will push, because they know that the general public will not care. This is what gets abortion laws reversed, and other stupid shit to get introduced. So I encourage you, when the next election happens, spread the word, it doesn't have to be much. It could be something as silly as a rumour you heard, like, "Did you hear about Crisafulli's public spotify account?". And then you don't have to do it for another 4 or so years. That's all.
+26. Doesn't make me uncomfortable at all, I'm pointing out that if you want your shit post to actually be read by the people that put the LNP into power, go post on those subreddits.
+27. Something you must understand is QLD is that unlike SA people actually live outside the capital. And for whatever reasons they chose LNP and outvoted us.
+28. go back to south australia where you belong you alien!
+29. They're implying that someone could rub out his vote and change it.
+30. Because you can't erase pen.
+31. In true fairness there should be no room for doubt. If you want to have blind faith in a system, seek religion, and stay out of politics.
+32. I figured that, I just wanted them to say it.
+33. Can cross it out though
+34. Salty
+35. Better than being ignorant
+36. You would have been the first one to laugh at trump for blaming election rigging. Now you're trying to do it yourself. You're also pretending to speak for 5.2 million people in a lefty subreddit. Time to grow up. Your problems aren't the states problems.
+37. Kinda sounds like you're salty now tbh
+38. Yep, thats why im not a teacher, hate dealing with children.
+39. Well, that, and teachers have to have some kind of intelligence to pass along.
+40. Good, the QSAC proposal was an absolutely brain dead concept
+41. The only, and I mean only, positive thing that came with the election result for me. I hope they go forward with a Gabba rebuild but the second best option would be a new stadium in Vic Park imo. For everything else with the new LNP government, god help us.
+42. Get used to “Crisafulli scraps” headlines
+43. Damn, was looking forward to the opening ceremony showing off the beautiful QSAC stadium with the cemetery in the background.
+44. Thank god what an awful decision this was by the previous government
+45. Interesting choice of language at the end of the article "The conservative party will now rule for a four-year term until 2028." In a democracy governments are meant to 'govern' not 'rule' but hey...
+46. Lol, mods shut me down this morning for creating an Olympic thread now that QSAC won't be going ahead. https://preview.redd.it/hbik9z988axd1.jpeg?width=1337&format=pjpg&auto=webp&s=331d318469c3c32838b43ecbc80c223c2de2e851
+47. Yeah fuck you Townsville, we're getting a 2 billion dollar sports ground, you guys can live in tents.
+48. New government - actually invest in a legacy stadium please. We are still benefitting from the game changer that was Expo and its legacy, and the Gabba is at end of life. The last review made it clear Vic Park was the best option… so do that!
+49. Good on him. QSAC is the kind of place you hold high school athletics.
+50. I voted for labour but if the libs can pull a good stadium plan out of their ass and begin construction I’ll have to give them credit.
+51. The first and only good thing to come from the LNP government.
+52. Very keen for a potential Portside redevelopment. 160 acres is publicly owned land, athletes village can be turned into housing afterwards (airport noise may be an issue), massive upgrade and development of that part of the river, state of the art stadium built by people that have recent accomplishments in some of the most high tech stadiums in the world, increase in public transport to an area that lacks it, and according to plans, to no cost to the tax payer. https://ministryofsport.com/6-billion-northshore-proposal-to-solve-brisbane-2032-olympic-infrastructure-challenges/#:~:text=The%20proposed%20plan%20addresses%20Brisbane's,affordable%20and%20market%2Drate%20housing.
+53. One positive, thank you. Lets get the Gabba rebuilt.
+54. Thank god
+55. God please be the Gabba not Victoria Park
+56. If he scraps the Olympics I MIGHT hate him a tiny fraction less
+57. The Olympics we had to have but moreover the olympics that Brisbane can’t look outside the box to host. Not surprised.
+58. Why the fuck wasn't this announced before the election?
+59. Right decision, still worried about his royalties tax cut and the public sector
+60. Northside still has my vote. Gabba has no room for more amenities such as restaurants whereas Northside will
+61. I still think Toombul shopping centre isn't completely done and dusted as an option yet.
+62. Seemed like LNP were angling for a power move all along. LNP says the Gabba reno sucks - makes everyone hate the idea (because they don’t want the Olympics). Labor stupidly tries to placate the public by saying oh well we'll build it somewhere else, like say QSAC (maybe, maybe not, we’re still running numbers). LNP wins election, does a 100-day review and announces they’re going to do a big reno on the Gabba!
+63. Gabba precinct will be brilliant with no stadium there. Apartments surrounding a nice park with lots of restaurants and bars. Close to CRR. Makes sense. And VIC Park makes sense. In 10 years everyone should look back and say it was a great decision. Now for them to fuck it up same as Miles did. 🤦🏻‍♂️
+64. New Olympic stadium to be built on the old Toombul shopping centre site near the airport. Watch this space.
+65. Putting my money on Vic Park. Gabba site is too small
+66. Off to a good start.
+67. What are all these terminology’s man
+68. That’s one thing he and I agree on. For a grand total of one thing.
+69. Did anyone consider the option of building an Olympic park between Rocklea and Corinda?
+70. I'd prefer a Gabba rebuild but I can see why it's troublesome especially since they stupidly built Highrise apartments directly opposite, but is there some reason why we can't shuffle a bit to the left(west) and just build a New Gabba over the Transport Hub and prob also over Stanly st by taking out some of those small businesses. Then tear down the old Gabba and turn that into the green space and social housing. Solves the space issues, transport issues, NIMBY school issues and allows sports to continue in the old while they build the new.
+71. We should never have bid for the olympics. ALP deserved to get shithoused for that alone.
+72. Maan this guy looks shady AF. I bet by the end of his term there'll be inquiry on this guy. It's almost certain
+73. So not waiting for an independent review, just hiding the fact from regional Queenslanders that they were going to go for a more expensive stadium with less funding being covered by the IOC
+74. Oh no he should’ve done all of the things that the current government did that’s why people voted otherwise. What an outrage.
+75. Not all bad news then
+76. Common sense prevails here. Hopefully the Gabba gets knocked down and rebuilt and they remove some seats at QSAC so it can be turned into an oval for the Lions to play at in the meantime.
+77. Good, and Labor would have done the same thing I reckon. It was a nonsense political squabble during the election, so I’m glad they can get on with things now.
+78. But why? Good access, especially with metro, much better access than the gabba or suncorp. Less disruptive to the city for construction. Room to grow.
+79. Yep, the one thing I woke up this morning that I could find a positive with was the Olympic stadium plan.
+80. As a Labor member, hear hear.
+81. Don't think they can't ballz up a stadium plan. Their private property developers and investors will have them making bad decisions in no time.
+82. Barrambin really doesn't have the space for a stadium without it being the only thing there. It might look like a big park on the map, but the elevation changes are massive.
+83. Libs ruled out any new stadia, many of them re-iterated this under questioning on election night
+84. these are both horrible plans. especially victoria park. why my fellow queenslanders hate green space is beyond me.
+85. Its only day one so i guess thats pretty good.
+86. How stadiums are a priority for anyone at the moment is ridiculous.
+87. North shoes Hamilton would be an amazing option, and wouldn’t cost us much because the private company said they’ll completely build it
+88. It’s Vic park. Not Gabba.
+89. Oh well you got your wish. Be happy with the rest. But you’re not the only one that can’t look outside the box. Queenslanders definitely lack vision.
+90. I look forward to the "Crisafulli scraps himself" when he can't keep the promise to lower youth crime. I'm pretty sure he promised to resign if he won and failed on that promise.
+91. Single house and clear majority means they are basically ruling.
+92. Doesn’t take long for the Murdoch media to fall back in to the mould when the libs get in to power. Remember it’s the birth right of the libs to rule us.
+93. That’s really poor. Your post should stand.
+94. The mods here aren’t great.
+95. Didn’t Brownsville get a new stadium a few years back?
+96. Vic park isn't the best option, it's superficially the easiest option. Contrary to the review, the Gabba rebuild could be done if the State Government was willing to play around with the idea of either deleting or cut/ covering Stanley St or Vulture St. That may seem like an absurdly high additional expense, but it may be the lesser evil - If Vic park is the site, we would have two stadiums within 2km of each other, and would certainly need to invest significant amounts into upgrading the already critically strained and dated inner west road and public transport networks. And Wooloongabba without a stadium would make the past 40 years of townplanning and investment in that precinct wasted. Wooloongabba would be a CBD adjacent precint of 5 lane urban highways and highrises - a soulless and irrelevant suburb to drive through on the way to Southbank.
+97. What do you propose is done with the decaying skeleton of the Gabba once it reaches end of life?
+98. Developers are already putting all their money into the gabba area and are among LNP's biggest donors. Victoria park ain't happening. If the review says vic park is the way to go they will just keep doing more reviews until someone says the gabba is the way to go. How else do you explain every review that was occurred yet more are happening.
+99. Literally
+100. They also promised to get rail to Maroochydore by 2032. An ambitious achievement, which I doubt they will manage anyway, but hats off to them if they do
+101. Maybe, maybe not.
+102. They were already planning to build the athletes village in Hamilton anyway. I’ve come around to the idea of the Stadium being in Hamilton too, plenty of space and good chance to further redevelop the area. They just need to extend the Doomben Line. And maybe extend the Metro to the airport via Hamilton to give direct access.
+103. Both sides wanted to win the election.
+104. Too expensive to be palatable to voters in north Queensland
+105. Gabba already has tons of good restaurants around, easily walkable, and transport links
+106. Do you mean Northshore? As in, Hamilton area?
+107. Unfortunately, the Gabba doesn't even have anywhere in the athletes can warm up.
+108. Main Street Maccas is all the restaurant I’ll ever need when heading to the Gabba
+109. Problem is without the Gabba developers don’t see a reason to invest in the area. You will see all proposals drop like flies. There’s a reason developers land banked for over 10 years in parts around the Gabba.
+110. It's not the worst idea, add a new air train station to go with the Toombul station and you have good public transport access But Mirvac won't be keen on selling.
+111. Watch that flood.
+112. I believe it's all flood plain their...that doesn't stop them from building houses etc...but I have heard its just flood area
+113. Why there? Nothing's interesting around the area. Transport system is even worse than QSAC.
+114. QSAC was the most expensive option
+115. The QSAC plan was so bad it doesn't really deserve further consideration.
+116. The games are less than eight years away now. Frankly, another review is time time wasting.
+117. [deleted]
+118. Good access? Gabba is next door to the CRR train.
+119. Good access, especially with the metro? Where’s the metro stop? QSAC also doesn’t have the public transport capabilities it used to have when it was QE2. Gabba makes much more sense, especially with the purpose built transit hub you may or may not have seen already underway.
+120. Good access for who? I lived out there for years and it was horrible to commute to or from. Even with a new busway connection(that wasn’t part of the $1.6billion), Suncorp and Gabba both have heavy rail stations with commuter capacity several times greater than any busway service will ever provide. It will take hours to clear capacity crowds from QSAC via the Busway.. I’ve been there and experienced it through ACDC concert. Gabba and Suncorp are both centrally located meaning they’re more accessible to both sides of the river, and Ipswich region also.
+121. >Good access, especially with metro, much better access than the gabba or suncorp. What absolute dribble! For a start, "Metro" 🙄 doesn't serve QSAC. It also only has a capacity of ~180 people. NGR Trains carry 964. Gabba will have a railway station AND a busway station. It is far more accessible than QSAC. QSAC is a relic of 1980s urban planning.
+122. >much better access than the gabba or sun This is really funny
+123. Are you dense? The stadium is over 10kms from the city, nearby one of the worst intersections in SEQ, has no effective public transport options besides buses, and it’s in a completely urban sprawled section of the outer metro area. Room to grow? Where?
+124. God, if LNP can just settle this debate I’d vote for them. Great news is making wildly unpopular decisions is like water off a ducks back for LNP. They got this.
+125. And relying on expanding the park by building over the ICB would be the first thing cut to save money
+126. The proposal from Archipelago results in no net loss of publicly accessible green open space. https://archipelago-interactive.com.au/
+127. The plan is to build over the ICB and use the flatter area in the dip. They are not carving out the hillside
+128. Their policy is to have a 100 day review. They ruled out a new stadium for now but if they review is similar to the one commissioned earlier, I believe they will switch to it. It’s theatrics to make the decision palatable I reckon.
+129. If you read the plan, it’ll actually increase greenhouse gas emissions space because they’ll be putting gardens all around the stadium
+130. It has to be a priority now. Now that they've won the right to host the games. They shouldn't have bid for it in the first place without working all this stuff out though. Ridiculous that we're still talking about where the stadium will be.
+131. Why hello there Star Casino!
+132. LNP winning was not my wish.
+133. He walked that back on Friday and broke an election promise before he was even premier.
+134. I feel like Stanly and Vulture need to go even if they don't put a stadium there, especially as it is to become a public transport hub now. Those roads restrict active transport access to that transport hub.
+135. I can't see any way of doing the Gabba without sending one or both of those roads underground. The Gabba isn't my preferred option (I think Vic Park is the all round best solution) but I wouldn't be too mad about it, but imo they have to do that with Vulture/Stanley, otherwise it'll still just have all the same traffic and pedestrian problems but with even more people. One of the big difficulties (and costs) of doing the Gabba is building a suitable temporary home for the Lions & cricket while they build it, one that won't result in a decimation of their membership. I'm a lions member and if I had to travel to Springfield or the Gold Coast, I simply wouldn't renew, and neither would most other members I know. Vic Park solves that. It's already within 20 min walking distance of like 50 platforms of heavy rail, and multiple bus & metro stations.
+136. I mean, they were going to tear it down for the rebuild anyway so giving the space to developers to build apartments for overseas investors seems like a thing the government would do.
+137. Make the site a PDA and get EDQ to bulldoze it and subdivide it. Renovate & improve the school. Build some social housing on part of the land. Sell the rest to developers to build mixed use commercial, retail & residential buildings. Use that revenue to help fund the new stadium.
+138. Serious question here, I go to the Gabba a few times a year and I dont see any major reason to demolish it? Its facilities seem ok? Im no structural engineer but whats the issue (eg has it got concrete cancer?) that prevents them just renovating/expanding it and maintaining some of the existing structure to save money?
+139. Leave as a decrepit ruin for the NIMBY neighbors
+140. Knock it down and meticulously transplant the pitch square into the new Vic Park stadium.
+141. Send a very nastily worded letter to the muppets who decided to build a stadium with a 30 year life span? There is literally nothing wrong with the stadium, it’s absolutely fit for purpose.
+142. The problem I have is that every review found that Barrambin was the best option because an Olympic stadium doesn't fit at the Gabba - because geometry. The only kind of review that will recommend the Gabba must first prove that a square is a circle and 1+1=3. I wouldn't put it past corrupt Crissafuli to make that happen, but still..
+143. Didn't agree with Labor about qsac and really want Maroochydore rail asap. If they at least change those 2 things I'll be a little happy. Not enough to make me. Vote lnp, but maybe I won't be as diappointed in them as I would otherwise be.
+144. I think they mean Vic Park/Herston
+145. Nonsense.
+146. Not even close to it, IOC would pay for all the other stands except the main side Instead of regurgitating something that someone who can't think for themself says. Tell me, if QSAC was the most expensive option forthe government for the "worst" option , why wasn't this "slam dunk" policy announced during the campaign, surely all of Queensland would have loved it.
+147. Well if you don't like it, seems like a good enough reason to outright exclude our only athletics stadium from the consoderation of where to build a multibillion dollar athletics stadium, of what is meant to be an independent review

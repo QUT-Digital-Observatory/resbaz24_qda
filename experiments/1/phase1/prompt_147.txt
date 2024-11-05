@@ -1,0 +1,148 @@
+Your job is to analye a series of Reddit Comments are drawn from sbumissions related to the 2024 Queensland State Election. The comments are drawn from a collection of comments before, during and after the election itself on the 26th of October. The parties that sought election were the Australian Labor Party (ALP), the Liberal National Party (LNP), the Queensland Greens (Greens), One Nation and Katter's Australian Party. The LNP prevailed in the election, with David Crisafulli becoming the new Premier of Queensland. 
+We have identified several key issues that the major parties campaigned on during the 2024 Queensland State Election: Youth Crime (YC), Cost of Living (COL), Health (H), Energy and Infrastructure (EI), and Abortion Laws (AL). Below is a summary of each party's position on these issues:
+Youth Crime (YC):
+- LNP: Advocated for stricter penalties for young offenders, including the 'Adult Crime, Adult Time' policy, proposing that serious offenses committed by youths be met with adult sentencing. 
+- Labor: Focused on rehabilitation and prevention programs, aiming to address the root causes of youth crime through community engagement and support services.
+
+Cost of Living (COL):
+- LNP: Proposed measures such as abolishing stamp duty on new builds for first home buyers and re-establishing the productivity commission to review building industry regulations, aiming to alleviate housing costs. 
+- Labor: Introduced initiatives like 50-cent public transport fares, a $1,000 energy rebate, and free lunches for state primary school students to ease cost-of-living pressures.
+
+Health (H):
+- LNP: Committed $590 million to an 'Easier Access to Health Services Plan,' aiming to reduce ambulance ramping and hire additional healthcare workers. 
+- Labor: Focused on maintaining and expanding healthcare services, addressing hospital capacity issues, and investing in new health infrastructure.
+
+Energy and Infrastructure (EI):
+- LNP: Criticized Labor's Pioneer-Burdekin Pumped Hydro Project as financially unviable and canceled it upon taking office, opting to explore smaller-scale hydro projects instead. 
+- Labor: Proposed large-scale renewable energy projects, including the Pioneer-Burdekin Pumped Hydro Project, to transition towards 80% renewable energy by 2035.
+
+Abortion Laws (AL):
+- LNP: Stated there would be 'no changes' to abortion laws under their government, maintaining the status quo established in 2018. 
+- Labor Party: Supported the existing abortion laws and opposed any attempts to repeal or amend them. Asserts that LNP intend to restrict access to abortion services based on the views of some of their members.
+
+Analyze Reddit comments and code them based on the positions they support or oppose concerning these issues. You will output JSON, so valid values are strings or null. Use the following codes: YC, COL, H, EI, AL. If a comment's position is unclear or does not pertain to these issues, output null.
+
+Secondly identify which party the comment appears to support. Use the party code ALP, LNP, Greens, ON, KAP if this can be determined, otherwise a null value if undetermined.
+
+Output JSON as a list of objects where each object has an "id" (integer) property of the comment id, an "issue" property set to the issue code string (or null value), and a "party" property set to the party code string or null value. Null means JSON null, not a string. Values MUST be quoted, e.g. {"party": "LNP"} unless they are null, e.g. {"party": null}. Comments follow:
+
+1. Other than the fact he owns 100% of the print media in Qld. That scenario is not acceptable no matter which side of politics he supports.
+2. So please then, spell it out for those of us who clearly lacking your wisdom - what are you trying to achieve with this line of question?
+3. No mate it's I actually think it's *you* who is really the clever little fellow
+4. Yes, I accidentally hit 'save' halfway through writing my response to you because my phone screen is cracked. As I said, if they haven't changed by the time the next election rolls around I'll admit to being misled - but I firmly believe they will be changed by then. Crisafulli's "not part of the plan" is just weasel words to me, because he knows it's part of *Katter's* plan.
+5. >will you credit Crisafulli if he keeps his promise? I will credit Crisafulli if if the LNP don't make any attempt to amend abortion legislation themselves, AND they make every effort to campaign against Katter's bill. Any wishy-washy 'conscience' stuff would be grounds for condemnation.
+6. I don’t agree with you and I think your pragmatism is misplaced. We look at evidence to guide our decision making. In this case it was led by realities outside of Labor messaging. There’s a spectrum of risk you have to consider as a voter. For people who gauged the risk as being real and imminent, they very rightly let it influence their vote. The winding back of reproductive laws is an unacceptable risk for many people, and if they weren’t satisfied by the LNP’s response to their concerns, then that’s completely their prerogative. Taking a punt on Crisafulli after his reluctance to rule out a conscience vote or the Redlands candidate who was recorded saying they are planning on revising the laws after they are elected doesn’t make sense if reproductive rights are a weighty election issue on a personal level.
+7. That issue coming up out of nowhere was truly baffling to me. I didn't even realise it was a hot-button issue here, and all of a sudden it's a core election issue? Focus, people! I understand it was a last ditch effort by the ALP to grab onto whatever advantage they could, but fuck me, what century is this?
+8. On this single issue like I said before. If nothing changes then great! I’m sure Katter will still have a crack at it and the multiple mps who’s can’t seem to answer honestly on the topic.
+9. So you are admitting then that he was making promises he couldn't keep, when he said the laws wouldn't change? That would make the narrative true, not false.
+10. You can still get an abortion in QLD.
+11. No, it's up to the woman and her doctor. You can still get an abortion in QLD.
+12. Sure, Squirt. For now though, let’s acknowledge the hysteria and meltdown by some people here. America Lite you could say.
+13. Totally agree.
+14. Who reads print media anymore? We live in a world of tiktok and instagram. It has never been easier to publish an opinion and frankly, I'm more concerned about foreign interference. At least Murdoch is Australian.
+15. I'm trying to encourage intellectual honesty within our team
+16. Well you have my respect then - I agree that he was weaselly btw, but he did eventually come out with a pretty clear, "the law will not change." It's up to him to keep his word now too
+17. Yeah, he has two standards to be held to here - "it's not in our plan" and "the law won't change" I look forward to holding him to it
+18. The whole youth crime issue could have been addressed easily. "We understand this is an issue, and we are doing things to fix it. Exhibit a, exhibit b, exhibit c. I agree we should have addressed this earlier, but we can't change the past, and we are doing things now" Addresses the issue, points out actions that are underway and acknowledges mistakes were made.
+19. Okay, I'll take that as a yes - and I agree. If nothing changes, then great, and personally I think Katter will have a crack at it.
+20. I mean he can still do everything in his power to be an obstacle to legislative change, which as the new Premier is not insignificant, but only the truely naive would not be able to envisage the limitations of such a promise. He could get rolled in a leadership coup... Hell. If Labor were so determined to make sure he broke a promise, they could themselves vote to support the legislative change and technically he would have broken the promise regardless of his own efforts.
+21. For now.
+22. That would have been good. A fair press might have helped, too. It's not like that stuff is done in secret.
+23. Then it's not a false narrative. The whole scare campaign was based on the fear that the laws would change - if they change, then the narrative is true. I don't see what false narrative you'd be referring to here. It's only false if he keeps his word, which as you pointed out, he has limited power to do.
+24. Yeah that's a great way to live your life. Constant fear of something unlikely to happen.
+25. The problem is the ALP wanted to run on "look at the stats," which is actually dismissive of people whose life experiences don't align with those stats.
+26. The false narrative was that refusal to rule out a conscience vote or to not commit to a 'party policy' was evidence that the LNP are secretly conspiring to strip reproductive rights...
+27. I know. That was foolish. It's like explaining to someone with logic and facts why they shouldn't be crying. Even if you're correct, they're not listening.
+28. Yes I will grant you that, that was false. However, for a lot of people, I don't think that's what their fear was based on. It was rooted in your own observation, which is that he's only got a few options now to shut down a conscience vote if the relevant legislation gets brought forward
+29. The other thing it did was further divide regional QLD from inner cities. There is a strong belief (and its not completely unfounded) that the ALP ignore regional QLD and focus only on Brisbane and Gold Coast. The crime issues were mostly in regional areas that already have this bias against ALP, and they were completely dismissive of genuine issues in these areas.
+30. But on that interpretation, there are no safe election promises. With context, I find 'mandates' and 'broken promises' to be a very childish way of looking at our democratic process. Circumstances change and in almost all cases there exists some scenario where things are outside the power of a government could require them to abandon a policy platform.
+31. They should have had us on their PR team. :)
+32. No perfectly safe promises perhaps, but there are safer election promises. Miles promised not to change the law. Crisafulli promised not to change the law. If you want the law to stay the same, which is the safer option to choose? Miles is the correct answer. I see your point, which is that everyone needs to be prepared to be adaptable, but democracy also relies on the understanding that there is *some* connection between what people *say* they want to do, can do, and will do - and what they *actually* try to do, or enact in practice When Crisafulli says "adult crime, adult time," if this doesn't mean anything, then why would anyone vote for him? How is that democracy?
+33. The issue is one of an ill informed viewpoint. People see their vote as transactional... "Id I give my vote to X, they will make Y happen". Even focusing on individual party leaders is stupid since the campaigning party leader is never guaranteed to even get a seat. The truth is that the system is a representative democracy. We give our vote to X so that they can exercise it on our behalf. They don't owe us anything more than to pursue the interests of their constituents.
+34. I think I see what you're arguing, which is that you might vote for your member, but you don't vote for the party per se, certainly not the party leader. The problem with this is that we do not have a case of 48 independents here who happen to wear the same shirt. They all claim to represent something they call the LNP, which comes complete with a stated and implied set of values and policies. And the LNP in turn is led by a chosen party leader, who is the proposed spearhead for these shared values. They are a coordinated team. So when their team leader says "this is what we stand for or you're not with us," that matters at the level of the electorate seat. Crisafulli says "I am the leader of this bunch, and speaking on their behalf, you can trust us that the law won't change." That matters. If he's wrong, it means you can't trust him to keep his promises, and you can't trust him to accurately represent the team. You are correct that we give our vote to X so they can represent our interests. But if they don't represent our interests, we give it to the other person. It is transactional. If it wasn't transactional, the process would be redundant - there'd be no necessary connection between who I vote for and what they do as my representative. And when all the representatives agree to get together as a team and stand for the same thing in order to get shit done, then you recognise that by giving them your vote you are not just voting for that individual, but also voting for their team. I don't think this is ill informed - what am I missing here?
+35. Prediction 1. Power prices go up Prediction 2. Healthcare in QLD absolutely tanks Prediction 3. Several corruption scandals Prediction 4. Several questionable projects get fast tracked Prediction 5. QLD LNP blame federal ALP for their inability to do anything.
+36. How's that for a cope title Granted, it is a shame and I would have liked to see a proper Miles term
+37. Now its all down hill with Public service cuts and Privatization on the agenda from the LNP, Don't know why people think the LNP are an alternative at all when they've constantly proven they do not know how to operate a government or know how to do anything without sheer rorts and corruption.
+38. Wow nice one dumb qlders we are fucked now ..... LNP is in power, start finding a new job....... Remindme!in 1 year
+39. Hey mate you still took a monumental L
+40. [deleted]
+41. Great work David and the LNP team, well done! Sensible Queenslanders were not fooled by the fear campaign. Onwards and upwards.. Now get to work and follow through on the plan promoted.
+42. 6. The 'youth crime epidemic' suddenly being not so much of a concern.
+43. remindme!in 2 years
+44. Lmao this will most likely break the most volatile and neglected health care professions e.g. pharmacy, the whole system in health care is pretty corrupt and f*d. Wonder if they are gonna now make us pay for blood tests and medical imaging lmao
+45. I will be messaging you in 1 year on [**2025-10-26 20:01:14 UTC**](http://www.wolframalpha.com/input/?i=2025-10-26%2020:01:14%20UTC%20To%20Local%20Time) to remind you of [**this link**](https://www.reddit.com/r/queensland/comments/1gcsv9c/the_queensland_election_wasnt_the_emphatic_lnp/ltwgjmr/?context=3) [**CLICK THIS LINK**](https://www.reddit.com/message/compose/?to=RemindMeBot&subject=Reminder&message=%5Bhttps%3A%2F%2Fwww.reddit.com%2Fr%2Fqueensland%2Fcomments%2F1gcsv9c%2Fthe_queensland_election_wasnt_the_emphatic_lnp%2Fltwgjmr%2F%5D%0A%0ARemindMe%21%202025-10-26%2020%3A01%3A14%20UTC) to send a PM to also be reminded and to reduce spam. ^(Parent commenter can ) [^(delete this message to hide from others.)](https://www.reddit.com/message/compose/?to=RemindMeBot&subject=Delete%20Comment&message=Delete%21%201gcsv9c) ***** |[^(Info)](https://www.reddit.com/r/RemindMeBot/comments/e1bko7/remindmebot_info_v21/)|[^(Custom)](https://www.reddit.com/message/compose/?to=RemindMeBot&subject=Reminder&message=%5BLink%20or%20message%20inside%20square%20brackets%5D%0A%0ARemindMe%21%20Time%20period%20here)|[^(Your Reminders)](https://www.reddit.com/message/compose/?to=RemindMeBot&subject=List%20Of%20Reminders&message=MyReminders%21)|[^(Feedback)](https://www.reddit.com/message/compose/?to=Watchful1&subject=RemindMeBot%20Feedback)| |-|-|-|-|
+46. Public servant hey?
+47. He is still capable of destroying the state in those 4 years
+48. 6. Youth crime increases as they get rid of or defund programs that are working to help them, as well as more unwanted children are born and abused.
+49. The play now is to magnify all the youth crime posts in your local community Facebook group. Share, comment, speculate wildly.
+50. Wife and myself technically yeh.
+51. So why would People who did not vote Labour be labelled as dumb? They are the majority after all. I am sure we have all heard stories as to how the Public service and bureaucrats work against government (anyone they don't share ideals with) and make it hard to achieve their stated goals and usually with repeated press leaks of plans, etc. anything make it harder. Do you think the LNP can expect this treatment from the public service now?
+52. Wait and see what happens first. You won’t struggle finding them if and when it happens. There’s plenty of us prepared to do this all again if we have to and conservatives make this necessary very often. You’re not alone, many of us are sick and tired of conservatives threatening basic rights. But let’s wait and see if they carry it out and if it gets tabled, whether the vote passes.
+53. I got you friend: KEEP ABORTION LEGAL RALLY FRIDAY 6PM 1ST NOV, KING GEORGE SQ “BRISBANE! The election of the Crisafulli Queensland Liberal government means that abortion rights are under attack. New Premier, David Crisafulli, is an anti-choice bigot who refuses to discipline his members of parliament to vote to protect abortion rights. Members of his party and independent, Robbie Katter, have publicly said that they will move to criminalise abortion and that they can be trusted to “get it done”. Demand that the new government keep abortion legal, and extend our abortion rights to allow access for all! Bans off our bodies!
+54. Parisian style protests if they even try it. Not the boring old march and placards.
+55. Are they actually going to do it though? It’s purely speculation at the moment right?
+56. Maybe you could wait until there's any indication whatsoever that the law will actually change?
+57. Perhaps the time when you’d wish QLD had a senate???
+58. There won't be a change. That's the fear campaign that Labor ran. Please, when you hear claims like that late into a campaign, go and find the source of the claims before beleiving anything. The smear and fear campaign that Labor went with was as shameful and graceless as Miles pathetic 'non-concession' speech.
+59. There were 14000 abortions performed in QLD every year before the 2018 legislation even passed. There isn't going to be any change if the LNP get a majority, the irony is the Miles' shameless scare campaign made it more likely to end up with a minority government that has to horse trade with the KAP which would actually increase the odds of laws changing. Miles knows there wasn't going to be a change, but he was throwing as much spaghetti against the wall as possible, and nothing was sticking until he landed on this scare campaign. Notice he stopped talking about school lunches, government owned petrol stations, and government owned supermarkets. It's because those issues weren't gaining traction.
+60. It’s not going to happen and never was. It’s even been stated by the LNP leader. You all got sucked in with scare tactics. I can’t believe the paranoia.
+61. Crisafulli has a history of folding to public pressure. He did this multiple times as deputy mayor in Townsville. He's about populist policy. The more public pressure and the worse he looks, the less chance of abortion being a criminal offence. I'm assuming you're located in NQ?
+62. Don’t forget to join the local political party that aligns with your views the most. They need active members desperately in rural/regional areas.
+63. Usually, I would be upset if a politician is unable to deliver an election promise. But this one can just go
+64. You seem lost... Both KAP and LNP never released ANY policies around late term abortion. Robbie Katter even said that he was misrepresented in the media. The Labor spin doctors picked up that waaaaaay too many people were reacting negatively to the media speculation and, in their wisdom, jumped on and ran with it knowing that people would not fact check the advertising. It had the desired effect and diminished what was likely to be an absolute demolition job. Well played. But no need to concern yourself with any of it... It's not even going to be put to Parliament as a bill.
+65. Lol nothing's happened yet. Just relax.
+66. The time to protest beliefs and stop this happening was yesterday. Unfortunately people decided the slogan "we just need a change" was enough to vote LNP. The people who voted LNP know the anti abortion laws are coming and they did it anyway so I don't see the point of protesting what the people of qld literally just accepted.
+67. At this point just let them, they will or they wont and the odds are they will, just like everyone with half a brain has been saying. When they do ban it, maybe, just *maybe* then the idiots of this state will see what they voted for and wont make that kistale in 4 years. Next it will be lgbt healthcare and say goodbye to free ambos for qlders.
+68. If this was an actual issue I would understand your concern, but it's clearly not. You want to protest something that is never going to happen? How much time do you have to waste?
+69. When is abortion going to be re-criminalised ? Is there a Bill drawn up ? I think you are fantasising .
+70. They said they aren’t going to do it. Put the sign away unless they propose the legislation
+71. I do not wish to wait. KAP and LNP need to hear it clear now.
+72. Thanks for that. Brilliant.
+73. Could you let me know who is organising it so I can find the event listing? Thanks!
+74. Katter said on live election coverage tv last night they are going to still bring that bill.
+75. Do you live under a rock? The KAP already tabled the idea. Once they try to get it through, all it takes is enough LNP going we agree and done.
+76. They’d rather just jump to conclusions to suit their own narrative.
+77. No.
+78. The ENTIRE LNP campaign was fear based. Your hypocrisy is hilarious 😂
+79. You’re out of touch with reality. It was the KAP that brought the issue up. Not a Labor scare campaign.
+80. The fear and smear campaign was youth crime but hey keep lying to yourself
+81. There's an easy way to test if it was actually a fear campaign or if it was legitimate.
+82. Clueless.
+83. Maybe he’s egged ‘em on enough that the outcome is that LNP would be encouraged to change abortion laws now when otherwise they wouldn’t have been
+84. KAP raised it, Crisafulli has already shown he will fold like a card table. It’s a chance and sensible Qlders must always be prepared to fight these brain dead morons who think they have a right to control other people’s bodies.
+85. Again, it’s a KAP idea that was brought up. Nothing to do with a scare campaign.
+86. On the darling downs. I actually know all the LNP members round here having worked with them on a local issue. They are good people but all voted against in 2018. I am happy to write all of them or contact them on facebook, they are in my friends, but in an electorate such as this the threat of voting against them holds no weight. Numbers on the street though.
+87. Have been a member, even ran once, not saying where but there is no party org here.
+88. No.
+89. Of course! Just wait until they reveal themselves on this issue and have to desperately make sure it doesn't happen? They have been telling on themselves for months. Best offence to you is apparently scrbling defence. Fuck you
+90. See the problem with waiting until it is banned will affect people. Let’s send the msg now not after the horse has bolted.
+91. I believe they already have. Credit where it's due, Miles and Labor did a tremendous job of applying enough pressure that Katter had to backtrack and Crisafulli got immensely pressured to commit to not making changes. We have to wait and see. If they try, and I do suspect at some stage they will try it, then we can take the streets from the city.
+92. Well, you can go march on it now if you wish but you’d be putting the cart before the horse at this point. You can’t do anything about a political bill or decision until it’s made. Just wait and see what happens. Like I said there’ll be plenty of us and you’ll know.
+93. Email them/call them/send them letters. MPs are usually quite responsive cuz they're idle most of the time. They'll even help you with inane bureaucratic stuff sometimes.
+94. Children by Choice and Nation union of students. OP linked the event above x
+95. I saw the same. However, the LNP got a majority government. They don’t need to make deals with Katter. Yet.
+96. Surely it's gonna fail though, right?
+97. Okay well, better start protesting now then and don't stop for the next 4 years OR, wait until the idea *actually* tries to get moved through parliament
+98. So it was KAP not LNP right? LNP don't need KAP for a government so they won't have the power.
+99. Go on?
+100. Again. I’m only going on fact.
+101. Again.. ALP supporters jumped all over it. Hysteria on this sub this morning is just even more evidence of it.
+102. Off you go now protest and look like the fool you are. Protest now, before you even know what change you're protesting against. Or you could wait until a bill is proposed (which may never happen) and actually read the proposed bill to find out what the changes are and actually be informed about what your protesting about. Nothing better than having idiots protesting something that hasn't even been detailed yet. Looks great for your cause.
+103. I respect you are on the same side of this argument but that’s only partly how politics works. Applying pressure right from the start puts whichever political party raises it in a very difficult position. It needs to be made clear straight away.
+104. Thank you so much! Completely missed the link.
+105. KAP tables the idea. It goes to a vote. KAP all vote for it. All of the LNP members that support it vote for it (that’s almost all of them). It passes.
+106. Katter introduces a bill to parliament. If it goes nowhere, his pre election comments were accurate.
+107. Alternative facts obviously.
+108. It’s like you have zero clue. Lemme spell it out. KAP puts the idea on the table and it goes to a vote. KAP votes for. LNP members that support it also vote for (hint: it’s the majority of them). It passes. Tada. You see why the ALP voters and the party are worried? Thanks for coming to my TED talk.
+109. Well, write a letter and make it clear. You can do that. Write to your local member if they’re LNP. Or go protest on the street now.
+110. Write a letter to your local member is probably the best way to apply pressure from the start.
+111. All good 😊
+112. No such thing Champ. Take the tin foil hat off. You can’t make up facts to suit your agenda.
+113. It’s like you have even less than zero clue. ["Those laws will not change, my team has backed in that position," he said.](https://amp.abc.net.au/article/104506014) Tada! Nothing happens. But yeah you got sucked in to the hysteria we are seeing now this morning here.
+114. Do you have an actual answer to my original post or not? If not, stop being obstructionist and I’ll see on the streets.
+115. She's a crack pot. Let's burn our bras in protest of a bill that hasn't even been proposed and may never even be. She's not going to help their cause by being hysterical over something that's not even an issue now. It just looks unhinged. Edit...according to post history they are a 55yo male high school teacher. God help the students.
+116. You damned fool.
+117. Yes. Wait until you have something to act on first. That was my suggestion, but you threw the toys from the cot on that one. So, the best suggestion I got for you if you want to act now, is write to your MP about it or protest now. I’m not being obstructionist; you’re setting the boundaries here.
+118. After seeing how quickly voters turned against them and narrowed the margin in a matter of weeks when this suddenly became an election issue, I'd like to think they would be clever enough to leave it alone if they want to get a second term in government. Realistically, I don't think we'll see too much of a change this term. Queenslanders were swift and brutal to turf out the LNP after the Newman government basically fucked everything up badly, so giving them the benefit of the doubt that they're not *that* stupid that they'd do the same again. I'd be more worried if they win again in 2028 with an increased majority, then they'll get cocky. It'll be very important that we have an effective opposition. I hope Miles stays on, I think he will be good at that.
+119. Queenslanders just confirmed what the rest of the country thinks of Queenslanders
+120. I vote left and worried about the next four years. I can only hope that Crisafulli keeps his word on any bills put forward to repeal abortion laws. Many people who vote LNP have mocked my concerns leading up to the election, saying nothing with change and I have nothing to worry about. I really hope my fears are unfounded.

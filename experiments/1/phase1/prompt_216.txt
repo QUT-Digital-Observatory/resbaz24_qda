@@ -1,0 +1,153 @@
+Your job is to analye a series of Reddit Comments are drawn from sbumissions related to the 2024 Queensland State Election. The comments are drawn from a collection of comments before, during and after the election itself on the 26th of October. The parties that sought election were the Australian Labor Party (ALP), the Liberal National Party (LNP), the Queensland Greens (Greens), One Nation and Katter's Australian Party. The LNP prevailed in the election, with David Crisafulli becoming the new Premier of Queensland. 
+We have identified several key issues that the major parties campaigned on during the 2024 Queensland State Election: Youth Crime (YC), Cost of Living (COL), Health (H), Energy and Infrastructure (EI), and Abortion Laws (AL). Below is a summary of each party's position on these issues:
+Youth Crime (YC):
+- LNP: Advocated for stricter penalties for young offenders, including the 'Adult Crime, Adult Time' policy, proposing that serious offenses committed by youths be met with adult sentencing. 
+- Labor: Focused on rehabilitation and prevention programs, aiming to address the root causes of youth crime through community engagement and support services.
+
+Cost of Living (COL):
+- LNP: Proposed measures such as abolishing stamp duty on new builds for first home buyers and re-establishing the productivity commission to review building industry regulations, aiming to alleviate housing costs. 
+- Labor: Introduced initiatives like 50-cent public transport fares, a $1,000 energy rebate, and free lunches for state primary school students to ease cost-of-living pressures.
+
+Health (H):
+- LNP: Committed $590 million to an 'Easier Access to Health Services Plan,' aiming to reduce ambulance ramping and hire additional healthcare workers. 
+- Labor: Focused on maintaining and expanding healthcare services, addressing hospital capacity issues, and investing in new health infrastructure.
+
+Energy and Infrastructure (EI):
+- LNP: Criticized Labor's Pioneer-Burdekin Pumped Hydro Project as financially unviable and canceled it upon taking office, opting to explore smaller-scale hydro projects instead. 
+- Labor: Proposed large-scale renewable energy projects, including the Pioneer-Burdekin Pumped Hydro Project, to transition towards 80% renewable energy by 2035.
+
+Abortion Laws (AL):
+- LNP: Stated there would be 'no changes' to abortion laws under their government, maintaining the status quo established in 2018. 
+- Labor Party: Supported the existing abortion laws and opposed any attempts to repeal or amend them. Asserts that LNP intend to restrict access to abortion services based on the views of some of their members.
+
+Analyze Reddit comments and code them based on the positions they support or oppose concerning these issues. You will output JSON, so valid values are strings or null. Use the following codes: YC, COL, H, EI, AL. If a comment's position is unclear or does not pertain to these issues, output null.
+
+Secondly identify which party the comment appears to support. Use the party code ALP, LNP, Greens, ON, KAP if this can be determined, otherwise a null value if undetermined.
+
+Output JSON as a list of objects where each object has an "id" (integer) property of the comment id, an "issue" property set to the issue code string (or null value), and a "party" property set to the party code string or null value. Null means JSON null, not a string. Values MUST be quoted, e.g. {"party": "LNP"} unless they are null, e.g. {"party": null}. Comments follow:
+
+1. as someone who takes audio memo's while out on a daily walk, this is very good to know xD
+2. Not accurate. In QLD, recording a private conversation generally requires the consent of all parties involved under the *Invasion of Privacy Act 1971 (Qld)*. it is lawful in Queensland for a participant in a private conversation to record that conversation, even if the other person(s) involved do not know they are being recorded. Provided that the person doing the recording is a participant in the conversation, then no offence is committed. Noting, the legislation’s wording that it is unlawful without a lawful interest, but there are plenty of valid lawful interests. You can similar share it as long as you have a lawful reason to do so. Security cameras protect your property. Their intention is not to record private conversations. You’re fine
+3. Yes, I'm familiar with the law around recording. You are allowed to distribute if you are a party in the conversation, and it was in a public space, or a place that the other person should reasonably expect privacy. But again, I wasn't recording, so his accusation was just insulting. Lol yeah, the holters suck. The ECG dots get so itchy after the first few hours too
+4. This is misinformation
+5. Be kind to other users and remember the human
+6. The phone numbers are for people to complain about excessive mail, texts, or to remove themselves from the LNP's mailing and texts list. I'm not asking anyone to complain about my specific incisent
+7. He's trying to buy your vote? Hopefully you're not that gullible. Of course a man on 170k a year can afford to buy you a beer. It's loose change to him.
+8. Interesting how he bought you a drug. Which is also an extremely dangerous liquid poison directly linked to many health, societal and crime issues. Wonder if he supports legalising Cannabis, a substance with many health benefits - or if choosers of such would be "drug users" in his POV.
+9. This or next election will likely be the last time they have tbar as a safe seat, though.
+10. I know he's likely to retain his seat, but just thought I would share the experience since he was so rude to me. It's also helpful information for people who want to know how to get removed from their mailing and texts list.
+11. Only with that shitty attitude
+12. Sounds like someone wanted a fight but didn't like what he got
+13. No I think that being accused of something like that straight out from someone like that is very rude. All Trevor had to do is ask, "if you were recording" rather than accusing them saying 'i know you were recording' then I think OP wouldn't have been so offended. It's more about how you ask and talk to people that gets their goat.
+14. Yea, I thought the same thing, post makes OP sound a little eccentric. They also know about some special trick to private your number. Defs is used to getting screened.
+15. Yeah... I don't know of any two doctors that would agree to an abortion past 24 weeks without something serious happening. An abortion past 12 weeks often means over a week of bleeding and cramps and pain as well, no-one is doing that for fun I can assure you. I know a woman who had her baby die at the 28 weeks mark, and if it wasn't removed (abortion), she would have eventually become septic and died.
+16. This is misinformation or not helpful
+17. Buuut if you read the post, he wasn't recording. But if he was, he is allowed to.
+18. One person in the conversation has to know about it. So that can be you if you’re talking to someone.
+19. Referring to them as third party recording laws seems to be the easiest for most people to grasp. If you're a third party to the conversation (not part of the conversation) you're not allowed to record it. If you're not a third party (you're part of the conversation), you're allowed to record it.
+20. I don't know if that's true - I've looked it up and gotten so many difference answers, it's information I would love to be certain about as all my phone calls are recorded. All I know is Queensland is one party consent state, so what happens when from some other state calls you? What if you call another state? Can you publish it? Let's say I work for a small business and a large business fucks me over and doesn't pay me for work done, can I publish a recording to make other people aware of this scumbag business? I hate how hard it can be to find answers to this shit.
+21. As long as someone who is on the recording knows it’s being recorded you can legally do what ever the fuck you want with it. Phone calls however are different, you can record what ever you want but without all parties consent you can’t do anything with a recorded phone call.
+22. If you were a party to a conversation it's my understanding that it's legal to record it even without informing the other party/parties. It's however not legal to record a conversation that you were not a party to, say by leaving your phone in a meeting room with a voice recorder running. How do I know? Had this exact discussion with a police officer who was running a judiciary meeting where the defendants were asked to leave the room and one of them left their phone behind.
+23. Looks like the fascists are down voting you for the truth.....
+24. Have warn a holter before. You’d have to be a fucking imbecile to think that someone would record you with something so bulky and obvious when mobile phones exist.
+25. It also allows for publishing if it's in the public interest, which I'm guessing a political candidate talking about policy in a public space would meet the public interest test.
+26. I came here to say this. He is a public figure in a public space (polling station). So even if you were recording him, you would have full legal right to post it.
+27. He'll claim it as a campaign cost. Won't come out of his 170k
+28. Hes on far more than 170k. Closer to 370k including super and allowances.
+29. It's tax payers money, he should be buying everyone a beverage
+30. Hopefully! Apparently it was fairly close last time.
+31. I met him at Newtown park during one of his "meet the people" esc things he apparently does. All he seemed to care about was youth crime and how everything he talked about is the problem of youth crime or the fact that "the hospital hasn't been finished". Dodged questions on transgender issues and abortion because "the hospital needs to be finished first" and apparently housing price issues are due to an increase in repeat youth criminal offenders taking away funds that could be used for building more houses? I just got the impression he wanted to pick two topics that were famous enough he could tie anything into them and say whatever was needed to make himself seem a paladin of virtue. It just came across as very "Vote for me because you met me. Be honoured peasant, for you have met me!"
+32. Absolutely. Thank you.
+33. Likely to lmao Labor have put a nobody in I think that shows how they think that seats gonna go
+34. You’re right; they only thing in between change in this city and 100,000 rusted LNP voters is some positive thinking on Reddit
+35. 🤷‍♂️🤷‍♂️🤷‍♂️or maybe don’t be so easily offended. I do get what you mean tho, but without witnessing it ourselves we have nothing but a he said she said.
+36. [removed]
+37. Just as a thing a DnC after a miscarriage isn't an abortion abortion is the act of "Terminating" the Pregnancy as this is a very important issue its important to be accurate.
+38. Yes I did read that, but the premise of the conversation was concern over the posting of (what turned out to be) non existent content.
+39. Recording phone calls without informing the other party using a built in device is federally illegal. So something of a moot point in regards to recording interstate communications. And no you cant publish recording if someone fucks you over, you probably could utilise it if they sued you for defamation or you wanted to sue them for breach of contract.
+40. You are wrong, on publishing secretly recorded communications. From Qld legal aid: https://www.legalaid.qld.gov.au/Find-legal-information/Personal-rights-and-safety/Privacy-and-identity/Privacy Publishing or communicating recordings of conversations Even if you were involved in a conversation that was legally recorded, it’s still illegal to communicate the conversation or publish it without the permission of the other people involved in the conversation (with some exceptions). However, you may be able to use it as evidence in court proceedings. Its straight up federally illegal under the Telecommunications Interception and Access Act to secretly record phone calls, so even using them in court is going to be highly dubious.
+41. Its legal to record, its not legal to go ahead and publish it, basically the only time secret recordings can be legally published is in court proceedings. Qld law is pretty clear on this. https://www.gnl.com.au/articles/2021/march/recording-conversations/
+42. I mean it was Trevor Watts to be fair…
+43. >and allowances Like "buy constituents a beer" allowances
+44. Oh I didn't think any that. Anyway. He's earning 3 to 5 times what I've ever sent in a year, to talk to people and pretend to care. It's shite.
+45. Oh 100%. He has a cushy $170,000/yr job, why would he want to give that up. I'm surprised I got him to answer my questions on abortion just by asking enough times in a row to irritate him into saying what he really thinks. How does youth crime translate to increased house prices? What a strange guy
+46. I thought the Toowoomba north electorate was only about 35,000 people though? Last election he got 57% of votes, which means there is actually a real chance of him being replaced by a Labor candidate in the near future
+47. I was looking into it just now, and doctors can also agree to a late term abortions if they believe that there is a severe imminent risk of the mother committing s****de due to mental health conditions such as schizophrenia. Do you have a source of doctors removing children's breasts for non-medical reasons? Yeah, that's what puberty blockers are for... To block puberty temporarily... What did you think they were for? It's not 'off label' if that's what it's for
+48. Oh stop spouting nonsense
+49. "in 2018, Queensland decriminalised abortion up to 22 weeks' gestation without a doctor's permission" Upon OP drilling him, Trevor stated that he doesn't want late term abortions performed. I.e. he voted against a bill regarding early term abortions, because he doesn't like late term abortions. I.e. he didn't read the thing in question. As for the last line there; I'd rather loss of breast tissue which could be regrown(obviously, otherwise transwomen on Estrogen in later life wouldn't grow them at all) over the teen in question "handling the situation". And I'd rather a child have time to learn and make an informed decision about their body instead of forcing them to take hormones that will change their bodies in ways they may regret or resent, I am well aware how the phrasing there looks but I'm not saying HRT for the 10yo, I'm saying they may go through the wrong puberty for them and people are trying to FORCE them through it despite the fact that we have the capacity to prevent errors in those who can speak up and say "this might not be right for me"
+50. This is misinformation or not helpful
+51. Of course the interstate is dubious because its all party consent in NSW. But it's one party on QLD and VIC.
+52. The Invasion of Privacy Act 1971 (Qld) states that a participant to a private conversation – whether in person, via telephone or other electronic communication (e.g. Zoom, Microsoft Teams, Messenger, WhatsApp or Houseparty) – can legally record the conversation in Queensland without any knowledge, notification or consent of the other party or parties to the conversation Since this was an in-person conversation that occurred in Queensland, a recording taken by the person involved with the conversation is totally legal.
+53. Which federal law would it breach?
+54. Labor held Toowoomba North from 2001-2012. At his peak Kerry Shine had a higher vote than Trevor, but it all change within a few elections. It could change again
+55. 57% of the vote is huge idk why you think that's close. Add into that other preferences and stuff Toowoomba North isn't going anywhere
+56. [removed]
+57. [removed]
+58. IIRC we're one party consent to record, the rules more apply to how you can use those recordings. But one of the rules that allow it is if it's in the public interest, and I'm pretty sure a candidate talking about their policy positions in a public space to a member of the public would be in the public interest to publish.
+59. I was replying to someone asking a question about recording phone calls, not in person conversations. Telecommunications are federally regulated and the TIAA renders secretly recording phone calls illegal. Qld or any other state law is immaterial to the federal law.
+60. Section 6 of the Telecommunications Interception and Access Act 1979. This is fairly well understood in the telecommunications industry, its why every company that records calls lets the person know at the start of the call.
+61. I wonder why it changed. Would you ever consider trying for MP for Labor or the Greens?
+62. This is misinformation or not helpful
+63. This is misinformation or not helpful
+64. We'll see. State government is on my radar, but a lot would have to fall into place before then
+65. If you ever decide to, hit me up. I can rally together a decent group of people who would be more than happy to volunteer and help you out :)
+66. Thank you. If I do run again I'll need all the help I can get
+67. Which roads do we use to get intimate with drivers?
+68. I've lived in Ipswich for well over ten years and something that really irritates me is the lack of pedestrian care. Sometimes I'll be waiting at the zebra crossing outside Silkstone State School (Glebe road) and several cars will zoom through before someone stops. One time I was riding along the footpath with my son and some knob reversed out of his house and pushed me backwards. Another time, I was riding with my partner and the footpath was blocked. I said to her "I hate selfish arseholes that do this" and said fuckwit was in his yard (unbeknownst to me) yelled out "that's my car, you got something to say about it hey". Honestly, the walkability of Ipswich is so poor but car drivers really need to show more care to pedestrians.
+69. I don’t have any problems at silkstone but man is there a lot of sirens
+70. Went through for the first time recently, here's my two cents: that town was not designed for cars, as a result the roadways are not set out in a reasonable fashion for motorists, leading to sloppy driving and anger.
+71. I feel like people drive way better here than they do in Brisbane. Maybe it's the areas of town you're driving in but it definitely hasn't been my experience at all
+72. Look, it’s not Ipswich, it’s just qld drivers. Don’t take it personally when the young hoon/meth-rager needs to be first - let them go. Also don’t expect that anyone in the entire state knows that a dashed line means give way, particularly on a merge.
+73. I work in booval and a small proportion of the customers who come in are shall we say, from a lower socioeconomic demographic. It is usually these people with loud and rude behaviour that give the whole area a bad name. The vast majority of the customers are ok, but these ones in particular make working in retail very hard. Makes me want to escape civilisation and only interact with a handful of other people and only do so when I choose to.
+74. I've really had to work on not getting angry at the absolute fuckwit drivers around here. They can be 100% in the wrong and if you beep them they rage at you. It's not worth the stress, just let them go.
+75. Unfortunately, I don't think this is just in Ipswich. I work in Brisbane and see it pretty much everywhere there too. A lot of people are stressed and angry and vent it on the roads. It sux, I know. I just try my best to keep my cool and get away from bad drivers. I know that's easier said than done.
+76. Don’t know how to edit, but I meant intimidate not intimate thanks
+77. Reading this thread makes me so happy I moved up to Gladstone at Xmas. SEQ was getting me down, too crowded, too hectic. Living the dream up here. Peace my QLD people
+78. Nightmarishly single
+79. Where did you move from?
+80. You moved to one of the redneck capitols of the state. That's it.
+81. Geez settle down, it's not that bad.
+82. Idk but the open use of meth on the main streets might be clue
+83. Answer in question. Ipswich.
+84. I've only lived here bot even two years and have found people to be quite nice in ipswich, i have never encountered anyone rude.
+85. Try driving in Auckland New Zealand. You will appreciate how much politer and friendlier motorists are in Ipswich. Just find young guys driving utes a bit impatient. Wonder whether they pick up many speeding fines.
+86. We have noticed it got worse after Covid. We blamed all the NSW Mexicans crossing the border and moving here.
+87. I think it’s just reflective of the times, and of everywhere, not just Ipswich. Get out of the city areas anywhere and it’s immediately a bit more chill. Go to the Gold Coast or Byron Bay, and boom, jerks abound. I imagine even more built up areas like Sydney are worse.
+88. I think it's indicative of the societal issues that we are all facing at the moment. High inflation, higher interest rates or rent payments, low stagnant wages, poor employment security, fraying fabric of society, rampant methamphetamine use, non policing of crime, geopolitical instability with escalating tensions with China and lets not forget the simplest answer, that people are just assholes.
+89. It’s horrible isn’t it the way society is heading , Probably social media and the likes, everyone is complaining how unhappy they are
+90. Welcome to Ipswich 😂
+91. Any road you like, honey. Just tell me where ![gif](giphy|10UUe8ZsLnaqwo)
+92. Asking for a friend? 🤣
+93. Intimidate is what I meant
+94. Most intercity, roundabouts , shopping centres, and then there’s all the hoops trying to race you , lots of burn outs at night Whitehill Rd and Ripley area , I’d say p platers and young tradies in utes .
+95. Absolutely agree , what can be done about it because no one’s listening or just live that way.
+96. Yes, that crossing is horrible! My husband and I were walking our two dogs and had to wait until 5 cars blew through that crossing, presumably because they wanted to save 30 seconds.
+97. The one on Blackstone Road is even worse. It’s like people don’t realise the zebra crossings are always active, even if there’s not flags and a crossing attendant.
+98. I grew up in Booval. It's comforting to know the sirens are still putting the children to sleep.
+99. Yep just look at how the middle of town is built, its design is the same as it was originally with the smaller road meant for horse and carriage not cars (Legit pictures of it in the museum) and with heritage buildings on most of both sides its not easy to expand, so you have to have Two main streets that go one way each :/ Its a pain even having lived here most of my life. There is also a horrible problem with half the traffic lights in Ipswich, some of them will happily let you sit their for ages when no one else is there, and there are a couple roads where if you see a line up of vehicles at the lights sometimes its legitimately better to use an alternative route since sometimes the driver in the lead isn't even close enough to the white line to trigger the damn sensors on the road (Yes we have sensors in most places, but one does sometime have to wonder if some of them were placed Past the white line) >\_>
+100. Brisbane is just Super confusing, if you are driving with someone from brisbane they are usually great, its that so many others pass through it and thats not a fun experience (Especially if you want a park), i've driven up their exactly twice once to south bank and the other to Milton and both trips are one of the handful of times ive ever had to use parallel parking, And I refuse to do it ever again otherwise i just feel like i am part of the problem aswell xD ill just drive up the train line a bit and catch one the rest of the way.
+101. Don't forget the little old grandpa's and grandmas that insist they can still see properly who just happen to get real lucky with misses when they cut off 20 people in a row You ever seen a 30 point turn? I missed half of it but thats because I went in to do my shopping for 15 minutes and came back out to the same old dude trying to escape the parking lot, And finally, with merge lanes, does not help that on entry ramps there is way to many people who slow down or don't want to hit the speed limit before they get onto the highway. that shit freaks me out and its not safer in any sense of the word O.o
+102. Inner city Brisbane doesn’t have any problem with it.
+103. As someone that moved from Brisbane to Ipswich in the last twelve months, the first thing I noticed was how much more aggressive drivers are here.
+104. Sounds like the place to be .
+105. That’s just late stage capitalism you’re feeling ❤️
+106. "Nuclear Free Zone* It gets me every time.
+107. Oooh. Taste the sass. Meeeow. Edit. Comment made before I saw you were female. I probably would have made the same comment. Pretty sure you get it anyway.
+108. yeah it's usually utes for me, tailgating, etc I dont give a flying fuck - I drive the speed limit and if they put too much pressure I may even go 10k lower feel free to speed up and pass me (where it's illegal usually), cunts
+109. Ooof lived in Booval for awhile I had the train line to put me to sleep but I was Not unaware of the bike gangs and all the drugs just over the way in Bundamba, There was also a dude who would walk up and down one of the longer streets with a katana on his back, so you know that Made EVERYONE feel very safe of course /s
+110. Sensors aren't in the road but in the lights..
+111. I totally know what you mean but I lived in Brisbane for years and since moving to Ippy it's really apparent how much more calm the roads are here. In town at least, the motorway can be another story! I also think that driving around Brisbane has gotten way way worse in the last few years. Everywhere is just so much busier!
+112. Same! Less cars but definitely way more aggressive 😅
+113. sooo much more aggressive here! the amount of times people on my street get beeped for daring to pull into their driveways is crazy.
+114. Have we been nuked yet? No? Sign says the truth. *mic drop
+115. Its the law of the road but im stoned and i got a full tank, baby!
+116. Yep. It’s the tradies for me, even more so those “big utes”. I think it’s a bully mentality sometimes. I’ve noticed it more since I downgraded to a Yaris from a bigger car. I don’t get it when I’m driving around in the work van.
+117. That was the neighbourhood watch
+118. Do you have a source? (Not jumping to you being wrong) I know smart lights are a thing and I wish we had them everywhere but I hadn't heard them being mass used here or anywhere else in Australia. I know they use infrared but that's only to track pedestrian flow From what I know of traffic sensors they usually use piezoelectric sensors or induction loops (and SCAT in Sydney and STREAMS in Qld definitely use induction loops atm. Also if there were smart lights in the places that are problematic there either shouldn't be an issue with traffic Or the lights themselves are utterly garbage :/
+119. It's a very powerful sign.
+120. Lol I suppose desperate times called for desperate measures 😂
+121. Not surprised. He almost ended up as mayor. I don’t know how. Dudes creepy as fuck. Something very off about him.
+122. We are screwed.
+123. GTFO. We did not expect this
+124. WTAF
+125. How did you elect this guy… And I don’t live in the city anymore, but how did Andrew Antoniolli get back in?

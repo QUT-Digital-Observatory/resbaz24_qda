@@ -1,0 +1,168 @@
+Your job is to analye a series of Reddit Comments are drawn from sbumissions related to the 2024 Queensland State Election. The comments are drawn from a collection of comments before, during and after the election itself on the 26th of October. The parties that sought election were the Australian Labor Party (ALP), the Liberal National Party (LNP), the Queensland Greens (Greens), One Nation and Katter's Australian Party. The LNP prevailed in the election, with David Crisafulli becoming the new Premier of Queensland. 
+We have identified several key issues that the major parties campaigned on during the 2024 Queensland State Election: Youth Crime (YC), Cost of Living (COL), Health (H), Energy and Infrastructure (EI), and Abortion Laws (AL). Below is a summary of each party's position on these issues:
+Youth Crime (YC):
+- LNP: Advocated for stricter penalties for young offenders, including the 'Adult Crime, Adult Time' policy, proposing that serious offenses committed by youths be met with adult sentencing. 
+- Labor: Focused on rehabilitation and prevention programs, aiming to address the root causes of youth crime through community engagement and support services.
+
+Cost of Living (COL):
+- LNP: Proposed measures such as abolishing stamp duty on new builds for first home buyers and re-establishing the productivity commission to review building industry regulations, aiming to alleviate housing costs. 
+- Labor: Introduced initiatives like 50-cent public transport fares, a $1,000 energy rebate, and free lunches for state primary school students to ease cost-of-living pressures.
+
+Health (H):
+- LNP: Committed $590 million to an 'Easier Access to Health Services Plan,' aiming to reduce ambulance ramping and hire additional healthcare workers. 
+- Labor: Focused on maintaining and expanding healthcare services, addressing hospital capacity issues, and investing in new health infrastructure.
+
+Energy and Infrastructure (EI):
+- LNP: Criticized Labor's Pioneer-Burdekin Pumped Hydro Project as financially unviable and canceled it upon taking office, opting to explore smaller-scale hydro projects instead. 
+- Labor: Proposed large-scale renewable energy projects, including the Pioneer-Burdekin Pumped Hydro Project, to transition towards 80% renewable energy by 2035.
+
+Abortion Laws (AL):
+- LNP: Stated there would be 'no changes' to abortion laws under their government, maintaining the status quo established in 2018. 
+- Labor Party: Supported the existing abortion laws and opposed any attempts to repeal or amend them. Asserts that LNP intend to restrict access to abortion services based on the views of some of their members.
+
+Analyze Reddit comments and code them based on the positions they support or oppose concerning these issues. You will output JSON, so valid values are strings or null. Use the following codes: YC, COL, H, EI, AL. If a comment's position is unclear or does not pertain to these issues, output null.
+
+Secondly identify which party the comment appears to support. Use the party code ALP, LNP, Greens, ON, KAP if this can be determined, otherwise a null value if undetermined.
+
+Output JSON as a list of objects where each object has an "id" (integer) property of the comment id, an "issue" property set to the issue code string (or null value), and a "party" property set to the party code string or null value. Null means JSON null, not a string. Values MUST be quoted, e.g. {"party": "LNP"} unless they are null, e.g. {"party": null}. Comments follow:
+
+1. It will be really interesting what, if anything the LNP will do both at state and federal levels to deal with these people that have gone out of the wood work the past few weeks. Whether they are expelled or not will have a material impact on the next vote I cast.
+2. He CANNOT promise that it will not change. That is the problem here. The only way he could promise that is if he refused to allow a conscience vote on a Katter bill. He refused to rule out the conscience vote. So the fact that he says there will be no change is a ludicrous and unfulfillable promise, because if he allows a conscience vote on a Katter bill there is every chance it will be repealed. Anything else is being naive.
+3. But changing the laws around late term abortions *will* impact women. So this woman might be ‘safe’ but another won’t be. It’s not as if it’s nothing. And late term abortions are exceedingly rare. They’re already made in traumatic circumstances. The only reason they’re the *first* ones to be criminalised is because there is more emotional pull, the foetus is close to, or past the stage of viability so they can say that ‘the baby would survive if it were born!’ The fact is no, either it wouldn’t, or the mother wouldn’t. Hence the need for the abortion. And once that becomes illegal, then they move the yardstick back. It was 25 weeks. Now it’s 20. Now it’s 15. Now it’s 12. Etc etc. Why are you not willing to protect those women who be affected, but apparently you would try to protect women from an earlier week ban? Why are the women making the hardest decisions of their lives not worthy according to you?
+4. When the laws changed under Labor all but 3 of the LNP voted AGAINST the change. Only 3 of the LNP members at the time used their conscience to vote for it. Based on that track record why would people not be concerned about what the future holds?
+5. The only thing they listen to is the Reddit echo.
+6. Since health services are administered by state governments, only the state government has to change their legislation. Has nothing to do with Federal.
+7. But they can make it difficult - so that a woman has to travel extensively, get special permissions, etc. this puts it out of reach of the people who need it most.
+8. Get out of here with your common sense. Leave the ppl to wallow in their hyperbowl echo-chamber.
+9. https://www.theguardian.com/australia-news/2024/oct/18/qld-election-2024-freya-ostapovitch-lnp-stretton-candidate-abortion-ntwnfb Is this a start ?
+10. Except the bloke won't be. He will have full parental rights and be in that woman's life for atleast the next 18years. Even separated he has the right to a relationship with his child. Having an abortion means she won't have to raise a child with the man who is abusing her.
+11. How about the LNP candidate saying they would push for it
+12. Unfortunately, you’re the one who’s been hoodwinked.
+13. It’s genuinely scary how easily people can’t think for themselves and believe any BS they’re told.
+14. The issue isn't that he said he will ban abortions. The issue is that he has, on every occasion, voted against the decriminalization of abortion and when asked if he would do so again he refused to give an outright no. If he had no intent of supporting a conscious vote, he would have said no and that would be the end of it
+15. Please provide said proof they won't change? It's not that I don't believe you; I could just use the confirmation for my own comfort and sanity. 😭
+16. What? People shouldn’t discuss politics on a public forum because?
+17. There is no reason to have ANY confidence in that. I am sure Crisafulli and the LNP won't bring forth a bill, but Katter already has said he will, and Crisafulli refused to rule out a conscience vote. If there is a conscience vote, the LNP politicians (90% of whom voted against legalisation not long ago) will have their own decision to make, and we have no idea which way that will go. Your certainty is completely unfounded.
+18. Yeah, the kids will have an awesome chance at life behind bars of a private prison.
+19. Victoria is a woke shit hole. Melbourne is the most leftist town in Australia.
+20. Right? I had one in 2003 at a proper clinic with easy access. All the doomsday preppers are probably teenagers who haven’t been around long enough to know it’s never been an issue to get one even when it wasn’t ’decriminalised’
+21. Where do you live? My friend’s house recently got broken into on the Gold Coast while they were sleeping. I live alone, so I’m also scared about it. So even though I voted labor, I totally understand people are scared and want something to be done.
+22. https://www.theguardian.com/australia-news/2024/oct/18/qld-election-2024-freya-ostapovitch-lnp-stretton-candidate-abortion-ntwnfb It doesn't have to be on the agenda when that religious wackjob katter said he's going to put a members bill in to ban it
+23. Abortion has only been "legal" in Queensland since 2018. Which is 6 years and definitely not a "long time".
+24. There's no such thing a late term non medical abortions. Late term abortions are by law, only allowed under strict medical conditions.
+25. The fact that abortion was even brought up and people still voted for them is what is shocking. The very instant the possibility came up should have made the entire party pariahs in any civilised society. Saying "don't worry it hasn't happened yet" is not only dismissive but just downright wrong. It needs to be made loudly, explicitly and downright clear that if a ban on abortion happens -regardless of term- that LNP will be kicked out at the soonest possible juncture.
+26. No one does "late term non medical" abortions you turkey. If a pregnant person needs a late term abortion you can bet they're not doing it just for "convenience" Late term abortions happen when scans show that the developing foetus has failed to grow properly and is super unlikely to live after birth. Defects in the development that are INCOMPATIBLE with life. 2 doctors need to sign off on this course of action and it is definitely a very, VERY, difficult thing for the pregnant person to go through. It is a tradgedy.
+27. Literally 23 IQ take right here. I haven't been hit by a car in my life, so why does it matter if speed limits are completely removed?
+28. It was still in the criminal code 6 years ago. Labor decriminalised it while 95% of the LNP voted against decriminalising it. If Katter tables it **as he said he would** and Crisafulli allows a conscience vote **as they always do**, what do you think the outcome would be?
+29. !remindme 2 years
+30. !remindme 6 months
+31. An orphanage? Are you 100 years old?
+32. That doesn’t avoid many months of being visibly pregnant, which is likely to make a domestic violence situation more violent.
+33. Hey clown shoes. Many abusers don’t actually advertise the fact they are abusive until they have cut off support or financial independence of the victim, essentially making it really tricky to get away. Some even wait until marriage or even a pregnancy to show their true colours because at that point it’s harder for their victim to leave. So if we want to go down the ‘take accountability’ road, how about violent abusers take some fuckin responsibility for their choices? Or are ya gonna go with ‘oh but she probably made him hit her?’
+34. > You must die so I can live is barbaric at best pure evil at worst. So since you support women carrying pregnancies to term, even if it poses a risk to the mother, by your own logic you're barbaric and pure evil.
+35. Well if it is a DV situation with physical violence there is a chance that the pregnancy won’t actually result in a live baby due to violence against the pregnant woman. And if there are already other children involved in the relationship should them needing a non-dead mother who has the resources to get them out of a violent home be considered also? Or do children only count when they are in the womb? Furthermore, what do you think happens to children who grow up in violent environments? Consider not just the physical aspects but the emotional and mental ones too. Also consider how many then follow that same path themself - either trapped in a violent relationship or the perpetrator in one - unable to end the cycle? You’ve turned a very complex social issue into a ridiculously oversimplified ‘abortion = murder’ argument that doesn’t take into account the multifaceted and often personal reasons for getting an abortion.
+36. Respectfully, mate, Katter party \*will\* have it tabled, so it is something that representatives \*will\* be voting on, and it's fairly apparent that there won't be a 'party stance' from the LNP on the issue, so therefore it's in the realm of possibility that abortion laws change if enough individual LNP members agree with KAP policy. Given that decriminalisation of abortion is something that Crisafulli himself voted against last time, this therefore becomes a real voter issue. There is no falsehood in that.
+37. Yikes
+38. You must be one of those “intimidation is consent” assholes. A fist in the face sure makes the wimminfolk agreeable to the penis!
+39. Coercive control is a thing.
+40. Sure, because being coerced into sex by an abusive partner isn't a thing that happens...
+41. Ever think that the abuser might have raped her which happens in domestic violence situations? I have to question your comments it seems like you might be an abuser or racist yourself
+42. lol you're a bit of a red flag aint ya
+43. Ding ding ding! Caught one. Being a rape apologists isn't cool bro
+44. Bastards held off till the last minute to release costings an policies. Deliberately deceived the electorates.
+45. I postal votes as early as I could and by then LNP was already showing its anti-abortion push. Greens and Labour got my vote before the LNP because of that. I was going to read up on it but going against bodily autonomy you get a 6.
+46. No they won't. That would require a tremendous amount of awareness for them to realise the mistake.
+47. They're not sacking teachers, no way no how. We can't get enough staff to begin with. No, they'll attack our working conditions instead until you're forced to choose between your mental health or your income.
+48. Yep Newman sacked many, prevented people from getting jobs and decimated Qld Health, Crisafulli had better not be like Newman…it’s a real worry …
+49. Get a grip. Stop being silly.
+50. Katters are inbred.
+51. Katter has clearly backtracked and stated he isn't going to do it and as KAP has gone from 4 to 1? Not a chance. Relax.
+52. Problem is, apparently so is the electorate
+53. It was like Texas, it’s more like Alabama or Florida now
+54. Well, Texas is in QLD, maybe they were confused?
+55. Since 1922 its been this fucking way, doesnt matter what party is in, thats when we effectively decided to screw every qlder and allow the lower house single handedly control the state. You idiots still dont realise.
+56. I lived in toowoomba for a bit. I was so disgusted with the people there I was only there for about 1.5 years before I left 💀 the amount of ACTUAL conservative Americans in that town is actually wild too it's like an illness that spred along with all the cults. Wild stuff. Wild.
+57. As a Queenslander mate - this list is long and winding with absolute loons of pollies from QLD. Katter, Joe Bjelke-peterson, Pauline Hanson, Clive Palmer, Barnaby Joyce. The list can go on and on...
+58. Erm, you just voted one in.
+59. Thats is the issue with current politics. You cna be happy for your party, and really believe that they will do better than the other. But being over the moon over people sorry is just a cunt move no matter which side of politics you are.
+60. It's alright, mate, they'll be out in a term just like last time.
+61. Oh I can’t wait for you to eat your words when this government royally fucks you over like it will the rest of us.
+62. Please don't breed.
+63. You're only hurting yourself by retaliating. Why play into this?
+64. "I find joy in the suffering of others" \- Average LNP supporter
+65. Holy shit. Did you just read all of that and then think what you did **and then commit to writing it down**?
+66. You’ll get what you deserve
+67. r australian and ausmemes I'll bet this user is a really high functioning contributing member of society and not a literal smear of underarm sweat that somehow evolved from the floor of the basement and gained sentience and somehow accessed a device to transmit thought on the internet.
+68. [removed]
+69. Same I was young when i was forced to carry pregnancies and had no choices but now I’m older if I accidentally got pregnant doctors have told me I would need a termination or we would both die … it is very scary , people don’t understand you can be so careful but the only garuntee is celibacy and even then you might be assaulted screw these people who voted like this
+70. If that is the case I would drive you to another state for medical treatment myself. I would drive any woman who needed or ‘wanted’ an abortion to somewhere she could safely have one because pregnancy is hard and not everyone’s life circumstances are the same and every woman should get to make the choice for herself.
+71. It's so fucking disgusting! And then they say, "well if they went through with it, just vote them out next time" like wtf?? So are we ok with tens, possibly hundreds of thousands of women have their health and wellbeing, fertility, and possibly survival impacted within the next four years like it's just something you can disregard until next election? Have they ever heard of an incomplete miscarriage, an ectopic pregnancy, molar pregnancy, and a thousand other things that could go wrong with women's reproductive health? Like honestly I feel like more men have to work in women's health clinics to see what some of us have to go through just to be able to live
+72. [removed]
+73. U must be new to politics and conservatism if u believe every word they say on that subject
+74. Kiss kiss
+75. But she is divine? She IS the revolution apparently
+76. Okay baby
+77. What the fuck is wrong with you?
+78. That’s what happens when conservatives are given an inch.
+79. It's not a non-issue. The abortion I had 10 years ago under the previous laws required me to seek referrals from 4 GPs before I found one who was willing, travel 250km from home to get to the nearest clinic (meaning my partner and I both had to take time off work and arrange care for our pre-school aged children), and cost $780 for the procedure (not to mention the cost of the dating scan and other appointments that weren't bulk-billed) - not a small sum for a single-income household struggling to keep up with a mortgage, childcare and other living costs. I want a state where reproductive healthcare is efficient, affordable, and accessible to everyone who needs it when they need it. Decriminalisation took us leaps forward toward that goal and now we're facing the prospect of going back to a world where people are forced back to having kids they didn't plan and don't want because they don't have any feasible alternatives.
+80. 😂😂😂
+81. >My housemate and I did cry. Over an election result? Jeeezzz
+82. I think you’ve made a fairly big assumption regarding my views let alone the policy direction of the LNP. I am definitely pro choice and will definitely protest if the LNP does introduce this policy. BUT it serves no one at this point to suggest anything is going to change re this issue when the vast majority of Queenslanders voted the way they did because they are more concerned about other issues. Talking about policies that might lead to other policies and then more policies is great to instil an emotional response but in reality it’s very unlikely. The ALP achieved what they wanted by raising it endlessly. Fear to get people to vote for them. And reddit has swallowed the rhetoric hook line and sinker. When it becomes an actual issue let’s address it then. And apparently I’m meant to waste my time and emotional wellbeing (of which we all have limited amounts) defending something that is unlikely to occur. I’ll save my fight for when it does.
+83. 25 weeks is far too late for an abortion. That is a child and most survive being born at that point. I personally know 2 neonates that survived. 22 and 24 weeks. One of them is 15 years old now. You know if theres developmental issues well before 20 weeks anyway. This is a strawman argument designed to instill fear in people. Plus it becomes murder once the child could survive being born. Abortions weren't hard to come by even when they were "illegal". Clinics still ran for both medical and surgical options. The LNP isn't going to wind back the law and some fringe religious nuts in the party won't sway it. We needed to be rid of labor for a while. Theyre driving this country into the ground since the pandemic.
+84. Because it’s politics. It is political suicide to introduce this policy. That is why the ALP pushed this agenda. To get their base so worked up it is a foregone conclusion it’ll be introduced. Voting against something in opposition to sure up some fringe base votes is much different to voting for something that will undoubtedly lose them an election as a sitting government. I don’t like this but it’s politics. But I’m old and I’ve seen too many of these things in the last couple of weeks of an election campaign. Do they ever amount to anything? Rarely. But I’m over constantly worrying about things that may or may not happen. But as i said I’ll be protesting with you if they introduce the policy.
+85. Thats the guardian. Not worth the pixels its displayed on
+86. Thankfully that candidate in particular lost.
+87. Well things need to change.
+88. Which one? When, where? Provide a link from a credible source.....
+89. [removed]
+90. [Always happy to help.](https://amp.abc.net.au/article/104506014) This is from the left leaning ABC too.
+91. No point in anything then.
+92. I had to attempt suicide before I was allowed one of those 2015 abortions.
+93. That’s exactly what they want to cry criminalise, if you don’t follow the medical process you cop a significant charge.
+94. That's a myth. The legislation doesn't say the abortion has to be carried out on medical grounds. A baby could be aborted the day before birth without any medical issues in either the baby or mother. If I'm wrong, feel free to post the legislation and/or relevant guidelines.
+95. Not really, it’s not a definitive issue for most people. Nor has the LNP at any stage indicated they would support a ban on abortion. The worst case is a conscious vote which is fair, politicians will hang their career on a single vote. If the public decide it’s an issue for them, they’ll be out.
+96. LNP never brought it up, Labor did. It was never even on LNPs agenda to touch it and y’all believe anything you read 😂
+97. Why the personal insult? I simply stated a fact that may be part of the proposed change coming forward
+98. I will be messaging you in 2 years on [**2026-10-27 02:43:49 UTC**](http://www.wolframalpha.com/input/?i=2026-10-27%2002:43:49%20UTC%20To%20Local%20Time) to remind you of [**this link**](https://www.reddit.com/r/queensland/comments/1gcqfkh/i_work_in_healthcare_currently_in_a_womens_health/ltyabnn/?context=3) [**1 OTHERS CLICKED THIS LINK**](https://www.reddit.com/message/compose/?to=RemindMeBot&subject=Reminder&message=%5Bhttps%3A%2F%2Fwww.reddit.com%2Fr%2Fqueensland%2Fcomments%2F1gcqfkh%2Fi_work_in_healthcare_currently_in_a_womens_health%2Fltyabnn%2F%5D%0A%0ARemindMe%21%202026-10-27%2002%3A43%3A49%20UTC) to send a PM to also be reminded and to reduce spam. ^(Parent commenter can ) [^(delete this message to hide from others.)](https://www.reddit.com/message/compose/?to=RemindMeBot&subject=Delete%20Comment&message=Delete%21%201gcqfkh) ***** |[^(Info)](https://www.reddit.com/r/RemindMeBot/comments/e1bko7/remindmebot_info_v21/)|[^(Custom)](https://www.reddit.com/message/compose/?to=RemindMeBot&subject=Reminder&message=%5BLink%20or%20message%20inside%20square%20brackets%5D%0A%0ARemindMe%21%20Time%20period%20here)|[^(Your Reminders)](https://www.reddit.com/message/compose/?to=RemindMeBot&subject=List%20Of%20Reminders&message=MyReminders%21)|[^(Feedback)](https://www.reddit.com/message/compose/?to=Watchful1&subject=RemindMeBot%20Feedback)| |-|-|-|-|
+99. Y'all would have something else to bitch about by then no doubt, like predators waiting for a slight stuff up, well on here at least.
+100. No, im 24 😑
+101. The only way it can be a domestic violence thing is if you cheated on your partner 💀
+102. I am going to go with don't be in a abusive relationship and take accountability for your own actions, simples if someone is abusive walk away, but they never do. I have no pitty for those that stay in those situations. I have standards and applied them to all relationships but the moment they were crossed I walked away can't not be any simpler. These people let it go on for years and they say after 10 years he or she just magically out of nowhere just be came abusive is horse sh!t. Make your bed lay on it.
+103. That user is clearly a 12 year old who's mum won't take his devices away, ignore
+104. It's rarely if ever does. I think pregnant women should be given support not used to fun a multi billion dollar industry that kills people who can't defend themselves. If you think 1 in 1000 people who want abortion losing there life isn't worth it so be it. If you have a problem use contraceptives and be thankful that's legal.
+105. So life is hard ergo people shouldn't exist?
+106. Yes I know, how can people logically decide to kill an innocent baby for the crimes of someone else.
+107. That sounds terrible
+108. [removed]
+109. [removed]
+110. [removed]
+111. If she was raped he should get charged. Wow. I think calling someone a rape apologist is pretty inflammatory
+112. Strictly speaking, if they released things at the last moment they could, then they are following the rules. Not saying I like the rules but they complied.
+113. Which has happened before given we as a state were quick to send Newman packing after he started winding up the policy platform
+114. Definitely Florida. The heat and humidity up North here has cooked a lot of brains.
+115. Having lived in the US, Florida or Alabama is way more accurate. Even down to the weather.
+116. Def Florida.
+117. Barnaby is from NSW.
+118. That's conservatism these days though. They don't care what their party's actual policies are or if they will be hurt by them. They get a kick out of the other side suffering, even if they have to suffer with them.
+119. It’s apart of the americanisation of our politics, which has me at a loss. Identity politics, the leftist tears, etc. and then supporting trump in the same breath. It’s quite mind boggling. I don’t remember politics being so repulsive in its general commentary.
+120. They take active joy in the suffering of others. Lack of empathy is a feature, not a bug.
+121. I know how to fix the housing crisis you want to know how?
+122. you can't fuck over basement dwellers who have a computer, a phone cord and everything they ever need to never leave
+123. I got good news for you, doesn't matter which government you get they'll both fuck you over.
+124. Chin up champ
+125. >mummy never loved me enough for my brain to develop past the age of 12 >so you'll never get love ever either \- average lnp supporter
+126. No amount of bullshit this guy can spew justifies telling him to kill himself. That's just uncalled for.
+127. They will never understand if they haven’t lived with the fear.
+128. > it is very scary , people don’t understand you can be so careful but the only garuntee is celibacy Or you can get your tubes tied. If your doctor wont endorse it find a new doctor. Dont cry about living in fear about a fake scenario that you can literally easily prevent.
+129. Luckily I’m not in a DV situation. But a lot of women can’t leave the state, even with help. I would still have to find money for flights and if I wanted my husband there I’d need to get care for my son or take him too. It just adds another unnecessary layer of stress.
+130. Can you link me to the evidence that the laws are going to change? The proposed bill would be a good start, thanks.
+131. Pay attention to the fine print on what was being said. It’s not doomsday criminality on abortion they were talking about. As someone that went through an abortion in qld whilst it was ‘illegal’ in 2018; don’t believe all of the labor spin you’re reading. A conscience vote on the matter also happened under the ALP with Anastasia. Do some research on the matter before you jump to a conclusion that is far from accurate.
+132. Hormonal birth control can and does fail. It also has some pretty horrific side effects. How about we just keep abortions legal.
+133. Birth control can and does fail. Also, birth control can come with health risks for some women. Also hope men are respectful when women say "no" to sex.
+134. That’s what they taught at my high school. Didn’t and well for a lot of people.
+135. He told the truth. What is wrong with you that you hate truth?
+136. I had one in 2006 and I went to the clinic at Spring Hill in Brisbane no issues. Cost about $350 back then but wasn’t hard to access whatsoever. That was one of many clinics running.
+137. The only thing that is funny here is you thinking you did something with your comment...
+138. Oof, tell me you don't understand the consequences of politics without saying it out loud.
+139. Well yeah we’re not that keen on dying
+140. Are you somehow offended by people having emotions you don't understand? Jeezzz

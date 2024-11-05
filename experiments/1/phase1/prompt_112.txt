@@ -1,0 +1,146 @@
+Your job is to analye a series of Reddit Comments are drawn from sbumissions related to the 2024 Queensland State Election. The comments are drawn from a collection of comments before, during and after the election itself on the 26th of October. The parties that sought election were the Australian Labor Party (ALP), the Liberal National Party (LNP), the Queensland Greens (Greens), One Nation and Katter's Australian Party. The LNP prevailed in the election, with David Crisafulli becoming the new Premier of Queensland. 
+We have identified several key issues that the major parties campaigned on during the 2024 Queensland State Election: Youth Crime (YC), Cost of Living (COL), Health (H), Energy and Infrastructure (EI), and Abortion Laws (AL). Below is a summary of each party's position on these issues:
+Youth Crime (YC):
+- LNP: Advocated for stricter penalties for young offenders, including the 'Adult Crime, Adult Time' policy, proposing that serious offenses committed by youths be met with adult sentencing. 
+- Labor: Focused on rehabilitation and prevention programs, aiming to address the root causes of youth crime through community engagement and support services.
+
+Cost of Living (COL):
+- LNP: Proposed measures such as abolishing stamp duty on new builds for first home buyers and re-establishing the productivity commission to review building industry regulations, aiming to alleviate housing costs. 
+- Labor: Introduced initiatives like 50-cent public transport fares, a $1,000 energy rebate, and free lunches for state primary school students to ease cost-of-living pressures.
+
+Health (H):
+- LNP: Committed $590 million to an 'Easier Access to Health Services Plan,' aiming to reduce ambulance ramping and hire additional healthcare workers. 
+- Labor: Focused on maintaining and expanding healthcare services, addressing hospital capacity issues, and investing in new health infrastructure.
+
+Energy and Infrastructure (EI):
+- LNP: Criticized Labor's Pioneer-Burdekin Pumped Hydro Project as financially unviable and canceled it upon taking office, opting to explore smaller-scale hydro projects instead. 
+- Labor: Proposed large-scale renewable energy projects, including the Pioneer-Burdekin Pumped Hydro Project, to transition towards 80% renewable energy by 2035.
+
+Abortion Laws (AL):
+- LNP: Stated there would be 'no changes' to abortion laws under their government, maintaining the status quo established in 2018. 
+- Labor Party: Supported the existing abortion laws and opposed any attempts to repeal or amend them. Asserts that LNP intend to restrict access to abortion services based on the views of some of their members.
+
+Analyze Reddit comments and code them based on the positions they support or oppose concerning these issues. You will output JSON, so valid values are strings or null. Use the following codes: YC, COL, H, EI, AL. If a comment's position is unclear or does not pertain to these issues, output null.
+
+Secondly identify which party the comment appears to support. Use the party code ALP, LNP, Greens, ON, KAP if this can be determined, otherwise a null value if undetermined.
+
+Output JSON as a list of objects where each object has an "id" (integer) property of the comment id, an "issue" property set to the issue code string (or null value), and a "party" property set to the party code string or null value. Null means JSON null, not a string. Values MUST be quoted, e.g. {"party": "LNP"} unless they are null, e.g. {"party": null}. Comments follow:
+
+1. It's easy, if youth offenders commited a crime they'd be back out on the streets in no time at all to comit more serious crimes, for serious property & violent offences now with a bit of luck & good management under the new regime adult time for adults crime we may see youth offenders off the streets for 5 , 10 , 20 year stretches depending on the crimes . The longer there in prison the safer the general population will be . I hear you say what about when they get out , if they commit another crime lock them up again & double or triple their sentences. Public safety is paramount
+2. Ill say this as someone who lives in Townsville and had kids jump the fence into my backyard a few weeks ago, frankly if they are locked up they cant break into your house. houses up here have locked down like fort knox. security screens everywhere. windows covered with heavy duty covers. everyone has cameras. but sure no crime problem.
+3. ALP will be re-elected to try to sort it out. Actually Chrisafulli is probably one of the more moderate ones in the new govt ... there are far worse than him in there
+4. Someone who does something to be put away for 16 years is already pretty hardened. In fact they are the worst of the worst. What you're saying will happen already did.
+5. Boot camp
+6. I think you've described how it will work pretty accurately.
+7. If you let them continue unabated (encouraged), they'll be criminals for life.
+8. In jail they'll be out of sight, out of mind. A cheap 'fix'. All those kids who are acting out because they are neglected or just lacking supervision because both parents are working full time will just have to suck it up.
+9. Control your child
+10. Don'l let your hatred of the LNP make you an apologist for youth criminals. Labor lost. For good reason. Deal with it. And while you're crying " What's Crisafuli going to do?, perhaps ask yourself what did Palashook/steven millies do while they had the power?
+11. Fear -fuelled anger. That's it. Don't waste your time looking for rationality.
+12. If a 14 year old does something to get a 16 year prison term, they have done something pretty extreme like murder or violent sexual assault resulting in permanent maiming and therefore not fit to live in society. You do not get 16 years from stealing a car or burglaries. That hypothetical 14 year old is well on the way to be a hardened criminal at this point. Something is broken in your head to be able to commit serious violent crimes against the person. Some people are just born bad. Case in point below. [https://en.wikipedia.org/wiki/Murder\_of\_James\_Bulger](https://en.wikipedia.org/wiki/Murder_of_James_Bulger)
+13. Currently kids get away with too much, meaning they have next to no consequences for their actions and become career criminals regardless. Bail laws in particular are extremely soft.
+14. They won’t be. Prison isn’t used for rehab. Yes, this person in your example will be at high risk of re offending.
+15. The LNP clarified this on Saturday on Radio National. Murder, manslaughter. Nothing else. It’s all bullshit, aimed at making the people who have had cars stolen and houses broken into feel like their trauma and experience would be taken seriously. It won’t. Only the big two. Same same, status quo. Sly Bastards.
+16. You came for an echo chamber answer and received one.
+17. In this case, the 14yo will be flogged, have their fingernails removed, and waterboarded. After this, they will be tried in front of a jury of their non-peers.
+18. Higher time in detention. The Juvenile Justices Act is a joke. It needs major reform.
+19. Imagine how this thread will react if youth crime figures actually decrease as a result of the policy. That will be a sight to see.
+20. I laugh when people talk about young people being locked up and becoming hardened criminals. By the time they're actually given time, they're already recidivist, hardened criminals. Jail time is the absolute last resort.
+21. I hope the murderer’s life turns out ok.. That’s your concern?
+22. I mean, going weak as piss, soft on youth criminals hasn't produced the enlightened, crime-free, friendly generation of youth the experts promised. In any state. Just as bad down in Vic. Worse in the NT after they freaked out over Dylan Voller. Let's do it a different way for once.
+23. Tbh a 14 year old stealing cars or breaking into homes attacking people is unlikely to be a productive member of society either way. While I'm sure some may find a neiche where they fit in and become productive. There is likely a point where 99% won't turn there life's arround.
+24. OP. What would you suggest we do as a society? On an individual level it’s tragic that a person has to sit in jail for 16 years at such a young age or any age for that matter. You don’t get 16 years for petty theft! You do something horrible to others! That may impact them for life and anyone around them! How can we prevent youth and others going down this path, so they don’t end up in jail?
+25. Worth remembering that prison serves 3 purposes, theoretically at least. 1. Punishment. 2. Rehabilitation. And 3 Deterrence. Your example of a 14 year old who gets 16 years will satisfy society’s demand for punishment. Rehabilitation is up to the individual. And deterrence, well it’s partly to deter the crim who got 16 years and partly to deter others from doing the same crime. If he gets out at age 30 a hardened criminal and does more crimes, then sadly it be rinse and repeat. At the end of the day, the choice is his. Be a decent human and society will value him. Commit more crimes and society can do without him.
+26. It won’t work, under 18’s are a protected class, the whole thing is a sham. It’s a ploy to drive votes to the LNP on something people are impassioned about that they will never legally be able to deliver on
+27. I just did a quick search and there are lots of different groups that help people when they are relaxed back into society. If it was a 14 year old sentenced to a long term, I’m sure they’d be sent to a Juvenile facility first then prison. Not that either of them are better from things I’ve heard on podcasts. However, one of the principles of sentencing is rehabilitation so we can only hope young offenders choose to spend that time learning a trade, certificate or a degree. I worry too about the culture of being around hardened men who would teach them more bad habits or worse, physically, mentally and sexually abuse them making a messed up kid an angry young man. Private prisons are incentivised to keep cells full because our government pays them so there’s a huge rabbit hole of things that they could do to make stays longer for people. Overall, I guess it’s about the individual, the crime, their experience and what they choose to do on the inside to help themselves to make the transition when they rejoin society. Most importantly, hopefully they’ll have family love, support and guidance waiting for them with open arms.
+28. This promise will not be kept. They'll try to introduce a watered down version and it'll be defeated in a vote in state parliament and we'll be where we were. See you in 4ish years.
+29. You don't lock them up in a jail you send them to the outback to do hard labour. That is a real disincentive. A solid year to the day in the outback. Watch how many fall in line then. You need people to NOT want to go to jail.
+30. It won't and anyone who tries to put my 14 yr old kid in prison won't walk out of my yard.
+31. Yes.
+32. Can you explain how well our revolving door legal system for youth has been working thus far?
+33. Maybe they shouldn’t become criminals! Obey the laws of the country mate! It’s not rocket science. There is plenty to time for strategic policy during the adult time they will be behind bars. This is stopping the lawlessness in QLD before it becomes worse. And let’s be honest here, it has gotten pretty out of control!
+34. Decisions need to have consequences and accountability, not excuses. A 14 year old knows the difference between right and wrong just as much as an 18 year old does. There are very few crimes that attract a 16 year penalty for the first offence, which means the little toe-rag is a repeat offender who hasn’t taken the numerous chances they’ve been given to rehabilitate. Time in gaol will potentially make them worse, but it’s also an opportunity to gain a legitimate education and to learn how to become a useful member of society. At least the community is protected from them in the interim …
+35. [deleted]
+36. Pretty sure they're not talking about wage theft and tax fraud.
+37. I asked the LNP this question. Never got a reply. So, I'd say no.
+38. So say a crime isn’t defined as adult, does that mean adults can get child sentences?
+39. Yes. Break and Enter, manslaughter, murder, car theft, and I think serious assault.
+40. Precisely! There's just crimes, they can be committed by adults or children. People are just dumb and can't pic the nonsense anymore.
+41. Queensland Criminal Code Act 1899 defines adult crime as any crime or offense committed and punishable by an individual who is eighteen years and above. Queenslanders are charged in the full adult system, and although not named as ‘youth justice,’ it is separate from the processes and sanctions for juveniles (persons under 18). The code specifies a wide range of criminal offenses that apply to adults, including but not limited to: 1. The violent crimes include for example; assault, manslaughter and murder. 2. All crimes committed on or within a property – for example, theft, burglary, vandalism and more. 3. Drug offenses – for instance unlawful use, sale, and production of various unlawful drugs. 4. Organizational or corporate crimes for example; fraud, embezzlement and corruption. 5. Sexual crimes – for example, rape, Sexual assault, and unlawful sexual conduct. The gravity of the offence and the procedure that it is either an indictable or a summary offence, affects the way in which it is being handled within the court procedure as well as types of penalties that are offered including fines, community services and imprisonment besides.
+42. If you think about it every crime is an adult crime Because children haven’t reached the age of responsibility.
+43. All crimes are Adult... All
+44. Political corruption on the list?
+45. Yea they have said that adult crime is murder, manslaughter, grievous bodily harm amd stealing cars
+46. Using tiktok
+47. Id imagine robbery with violence (ie stealing a car at knife point) would be considered an adult crime A kids crime would be graffiti or shop lifting There might be a few grey area crimes that the courts would decide upon like drug trafficking commercial quantities or online fraud The reason for the policy is the criminals that stabbed Kefu and almost murdered him were not given any jail time despite pleading guilty The LNP have promised to ensure such crimes are punished with lengthy incarceration time reflecting the actual crime, rather than a soft diversion or counselling session
+48. Not Dv or SA.....
+49. Got to love populism.
+50. This is why last time LNP axed “health prevention” - you don’t notice the issues now, you notice them in a decades time… easy financial win, with low acute impact.
+51. By this logic we shouldn’t have prisons, because all you’re doing is putting the person in time out until it’s someone else’s problem.
+52. I wondered about this, and saw that all of QLD's prisons are back under public control. Then I wondered if they send underage prisoners out to work, but I couldn't find anything. I'm trying to figure out if there's a secondary financial motivation for this, or if it was just for votes. Because it sure as shit isn't to reduce recidivism or youth crime in the community.
+53. Good god that's sinister Putting kids in cages for money is some nightmarish stuff. Are we in hell? Sometimes I wonder
+54. [deleted]
+55. Exactly
+56. Don't forget trading while insolvent and claiming fraudulently claiming parliamentary travel privileges
+57. Do you reckon that charging the parents equally for the crime might make a difference? Punish them as well as the kid?
+58. [deleted]
+59. There is however plenty of evidence that not punishing kids for criminal behavior emboldens them and their peers to commit more crime.
+60. >There's no evidence that increased sentencing reduces likelihood of reoffending. I don't subscribe to the "adult crime adult time" rhetoric, but I know that it's not meant to be about reducing reoffending. The benefit to the community of having juvenile offenders locked up for significant periods of time is that they cannot victimise people while in custody (other than fellow detainees) Edit, because perhaps I wasn't clear enough: this is the main reason why the LNP and their supporters think their plan is a good one, I'm not saying I buy into it.
+61. Plenty of evidence that young criminals given non custodial sentences continue to commit crime too Cases such as the Lee Lovell who was stabbed on boxing day in her home by a 17 yr old with over 80 prior charges
+62. On the other hand, you can’t commit offences against the broader community while incarcerated.
+63. It’s definitely a deterrent in the first place though. They start because the life is free of consequence. I was a wayward youth and fear of going away is what kept me and many of my peers from committing serious crime. Those that didn’t care ended up in the system for most of their adult life, but the fear of being locked up and doing real time definitely kept many of us from going down the path of serious crime.
+64. [removed]
+65. I suspect they will reduce the amount of "chances" and alternatives available to reduce sentencing inconsistency.
+66. 1. Deterrence is pretty ineffective at changing youth behaviour, and upping the consequences does next to nothing by way of increasing that. Increasing the likelihood of getting caught and the speed at which the consequence is handed down improves deterrence somewhat. Increasing severity of consequence doesn’t.
+67. Just look at NT Country Liberals, they are basically doing what QLD will do so you have your future policy right there.
+68. They are removing detention as a last resort
+69. There’s in mackay, in the youth car gangs who are like 9 or 10. They’ve been in and out of the system for years and family interventions went nowhere because the parent had to agree to it before it escalated to this behaviour. The dysfunction starts early. And there needs to be better funding on early intervention and staffing FACS appropriately.
+70. Nope. The cycle of reoffending will kick in because he won't be able to get a job with a conviction or survive on his own, so he'll have no choice to turn to crime. I'm all for deterrence but you need to set people on the right track early, and offer them training and opportunities **if they're willing** so they don't end up hardened criminals caught in the cycle of reoffending.
+71. They don't have to because many of them will be dead or cognitively impaired in 16 years time.
+72. bruh they cant think past the next round of interest rates.
+73. Yes, the offenders best interests should be prioritised. Certainly not the victims./s
+74. [deleted]
+75. Maybe they’ll try and put in a lnp stooge like Tim Carmody to get it done lol
+76. This. Magistrates can't be governed. They'll always move on the side of caution and keep people out of custody as much as they can.
+77. Your mistake is thinking the LNP was voted in. It was Labor that was voted out.
+78. [deleted]
+79. >every criminologist in the world knows punitive measures don’t work What a bold fucking claim that is. Can you give me a country that doesn't have punitive measures? Just for comparison purposes so I can see how much better it works.
+80. Right. Which is why Australia has no jail time or fines for wrong doings. We just operate according to the law because we are all good morally upstanding citizens...
+81. No, criminal laws are predominantly state with limited input federally unless overriding something. Eg see Crimes act 1899 for qld. So with the current system the state government sets the laws for magistrates to interpret. The easy way to get results is reduce the scope in available sentencing options and voila, people notice.
+82. Nah, come to FNQ and you'll understand. I've got many many examples but here's one for you. Break into a 91 year old grandmothers house , look for her keys but she didn't have any. And because she was such a threat , they bash her repeatedly with a wench ..... just another day in paradise
+83. Or he doesn't get time and has 10 kids by the time he's an adult . Sweet
+84. The voice referendum was lost because Dutton couldn't accept that. So that is a non answer
+85. But previous 'tough on crime' approaches have proven that offenders *don't* learn or modify their behaviour when the penalties are made harsher. What we do know is that addressing the underlying motivators behind these crimes (poverty, addiction, unmanaged mental illness/disability, disenfranchisement, lack of education etc) is the single most effective approach to lowering crime rates and preventing reoffending. Focusing on the strategy that is most effective in lowering crime rates & therefore preventing future victimisation *is* the best form of justice for victims. Unfortunately, emotions often win out over logic when it comes to issues of crime & legal consequences, and the LNP's bloodthirsty approach to tackling the 'youth crime' boogeyman is only going to worsen the problem.
+86. I'm not a boomer . Born and raised in FNQ actually and I have seen what has become of our beautiful town. Go and look at the cairns crime page . I dare you . You will be shocked . These thugs are violent . Bashing pregnant women, bashing the elderly. My grandmothers 91 year old friend got broken into and they bashed her with a WENCH. Do you know what their consequence was . Big fat nothing ... people are being dragged from their cars and bashed just so they can take their keys. It's horrible and people want change
+87. But we know that the likelihood of young offenders reoffending is increases as the duration of their incarceration increases? There is much better evidence for assertive cognitive and social rehabilitation. So if you want “innocent civilians” to be protected, your campaigning for the wrong intervention
+88. What about the people they prey on after they’re released? Sure the criminals get thrown back into prison, but they’d have to harm other people first.
+89. And when they get out?
+90. Oh mate . Don't know whether to laugh or cry. Go visit the cairns crime page ... you'll be in shock
+91. 👏🏼 nice to see someone has brains
+92. They deserve to be punished, of course. But that doesn’t address the question. An adult doing “adult time” is likely to be past peak criminal risk by the time they get out. A young teenager going in for that long will come out in their criminal prime.
+93. What about the victims at the time that they reoffend? “Bad luck for you, but at least your pain and suffering gives us another opportunity to lock them up”.
+94. Congrats, you've got the scummiest answer in this whole thread :)
+95. They can't be locked up because prisons all over the country, including Queensland, have been crowded for decades now and no one is interested in building new ones and even if they did, they can't find the people to staff them.
+96. No you don't understand. Childrens right to do whatever they want outweighs your right to have safety and security - This sub basically.
+97. Except jail is in fact the most expensive fix. Warehousing people gets very costly. And the fact they’ll cone out with nothing other than a purpose to get back in (institutionalised) we’ll see some long term problems. And yes it is a very difficult situation considering no nation has found the perfect solution, but spending half the money of jails on bringing those in society who are most at risk up can often be much cheaper long term and also assist in lowering crime rates and recidivism. But that is a more difficult task and takes time, which plays poorly to those who just want to see someone (anyone) filling jails as a key KPI metric.
+98. I sure as shit didn’t waste my vote on the LNP 🙄
+99. The numbers will decrease if youth criminals are locked away. The question is about what happens after they are released.
+100. No, my concern is about creating a generation of predator adults and then letting them loose in the prime of their lives.
+101. That different way should be focusing on the causes. No one has done that in years...
+102. The issue I’m raising is that “do more crimes” bit. We can rinse and repeat as many times as necessary, but each time, there will be more victims and more human misery.
+103. Don't raise your kid to be a criminal and rob, steal or assault people and you will be fine...
+104. Looks like you will be sharing a cell then.
+105. god do you people even listen to yourself? 'prison should be used to educate children and teach them how to be functioning members of society' like do you honestly think people are coming out of prison as well-adjusted individuals with improved social skills?
+106. phew, cause for tax purposes my 3 year old runs my business, and im the only employee he pays properly.
+107. No the LNP commit and promote that, they don’t prosecute it.
+108. They're not going to do anything about these crimes so that they can make room on the fat farms for kids instead.
+109. Will the powers be retroactive? Think about all the 9 year olds running international money laundering operations throughout the 2010s!
+110. Ship them off to other side of planet
+111. There’s a reason their party is the one named after Liquified Natural Petroleum.
+112. What if you do serious crime in a really immature way, like a serial killer who draws a dick and balls on his victims' foreheads?
+113. Probably with such crazy logic of "adult time, adult crime" But what is a child (or non-adult) crime? Previously it was a crime done by a child (17 and younger mostly?) but now I have no idea
+114. Yes, of course. That is 'child crime, child time'. Legislation will be introduced by the end of the year, apparently. For example, public order offences result in a nap. If you shit your pants in public, you get a stern talking to. The NRL is going to love it.
+115. Love it
+116. Yep… like in Indonesia… public spanking.
+117. That is a really dumb thing to say
+118. This is completely anecdotal: I know a now 20 year old who stole a car when he was 16. He went to juvie for a few months and came out with not much trauma from it. Now considering his life: foster care, bipolar (was in a manic episode when he stole the car), severe abuse, substance issues, severe medical conditions etc. he was destined for anti social behaviour in his teens. Now at 20 he’s had a few years of therapy, is successful completing a STEM university degree, no drugs, managing to live independently and staying almost entirely out of trouble (occasional shoplift or so). If they had put him away for “adult time” his life would be ruined. He’d have had no therapeutic support, no proper medication, no rehabilitation, no incentive to improve his life. He would have got out of corrections facilities worse than when he came in, probably heavily addicted to much harder substances. Prison is torture, it’s bad enough for adults but doing it to kids is forcing them into a life of misery. ETA since people can’t understand why prisons suck, this ISNT anecdotal: If he got adult time, two people suffer (him and the victim). Two people’s lives are ruined. If he got a “minor” punishment and received genuine help and rehabilitation afterwards (which he did), he can now go on to live a pro-social life and help others through contributing to society. It is extremely unfortunate for the victim but punishing someone harshly by forcing them into a torture chamber that we call prison is not going to solve that issue. We should have better financial aid for those in hardship such as the victim and better social services for people like my friend; because believe me he’s one of the lucky ones. Many others in juvie don’t get the opportunity of rehabilitation, they are continually punished with no help which further perpetuates a cycle of crime. Most if not all multi-offender/violent criminals come from unimaginable trauma- usually severe sexual, physical or psychological abuse in combination with a lack of stable places to live or basic necessities being met. Further traumatising someone and labelling them a criminal will only reinforce their view that the world is not deserving of pro-social behaviour and there’s no benefit to it. Seeing crime as a symptom of something more (poverty, untreated disability and trauma) and treating the root cause will be immeasurably more beneficial to all of us as a society than prisons. Further studies about the effects of prisons: [Prison abolition and grounded justice](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2625217) [The Intersection of Disadvantage and the Criminal Justice System in Australia – And Six Ways to Address This](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3492805) [Why Opposing Hyper-Incarceration Should Be Central to the Work of the Anti-Domestic Violence Movement](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2638902)

@@ -1,0 +1,191 @@
+Your job is to analye a series of Reddit Comments are drawn from sbumissions related to the 2024 Queensland State Election. The comments are drawn from a collection of comments before, during and after the election itself on the 26th of October. The parties that sought election were the Australian Labor Party (ALP), the Liberal National Party (LNP), the Queensland Greens (Greens), One Nation and Katter's Australian Party. The LNP prevailed in the election, with David Crisafulli becoming the new Premier of Queensland. 
+We have identified several key issues that the major parties campaigned on during the 2024 Queensland State Election: Youth Crime (YC), Cost of Living (COL), Health (H), Energy and Infrastructure (EI), and Abortion Laws (AL). Below is a summary of each party's position on these issues:
+Youth Crime (YC):
+- LNP: Advocated for stricter penalties for young offenders, including the 'Adult Crime, Adult Time' policy, proposing that serious offenses committed by youths be met with adult sentencing. 
+- Labor: Focused on rehabilitation and prevention programs, aiming to address the root causes of youth crime through community engagement and support services.
+
+Cost of Living (COL):
+- LNP: Proposed measures such as abolishing stamp duty on new builds for first home buyers and re-establishing the productivity commission to review building industry regulations, aiming to alleviate housing costs. 
+- Labor: Introduced initiatives like 50-cent public transport fares, a $1,000 energy rebate, and free lunches for state primary school students to ease cost-of-living pressures.
+
+Health (H):
+- LNP: Committed $590 million to an 'Easier Access to Health Services Plan,' aiming to reduce ambulance ramping and hire additional healthcare workers. 
+- Labor: Focused on maintaining and expanding healthcare services, addressing hospital capacity issues, and investing in new health infrastructure.
+
+Energy and Infrastructure (EI):
+- LNP: Criticized Labor's Pioneer-Burdekin Pumped Hydro Project as financially unviable and canceled it upon taking office, opting to explore smaller-scale hydro projects instead. 
+- Labor: Proposed large-scale renewable energy projects, including the Pioneer-Burdekin Pumped Hydro Project, to transition towards 80% renewable energy by 2035.
+
+Abortion Laws (AL):
+- LNP: Stated there would be 'no changes' to abortion laws under their government, maintaining the status quo established in 2018. 
+- Labor Party: Supported the existing abortion laws and opposed any attempts to repeal or amend them. Asserts that LNP intend to restrict access to abortion services based on the views of some of their members.
+
+Analyze Reddit comments and code them based on the positions they support or oppose concerning these issues. You will output JSON, so valid values are strings or null. Use the following codes: YC, COL, H, EI, AL. If a comment's position is unclear or does not pertain to these issues, output null.
+
+Secondly identify which party the comment appears to support. Use the party code ALP, LNP, Greens, ON, KAP if this can be determined, otherwise a null value if undetermined.
+
+Output JSON as a list of objects where each object has an "id" (integer) property of the comment id, an "issue" property set to the issue code string (or null value), and a "party" property set to the party code string or null value. Null means JSON null, not a string. Values MUST be quoted, e.g. {"party": "LNP"} unless they are null, e.g. {"party": null}. Comments follow:
+
+1. This is an own goal. By making the laws more strict, crime will go up “on the LNP’s watch”.
+2. Queensland quickly became a pretty weird and psycho police state in the Newman years. Sounds like he wants to bring that all back
+3. How's this fucker even going to run a surplus while building two new prisons every year? Still, I guess it'll help with homelessness. </s>
+4. Right wingers are fucking nutso. Whatever happened to a nice, balanced, accepting but equitable centrist party? Holy cow... Thank god everyone eventually dies. Can you imagine if we didn't
+5. It genuinely depresses me that Australia is about to vote this dude in.
+6. I dread the next 4 years. Fuck these backwards cunts. I'm so fucking sick and tired of conservatives wanting to drag us back to the 1850s because they're pissy that women can vote now and you can't lynch First Nations people anymore. Wish these cunts would just fuck off into obscurity.
+7. Yeah how good is fighting a war on drugs. But when Barnaby Joyce ends up drunk off his ass lying down in the street raving his munted head off, it’s all “calls for compassion” and “we should respect his privacy.” I fucken loathe these insidious cunts who think that everyone who isn’t them is some insolent poor that ought to be subjected to the harshest punishment. Seriously, if QLD lets these shysters in, they’re gonna regret it.
+8. The funny thing at this extremely late stage of the election is how they release this today to divert attention away from their costings in order to try and confuse the hell out of the electorate. They have been extremely devious throughout this whole election.
+9. Hi from Melbourne. I’m encouraged reading all your scorn and derision. I hope those pricks don’t get up on Saturday.
+10. This goon seems extremely competent at ignoring all evidence, including well known things such as the concept of harm minimisation, which advocates for policies such as what we have because it minimises the overall financial, social, etc costs to society and results in better outcomes for those participating in drug use. What a clown show.
+11. Such a regressive little nob.
+12. how can someone in modern times be so out of touch with modern problems and issues, back to the dark ages we go folks if this guy wins.
+13. This guy is really good at making himself less likeable with every passing day.
+14. He is fucking poison.
+15. Young Liberals would never be caught with Charlie. Never. This could never backfire.
+16. "We don't believe." Go away, your beliefs are not a justification against a medical reality.
+17. God I hope those cunts don’t get in
+18. Did they just drop all their policies today or something? I would struggle to say what they were going to do 2 weeks ago and today this is the 3rd thing I have seen.
+19. Not that I particularly like Miles, but Crisafulli is an even more useless, smug and arrogant twat. He wants to take Queensland back 20 years with his populist-conservative garbage. Fingers crossed people don't buy the media hype at all. Hope this prick loses...
+20. And that includes members of his own party, right? Of course not. One rule for thee different rules for me and mu friends.
+21. LNP would bring back the death penalty for people with haircuts they didn’t like if they could.
+22. David Crisafullishit amirite!?
+23. Pill testing saves lives. This guy is a disease.
+24. What a way to drive up youth crime. Get em while theyre young and stick em in the programs, and when that inevitably doesnt work, just shove em all in the jails!
+25. Harm ~~minimisation~~
+26. The LNP make policy based on this mystical illusion that the world is perfect, and perfect means in perfect alignment with their own views. Drug testing is a compromise that allows people to make mistakes (or not a mistake depending on your own views) and not pay for it with their life. Limiting that access stands for valuing "what's right" over what's moral... Bold move for someone who "believes in victims".
+27. At some point someone needs to ask the fool why he is pro-crime. Criminalising drug users leads to further criminal activity, worse social outcomes, unemployment, etc so like why?
+28. This guy suuuuucks
+29. He's a fuckin idiot
+30. What a cockhead
+31. Ok, here it is one last time. I’m still not convinced LNP will take the seat of Mackay 😐[https://www.brisbanetimes.com.au/national/queensland/deputy-mayors-wife-labels-racegoers-ugly-freaks-20100603-x04v.html](https://www.brisbanetimes.com.au/national/queensland/deputy-mayors-wife-labels-racegoers-ugly-freaks-20100603-x04v.html)
+32. LNP is just so far away from their liberal principles it’s not even funny. They should be forced to dropped liberal and be called grumpy conservative fuckwits
+33. So which companies has Crisafulli picked out to profit from building and running the extra prisons? And how much have they donated to the LNP to get this retrograde policy up and running?
+34. This man need to go to hell, certainly not Parliament House.
+35. That isn't a reminder to go and not vote for these fucks, it's a directive.
+36. Sorry kids, if you do ecstasy at schoolies then you DESERVE to overdose on cheap pills. They really can't help themselves can they? They can't just try to be the big oil and gas party while also genuinely serving the public, they need to make the worst choice at every turn.
+37. Everything he says just makes me want to knock him out. What a regressive outlook he has on everything. This is the approach America had and it landed a lot of fairly innocent people in extremely bad legal situations over a tiny amount of illegal substances. Drugs are not going away and people are always going to take them. Why is alcohol and tobacco legal? 2 of the worst drugs there are. Give me a comedown over a hangover any day.
+38. Yay back to the stone age we go
+39. Bet he's fun at a party Slimy cunt
+40. Fucking wannabe trump wanker.
+41. God he's a horrid little weasel
+42. Does this dude have any ideas other than throwing people in jail?
+43. Ugh wtf will happen if this numpty gets in?
+44. Fucking tosser.
+45. All the usual regressive bullshit as usual
+46. That’s it. If LNP win, I’m leaving Oz.
+47. He knows his votebank's the 50-60 yos who don't give a fuck about anything but themselves, so he's doing good to appease them
+48. The LNP, small government for rich people and big companies; big government for poor people.
+49. "I'm a fuckwit and I want to win the fuckwit vote! So if you're a fuckwit, you should vote for my party, we're all fuckwits!"
+50. "we want to be tough on crime. That is why we want to make more things into crimes, meaning that more crimes are committed" seems to be their entire platform
+51. While people who can read scientific studies know this is a big step backwards, this is going to win a lot of votes.
+52. Can anyone elaborate on why the AMA seem to spring up everywhere around the LNP? This is the second time I’ve seen them backing LNP/speaking against the ALP. Just curious Edit: sooorrrrryy, I misread. Sleep deprived mum here just trying to survive lol.
+53. It’s never good when small town spivs, hillbillies and religious whackos get to run a major urban area like SE Qld. I’m starting to get a bit worried at what these cretins are going to do.
+54. So we're just going to follow the US with privatised prisons soon right?
+55. Screw what the experts think and the statistics show, it's time for the LNP's gut feelings about issues.
+56. https://www.reddit.com/r/australia/s/42q575Lj85 You reckon Duttons boy would end up in Court?
+57. "Mr Crisafulli said believed drug use was a health issue that can lead to crime issues" cocaine usage often leads to white collar crime, just ask anyone in the LNP.
+58. Gunna be a long 4 years....
+59. Please don’t vote for this ghoul.
+60. They need to build demand for those private prisons.
+61. Never a shortage of reasons to hate lnp
+62. Kinda like the moonlight state V2.0
+63. He’s fumbled the bag hard on this election. CrisaFAILi
+64. Adult crime, adult time for this guy, hey?
+65. This is some Nixon level BS. It didn’t work then and it won’t work now.
+66. The list of people I'd hurt if I knew I'd get away with it is pretty damn short, all things considered. But he's definitely there.
+67. Fuck!!! Fucken Fuckers Fucken Fucked
+68. Pretty sure Dutton's kid was in qld when that pic was taken
+69. Treating drug use as a health issue instead of criminalizing it makes so much more sense
+70. Liberals seems to think the death penalty for minor possession is the solution… I just don’t get why when all the evidence shows this is not a viable solution at all.
+71. Why do we now seem to be going backwards
+72. Parents can discuss drugs and safety as much as you want, kids experiment and will most likely at some point try it. Being able to test at events was a safety net. Not encouraging, but accepting they will and offering a level of protection. I think it is foolish to take it away and question how many lives will be lost.
+73. https://preview.redd.it/tk8r6z7mdrwd1.png?width=434&format=png&auto=webp&s=1bcc56568ab23725cf51f80074bc9da20a5f8be9 chemical name for CanKet is 2′-Fluoro-2-Oxo-PCE \-not an opioid
+74. 🤡🤡🤡🤡🤡
+75. Let's lower crime by... Making it more common to be charged with a crime than to go to diversion Fuck me, what a genius
+76. He is disqualified. Proper cunt like most RWNJs
+77. This guy is about as usual as an extra hole in the ass.
+78. what a retard.
+79. Gotta build our very own prison industrial complex somehow.
+80. Shameful
+81. Good luck QLD, I hope this fool doesn’t win. 🫣
+82. I don't understand what the government's role thinks it is. The government's role is to manage the economy and workers rights. I'm against all federal funding against drugs because tax payers don't benefit from anti drug laws. I don't see why my taxes should go towards anti drug laws.
+83. As an ex-cop, this is a terrible idea. The types of people who benefit from the drug diversion program are people who are caught smoking a joint, or with a tiny bag of weed in their pocket. They have no criminal histories and are just normal decent people who have likely been smoking weed recreationally for years while ALSO contributing to a healthy, functioning society and community. The diversion program lets them cop a slap on the wrist without their entire future being thrown down the drain from a drug conviction.
+84. He was bullied at school ha?
+85. Stop it David I can only vote against you so much!
+86. Politics over common sense = LNP
+87. Cunts.
+88. What’s up with these conservative bogan !
+89. This just ruined my high (don’t worry Mr crisacryboy it’s medical I’m not a criminal) I am genuinely scared that the LNP will win and how fucked our state will be in a matter of years. Catch me October 30th weeping silently infront of the Tele at 3am so my wife and kids don’t see me.
+90. What the fuck is it with sleazy, Italian blokes trying to get into power and shill this country?
+91. Queensland is so fucked if the LNP win this election. It will be 4 years of failed policies. Nothing the LNP do ever benefits Australians. They are the party of big business and fuck everyone else. Their mantra is how do we make it so, you the taxpayer. Are bled dry of every cent you have. New and creative ways to fuck over the little guy. The LNP way. If these idiot politicians on both sides had any fucking sense. They'd legalised cannabis and tax the fuck out of it. Stipulate all tax revenue from cannabis will go to health care, schools, TAFE, job training. They'd have the most mellow, well trained workforce in the world within 4 years. Hospitals that are state of the art. Schools that are world class. Job training second to none in the entire world. Instead they'll keep going after weed. Because it wins them votes with conservative idiots. Who think people will become lazy because of weed. But its OK for people to get shit faced drunk every weekend. Never seen someone violent on weed. Seen a lot of brawls between drunk fuckheads on weekends though.
+92. Prisons will be full in a couple of weeks and will just produce 'even harder addicts'...
+93. Two steps forward ten giant steps back… we were all warned…
+94. What a shit cunt.
+95. Ok Dave, off you fuck now.
+96. I cant believe this fucking idiot is going to win
+97. I missed the good old Sir Joh days. Only been here since 2000. This guy and his party is the most screwed up backward policies I've witnessed in my 24 years as an Aussie. Newman seems great compared to this. Gonna be a shit few years :(
+98. [deleted]
+99. This will be an interesting 3 years
+100. Has the LNP run out of ideas and figure "FUCK IT WHY NOT" or been watching FOX for the last couple months?
+101. "we don't believe in a soft approach to drugs"... Acting like they don't think drugs exist. Like what, if you don't offer testing for them, then there are no drugs that could need testing in the first place? Or does he think that a one strike rule will suddenly mean that every person in possession would get caught, thus rendering testing redundant?
+102. Except pot is legal and quite easy to get a script online for... This guy's a Muppet.
+103. None of this is in any way surprising
+104. Drug use should always be seen as a health issue not a criminal one. Sale and distribution is different, but use should never be criminalised! If Cisafail does this he is doing what the LNP do best and that's sending things backwards, it's 2024 criminalising drug use has been proven time and time again to be not the right way to approach it, instead we should be looking at ways to stop the dealers and top of the chain or think about legalising and regulating as the positive socio economic benefits by doing so and taxing the hell out of it are enormous. It's just everyone is too scared to discuss!
+105. This owned career politician is the most vile type of sycophant. Career politicians are all Corrupt at the core..
+106. Yeah clean them all out
+107. What a fucking dead shit. How tf can anyone vote for LNP?
+108. The hand that giveth also taketh. He will give you reason to turn to a life of crime, and no way out of it
+109. As a drug diversion counsellor I urge everyone to see this as an attempt to piggy back off the youth-crime scare and to garner last minute votes. Getting rid of drug diversion will massively clog up the courts and raise costs significantly. It's a terrible decision and one that would not help the current situation with youth crime
+110. I cannot stand Crisafulli and his horse shit policies. Blokes an absolute flog.
+111. The party of lowkey yet widespread political violence. These policies ***will*** kill. Their weasel words on abortion will too. Same for their youth detention hysteria. And I wish I could say that was out of character for these morbid goons
+112. Why is this always the case for anything right of centrism, seriously what is wrong with conservatives (I’m asking unironically I want to know what evolutionary purpose there would be to produce such stupid ingrates like that)
+113. Fark, why is everything going backwards ![gif](emote|free_emotes_pack|sob)
+114. its like... every. single. idea they come up with is terrible you'd think there would be at least one that would earn at least a "hmmmm ok" but jesus christ, put some effort in dave
+115. Fuck this guy
+116. Where's he going to house the extra inmates?
+117. My God this joker needs an extra strength enema!
+118. When you realise that the LNP proposals are nothing to do with justice and rehabilitation. Just revenge on criminals and zero care shown. As shown by the CLP in the NT, they really do want to lock up children.
+119. What a piece of shit.
+120. Straight from the Trump play book.
+121. Fuckwit
+122. The war on drugs works 100% - just ask any LEO from around the world how successful it really is 🤣
+123. Is this guy just Dutton 2.0?
+124. Pill testing yes keep that. Three strikes is too many. Get caught with something and you get a warning, maybe somewhere to get some help but the government won’t pay for that so we know that’s not gonna happen. Second offence, goodbye, off to prison.
+125. why did so many stupid people vote for the lnp cringee
+126. How many strikes should someone get for a DUI? You cookers all defending drugs like you would apply the same logic to any other crime is insane. They’re against the law and are not good for you. Yous say “look at the evidence” and then ignore all the evidence pointing towards these substances absolutely rotting the arse out of your brain. Do better
+127. Why keep pill testing?? You know the risks already. You don't get to waste emergency services time or risk others who need the help simply because you're self entitled. And yes, no 3 strike rule. You're all complaining about the crime rate yet refuse to use common sense and look at the statistics relating crime to drug use.
+128. LNPs attitude is that if you overdose on something you didn't even know you had then you deserved to die
+129. "We don't believe a soft on drugs approach works" Our feelings don't care about your facts
+130. Cos the hard ass approach has been working really well.
+131. Queensland deserves everything it's about to get to be honest. You want to vote these people in, then you deserve the consequences of their ideology based policies.
+132. Overall I would say it’s time for a change of govt in Qld, but my god this is a terrible policy. In what world is it better for people to die than to perform safety tests on drugs they’re going to take anyway?
+133. Overall very conservative polices. I wonder if that will appeal to the masses? I suspect it will.
+134. There goes the youth vote
+135. The majority of criminals have a drug or alcohol addiction. It is clear that the current approach is not working. More needs to be done to discourage the use of drugs and pill testing isn't doing that. You are removing one of the consequences of drug use which in turn encourages more people to take drugs. In saying that, this move alone won't be sufficient and I hope Crisafulli has a real plan to combat addiction. Making it easier to access rehab services from prison and providing more rehab services to inmates would help. The wait times can be too long for anyone on minor offences to engage with those services. The issue with drug rehab outside of prison is that the addict has to WANT to be clean, and they simply choose not to.
+136. This guy has no clue what his doing.. In fact, this sounds weire but pure opium less harmful when injected than smoking it? Sounds crazy until I watched a neuro-brain scientist explain it. I know people that have abused painkillers (opioids) for 25 years and they have come out without damage. I'm betting 25 years of the alcohol and cigarette abuse would have way more damaging effects Even coca leaves—Peruvians consume cocaine daily. Does it matter the intake? I'm talking about tea. Yes, they will fail a drug test. What about amphetamines for children, wrapped up in a nice package? It's still a drug, just more pure. I read natural coca tea is better for you than coffee. I bet you didn't know nicotine is the one ingredient that is actually good for you—not through smoking, because it's the other chemicals that kill you. Luckily, Australia looks after its people. Only recently I found out about nicotine. So, lucky for us, out of all the chemicals they could ban, they want to ban that one. By the way, cocaine, opioids, and amphetamines are still sold by big pharma. Last I heard, cocaine is used in operations to stop bleeding. They are also testing micro-doses of MDMA and LSD. I reckon if everything was in pure form, I would die from alcohol before any of the above. Marijuana is basically legal. I wonder if they do trials to see what is the most damaging. If they do, caffeine, alcohol, coca leaf, sugar, and amphetamines should be tested. I was once a curious person who had to try everything. The only drug that made me sick was opioids if you go cold turkey. But don't worry, the government will help you with that 1-3 week stretch of terrible flu-like symptoms. All you've got to do is take their brand of opiates, like methadone, and you never have to get off. In fact, the longer you're on it, that 1-3 weeks turns into 2 months. Instead of ripping the band-aid off, they just give you methadone with no plan to end it. In fact, they encourage you to stay on. The worst thing out of all of this is the withdrawal from opiates. But if doctors really wanted you off, they wouldn’t swap it for another type. They should taper you down and, in the final stages, give you a week's dose of Valium and amphetamines for a 2-week taper, and you're done forever. Cocaine—I don't understand when people talk about withdrawal. You can go cold turkey with no sickness. If it's not made properly or ingested properly, it can affect your heart and nose. Amphetamines? I mean, if they give it to children, it can’t be that bad. I guess people are different. I've been able to stop every thing cold Turkey except opiates methadone is worse in heard. The point is, possession of a few grans with 3 warnings is better than wasting the court’s time. We should be focusing on the real criminals who harm innocent victims with violence. How come they used to sell opium, cocaine, and meth in pharmacies, but left alcohol and cigarettes with the worst chemicals imaginable? I recon the vaxcines done nore damage than the occasional user like the occasional drinker I'm conservative saying this, lol.
+137. I'm in favour of natural selection,it's worked flawlessly for millions of years.
+138. [deleted]
+139. We're fucked either way, Crisafulli and Miles are both morons.
+140. Good do illegal drugs at your own peril
+141. [deleted]
+142. Am I missing something? A tougher stance on illicit drugs, rather than a catch and release system sounds like a good change to me.
+143. I’m fully with this bloke, we need more like him. Stop normalising drug use.
+144. Lock em all up
+145. Does that mean Labor supports drug addiction? Is that why we're seeing so many addicts, now? It's a shame Labor cut mental health supports. If people could get affordable and decent mental health care I guess fewer people would turn to drugs to cope.
+146. AMAQ simply reaping what they sowed.
+147. Good - it's about time someone stood up and cracked down on drug users. The left wingers of the world promoting and normalising drug use is one of the most evil things to have happened this century.
+148. Drugs are for mugs anyway…
+149. 100% should disqualify anyone for public office anywhere
+150. 💯 what a scum bag.
+151. What does it matter when you can just pay your way to keep it quiet
+152. That's white collar crime, as long as you don't do it to the wrong people then you don't go to jail.
+153. now THAT'S the definition of ADULT CRIME. DO THE TIME BUD!
+154. Cause fuck you that's why!! These cowboys think it can't happen to their kids and even if it does, they've the money to make it go away. You and me may not be so lucky! The old rules for thee, but not for me comes to mind.
+155. "and to ensure that's a self fulfilling prophecy, we're going to charge every person we find with drugs, so they have a criminal record and we can show statistics that show 100% of drug users are criminals"
+156. EXACTLY. Addicts need medical care, and they need support to address the issues that caused their drug use in the first place. Jailing addicts does not cure their addiction, nor does it turn them into functional members of society. And if someone is using drugs and *not* addicted, then, well... I'm not really sure who the victim is in that scenario, but I support making sure that their drugs are tested, so that they don't get hurt in the process.
+157. Yes, alcohol is an extremely dangerous drug linked to many crime, and health, issues.
+158. You misunderstand! He's saying drug use leads to crime issues so he's just going to skip straight from drug use to jail. Efficiency! /s
+159. It only leads to crime issues because you treat drug users like criminals, David.
+160. Because the conservatives have to be angry at some group about something at all times. They must be PUNISHED for taking drugs. Don't ask why.
+161. If this prick gets in he will have blood on his hands. Just shows this asshole doesn't give give a single fuck about QLD citizens lives or tax payers dollars if it costs boomer votes. He's fuck you to the medical experts, the police, the kids and their families.
+162. Because LNP/Libs only believe in autocratic authoritarianism - it’s how they roll. It’s what some voters seek until they realise that only people with money are exempt because of the compromise to humanitarian sensibilities and corruption inherent in removing people’s rights under authoritarianism.
+163. Literally **anything** can be said to “lead to crime issues” when you… criminalise it

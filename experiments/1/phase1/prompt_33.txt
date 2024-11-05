@@ -1,0 +1,192 @@
+Your job is to analye a series of Reddit Comments are drawn from sbumissions related to the 2024 Queensland State Election. The comments are drawn from a collection of comments before, during and after the election itself on the 26th of October. The parties that sought election were the Australian Labor Party (ALP), the Liberal National Party (LNP), the Queensland Greens (Greens), One Nation and Katter's Australian Party. The LNP prevailed in the election, with David Crisafulli becoming the new Premier of Queensland. 
+We have identified several key issues that the major parties campaigned on during the 2024 Queensland State Election: Youth Crime (YC), Cost of Living (COL), Health (H), Energy and Infrastructure (EI), and Abortion Laws (AL). Below is a summary of each party's position on these issues:
+Youth Crime (YC):
+- LNP: Advocated for stricter penalties for young offenders, including the 'Adult Crime, Adult Time' policy, proposing that serious offenses committed by youths be met with adult sentencing. 
+- Labor: Focused on rehabilitation and prevention programs, aiming to address the root causes of youth crime through community engagement and support services.
+
+Cost of Living (COL):
+- LNP: Proposed measures such as abolishing stamp duty on new builds for first home buyers and re-establishing the productivity commission to review building industry regulations, aiming to alleviate housing costs. 
+- Labor: Introduced initiatives like 50-cent public transport fares, a $1,000 energy rebate, and free lunches for state primary school students to ease cost-of-living pressures.
+
+Health (H):
+- LNP: Committed $590 million to an 'Easier Access to Health Services Plan,' aiming to reduce ambulance ramping and hire additional healthcare workers. 
+- Labor: Focused on maintaining and expanding healthcare services, addressing hospital capacity issues, and investing in new health infrastructure.
+
+Energy and Infrastructure (EI):
+- LNP: Criticized Labor's Pioneer-Burdekin Pumped Hydro Project as financially unviable and canceled it upon taking office, opting to explore smaller-scale hydro projects instead. 
+- Labor: Proposed large-scale renewable energy projects, including the Pioneer-Burdekin Pumped Hydro Project, to transition towards 80% renewable energy by 2035.
+
+Abortion Laws (AL):
+- LNP: Stated there would be 'no changes' to abortion laws under their government, maintaining the status quo established in 2018. 
+- Labor Party: Supported the existing abortion laws and opposed any attempts to repeal or amend them. Asserts that LNP intend to restrict access to abortion services based on the views of some of their members.
+
+Analyze Reddit comments and code them based on the positions they support or oppose concerning these issues. You will output JSON, so valid values are strings or null. Use the following codes: YC, COL, H, EI, AL. If a comment's position is unclear or does not pertain to these issues, output null.
+
+Secondly identify which party the comment appears to support. Use the party code ALP, LNP, Greens, ON, KAP if this can be determined, otherwise a null value if undetermined.
+
+Output JSON as a list of objects where each object has an "id" (integer) property of the comment id, an "issue" property set to the issue code string (or null value), and a "party" property set to the party code string or null value. Null means JSON null, not a string. Values MUST be quoted, e.g. {"party": "LNP"} unless they are null, e.g. {"party": null}. Comments follow:
+
+1. We don’t have to see Crisafoolya on the tv., Twitter tone Facebook every. 2 minutes telling porky pies
+2. Because they won't continue with some of the hydro electricity projects
+3. I was so genuinely shocked. How tf did they win?!
+4. I have many good reasons for voting LNP. I want much tougher on youth crime. Enough is enough. The "softly softly...oh poor little kids" approach. Is utter nonsense. I care about the victims of crime. Not the little mongrels committing the crimes. They need to be off the streets and locked away if they won't stop AND I am totally against them ruining a beautiful natural valley at Eungalla for a freakin Hydro plant 😡 The most utterly disgraceful brain fart ever. Would be an utter tragedy. And I'm very sure that's why ALP lost Mackay. And our LNP member got back in because hes a great MP for us
+5. My boomer Dad didn't vote LNP, he did an informal vote so it doesn't get counted, because "he'll never forgive Labor for what they did to the furniture industry." Way back in the 80s he was a qualified french polisher working in factories around Brisbane that specialised in hand crafting furniture. Apparently Labor at the time was the reason that all this "cheap and nasty flat pack stuff" started coming into the country and all the furniture making businesses went bust because of it, which meant he was out of a job and his trade pretty much went out of existence. I tried to explain to him that the Labor party of today is nowhere near the same as it was in the 80s, but nope, wouldn't listen. So there you have it, my Dad throws his votes away now because he's holding onto a decades old grudge against the Labor party. 🙄
+6. Because they are not Labor
+7. I didn’t vote/ and this year I convinced like 10 family members and about 20 friends not to vote. All in all it was a good year
+8. I voted LNP because it’s better than sprite
+9. What's the big secret? Labor can't govern, all they know how to do is bloat government and spend money on garbage. It was well overdue. Labor are finished in this country and you won't see another majority labor government in 20 years if ever.
+10. Well I decided that the economy of Queensland suffered enough under the ALP. The ALP did no real good over their tenure excluding getting the Olympics here and keeping Qld safe in the face of covid. But one of the important things the LNP bring is a stop to the escalating issue of youth crime. Some areas have youth doing horrific things just because they can get away with it. No more. Furthermore let’s hope the LNP fixes the economy of the state, and doesn’t continue its downward spiral. Another great thing is the LNP will listen to the citizens more, particularly with the Olympics and will make sure we done go down as a disgrace or disappointment to the world during it. Also let’s be honest, the last ALP leader for QLD was a dick and needed to not be allowed back in power.
+11. I always look at female candidates first - I think they're overlooked and underrepresented. The only woman in my electorate (out of 6 candidates) was LNP (I didn't vote LNP, but considered it)
+12. [deleted]
+13. You’re ‘friend’ is a dullard
+14. The first thing to do is not panic. There is an old adage in Australia. We dont vote parties in, we vote parties out. Giggles and his ex boss were at the helm when property prices rocketed, cost of living rocketed and youth crime rocketed, amongst many other things. People voted out giggles snd Anastacia, rather than voting in the libs. I voted LNP btw.
+15. Any organisation stagnates if leadership doesn't evolve. Hold all things equal, having a change at the top (and the respective mates and status quo being challenged at the next few levels down) is only a good thing for qld. Public data on the real cost of infrastructure and hospital performance so we can actually hold people accountable and get things fixed will be a win for taxpayers too. It's your money after all. I guess the big one for most people is that it's clear the youth crime policy wasn't working. Time will tell, but anything different to the current policy is worth trying if it can stop kids thinking crippling a families finances by crashing their car (and possibly killing someone in the process) is a net win. Obviously not just "my friend" ;)
+16. There are no good reasons
+17. Firstly Steven Miles has got a jacked set of teeth and he was never voted in by the public for the top job, did I mention that set of chompers he’s got going on, yeah that’s why I voted Lib, couldn’t really look at his head any longer
+18. One of the massive things I want to see a change in with the government is over spending. I think the initiative that Trump and Musk suggested with government efficiency is a really good idea. While the LNP haven't explicitly said they will do this, I think that they (in a quest to privatise things more) will waste money on meaningless jobs less than ALP. TLDR: ALP spends more money than LNP and I think do it in a wasteful manner
+19. what a silly question. You should refer this question to Albo and his policies mate!
+20. If it's a really safe seat for the other party, they will run inexperienced candidates to develop and test them for future runs in more viable seats (all the parties do this). They aren't really trying to win they're trying to outperform expectations and make the incumbent work for it as much as possible. Campaigning is a gruelling job, and competent operators don't really want to run for seats if there's no realistic chance of winning.
+21. Some of the candidates were insane looking. The guy running for Labor against JPL in Surfer’s Paradise was literally a teenager straight out of high school who had just started a bachelors degree. I mean I know that the ALP were never going to win that seat, but *what*?
+22. Honestly, this is the underrated real answer.
+23. I note that there is no mention of policies or what the candidate stands for, just, we recognised their face...
+24. That person didn't almost win on their "progressive" proposition. That person benefited from the minor parties putting the majors last and she swooped up ON/UAP preferences.
+25. Yeh it was same in my area. Our MP is LNP and well known, has actually gotten a few things accomplished for the region, so of course everyone voted for them. Meanwhile the Labour candidate was some unknown.
+26. I think the same of my local. He's a great bloke, does loads and loads and makes sure we know through different comms methods. He was revoted in and with more margin by lots. In all honesty if he left LNP and went to another party or by himself, I'd still vote for him, cause I like him and I'm not using him to pick a party in this instance.
+27. Some of the candidates were insane looking. The guy running for Labor against JPL in Surfer’s Paradise was literally a teenager straight out of high school who had just started a bachelors degree. I mean I know that the ALP were never going to win that seat, but *what*?
+28. [deleted]
+29. The amount of people I have known over the years that still think LNP are progressive because they have “liberal” in their name is so concerning to me. Most recently, a lawyer at senior associate level.
+30. LNP famously taxes the hell out of mining companies, not like Steven Miles who had all that supportive advertising from the resources council because he was trying to reduces their taxes. Oh wait, it is all the opposite of that.
+31. I… what?
+32. ![gif](giphy|3oEjI67Egb8G9jqs3m)
+33. Really gonna get back at them by not charging them any royalties. That'll show the bastards
+34. 😂😂😂
+35. Looks like a case of friendly fire
+36. When the working out is correct but the answer is wrong…
+37. I knew there was some braindead supporters in the party but never thought they'd stoop to such a statement Yikes
+38. The amount of people who were so grossly misinformed and still voted is absolutely frightening to me.
+39. Lol
+40. WTF? Greens would have been the better vote then
+41. Should’ve voted Green! LNP brought coal to parliament!
+42. Has your friend suffered a serious head injury?
+43. He doesn't know who Crusafali is friends with? And where a huge amount of LNP campaign funding came from?
+44. That's a pretty shocking list of reasons...
+45. Yep, I stopped asking family cause it was a rotation of this and I just don't have time to care about that anymore. Q
+46. Re: Point 3. Miles can bench 100kg. Surely that's a win. He also has a pretty good social media campaign. Number 4 is a little disappointing - so many Gen Z targeted information packages out there.
+47. I used to be a number 2 until this exact election. (To be fair, I started questioning things earlier than this but it was this election that was the first to get a new vote from me).
+48. Steven miles is easily the coolest. The guy is jacked
+49. Been in too long… what does that even mean!
+50. Sadly #2 is more common than most of us realise. Wealth and ignorance breed same...
+51. Make no mistake, this is by design. LNP and the Media have always been best buds. Together they've eroded everything from education to well.... media...
+52. We’re so cooked.
+53. 2 - pretty silly imagine voting for the enemy who makes things worse for you.
+54. This is where the argument against compulsory voting could be made -_- How many of these people went to the booths with absolutely no clue and just numbered randomly
+55. Most of the people I know who voted lnp did so because of #1… but when I asked if they support throwing 15yo kids in adult jails the response was tumbleweeds… People have forgotten and also people under 25 don’t understand how shit the 31 months of Newman was.
+56. the thing that gets me is that... youth crime has always been common. but with social media... its made out to seem like its happening in every suburb, on every street.
+57. Youth crime isn’t an issue, it’s the goddamn Magistrates who are the issue. For example, the imprisonment liability for stealing a car is 10-14 years depending on circumstances of aggravation. The legislation is already there to deal with the crime, magistrates just don’t use it. Instead of voting for Mr Crucifix’s stupid slogan (if youth crime is your vice), people should be voting for the party who has publicly campaigned to hold magistrates accountable for their decisions … oh wait, there’s no such party.
+58. The people who only decide when they are standing in their cardboard booth kill me. How can you function on planet earth without some kind of decision making expertise. They are so incredibly vulnerable to lies and deceptive tactics, which gets the conservative vote in the bag
+59. 4 makes me so mad because they do teach that shit in school at least they did when I was there. Are the students not listening or does no one think it's worth educating them about anymore? I have heard multiple cases of young adults not even understanding that we have preferential voting even though it was hammered into our heads at the same age.
+60. They need to clear out all the homeless in Brisbane
+61. Again a good argument for why voting shouldn't be compulsory
+62. Don't forget Daniel's Law, the sex offender registery
+63. I call bullshit on #3, Miles > Crisafulli by any metric.
+64. Yikes
+65. Democracy manifest folks. Jesus Christ…
+66. https://preview.redd.it/k9jyncv1s9xd1.jpeg?width=828&format=pjpg&auto=webp&s=86c1863d76c14adedd4a945476aedeec9c944b86
+67. This is absolutely fucked. All four of those make me want to throw up, and knowing that people like that exist makes me incredibly sad.
+68. This makes it worse honestly. 😒
+69. Dear god
+70. This is horrifying
+71. [deleted]
+72. i hope they suffer
+73. You missed No 5. Labour Couldn’t organise a shit in a toilet because union oh&s wanna watch for safety violations.
+74. Your family sucks
+75. Option 3 never happened. Option 1 is why I would have if I still lived up there. Those rampant little shits need hard time with no parole.
+76. [deleted]
+77. Yep someone I know voted LNP cause “Anastasia got fat which means she got too smug”
+78. This is my mothers exact thought process haha 🤦🏼‍♀️
+79. As a nurse during COVID, I hated him as health minister. Still put him above LNP though
+80. I definitely thought the same during COVID (he *was* both smug, and an asshole during his COVID press conferences), but I came around to him as premier, and put Labor above LNP because I'm not mental.
+81. Hey you been talking to my mother??
+82. Lots of friends ( even those who no longer live in Qld) give this as their reason
+83. I'm a lefty and I'll always vote left, but what is with his weird smarmy smile? It put me way off too lol. Is it poorly veiled sociopathy? Is it anxiety? He could be telling you 40,000 people died in a horrific way and he'll be smiling like a very happy pedo. It's truly offputting. Once he got into power thankfully he got better with it. It still needs work. I was devastated to see he lost.
+84. Lots of friends ( even those who no longer live in Qld) give this as their reason
+85. Remarkably, if employers, govt included, weren't trying to screw their employees at every opportunity, HR wouldn't have quite so many issues to deal with.
+86. The cfmeu stuff turned a lot of people that I know personally.
+87. > Sister who works in government ... and thats who she voted? One sec... let me future up the quote a bit... > Sister who used to work in government There we go.
+88. Hopefully she’s not on a contract herself 👀
+89. Wow, considering unions won most her entitlements...
+90. Funny because now she will have to do more union shit because the unions will feel they need to be more aggressive and use departmental failures to grow membership.
+91. I'm confused. She hates unions but has 2 daughters = voted for the lnp? Right
+92. There aren't too many unionised government departments. Ive seen behind the curtain in a few. For the sake of your sister, I hope it improves.
+93. Thank fuck for the union tbh. Some of those gov managers are absolute cowboys and get away with murder if not for unions helping staff get in there.
+94. That's actually a fair reason. union behaviour can piss people off, especially if your job is to negotiate with them
+95. interest rate went up everywhere.. not only in QLD and Australia but also around the globe!
+96. I know a nurse who voted LNP because "last time Campbell Newman got in, they sacked people and then rehired them for more money, so I want that"
+97. Some people do vote based purely on... **TRADITIOOOOOOON**
+98. Bahahahahahaaa
+99. No offence intended to your mum. Like my mother (in NSW), they are equally clueless. Democracy doesn't work properly when people are fucking clueless drones.
+100. My dad is hoping they will make car parks free in public hospitals.
+101. Surprised she didn’t say “the proposed upgrade of the federal parliament’s toilets”.
+102. Very good point, what’s left to conserve? Although, I think pretty much all the actual conservatives left the LNP, they adopted Labor’s position on all the moral issues.
+103. Rusted on lib supporters? And yet this whole sub is full of rusted on labour supporters whinging about the election outcome 🤷‍♂️ because democracy isn't actually fair if the other party is allowed to win 😂
+104. I voted labour cause it where my political beliefs align more. But I was very close to being a one issue voter and going with LNP cause the way Labour caved and we're going to go through with such an embarrassing proposal really bothered me. Want to be proud of this city and we deserve better than QSAC changes.
+105. Haha, i guess is the one policy where the alp were pretty weak. Qsac is a little embarrassing. The Mt Gravatt Olympics next to a bloody car dealership and Harvey Norman. Even if Labor won, my brain just couldnt expect qsac to be the final choice, and kinda expected Labor to find a reason to change tune
+106. I asked my local Labor member about this on the way in to vote. He told me that a better stadium would have been back on the table after the election, it was just too much of a political hot potato to push this year. I don't necessarily trust that's true, but I guess we'll never know.
+107. You're severely overestimating how many people give a shit about the Olympics
+108. As a labor voter I couldn’t give a stuff about the Olympics. We have more important issues facing society that require funding, shove the Olympics and fix our problems.
+109. They absolutely ballsed it up, didn’t they?
+110. There was HUGE pushback from the local community on the Gabba rebuild, because it would have involved displacing a local primary school and permanently removed a large local park that the community got a lot of use out of. There’s also the fact that the olympics are a huge money sink - they always go over budget, and they don’t provide benefits to local businesses. Quite the opposite actually, they reduce the number of tourists doing “touristy” activities, because people coming to watch the olympics don’t do other stuff, and people who might want to do other stuff can’t afford to stay because the olympics is making everything super expensive. IMO super reasonable to not want to spend $2.7b to renovate a stadium, destroy a local park and displace a primary school in preparation for a one-off event that doesn’t help our economy at all, and which we would very rarely fill up outside of the olympics.
+111. Couldn’t agree more. Labor lost my vote as soon as Miles made the moronic decision to hold the Olympic Games at *checks notes* Mount Gravatt. Unbelievably stupid decision.
+112. Yep that qsac idea lost him my vote
+113. A lot of clinical researchers, educators, and managers lost their jobs under Newman
+114. 14,000 healthcare workers
+115. I hope it doesn't happen to you but when the LNP released their costings (two days before the election) one of their big cost saving measures was to sack public service contractors. It's coming.
+116. I'm in frontline public service and I'm also terrified right now. I've just gotten into a job I love and I'm thriving after years of burnout and poor mental health. I'm scared I'll have to go back to an industry I hate but I'm good at to make ends meet.
+117. Not apparently. It's fact. It was ruthless . I am preparing myself to lose my job and my home to the weasel Crissifulli. Who refuses to actual in detail articulate his policies. Just High level nonsense. He is a nobody and it is terrifying he got in.
+118. It happened to me at PA :( I truly hope we won’t see a repeat but I wouldn’t be surprised if the same thing happens again.
+119. They did. And it was fucking scary. Even perm staff got the axe. Between the sacking and the striking PA was running on fumes. Pump out permy applications now.
+120. Yeah unfortunately nursing homes will turn to shit too
+121. I was doing IT Helpdesk for the Dept of Justice & Attorney General, they cancelled all the contractors and kept the 3 perm staff. Who then quit because they were expected to do the work of 12 people.
+122. They need to and they will, after working in healthcare there is too much hierarchy and bullshit seat warmers , get rid of the bloat and support our clinicians with more front line staff and better pay
+123. surprised they will do that again
+124. Dead ass for real. Yeet my brotha
+125. I've been looking for it, basically get elected and then take whatever deal Gina Rinehart offers. And jail a bunch of kids before Christmas
+126. We're not Labor
+127. - Jailing kids for Christmas. - "No abortions for thee, but there'll still be abortions for 'me'". I guarantee if any of these muppets in the LNP have a daughter that needs an emergency abortion in the next four years after they outlaw it, they'll still have access to it (or be flown to another state for the procedure). - Remove mining royalties. Can't have Gina mad. - Within 12 months, they'll remove 50c public transport (I suspect it will be within 6 months) - Privatise more Government assets. - Sack the Public Service. Add to the list?
+128. Abortions for none.. miniature flags for the rest of us
+129. I mean they’re not wrong …
+130. gbr, Steven towards the end there got a bit cocky in how he just ignored what Chris said on abortion and pressed him like he wasn't actually answering the question. Also his little run across the gold-coast to brisbane where he at one point traveled by jet-skii felt a bit like a bit of an egotrip on the state's money.
+131. Would make sense at a Federal level, no one pumps more money into defence than the Libs. Guess it’s just a matter of always voting the same way?
+132. There already is a Daniels rule that prevents buses and trains from turning away kids that are waiting at the station if they don't have the money for a fare... It was implemented after the disappearance.
+133. There is already a sex offender registry
+134. Didn't that happen like 20 years ago?
+135. There is already a registry and new legislation was just passed making the reporting time longer…
+136. > (Actual conversations with conservative family members And no I don’t know how labor/greens etc are responsible for any of this stuff.) To quote a relly from a christmas get together years ago when he was explaining how the bush fires are the Greens fault and I pointed out that the Greens had 0 say on the burn off policy "It's not necessarily green policy, but green thought, it infects everyone!". He mysteriously changed the topic when I asked him how does the policy infect everyone yet the Greens have never held even a minority government.
+137. This stuff is literally QAnon propaganda from the USA. Far out this is embarrassing, we can’t even manufacture home grown conspiracy theories anymore
+138. I actually know a guy who spouts the same shit but still votes ALP because he’s cfmeu
+139. Don’t the elderly get concession cards anyway?
+140. We do have a gender clinic at the Queensland Childrens Hospital that will happily prescribe puberty blockers to children. I, for one, don't think that is a good thing.
+141. 50c fares only serve people in SE corner and a very few large regional centres. People in my area were really angry that instead of providing support for public transport or infrastructure in their area, or something like high speed rail to Brisbane, the money was spent on Brisbane. Labor cannot win government without the regions. No matter how much you whine about it.
+142. Big lol to the idea that they have ever, or will ever, do anything to improve education!
+143. Having a local govt that is not aligned with the state govt hasn't helped.
+144. Will get budget blowouts due to funds flowing to vested interests over any needs of the community.
+145. Imagine thinking the LNP are gonna do anything regarding public education
+146. Might get a sex offend registery, Daniel's Law
+147. Fat chance
+148. Lots of mights in there.
+149. There were about 12 Green's volunteers at St Lucia. I voted late, so there were only about three of us actually voting (and one dog).
+150. My local had 1 labor, 2 greens, 4 liberal volunteers. Safe Labor seat. The greens and liberals volunteers were having a nice chat when I walked by. Labor kinda on their own.
+151. That’s the truth - I think as a nation we’re pretty centralist - get one party in for too long and it goes too far left or right.
+152. That can’t happen when we only have one house
+153. Yeah this is what I think too
+154. That’s almost every time there’s a turn around in which party leads. State and federal. People just sick of whoever is in power and vote them out, not necessarily the new mob in.
+155. What policy of Labor do you think contributed to said "loss"?
+156. No there’s not
+157. There is a word for that. Delusional
+158. My grandparents are the same, lifetime Labor voters, and in the last 10 years or so closer to retirement they have switched to LNP.
+159. What a scab
+160. Imagine being upset that we escaped the global pandemic for almost 2 years.
+161. There are good policies from the LNP, and as a GRN voter myself I have to accept the leadership and see myself as a healthy opposition to move things in the direction I see fit best. But I think OP was aiming at the "Tell me about what you've heard from their peers who voted LNP who clearly had no idea about politics"
+162. Things that never happened.
+163. Nice lil fanfic you got going on there bro
+164. https://www.tmr.qld.gov.au/projects/north-brisbane-bruce-highway-western-alternative-planning It ain't being scrapped pal. More LNP lies Remindme!in 2 years

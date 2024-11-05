@@ -1,0 +1,230 @@
+Your job is to analye a series of Reddit Comments are drawn from sbumissions related to the 2024 Queensland State Election. The comments are drawn from a collection of comments before, during and after the election itself on the 26th of October. The parties that sought election were the Australian Labor Party (ALP), the Liberal National Party (LNP), the Queensland Greens (Greens), One Nation and Katter's Australian Party. The LNP prevailed in the election, with David Crisafulli becoming the new Premier of Queensland. 
+We have identified several key issues that the major parties campaigned on during the 2024 Queensland State Election: Youth Crime (YC), Cost of Living (COL), Health (H), Energy and Infrastructure (EI), and Abortion Laws (AL). Below is a summary of each party's position on these issues:
+Youth Crime (YC):
+- LNP: Advocated for stricter penalties for young offenders, including the 'Adult Crime, Adult Time' policy, proposing that serious offenses committed by youths be met with adult sentencing. 
+- Labor: Focused on rehabilitation and prevention programs, aiming to address the root causes of youth crime through community engagement and support services.
+
+Cost of Living (COL):
+- LNP: Proposed measures such as abolishing stamp duty on new builds for first home buyers and re-establishing the productivity commission to review building industry regulations, aiming to alleviate housing costs. 
+- Labor: Introduced initiatives like 50-cent public transport fares, a $1,000 energy rebate, and free lunches for state primary school students to ease cost-of-living pressures.
+
+Health (H):
+- LNP: Committed $590 million to an 'Easier Access to Health Services Plan,' aiming to reduce ambulance ramping and hire additional healthcare workers. 
+- Labor: Focused on maintaining and expanding healthcare services, addressing hospital capacity issues, and investing in new health infrastructure.
+
+Energy and Infrastructure (EI):
+- LNP: Criticized Labor's Pioneer-Burdekin Pumped Hydro Project as financially unviable and canceled it upon taking office, opting to explore smaller-scale hydro projects instead. 
+- Labor: Proposed large-scale renewable energy projects, including the Pioneer-Burdekin Pumped Hydro Project, to transition towards 80% renewable energy by 2035.
+
+Abortion Laws (AL):
+- LNP: Stated there would be 'no changes' to abortion laws under their government, maintaining the status quo established in 2018. 
+- Labor Party: Supported the existing abortion laws and opposed any attempts to repeal or amend them. Asserts that LNP intend to restrict access to abortion services based on the views of some of their members.
+
+Analyze Reddit comments and code them based on the positions they support or oppose concerning these issues. You will output JSON, so valid values are strings or null. Use the following codes: YC, COL, H, EI, AL. If a comment's position is unclear or does not pertain to these issues, output null.
+
+Secondly identify which party the comment appears to support. Use the party code ALP, LNP, Greens, ON, KAP if this can be determined, otherwise a null value if undetermined.
+
+Output JSON as a list of objects where each object has an "id" (integer) property of the comment id, an "issue" property set to the issue code string (or null value), and a "party" property set to the party code string or null value. Null means JSON null, not a string. Values MUST be quoted, e.g. {"party": "LNP"} unless they are null, e.g. {"party": null}. Comments follow:
+
+1. Ask away if you have questions about the process and details, I'll pass them on to the relevant experts in the team and get back to you If you've voted in the city, mansfield, clayfield, or aspley booths you've probably seen our volunteers handing out scorecards 👍
+2. Jus ask the rspca how many thay kill a year more then u would think
+3. [removed]
+4. that's probably a question for the RSPCA, we can't help with that one
+5. for some reason I find the QLD conservation council slightly more credible than you
+6. How is chopping down thousands of km² of trees to dig coal out of the ground good for the environment?
+7. Because it offsets the carbon emissions of fossil fuels
+8. Human existence has an effect on the environment. You cannot entirely remove our harm to the environment without killing 100% of humans. It's a good thing that entirely removing harm to the environment isn't the goal then, it's to balance the concerns of keeping the ecosystems from collapsing and foster human well-being (including though thing that run on power). The emission intensity of renewables is far far far lower than fossil fuels (even if you firm the renewables with gas which you mentioned in another comment).
+9. how is chopping down the same amount or more for access to wind farms ?
+10. [removed]
+11. One keeps power on constantly, the other provides intermittent, expensive power
+12. [removed]
+13. or mining lithium, or any other material to produce renewables. and let's not talk about non recycling of renewables, well just hide that somewhere.
+14. One is far worse. One results in massive amounts of renewable energy energy, while the other results in huge amounts of CO₂ emissions.
+15. But which one is worse?
+16. Can you actually prove that statement. It’s widely know that renewables is far cheaper than any fossil fuel. I guessing you are conservative and have links to coal?
+17. Capitalism requires constant growth which equals to constant energy growth too. Which is why we see increased emissions.
+18. [removed]
+19. [removed]
+20. Can you prove that renewables are cheaper/ reliable? Why is Germany moving toward nuclear after their failed renewable experiment? I’m not married to coal, I would actually prefer nuclear, and I wish the CSIRO did a proper investigation into the costs, rather than the overinflated costs they presented ( has been debunked). The Federal Labor govt has a lot to answer on this.. proper discussion on nuclear is needed in Aust.. Hopefully Albo will be booted out next, after Steve and we can nuclear, as our baseload power supply. If renewables are so cheap why did Steve throw $1000 to power bills???? You Labor bots will believe anything your masters say. Do some research champ.. understand, the rest of the world is moving away from renewables… Hopefully Australia doesn’t go down this expensive route and learns from others
+21. Capitalisms basic tenet is to create more destitute consumers who are debt so that their existence add wealth to the top 1%. And you are not one of them, so why do you sell their ideology?
+22. [removed]
+23. Where in that article does it mention increases are due to renewables? The reality is that Australia's emissions would have increased *even more*, if not for renewables.
+24. Oof.......well that's certainly a take, so why are the coal power plants closing if they are so important?
+25. Your source? My source! https://www.un.org/en/climatechange/raising-ambition/renewable-energy
+26. Educate yourself instead of listening to Andrew Bolt… https://theconversation.com/renewables-are-cheaper-than-ever-yet-fossil-fuel-use-is-still-growing-heres-why-213428
+27. I'm a socialist. I was trying to highlight with my comment that capitalism will never allow us to reach our emissions targets because it constantly requires more energy for growth. Perhaps I was too subtle, but rest assured I would never sell capitalism.
+28. How you wander through life with your lack of basic logic should be studied.
+29. [removed]
+30. [removed]
+31. Another IPCC / UN piece, you really do get your info from one source.. you are really presenting as a clown
+32. Ha ha, the conversation… that’s the Andrew Bolt of the greenies.. Champ you really need to look beyond the “green energy” corporations
+33. Can I direct you to a pretty intense work by Noam Chomsky called “How the World Works”. Very interesting.
+34. [removed]
+35. >Do you always talk about things you know nothing about? No, but you clearly do. Come back when you're able to comprehend the linked article. I suspect I'll be waiting a long time. Probably forever.
+36. Not getting approval to build new ones is not the same as deciding to close an existing one. Why are the private companies deciding to close these coal power plants?
+37. So where is your source as I ask? A meme of the internet? A man called Q gave you the information on Telegram? Or did you just read the single news source you always use? Or are you a conservative online troll paid to sell an ideology.
+38. Champ you need to look past ideology and look actual science. This is not about ideology or right wing ignorance, is about survival. It’s not about if and when. Maybe you need to move to Florida and be with your own kind and where CC has been written out of the law. But they draw on billions in government support just to survive. It amazing how ignorant conservatives really are.
+39. Yes, I've added it to my reading list. I've got one for you, Less is More by Jason Hickel. It's about the point I made about endless growth. Great quick read.
+40. Renewables. Hahaha, you've just proved yourself wrong. Oh jeez!
+41. [removed]
+42. Ta
+43. [removed]
+44. The cis has nothing to do with coal power plants? Back to the question, why are coal power plants closing?
+45. And you think that's the fault of renewables, despite you saying that emissions fell when we added renewables. This is what I mean about a lack of logic.
+46. Sounds like you need your blankie and a nap
+47. [removed]
+48. >It has everything to do with coal and gas vs renewables I'm sure you'll be explain how the cis interacts with coal power plants? >paying them billions I think your referring to the new goverment giving origin 400m to keep loy yang open another couple of years on the proviso they close after that......which (a, not billions and b)is about making sure they don't come asking for more money in the future. They could not accept the money and go by their original plan which was to close this year. >Do lefties get lobotomized every election or more frequent? I'm sure your non lobotomised brain will be able to answer the original question. Edit: he blocked me, typical conservative ranter
+49. Someone link the playlist
+50. I fuckin hate this guy, and the thought of him having any sort of sex makes me vomit, but please, if he has a sexy mixtape with the missus, it’s about the most normal thing I’ve heard of. It makes him more rather than less likeable. No panic, it’s not like imma going to vote for him anyway.
+51. Whoever created this playlist went on google and typed in “good songs to have sex to” and picked the first 10 they recognised.
+52. Songs to not get an abortion too
+53. How is there any evidence this belongs to him? Someone could just as easily create a list for any pollie. Is this what we actually accept as political news now?
+54. GOD FUCKING DAMN THE LABOR HQ IS FUCKING KGBING CRISSFULLI Seriously though, fuckkkkkkkkk thats wild.
+55. I’m mostly disturbed by the fact he doesn’t even have Pony on this playlist. Whatever David, enjoy your 39 minutes.
+56. Releasing playlists ✅ Releasing costings ❌
+57. Wow I have to add shit taste in music to the already extensive list of reasons to question his judgement!
+58. This is funny af if true but surely he's not this dumb. This has to be a prank
+59. This guy is so fucking hideous even the tide wouldn’t take him out.
+60. I thought this was a betoota. I reckon Crisafooli loves the cuck chair and DJs while he watches.
+61. [https://open.spotify.com/playlist/60ofPrW2IHKUWlIlHP56q3?si=41a6e6b7310c4382](https://open.spotify.com/playlist/60ofPrW2IHKUWlIlHP56q3?si=41a6e6b7310c4382)
+62. Could it be his wifes playlist? They share accounts?
+63. It’s interesting that they didn’t mention Crisafulli revised to answer “why did you vote against abortion rights then” from Miles which was the actual end of the discussion.
+64. This will make this twit more likeable but it’s clearly fake
+65. Surprised there's no pdiddy in there
+66. He's a Chris Brown fan. What a fucking surprise.
+67. ALP getting desperate if this is what they're attacking him with lol.
+68. This makes me want to vomit
+69. Haha wtf obviously some labor person just made this under his name 😂😭
+70. [removed]
+71. https://open.spotify.com/playlist/60ofPrW2IHKUWlIlHP56q3
+72. I personally find having a sex playlist weird and didn’t realise it was so common. Maybe I’m the weird one in this situation.
+73. I agree!! He thinks he is an Italian Stallion 🤮 he has zero s3x appeal haha
+74. Giggity
+75. This is not normal. Sorry.
+76. haha right ? that aylist is actually awesome I dont know how Spotify works but I'm assuming this is some random having a laugh ?
+77. This is a desperate attempt at normalising this creepy little shit weasel - I think they know they’ve backed an unlikable potentially criminal goblin.
+78. 'An opposition Spokeswoman told NewsWire:“Playlists are the mix tape of the ‘20s, it is a personal playlist shared privately with his wife”.' From the article
+79. Pony has just been added 💀
+80. I reckon he did it as a joke at some point and forgot to delete the playlist.
+81. Why would a spokesperson comment on it if it was fake though?
+82. someone wants David to dick him down!
+83. Hey jackass. Women's right to control their own body is not a culture war. Also, news.com, a well known leftie source. Lmao.
+84. imagine being this fucking stupid. This is a fluff piece from murdoch to try and last ditch try to help this fuckwit appeal to people. He is the most unappealing thing about the LNP, theyd of been far better dumping him for a new leader. I know it would be a different mask on the same body (lnp) but fuck, couldnt find a worst front man really must of be LNP's goal.
+85. Imagine being so fucking 'tarded you think Abortion is a culture war. \-An autistic person.
+86. *Spastic* is an antiquated, and extremely offensive term for a person with a muscular disability, often cerebral palsy. It's also highly offensive (and trite) to use it as an insult. Try to come up with something more original that doesn't insult people with disabilities next time.
+87. It’s pretty normal for most couples to have a go to.
+88. Yeah personally I just whack on a single Barry white song on YouTube music. That’s good for a solid eye roll and often a trip to the bedroom.
+89. Italian wrm. He’s not even big enough for the vowels.
+90. You know who else has low sex appeal? People who shit on others for their appearance. We learnt this was wrong in school.
+91. You can make your name anything you want, lol. It doesn’t prove shit.
+92. [removed]
+93. [removed]
+94. [removed]
+95. [deleted]
+96. yeah thats what I assumed. Still pretty funny though
+97. It's okay to admit you're gay bro it's fine.
+98. I know you have some confusing feelings but we're all here for you champ
+99. hmmm so... people who come in here to discuss politics and the election or someone who clearly doesn't like this subreddit, comes here everyday to bitch and moan about how shit the subreddit and the people are in it... i think i know who the walking lobotomy patient is
+100. And here we see an example of the lack of intelligence and empathy of the typical LNP voter.
+101. Yeah, sure, but you do, don't you? Have some self-respect and take your language out of the playground sand pit. Your call of course though. It is just one of those "I know not, how I am perceived by others." Moments.
+102. If we spoke about a ‘corrupt’ left leaning politician like that we would be banned and cancelled. What gives you the right to say such things?
+103. Is indeed. I still have to wonder if the article supposed to be pro or anti crisafulli. A mystery
+104. [removed]
+105. [removed]
+106. [deleted]
+107. [deleted]
+108. So you admit you are gay, then. Loud and proud brother.
+109. So they’re right then. You’re exhibiting the lack of intelligence and empathy of a typical LNP voter. Thanks for confirming.
+110. It's 2024 mate, gay isn't an insult any more. It just reveals how disgusting you really are on the inside. Dirty little homophobes shouldn't have a vote, sort yourself out and get with the current year. Btw, I vote ALP. Seriously, get fixed. Use some self inquiry if you even know what that is.
+111. I’m as labor shill as they come this election. You are being a dick. Criticising the person, beliefs and actions all good. His appearance? Fuck off with that shit there are plenty of genuine things to criticise
+112. Wonder what your employer will think of that view?
+113. [removed]
+114. [removed]
+115. Almost like some police action needs to be taken, hate to find out they work in an industry around the vulnerable or minors without their employer and family being aware of this hate speech.
+116. [deleted]
+117. [deleted]
+118. There isn’t. That’s why I encouraged you to speak it out loud rather than hinting about sloppy toppys mate.
+119. I’m not a Labor voter. Where does Labor have any proposed policies related to the abortion of babies that differs from LNP? What policy is about convincing children to sterilise themselves? Where did you read this was their platform?
+120. Cancel culture is just as bad and you're bad for perpetuating it. Their conduct outside of work isn't necessarily indicative of their conduct during work hours. Innocent until proven guilty of wrong doing *at work during work hours* is how it needs to remain. I said a bunch of really acidic things when I was a teenager and was loose with my words, should I be harassed by police and barred from working where I want because of previous mistakes? No that's silly. The user I replied to, should be dealt with swiftly and harshly IF they are found guilty of any misconduct at work. That being said, I'd say it's pretty reasonable they're unemployed and wouldn't have a shot working with anyone truly vulnerable, I hope at least lmao.
+121. Why are you obsessed with other people's sexuality? You've really got a fixation, maybe have a think about why you're always talking about "the gays" Yeah? Be critical of wrongdoings, being gay isn't wrong and neither is being married. You should care about what you talk about, words matter and you look like a fool trying to sound edgy.
+122. Centrelink? Nah champ TPI veteran here and ex law enforcement, I will have a chat to a couple of mates still in the job today as I know you’ve already committed at least one offence. Have fun
+123. [deleted]
+124. I’m not a fan of cancel culture, but this is actually at the lower end of the criminal scale, this also isn’t in the past like you describe from teenage years, it’s a current view tho and a comment made today that may constitute an offence. As for their conduct in the workplace, most employers have policies to protect against damages, social media forms a big part of that and it’s lawful to take action if required.
+125. [deleted]
+126. It sounds like you're pretty upset about something completely unrelated to this discussion. Again, you potentially need a heap of help with your situation.
+127. Fair point. If it's in their PnP documents then yeah, cut loose and get them fired lol. They're determined to be a shitty example of a thinking voter.
+128. This will be great in the brief before the courts, try mitigating or explaining the charge after posting that you don’t care after knowingly committing a hate crime. Good luck finding employment in nursing after that, if you even remain registered.
+129. Being a nurse and further noting they attempted to trigger a veteran (one comment was auto deleted) I’d say multiple breaches of employment codes of conduct have occurred as well as with the oversight bodies code of conduct. Crossed a line in my opinion that shouldn’t be crossed on any side of politics.
+130. [deleted]
+131. They got banned lol.
+132. I know you’re not, I’ve always enjoyed going to court and seeing people held accountable. If I came across you in public in my career, based on this attitude and some of your previous comments, you would be heading for an IA especially if you take medication. Take a good look at yourself and get help.
+133. Might want to have another try at posting the last comment 😂
+134. [deleted]
+135. [deleted]
+136. Oh you are heading down this route? Trying to trigger veterans? Doesn’t work with me.
+137. Rot in hell for all I care, enjoy the time spent with QPS.
+138. [deleted]
+139. [deleted]
+140. Oh am I? It’s lovely to have $3500 in clear funds a fortnight that hits my account from military super and DVA plus free private healthcare for life. Currently on a 2 month holiday in Europe, my life is great 😂
+141. Hate crimes are not being triggered, It doesn’t affect me in any way, I just want to see you held accountable as it’s now a criminal offence that you seem hell bent on continue to commit. The rot in hell comment was aimed at you attempting to trigger veterans, noting that you can be held criminally and personally liable for comments that may cause harm to others.
+142. [deleted]
+143. Morso you accused another person of being his ‘lover’ then followed up with stating he doesn’t deserve respect in trying to justify the statement, that’s the aggravating factor required to convict 😂 Doesn’t seem much to you, but the courts hammer into this stuff when it comes forward.
+144. [deleted]
+145. I look forward to your career as a nurse ending. Why do your comments keep getting deleted?
+146. [deleted]
+147. You need an IA by the sounds. Lay off the painkillers
+148. No Grandad, it's definitely Photoshop. ... Yes I know he wanted Titanic 2. ... No Grandad, it's obviously his head Photoshopped onto Kate Winslet's body, you can see the. ... No, Kate Winslet wasn't forced to transition by the lizard people, are we even discussing politics at this point?
+149. Is this because Katter and Miles are pushing one another’s party as 2nd on the preferential voting list? I do find it odd that Labor would push Katter as a preferential option.
+150. Not funny just weird
+151. "Weird" is on-brand for the LNP.
+152. So the LNP are still peddling their “end of bulk billing” garbage…
+153. Someone should tell the LNP that the Katters are giving them their preferences.... Actually, don't.....
+154. Does a vote for KAP help Labor? I thought it would help LNP, if either.
+155. The second and fourth points are redundant to points 1&3 respectively
+156. Really annoys me the way the LNP just lie in their political campaign and it’s perfectly legal. They’re allowed to do it.
+157. One of these showed up in my back yard on my dogs bed. I didn't even know she's was politically inclined.
+158. A vote for the LNP also means potentially 4 years of an LNP government. I like how everything they print is about everyone but them because no one wants them.
+159. If the Liberal Party wins, we're saying bye-bye to abortions, public healthcare and a public government. Last time they were in, my pop almost lost his job (he works for the government in IT and Tech and they were trying to close it down to privatise everything).
+160. Why did they use a young katter is the most interesting choice
+161. LNP moving to the "eating its own" phase of panic
+162. So true.
+163. Off to the old folks home with you Grandad.
+164. Is that why Bob hates crocs? They’re part of the coming lizard people uprising?
+165. God help my grandparents if they get one of these.
+166. For all that Labor and KAP disagree on social issues, Labor would much rather KAP had the seat than the LNP if it comes down to it
+167. How many options are there in most electorates once you put ALP first and LNP last? It’s less about preferences and more about a lack of alternatives.
+168. Labor are preferencing Legalise Cannabis in 28 seats, haven't heard any preferencing for KAP https://www.abc.net.au/news/2024-10-19/queensland-election-labor-legalise-cannabis-greens-lnp/104476282
+169. They aren't near to that at all.
+170. It really upsets me. "Labor is taking away women's reproductive rights!" I've done almost no research and I know this is completely untrue.
+171. Yes, the lady that just retired where I work at QH (admin)had to write a document to justify why her job was still viable then too. The child protection admin lost her job . No rhyme or reason .
+172. Just to be clear: that's not Bob Katter. Robbie is his son, and also a politician.
+173. Because that's a picture of Bob's son Rob, who is the leader of the party at the state level.
+174. I never thought bout that. That’s interesting.
+175. \*Bob Katter
+176. What ridiculous question do you think they'd have? "Don't you think Katter would be the top?"
+177. These people aren't even liberal, they don't believe in the core liberal views: \- individual rights, \- civil liberties, \- democracy, \- and free enterprise.
+178. Til
+179. Fucking KAP voters - high level of support for maintaining or expanding access to abortion aid, will still vote for the guy who's explicitly stated he'll can it. That's advanced stupidity, that is.
+180. Well he’s turned me from an LNP Voter to voting ALP for the first time ever. Can’t disagree with anything that Miles is proposing.
+181. If those LNP voters could read, they'd be very upset
+182. It's a shame most people don't vote on policy grounds, only party lines.
+183. This is actually really interesting. I will admit I thought that Labor had maybe missed the mark with the free school breakfasts thing because I didn’t really look much into it (I don’t have kids) and all I saw were interviews on the news with people who didn’t seem to think it was a good idea. Seeing 80% of poll responses support it though…. Damn.
+184. I work with apprentices. I make sure and tell the their free training is thanks to the Queensland Government.
+185. Braindead ingrates will still believe Crissafulli is the right candidate
+186. I voted Labor for the first time, which I honestly thought is something I would never do. I think LNP voters are forgetting what happened when we voted Newman in back in 2012 and the absolute carnage that followed. I can't speak for everyone else, but I definitely don't want a repeat of that situation.
+187. Plz vote accordingly.
+188. Lots of working class and poor people vote against their own economic interests
+189. Greens and Labor are absolutely nailing it.
+190. S tier policies. This is what the Labor party should be real policies that benefit all working people. Go Queensland vote this bloke in.
+191. Cookers policies: 1. Putting people in jail for being sick. 2. Giving our public owned mining royalties back to billionaires. 3. Pulling LNP councils out of the shit. 4. Multiple variations of the previous 3.
+192. His teeth are even more popular, so shiny!
+193. He's...okay, the problem is that he's a spender I'll be happy to support labor if they grew a brain
+194. Yes, but the newspaper is telling me to vote for dodgy dave so I’m unsure what to do.
+195. Banning coal fracking comeon people get rid of that ahit
+196. The QLD government and RACQ have already admitted they have done zero modelling on the state-owned petrol stations proposal. It's a pipe dream that will simply lead to taxpayers money being wasted in endless court cases due to the anti-competitiveness of the proposal, thousands of jobs disappearing, and money being funneled to fuel suppliers and away from independent operators who make up a significant portion of the fuel retail industry. More can be done to better the industry, but running non-profit "businesses" is not one of them. What will happen if it goes ahead is the government will start up 12 servos across the state and almost all servos surrounding them will go out of business over time. This will spread and the government will need to open more and more and costs will skyrocket. Does the government have capital to fund **billions of dollars** each year to pay for the fuel required? You'll say "well it is recovered" but it's still funding *locked away* into sustaining the supply. The government in a decade will then need to sell off the 1000 stations they've been forced to open to offset the loss of the private networks and it'll be brought up by one or a handful of companies and there'll be less competition then there is today. Well done.
+197. When all you’re doing is spending money, what do you think would happen? Has anyone costed these policies at all?
+198. [removed]
+199. No. A billion dollar free lunch is not going to sway me. How about pay off some debt?
+200. A survey with a sample of 1000~ participants. There’s roughly 2.5 million registered voters in Queensland, so this has no generalisability. I get second hand embarrassment from redditors who post this type of content so confidently.
+201. Real easy to promise the world when you know you'll lose the election and don't have to actually follow through on any promises. Also OP is the most obvious Labor staffer account. A 1 month old account with nothing but "how good is Labor" political posts.
+202. [removed]

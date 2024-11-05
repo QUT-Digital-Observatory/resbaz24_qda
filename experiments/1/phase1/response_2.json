@@ -1,0 +1,660 @@
+{
+    "cost": 0.001095525,
+    "model": "gemini-1.5-flash-latest",
+    "responses": [
+        {
+            "id": "luarx3j",
+            "prompt_id": 1,
+            "issue": null,
+            "party": null
+        },
+        {
+            "id": "lubah0e",
+            "prompt_id": 2,
+            "issue": null,
+            "party": null
+        },
+        {
+            "id": "lu9a688",
+            "prompt_id": 3,
+            "issue": null,
+            "party": null
+        },
+        {
+            "id": "lu9ddtb",
+            "prompt_id": 4,
+            "issue": "COL",
+            "party": null
+        },
+        {
+            "id": "lu9p9iq",
+            "prompt_id": 5,
+            "issue": "COL",
+            "party": null
+        },
+        {
+            "id": "lu9ajd7",
+            "prompt_id": 6,
+            "issue": "COL",
+            "party": null
+        },
+        {
+            "id": "lu9mkiy",
+            "prompt_id": 7,
+            "issue": "COL",
+            "party": null
+        },
+        {
+            "id": "luaj1q0",
+            "prompt_id": 8,
+            "issue": "COL",
+            "party": null
+        },
+        {
+            "id": "lua98ke",
+            "prompt_id": 9,
+            "issue": "COL",
+            "party": null
+        },
+        {
+            "id": "lua0yrv",
+            "prompt_id": 10,
+            "issue": "COL",
+            "party": null
+        },
+        {
+            "id": "lua3cyl",
+            "prompt_id": 11,
+            "issue": "COL",
+            "party": null
+        },
+        {
+            "id": "luasn1h",
+            "prompt_id": 12,
+            "issue": "COL",
+            "party": null
+        },
+        {
+            "id": "luajwir",
+            "prompt_id": 13,
+            "issue": "COL",
+            "party": null
+        },
+        {
+            "id": "lu9v6ef",
+            "prompt_id": 14,
+            "issue": "COL",
+            "party": null
+        },
+        {
+            "id": "lucrv7a",
+            "prompt_id": 15,
+            "issue": "COL",
+            "party": null
+        },
+        {
+            "id": "lud8r6v",
+            "prompt_id": 16,
+            "issue": "COL",
+            "party": null
+        },
+        {
+            "id": "luaghl5",
+            "prompt_id": 17,
+            "issue": "COL",
+            "party": null
+        },
+        {
+            "id": "luan4zg",
+            "prompt_id": 18,
+            "issue": "COL",
+            "party": null
+        },
+        {
+            "id": "lubkjrp",
+            "prompt_id": 19,
+            "issue": "COL",
+            "party": null
+        },
+        {
+            "id": "lu9v23x",
+            "prompt_id": 20,
+            "issue": "COL",
+            "party": null
+        },
+        {
+            "id": "lu9wr1s",
+            "prompt_id": 21,
+            "issue": "COL",
+            "party": null
+        },
+        {
+            "id": "luaccwa",
+            "prompt_id": 22,
+            "issue": "COL",
+            "party": null
+        },
+        {
+            "id": "luayc98",
+            "prompt_id": 23,
+            "issue": "COL",
+            "party": null
+        },
+        {
+            "id": "lub7otk",
+            "prompt_id": 24,
+            "issue": "COL",
+            "party": null
+        },
+        {
+            "id": "lubbjtw",
+            "prompt_id": 25,
+            "issue": "COL",
+            "party": null
+        },
+        {
+            "id": "lub5h3l",
+            "prompt_id": 26,
+            "issue": "COL",
+            "party": null
+        },
+        {
+            "id": "lu9bzl2",
+            "prompt_id": 27,
+            "issue": "COL",
+            "party": null
+        },
+        {
+            "id": "lu9b2zb",
+            "prompt_id": 28,
+            "issue": "COL",
+            "party": null
+        },
+        {
+            "id": "lu9c1ol",
+            "prompt_id": 29,
+            "issue": "COL",
+            "party": null
+        },
+        {
+            "id": "lu9oiw8",
+            "prompt_id": 30,
+            "issue": "COL",
+            "party": null
+        },
+        {
+            "id": "lua96xt",
+            "prompt_id": 31,
+            "issue": "COL",
+            "party": null
+        },
+        {
+            "id": "lu9ihgl",
+            "prompt_id": 32,
+            "issue": "COL",
+            "party": null
+        },
+        {
+            "id": "luabktf",
+            "prompt_id": 33,
+            "issue": "COL",
+            "party": null
+        },
+        {
+            "id": "luap6y1",
+            "prompt_id": 34,
+            "issue": "COL",
+            "party": null
+        },
+        {
+            "id": "lu9gbic",
+            "prompt_id": 35,
+            "issue": "COL",
+            "party": null
+        },
+        {
+            "id": "luf1ly9",
+            "prompt_id": 36,
+            "issue": "COL",
+            "party": null
+        },
+        {
+            "id": "luaa160",
+            "prompt_id": 37,
+            "issue": "COL",
+            "party": "ALP"
+        },
+        {
+            "id": "lual8u4",
+            "prompt_id": 38,
+            "issue": "COL",
+            "party": "LNP"
+        },
+        {
+            "id": "luaau9a",
+            "prompt_id": 39,
+            "issue": "COL",
+            "party": null
+        },
+        {
+            "id": "lub2mjn",
+            "prompt_id": 40,
+            "issue": "COL",
+            "party": null
+        },
+        {
+            "id": "lubgtsu",
+            "prompt_id": 41,
+            "issue": "COL",
+            "party": null
+        },
+        {
+            "id": "luewxqt",
+            "prompt_id": 42,
+            "issue": null,
+            "party": null
+        },
+        {
+            "id": "luf5jpq",
+            "prompt_id": 43,
+            "issue": "COL",
+            "party": null
+        },
+        {
+            "id": "lub8ex2",
+            "prompt_id": 44,
+            "issue": "COL",
+            "party": null
+        },
+        {
+            "id": "lu9pqpu",
+            "prompt_id": 45,
+            "issue": "COL",
+            "party": null
+        },
+        {
+            "id": "luaaza0",
+            "prompt_id": 46,
+            "issue": "COL",
+            "party": null
+        },
+        {
+            "id": "lua9mcb",
+            "prompt_id": 47,
+            "issue": "COL",
+            "party": null
+        },
+        {
+            "id": "luao7yo",
+            "prompt_id": 48,
+            "issue": "COL",
+            "party": null
+        },
+        {
+            "id": "luetky3",
+            "prompt_id": 49,
+            "issue": "COL",
+            "party": null
+        },
+        {
+            "id": "lueo7tj",
+            "prompt_id": 50,
+            "issue": "COL",
+            "party": null
+        },
+        {
+            "id": "lua7m29",
+            "prompt_id": 51,
+            "issue": "COL",
+            "party": "LNP"
+        },
+        {
+            "id": "lubml2p",
+            "prompt_id": 52,
+            "issue": "COL",
+            "party": null
+        },
+        {
+            "id": "lueqxco",
+            "prompt_id": 53,
+            "issue": "COL",
+            "party": null
+        },
+        {
+            "id": "lue6v9q",
+            "prompt_id": 54,
+            "issue": "COL",
+            "party": null
+        },
+        {
+            "id": "lu9by51",
+            "prompt_id": 55,
+            "issue": "COL",
+            "party": null
+        },
+        {
+            "id": "lubvxyr",
+            "prompt_id": 56,
+            "issue": null,
+            "party": null
+        },
+        {
+            "id": "luazd84",
+            "prompt_id": 57,
+            "issue": "COL",
+            "party": null
+        },
+        {
+            "id": "lub0drk",
+            "prompt_id": 58,
+            "issue": "COL",
+            "party": null
+        },
+        {
+            "id": "lua72h9",
+            "prompt_id": 59,
+            "issue": "COL",
+            "party": null
+        },
+        {
+            "id": "lu9culm",
+            "prompt_id": 60,
+            "issue": "COL",
+            "party": null
+        },
+        {
+            "id": "lub47ym",
+            "prompt_id": 61,
+            "issue": "COL",
+            "party": null
+        },
+        {
+            "id": "lubnkyl",
+            "prompt_id": 62,
+            "issue": "COL",
+            "party": null
+        },
+        {
+            "id": "lub0k74",
+            "prompt_id": 63,
+            "issue": "COL",
+            "party": null
+        },
+        {
+            "id": "lubevew",
+            "prompt_id": 64,
+            "issue": "COL",
+            "party": null
+        },
+        {
+            "id": "lubmfh1",
+            "prompt_id": 65,
+            "issue": "COL",
+            "party": null
+        },
+        {
+            "id": "lua0yy6",
+            "prompt_id": 66,
+            "issue": "COL",
+            "party": null
+        },
+        {
+            "id": "lu9wx0f",
+            "prompt_id": 67,
+            "issue": "COL",
+            "party": null
+        },
+        {
+            "id": "lu9ydms",
+            "prompt_id": 68,
+            "issue": "COL",
+            "party": null
+        },
+        {
+            "id": "luaa81i",
+            "prompt_id": 69,
+            "issue": "COL",
+            "party": null
+        },
+        {
+            "id": "lubgib9",
+            "prompt_id": 70,
+            "issue": "COL",
+            "party": null
+        },
+        {
+            "id": "lufdx6l",
+            "prompt_id": 71,
+            "issue": null,
+            "party": null
+        },
+        {
+            "id": "lu9ooy3",
+            "prompt_id": 72,
+            "issue": "COL",
+            "party": null
+        },
+        {
+            "id": "lu9psro",
+            "prompt_id": 73,
+            "issue": "COL",
+            "party": null
+        },
+        {
+            "id": "lu9ij6m",
+            "prompt_id": 74,
+            "issue": "COL",
+            "party": null
+        },
+        {
+            "id": "lua0c9r",
+            "prompt_id": 75,
+            "issue": "COL",
+            "party": null
+        },
+        {
+            "id": "lu9vnbo",
+            "prompt_id": 76,
+            "issue": "COL",
+            "party": null
+        },
+        {
+            "id": "lubf2oz",
+            "prompt_id": 77,
+            "issue": "COL",
+            "party": null
+        },
+        {
+            "id": "luav5xe",
+            "prompt_id": 78,
+            "issue": "COL",
+            "party": null
+        },
+        {
+            "id": "lue6h8w",
+            "prompt_id": 79,
+            "issue": "COL",
+            "party": null
+        },
+        {
+            "id": "lu9xihn",
+            "prompt_id": 80,
+            "issue": "COL",
+            "party": null
+        },
+        {
+            "id": "lu9pehp",
+            "prompt_id": 81,
+            "issue": "COL",
+            "party": null
+        },
+        {
+            "id": "lu9jq5g",
+            "prompt_id": 82,
+            "issue": "COL",
+            "party": null
+        },
+        {
+            "id": "lu9iolv",
+            "prompt_id": 83,
+            "issue": "COL",
+            "party": null
+        },
+        {
+            "id": "luaaamf",
+            "prompt_id": 84,
+            "issue": "COL",
+            "party": null
+        },
+        {
+            "id": "luf9c1e",
+            "prompt_id": 85,
+            "issue": "COL",
+            "party": null
+        },
+        {
+            "id": "luaza2h",
+            "prompt_id": 86,
+            "issue": "COL",
+            "party": "LNP"
+        },
+        {
+            "id": "luaircp",
+            "prompt_id": 87,
+            "issue": "COL",
+            "party": null
+        },
+        {
+            "id": "luakaif",
+            "prompt_id": 88,
+            "issue": "COL",
+            "party": null
+        },
+        {
+            "id": "luasykp",
+            "prompt_id": 89,
+            "issue": "COL",
+            "party": null
+        },
+        {
+            "id": "luaekh7",
+            "prompt_id": 90,
+            "issue": "COL",
+            "party": null
+        },
+        {
+            "id": "lubn3hm",
+            "prompt_id": 91,
+            "issue": "COL",
+            "party": null
+        },
+        {
+            "id": "lu9c5cr",
+            "prompt_id": 92,
+            "issue": "COL",
+            "party": null
+        },
+        {
+            "id": "lua2glu",
+            "prompt_id": 93,
+            "issue": "COL",
+            "party": null
+        },
+        {
+            "id": "lufc2xj",
+            "prompt_id": 94,
+            "issue": "COL",
+            "party": null
+        },
+        {
+            "id": "lublklt",
+            "prompt_id": 95,
+            "issue": "COL",
+            "party": null
+        },
+        {
+            "id": "lub6pf4",
+            "prompt_id": 96,
+            "issue": "COL",
+            "party": null
+        },
+        {
+            "id": "lua93qm",
+            "prompt_id": 97,
+            "issue": "COL",
+            "party": null
+        },
+        {
+            "id": "lua9ott",
+            "prompt_id": 98,
+            "issue": "COL",
+            "party": null
+        },
+        {
+            "id": "lu9t9t2",
+            "prompt_id": 99,
+            "issue": "COL",
+            "party": null
+        },
+        {
+            "id": "lua9e6a",
+            "prompt_id": 100,
+            "issue": "COL",
+            "party": null
+        },
+        {
+            "id": "luc12iu",
+            "prompt_id": 101,
+            "issue": "COL",
+            "party": null
+        },
+        {
+            "id": "lub4ex2",
+            "prompt_id": 102,
+            "issue": "COL",
+            "party": null
+        },
+        {
+            "id": "lubmr8e",
+            "prompt_id": 103,
+            "issue": "COL",
+            "party": null
+        },
+        {
+            "id": "luaf0sr",
+            "prompt_id": 104,
+            "issue": "COL",
+            "party": null
+        },
+        {
+            "id": "luaa3wl",
+            "prompt_id": 105,
+            "issue": "COL",
+            "party": null
+        },
+        {
+            "id": "luffz8c",
+            "prompt_id": 106,
+            "issue": "COL",
+            "party": null
+        },
+        {
+            "id": "lu9s4bh",
+            "prompt_id": 107,
+            "issue": "COL",
+            "party": null
+        },
+        {
+            "id": "lubai8z",
+            "prompt_id": 108,
+            "issue": "COL",
+            "party": null
+        },
+        {
+            "id": "lua63ui",
+            "prompt_id": 109,
+            "issue": "COL",
+            "party": null
+        }
+    ]
+}

@@ -1,0 +1,147 @@
+Your job is to analye a series of Reddit Comments are drawn from sbumissions related to the 2024 Queensland State Election. The comments are drawn from a collection of comments before, during and after the election itself on the 26th of October. The parties that sought election were the Australian Labor Party (ALP), the Liberal National Party (LNP), the Queensland Greens (Greens), One Nation and Katter's Australian Party. The LNP prevailed in the election, with David Crisafulli becoming the new Premier of Queensland. 
+We have identified several key issues that the major parties campaigned on during the 2024 Queensland State Election: Youth Crime (YC), Cost of Living (COL), Health (H), Energy and Infrastructure (EI), and Abortion Laws (AL). Below is a summary of each party's position on these issues:
+Youth Crime (YC):
+- LNP: Advocated for stricter penalties for young offenders, including the 'Adult Crime, Adult Time' policy, proposing that serious offenses committed by youths be met with adult sentencing. 
+- Labor: Focused on rehabilitation and prevention programs, aiming to address the root causes of youth crime through community engagement and support services.
+
+Cost of Living (COL):
+- LNP: Proposed measures such as abolishing stamp duty on new builds for first home buyers and re-establishing the productivity commission to review building industry regulations, aiming to alleviate housing costs. 
+- Labor: Introduced initiatives like 50-cent public transport fares, a $1,000 energy rebate, and free lunches for state primary school students to ease cost-of-living pressures.
+
+Health (H):
+- LNP: Committed $590 million to an 'Easier Access to Health Services Plan,' aiming to reduce ambulance ramping and hire additional healthcare workers. 
+- Labor: Focused on maintaining and expanding healthcare services, addressing hospital capacity issues, and investing in new health infrastructure.
+
+Energy and Infrastructure (EI):
+- LNP: Criticized Labor's Pioneer-Burdekin Pumped Hydro Project as financially unviable and canceled it upon taking office, opting to explore smaller-scale hydro projects instead. 
+- Labor: Proposed large-scale renewable energy projects, including the Pioneer-Burdekin Pumped Hydro Project, to transition towards 80% renewable energy by 2035.
+
+Abortion Laws (AL):
+- LNP: Stated there would be 'no changes' to abortion laws under their government, maintaining the status quo established in 2018. 
+- Labor Party: Supported the existing abortion laws and opposed any attempts to repeal or amend them. Asserts that LNP intend to restrict access to abortion services based on the views of some of their members.
+
+Analyze Reddit comments and code them based on the positions they support or oppose concerning these issues. You will output JSON, so valid values are strings or null. Use the following codes: YC, COL, H, EI, AL. If a comment's position is unclear or does not pertain to these issues, output null.
+
+Secondly identify which party the comment appears to support. Use the party code ALP, LNP, Greens, ON, KAP if this can be determined, otherwise a null value if undetermined.
+
+Output JSON as a list of objects where each object has an "id" (integer) property of the comment id, an "issue" property set to the issue code string (or null value), and a "party" property set to the party code string or null value. Null means JSON null, not a string. Values MUST be quoted, e.g. {"party": "LNP"} unless they are null, e.g. {"party": null}. Comments follow:
+
+1. Are you blind or just an idiot. I work in one field that actually works across multiple departments and engages with several industries daily. I see the effects across those unilaterally both first hand and from those I work with in other professions. I also know the effects of the fields I studied in because lots of friends from uni are in that space, it's still apparent to them, even the ones who work for council's can see how the council's as well as the state government are impacted to this day. As do the ones working for private consulting companies, some now don't do any private consulting in Qld because they are more than at capacity just backfilling Govt contracts. What's your experience to say everything is just fine other than you don't notice it or the LNP told you it's fine? 🤷😂
+2. Assuming I've understood you correctly, yes, the perception is incorrect and a bullshit myth perpetuated by Conservatives still stuck on obsolete neoliberalism ideologies. They're just convinced that anything public sector is inefficient and just assume that market competition is somehow the only way one can be driven to innovate and they tell this lie to everybody else as well. People can't seem to fathom that people can be motivated to improve and innovate simply because it's a personal interest for themselves to want to provide a better experience for the public or that sometimes people can motivated to improve and innovate because they want to make their daily job easier.
+3. You literally can’t give a factual example of where it’s bad. Your experience is probably more just that you aren’t very good at your job. Which is ok. You can still have a decent career in government. I’ve only worked private sector for 35 years. I own 2 businesses. Everyone I know from government employment says the same thing. It’s ridiculous compared to proper business. Say what you want bro. I don’t care. The government has heaps of dead wood. I suspect you are part of that by the way you speak. Hope DC doesn’t give you the chop. Take care.
+4. Where's your factual example then mate to prove otherwise? Not good at my job? Yeah okay, that's why I'm employed to manage the IT for over 40 government business units in the south east weekly? Okay so never had anything to do with government, gotcha mate, NFI essentially. So hearsay without any on the ground experience to back it up 😂 Correct, however the dead wood is in the upper echelon of the show, and every time that is cleared out by one government is filled with the same dead wood from the other side. That never changes. The coal face isn't dead wood, and any attempt to cut that would only erode services or overwork others in the same job. DC sent a memo to all public servants this afternoon saying everyone is valued and no one will be cut, despite setting up a task force costing millions that's supposedly independent but filled with his corporate mates, to audit the public service to stop wasting money on people apparently 🙄 You have absolutely zero idea of how government departments run, the good or the bad of it and absolutely no clue about how Newman's cuts affected countless departments and had far further reaching repercussions on other associated industries. Until such time as you've worked in the public service or worked with the public service, sit down and stfu about how you think it runs just because Dave and his liberal/courier mail cronies told you it's that way 🤦🤡
+5. Deal with council and government every day with my businesses. It’s a fkn basket case almost daily. The private sector doesn’t work like that. I’ve got plenty of an idea lad. Go tap your keyboard. Cheers
+6. Bullshit private sector doesn't work like that. Who do you think is responsible for all the cost blow outs on projects, the private sector contractors taking their piece of the pie at every corner just because they can. Had one builder/sparky/contractor/supplier collectively rip off 19k for a restocking fee on 8 products they failed to see had been removed from a project scope 2 years ago for a different brand. The products never left the distributors warehouse and would have been used on the next 10 projects but they all saw it as a way to sneak in extra money for their Xmas party. Many private consultants charging exorbitant fees for shit on the daily. Again why, because in a lot of area's they all used to work for the government until sacked, now the private firm can dictate the price to the government because they're all now in the private sector and gov can't compete with the salaries on offer. Catch 22, Govt never wins that battle since Newman. You honestly have such a blinkered view on the whole thing and can't understand he totally fingered not only entire departments but in some cases set industries back decades in terms of actually opening growth and prosperity. Instead he's helped out developers and private firms where most of the government money goes to the directors and not the employees. All the little guys get worked to death be it private or public employee and you get shit results on either end... But go on do tell me how teachers, nurses, and all the other front line staff they cut last time are dead wood mate... For the upteenth time, the dead wood never gets cut because it's all at the top, all they do is shuffle the Labor mates out for liberal mates, sack the front line and use their salary to bump up their mates they just gave cushy jobs who will do SFA just like the last bloke. 🤦
+7. I didn’t say nurses, paramedics etc. I said dead wood. I’ve seen it with my own eyes in many government departments when we do projects, it’s pathetic. Be upset mate. I don’t care. Makes no difference to me. I work for a living, I’m not on the public purse like you.
+8. No but that's who Newman sacked you absolute numpty. It's the same people DC has threatened to sack as well while he looks after the dead wood at the top because they vote for him. Ah okay so you're one of the flogs in private sector who rips the government off then? You did read I don't work for the government right? I work daily to try and save my business units money from greedy pricks trying to fleece the government any chance they can get. Don't act like you're not apart of the same grubby game here. Just another loud mouth who wants to trumpet the private sector is kind like the LNP purely because it lines your pockets. You're still dead wood on the public purse if you're working for a government project mate. Difference is you can't see you're actually the problem, not the front line workers losing their jobs when the LNP sacks them to 'save money' 🤦🙄
+9. Cool. 😎
+10. Point proven champ 👍
+11. Yep. You win. 🥇 👌🏼
+12. No. And that's not at all surprising. For probity I am a ALP member, okay? As it stands at the time of writing yes the Opposition Leader would get Treasury briefings as the alternative Premier, but, the LNP will not have full access to Treasury as it stands at this moment. So the policies can't be fully costed by Treasury, but, they will have a ball park idea.
+13. If you don’t know. Vote no.
+14. Great question, it should be on the lnp website? Weird if not.
+15. Turn on an old CRT television, then tune it to the dancing static grey of the cosmic background radiation and it will be closer to the truth than anything they will publish. They have no plan, they have no clue, it’s just free shit for the kids and hope they vote yes. Our local gobshite candidate actually published stamp duty relief as a housing affordability measure. In fucking Greenslopes. Nothing with two rooms is even eligible for the relief scheme as they are all over the threshold. Deceitful, last minute, half-baked clowns the lot. If I could vote to yeet them in the sea, I would.
+16. Put the Lying Nasty Party last/largest number. That's where they put you.
+17. They are going for the glory hole technique. Interesting
+18. All you have to do is read the policy sheet they put out and realize that the things they want to do are loosely/ unrelated to their reasonings. Or they use fringe cases to justify their policy decision. What that tells me is they have true intentions behind the policies that they are not willing to share, and they sent that to a team of marketing people who came up with post hoc reasons to convince the public to vote for them.
+19. They waited two days till election to show. If you vote LNP you’re dumb.
+20. Pre-election costings by all parties aren't representative of anything. Vote on policies.
+21. I was also trying to find the costings, none of the news articles quote their source, it feels very opaque
+22. Yeah definitely leaning Labor/Greens but trying to be as fair as possible and read what each have published, if nothing has been published by LNP, I can't do much I guess.
+23. I can upgrade this. If you don't know, (try to find out,) otherwise Vote No!
+24. Yup completely agree, we've been trying to buy our first home for a year now and have been completely priced out. Funny listening to Chrisafullashitty though he's never mentioned that they were only raising the exemption cap which Labor's already done. I believe the fundamental issue is that there is not enough supply and too much demand for multiple reasons and not just immigration etc that people love to rattle on about. I think removing/increasing caps, letting people use their super as a deposit etc only helps to inflate the market.
+25. Most likely my plan at this point
+26. Yeah because Family First, One Nation and Australia First are all much better choices than the LNP. Not to mention the crackpot Independents popping up everywhere…
+27. >AUSTRALIA INSTITUTE: A quick look at these costings shows you the LNP are just not taking economics or the Budget seriously. [https://x.com/TheAusInstitute/status/1849683351168504129](https://x.com/TheAusInstitute/status/1849683351168504129) Apt video summary of both the ALP and LNP costings.
+28. This is it. Projected budgets are pointless; everything changes, nothing ends up costing what you expect, and it's impossible to actually implement everything you want.
+29. As per your Labor/Greens comment... Maybe a suggestion: Greens 1, Labor 2, nutter parties, then the Lying Nasty Party largest number/last. Reasoning: This way if the Greens don't get in, Labor will. Thanks for thinking about your vote and wanting to make it worthy for everyone. :)
+30. Don’t buy that Courier Fail bullshit line. CGT discount is 100% responsible for the state of the housing market.
+31. No you haven’t. You’ve been priced out of the most popular places to live. Guarantee you can still get houses outside the SE corner.
+32. This is 💯 the problem with numbering all the boxes, really gives me the sh!ts
+33. Look, greens mean well but I'd rather Kony 2012 to actually be running the state
+34. Oh yeah I definitely blame that as well as negative gearing and much more.
+35. We've looked out as far as Ripley & Booval out Ipswich ways, Burpengary/Morayfield going north, haven't had a good look south yet but things seem to have also got very expensive in Logan etc. We've also considered units/townhouses in the past which we've decided not to touch now due to body corporate etc.
+36. Make an extra box on your ballet form and vote for him then...
+37. Plus, in inner city seats it’s now a contest between Greens and Labor. Unfortunately by greens winning these seats a Labor majority just becomes even harder. Don’t get me wrong, I’m as progressive as they come but I’d rather see Labor have another term than have a Green MP and an LNP government.
+38. While I do believe some policies that the greens have would be difficult to execute for quite a few reasons I think they have some great ideas/policies and are willing to shake things up which I think we need, I personally think that an ideal party would be a somewhere between the greens and labor.
+39. You're both fucking idiots. Material and labour costs are the only real reason for lack of development (as it's not profitable), construction companies going bust, and construction having a flat trajectory (unlike CPI). Blame Putin and COVID knock on effects. Do you honestly think developers wouldn't be shitting out housing like they had dysentery, if it was profitable? Nobody loves money more than developers except real estate agents
+40. All of those places are in the SE corner. Townsville has nice places fairly reasonable. Regional cities like Mackay and Rockhampton also have cheaper housing than the south east.
+41. You know, I think I will. If you think greens should be anywhere near actual fiscal policies, you need to get out of West end and STOP touching grass
+42. That seems kinda of absurd to me, I haven't heard anything about the Greens refusing to form a coalition government unless I'm OOTL. The fact that Labor would prefer an LNP government to a minority government with the Greens speaks more about them than it does the Greens.
+43. How would electing a Greens MP make an LNP government happen? The most it could possibly do is reduce Labor from a clear majority to a Labor-Greens minority government (but that's very unlikely). If neither Labor nor the LNP have a majority after the election, the sitting Premier gets to have the first go at forming the next government. There is no situation where electing a Greens MP makes an LNP government happen unless Labor walk away from the prospect of relying on Greens support for confidence and supply.
+44. Yes, I'm usually an avid greens voter, but had to give my 1 to Labor this time.
+45. Maybe we could have a GLP coalition
+46. This is why the greens need to rethink their strategy of siphoning Labor votes for themselves
+47. Interesting, keep hearing the phrase "not enough unlocked land"
+48. I also agree with this and think that cause is an Australia wide issue, I just don't believe there's one single cause for what's happening currently as its being impacted by a lot of different factors. The Brisbane LGA having limited land left also doesn't help the situation.
+49. I haven't been anywhere near West End for years and I do yoga without footwear on the grass every morning...
+50. Greens policy is to divest from coal while using coal money to fund their absurd policies.
+51. I also posted this to the comment above you, but: How would electing a Greens MP make an LNP government happen? The most it could possibly do is reduce Labor from a clear majority to a Labor-Greens minority government (but that's very unlikely). If neither Labor nor the LNP have a majority after the election, the sitting Premier gets to have the first go at forming the next government. There is no situation where electing a Greens MP makes an LNP government happen unless Labor walk away from the prospect of relying on Greens support for confidence and supply.
+52. By that do you mean that the Greens shouldn't campaign in Labor seats, despite their policies being popular there? Or should the Greens choose less popular policies instead so that Labor looks better by contrast?
+53. Yes I said STOP touching grass. Might want to diversify your nightstand books beyond The Female Eunech
+54. I think the greens’ campaign slogans and messaging should perhaps be less aggressively targeted against labor. Otherwise I feel the chances of an LNP government are increased
+55. In my view that's much less of a concern due to mandatory voting and preference flows. We have a pretty low risk of people checking out and not voting due to disappointment, and it's a rare Greens voter who would preference the LNP over Labor.
+56. >THE AUSTRALIAN: ‘No target’ leader has taken the voters for mugs. >The manner in which Crisafulli conducted himself gives rise to valid concern about how he would govern. The detail-light small target approach might have been tactically adept, but it was an insult to the electorate and a new low in political sophistry. Newspoll: * 2PP = LNP 52.5 ALP 47.5 * PV = LNP 42 ALP 33 GRN 11 ON 8 OTH 6 * Miles' Performance = Approval 45 Disapproval 48 Undecided 7 * Crisafulli's Performance = Approval 43 Disapproval 46 Undecided 11 * Preferred Premier = Miles 45 Crisafulli 42 Undecided 13 [https://i.gyazo.com/54e05e4b53e990654d3fc8d2dd9fe0ca.png](https://i.gyazo.com/54e05e4b53e990654d3fc8d2dd9fe0ca.png) The LNP had a massive lead in every metric over the past ten months, and started the election campaign at, * 2PP = 58% * PV = 48% * Predicted Seats = 65+ Miles has worked relentlessly during this campaign and somehow has surged in popularity to lead in Preferred Premier.
+57. Even if Labor lose this comeback is legendary
+58. I am still fully expecting a LNP government (keeping my expectations down so i don't get disappointed on Saturday night), but i am pretty certain they would be just a one term government again, and would end up getting massacred in 2028 because the LNP can't stop themselves from being the LNP and doing very stupid political moves
+59. But that croc predicted labor for the win.
+60. Latest internal polling says the LNP shouldn't get too excited. If there's any time to make sure your friends, family and loved ones are making an informed decision this Saturday, it's now. We can still prevent an LNP government.
+61. Have we forgotten the disastrous performance of the lnp when they where on the helm last time? Why would anyone vote for them
+62. If LNP win there goes our public health system
+63. Please for the love of god can the ALP win I just want more rail infrastructure development before i fuck off out west once I graduate uni is that so much to ask
+64. Why any worker would vote LNP, the party who's only interest is to kowtow to the ultra wealthy, is beyond me. Stop wanting to be owned. Get over your Daddy issues. Develop self-respect. Know your self-worth, and don't simply bend over for the 1% because Murdoch told you to.
+65. Who the fuck would vote for these LNP wackos? I mean they seem to be as right wing as the US Republican GOP! Chrisafulli is a dangerous little tool, for the Chritian right. I bet it's those nutjob Pentecostals.
+66. What’s the margin of error on the poll?
+67. Never once have I been polled. Where do they get these stats?
+68. ring up all ya family ages 18+ and drive them into polls If its going to be narrow then itll mean alot
+69. Don't vote LNP you fucking duds.
+70. Can we make it better? Narrow win for Miles please 😊.
+71. I refuse to give up until the end
+72. The ALP have run a better campaign then expected but I still feel it aint enough to scrape back in.
+73. I'll wait for results before I believe Murdoch media
+74. It has become clear to me the majority of this subreddit does not understand how polling or statistics works. "1000 people are a small sample size" " Polls are wrong because they only talk to people who pick up the phone" " This poll is wrong because it's from NewsCorp" I would encourage everyone to research how polling works, [Pew research](https://www.pewresearch.org/course/public-opinion-polling-basics/#is-accurate-polling-becoming-harder-to-do) has a great resource I understand the subreddit is quite progressive and inhaling copium, but liberals seem likely to win a majority. Steven has done a great job of closing the gap though.
+75. opinion polling I feel like has run its course and doesn't have the near certainty it used to have.
+76. So chances are, ALP wins then lol. If they have gone from : "They are going to win" Media speak - It's a close race And now they are at "Its a narrow win" - they are going to lose. Hope that it is the case.
+77. plz no i dont want them to win at all we finally got the most competent leader we had in over a decade and we gotta ditch him for a lying control freak wtf
+78. What’s Antony Green saying?
+79. I think the ideal scenario for me would actually be if it was a draw and hung parliament, with the balance of power and oversight lying with the crossbench. It just depends on which minor parties would likely be there.
+80. This is also Murdoch media who HEAVILY wants LNP in power. Cast your vote for Labor and change the narrative
+81. Hope they need one nation to get over the line ,
+82. Nah its probably a LNP landslide, they always pretend that its closer so people vote for a massive LNP majority because they are scared of the"chaos" of a minority government. They said NT would be close and look what happened.
+83. One Nation
+84. u/-wiitheridge- you holding up ok, buddy?
+85. Does anyone how accurate these polls are? Have they ever been wrong?
+86. Yeah sure
+87. More and more I’m convinced that political polls mean absolutely nothing and could be entirely on the money, close to the money, or so far away from reality that it begs belief. I guess we’ll find out tomorrow how steeped in reality every one is.
+88. Latest poll also said 9 out of 10 polls are made up!
+89. News poll doesn’t much skin in the game. The betting agencies do. The result is still almost a certain LNP win.
+90. [deleted]
+91. Whoever wins is going to have some massive problems on their hands. The Olympics is a complete disaster, and the homeless situation has been a monumental stuff up that will take years to rectify. And if Labor wins, they're going to have to fulfil their big spending election promises, including providing school lunches to every primary school aged state school student in Queensland by February 2025. Zero chance of that happening.
+92. Wait, why the fuck is LNP PV so high? Who the hell did they do deals with?
+93. Honestly if Miles loses and the Qld ALP left faction still has enough seats to put Fentiman (who would still be a good opposition leader), I hope he gets parachuted into federal politics next year
+94. [removed]
+95. I should be a dyed in the wool LNP voter. I am supposedly their core demographic. I grew up voting for the Liberals. But I am genuinely scared of the economic damage the LNP plans will reap on QLD. Scrapping Pioneer-Burdekin would be a huge loss to the energy security of the state. Borumba is going to be 2030 assuming no delays and Pioneer would be mid 2030s to 2040 on current schedule. By that stage, Gladstone, Callide B, Tarong, and Tarong North power stations will have all hit their EOL. Borumba will add 2GW of power generation to the grid, but those coal plants that are EOL account for 4.2GW so we will need to find a minimum of 2.2GW. Pioneer is meant to be 5GW.
+96. I’m so scared about a conservative right wing government. First thing they’ll do is slash jobs and remove reproductive rights. They’ve already indicated how they’ll govern
+97. Most Murdoch polls are crocks. … Oh, you meant the cold-blooded reptile.
+98. What internal polling?
+99. Honest question, why do we need to prevent an LNP government????
+100. > Why would anyone vote for them Short memories, maliciousness, stupidity, selfishness.
+101. You probably won’t get to use those trains unless you’re studying for another 1-5 decades
+102. Incorrect, federal Labor is definitely a government for the rich. Most working class vote Liberals.
+103. Unfortunately I'd wager that there's a ton of voters out there that will vote LNP for no reason other than "it's time for a change". Right wing propaganda works dangerously well on people that don't follow what's going on closely
+104. And people who believe they'll solve youth crime and couldn't give a shit about any other policy or issue
+105. 3.1% according to Pyxis Polling & Insights
+106. Huge because millions still havnt voted, taken a poll or even watched the news. These numbers are highly inaccurate
+107. Voting is mandatory, we’re not in the US where you have to encourage people to show up to vote.
+108. And it's sad cos comparatively it's LNPs 'what campaign' Again 🤦 and it got them in last time 🤦
+109. He’s not a pundit and doesn’t really comment much on polls
+110. You'd be putting sonething like KAP or One Nation in a dangerous position of power, that they absolutely do not deserve.
+111. To be honest not really. I am suffering a ton of physical pain today and am in a bad way. It doesn't matter who gets in today because the damage that the federal LNP did to me can not be undone.
+112. [remember this?](https://www.smh.com.au/business/election-2016-bookmakers-pay-dearly-for-unexpected-donald-trump-win-20161110-gsm0we.html)
+113. Betting agencies just respond to the betting market and nothing more.
+114. Newspoll is the most accurate polling company in Australia. Reddit is going to be in for a shock
+115. PV is preference vote or first preference vote, so it’s more the opposite: LNP voters vote for the LNP, and very few preference towards them (usually).
+116. Satan.
+117. Miles will stay ALP leader, Crisafulli, at best, will be a one term premier. I’d also question whether Crisafulli will remain as LNP leader once KAPs private members bill comes up.
+118. Sir, present your n pass right neow
+119. Comments that are clearly meant as hate speech will be removed immediately and users banned. https://www.redditinc.com/policies/content-policy

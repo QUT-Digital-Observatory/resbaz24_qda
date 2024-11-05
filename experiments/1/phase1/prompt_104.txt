@@ -1,0 +1,209 @@
+Your job is to analye a series of Reddit Comments are drawn from sbumissions related to the 2024 Queensland State Election. The comments are drawn from a collection of comments before, during and after the election itself on the 26th of October. The parties that sought election were the Australian Labor Party (ALP), the Liberal National Party (LNP), the Queensland Greens (Greens), One Nation and Katter's Australian Party. The LNP prevailed in the election, with David Crisafulli becoming the new Premier of Queensland. 
+We have identified several key issues that the major parties campaigned on during the 2024 Queensland State Election: Youth Crime (YC), Cost of Living (COL), Health (H), Energy and Infrastructure (EI), and Abortion Laws (AL). Below is a summary of each party's position on these issues:
+Youth Crime (YC):
+- LNP: Advocated for stricter penalties for young offenders, including the 'Adult Crime, Adult Time' policy, proposing that serious offenses committed by youths be met with adult sentencing. 
+- Labor: Focused on rehabilitation and prevention programs, aiming to address the root causes of youth crime through community engagement and support services.
+
+Cost of Living (COL):
+- LNP: Proposed measures such as abolishing stamp duty on new builds for first home buyers and re-establishing the productivity commission to review building industry regulations, aiming to alleviate housing costs. 
+- Labor: Introduced initiatives like 50-cent public transport fares, a $1,000 energy rebate, and free lunches for state primary school students to ease cost-of-living pressures.
+
+Health (H):
+- LNP: Committed $590 million to an 'Easier Access to Health Services Plan,' aiming to reduce ambulance ramping and hire additional healthcare workers. 
+- Labor: Focused on maintaining and expanding healthcare services, addressing hospital capacity issues, and investing in new health infrastructure.
+
+Energy and Infrastructure (EI):
+- LNP: Criticized Labor's Pioneer-Burdekin Pumped Hydro Project as financially unviable and canceled it upon taking office, opting to explore smaller-scale hydro projects instead. 
+- Labor: Proposed large-scale renewable energy projects, including the Pioneer-Burdekin Pumped Hydro Project, to transition towards 80% renewable energy by 2035.
+
+Abortion Laws (AL):
+- LNP: Stated there would be 'no changes' to abortion laws under their government, maintaining the status quo established in 2018. 
+- Labor Party: Supported the existing abortion laws and opposed any attempts to repeal or amend them. Asserts that LNP intend to restrict access to abortion services based on the views of some of their members.
+
+Analyze Reddit comments and code them based on the positions they support or oppose concerning these issues. You will output JSON, so valid values are strings or null. Use the following codes: YC, COL, H, EI, AL. If a comment's position is unclear or does not pertain to these issues, output null.
+
+Secondly identify which party the comment appears to support. Use the party code ALP, LNP, Greens, ON, KAP if this can be determined, otherwise a null value if undetermined.
+
+Output JSON as a list of objects where each object has an "id" (integer) property of the comment id, an "issue" property set to the issue code string (or null value), and a "party" property set to the party code string or null value. Null means JSON null, not a string. Values MUST be quoted, e.g. {"party": "LNP"} unless they are null, e.g. {"party": null}. Comments follow:
+
+1. If they want or need pill testing then get the event organisers to cover the cost. Same goes for music festivals. These organisers are for profit so why is this a tax payer funded service. Why should tax payers pick up the bill for this shit. https://www.schoolies.com/about#:\~:text=Schoolies.com%20also%20organises%20All,freedom%20in%20a%20safe%20environment.
+2. The new premier has already said they will continue with pill testing this year for schoolies. Why is everybody having a go at the government about this?
+3. Here’s a compromise. Keep the pill testing, but charge the users. Anyone who downvotes me is anti semitic.
+4. I'm an atheist. Mother of older teens. I don't believe in pill testing. All it does is legitimize taking drugs. I have young people i know who pop pills. They know the risks. Have talked at length about this with my kids. They too know the risks.
+5. Or don't be a loser and take drugs
+6. No.
+7. Sky News rage porn > advice from doctors and police. This is why the Newman-era youth boot camps (an expensive failure) are coming back as "reset camps".
+8. The only evidence they need is written in a book by a collection of story tellers who recorded a verbal history and in no way manipulated the real story to fit whatever agenda they had.
+9. Are there any parties that are known for following evidence over ideology? That isn't a problem unique to the LNP, that's a problem across the entire field of politics.
+10. MDMA? I'm pretty sure that's in the old testament.
+11. They only care when they can find an expert that agrees with them
+12. Here’s an idea. Don’t take drugs???? lol
+13. Umm... It's the LNP. Slogans *are* the policies.
+14. The former SA Liberal Opposition Leader is enlightened about drug policy. He's even put out his own video on doing lines!!!
+15. lol that’s their playbook for sure. They’ll never admit that most of the drug related networks and sales are foreign nationals from anywhere, plenty of “white” countries in the mix there too. We even elect the kingpins into government sometimes too, not gonna say what state or what government it was, but it was an obvious criminal accomplice in office. White too, but we ignore it.
+16. Instead of the people buying and ingesting the Omo? Right…
+17. Because it saves the lives of the very same tax paying (or in the schoolies case, soon to be tax paying) citizens. Many things are managed by the state for the public good.
+18. Then who the fuck would get their shit tested?
+19. Humans have always taken subsidence’s to alter their mind how do we make it more safe for those what will do it anyway? You - “lol loser kids can just die if they do it”
+20. Great question. Actually, The Greens do “Evidence Based Policy”.
+21. Don’t drink alcohol… yup, pretty stupid ignorant comment.
+22. Looks like you've just solved the drug problem! Can't believe nobody has thought of that until now.
+23. Humans have always altered their mind, why is your solution to just laugh at dead children and ignore calls for safety?
+24. Here’s an idea. Don’t vape???? It’s so bad for you! Based on your post history, you better not ever seek medical help for the inevitable damage it does to your body. Wouldn’t want to be a hypocrite ay?
+25. Its part of human nature to alter conciousness. Your idea is nonsense.
+26. User pays. Not tax payer pays.
+27. People who don’t want to die from swallowing Omo, you Nazi.
+28. We shouldn't be, you know the dangers, you want to be irresponsible why should we let you pick and choose the risk just to get high and be a loser, we don't need those types of people in society.
+29. A legitimate question, where have the greens ever done policy? I was under the impression they've never actually held enough power to direct policy.
+30. What do you mean? You dont remember the success of Nancy Reagan and Just Say No? That and the war on drugs never led to any crack epidemic! Much!!! [Just Say No / War on Drugs] (https://en.m.wikipedia.org/wiki/Just_Say_No)
+31. I guess we just have different values. I think money should be spent on the public good rather than hoarded by mega corporations
+32. The most stable and long running government in Australia is in fact, a Labor / Greens coalition. ACT. The Greens policies are based on evidence on climate, housing, land management, economics etc etc. Have a look at https://greens.org.au/qld/policies
+33. Just bloody brazen. The coal companies don’t care that we know who they are bribing!
+34. Money well spent guys, sounds like you're very happy and can barely contain yourselves, great work. "We believe we reminded Queenslanders that mining is about the people" FFS you pricks are shameless.
+35. [deleted]
+36. Love how they act like this is better because it supports 1000 odd coal miners in comparison to royalties that pay for services to a big portion of 5.5 million queenslanders
+37. And now they will want their return for their generous assistance to the LNP. Does a pre-arranged agreement to return royalties to the previous level constitute corruption?
+38. Fuck QCoal. “Hey we had two fatalities but glad our homies got into government”
+39. Interestingly it's recognised that a drive of 30 minutes from a remote mine site to your accommodation is important for mental and physical health. This is factored into the construction of new mines and has been for over 30 years. So, there you go. It's good for the mining companies and the govt. But neither the govt of the mining companies are representing the interests of the people. Black lung anybody?
+40. Coal miners celebrating a return to mega profits. Good to see they named Wahoo Advertising. Make sure nobody uses them cunts going forward to remind them they were complicit in ruining lives.
+41. The whole campaign was garbage, designed to prey on vulnerable, undereducated people. They made out like 800 workers were going to lose their jobs and would have to uproot their families and leave. What it would have done is save the town of Glenden and inject a massive boost in the local economy after Glencore selling the mine doomed it. They love to claim that mines are the lifeblood of small towns but didn't want to put their money where their mouth was. I live and work in that region. The road they're whingeing about having to bus workers "2 hours a day" is a fucking sealed state road. It takes 20 minutes to drive from Glenden Ampol to the Byerwen gate house. They would have gone from living at the camp to living in Glenden and bussing in and out. 20 minute commute to their job and back. Boo hoo. Join the rest of the world commuting to work.
+42. Well we know if the Royalties drop, It will be based on pure corruption.
+43. "free and fair elections" brought to you by the Minerals and Mining council of Australia. Well done guys, well done.
+44. "Money well spent. This expense will be easily paid off."
+45. "mining is about the people" they say as their industry will no longer benefit the people
+46. Man I actually dry heaved reading this
+47. Lucky coincidence the BHP AGM is on in Brisbane tomorrow? Wonder if they'll have a surprise, last minute, guest speaker from the new government?
+48. This is disgusting
+49. Can’t blame them, we’re the brain dead fks who just let them win
+50. I love how "Thousands of people rely on the coal industry for their livelihoods" is mentioned 3 times, with 0 acknowledgement of how 8 billion people rely on Earth to not turn into a giant garbage fire.
+51. So ONLY mining is for the people? Not farming? Manufacturing? Logistics? Nursing? One day they will learn that we cannot eat coal.
+52. "the tens of thousands of people across the State who rely on the mining industry." So...1% of Qld?
+53. [https://www.abc.net.au/news/2024-08-23/byerwen-coal-mine-shut-down-after-bundaberg-man-dies/104260446](https://www.abc.net.au/news/2024-08-23/byerwen-coal-mine-shut-down-after-bundaberg-man-dies/104260446) those lousy "purely political" deaths from your poorly run mine sites I guess
+54. Goodbye QLD coal royalties.
+55. "best result possible for the minding companies" read as: this sucks for the regular dipshits who voted for it.
+56. Lol they're gloating to our faces
+57. Does anyone know what they mean when they talk about being forced to close their mining camp? I can find a story when the local council denied their application for the camp because the council wanted to breathe life in the small town nearby the mine. Trying to have the mine set up their workers in the town and share the growth the mine creates in the area. That sounds much better than setting up a company town right next to the mine and having the small town wither.
+58. Who thought that was a good idea to pat themselves on the back that a coal corp helped sway voting to some extent. Truly outrageous.
+59. Hilarious given the workers won't see jack shit of any of that money going back to the companies.
+60. Thinking of starting a new company to service the southeast of the state initially and then to supply the rest when we start to ramp up. Brisbane Guillotine Works.
+61. Gina wins again. What's mine is mine. What's yours is also mine.
+62. If they’re so proud of what they did, why’d they lock the comments on the LinkedIn post? Fucking Cowards lol Edit: Seems they lock all their posts from comments. Wonder why… lol.
+63. "10's of thousands of people who rely on the mining industry". All those subsidies, and all you get is is < 1% of jobs. It costs the state close to $1.5billion a year in subsidies repairs to ports train lines and other infrastructure from $3 billion in royalties. You can expect those royalties to dissappear and you, the dear taxpayer, will foot the bill for that infrastructure.
+64. That's a longed winded way of saying ***"The grift is back on".***
+65. It's funny that the LNP voters are surprisingly quiet on this, the only attempts at justification are from mega cookers saying the degest shit lol
+66. Translation: “we make more money, you get none of it… oh and fuck climate change”
+67. Coal mining companies do as much good for the people as massive amounts of pokies in low socio economic areas.
+68. Fuck that's gross.
+69. Get everyone to make sure they haven't got super investments in that company
+70. So qld voted for the coalition party 🧐
+71. This is pointed towards LNP , coal company lobby group trying to make out it was their campaigns that won the election for LNP. This is definitely not true . Lobbyists are trying to justify their position to coal companies and LNP.
+72. If a corpo is happy with a particular party winning that's not good at all
+73. Wow, no more pretending. Just say the quiet parts out loud.
+74. The Queensland government should’ve just ceased every mining and energy asset while they were in power. I’m tired of the parasites.
+75. My Isa is literally polluted 😵‍💫
+76. "We successfully manipulated regional voters to vote against their own interests."
+77. Did these fucksticks just openly admit to swaying the election results with their money?
+78. Labour has long term vision for Australia, even if it induces short term discomfort…LNP has only to provide band aid solution to all crisis — and thus harmful for Australia. But most people doesn’t understand the fact.
+79. "We are particularly proud of the role QCoal played in directly impacting the State Election" right, I'm not from QLD, idk why you guys keep popping up on my feed but we move but how in tf is a company sitting here proudly proclaiming they committed a form of Election fraud??? I am so sorry to all you guys living up there, having to put up with this shitshow, and ik that Qld doesn't have a state senate so any shit things the Coalition want will just be passed with next to no issues, compounding this
+80. Say goodbye to Qlder's being energy independent by 2030. Companies won't invest in a market that's so clearly favouring coal and the status quo. Other States will leave QLD behind as they move towards renewables.
+81. That’s fucked
+82. Thanks to all of those idiots who voted LNP!
+83. “Purely political” dear god I hope no one tries to do anything to “grab votes” in this political landscape.
+84. This is sad
+85. Wow, they aren’t even hiding the fact that they bought the LNP are they?
+86. A 24 Carat gold circle jerk, literally laughing at us and basking in their ability to bullshit people by targeted media. This also included those months of relentless tv ads talking about QLD mining royalties. All brought to you by some small band of smart cunts with smaller minds, in a productive workspace and their de-caf Soy Lattes. “Well, you know, the Marlboro contact has dried up, so we’re doing good things with coal now … “
+87. When mining does well, the economy benefits. Great to see LNP in office.
+88. I agree that it's concerning how much they're bankrolling elections... But what about the unions?
+89. Man QLD’ers are dumb. Watch them whine like stuck pigs as the reality of a LNP government sets in.
+90. It doesn’t matter what government is in the royalties have dropped because the coal price has dropped. [coal royalty rates QLD Gov](https://qro.qld.gov.au/royalty/calculate-mineral/rates/) Qcoal is celebrating because the Glencore Newlands mine shut so now no one needs to live in the nearby town Glenden. So the Government put it on the smaller Qcoal to keep the town of Glenden alive by shutting their camp and moving their workers there. If you should be upset at anyone it should be at multinational miners like Glencore/BMA who are actively shutting up shop and leaving QLD and so letting it fall on smaller miners like Qcoal to take the brunt of higher access costs and keeping small towns alive.
+91. You reap what you sow
+92. Should be illegal for anyone other than a registered political party or candidate to make political advertising, and it should also be illegal for the aforementioned parties/candidates to accept funding from corporations or lobby groups.
+93. These cunts
+94. The coal executives win, the nurses get shafted...
+95. We need truth in advertising and truth in politics laws really really badly
+96. They’re so brave posting this and making sure the comments are turned off
+97. I'm praying that LNP get federal.power so they can overturn that stupid cow Pleberseks decision to halt the Balyney mine. These idiots don't understand that people need jobs
+98. Who is in this Qcoal outfit?
+99. Yay we don't have to sit in the dark and starve in Queensland anymore. Thanks LNP.
+100. Yeah look if it’s such a shit business that 5.5% of total profits was going to sink them it probably shouldn’t exist anyway, good thing that’s a load of shit and their ripping the states fucking eyeballs out
+101. A rough translation to English from corporate speak is something like “let them eat cake”
+102. Fucking love oligarchies bro this is so awesome
+103. I don’t get this mining royalty ‘super profit tax’, surely if you bring in a tax like this you have to apply it to everything, banking, real estate, agriculture, services. Why beat up particularly on mining, our biggest export industry and one that until this new tax brought in billions of dollars of offshore investment from our friends in Japan and Korea who aren’t as fortunate as we are with mineral security
+104. Coal is not tobacco.
+105. Chris Wallin owner of QCoal. Net worth. In January 2019 Forbes estimated Wallin’s net worth as US$910 million; while he was listed with a net worth of A$1.45 billion on the 2021 Financial Review Rich List. $1.5 Billion USD ( 2024 ) This wealth shouldn’t be concentrated to a select few.
+106. Good
+107. Oh no, they hideously introduced a protection law and people have to go to work on the bus ~
+108. So LNP voters read this and didn't realise they were lied to and screwed over?
+109. rofl linked in is so fucking unhinged. People's pure ass licking sycophancy on display because it is a parasocial connection to their work culture. Haha fucking dystopian
+110. It’s like if dr evil joined LinkedIn. It’s both sad and so very bold
+111. fossil fuels are DEAD we need to realise that. stop holding on to the past for a few companies that make billions of dollars while killing our planet. also, i’m sorry about the people employed by the sector but it’s a relatively TINY sector. it’s not hard to help retrain them to join the renewable sector. qld has taken 10 steps backward with this election and it’s disheartening
+112. Suck it up. The majority had their say, convincingly. I guess you get points for being the loudest.
+113. This thread is hilarious. Suppose those on here would rather have money for the blue hair brigade.....fuckwits
+114. [deleted]
+115. Unfortunately if labor only cares about SE QLD and neglect regional Queensland where mining is prevalent. It’s a hard balance and that’s reality. Labor needs to do more to help regional cities in other means instead of doing 50 cents fares which only help SE Queensland mainly and other few regional centres. Maybe using coal royalties to build hospitals and roads in regional towns ?
+116. Coal is cheap power 24/7 power needed for the grid 👍
+117. Why would they? What repercussions are they going to face?
+118. “Mining is about the people” says the executives who take home exponentially more compensation for an exponentially easier job that the people doing the labour in the mines
+119. "mining is about the people" said Gina, after taking a Bill to legalize paying her workers as little as $2/hr.
+120. Yes the Norwegians also say the same thing. They hate their wealth fund and extra money They would love for resource companies to take everything. Then use their excess cash to lobby the government and corrupt the country.
+121. finished the sentence…… and the profits they receive rather than the climate they live in.
+122. Where clearly all they meant to say is ***"The grift is back on"***
+123. You realise the coal price has dropped from over 400$ to 144$ right ? Labor’s additional coal royalties were only on prices above $150 a tonne……… [coal price](https://tradingeconomics.com/commodity/coal)
+124. Think of the miners though! The coal companies barely have enough money to pay 1000 workers....
+125. They have already returned to the previous level. Labor’s coal royalties were only for high coal prices……… the coal price is not high anymore.
+126. QCoal needs to be shut down until they can sort out their safety.
+127. One fatality was horrible and a lapse in operator judgement. The second wasn’t an unavoidable medical episode.
+128. As someone who works on this site. Fuck an extra 40 minutes. I’d rather spend that time in camp than on an uncomfortable cramped bus.
+129. Maybe the government should have put more onerous protections on the people of Glenden rather than just letting the multinational Glencore shut up shop and leave the town that serviced them in the dust for Qcoal to look after….
+130. I’m doubtful when it’s dropped 70% from just a couple of years ago. [Coal price](https://tradingeconomics.com/commodity/coal)
+131. Profits are based on the coal price, and so are royalties.
+132. [deleted]
+133. On a 12 hour shift 40 minutes commute adds to an already painfully long day. That’s a fairly unsympathetic position to the labour working there.
+134. I already drive 8 hours to get to the camp at the start of my week. I don’t want an extra 40 minutes a day.
+135. No it will be from the coal price dropping 70% and Labor’s increased royalty rates no longer applying. [coal price](https://tradingeconomics.com/commodity/coal)
+136. They can write advertising off as a tax expense anyway so money is no issue
+137. You need to read more widely.
+138. BHP/BMA has been rapidly selling mines in the last few years getting out of Queensland. I don’t think they care. [BMA mine sales ABC](https://amp.abc.net.au/article/102992482)
+139. [removed]
+140. You do realise the largest contributor to the QLD economy is mining right?
+141. Who generate the mining royalties currently keeping QLD afloat. And if you don't need those royalties, don't whinge if they are removed.
+142. They aleady don't apply given the current depressed coal price.
+143. It’s a pretty in-depth issue unfortunately. TLDR: Forcing the mine to use the local town is going to cost it money.
+144. Could export to Canberra. Start with public servants buying $4M+ mansions.
+145. I had actually never noticed this hahahaha
+146. So the comments aren't the same as the dumpster fire that is Reddit.
+147. Bullshit. The LNP said they'd remove the newly levied royalties that apply to coal sold for more than $150/T. Coal price is less than that now, and going lower. So we aren't getting it anyway. But it's ok, as long as it's not your job or community, right? It's all for the "Greater Good", comrade.
+148. Did you like this comment so much that you posted it again?
+149. Don't worry. They won't have, since industry super funds are controlled by ex-union bosses.
+150. This isn’t a lobby group. This company owns multiple mine sites.
+151. OK. Good luck with your budget deficit. Better buy some candles. Don't light a fire. Releases too much carbon.
+152. Election fraud?
+153. What about them? Their finances are publicly available. The ACTU are the only element giving money to a political party, and that's Labor. I know LNP types love going BUT THE YUUUUUUNIONS! over everything, but the fact is that state Labor gets nothing and federal Labor gets less from the union movement than they do from hosting one black tie dinner for business lobbies.
+154. Unions aren’t typically charged with negligence resulting in death. Edit: Qcoal/Byerwen mine are yet to be charged with anything. - clarification
+155. Unions represent the working class. Qcoal represent mega rich greedy motherfuckers who just want more, no matter the cost to the people.
+156. We know. 30 years of ALP government.
+157. Why not mine a different resource
+158. Interesting decision: "Federal Environment Minister Tanya Plibersek has found the 'irreversible' and 'permanent' loss to Aboriginal heritage outweighed the financial cost of halting a $1 billion gold mine development in the New South Wales Central West." [https://www.abc.net.au/news/2024-10-11/mcphillamys-gold-mine-plibersek/104459810](https://www.abc.net.au/news/2024-10-11/mcphillamys-gold-mine-plibersek/104459810)
+159. Queensland has very few thermal coal mines. This isn’t one of them.
+160. everyone was benefiting from it, not just this made up brigade you are so scared of lol
+161. I work in coal mines. This isn’t an issue of if coal mines should exist or not. This is about whether a coal company should pay its fair share in taxes and be held to account for the death of workers on its mine sites. Edit: and also if it should be allowed to enforce a fifo/dido only policy
+162. I want to highlight the company is also advocating for the destruction of a rural town.
+163. Wasn’t that literally part of the plan?
+164. Maybe if you had paid attention to the fact that they were doing ALL OF THAT you may not have been sucked into the Coal Company lies.
+165. It's pretty silly to say reducing coal royalties is going to help qlders. City or country. It's just rent seeking wrapped up concern for the regoins
+166. You know now that the LNP is going to do NOTHING to help Queenslanders - only line their pockets and pay back the favours that it owes. At least SEQ were getting something, and potentially additional money to support schools and health, who knows. Now the massive corporations and billionaires get to keep the money. This is why we can’t have nice things. Cut off our nose despite our face. Great work.
+167. Majority of this coal is shipped overseas. Including all the coal from this mine.
+168. No it’s not. That’s the grid of yesterday and it’s shit. The grid of tomorrow’s on demand, fast response rate, distributed geographically and by size/type, and backed with storage.
+169. The market price says otherwise.
+170. They ought to be. It’s logical unless we want to go down the slippery slope to outright baksheesh/corruption
+171. He didn't explain who these "people" are. Certainly not the people getting electricity rebates or school lunch or taking public transport.
+172. Miners are paid pretty damn well too..
+173. Hold them actually accountable for each and every worker injury and death.
+174. [deleted]
+175. No wonder they kept saying election promises would be funded by debt
+176. Yeah but they do this thing where they zoom right in to where it goes up and say "SEE IT WENT UP! DONE" op was deleted before I chimed in tho, I know what went down. Seen it a million times.
+177. Two fatalities in 6 weeks is symptomatic of a corporate culture that doesn’t give a shit about safety. The rumours I heard about the second are tragic, but other mines have controls in place that could have reduced the likelihood. And still… this whole thing reeks of “our friends got in and will help defund and defang the inspector, so we can get away with more”. Get ready for it.
+178. As someone who has worked onsite the drive of 15 to 30 minutes has never been so bad as the companies I worked for as they had decent buses and reduced seating capacity on smaller buses because you can't empty a bus in a hurry if it is too cramped. It's interesting that the workers determined that they needed better conditions also.
+179. I think if qcoal wants to operate a mine in the area. Then absolutely it should. Its original camp was only built to be used for the mine’s construction. They have known since the beginning they would have to support the town. They why the council denied their application to expand the camp.
+180. Everyone who’s lives are affected by climate change
+181. At least [these two](https://www.theguardian.com/australia-news/article/2024/aug/22/worker-dead-after-vehicle-collision-at-central-queensland-coalmine) along with their families.

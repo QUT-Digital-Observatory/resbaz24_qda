@@ -1,0 +1,165 @@
+Your job is to analye a series of Reddit Comments are drawn from sbumissions related to the 2024 Queensland State Election. The comments are drawn from a collection of comments before, during and after the election itself on the 26th of October. The parties that sought election were the Australian Labor Party (ALP), the Liberal National Party (LNP), the Queensland Greens (Greens), One Nation and Katter's Australian Party. The LNP prevailed in the election, with David Crisafulli becoming the new Premier of Queensland. 
+We have identified several key issues that the major parties campaigned on during the 2024 Queensland State Election: Youth Crime (YC), Cost of Living (COL), Health (H), Energy and Infrastructure (EI), and Abortion Laws (AL). Below is a summary of each party's position on these issues:
+Youth Crime (YC):
+- LNP: Advocated for stricter penalties for young offenders, including the 'Adult Crime, Adult Time' policy, proposing that serious offenses committed by youths be met with adult sentencing. 
+- Labor: Focused on rehabilitation and prevention programs, aiming to address the root causes of youth crime through community engagement and support services.
+
+Cost of Living (COL):
+- LNP: Proposed measures such as abolishing stamp duty on new builds for first home buyers and re-establishing the productivity commission to review building industry regulations, aiming to alleviate housing costs. 
+- Labor: Introduced initiatives like 50-cent public transport fares, a $1,000 energy rebate, and free lunches for state primary school students to ease cost-of-living pressures.
+
+Health (H):
+- LNP: Committed $590 million to an 'Easier Access to Health Services Plan,' aiming to reduce ambulance ramping and hire additional healthcare workers. 
+- Labor: Focused on maintaining and expanding healthcare services, addressing hospital capacity issues, and investing in new health infrastructure.
+
+Energy and Infrastructure (EI):
+- LNP: Criticized Labor's Pioneer-Burdekin Pumped Hydro Project as financially unviable and canceled it upon taking office, opting to explore smaller-scale hydro projects instead. 
+- Labor: Proposed large-scale renewable energy projects, including the Pioneer-Burdekin Pumped Hydro Project, to transition towards 80% renewable energy by 2035.
+
+Abortion Laws (AL):
+- LNP: Stated there would be 'no changes' to abortion laws under their government, maintaining the status quo established in 2018. 
+- Labor Party: Supported the existing abortion laws and opposed any attempts to repeal or amend them. Asserts that LNP intend to restrict access to abortion services based on the views of some of their members.
+
+Analyze Reddit comments and code them based on the positions they support or oppose concerning these issues. You will output JSON, so valid values are strings or null. Use the following codes: YC, COL, H, EI, AL. If a comment's position is unclear or does not pertain to these issues, output null.
+
+Secondly identify which party the comment appears to support. Use the party code ALP, LNP, Greens, ON, KAP if this can be determined, otherwise a null value if undetermined.
+
+Output JSON as a list of objects where each object has an "id" (integer) property of the comment id, an "issue" property set to the issue code string (or null value), and a "party" property set to the party code string or null value. Null means JSON null, not a string. Values MUST be quoted, e.g. {"party": "LNP"} unless they are null, e.g. {"party": null}. Comments follow:
+
+1. The coal money is already gone - the prices have fallen & we won’t get $22b or whatever it was when they went crazy…the issue is if we bake in spending that amount all the time we’ll end up being screwed. It’s like getting a massive bonus one year & assuming it’ll happen every year.
+2. Oh no are the coal companies going to be sad and go away? Sounds awful, I can't wait for my children to breathe clean air about it.
+3. Spending coal royalties on COL measures is investing in ourselves and will increase overall productivity long-term. More so, it’s been our years of strategic investment into Renewable projects which will yield ongoing revenue and job creation long-term. There will always be growing pains with fluctuating prices in coal, delayed Renewable projects, red tape etc., but the ALP’s strategy is sound. The LNP’s strategy of less taxation on coal, extending coal-fired power stations, and Nuclear fantasy is not sound.
+4. I don’t think you understand the comment. QLD has always had coal royalties, what happened more recently was the government increased the % royalty over certain price thresholds which due to the surging price of coal brought a massive windfall to QLD. The current market price of coal has significantly declined as such the royalty they pay has significantly dropped I.e. the government won’t get $22b or whatever this year….its got nothing to do with politics, its simply the market price of coal driving the outcome… The issue is if the government assumes the windfall will continue every year (based on a once in a generation coal price), they’ll over commit on spending & create a significant deficit.
+5. To be clear I’m not advocating coal companies paying less royalties - I’m simply saying based on the existing royalty framework they pay based on market prices. The market price has fallen significantly, as such the amount they pay QLD has fallen. If the government spends it like they’re going to receive the record amount every year, they’ll overspend as the revenue will drop off. That’s the reason they’re doing mostly one off stuff like bill credits etc, but if they make it recurring we’ll likely see issues in the future.
+6. Yes, if we go back to historical prices for coal, which seems likely, royalties will be the same as of 2012. So really we should probably switch to a sliding scale |**Price per Tonne**|**Before 2012**|**2012 - 2022**|**Post-2022**| |:-|:-|:-|:-| |Up to **A$100**|7%|7%|7%| |**A$100.01 - A$150**|10%|12.5%|12.5%| |**Above A$150**|12.5%|15%|15%| |**Above A$175**|\-|\-|20%| |**Above A$225**|\-|\-|30%| |**Above A$300**|\-|\-|40%| # Summary: 1. **Before 2012**: The rates topped out at **12.5%** for coal priced above A$150 per tonne. 2. **2012 Adjustments**: Increased the top rate to **15%** for coal above A$150 per tonne. 3. **2022 Changes**: Introduced three additional tiers for prices above **A$175**, **A$225**, and **A$300**, with the highest rate at **40%**.
+7. For sure, but the one off COL measures like $1000 electricity rebates, $200 Fair Play sporting vouchers for kids, 20% discount on car rego etc. are paid by the coal royalties windfall. So it’s not baked in. The 50c PT and free school lunches etc. are going into the debt. That’s a different debate on long-term investment in ourselves v increasing debt.
+8. Thanks for taking the time to post the actual info.
+9. No worries, when I initally read your comments I instinctly disagreed, though then I thought to myself, wait I myself don't actually understand the differences over time in the tax, I should research them. And yeah, mate you are correct, so it's kinda shitty people downvoting you :(
+10. All good - facts & anonymous internet posts don’t always go together…ha
+11. Yep pretty much and once you get to negative 3 or 4 people will just downvote you without even reading what you’ve said most of the time, oh well such is life.
+12. $8m rent per year in today's $? The yield should be reasonably low, considering the risk... 7 - 9 % per annum at most? At 8%, this would value the building at approx $100m?? Lol. That can't be right?? This all looks very, very fishy indeed. I wonder who is involved in the deal, on both sides?
+13. Something weird going on with this tenancy... who owns the building and who do they know in the QPS?
+14. The landlord paid $45m for that site just over 3 years ago. They will be laughing!!! This site is a dogs breakfast, I can’t believe they’ve locked themselves in on this deal to be honest.
+15. "the contract was signed before a funding source was identified". Huh? Maybe Police works differently but in other government agencies and departments it is illegal to go to market, much less sign a contract, unless the budget is locked and loaded. It should never have been signed off and whoever signed it is fucked... Well, maybe not fucked but in trouble. Well, not much trouble, just a stern talking to. Probably not that stern. Actually, never mind, it's probably their wife's commercial property and everything is hunky dory tickety boo... Win win, good for the tax payer.
+16. That’s precisely the level of competency Ive encountered in the public sector
+17. I'm still very confused about this deal. Who signed off on it? And - who benefits? On the face of it, surely it would make more sense for the govt to buy land and build at a new site? Yet they are going to pay up to $240m in rent over the next 20+ years.....???
+18. Time to fire whoever signed that contract.
+19. Which commissioned Officer is close or related to the building owner?
+20. Something the article also misses is govt departments use accrual not cash accounting, so it’s not a $100 million hole this year, it’s a $100 million divided by 15 hole per year for 15 years.
+21. The fact the CCC is looking into it suggests there is something fishy going on, perhaps with the owner of the property and links to the QPS?
+22. Well they were up 200M revenue from infringements last financial year, so looks like we’re getting more fine increases boys and girls to cover this fuckup. $500 fine for 4km/h over the speed limit anyone?
+23. Is there another news source reporting this?
+24. I was actually angry when I saw this on the news. Like literally really pee’d off about it. Surely those numbers are wrong, cannot be right. Stones corner $8m a year rent, has to be a joke? Does the site belong to a politician? My bloods boiling thinking about this, I’ve never pulled the “my tax money” etc but this story is absolutely hit a nerve, I’m super super pee’d that they’d spend this kinda dough on rent. Common, no one with half a brain would pay that much for that little in return. What a joke…
+25. This property was bought for 27.5m in 2017. https://www.realestate.com.au/property/433-logan-rd-stones-corner-qld-4120/
+26. Surely for that much they could have bought something
+27. Convenient timing this dropping when it did, right before media blackout too
+28. Are people suprised that bosses in the QPS make shit contract deals?
+29. Sounds like some LNP cookers not understanding basic maths.
+30. Is there another source outside of corporate media
+31. I wonder if my local state member of parliament signed off on this
+32. Kind of crazy the hoops of documentation and approvals people need to go through for meager amounts when getting loans or applying for rentals while someone just signs away $116 million without anyone knowing.
+33. Why doest the government own buildings to support government services
+34. How about the gutter. That are not heroes, they ruin lives and destroy families. Why should anyone even want to care. So mote it be
+35. And the LNP says the police are underfunded.
+36. Surely this is Campbell Newman’s fault 😉
+37. So more speed cameras then?
+38. Find savings?? They mean find more efficient ways to fine us and pay for the kient that way lol
+39. Nothing to see here. Cheers, Miles
+40. Sounds like a good thing for criminals, even more effort will probably get diverted into handing out fines.
+41. 'He tripped' ![gif](giphy|G5X63GrrLjjVK|downsized)
+42. Surely they should be purchasing the building for that kind of money. Why didn’t they just rebuild on the existing police building in stones corner.
+43. As a valuer I can assure you that is complete baloney. 65 mill max at 8% not accounting for other detriment factors to value. It’s more like 5.2mil a year or 80-90 mil after 15 years accounting for reviews.
+44. Corruption? In my QPS? I'm shocked!
+45. I can see the cost being that fairly easily. It's got to be a pretty big building as it is going to contain all the officers from Coorparoo, Annerley, & Dutton Park stations as well as multiple smaller units. It's going to house several hundred officers, all their vehicles, specialist units and will also have lockup facilities. So you're going to be looking at an expensive and large building. It's also going to be on logan road itself as well which will make it more expensive. For a comparison the block of land the super cheap auto is on there sold for $8m back in 2016
+46. schmettre Muttun maybe
+47. I, for one, am shocked that this has happened and tarnished the reputation of such a fine and upstanding organisation.
+48. Exactly, this has happened before, need to dig deeper on this one and connect the dots
+49. There you go. Follow the money? Who paid for it, and why.
+50. Used to work in that building, it would leak every time it rained
+51. I have heard rumours that they have the *money* to pay for it but they did not have permission to enter into borrowings and agency borrowing needs to be approved separately. A lease is a type of borrowing for in accounting.
+52. Yes they're preparing the wet lettuce right now...
+53. You can’t be too intelligent for government.
+54. in the police force
+55. Out of a cannon. Into the Sun.
+56. Would the contract even be valid? You surely can’t sign on behalf of an organisation without following its rules. Surely this will be litigated
+57. And that proper purchasing process wasn’t followed.
+58. The QLD State Government gets the fine money, not QPS.
+59. The state government sets the infringement amounts, and the state government gets the money... and Labor has been quietly sneaking them up for decades. Right under your nose..
+60. Lol my mate works for their department. I also work in public service but my department has little revenue, like most departments. He reckons his office is swimming in random lazy workers because of their income.
+61. https://www.couriermail.com.au/truecrimeaustralia/police-courts-qld/qld-police-commissioner-orders-audit-into-240m-cop-shop-lease/news-story/70baee2a59b02e532789d65760e55071?amp
+62. Last sold for $45m in March 2021
+63. Unless you live in the Morayfield district, unlikely they had anything to do with it.
+64. I'd heard rumours of them taking over the Griffith University Mt Gravatt campus, that would have been a heck of a lot more logical and cheaper than this
+65. Where are you getting those figures from? I'm going with 1) the rent per year in that article, and 2) an estimate of yield between 7 and 9% ... For me, that's 8%. Your figures are very different, but you haven't provided any clear reason as to why.
+66. 8% for a 15 year lease to QPS in stones corner sounds a bit soft don’t you think? 555 corro sold ~8.50% and that has flood risk and much shorter WALE. I think SRG House is being priced at ~8% in the market and that’s in strathpine with development land.
+67. More like ALP corruption
+68. There is nothing in Stones Corner like that. I wonder where they mean? Or your summation of the set up won’t be close.
+69. Time to set up more cameras
+70. https://i.redd.it/cws899xexiwd1.gif
+71. It's also a legislative requirement that all fines from cameras need to go into road safety initiatives or rehabilitation for those injured in traffic crashes.
+72. The left hand puts money in, the right hand takes money out.
+73. And it's revenue so it does not factor in the costs, which leave the final figure in the sfa vicinity. But hey 'revenue raising' gets clicks and that is the only thing the media care about.
+74. QPS Commish - “I am the QLD State Government”. Probably.
+75. >quietly sneaking them up Don't think there's been too much quiet about it. Fine increases have been widely publicised.
+76. The figures in the article are wrong. I’ve seen this lease and unless they are paying another 3 mil in rent for car parking (which they aren’t), these figures are wrong. For context, the actual rent is $725/m2 over 7,266m2 if I remember correctly and is reviewed annually.
+77. Wouldn’t be 8% just hypothetical, but can see it in the 7’s first sure but 8%+ in the burbs is where it’s gonna plateau now I think.
+78. There’s some corporate offices just on the corner where Logan Road goes left, and the main road becomes Montague Road to go north to Old Cleveland Road. Big car park behind it that you access off Cleveland St. I was moving stuff out of there for a customer months ago.
+79. It's the bower building I believe.
+80. I'm going to guess that it is going to be a new build / purpose built. Which is going to add to the cost. Here are previous stories about this Talking about the station mergers - [https://annerleynews.com.au/major-shake-up-as-annerley-dutton-park-police-to-merge-with-new-stones-corner-facility/](https://annerleynews.com.au/major-shake-up-as-annerley-dutton-park-police-to-merge-with-new-stones-corner-facility/) and sorry for the FB link, but it's a scan from the an old newspaper article talking about the location [https://scontent.fbne11-1.fna.fbcdn.net/v/t39.30808-6/402888514\_1114350843271587\_1484928849083725020\_n.jpg?\_nc\_cat=102&ccb=1-7&\_nc\_sid=bd9a62&\_nc\_ohc=R1tXODf2zLoQ7kNvgG3gUR8&\_nc\_ht=scontent.fbne11-1.fna&\_nc\_gid=AbHs6T89QrwKaJTkOVDZVZh&oh=00\_AYBIZjhd-73qojQZKYKIOe9KGprPGEAOXTJEtaspBi8Y5g&oe=671EAB6D](https://scontent.fbne11-1.fna.fbcdn.net/v/t39.30808-6/402888514_1114350843271587_1484928849083725020_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=bd9a62&_nc_ohc=R1tXODf2zLoQ7kNvgG3gUR8&_nc_ht=scontent.fbne11-1.fna&_nc_gid=AbHs6T89QrwKaJTkOVDZVZh&oh=00_AYBIZjhd-73qojQZKYKIOe9KGprPGEAOXTJEtaspBi8Y5g&oe=671EAB6D)
+81. It’s the old Freemasons building, now a building site
+82. https://i.redd.it/s4orugv6ujwd1.gif
+83. Surely they'll realise that revenue increases on camera fines means they're not changing behaviours. Needs to be some sort of feedback to drivers to change behaviour in the moment.
+84. So more cameras then. "speed camera ahead - for road safety" signs make a bit more sense now. It's justification for the spend ![gif](emote|free_emotes_pack|joy)
+85. A little dick stroking on the way, don't forget
+86. Ah ok. Thanks mate
+87. Channel 9 not getting figures right to bash the govt? :o
+88. If that is the correct starting rental figure, it only takes (a journo or anyone else with a calculator) punching in $5.2 * (1.035^23) to quickly get to $116m… it fails to take into account the time value of money or government stumping up the cash now ($70? $80m?) to go and build a semi-purpose built office facility themselves. NPV of that 23 year cash flow is $80.46m at 7% discount rate. Capitalising the starting rent at 6.5% cap rate gets you to $81m. Developer is already in for $45m for a leased office investment - another $3,000-$4,000/m2 (?) fit-out for police (maybe there’s a portion that’s incentive or rent free) and I can see it making sense, though it does seem like an economic rent without any other info. Depends on what their original “budget” was. Would be an interesting one to model completely.
+89. Plus have to take off incentives from that 725 of say 35-45%.
+90. Ok thanks. I know where you mean. It’s not ideal though.
+91. It is. All of the previous tenants had vacated by June this year to make way for QPS.
+92. Not purpose built, an existing building is being retrofitted.
+93. >Queensland Police has signed a lease for $116 million over 15 years to take over the building Meanwhile.... >I'm going to guess that it is going to be a new build / purpose built ???
+94. I agree. There is no shortage of offending behaviour that would be detected by simply putting more police on the road, with the benefit that pulling someone over shortly after the offence has a greater effect on prevention than getting a fine a month later in the mail.
+95. They have changed behaviours. They say it in the current budget. Fines revenue actually dropped last financial year so they're getting more cameras to get revenue back up. https://preview.redd.it/1oigb0bi2nwd1.jpeg?width=2235&format=pjpg&auto=webp&s=a54dd3a4f9d2afbc4bc23d57b597c68c9377c1e5
+96. Incentives I don’t think were too high from memory.
+97. More "heavily modified" is what I meant.
+98. 15%. Will also have to consider the fioout costs too!
+99. What a terrible deal. Prime suburban stock was around mid 600 with 40/45% incentive. $725 almost net is more than most tenants paying in A-grade CBD stock
+100. Sounds more like they want the government/taxpayers to invest in it.
+101. Because the Roar ain't got no money?
+102. The Bakries won’t even fund a reasonable squad, why would they fund a stadium. They’re notoriously bad investors.
+103. No one talks about the fact it already has a tenant - Brisbane Strikers? Who also released (admittedly delusional) plans to redevelop the grounds themselves? And FQ have also released an AI sketch of a wildly optimistic proposal as well? Until the three parties sort out who is running the show then no one is building anything. Oh and while I’m on a rant, Roar has a long track record of not paying their bills. Why would the Qld Govt sign up for that? When the Roar folds and the Bakries fuck right off then maybe we should do it for the next, proper, owners.
+104. I’m a massive A-league fan, but I’m quite sure the owners of the Roar themselves are the biggest stumbling block when it comes to investing in a stadium. Secondly, I don’t blame state government for not necessarily trusting the Roar in this situation when they’ve been unable to pay their players during two separate seasons. I’m not a roar supporter as I grew up elsewhere and already had a team, but if they want articles like this to not come off as victimisation, they should continue to work towards repairing their reputation with fans, which includes RESULTS on the field. You’ve still got some work to do Kaz and Zac, no one’s trusting your bosses just yet. Like I said, grow a competitive team again and you might get away with this article.
+105. Roar are allowed to invest, they just don’t have the money to pay for it..
+106. lol the roar owners pulling off a bait and switch "publicly fund stadium or we leave"
+107. Would they ever consider going back to being Queensland Roar at all? Country Bank stadium in Townsville and Cbus Super Stadium at Robina seem like the size they are looking for, and limited games at all three venues may draw bigger crowds overall.
+108. Our local club who is incredibly affluent and attracts high level funding every election, is a disgrace with the president overtly party aligned to LNP. This president has promoted the promises of only one candidate and sent multiple political messages out to all members and followers. Football association needs to pull their head in. I love football, but man the association and clubs are wack.
+109. Unfortunately it’s not the late 2000’s & no one cares about the roar like they used to.
+110. Make them play at the Scaffolding Stadium in Nathan. How long could it take to throw it up? May as well get a bit of use out of it before they rip it back down in 2033.
+111. Probs no capital to begin with.
+112. I legitimately forgot that the roar / a league exists here. I'll put that down to social circles I'm part of, but still, I live pretty close to the Gabba and hear nothing about it. Maybe tax payers aren't interested?
+113. As they should. If it’s ok for league, rugby, afl and cricket, it should be for football.
+114. That’s usually partly how these things work bud
+115. This.... and the fact that the owners come across as part time owners with no money
+116. The Bakries absolutely need to fuck off and never come back, theyve burnt way too many bridges with any possible tenants within a 200km radius of here.
+117. yeah I second this
+118. This is a pretty common opinion amongst the Roar fans, especially the long running ones dating back to Roarcelona.
+119. They've stated that this would be money coming from the rent they would normally pay to rent Suncorp. About 2 million a year.
+120. Goodbye!
+121. Nah it’s not you, the A-league is terrible at publicity and media. Hard to watch or follow casually. Also, the roar seem to suck and have had a rotating series of managers and nothing very interesting going on.
+122. Yes have governments have time and time again invested in stadiums for sports teams look at Springfield Stadium, Dolphins Stadium. The big difference is that the sports teams stumped at some cash to contribute. You're are a lot more likely to receive money from the government if you put your money on the table instead of just going out, begging for money and playing the victim. As one of Australia's largest pariticpation sports, soccer should have no trouble filling stadiums. But for some reason they haven't been able to convert their participation into viewership and that's a problem they need to address. Probably isn't helped by a significant number of their small following thinking it's ok to throw buckets at people's heads.
+123. Sure, but it means the headline is a bit misleading isn’t it? It was also unclear from the article why they need a brand new stadium instead of making use of Ballymore. The poor public transport argument doesn’t really hold water imo.
+124. But the qld govt already gets that rent for an existing asset. So Bakries aren’t putting anything on the table. Absolutely no incentive for the qld govt to invest.
+125. Ok so they’re going to borrow $10million to fund it upfront? Or move in at the current stage and progressively upgrade fit over 5 years? The roar don’t own Perry Park, are they assuming there’s gonna be no upkeep costs, maintenance costs or rent due? A Facility like Perry Park has some significant ongoing upkeep costs, it also has no corporate facilities which make up a significant portion of profit margins for match-day income
+126. Honestly, the public transport is abysmal. I found that out trying to get there on PT last year. 1.5 km walk from the nearest train station (Wilston). Makes it very difficult to get to if you have a mobility issue, young kids, or are elderly (especially as the A-League is played in summer). That walk is brutal. There's a few buses, but no where near enough to transport 7-10k people. There's also, quite literally, nothing to do nearby. It's a fully residential area. No pubs, no restaurants, nothing.
+127. Is there any pubs or restaurants nearby Perry Park though? It’s a lot cheaper to put on more bus services than build a brand new stadium too.
+128. There's newstead which is not too far away. But the land around Perry Park could also use the stadium as the catalyst to redevelop that whole area. The line of businesses along the train line could be redeveloped as mixed use apartments for example. And there's plenty of single family homes and low density businesses that could be upzoned Bowen Hills station is right there. Use it
+129. Perry Park is close to Newstead and the Valley and in an area that is a light industrial and a 'priority development area'. Brekky creek hotel down isn't too far away either. I think you'd see some more development in terms of services should a stadium redevelopment occur. Putting more buses on may help, but if you want to move (lets say) 7,000 people - that's about 100 additional bus trips (max capacity 65). Whereas 7 trains could do the same amount of people - and those trains already run to Bowen Hills (120 metres from Perry Park). I do believe the plan is to go modular to keep costs down (a new stand ~50 million) and to seek funding from other private groups too (Football Queensland, private business interests). I personally would like to see the QLD government put in money to help with that. They've given millions to help fund upgrades for Brighton Homes arena (a pure AFLW stadium) and the Ipswich Jets (not even an NRL side). With the Olympics coming up they could help solve part of their infrastructure dilemma by helping build a much needed Tier II stadium in Brisbane.
+130. I think the current strain on housing would be more of a driver to rezone/redevelop the area than a new stadium for the roar who struggle to attract crowds. I’m assuming there is a reason it’s not really been developed already - Is it all flood prone around there?
+131. thanks to u/MajorTiny4713 for sharing this before - report to our swiss bank to receive your standard payment in gold and jewels out of the Queensland environment movement's secret accounts if anyone has any questions about the scorecard drop them below and I'll try and get sensible answers from the relevant experts in the team we've been handing these out at pre-polling in the City, Mansfield, Aspley, Clayfield, and we'll have everyone out on Saturday for the big day. Say hi if you see us! https://preview.redd.it/17xynpvq2gwd1.jpeg?width=1170&format=pjpg&auto=webp&s=285180b747dea73c533ae3cf8c4b85ee6a5625e1
+132. Probably need this reference when they start saying reduction by 75% so need to know what is actually in the emissions. The data being confidential until recently is a bit of a problem that was not spoken about, that would have been good to know earlier. [https://www.energyandclimate.qld.gov.au/climate/climate-analytics-reporting/emissions-data](https://www.energyandclimate.qld.gov.au/climate/climate-analytics-reporting/emissions-data)
+133. Hey QCC, have any parties updated their policies since you released this scorecard?
+134. Giving Labor B+ is ridiculous. They should be D and LNP should he F-
+135. Scorecard on policies is nice but I would like to see a scorecard on implemented policies and programs in their local electorate. You can promise the world but don't do it locally where you have control.
+136. Hard to imagine anyone is worse than the LNP.
+137. Most people in this forum are Labour public servants with enough free time to post the same article every hour for the last month.

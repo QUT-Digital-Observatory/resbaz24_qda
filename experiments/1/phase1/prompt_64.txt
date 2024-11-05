@@ -1,0 +1,230 @@
+Your job is to analye a series of Reddit Comments are drawn from sbumissions related to the 2024 Queensland State Election. The comments are drawn from a collection of comments before, during and after the election itself on the 26th of October. The parties that sought election were the Australian Labor Party (ALP), the Liberal National Party (LNP), the Queensland Greens (Greens), One Nation and Katter's Australian Party. The LNP prevailed in the election, with David Crisafulli becoming the new Premier of Queensland. 
+We have identified several key issues that the major parties campaigned on during the 2024 Queensland State Election: Youth Crime (YC), Cost of Living (COL), Health (H), Energy and Infrastructure (EI), and Abortion Laws (AL). Below is a summary of each party's position on these issues:
+Youth Crime (YC):
+- LNP: Advocated for stricter penalties for young offenders, including the 'Adult Crime, Adult Time' policy, proposing that serious offenses committed by youths be met with adult sentencing. 
+- Labor: Focused on rehabilitation and prevention programs, aiming to address the root causes of youth crime through community engagement and support services.
+
+Cost of Living (COL):
+- LNP: Proposed measures such as abolishing stamp duty on new builds for first home buyers and re-establishing the productivity commission to review building industry regulations, aiming to alleviate housing costs. 
+- Labor: Introduced initiatives like 50-cent public transport fares, a $1,000 energy rebate, and free lunches for state primary school students to ease cost-of-living pressures.
+
+Health (H):
+- LNP: Committed $590 million to an 'Easier Access to Health Services Plan,' aiming to reduce ambulance ramping and hire additional healthcare workers. 
+- Labor: Focused on maintaining and expanding healthcare services, addressing hospital capacity issues, and investing in new health infrastructure.
+
+Energy and Infrastructure (EI):
+- LNP: Criticized Labor's Pioneer-Burdekin Pumped Hydro Project as financially unviable and canceled it upon taking office, opting to explore smaller-scale hydro projects instead. 
+- Labor: Proposed large-scale renewable energy projects, including the Pioneer-Burdekin Pumped Hydro Project, to transition towards 80% renewable energy by 2035.
+
+Abortion Laws (AL):
+- LNP: Stated there would be 'no changes' to abortion laws under their government, maintaining the status quo established in 2018. 
+- Labor Party: Supported the existing abortion laws and opposed any attempts to repeal or amend them. Asserts that LNP intend to restrict access to abortion services based on the views of some of their members.
+
+Analyze Reddit comments and code them based on the positions they support or oppose concerning these issues. You will output JSON, so valid values are strings or null. Use the following codes: YC, COL, H, EI, AL. If a comment's position is unclear or does not pertain to these issues, output null.
+
+Secondly identify which party the comment appears to support. Use the party code ALP, LNP, Greens, ON, KAP if this can be determined, otherwise a null value if undetermined.
+
+Output JSON as a list of objects where each object has an "id" (integer) property of the comment id, an "issue" property set to the issue code string (or null value), and a "party" property set to the party code string or null value. Null means JSON null, not a string. Values MUST be quoted, e.g. {"party": "LNP"} unless they are null, e.g. {"party": null}. Comments follow:
+
+1. David Crisafulli posted his snag on Instagram without onions. Ask yourself, is that the kind of person you as your premier?
+2. We just happened to have channel 7 turned on at the start of their election coverage, they asked the reporter in Townsville about some car accident that happened near a large polling booth up there. She said something like “The car wasn’t stolen and the driver wasn’t a juvenile” The wife and I looked at each other like “What the fuck even was that statement?”
+3. That LNP lady the ABC just interviewed was unhinged to say the very least
+4. “It’s going to take all 4 years to solve these issues” lol he is setting his voters up for the disappointment when they realise he won’t do anything he promised
+5. Every time i vote the volunteers for the greens flock to me and the lnp avoid me, i must have a look because everyone assumed correctly haha.
+6. This state finally starts seeing money from its own resources due to revamped coal royalties and it goes ahead and votes for the party that will get rid of them the first chance it gets.
+7. >MILES: A lot will happen between now and October 26. But I can guarantee you two things. >One, no one will ever call me a small target. >Two, I'm not about to die wondering. Miles made this declaration in a state speech back in August and he kept his word. Regardless of the election result, he has run a hardworking grassroots campaign. Now QLD voters will have their say.
+8. Labor would have lost this election by the predicted landslide if it wasn't for Miles turning the ship around significantly. If the old guard like Minister Dick axe him it will be the biggest Labor blunder since Beattie and Bligh decided to privatise half of Queensland's assets.
+9. Voted about 9am at Seven Hills SS (Bulimba) Very quiet that time of the morning. Fairly equal numbers of Lab/Grn/LNP volunteers and everyone was polite enough. Poor ECQ guy at the door had to think twice when I asked him if we were in Bulimba or the next seat over. Must've been too early for him too. Got a snag, my son a choccy bikkie and my wife a chocolate slice.
+10. Can confirm: the sausage and onion at the local school is class
+11. Every parliament is a hung Parliament with Cameron Dick involved
+12. Remember, if you're going to draw a dick-n-balls on your ballot, as long as you number all the boxes it will still be counted.
+13. Why is so much focus on David Speers and a bunch of pollies? Give me 4 hours of Antony Green mumbling at his computer
+14. Labor retain Bundaberg. That's a fucking huge get for them, most marginal seat in the state and they've had it swing towards them
+15. This horrid woman Laura Gerber might be one of the most insufferable politicians I've ever seen
+16. Turning into a disaster for the greens so far.
+17. Whatever LNP MP is on the ABC... wow. Nothing's a part of the plan apparently
+18. nOt PaRt oF oUr PLaN
+19. I wonder if the LNP will keep their 50c public transport fair promise.
+20. Can they fuck off with trying to start infighting in the party on an election panel.
+21. I seriously can't stand Susan Mcdonald. Nothing but a shill for the mining industry who pretends to care about farmers
+22. ABC literally doing the "oh dear, oh dear gorgeous" to LNP and "you fucking donkey" to ALP
+23. Whenever Antony Green's not on screen, all the other hosts should be asking, "where's Antony Green?
+24. Crisafuli is in another room shitting his pants because he knows his next fuckup will have him knifed even if they win.
+25. I really hope they don't dump him as leader. Guy had 10 months and did more than some parties do in 10 years.
+26. Whatever happens I do hope Miles stays on as Opposition Leader because I think he’s going to win next election once LNP mess up the State like Newman did. He definitely achieved a lot during his short time.
+27. QLD and Federal Greens need to have a hard look at their current strategy.
+28. Just voted, so fast too which was great. As I was leaving a Crisafulli sign came off the fence and viciously attacked a fellow voter. He is ok but probably traumatised for life. Imagine that face coming at you a million miles an hour
+29. https://www.abc.net.au/news/2024-10-26/queenslanders-head-to-polls-state-election-margin-tightens/104511318?utm_source=abc_news_app&utm_medium=content_shared&utm_campaign=abc_news_app&utm_content=other
+30. Hung parliament on one hand would be good but on the other hand if it's an LNP hung parliament, they'll work with KAP and PHON which is the same as having LNP majority anyway except somehow even more socially regressive.
+31. The whole "making deals" thing is a dumb fucking conversation. In a minority situation, they're obviously going to make deals. Politicians should be honest on this point, and to be fair, journalists should just tell us that's how it works.
+32. Fuck does this guy ever actually answer a question?
+33. Well the bloody tight race has churned my battery to under 10% lol, night all. Let's hope the prepoll swings aren't completely bonkers
+34. https://preview.redd.it/ngagutlr03xd1.png?width=640&format=png&auto=webp&s=17f8939ff2c9fe6424af7a239f99fb512644fc19 It's only 9PM guys lets go!
+35. Board lady is out of her depth. Speaking like a Play school presenter
+36. Antony Green cannot see how the LNP don’t form government
+37. 'we havent won back to back elections since 1986' well, don't ruin a good streak now
+38. Also, say goodbye to full preferential voting. Back to optional we go.
+39. Paraphrasing Cameron Dick. "The more they saw Crisafulli the less they liked him. I wish I could take credit for that but it was all David."
+40. Oh god Stoker into the Queensland Parliament. Absolutely horrifying this person keeps getting elected
+41. Big vision = success in Greens seats for Labor. Maybe Albo should take notes?
+42. Poor Antony doesn't sound well. Hope he can recover between now and the federal election.
+43. This board woman is such an idiot. It’s embarrassing.
+44. There's the 'its not part of our plan' bullshit again. Why not fucking answer the damn question?
+45. That big board lady needs to be fired on Monday morning. Absolutely embarrassing. Her entire contribution throughout the night was counting coloured tiles like a toddler.
+46. I wonder why they haven’t been elected back to back for so long 🤔
+47. Voted around 10:20am. There was no-one in the line, pretty unheard of. Pre-polling must've been higher than average in this area (Clayfield electorate). Democracy sausage + can of pasito $5, double win.
+48. Damn I'm glad Steven kept his seat. The guy deserves a chance for a full 4 year leadership position. Solid bloke.
+49. Some votes still to go, but looks like an LNP majority is likely, folks. A genuine shame that Queenslanders are willing to give up such a policy-rich party platform and the most progressive leader we've had for a \*very\* longtime in lieu of "Adult Time for Adult Crime" and "I want the mining industry to be free from the government that's constantly looking to find new ways to tax and regulate them", but that's democracy, and electorates are just voting for what they believe they think will be best for them. Here's hoping the LNP aren't *too* regressive over the next 4 years, at least.
+50. As always, I Hope people have ignored the ads and done their own research on the important topics. If you have, the vote is an obvious one
+51. Got two voicemails left from LNP at 9:11 pm last night. Praise Apple for do not disturb and live voicemail. Surely calling people that late alienates more than it attracts? I was trying to get my two year old to sleep at that point. Edit: Also TIL that childcare “no wakeup” policies are directly responsible for youth crime. Why is this not an election issue?
+52. Wow the greens lost south brisbane!!
+53. Honestly Queenslanders have no one else to blame but themselves when the LNP end up turning everything to shit over the next few years. They have no right to complain when it happens
+54. If you don’t know who to vote for, get the flyer from the Party you like the least and vote opposite to what they suggest.
+55. The ABC panel is being a little too keen imo to call results while also openly admitting the pre poll vote is above 50% of all votes and swings to the LNP. Not sure I’d have their confidence in calling some of the seats they are
+56. H Y P O T H E T I C A L S 😤🖐❌
+57. Planning for a review guys. Olympics are fucked.
+58. ABCs big board is basically just a way to give them panel a break instead of an ad.
+59. Wow the knives are coming out on ABC. Very bizarre when it wasnt even supposed to be close.
+60. Can we get Stoker off the TV please.
+61. Well as a slight consolation, we won't be hearing about youth crime for a few years.
+62. [deleted]
+63. The good thing about not having a plan is that technically you can claim that nothing in particular is in the plan.
+64. Well at least after a decade of trying, Kerri Anne Dooley has finally won the seat of Redcliffe. Only took 5 attempts 😂 What’s that school quote? If you don’t succeed, try and try again?
+65. Even after it's over, Speers is still trying to start infighting in the ALP lmao
+66. https://preview.redd.it/79n81jeyx1xd1.png?width=725&format=pjpg&auto=webp&s=cbfebfb4874d0b012747ed287b41a73335033374 Courier Mail exit poll
+67. I understand why politicians say "no deals". But everyone knows both parties will do everything they can to form a minority government instead of going to another election.
+68. New drinking game for people watching ABC - every time abortion is mentioned
+69. We need a banter channel for election coverage. Would be amazing to see a couple of comedians come together and just take the piss out of the whole thing
+70. An LNP KAP coalition government is fucking grim lol
+71. I have never seen anyone happier to lose an election. The man single handily saved about 20 Labor seats
+72. Sounds like he is staying on as opposition leader
+73. Even if they win it’s hard understate just how badly the LNP have fucked up this election - live across from a polling place in a marginal suburban seat & sitting Labor member has corflutes everywhere about a women’s right to choose, Labor volunteers wearing purple choice shirts ect. All the LNP corflutes are attacks on Miles - absolutely nothing about policy, even about crime… they went all in on personal attacks of a premier that has a net positive approval. Anecdotally lots of people taking Labor HTV cards but definitely live in the more affluent part of the electorate
+74. The reason for so many early seats for the LNP is because there is a statewide swing against Labor. As a result, they're going to call existing LNP seats much earlier than they would call Labor seats. Labor are actually doing better than expected.
+75. Interesting to be flicking between 9 and ABC and there's quite literally opposite results. ABC are showing LNP victors but Nine have ALP in the lead.
+76. First time in my life I am voting for the ALP. Yes, Steven annoys me and I don’t particularly like him - but Cristafulli is 1000x worse. I cannot stand his face and his policies. The fact he voted against decriminalisation of abortion says it all, as well as vowing to remove pill testing at festivals -the guy is an idiot.
+77. Voting ALP for first time in my life. LFG
+78. I'm fully expecting an LNP win. People are entitled to their vote. I just can't have much, if any, respect for people that care so little for basic women's rights, looking after children, and providing good health care.
+79. Deadset the Greens crying over the Labor party defending their seats against the Greens meanwhile all the Greens do is bitch about Labor at every opportunity
+80. Man stopped a massive swing against, great Labor leader.
+81. LMAO. DODGES THE ABORTION QUESTION AGAIN.
+82. "What's happening with the Olympics?" "Um, we will review it, give us 100 days, but Labor are shit." Lnp in a nutshell, dodge questions, shift blame, and kick the can down the road.
+83. I live in Miles electorate and for the first time in my life voting for ALP. I dislike the dude immensely, but I dislike everyone else more.
+84. Love a good democracy sausage 🌭
+85. Mining companies rubbing their hands together right now
+86. What exactly is this lady's job.
+87. Why did the LNP minister mouth "expert panel" regarding the olympics but all I heard was "friends and families"
+88. Letterbox flyers said the greens want to legalise meth and heroin. Shut up and take my first preference.
+89. Remind me to never go to Keppel. 25% One Nation ffs
+90. Fuck the LNP's media training is shocking. "It's not part of our plan" has become the headline quote of this election.
+91. "David Crisafulli has done a brilliant job" Have we been watching a different Crisafulli this past year?
+92. Here we go "I want to see those in mining invest here again" - bye bye royalties.
+93. It's my first state election since becoming a citizen. How long until results start getting announced? Edit: awesome, thanks for the replies guys
+94. Lol - this ABC reporter should be a BBC correspondent
+95. It's meaningless given the margin, but I'm really loving the small swing against Crisafulli in his own seat 🤣🤣
+96. "Lazy people don't get a chance at One Nation" - James Ashby Bold call from a party that I can only describe as so unwilling to take action the only thing telling them we're not in the 1950s is their phone generously automatically updating for them
+97. A police officer from Queensland. Uh oh
+98. Happy for the LNP to go 'no deals' in a hung parliament. Let's see if they break that one too
+99. Hopefully no one makes a deal and we get a redo.
+100. Ooof she was not happy after that
+101. I hope this woman isn’t meant to replace Antony Green one day, she’s a blithering idiot in comparison.
+102. Guys I just pulled my hammy adjusting my position on the couch. Does anyone know a good physio
+103. He can't concede without phoning David first
+104. Honesty Miles should go down as one of the best Labor leaders, did much more than people who were there 3x the time he was
+105. [https://democracysausage.org/queensland\_election\_2024/m/@-19.86784,146.6016,z5.760262](https://democracysausage.org/queensland_election_2024/m/@-19.86784,146.6016,z5.760262) none near me so I guess a trip to Bunnings on the way home, my partner will be thrilled!
+106. Love the LNP lady just straight up saying "what matters is not reality, it's how people feel". Fucking LNP politics in a nutshell
+107. I thought this was interesting... I thought Id look and see if any counting has happened yet and I came across the in-person voting attendance stats and postal voting stats. \--- Between the 14th and 25h 1,620,434 people voted in person There were 682,180 postal ballots issued but only 338,733 have been returned at this stage. The QEC pages for current enrolled numbers are broken so... Qld population is 5,460,354 and I found something that said 10% of the population is under voting age. \--- So... there is still 60.1% of votes left to either be received or made by today.
+108. ALP 32 LNP 32
+109. Going to go down to the wire on a bunch of seats - Bundaberg, Caloundra, Aspley, Pumicestone, Nicklin
+110. This feels closer to a biff than most NRL games.
+111. Sign of the times, Antony has ‘Covid voice’. Background coughing under the commentary. Everything is normal.
+112. So David, the time has come to make your position on the Olympics clear
+113. https://preview.redd.it/zhrvggxuzzwd1.jpeg?width=1080&format=pjpg&auto=webp&s=cb468c08069e9fee7a67945005ab2baab71c29ab Time to see how the ol’ QLD long term memory is holding up
+114. I feel really sick. It's the first election I've felt physically ill at the thought of the results. I will be so disgusted if LNP get in after everything but I feel.as though it is inevitable because of the absolute idiots I've been seeing spouting the same old shit. People around me I thought were reasonable have taken the youth crime thing hook line and sinker. Mind you, they have not been affected by it personally. Just reading the same old lines. I'm a young woman, married with a mortgage and a job that would have been at risk in the Newman era..I'm actually terrified.
+115. Was wondering where to place 1 of the Independents in my electorate that I hadn't heard anything about. Get to the polling place and he has a sign that mentions both Jesus and Freedom... ![gif](emote|free_emotes_pack|surprise)so happy to have seen that before I stuck him in the middle of the pack.
+116. Spiers once again being a shitbag trying to force infighting in the ALP while going totally soft soppy bollocks on the LNP all night.
+117. Got 3 screens going for everything tonight. Election coverage on one, India about to lose their first test series at home in a million years to the kiwis, Fiji vs Cook Islands in the league. Not enough eyes and possibly not enough commiseration booze to deal with the inevitable LNP win
+118. I know it's early stuff still but the thing that really depresses me is the One Nation votes being 10% of first preferences so far, that's 1 in 10 people. Ick.
+119. Whatever happens just be thankful we live in a democracy.
+120. Reminder to moderate your use of hopium so that you don't have to take too much copium later
+121. Robbie Katter doubling down very hard on criminalisation of Abortion on Channel 7. This is quite something.
+122. Lol Albanese is a net negative to Qld Labor
+123. Well done to Cleveland for giving Amanda Stoker a seat. So good. Love it. She should have to leave her inner city Brisbane home in Auchenflower and move out there.
+124. Spiers is fucking dog shit
+125. I heard a rumour that Steven Miles will announce he is training for Mr Olympia when he holds his concession speech
+126. Huge fan of Anika Wells after tonight, the only one of the panel who didnt make me cringe.
+127. I ONLY VOTE FOR PARTIES WHO LEADER CAN BENCH 100KG.
+128. Goddam Anika Fuck em up
+129. This is the 1st election that I’ve actually really wanted to vote in, unfortunately due to not being a citizen (it’s in the pipe works), I can’t
+130. Count has started. Let's go! Drinking games? What are our "shot" phrases?
+131. Greens only have 9.79% of the vote in Mcconel very early on
+132. Backtracking on nuclear lmao
+133. Wait. Did Regional QLD fuck us?
+134. "very reserved" they're going ham in the background.
+135. She's right though. Where is David lmao
+136. Ngl. I did kind of forget the whole Israel/Iran and Russia/Ukraine/NK stuff was happening while watching our election results.
+137. He’s all but called it
+138. Oh look, the Play School board lady again.
+139. Too lengthy and got bogged down on too much detail. Good start with thanking Labor. But then just get on with thanks and that is it
+140. hate this shit, can't even watch a movie without checking my phone every 3 seconds...
+141. Thanks for guiding us through the GFC Wayne
+142. This LNP dude is a fucking slimeball, stop dodging questions you LNP fucks. Whatever happened to honestly answering questions?
+143. Our energy prices are about to sky rocket over the coming years thanks to LNP axing the pumped hydro projects already in construction. Uncertainty and more government interference is exactly what our energy market needs right now....
+144. The very very early stuff coming through seems to be like the ALP is doing pretty well in the city, and getting absolutely cunted in the regions like expected
+145. Look maybe I’m thinking too hard about this, but i think it’s pretty telling LNP member on ABC when talking about their crime policy how it’s focused on 5 major crimes mentioned breaking into businesses and robbing them before breaking into homes…
+146. [deleted]
+147. If lnp miss majority do they knife David? Thats a huge fucking fail.
+148. Plan for a review. This is some veep shit
+149. Ewww Amanda Stoker got in? Rip abortions!
+150. "hell of a lot of strategy" as if he had any strategy at all lmao he said nothing of substance for 3-4 weeks and I'm not getting hopes up that that'll change across the course of his term
+151. Went to our local school to vote via the back gate, avoiding all the propaganda flyers and representatives. Had a happy coincidence where there was no one waiting, and went straight in. Top tier bake sale and sausage sizzle at exit of voting area. Apart from the triple M sauce ruining my democracy sausage, 5 star experience.
+152. Gee wiz 37% primary for the LNP just isn't going to get it done... This is going to be pretty fucking close I reckon
+153. How is James Ashby still on my TV
+154. KAP holding the balance of power is going to be so chaotic 😂
+155. No deals no deals no deals
+156. fuck what were the betting odds on a hung parliament? need to travel back in time
+157. Anyone else having issues with the ABC website? It’s showing the votes last updated as 30 minutes ago. Watching as well, but I’m anxiety scrolling too 🤷🏻‍♀️
+158. No idea how Labor have managed to hold on in Rockhampton, thought that one was gone for all money
+159. Pathetic answer
+160. Is that whispering on ABC?
+161. What the heck is happening to that lnp count? 40 - 41 - 40
+162. I will say this the courier mail has already got the knives out for Crisafulli with the articles they ran just before the election targeting him knowing the LNP would likely win. I support this and think he'll be replaced within 2 years unless he proves to be someone that can be strong on issues
+163. I'd been so glad to not hear about the Olympics the last few weeks, I'd almost forgotten that it had been such a big deal a month or so back.
+164. Robbie Katter coming in 30 beers into the session
+165. I actually reckon the greens will be down from last election based on how they’ve been absolutely cunted with every pre poll numbers that come through
+166. Suck it Yolonde Entsch
+167. Results with 64.3% counted (updated 11:19pm) * LNP 49 + 2 likely + 2 ahead (53) * ALP 31 + 2 likely + 2 ahead (35) * KAP 3 + 1 ahead * Other 1
+168. I am loving the lack of one nation banners or publicity this election season
+169. Looking at the swings to LNP... ffs QLD. Way to fuck yourselves out of a good thing.
+170. Greens disappeared bc labour was actually progressive enough tbh
+171. > Not in our plan Take a drink
+172. God I hate Deb Frecklington
+173. Oh god. If LNP has to do a deal with the Katter party we are 100% getting a vote on abortion.
+174. Womans Rights - not part of our plan
+175. What's the first 100 days of the Crisafulli government look like? Ohh we have lots on, plenty of things, lots of stuff, you know. Isn't Kerri-Anne Dooley great!
+176. So how long until Katter brings his anti abortion bill and Crisafulli says 'well it wasn't in our plan, but let's have a conscience vote' after stacking anti abortion candidates everywhere in the LNP.
+177. I do feel bad for regional Queenslanders. But if they really think the LNP will be better for them they are fucking morons.
+178. "Queenslanders voted hope over fear" cunt your entire campaign was run on fear of youth crime.
+179. Voted ALP. No democracy sausage where I was, so I made my own. I can feel it manifesting.
+180. If it is a hung parliament, the David Crisafulli LNP campaign will be studied in political science courses for years on how NOT to run a campaign
+181. Think this becomes an LNP minority government unfortunately, can't see the KAP putting their preference behind labor
+182. YES OR NO! IT'S NOT HARD
+183. Amanda Stoker is the defacto leader of the Anti-Abortion faction. 'Cherish Life' must be euphoric.
+184. Shocking how neither party really addressed the Olympic question during the campaign
+185. Well at least we can all go back now to the what is this animal, best coffee shop, and general parking/traffic posts.
+186. apparently me and my roommates have lucked out, we haven't received a single text or phone call from any parties about the election
+187. ABC have it 37-30 to LNP now
+188. I know i'm tired, but I did not understand the petrol station story
+189. Feels like the journalists have played the politicians by making alot of non issues election issues this time around
+190. Deal or no deal
+191. Jonathan on 7 needs to whip out a bong and the coverage would be complete
+192. Is the ABC News website results not updating for anyone else?
+193. Jesus. 10% swing to LNP in Capalaba.
+194. Lol Dick's face over talk of the Bruce Highway
+195. Channel 9 trying to break the record for number of people on a panel.
+196. Jesus. That Mulgrave chart is different
+197. Roll back early voting so they can sell more sausages???
+198. I'd like to repeat my sentiment from 2019: I propose to annex regional Queensland into a separate State
+199. In what world is "adult crime adult time" hope over fear?
+200. Most of the early votes seem to be coming in from mobile polling places such as nursing homes so don't think we can read into anything
+201. 30 - 33. Holly shit! Labour might have a chance at this!
+202. Anthony Green seeing a hung parliament, absolute disaster for LNP where they started polling this election cycle.

@@ -1,0 +1,149 @@
+Your job is to analye a series of Reddit Comments are drawn from sbumissions related to the 2024 Queensland State Election. The comments are drawn from a collection of comments before, during and after the election itself on the 26th of October. The parties that sought election were the Australian Labor Party (ALP), the Liberal National Party (LNP), the Queensland Greens (Greens), One Nation and Katter's Australian Party. The LNP prevailed in the election, with David Crisafulli becoming the new Premier of Queensland. 
+We have identified several key issues that the major parties campaigned on during the 2024 Queensland State Election: Youth Crime (YC), Cost of Living (COL), Health (H), Energy and Infrastructure (EI), and Abortion Laws (AL). Below is a summary of each party's position on these issues:
+Youth Crime (YC):
+- LNP: Advocated for stricter penalties for young offenders, including the 'Adult Crime, Adult Time' policy, proposing that serious offenses committed by youths be met with adult sentencing. 
+- Labor: Focused on rehabilitation and prevention programs, aiming to address the root causes of youth crime through community engagement and support services.
+
+Cost of Living (COL):
+- LNP: Proposed measures such as abolishing stamp duty on new builds for first home buyers and re-establishing the productivity commission to review building industry regulations, aiming to alleviate housing costs. 
+- Labor: Introduced initiatives like 50-cent public transport fares, a $1,000 energy rebate, and free lunches for state primary school students to ease cost-of-living pressures.
+
+Health (H):
+- LNP: Committed $590 million to an 'Easier Access to Health Services Plan,' aiming to reduce ambulance ramping and hire additional healthcare workers. 
+- Labor: Focused on maintaining and expanding healthcare services, addressing hospital capacity issues, and investing in new health infrastructure.
+
+Energy and Infrastructure (EI):
+- LNP: Criticized Labor's Pioneer-Burdekin Pumped Hydro Project as financially unviable and canceled it upon taking office, opting to explore smaller-scale hydro projects instead. 
+- Labor: Proposed large-scale renewable energy projects, including the Pioneer-Burdekin Pumped Hydro Project, to transition towards 80% renewable energy by 2035.
+
+Abortion Laws (AL):
+- LNP: Stated there would be 'no changes' to abortion laws under their government, maintaining the status quo established in 2018. 
+- Labor Party: Supported the existing abortion laws and opposed any attempts to repeal or amend them. Asserts that LNP intend to restrict access to abortion services based on the views of some of their members.
+
+Analyze Reddit comments and code them based on the positions they support or oppose concerning these issues. You will output JSON, so valid values are strings or null. Use the following codes: YC, COL, H, EI, AL. If a comment's position is unclear or does not pertain to these issues, output null.
+
+Secondly identify which party the comment appears to support. Use the party code ALP, LNP, Greens, ON, KAP if this can be determined, otherwise a null value if undetermined.
+
+Output JSON as a list of objects where each object has an "id" (integer) property of the comment id, an "issue" property set to the issue code string (or null value), and a "party" property set to the party code string or null value. Null means JSON null, not a string. Values MUST be quoted, e.g. {"party": "LNP"} unless they are null, e.g. {"party": null}. Comments follow:
+
+1. Youth crime already dropped 6% since LNP was last in power and dropped 2% between this year and last. Bet they will suddenly roll out them statistics and pretend it was all them. I actually predict youth crime will increase when they cut public service funds like they did last time because youth justice and child safety (to fields focused on that vulnerable group) will have less workers and less funding to do their jobs. Also their whole hyper care resi thing is awful. Basically jailing kids in care for months because their mental health is poor and their behaviours are big is just going to further harm vulnerable kids. Also their whole adding more police commitment is bs because labor had already committed to adding extra police but unfortunately it’s an overburdened role with no support and guess what… it’s also supported by public service so they will cut on supportive roles for police leaving more police leaving the service anddd numbers go down
+2. Shit, I hope the worst that happens is that he does nothing. It’s the dumbfuckery shit he’ll probably do thats most concerning.
+3. The irony considering the amount of corruption/crime that fucker is about to do. But it's politics so he can't be convicted of anything. Just a pat on the bum after he has robbed the state walking straight into a plum job.
+4. Newman even put it in his campaign materials no public service cuts then smashed them. I think they'll cut but it'll be by stealth, no extending temp roles, no replacing people who have left etc though. No cuts to frontline but cuts to support roles which in turn will impact frontline.
+5. This one specific promise I really hope they keep. Cutting down on consultants and building up the expertise and experience in the public service is a really good idea. The problem of course is it is completely and utterly against all of the principles of the LNP, so I really can't see them doing it at all, or in a way that really does what is necessary. It will be half hearted and a stealth way to save money.
+6. Hopefully they slap some KPI's on the public sector to get efficiencies up, bludgers out and the sector working for the people of Queensland instead of their own ideals.
+7. It looks like you shared an AMP link. These should load faster, but AMP is controversial because of [concerns over privacy and the Open Web](https://www.reddit.com/r/AmputatorBot/comments/ehrq3z/why_did_i_build_amputatorbot). Maybe check out **the canonical page** instead: **[https://www.abc.net.au/news/2024-10-24/lnp-reveal-costs-commitment-queensland-election/104510856](https://www.abc.net.au/news/2024-10-24/lnp-reveal-costs-commitment-queensland-election/104510856)** ***** ^(I'm a bot | )[^(Why & About)](https://www.reddit.com/r/AmputatorBot/comments/ehrq3z/why_did_i_build_amputatorbot)^( | )[^(Summon: u/AmputatorBot)](https://www.reddit.com/r/AmputatorBot/comments/cchly3/you_can_now_summon_amputatorbot/)
+8. Yeah nah. They don't stick by their word at all. They have the backing of a country wide propoganda network to distract and cover any bullshit and shitfuckery. "Uncle Murdoch, can I please have an excuse to rollback my promises? Oh please." Plus all you mob forget about stuff like that after a couple weeks. Like goldfish.
+9. The Sydney 2000 Olympics never sent NSW broke. What are you on about?
+10. >like our southern neighbours Sydney Olympics was a rare success story.
+11. Sending us broke = spending money on infrastructure that should have been built decades ago paid for by running out public assets and taking mining royalties.
+12. Why are you losing your job tomorrow?
+13. Government is never that efficient. You'll be ok for a while.
+14. I know, its easier said than done, but try not to worry about it. Maybe you lose your job, maybe you don't. Worrying won't change the future outcome, but it'll certainly stress you out and make you feel like shit. Try to focus on what you can control instead. In this case, reducing the time it'll take to get a new job. Eg, have your resume ready, be applying to places already. If it turns out that you keep your job, you can just politely decline interviews. And if it does happen, the faster that you can move on with life, the happier you will be.
+15. [removed]
+16. Ha! You bet your arse they will. When Newman was in, the ice epidemic was in full swing, but Murdoch media kept spruiking youth crime as the major issue right up to the election date. Then it was all Labor's fault we had an ice epidemic and it was open slather. Youth crime suddenly wasn't as much of an issue anymore.
+17. No I shouldn't wait. The Qld LNP has a record from their past terms of government.
+18. Like most Qlders will be, soon enough.
+19. Plenty of Qlders will be sooking soon enough. What's more, you right-wing nutjobs know it.
+20. What we need when the media is MIA with LNP bullshit
+21. So basically a continuation then
+22. Well, you can’t fix the cluster fuck shortages of human and physical resources currently experienced by Health, Ambulance, Police, Corrective Services and Education without spending money to fix any of them.
+23. And how was that different under Labor?
+24. You'll be having to move interstate. No way does the LNP want skilled people working in Queensland.
+25. Yeah the LNP isn't gonna do that.
+26. That is nothing to do with the Queensland Labor government. You vote but can't distinguish between Federal and state issues. BTW no Australian government has sent financial aid to Israel.
+27. It's pretty clear what I'm suggesting. This LNP government will go the way of the last one, of which Crisafuli was also a member.
+28. How's it going there?
+29. I will be messaging you in 6 months on [**2025-04-28 20:26:58 UTC**](http://www.wolframalpha.com/input/?i=2025-04-28%2020:26:58%20UTC%20To%20Local%20Time) to remind you of [**this link**](https://www.reddit.com/r/queensland/comments/1gd1nmt/wait_till_the_cuts_to_health_education_and_jobs/lu8hw2l/?context=3) [**1 OTHERS CLICKED THIS LINK**](https://www.reddit.com/message/compose/?to=RemindMeBot&subject=Reminder&message=%5Bhttps%3A%2F%2Fwww.reddit.com%2Fr%2Fqueensland%2Fcomments%2F1gd1nmt%2Fwait_till_the_cuts_to_health_education_and_jobs%2Flu8hw2l%2F%5D%0A%0ARemindMe%21%202025-04-28%2020%3A26%3A58%20UTC) to send a PM to also be reminded and to reduce spam. ^(Parent commenter can ) [^(delete this message to hide from others.)](https://www.reddit.com/message/compose/?to=RemindMeBot&subject=Delete%20Comment&message=Delete%21%201gd1nmt) ***** |[^(Info)](https://www.reddit.com/r/RemindMeBot/comments/e1bko7/remindmebot_info_v21/)|[^(Custom)](https://www.reddit.com/message/compose/?to=RemindMeBot&subject=Reminder&message=%5BLink%20or%20message%20inside%20square%20brackets%5D%0A%0ARemindMe%21%20Time%20period%20here)|[^(Your Reminders)](https://www.reddit.com/message/compose/?to=RemindMeBot&subject=List%20Of%20Reminders&message=MyReminders%21)|[^(Feedback)](https://www.reddit.com/message/compose/?to=Watchful1&subject=RemindMeBot%20Feedback)| |-|-|-|-|
+30. Inefficient public service? No such thing under Labour/s....
+31. Yep. Good idea. Get rid of all the nurses and teacher and police and then complain about how it takes you 4 days to get seen at ER for breathing difficulties and chest pain, just like it did the last time LNP got in.
+32. Yeah, the LNP did such a great job with QR last time. Sacked drivers, sacked driver tutors, and then from Opposition had a whinge about why there wasn't enough drivers when the Kippa-Ring line opened. Not to mention the NGR debacle (not a QR project, but still rail-related) where they ordered trains that weren't DDA compliant and had other network compatibility issues. Oh, and the big fuck up with the Kippa-Ring line signalling, they bought something incompatible with the rest of the network because "cheaper" and then had to spend $$$ to make it compatible. LNP record on rail is shithouse, and your friend is a moron if they think LNP will improve things at QR.
+33. Nah my first election was Campbell Newman. I just have a memory that lasts longer than 4 years. Unlike you.
+34. I has that vibe doesnt it
+35. You have an odd definition of leftism if you believe it includes Labor governments.
+36. You do realise that everyone of those were authoritarian regimes, with some people more equal than others....this, actually not in anyway true leftism, more akin to tankism. Nice try though 🙃
+37. Or maybe we are people who lived through previous LNP governments.
+38. So, you don't work in health, education or policing then.
+39. You have a point. Nothing has happened yet
+40. Yeah most comments here are obviously seq based posters. The comment about 50c fares applying everywhere I mean lol that's shear ignorance if I've ever seen it and pretty well confirms your point. I think most people think of only Cairns, Townsville etc as regional and even then have no understanding of how poor public transport is in those areas. Time for LNP to put up or shut up now though.
+41. Everyone loves when the corrupt bandits come to raid the coffers of the state to give juicy contracts to there mates but we won't see you complaining about that. "*let them know how great it is that there are 50c trains in Brisbane, and how crime is down in SEQ*" 50c public transport is available anywhere, where there is public transport. That policy may not help everyone but it helps 90% of the population where as the energy rebates help 100% of the QLD population and various other Cost of living measures they introduced, Facts aren't your strong suit it seems.
+42. They'll also be able to point to infrastructure that the debt built and be thankful that they aren't stuck in traffic, have clean drinking water and lights that stay on without burning coal. Your grand kids are the beneficiaries of the infrastructure that debt pays for, why should they not pay for it? Or, would you rather we go the LNP route and you can point to all the assets that were built and were free to use or run at cost before the LNP privatised them? I'm sure your grandkids will be so thankful that you voted for them to pay tolls on their commute so that a donor could make a profit.
+43. No different to most governments in the world, then.
+44. How many favours does David owe to have gotten that much in donations? More than all other parties combined wasn't it? How much do you think those 'gifts' are going to cost the state?
+45. I voted lab over libs, I didn't think this guy would be the best option but it's what we have. I'll wait and see what he does with his time, I'll happily take the L and have this guy be amazing at the job. Time will tell.
+46. You mean like the "cold hard facts" aka lies that conservatives told about crime in this state to get elected? Conservative = liar. They are one and the same.
+47. the LNP won the election on fearmongering you half wit.
+48. Knowing the smell implies you frequent the place.
+49. I was in Melbourne last week. Looked fine to me.
+50. Funny that. Nothing seems to be "part of the plan" it's almost like the LNP don't have one beyond looting the poor.
+51. You are legitimately delusional. Not only are you a Trump supporter (in Australia) but you also have no knowledge or insight of the policies that LNP has put forward. It's kind of sad seeing someone this unaware.
+52. What is the plan ?
+53. How else do you think he's going to pay the donors? LNP got more 'donations' than every other party combined. Who's getting paid first do you think?
+54. Into locking up 12 year old, mostly aboriginal, kids for 15+ years apparently. Away from a fair go for everyone and toward public sector cuts! Oh, and you can be sure that YOUR resources, will no longer cost anyone anything to remove from the state. You know, the resources that are yours by right, because you are a citizen of this country and should share in its bounty? Can't have taking those taxed, that's just unAustralian.
+55. WTF are you on about?
+56. You can't even spell it right mate...
+57. "Labour" have been in power you lemon.
+58. You say that because they are going to eat your face as ypu labor hacks deserve, I'll be fine though. They couldn't possibly eat my face. Not a chance.
+59. > They've only been elected like once in 30+ years lol Exactly... and what did they do in that 1 time?
+60. True, but the shadow of Sir Joh loomed for a very long time in people's minds. As in the Fitzgerald Inquiry.
+61. Yet 3 Lib leaders went to ICAC for what again? Oh yeah, corruption. It's on both sides of the fence.
+62. We didn't get surplus from selling assets this cycle. We got it from royalties that bruz the second committed to axing for his mates.
+63. I’m personally very keen to start committing some crimes to bump those numbers up. When the party wants to criminalise healthcare yet do nothing about the increasing levels of adult male violence, what’ve I got to lose?
+64. Unless they are going to do away with/suspend the charter of rights for a child, and subject them to mental health orders and employ trained guards to keep them in those resi houses, none of that is going to work. May actually turn into a full blown disaster for the LNP. As it stands now, the kids just leave the resi houses whenever they want. A lot of these kids doing crimes now are tenanted to a resi house and in care, but a lot don't come home even under "strict" bail. Also I don't believe these statistics. They are probably much worse and under reported. As a youth worker here in Cairns, I've seen what goes on, they get away with blue murder and get put back on bail every day. Myself and my colleagues have had crimes committed against us on the regular, hardly any of this gets followed up, and in some cases, suppressed by management and child safety in the form of "incident reports" that never get followed up on. I still have Police calling me for statements for incidents months ago. The system is overwhelmed. And it was already broken at the outset. Also as someone who actually did "adult time" in an adult prison at 17 thanks to this states archaic laws contrary to human rights over a decade ago, it's really difficult to watch neoliberals argue that there is no issue (these kids know how soft the law is and they don't give a rats arse because of it). I have ideas as to what could be done, and some other rich countries do some of these things, but that doesn't matter cos neither of these "major parties" will likely achieve anything for these people.
+65. DV's declining too (even moreso when you exclude far northern regions from the stats) but don't let that get in the way of ALP claiming "epidemic".
+66. That's what I'm worried about, our office runs about 10 temps (who are desperately necessary because workload has increased massively), and have had them for the last 3 years - yet they can't get made permanent. If we lose all of them we'd be fucked
+67. KPI’s aren’t always the best concept to adapt. KPI’s make your job into a game. People cut corners to hit their markers. But in saying this most organisations already have a metric for performance. Government absolutely needs to be efficient, the problem is that a lot of management at director+ level have been in government for so long and are incapable of change. Don’t get me wrong there are some great leaders but any older gov organisation has a real problem. Is there government fat. Yes! Is this fat at the front line serving the community? No! The problem with Newman is that he has literally no foresight and cut front line staff than had to deal with consultancy agencies which cost the tax payer more. I am hoping LNP adhere to this plan to invest in their public sector workers to ensure that the government keeps ambitious employees instead of losing them to the private sector. Will be interesting to follow
+68. This is a Chrisafuky premier.
+69. A lot has changed since then.
+70. Sydney was one very rare instance of an Olympics being profitable. It was also master planned out a decade in advance with a view to the ongoing economics surrounding the infrastructure for the next 70+ years.
+71. Because the LNP are going to cut health, teaching and policing to the bone and then blame the ALP for it.
+72. Without doxing myself too much... one of the areas LNP are cutting, and we knew it would be an election day thing. I'll likely have a couple weeks, but see what comes of it all. I have been looking for other roles too, but not much out there.
+73. Contractor to them. One of the first to go. Already asked to justify position. Should be okay short term (3 weeks), but after that will be a stretch.
+74. Thanks for the kind words. I have been looking at jobs since getting this one (knowing it might have been a short term thing). There's not a lot out there. Just had a family member invite me to move to Melbourne with them so might open up some other options. I'm in a secondment role. Client is desperate to keep me (not his say), but without the role there they can't. My company is desperate to keep me, but their work is quiet at the moment too. First time in a senior role, and the dude I am technically the boss of and whi had over a decades experince on me told me I was actually very impressive in my role so that's helped immensely. LNP gutted my industry too last time they were in, so expecting the same this time around. Maybe see if I can still get my old admin job back and hang out at home more fir a while (career is very FIFO and relocate based).
+75. I only got it 4 months ago. I couldn't afford to stay at my other job, and after applying for dozens of other places, it was the only one that came through. Plus the role was a couple of "ticks" on my resume that I didn't have before.
+76. Did I see you in the movie Minority Report ?
+77. Funny how they're doing just that in WA and returning a surplus Something the libs never did
+78. The last time liberals were in 14,000 public service jobs were cut
+79. What a cockhead reply. Qld heath are still crying out for nurses and doctors and paying bonuses for them to move to regional locations. Nothing has changed here.
+80. So what? Half the state want them to.
+81. The reports I get from the locals...a lot regrets with the new mess of a government.
+82. I don’t think you read my comment thoroughly. I’m referring to Queensland rail (qr)
+83. I put LNP last actually and my suburb retained ALP. So swing and a miss there champ. Im just calling out how childish everyone is acting, regardless of whether I agree with the outcome or not.
+84. Ah yes, the old "that's not true leftism" argument. hahahaha
+85. Oh the grief that was! Especially when all the bikies fucked off out of QLD. Here’s a tip for you whining pricks, our borders are no longer locked down so if you don’t like it here then please fuck off to a Labor run state
+86. See, there it continues. Do you think you are representative of Labor, the average Labor member or voter? Do you think you are winning friends or influencing people with your attitude? Can you even admit Labor did anything wrong? You lost seats held for over 100 years, and all you can do is blame the voters. Maybe you are the problem hmm?
+87. [removed]
+88. [removed]
+89. [removed]
+90. Well I dunno about you, but I'm sure no one else loves the 600 national weekly rent I'm sure no one loves the expensive groceries the expensive electric. I'm doing ok I don't rent never had a mortgage was smart and got solar and batteries early. As for your 12 year old comment where's the proof id love to see some. But as for my proof the rent is crazy expensive electric is expensive food is expensive, and your want to defend labor hahaha they are ruining our country even going to see the doctor is costing more tons of gps are charging a fee just to see them
+91. You missed the sarcasm flag there friend.
+92. so they didn't cause messes very often did they lol ?
+93. Yes usually if they in power for too long
+94. [deleted]
+95. So refreshing to see this comment - a former cairns local
+96. Hmmm I dunno if is say dv is declining but that’s from a more lived experience then looking at stats. But lnps approach definitely isn’t going to improve it. The dvo laws introduced under lnp bought civil laws into criminal policing and are part of the overworked police system. What is needed is more support in public sector and community organisations to support victims
+97. 100% agree. If there are cuts required, it needs to be in the right areas and should be targeted and based on KPI's not a blanket slash and burn. Remove dead wood and not the good operators.
+98. Have they been cut this morning?
+99. LNP hasn’t even announced budget cuts for public services yet?
+100. Are you not in a permanent role?
+101. Did you see the Newman government? The Bjelke-Petersen government?
+102. Oh, you'll be gone too. Just like last time. And ports. And good by anyone working in Worksafe, so that the Mines, and trains and construction sites can get away with murdering workers.
+103. Immediately is childishly downvoted by redditors who can hardly see the screen past the floods of tears. 😭😭😭
+104. The truth hurts doesn't it mate? it's ok, in 4 years labor will be back to mop up after Crisafulli has shat all over the carpets and wiped his ass with the drapes.
+105. "*See, there it continues. Do you think you are representative of Labor, the average Labor member or voter? Do you think you are winning friends or influencing people with your attitude?*" If you dislike the facts so much, stop responding and go tell someone who will actually care as The facts are clearly laid out on cost of living rebates and overall measures introduced.
+106. Who do you think is going to be paid off for their 'donation' to the LNP first?
+107. There's more than one way to rob a person. The LNP are good at all of them.
+108. looting isn't restricted to taxation. forcing the working class into contracts like casual work and lower wages would also be classified as looting. put them into a state of desperation, then take advantage of that desperation to profit. it's classic capitalism. We recently just put ourselves in a position where real wages grew for the first time since 2011. Not by much, but still an improvement.
+109. How's that boot taste?
+110. Sounds like you need to change those depends
+111. apathy and cynicism are virtues now i guess
+112. Someone should have told Robbie Katter then.
+113. You ignored the 132 times David sidestepped questions on Abortion? If it's a non issue, why couldn't he just say "nothing's going to change"? Because he fully intended to do an American Republican move and ban it.
+114. It is interesting to see people think an economical issue can be suddenly solved by changing the government. Les check back in 3 years.
+115. He literally wants to imprison more youths. That's what he campaigned on. "Adult crime, adult time". As for your other issues, perhaps look to the rest of the world and realise a state government really isn't control of these things. They're doing their best to alleviate pressures here in Queensland, they cannot fix a giant geopolitical and socioeconomic mess that is hurting, quite literally, every country on the planet.
+116. I considered it but I like to live dangerously.
+117. Not often, no. But when they were given the opportunity they sure took advantage lol
+118. I agree it's all broken. It's hard to condense answers for these broad topics into a format that people will actually read here on reddit, especially when it seems a lot of people would rather revel in prejudice and fear instead of conversing issues. So you'll have to forgive my tenuity at times. But to answer some parts of that, this adult person in the example should absolutely be held accountable for this brazen disregard of the law. Personally, the marijuana operation if non-commercial wouldn't be a big deal in my view. But that person should be behind bars, I've met people who've done less and done time. How this is decided is really beyond me. I will somewhat go one better (or worse I guess) and say this is very common with domestic violence perpetrators as well. Actually I'd go as far as to say DV is a much much bigger issue than we attribute to it, effectively all the resi/crime kids I've come across are victims of it, many becoming perpetrators themselves in one way or another. I'd personally have a national task force for this issue alone, but that's just me. We've made some progress on this issue, but it's very far from adequate. But now we come to the crossroads, what to do with those children, those young adults that continue to do "crime". They've lost all ambition because they have no sense of direction, no hope for themselves. They've lost all respect for an even greater number of reasons, including a lack of foundational parenting which leads to the lack of respect for authority to begin with, and a soft, yet cold, child safety and justice system. Add in all the social pressures of our modern societies, gentrification, inflation, and its easy to see why this is probably the most challenging time for an unstructured, traumitized and neglected young person to be alive. But they do need to be taught respect. They do need to be held accountable. They do need to be rehabilitated. And what we have right now from both major parties isn't good enough for any of that. Hard decisions need to be made yes, but compassion doesn't have to be lost on them either. I was one of these children once, nobody ever sees it through their eyes. And if they did they'd realise they don't see more than a few feet in front of themselves. The issues are deep, and require significant cultural change in our societies. I don't believe any "government" on their own will change that, it really does take a village to raise a child. Now more than ever.
+119. Let's start with the question "what actually is an *adult* crime?"
+120. Do you have any faith that the LNP will be able to do that? Absolutely no chance they won't completely fuck up
+121. It's not public service. It's something else. Can't go itno too much detail without doxing myself.

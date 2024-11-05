@@ -1,0 +1,213 @@
+Your job is to analye a series of Reddit Comments are drawn from sbumissions related to the 2024 Queensland State Election. The comments are drawn from a collection of comments before, during and after the election itself on the 26th of October. The parties that sought election were the Australian Labor Party (ALP), the Liberal National Party (LNP), the Queensland Greens (Greens), One Nation and Katter's Australian Party. The LNP prevailed in the election, with David Crisafulli becoming the new Premier of Queensland. 
+We have identified several key issues that the major parties campaigned on during the 2024 Queensland State Election: Youth Crime (YC), Cost of Living (COL), Health (H), Energy and Infrastructure (EI), and Abortion Laws (AL). Below is a summary of each party's position on these issues:
+Youth Crime (YC):
+- LNP: Advocated for stricter penalties for young offenders, including the 'Adult Crime, Adult Time' policy, proposing that serious offenses committed by youths be met with adult sentencing. 
+- Labor: Focused on rehabilitation and prevention programs, aiming to address the root causes of youth crime through community engagement and support services.
+
+Cost of Living (COL):
+- LNP: Proposed measures such as abolishing stamp duty on new builds for first home buyers and re-establishing the productivity commission to review building industry regulations, aiming to alleviate housing costs. 
+- Labor: Introduced initiatives like 50-cent public transport fares, a $1,000 energy rebate, and free lunches for state primary school students to ease cost-of-living pressures.
+
+Health (H):
+- LNP: Committed $590 million to an 'Easier Access to Health Services Plan,' aiming to reduce ambulance ramping and hire additional healthcare workers. 
+- Labor: Focused on maintaining and expanding healthcare services, addressing hospital capacity issues, and investing in new health infrastructure.
+
+Energy and Infrastructure (EI):
+- LNP: Criticized Labor's Pioneer-Burdekin Pumped Hydro Project as financially unviable and canceled it upon taking office, opting to explore smaller-scale hydro projects instead. 
+- Labor: Proposed large-scale renewable energy projects, including the Pioneer-Burdekin Pumped Hydro Project, to transition towards 80% renewable energy by 2035.
+
+Abortion Laws (AL):
+- LNP: Stated there would be 'no changes' to abortion laws under their government, maintaining the status quo established in 2018. 
+- Labor Party: Supported the existing abortion laws and opposed any attempts to repeal or amend them. Asserts that LNP intend to restrict access to abortion services based on the views of some of their members.
+
+Analyze Reddit comments and code them based on the positions they support or oppose concerning these issues. You will output JSON, so valid values are strings or null. Use the following codes: YC, COL, H, EI, AL. If a comment's position is unclear or does not pertain to these issues, output null.
+
+Secondly identify which party the comment appears to support. Use the party code ALP, LNP, Greens, ON, KAP if this can be determined, otherwise a null value if undetermined.
+
+Output JSON as a list of objects where each object has an "id" (integer) property of the comment id, an "issue" property set to the issue code string (or null value), and a "party" property set to the party code string or null value. Null means JSON null, not a string. Values MUST be quoted, e.g. {"party": "LNP"} unless they are null, e.g. {"party": null}. Comments follow:
+
+1. Can’t wait for the “how could labor do this to us?” When the mining tax is wound back, renewables campaigns are ended, electricity prices skyrocket, no more energy relief payments, public transport fares go back up and health/teachers etc get gutted.
+2. At what point do we take a page from France's book and fucking riot.
+3. Well we are fucked.
+4. Fuck you: - Bonney - Broadwater - Buderim - Burdekin - Burleigh - Burnett - Callide - Chatsworth - Clayfield - Condamine - Coomera - Currumbin - Everton - Glass House - Gregory - Gympie - Ipswich West - Kawana - Lockyer - Maroochydore - Mermaid Beach - Moggill - Mudgeeraba - Nanango - Ninderry - Oodgeroo - Scenic Rim - Southern Downs - Southport - Surfers Paradise - Theodore - Toowoomba North - Toowoomba South - Warrego - Whitsunday May you all be the first to reap the consequences
+5. QLD really needs to bring back a Senate
+6. Welp. Back to being a Backwater State.
+7. Queenslanders (in parts) are morons who have forgotten the RORTS this party was involved in... Unbelievable how stupid they are...
+8. This is just a really bad dream right? I don’t understand. How do I wake up from this nightmare? I feel so angry right now.
+9. Booooo 👎
+10. Good luck QLD.
+11. Little Weasel Man
+12. Guess the next 4 years will be a step backwards to shitville.
+13. I can’t believe we voted in a party who wants less reproductive rights, tax cuts to the billionaires who run the coal industry and putting kids in jail instead of feeding them. Well done Queensland.
+14. Gutted to see the results. Life is about to get harder for a lot of people, and we have the majority of the state to blame for that!
+15. are you fucking shitting me right now
+16. David “fake country” crisafool
+17. God fucking damnit!! Now I am pissed at the old couple I saw take an LNP brochure on their way in - THEY DID THIS 😤
+18. People are generally disapointing 😒
+19. Cant believe people with a networth of anything under 3 million vote for the LNP legit lower class voting the LNP is laughable
+20. Reddit clearly has a lot more labor voters than lnp. Despite the all the comments heavily labor biased, lnp voted in.
+21. I hate this place
+22. Are you fucking kidding me queensland???
+23. Goodbye 50c public transport, a discount on my Ergon bill and also maybe to my health care rights
+24. Queensland really is the Floridumb of Australia.
+25. Honestly think it has less to do with LNP being good and just ALP being so hated.
+26. That’s a disappointing result. I imagine Crisawhosits will work hard to regress Queensland and maintain our reputation of being a few decades behind the times.
+27. What a smug looking cunt. This election makes me wanna vomit in my mouth. Regional QLD and particularly my family, fuck you. All I can say.
+28. For anyone lurking here who voted these morons in: go fuck yourself.
+29. I can't wait to watch this dickhead when KAP brings up the abortion bill and he allows a conscience vote. That HAS to be political suicide - it was the one thing he was constantly hammered on, and wormed around answering. I hope Miles sticks around as it's going to be like shooting fish in a barrel
+30. God save QLD, we are f***** now. Remindme!in 4 years.
+31. Well there goes QLD to shit once again.
+32. Thanks Rupert.
+33. fuck
+34. ![gif](giphy|OUl0zLzPb2BNe)
+35. Gross
+36. Qld, wtf have you done
+37. I actually have to hand it to Miles, he ran a good campaign and did his best to claw back the absolute hiding Labor were looking at 6 months ago. He was put in the role to take the fall and felt the brunt of voters negative feelings around both AP and the Federal government. I feel the divisive federal Voice campaign and the ripples from it are still having an impact. The displeasure with the Federal government is still top in voters minds. LNP just had to autopilot it in, and that's basically what they did. It will probably end up a 53 seat win which is a strong win and mostly on the back of the federal swing. The Greens have been all but wiped out in Queensland. No doubt they can thank Lydia Thorpe for this and her continued antics. Bad timing for them. So, now instead of a government that's a little bit left, we have a government that's a little bit right. This sub needs to show some resilience. Behaving like this is the first time you've faced adversity. You'll be ok. Good luck LNP, don't fuck it up.
+38. Take note of family and friends gloating about the LNP victory. In 12 months time when shit is hitting the fan, you'll be hard pressed in finding someone to admit they voted for them.
+39. This slimy motherfucker is going to put the state back 20 years, enjoy it.
+40. I needed free school lunches 😭
+41. Not to sound like a tin foil hatter (I’m not) but at this stage I’m starting to wonder if our votes even matter. If power and money can sway votes, as mentioned in other comments I’m seeing, maybe we were destined to be doomed regardless.
+42. Wow. Just wow. You'd think from this sub there would have been a Labor landslide. Did ya'll forget to vote?
+43. Absolutely hollowbrain move to vote the LNP in. I knew there were always gonna be morons out there but a majority of morons?
+44. Well that's a disappointing thing to see first thing in the morning
+45. I'd give it THREE NANOSECONDS before the newly minted LNPs tell us that the reckless spending stops right now. What they really mean is that we are changing the focus of recklessly spending far more than we're earning and by reducing taxes on business and the wealthy there will be far less 'given away' to the halt, the lame and the lazy. I give you the new movie 'Back to the Future 2024', where nothing is as it seems, but we've somehow 'seen it all before'.
+46. "Lead" \> Control.
+47. Congratulations Queensland, enjoy your 4 years of being railed by the LNPenis .
+48. Absolutely devastated and scared for what we're all in for. I sincerely hope these LNP voters are the first to have their jobs cut so that they never make this mistake again. Steven Miles, one of the best political leaders I've seen, deserves a congratulations for saving Labor from another 2012 wipeout.
+49. Really thought Queensland would pull through this run, check my comments. Truly do not care from here now what happens to this state. Labour did what they could to actually help QLDers but they showed that actually having a state government that helps their state is not worth keeping on cause "we've had them for a few years". Back at 2019 federal election level. Why bother from here trying to help anyone, all you'll get it voted out by psychos who think helping others is a detriment. Sucks to say, but we reap what others sow. Shame that it's not even been ten years since the last failure of a LNP government + abortion rights on the line was worth anything. Got what you wanted QLD, enjoy it.
+50. The blind bought the crime agenda. Watch it go backwards under Libs
+51. RIP 50 CENT FARES.
+52. QLD fucked around, now they get four years to find out.
+53. bleak future ahead
+54. I appreciate people’s right to choose but I seriously wish people were critical thinkers. QLD chose - someone who deflects questions (I know Miles does this too but not to the extent that Chrissafulli does) - a party that didn’t reveal their costings. “We’ve got concepts of a plan” - a party who’s deceptively used statistics to make claims that aren’t true (Youth crime) Other than crime in regional areas, I seriously don’t know a good reason why you would vote for a party like this. I don’t think, “it’s time for a change,” is a good reason. I’m not really surprised at the result though, most people aren’t critical when it comes to politics. That’s how Trump got elected.
+55. Redraw!!!!
+56. Yikes
+57. Can somebody please ELI5 how he and the LNP are going to ruin the state? /genq
+58. Yikes
+59. This is so embarrassing
+60. Queensland... shame on you
+61. 🍿
+62. We’re about to find out exactly how much of a slime ball he is
+63. We are fucked.
+64. How the fuck, this state is cooked
+65. Well done QLD, can’t help but shit in your pants.
+66. I wonder if they’ll criminalise medical cannabis in Queensland ? Seems like a conservative move.
+67. Campbell Newman all over again. But Newman got so fucking hated on his term, he lost election. I am one of them, because he cut the emergency service cadets, and when turned 18 I was happy to vote him out.
+68. Fingers crossed the anti-abortion stuff really wasn't part of the plan.
+69. Well guess it's time to go work in the mining sector.
+70. Is anyone surprised? There was zero chance Labor was winning this time.
+71. Disappointing as all shit, and as a woman, fucking terrifying.
+72. Nothing like positive reinforcement for running a campaign based fear mongering. More of the same in the future I guess.
+73. If everyone hates him! How tf did he win? Boomers are still a majority population ey?
+74. Literally fucking disgusting, I am so fucking disappointed in my state
+75. Well, you're all fucked now, aren't you?
+76. Whata bunch of flogs.
+77. There goes the neighbourhood
+78. I think I’m legitimately going to cry. FFS, Queensland, what have you done?!?!
+79. I put greens 1, labor 2 and LNP last but what’s done is done now and it’s time to try and make strawberry jam from pig shit. So on that note I see people talking about LNP being the type to privatise everything. Having little knowledge of the market what do I need to keep an ear out for IPOs?
+80. Typical of QLD. Right-wing, arse backwards state.
+81. it's so fucking over. for someone talking about people not buying labor's fear, he sure did spend A LOT OF MONEY on nothing but a fear campaign to win this election
+82. It’s the nearly dead’s that did this. There should be a ban on nearly dead’s voting
+83. Oh well, we'll get what we deserve now.
+84. We're fucked.
+85. Is there anyone here who voted for the LNP? I'm genuinely curious why. It seems like they're set to make things worse for people while benefiting corporations that donated large sums to this election. Were you paid to vote for the LNP, or were you just dissatisfied with the current state of things in your area? Have you looked at the LNP's agenda? Things don't seem likely to improve
+86. What a cunt.
+87. Time to leave QLD it was good while it lasted
+88. Congratulations Qld….. welcome back to 1943.
+89. There was so much pro labor, anti LNP sentiment in this sub for the last few weeks I’m surprised you’re all still kicking this morning. I don’t think I’ve ever seen so much pro-labor propaganda in one sub ever before. Usually it is a pretty nice split here and we’re all allowed to talk about who we vote for and why but I don’t think anyone expected the huge amount of bias there would be here in this sub, specifically. Everyday there was a new post about something the LNP had “lied” about or done. Worst thing is you just label everyone an “uneducated boomer” if they were voting for someone you didn’t like or agree with. Which is pretty fucked and not the way it should be. It’s a good lesson to respect everyone and their vote and to at least understand that last minute scare tactics, abuse, bullying and reddit manipulation isn’t going to get your “progressive”, union loving, long in the tooth, merry band of labor criminals another 4 years in office. All politicians are pretty fucked imo, but sometimes change is needed. It’s just too bad we are fucked for choice. See you at the next state election! Edit: typo
+90. What a disappointing result 🫤
+91. Gross.
+92. What the actual fuck.
+93. Well QLD has always been a strange state when it comes to elections. I don't think any other voters in the country are more prone to self harm than Queenslanders... Hopefully he keeps his hands off the healthcare system and public service, but history shows otherwise. Crisafulli was a senior minister in the Newman government and is on public record saying he believes it was a good government. He's going to scrap the mining royalties tax which immediately makes QLD billions of dollars poorer which begs the question, how will he pay for what he wants to do? And again history shows a decimated public service... We get the leaders we deserve, and QLD deserves everything it's about to get over the next 4 years.
+94. Well that's not good news for future me
+95. Well fuck, what a shit head line to wake up to
+96. Am I the only one who thinks the Olympics are really going to be the one who suffers from what will more than likely (hopefully) be a one term LNP? They're going to spend way more money on the 'cheap' option like the QEII or something, then by the time we can change anything about it it'll be too late for another government to do anything about it.
+97. Well Mum, I hope you're happy. I'm sorry you shake your head and look at me with utter disgust when I tell you I've always and will always vote Green and hope for a more social world. You claim to be progressive, but you and your cohort vote for the right. Shame. How fucked are we?
+98. Jordy was right, Queensland you're a bunch of bogan morons.
+99. Well fuck![gif](emote|free_emotes_pack|sweat_smile)
+100. We are fucked
+101. 70 years behind. Welcome to the new QLD.
+102. Sorry to intrude on your circlejerk. I'm just here for the salty, delicious leftist tears.
+103. He ll take away 50 cent fares then make the coal companies pay less royalties
+104. Good job QLD. Try not to infect the rest of us.
+105. Was feeling quite sad about leaving Qld next year to return overseas, not so much now
+106. Well.. we are fucked. What fucking moron voted for LNP?
+107. As a trans woman, every one of you who voted LNP voted that I have no right to live.
+108. The voters always get it right……except when your side loses.
+109. Reddit echo chamber at it again. You’ll thought Labor had it in the bag 😂😂😂
+110. Crisafulli’s speech was good. He seems to have a level head.
+111. [deleted]
+112. "You get what you deserve"
+113. Wonder if it too late to move to a different state..
+114. Fuuuuu
+115. ![gif](giphy|1msBxr3WRfkBHN3Axb)
+116. Ya'll are soooo fucked lmao.
+117. Ohh well looks like I will be having that early retirement now just hope it will be a good “Golden Handshake”.
+118. Lots of screeching in here.
+119. This little weasel rat fuck?
+120. [deleted]
+121. Might as well rename our state to 'Tsarinagrad Oblast', because we are now one step closer to becoming Russia. Edit: damn, lots of Russian imperialist apologists here, judging by the downvotes. Likewise I won't back down. Glory to Ukraine! 🇺🇦
+122. Please tell me this is a shitpost.
+123. Fucking IDIOTS.
+124. Such a punchable face
+125. Fuuuuuck. This is so dumb.
+126. Absolute yuck
+127. QLD fools. Enjoy your authoritarian. War is coming.
+128. [deleted]
+129. I for one welcome our new LNP overlords! ![gif](giphy|yDsImXgxxc7jW)
+130. What a fantastic & unexpected result for Qld. The biggest factor to cost increases is lack of productivity. Things costing too much because they take too long or are too in-efficient is the critical issue. Let's hope the union movements grip can be further weakened as that is a huge source of cost increases. Something as simple as cost blow outs on apartment site projects directly translates to more cost being added to the bill for the buyer and more pressure on the housing crisis. Unions mandating ridiculous policies and causing time blow outs directly increase cost of living. Back when the Toowong Village redevelopment was being done, 1 shop keeper was forced to accept an $18,000 price increase for tiling because the union wouldn't allow a non union tiler on site. The shop was no bigger than 40 sqm. This was early 2000. Now times that by X. The numbers are eye watering. No rational person would argue against the fundamentals of the ideals of unions protecting workers rights and safety but what's been transpiring due to the Labor facilitated honey pot has been nothing short of disgraceful and costing everyone of us. Crisafaullis speech last night clearly made reference to the public service acknowledging that many probably didn't vote for him. He said outright that the fear campaign of Labor re mass sackings was just that and all that is required is productivity that delivered for Qlders. That seems fair and balanced. That's the standard my employer demands on me when I goto work everyday. Not something we are used to in this state. The inability of Cameron dick and for miles to even graciously acknowledge the fact that 10% more Queenslanders in their primary vote, voted for the LNP than for Labor clearly shows the lack of grasp of reality that had besieged this lackluster government since pallet jack destroyed the trust between government and citizens through the Covid debacle. 50 cent bus fares (what a joke. Like $1 isn't the same result? And it could have doubled the revenue - another clear example of the stupidity of decision making at the highest level) are staying but I wish they would be increased to $1 as we are running at a loss. Crisafaulli is on record with his plan. Let's hope and wish him well as that result would be even more amazing for us all.
+131. Good, can we get some more police now?
+132. C'mon Miles, time to concede defeat yet? His ego last night made him look ridiculous, even his own party faithfuls were shocked he made it all about himself instead of conceding. And he even said LNP won't make a majority government...ummm, they just did. When will people see through the benchpressing, sandwich-making facade that he created to try and win votes. Happy day today!
+133. How about the out-going premier? His speech was that of a poor victory speech - self-flagellating, lacking a modicum of grace, taking the opportunity to take pot-shots at DC, all the while erroneously declaring that the LNP cannot form a majority. Crisafulli showed much more grace, did not say a negative thing about Miles and tried to reassure the public sector who are clearly worried about the consequences from a previous LNP government. One speech was that of a premier, the other was one from nothing but an attack dog.
+134. Gross
+135. I’m honestly quite disappointed in the quality of the responses in this thread. Most clearly, a large number of you have not read, listened or looked at anyone’s party other than the one you were going to vote for anyway. Then you come on here and doomsay the next term of parliament without any knowledge of what you’re talking about. Honestly, I’m pleased they made a majority of seats and we won’t have to be dangled by the Katters or the Greens. Both of which have zero idea of how to actually govern. I hope they have learned from the Newman era and don’t try and do too much too soon.
+136. Lol! Once again Reddit being so out of touch with the real world. It’ll be hilarious next month to see reactions when Trump wins as well.
+137. Great outcome for QLD and we now have a chance of getting back on track as a state.
+138. Excellent news. Well done, Queensland.
+139. Congrats on the sound decimation of the corrupt and inept labor government. So good to see the greens absolutely wiped off of ass of this once great state all. Federal next see you later terrorist bandt!!
+140. Thank fuck, this state is going in the right direction.
+141. Please Aus don’t turn to shit , is Kiwis look up to you since half of us voted our three idiots in office
+142. Change can be a good thing - time will tell whether or not he’s up to the job. Although, we all know his campaign about tougher sentences for teenagers was full of shit, even though it was a nice thought. Dreams are free, reality costs.
+143. [deleted]
+144. I mean, yes he's rubbish, but it could have been worse. Giggles could have won
+145. Definitely keeping his head down today.
+146. 90% accurate ay
+147. How could you do this to us Jack!
+148. Lol, amazing u/
+149. Heard he is being taken out back old yeller style
+150. This was the biggest issue for me. It was just good policy if price goes up royalties go up. Now people want to give billions of dollars a year back to the coal mining companies so we can check notes.... Lock kids in detention for extra long periods for theft. Literally the only slightly fleshed policy they had.
+151. Can anyone in good faith here explain the rationale behind even less of our natural resources benefiting the public? Do they think it creates jobs? More tax in other ways?
+152. The guys a turbocunt.
+153. VAD will be next. I woke up, checked the vote count, and for the first time I cried when I saw who's won. We've actually made real progress with our rights and we had some hope for the future (not a hell of lot, but we were inching there) and it's going to roll back in probably three months. I've never been scared when a government got in until today. What a feeling. I don't think we're supposed to feel that in a first world country.
+154. He has some sort of martyr complex putting up legislation knows no one will vote for him
+155. Yuk.
+156. Don’t stress it won’t happen. You will all be shocked in a few years.
+157. Laughing all the way to the retirement home
+158. Don’t need to worry about abortion rights once you’ve gone through menopause.
+159. Let’s hope no one in my household needs an ambulance in the next four years. Stupid pricks.
+160. 💯 mine too.
+161. Not with that attitude.
+162. That's definitely more of a federal issue in terms of rent caps and costs. They'll be less helpful for things like bad landlords trying to screw people in bond though.
+163. Imagine being blamed for something that happened worldwide under all governments.
+164. They did well to pull it back and stop them getting a huge majority. But incumbency sucks right now all over the world. I hope they keep Miles and that he's given federal Labor some ideas.
+165. I think what happened to Campbell Newman will deter then from going the full Newman!!! No- one wants to be a one term government.
+166. saw this coming when everyone and their mother started moving from nsw
+167. Rightly or wrongly - it’s state politics they’ve got nothing to do with it ffs. It’s a global crisis it’s not localised to bogans in Queensland!
+168. I’d expect they learned from Newman. Even the other Libs were laying into him on Sky last night.
+169. It's one term, we're all screwed but he's not going to last.
+170. Most people want Newman on steroids. But agree that it’s unlikely
+171. Very rightly blamed.
+172. The Free Lunches for Schools was one of the best Election Promises I had ever heard, so sad it wont happen this election cycle. ![gif](emote|free_emotes_pack|cry)
+173. I'm really looking forward to seeing him as opposition leader
+174. He’s a great guy. I also really hope he gets to stick around.
+175. Palaszczuk absolutely fucked them and then went on sky news to twist the knife. She's not my kind of Labor but I always admired her ability to run down the middle and reach lots if different people. But she absolutely fucked them and should have left earlier.
+176. I doubt things would be different if she moved earlier. The fact is labor didn't effect enough of the change the voters wanted to see on the major issues, particularly regional ones. The stupidity is thinking the new government who's policies are "trust me, we'll be great, because we're not them" is going to be better.
+177. He’s just not an electable guy if you’re not team red. In parliament he’s acts like a smarmy school kid, when asked questions by the media he struggles to pull together a confident answer. Surely labor could have put forward someone else.
+178. As the little Mexican girl says “Why not both?”
+179. The cancellation of the drug safety programs for schoolies, and the repealing of the 3 strikes rule for small amounts of substances.
+180. Why do those first when you can get rid of mining royalties and gut the health system and then do those?
+181. Don't stop there...repeal 'women's voting rights'...should make it easier for them next election. Can I just add....what fucking moron women out there voted for a party who wants to control their body. Seriously.
+182. Out of curiosity, whats bad about privatisation of public sector? I just wanna learn
+183. Can't wait to hear the cries of how could he do this from the people who voted for him when he was forced to answer in the affirmative once, and avoided the question 100+ times outside of that.
+184. They wont be criminalising abortion and you should probably check the Bligh government’s record on privitisation before attributing that M.O.
+185. A friend who is lnp member and works in QG says they won't do the staff cuts right away so my prediction after next finyear

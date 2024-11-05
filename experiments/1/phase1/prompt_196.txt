@@ -1,0 +1,177 @@
+Your job is to analye a series of Reddit Comments are drawn from sbumissions related to the 2024 Queensland State Election. The comments are drawn from a collection of comments before, during and after the election itself on the 26th of October. The parties that sought election were the Australian Labor Party (ALP), the Liberal National Party (LNP), the Queensland Greens (Greens), One Nation and Katter's Australian Party. The LNP prevailed in the election, with David Crisafulli becoming the new Premier of Queensland. 
+We have identified several key issues that the major parties campaigned on during the 2024 Queensland State Election: Youth Crime (YC), Cost of Living (COL), Health (H), Energy and Infrastructure (EI), and Abortion Laws (AL). Below is a summary of each party's position on these issues:
+Youth Crime (YC):
+- LNP: Advocated for stricter penalties for young offenders, including the 'Adult Crime, Adult Time' policy, proposing that serious offenses committed by youths be met with adult sentencing. 
+- Labor: Focused on rehabilitation and prevention programs, aiming to address the root causes of youth crime through community engagement and support services.
+
+Cost of Living (COL):
+- LNP: Proposed measures such as abolishing stamp duty on new builds for first home buyers and re-establishing the productivity commission to review building industry regulations, aiming to alleviate housing costs. 
+- Labor: Introduced initiatives like 50-cent public transport fares, a $1,000 energy rebate, and free lunches for state primary school students to ease cost-of-living pressures.
+
+Health (H):
+- LNP: Committed $590 million to an 'Easier Access to Health Services Plan,' aiming to reduce ambulance ramping and hire additional healthcare workers. 
+- Labor: Focused on maintaining and expanding healthcare services, addressing hospital capacity issues, and investing in new health infrastructure.
+
+Energy and Infrastructure (EI):
+- LNP: Criticized Labor's Pioneer-Burdekin Pumped Hydro Project as financially unviable and canceled it upon taking office, opting to explore smaller-scale hydro projects instead. 
+- Labor: Proposed large-scale renewable energy projects, including the Pioneer-Burdekin Pumped Hydro Project, to transition towards 80% renewable energy by 2035.
+
+Abortion Laws (AL):
+- LNP: Stated there would be 'no changes' to abortion laws under their government, maintaining the status quo established in 2018. 
+- Labor Party: Supported the existing abortion laws and opposed any attempts to repeal or amend them. Asserts that LNP intend to restrict access to abortion services based on the views of some of their members.
+
+Analyze Reddit comments and code them based on the positions they support or oppose concerning these issues. You will output JSON, so valid values are strings or null. Use the following codes: YC, COL, H, EI, AL. If a comment's position is unclear or does not pertain to these issues, output null.
+
+Secondly identify which party the comment appears to support. Use the party code ALP, LNP, Greens, ON, KAP if this can be determined, otherwise a null value if undetermined.
+
+Output JSON as a list of objects where each object has an "id" (integer) property of the comment id, an "issue" property set to the issue code string (or null value), and a "party" property set to the party code string or null value. Null means JSON null, not a string. Values MUST be quoted, e.g. {"party": "LNP"} unless they are null, e.g. {"party": null}. Comments follow:
+
+1. Who has any actual clue which way that one's going to go. I'm not prepared to even guess
+2. That’s what they said last time round. How did that go
+3. As a millennial, I can honestly say you nailed it.
+4. Yeah when I learnt recently of Queensland's push into renewables and the timeline of how quickly the state is meeting the Paris climate agreement and also the speed at which the state will be 100 % renewables - i was shocked And also frustrated. Labour has no positive media apparatus in its corner, and it shows. This information should be publicly known by every Qlder, not some massive shock to everyone. Especially someone like me who try's to keep their finger on the pulse of state and federal government and also world politics. Labour needs to have reddit account and whatever other socials accounts, posting updates on their actual policy developments. They do so much and push so hard against constant opposition to progress and change, and its the silence and lack of awareness of the public that does the most damage to their re-election, IMHO. The amount of times I see older or less intelligent people say "Labour does nothing " is fucking absurd. It's as if some people think - if they aren't raping and pillaging the coffers and the people ; they're doing nothing
+5. And where I am, the lower social-economic areas historical voting patterns always favour conservative/cooker/fear-based campaigns. So obviously bombarding the already traumatised with negative messages during an election campaign is successful. But is it ethical? What a silly question, I know.
+6. Steven miles is the best labour prime minister in the country hands down but you can still vote green one and labour two and double your vote with our preferential system please my friend
+7. That’s our PM. The message is that’s he will be replaced by a patriot. A great man who used to protect QLD’ers!!
+8. He'll need to if they don't get a majority
+9. So sick of old people and uneducated individuals holding back freedoms and progress.
+10. One can only hope
+11. With that kind of luck, you’d be doing Queensland a favour!
+12. He's not even the biggest traitor of the two last PM's. That belongs to Mr 'I'm appointing myself minister of everything because I can'.
+13. I don't think federal politicians really draw messages from the results of state elections. You'd be better off writing to him directly.
+14. I think you forgot "Mr. I don't hold the hose because I fucked off to Hawaii while Australia burn"
+15. You’re hard to follow, Albo would be replaced by someone who used to protect Queenslanders? Who is that?
+16. He specifically said that he would not try to form a government if he does not get a majority.
+17. No mate, the uneducated ones are ALP and Greens voters because they give them the free shit, i.e. welfare and stuff.
+18. People who you disagree with on legislation aren’t uneducated lmao. Cry
+19. We've had some horrible prime ministers we've had some with horrible intentions looking at you John Howard and Medicare but Scott Morrison was the first truly evil prime minister we ever had
+20. Also known as the dishonourable Mister "I don't hold a hose"
+21. I wore my jordies ministry shirt to vote 😂
+22. The former QLD cop of course: Dutton! Affectionately known as potato head!
+23. he says a lot of things
+24. Haha that's what they've both said and it's stupid as fuck because if neither get a majority they'll need to do deals
+25. Oh look found the troll.
+26. Shit maye, you're gonna be upset when you find out about all the welfare businesses get in the way of subsidies
+27. Do you honestly not believe in welfare?
+28. Let's not acknowledge someone with -100 karma points! They clearly aren't very intelligent 😅
+29. Haha solid cooker take that one
+30. Dutton is notoriously cooked. So cooked that even the cops don’t want him any more.
+31. All politicians say a lot of things.
+32. They wouldn't "need to", you just assume that's what they would do.
+33. So calling someone not voting ALP as uneducated is not trolling? Are you going to be OK?
+34. Do you really believe this? Can you share some examples of this business welfare? It's mostly red tape.
+35. Sure do, as a hand up, but not as a hand out. If you are physically able to work then there should be no reason you should not contribute to the tax base.
+36. Reddit is a left-wing circlejerk cesspool. That's why he has -100 karma. People can't accept being told the truth.
+37. Hahahahahahahahahahaa
+38. And if you can't find a job? Then what?
+39. You think anything this loser says is true? Maybe get off the internet and pick up a book. My God, Queensland really is backwards 😂😅
+40. Ok, so you can't. Got it!
+41. Then keep looking. Maybe reduce your expectations of what job you want, i.e. start at the bottom and work your way up. Go back to school and re-educate yourself. Move to where there are more jobs. If you need more education or training then the government will pay to do this. The support is out there. It is not hard to get a job and those who say they can't find one are not serious about finding one.
+42. Look it up pal. Google "how subsidies cost you tax dollars" or something. I'm not ya mum and I'm not here to educate you on basic shit.
+43. Minus 100 profile karma . Do you ever get tired of always being wrong ?
+44. and how exactly are people supposed to afford to do any of this without a job or welfare? government support exists, but that support doesn’t make it free.
+45. You were expecting them to reply this level of common sense?
+46. It's not basic shit because it's not real. There's a BS number suggesting that morning companies get $10b in subsidies, but it always boils down to their receiving the fuel excise rebate. The excise is a tax on fuel to fund public roads, applied to users of public roads. Mining companies (and farmers) don't need to pay the excise because they don't use public roads. This is a subsidy in the same way that I'm subsidized by not paying tobacco excise (because I don't buy tobacco), i.e. it's not a subsidy at all. So what real subsidies are there?
+47. Having minus 100 profile karma is because Reddit is a left-wing circlejerk cesspool.
+48. Who is saying I am wrong? You and your ilk? Your crew is the minority in Qld so "wrong" may not be correct.
+49. What's an excise on fuel have to do with a roads? Can I get a tax refund if I only put fuel in my generator?
+50. You got issues mate.
+51. Nah it's because you're always wrong
+52. Look it up pal. Google "how does fuel excise work" or something. I'm not ya mum and I'm not here to educate you on basic shit.
+53. I'm not the one with the -100 karma. And it is not because he's always wrong. it's because Reddit is a left-wing circlejerk cesspool. You haven't said anything to back up your point, but every comment on this sub in support of the LNP is downvoted to oblivion. That certainly backs up my point.
+54. You're the expert pal. It is pretty simple, just you want to jump through hoops to confuse the obvious that a subsidy is just welfare.
+55. Yeah a subsidy is welfare, but not paying a fee which doesn't apply to you isn't a subsidy. To answer your question, if you were buying fuel to run a generator for a business purpose, yes you'd be able to get the credit for the fuel excise. Provided you do whatever paperwork is required. The basic conditions are (a) business, and (b) not used for driving on public road.
+56. What part of the fuel excise TAX is a fee mate
+57. Replace "few" with "tax" mate, same difference. If I sell my home and don't pay Capital gains tax, because that doesn't apply to family homes, is that a subsidy? Obviously no, but if you want to be disingenuous and misleading then of course yes it is#
+58. are you a business selling your PPOR?
+59. Is that you David? LNP are just a mob of cunts.
+60. It's not that I hate LNP, it's just their regressive direction and it's Crisafulli. I worked with him in Townsville before he won Mundingburra. I wouldn't trust him with my lunch money. There is no way I'd trust him with the state.
+61. Perhaps because if you're: * A woman, there's a possibility you'll lose the right to choose to have a life saving abortion * A teenager or young adult, you could be locked up for holding small amounts of drugs meant for personal consumption * A tax payer, you'll be supporting a budget in the red because coal taxes and royalties will be removed * An energy consumer, you'll be paying more in the long run as base load coal generation is more expensive than renewables firmed with storage per kw/h * A consultant, you're faced with uncertainty when tendering for public service work Basically, if you're not in the coal lobby then you've got little to be happy about. People in here are just venting their un-happiness that vested interests by the media and big business can be this effective against the public to the point that people will vote against their own personal interests.
+62. Labor's already doing lots of things to target crime, and have already changed various processes to directly target youth crime. So when the LNP ran a campaign on youth crime, many Labor supporters have seen this as a really shitty, disingenuous lie. Labor people don't want LNP to win, but especially off of this half-assed campaign just vaguely gesturing at crime. In particular, the coal royalties have been under attack since they were announced. "Keep Queensland Competitive". So Labor supporters are coming out in force the only way they can (outside of directly doorknocking etc.) - spreading memes and articles on social media. The hate is because if we let the LNP in, they'll change our voting system to one that is less democratic to win government more easily in the future. They have promised to go back to Optional preferential voting. The coal royalties are Queenslanders directly benefiting from our resources. That'll go back into the pockets of mining billionaires and investors, instead of into our schools and roads and hospitals. They'll cancel our renewable projects and invest in coal because we're apparently in the 1800s again. It's just been a very weaselly campaign from the LNP and Labor people are pointing that out, because the media seems to avoid doing so for some reason.
+63. It’s probably due to the demographic of reddit and the alignment that said demographic has politically. If you want anti ALP go to Facebook
+64. There's no conspiracy or whatever. It's just people expressing their opinions which you disagree with
+65. My dude, it's like this; Crisafulli has already criticised labor for taxing the mines and promises to repeal the mining tax which is worth approx 1 billion per year. That's 1 billion that would otherwise go to queenslanders instead going to mostly foreign owned big business. That's not anti LNP, that's anti sending qld dollars to fat cats overseas.
+66. >Why so much hate and detain? disdain? Their policies are shit?
+67. Some would say the mainstream media has not shown much balance in the past. And whilst it is most likely someone with labor connections posting a lot of these threads, those with LNP connections are free to do the same.
+68. Uh I don't know, could be the fact that women's reproductive rights are being threatened by the LNP and their Katterite cronies? Almost like access to life-saving healthcare is a crucially important issues to thousands of Queenslanders?
+69. Reddit, with regards to politics, is generally a left-wing circle-jerk. It amuses me to see how deranged people are spouting their hate for the LNP. Looking forward to the federal election.
+70. Well I hate the LNP because they're trying to exterminate my community. I think that's a pretty damn good reason.
+71. It's reddit in general and heavy censorship, it's heavily left leaning, and every year it creeps even further to the radical left.gone are the days of neutral discussion. But hey liberal is looking like they will win so for the next month it will be silence or constant whining I can guarantee if labor won, this subreddit and others would be full of " sucked in liberal voters!!"posts
+72. It could be because they're not very good
+73. Welcome to reddit. There’s about 1% of us who aren’t in the left wing echo chamber.
+74. If you're a private sector heterosexual white male with a couple of investment properties, you'll be fine!
+75. Am I take todays result as in there wasn’t much hate for LNP?
+76. Pretty sure Truth Social would love you to join. Byeeeeeeee
+77. Well they're the target demographic of the LNP. Women should be home cooking spaghetti and taking the kiddies to school. Why you think noone sees Teagan Crisafulli?
+78. I'd say an absolute boat load of white collar males with multiple investment properties are working within the big 4 consulting firms. So the LNP really have shot themselves in the foot here.
+79. Standard left wing reply. I don’t agree with your views so you should go somewhere else.
+80. I don't mind your views at all, and you're more than welcome here. But if you're going to just throw around insults and complain then maybe you'd find the conversation more your taste somewhere else. Personally I'm going to be affected negatively by a liberal government in several ways. What's your thoughts on Jarrod Bleije?
+81. I wouldn't trust the LNP to run a bath let alone the state.
+82. Can’t wait 24 fucking hours to start breaking promises. They are so fucking confident they are completely brazen in their lies. I’d never thought I’d say this, but put them last.
+83. How can this slimeball be trusted not to change: - abortion legislation - VAD - Medicinal cannabis access They're already promising to give the resources sector massive tax breaks. They don't give a fuck about us. Don't vote for them
+84. If this election isnt proof of how much an election can be manipulated by media and money then I dunno
+85. What a dumbass. Took him 3 weeks to work out that even if the rate of victims decreased, as long as the population continues to increase then the number of victims will still most likely increase. He needs to put more money into Primary education and enrol himself into Grade 3
+86. # Crisafulli isn't in yet .... and wont be
+87. If he lied about this promise, he sure as shit has lied about his women's choice stance. Literally the only good thing that will come out of an LNP government is the sense of vindication we'll all feel with every broken promise and every regressive policy.
+88. **I'm shocked, SHOCKED .....well not that shocked**
+89. Crisafulli could trip over on a rock and blame Labor for it
+90. Multiple texts from LNP today, a complete bastardisation of the pre election day ban on advertising. Its pathetic, annoying and representative of a general disdain for playing by the rules.
+91. Crisafullofshit strikes again. I’ve never seen someone bone an election so hard. Just screwing himself on all fronts. Couldn’t have happened to a more stupid and slimy weasel.
+92. I really hope this clown doesn’t get in
+93. As much as I hate this guy, and knowing I voted Labor - it’s not really a broken promise. Crisafulli was just too stupid to realise he needed to provide specific context in his statement/promise. I.e. He’s just clarified the reduction in crime numbers must be a per capita - not just the number of victims in general. Most will agree for instance, there has been an influx of population increase, which would naturally increase base numbers. This is especially true when the article has to also use a the same specific context to say why the LNP crime numbers are wrong, and why under Labor, rightfully, crime in context hasn’t actually increased, when considering the same population growth.
+94. Doesn't matter. I already voted, and didn't vote for him.
+95. Ahhhh, another Howard-esque "non core promise"
+96. Shit stain do old Campbell Newmans undies
+97. I couldn't work out if ALP or ON went first. But I sure as hell knew LNP went last. It's a bit shit when you only get 3 choices on the ballot paper.
+98. The black hand ...
+99. LoL anyone surprised
+100. He will win this by the skin of his teeth
+101. Just several days ago it seemed like it was in the bag for the LNP, now they're looking at a narrow victory. What the actual fuck? I've been going about my time at work and listening to the hourly broadcasts on the radio and hearing that it's going to be a blowout to LNP. I've just been going about my work and thinking, "Hell, they had a good run. They've been in office for over ten years, so this was probably overdue." But now you're telling me there's a chance? How the hell do LNP keep fucking themselves? Sure Deb couldn't comprehend that people were scared of COVID, but this election should have been a given! But probably should give credit to Labor's campaign, since the ads have been pretty good. Some LNP ads have been good, but the others have been terrible and annoying. Like the one with the vibration sound and saying something about this being your reminder. Like who the fuck thought that was a good idea? Why the fuck do I need a reminder? Do you fucking think I need a reminder about an impending election?
+102. For fucks sake, Queensland, please do not let this guy win.
+103. The butthurt from all these Labor and Greens voters are so funny to see. Comic relief of the highest quality.
+104. This is not anything of substance. He clarified per capita crime rates which anybody would reasonably view as the common sense metric relevant.
+105. Sad to think today is the last day of the Miles government. Been a solid 9.5 years.
+106. But he will win then he can start culling all the bs jobs from the public service. Leftards on Reddit will melt down from their parents basement. Couple of weeks and Trump will be back in also. Oh the tears on Reddit will be lit.
+107. Reddit Labor voters are going to be the most painful sorest losers ever
+108. Squawk squawk! Desperado, you're out of a job Labor bot
+109. I wish I could up vote this a lot higher I laughed so hard at this
+110. I wouldn't trust em to run a piss up in a brewery.
+111. Won’t be able to fill that bath with any of the small hydro dams as they’re not even in the budget 😂
+112. I seriously hope this is the sentiment of my state, because I fear we would take a real right wing lurch to restricting women's healthcare rights if this fucking party, taking it's cues from Republicans, gets in
+113. They'd run one of those baths in the old folks home like what some of those did a while ago....
+114. The reason he'll win is that the incumbent is so bad.
+115. They are changing their story now because of the ban on political advertising 24 hrs. before the election. Labor cant say anything about it publicly. BUT WE CAN
+116. That's exactly where they went when I voted early.
+117. You should calm down a bit, far too hysterical for a state election.
+118. And they cancelled Burdekin pumped hydro for some smaller undefined and unfunded projects. Watch as they kick the can, spend money on coal and then acquiesce to Dutton’s nuclear option.
+119. Whats this about Medicinal Cannabis access? Has anything been said or hinted about this?
+120. oh he will 100% change abortion legislation if he gets a majority government. There is 0 chance that doesn't happen
+121. u/sthrnfrdfrk Medicinal Cannabis Access? Source?
+122. There never really was a promise. All that needs to happen is a member’s bill, brought by KAP or other RW member, and a conscience vote, and abortion is done for.
+123. The rules don't apply to conservatives, only to us plebs.
+124. I've gotten multiple texts and voicemails left by multiple numbers all from the LNP no idea how they got my number but I haven't gotten anything from the other parties so they are doing right in my eyes, fuck the LNP I'll vote one nation before I ever vote for them
+125. “I’m serious about it, and I’m not giving myself any wriggle room. It’s victim numbers,” Crisafulli said. “It’s not number of unique offences and what happens on a Wednesday, and how many young people repeat. It’s victim numbers. “How many people have had their life torn apart? And there will be fewer victims.”
+126. Also a labor voter and I have to agree with you.
+127. Ahh, but they have been harping on about numbers and not using per capita data which shows crime rates have gone down, so he's cherry picked the numbers to blame Labor, and run with that to spruik his tough crime policies.
+128. The ALP clowns still don't get it. Crime rates may be acceptable in the SE corner of the state, but regional Qld has a crime issue that has not been addressed. Look at Rockhampton which has nearly a 4 fold rate of crime than that of Brisbane. Cairns with a 3 fold higher crime rate. Townsville with double the crime rate. If the ALP had of addressed these concerns then the LNP would not be anywhere near as strong coming into this election. Serves them right if they lose. There is more to Qld than Brisbane.
+129. I thought the Greens run candidate in every electorate.
+130. Yeah, we're so funny the way we value minorities, children and women and don't want to see Queensland's economy trashed by a bunch of ignorant bigots.
+131. But they are not taking into account population growth or per-capita numbers when claiming crime has increased under the ALP. They can’t have it both ways 🤷🏼‍♀️
+132. Technically, 10 months of a Miles govt, with another 4 years to go. CourierFail needs to be nailed to the cross and die.
+133. I liked it better when this said "lovers" :-)
+134. LNP voters have to be the most pathetic pushovers in existence, imagine voting to just make things objectively more shitty in general. you would have troubling pouring water out of a boot with instructions on the sole.
+135. Hahaha. Sorry to spoil your worldview but I'm not a bot. Maybe you shouldn't just ignore this.
+136. Based on what metrics as all relevant metrics thats not true.
+137. Based on all probable outcomes, this is a statement that just doesn't ring true. At worst, what's your electricity bill look like at the moment because you know that's going to increase substantially, right?
+138. The polls are suggesting otherwise. The LNP may be likely to win, but not because the current government is bad. Christafulli has appalling approval ratings and remains the lesser preferred premier.
+139. You should take your, and everyone else's futures more seriously.
+140. It 100% feels like that's the long term play. Half ass the hydro so they can say "Renewables don't work" then guide contracts associated with nuclear energy to their mates.
+141. Hell yes. Vote LNP to cancel the Pioneer/Burdekin pumped hydro project that will turn brown the last river on the east coast of Qld that currently runs blue. Mackay does not want a brown river like Brisvegas. Vote LNP to stop the sediment run off from the project affecting the reef.. This 1 project is now estimated at $24b. This is double the estimate provided 2 years ago. Where will it end? Like Snowy Hydro 2.0 that has seen a 10 fold increase in the price and still not delivered? If so, that will be a $120b silt generating machine that is at best has 40% availability. Makes nuclear look cheap in comparison.
+142. I haven't heard anything about it, but it is exactly the sort of policy evangelical tight arses would love to expunge.
+143. > I’m not giving myself any wriggle room. *Proceeds to give himself wriggle room*
+144. I live in Bundaberg and I'm asking what the hell you are on? Crime wave? Nothing like that at all here. Can't speak for the other towns but can say I've live in countries with actual crime issues and to say we have crime issues is laughable. We don't have enough of a crime issue to surrender this many rights that the LNP is pushing.
+145. Hahaha, the laughs just keep on coming. Next one, please, hahahahaha.
+146. Oh yeah per capita crime rates have decreased overall lmao after a brief post COVID spike, not increased.
+147. Just waiting for that creature to fall. Murdoch is a leech on society. His entrails should be stretched as far as possible
+148. So we better cancel the pumped hydro project then huh?
+149. And delay the small projects massively, because of duplications of environmental approvals, community engagement and so on and so on. Some will no doubt be purposely contentious so they will be massively opposed by the public and they will then turn around and say ‘Queenslanders don’t want renewables’

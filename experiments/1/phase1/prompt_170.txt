@@ -1,0 +1,181 @@
+Your job is to analye a series of Reddit Comments are drawn from sbumissions related to the 2024 Queensland State Election. The comments are drawn from a collection of comments before, during and after the election itself on the 26th of October. The parties that sought election were the Australian Labor Party (ALP), the Liberal National Party (LNP), the Queensland Greens (Greens), One Nation and Katter's Australian Party. The LNP prevailed in the election, with David Crisafulli becoming the new Premier of Queensland. 
+We have identified several key issues that the major parties campaigned on during the 2024 Queensland State Election: Youth Crime (YC), Cost of Living (COL), Health (H), Energy and Infrastructure (EI), and Abortion Laws (AL). Below is a summary of each party's position on these issues:
+Youth Crime (YC):
+- LNP: Advocated for stricter penalties for young offenders, including the 'Adult Crime, Adult Time' policy, proposing that serious offenses committed by youths be met with adult sentencing. 
+- Labor: Focused on rehabilitation and prevention programs, aiming to address the root causes of youth crime through community engagement and support services.
+
+Cost of Living (COL):
+- LNP: Proposed measures such as abolishing stamp duty on new builds for first home buyers and re-establishing the productivity commission to review building industry regulations, aiming to alleviate housing costs. 
+- Labor: Introduced initiatives like 50-cent public transport fares, a $1,000 energy rebate, and free lunches for state primary school students to ease cost-of-living pressures.
+
+Health (H):
+- LNP: Committed $590 million to an 'Easier Access to Health Services Plan,' aiming to reduce ambulance ramping and hire additional healthcare workers. 
+- Labor: Focused on maintaining and expanding healthcare services, addressing hospital capacity issues, and investing in new health infrastructure.
+
+Energy and Infrastructure (EI):
+- LNP: Criticized Labor's Pioneer-Burdekin Pumped Hydro Project as financially unviable and canceled it upon taking office, opting to explore smaller-scale hydro projects instead. 
+- Labor: Proposed large-scale renewable energy projects, including the Pioneer-Burdekin Pumped Hydro Project, to transition towards 80% renewable energy by 2035.
+
+Abortion Laws (AL):
+- LNP: Stated there would be 'no changes' to abortion laws under their government, maintaining the status quo established in 2018. 
+- Labor Party: Supported the existing abortion laws and opposed any attempts to repeal or amend them. Asserts that LNP intend to restrict access to abortion services based on the views of some of their members.
+
+Analyze Reddit comments and code them based on the positions they support or oppose concerning these issues. You will output JSON, so valid values are strings or null. Use the following codes: YC, COL, H, EI, AL. If a comment's position is unclear or does not pertain to these issues, output null.
+
+Secondly identify which party the comment appears to support. Use the party code ALP, LNP, Greens, ON, KAP if this can be determined, otherwise a null value if undetermined.
+
+Output JSON as a list of objects where each object has an "id" (integer) property of the comment id, an "issue" property set to the issue code string (or null value), and a "party" property set to the party code string or null value. Null means JSON null, not a string. Values MUST be quoted, e.g. {"party": "LNP"} unless they are null, e.g. {"party": null}. Comments follow:
+
+1. By shit the bed, do you mean using mining royalties? Ultimately, this is what we'll see from the LNP - they'll scrap the mining royalties, then slash and burn the budget, and blame 'the financial crisis' (that they created by giving our resources to fat fucks like Gina and Clive) on the 'state Labor left the State in.
+2. Pretty accurate assessment.
+3. But he is only going to “lower crime relative to population growth” so really the only thing the LNP campaigned on they arnt really gonna do.
+4. You mean reactive crime measures like longer sentences that are proven to not reduce crime rates and cost taxpayers more than preventative crime measures? Not to mention they're using is as a fear tactic, and, like their only advertisement point.
+5. But nothing theyve announced is actually tough on crime? Its just a slogan
+6. Crime is falling in QLD already, what else you got? https://mypolice.qld.gov.au/queensland-crime-statistics/
+7. Cheaper rego for 1 year
+8. 50c fares were only the last few months as a way to get votes. I'd hardly call it having it good for the last 9 years
+9. 50c fares are useless to everyone outside Brisbane and cheaper rego (as a one time flat discount) is useless to people who renewed theirs before the announcement. In fact, as somebody from regional Qld, those policies are not only useless but actively detrimental. We provide 60% of the government's tax revenue but they blow 80% of their spending on Brisbane. I don't vote for major parties but at least if the LNP have the backing of the regional electorate then they might actually do something about the Bruce highway instead of dropping another few billion dollars on another unnecessary train line in the southeast, which I'll be looking forward to far more than the things you mentioned.
+10. Our cost of living is 2nd most expensive for big cities and we are tied 5th for mean salary. All that on top of being just about the worst as far as education levels in the country. Not sure where people think we have apparently had it good. At what exactly? All metrics paint a bleak picture.
+11. Cheaper rego if you are lucky enough to be able to pay 12 months at once. 50c fares if you are lucky enough to live or work near stations.
+12. Vote grabbing handouts is a mugs game.
+13. The state in in debt. Not the people. That’s the point
+14. A mortgage is a debt. Debt is not always bad.
+15. LNP literally creates greater debt every time they’re in both federally and for each state when they are in. They only ever get little spikes of cash by privatising something, which then costs much more money for its use in the long run.
+16. Its literally true lmao
+17. Buddy, they plan to cut $10 billion in revenue. That's adding more to the debt.
+18. KAP still intends to “test the government” on it
+19. [deleted]
+20. Majority of Reddit is hard left
+21. I'm in the centre right minority, I voted LNP because I genuinely feel that they are the best bet for the entire state, not just metropolitan Brisbane. It's not my fault that the majority of users on this sub feel that Queensland starts and ends in the Southside.
+22. [deleted]
+23. [deleted]
+24. What exactly is so 'objective' about campaigning on a non-reality based youth crime narrative? Or ignoring all public health recommendations and data based outcomes to make policy decisions based on religion or moralising. I'd have no problem with the government if they achieved world peace. But can anyone actually point out a single real positive thing that they expect this government to achieve? All I see is people blindly wanting a 'shake-up' as if one party doesn't ignore the facts and betrays Queenslanders for their donors' interests.
+25. Did you read the meme? The comment is absolutely accurate
+26. It's not like the LNP have already said they're going after trans healthcare... Oh wait...
+27. This is a comment by someone who has never had their rights threatened. 🙃
+28. Yep, time and time again. People vote and have opinions where the money tells them to. I’m not even talking about this election. It’s just a general rule. The most interesting feature of it is the total lack of self awareness of people.
+29. Least patronizing holier than thou out of touch labor voter
+30. And how has Labor fixed homelessness in the last 9 years? They haven't, it's only gotten worse but it's the current LNPs fault,right?
+31. They’ll remove the ramp
+32. Cheer up, you didn't give a shit about it a week or so ago, and you won't in another week.
+33. Put them on a bus and ship them across state lines is odds on at TAB
+34. Point is that Labor had 4 years to fix it, and didn't.
+35. Adult Crime. Adult Time.
+36. Who said they are? But don’t fucking tell people we’ve had it good though.
+37. Acknowledging the problem would be a good start. That's how they won. 100 days of reviewing the issues and putting a proper plan in place, rather then just throwing more promises around. I don't think people properly appreciate what the first 100 days review actually means; prepare for 10 years of unchecked bullshit to be uncovered.
+38. Don't know, didn't vote for them (preferenced them 3rd), hopefully they do improve outcomes for people who need it the most. I am lucky to have a comfy home and sufficient health insurance.
+39. I dunno man, I didn't vote for them. Sure you can look it up though.
+40. "Thanks to Labor"....😆😆😆 no point quarrelling with an apparatchik whose blinkers are glued on.
+41. I didn't vote for them but I can see why the broader electorate was fed up with Labor's empty promises and the series of scandals that plagued Anna's government.
+42. They all do that always have
+43. [deleted]
+44. How has power gone up by $1000? You have already received your ONE OFF rebate.
+45. Have you asked the full time workers living in tents if they've 'had it good' in the last 3 years? Didn't think so.
+46. It's all the same corrupt shit mate!
+47. This right here. We moved from NZ just before Covid and we were extremely happy not to be there. Lockdowns here were tame compared to back home.
+48. How about the fact that the labor government trampled all over people’s rights in the name of the lockdown. But we’re so gracious in ensuring other special people had more rights than anyone else? Sports ball players allowed to break quarantine and play their stupid sports, where grieving families of deceased service members weren’t allowed to cross the border to attend funerals?
+49. You don't need to be a sore loser mate. Disagree with the LNP and feel disappointed but making memes talking shit about Queenslanders is kinda stupid. And saying we've had it good for the past 9 years is incredibly naive and the reason the LNP is in power
+50. And no further, luckily
+51. The state is a winner tonight. Some just don't know it yet.
+52. I judge countries now by what they did during Covid, Australia is an authoritarian country. True colours came out. Everybody thought Canada wasn’t innocent country until Covid. The most important thing is that citizens have their freedom no matter what government is in place.
+53. You are the one displaying ignorance. What is in the womb? A human. Is the unjustified taking of another human life wrong? Yes. Also to pre answer you: - Life begins at the moment of conception, research it. - The vast majority of Abortions are convenience based, not because of the mothers life being at risk. - In the case of gRape, the grapist should get the death penalty, not the baby. Why punish the baby for someone else's crimes.
+54. I keep all my abortions in a perspex jar
+55. Downvoting but only to give you an excuse to up your quota <3
+56. Wasn’t crazy about the policy of being locked in my house and told about double donut days.
+57. Miles was going to bankrupt the state,
+58. Well that hasn’t been tested at all, it’s an allegation that hasn’t stuck 😂
+59. We see this every time Republicans get elected in the US - then a democratic president cleans it up for two terms, then for some stupid reason, after having a good 8 years.... they vote republican again.
+60. You've fallen for the hive mind and fear campaign that is this subreddit.
+61. I don't think mining royalty changes will be repealed, but it would be good for the state if they were.
+62. While I don’t trust them to keep promises I wouldn’t be surprised if they build new prisons for kids. That tough on crime shit really appeals outside of Brisbane. It doesn’t need to work, its job is to keep them in power not to rehabilitate teens.
+63. And was already happening
+64. property/car crimes are falling, violent crimes like rape, assaults etc are up\ also youth crime isnt being persecuted and prosecuted properly. look up some of recent murders. one guy had 84 convictions! and still able to roam the streets before killing a woman in a home invasion https://www.news.com.au/national/queensland/crime/killer-teens-horrifying-criminal-record-before-stabbing-emma-lovell-to-death-exposed/news-story/7662f306da994f6685984947536d0a9c Also see some teenage african refugees using an axe to murder an elderly grandma in a shopping centre to steal her phone and wallet Something like 80 percent of all of youth crime are commited by 150 or so individuals that the state fails to prosecute and they are let out on the streets to do whatever the hell they like p.s its the governments who set the guidelines for judges u dolts
+65. It was announced over a month ago it would become permanent in the next budget if they were reelected.
+66. " We provide 60% of the government's tax revenue but they blow 80% of their spending on Brisbane." I tried to google this but couldn't find any breakdowns by region. I wonder if this is distorted by royalty payments by mining corporations, which doesn't really translate to per head of population.
+67. You do realise that you have to renew your rego every year and the discount is active for 12mths, so everyone will eventually get it?
+68. Child care subsidies are useless for me, pensions are useless to me, mostly all major medical and ndis is useless to me, quite literally most public services and benefits are useless to me. I’m youngish, healthy and don’t have a family, yet I am happy to pay my taxes to benefit those who need it. What a fucking dumb comment
+69. So instead of taxes being used to our benefit, you'd rather vote in a party that wants to cut $10 billion in revenue? Yes, very smart
+70. Just been to Magnetic Island for the last week , the 50c one journey and $1 all day ticket have the buses jam packed and Tourists are travelling all over the place , Restaurants, hotels and anywhere that serves folks are raking it in.
+71. no it is not lmao. the max time you can renew your rego for is 1 year. the discount is open for a year. so no matter when you renewed, you’ll have the discount available.
+72. “We” you mean coal companies? Because I guarantee you 60% of revenue from income is not coming from rural QLD. Also, rural folk need to understand tax dollars are being spent on them constantly due to road maintenance. I’m rural, I would know.
+73. 60% of tax revenue? Cite your sources because that’s complete rubbish. Oh, BTW mining royalties don’t count as regional area revenue.
+74. >50c fares are useless to everyone outside Brisbane Brisbane is literally half the population of QLD. A policy that benefits that large a proportion of the state is amazing.
+75. Yeah, that's where all the people live......
+76. who tf is “we”
+77. That's because 90% of the population lives in the South East. \*shrugs\* Majority rules. I guess you didn't like the $1000 free electricity?
+78. Who pays the debt?
+79. Lmao what?
+80. Hahaha
+81. LOL You must be Victorian
+82. Care to place a wager on this? I’ll happily take any you’d like to place lol.
+83. Labor are, generally, the lesser of two evils, and no other party has a chance of getting government.
+84. QLD state labor of late has been one of the best state govs in decades
+85. You're correct. Both major parties are shit
+86. 50 cent public transport, $1000 off of energy bills both sound like very sucky policies
+87. Hardcore communists/socialists are not as popular as you think it is on here, they're just terminally online, so more likely to comment.
+88. Try talk about a free Palestine on any news sub and I think you’ll find centre-left is more accurate response.
+89. Thanks, asshole.
+90. If you are centre-right, why didn't you vote for [the centre-right party](https://www.politicalcompass.org/aus2022) instead of the far-right party? Me thinks you aren't as centre as you claim to be.
+91. I didn't say that it would, but the LNP are certainly a much worse choice overall for QLD. The youth crime bit is almost completely fear mongering, and the intended changes to it are proven not to reduce crime anyway. Also, dare I say abortion? I'd rather not follow in the footsteps of America thank you very much.
+92. [deleted]
+93. The whole ‘crime has gone down’ is a popular rebuttal from the left and exists due to the fact that total crime has in fact gone down. A trend the entire western world has seen over the last 150 years. Hardly attributed to the QLD Labour government. But that’s cherry picking statistics and we all know it. Perhaps you don’t, I don’t know. The fact is that increased cost of living in cities has pushed low income earners into regional areas. Regional areas also have far more indigenous Australians, far more drug addiction issues, less opportunity for youth, higher birth rates, the list goes on. It’s easy to have low youth crime in your pretty inner city suburbs when there are no youth and families can’t afford to live there. Share house twenty somethings can afford to rent there though and post their opinions… The statistics on regional crime, low socioeconomic suburbs and violent crime tell a different story, but who cares about that because total crime stats are overall down right? A grandmother was bashed and stabbed to death in front of her 6 year old granddaughter over a Korean hatchback by a youth who had a rap sheet longer than Eminem’s note book. A disgusting and outrageous crime that should never be forgotten. His parents admitted on national television they were unaware their son was a piece of shit despite having to attend a string of court hearings for him over the years… don’t think these people respect our laws and judicial system as it currently stands?
+94. Youth crime? Tell that to the people up north and it appears that they have spoken accordingly.
+95. Nah, it’s crazy because it implies that Labor are the only voters who are not gracious in defeat. Reality is, anyone posting on social media about election results is braindead anyway
+96. "the riot is the language of the unheard" who said that one again? Probably not a fella this person is very fond of eh
+97. Being cranky about election results is literally the most democratic thing to ever exist lol
+98. Oh good one
+99. you're about to see how much worse it can get...
+100. Didn't say it was LNP fault. I said that they are actively hostile to homeless people, they're not going to fix it either
+101. Lmao, "Why haven't they completely fixed a major crisis in 9 years that almost no other country has been able to eliminate? They're a failed party"
+102. Here’s how https://statements.qld.gov.au/statements/99493 https://www.australianpropertyjournal.com.au/2024/01/21/qld-govt-buys-hotel-for-social-housing/ https://www.abc.net.au/news/2023-07-05/queensland-government-buys-hotel-emergency-accommodation/102562932?utm_source=abc_news_app&utm_medium=content_shared&utm_campaign=abc_news_app&utm_content=link
+103. The solution to homelessness was to build a fuckload of public housing. Should have elected Greens if Labor wasn’t doing enough, LNP will make it worse.
+104. Classic deflection. I do give a shit because my dad spent a long time in cancer treatment courtesy of QLD health, if you must know. I’m just not blind enough to believe healthcare will ever improve under LNP
+105. Nah, you fix the issue too quickly with that. They need to still be able to point to them in four years and screech about how their recidivism is a result of Labor policies from ten years ago.
+106. Lol no it isn't, answer the question
+107. They at least attempted to [help](https://statements.qld.gov.au/statements/99493), which is more than the LNP will do
+108. Has youth crime been increasing?
+109. Cool single issue vote, how do you think the LNP is going to affect accessibility to healthcare which is 10000x more likely to effect you in the next 4 years than youth crime is. How do you think the LNP’s energy policies are going to affect your power bills? Again this is an issue you are actually going to have to deal with, unlike youth crime.
+110. ...unless they donated money to our party
+111. Lol, does your dad slip you a bit of tongue everytime you respond to someone with that?
+112. They have, but I understand the hysterical mindset of pretty much all conservatives blinds them to facts.
+113. >That's how they won. Conservatives won how they always do, by making emotional appeals to the kind of people that aren't going to fact check them.
+114. Not in Queensland. They'd go to jail.
+115. The rebate wasn't paid for by taxpayers.
+116. Funded by mining royalties and STATE OWNED profits. Shit that will go backwards. One off doesnt mean never again,
+117. The LNP won't fix the housing crisis, just as Labor won't fix the housing crisis, neither party will fix it so long as such a large voting block views housing as an investment. The LNP however has a long history of being useless cunts; you're cutting off your nose to spite your face.
+118. I do sometimes when I'm feeding them in the valley on Wednesday mornings
+119. Well they had it better before the LNP Lord Mayor cut the power off to BBQs they were cooking on.
+120. It's not but ok.
+121. I work in the public service. Don't tell me "they're all the same".
+122. Me when I'm cringe
+123. No crime by Christmas or Crisafooli quits
+124. The state of drunk and disorderly yeah you're right
+125. QLD only had a couple of 3 day lockdowns to prevent a spread of a dangerous virus that the community had no herd immunity for. That’s better than most fucking places and compared to other states, we lived pretty close to normal. I remind you that at the time NSW had an extended lockdown, it was not Labor in government.
+126. QLD had a far shorter lockdown period than either nsw or vic, and had far less COVID based deaths and cases per capita. Also saying that we were authoritarian for basically putting in place legislation to a virus that we had no real idea about, is misleading at best and idiotic at worst. You don’t have the freedom to walk up to someone and stab them, why should you be allowed to infect someone with a potentially lethal virus, when it could be stopped, it’s not authoritarianism to put interventions in place to save lives.
+127. You’re trying to say a bundle of cells with no sentience or ability to react to stimulus has a life? Should it be illegal to waste sperm or eggs as well? You make it sound like this ‘convenience’ is just an ‘oh bother, im pregnant again! Reckon I’ll pop around for another abortion!’. Abortion is not a form of contraception, and with proper education (which conservative and Christian groups have tried to hinder, mind you) isn’t even necessary. What it provides is the opportunity for a woman to recover from a mistake should the strain of having a child be too much, whether financially or physically. Women are not popping around to the clinic like they’re getting their hair done. Honestly tracks that you’d want the death penalty for rapists. Shows how much you’ve actually thought about your beliefs. Supporting capital punishment is absolutely absurd when there is any possibility of someone being wrongly convicted. Not to mention, if you make the punishment for rape death then why would the rapist refrain from murder to cover their tracks? Better to let them rot in prison Then I suppose you’d expect the woman to give birth to their rapists child. What if the woman was 15? Would you let your daughter give birth at that age? Also love being told to research it when reproduction was the focus of my post graduate study hahaha. I guess hicks just have a general knack for this stuff, perhaps due to all the relentless breeding and inbreeding to contribute generations of morons.
+128. Thank you for your service, citizen<3
+129. I'm chronically ill, as is my husband and my Mum. We all loved hearing about double donut days. The lockdowns weren't universally hated. Many of us felt thankful that we were being protected from a terrifying global pandemic. I saw the morgue trucks piling up in New York and the mass graves there and in other parts of the world. We avoided that in Australia and we should be thankful.
+130. You should be thankful for that, without it we would be in a similar place as America, where inflation hit harder because of Trumps clown show performance.
+131. ??? QLD is in budget surplus and in a far better economic position than all other states. When the LNP remove the coal royalties you’ll see that surplus disappear.
+132. What rock are you living under? He was using mining royalties, now under LNP they will give those to the mining companies as profit and you'll have to pay more tax to find literally anything. Absolute numpty
+133. That's your opinion. Not a very smart one tho. Pretty sure no one could bankrupt a state with coal royalties. Labor has been in surplus and was getting stronger.
+134. No I was there the last time morons like you let the lnp in and they did pretty much everything I just named. Campbell got 1 term for a reason.
+135. No, he's fallen for the political history of the state. Which we're repeating. This isn't new. This is just qld amnesia that takes over after 3 terms.
+136. Champion, YOU are the one who commented that Miles was going to “bankrupt” the state, even though they have handed down surpluses. Stop posting; you’re not as smart as you think you are.
+137. I see you like giving handouts to the wealthy... What's your case for the repeal of the mining royalties?
+138. Well i mean by his own wording he doesnt actually have to decrease it at all depending on population growth so he can do even less and still hit his goal.
+139. >also youth crime isnt being persecuted properly. Generally, in first world countries, we try not to persecute people. We have what’s called the human rights act, which frowns upon subjecting people to hostility based on ethnicity, religion, sexual orientation or their political beliefs. At first I thought perhaps you made a mistake and meant prosecute, but based on the rest of your comment I have to assume you’re being serious in which case, Iran called, they want their culture back.
+140. The magistrate who made the decision to grant bail is keeping his job. But sure, let's replace an entire government because 0.00001% of the population were victimised.
+141. Looks like Crisafulli won't have to resign, check mate
+142. Yeah but they're arguing Queensland had it good under Labor for the last 9 years and 50c fares can't really count cause it was the last few months to try and win votes. When arguing that something was good for 9 years it's stupid to include things that are months old designed to win votes and not just to help QLD. The LNP are also keeping the 50c fares so it 50c fares are almost irrelevant when comparing the two.
+143. Everyone that can afford to renew for 12 months.
+144. Hi mate, sorry to hear that reading comprehension isn’t your strong suit. I think there’s a steps course you can take if you ever feel like improving that though.
+145. No I’m okay, it’s not my opinion, I was just letting you know that they have said it’s still their intention to table it.
+146. Fortunately, that's not how our voting system works. We have preferential voting where smaller parties and independents can gain seats, increasing the effectiveness and representation of government. If you don’t want to vote for the two parties [on the right wing / centre-right](https://www.politicalcompass.org/aus2022), you are able to vote for other parties that represent you better.
+147. What do you define “best state governments” then? Qld are the 2nd most expensive state and yet 5th for earning per person. Our fuel is near the top for cost. Eggs, milk and bread are 2nd most expensive. Our utilities as a whole are some of the most expensive. Our education is just above one other state. So pretty much the worst in Australia. What have they done to earn the title?
+148. It's about $60 a week saving on transport for the average commuter, people on a lower wage would definitely feel that at the end of the week.
+149. It's about $60 a week saving on transport for the average commuter, people on a lower wage would definitely feel that at the end of the week.
+150. It's about $60 a week saving on transport for the average commuter, people on a lower wage would definitely feel that at the end of the week.
+151. It's about $60 a week saving on transport for the average commuter, people on a lower wage would definitely feel that at the end of the week.
+152. [deleted]
+153. This is true but I don’t think the definition of far left is purely limited to commies. That’s like saying you have to be a fascist or Klan member to be far right

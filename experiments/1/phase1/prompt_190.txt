@@ -1,0 +1,152 @@
+Your job is to analye a series of Reddit Comments are drawn from sbumissions related to the 2024 Queensland State Election. The comments are drawn from a collection of comments before, during and after the election itself on the 26th of October. The parties that sought election were the Australian Labor Party (ALP), the Liberal National Party (LNP), the Queensland Greens (Greens), One Nation and Katter's Australian Party. The LNP prevailed in the election, with David Crisafulli becoming the new Premier of Queensland. 
+We have identified several key issues that the major parties campaigned on during the 2024 Queensland State Election: Youth Crime (YC), Cost of Living (COL), Health (H), Energy and Infrastructure (EI), and Abortion Laws (AL). Below is a summary of each party's position on these issues:
+Youth Crime (YC):
+- LNP: Advocated for stricter penalties for young offenders, including the 'Adult Crime, Adult Time' policy, proposing that serious offenses committed by youths be met with adult sentencing. 
+- Labor: Focused on rehabilitation and prevention programs, aiming to address the root causes of youth crime through community engagement and support services.
+
+Cost of Living (COL):
+- LNP: Proposed measures such as abolishing stamp duty on new builds for first home buyers and re-establishing the productivity commission to review building industry regulations, aiming to alleviate housing costs. 
+- Labor: Introduced initiatives like 50-cent public transport fares, a $1,000 energy rebate, and free lunches for state primary school students to ease cost-of-living pressures.
+
+Health (H):
+- LNP: Committed $590 million to an 'Easier Access to Health Services Plan,' aiming to reduce ambulance ramping and hire additional healthcare workers. 
+- Labor: Focused on maintaining and expanding healthcare services, addressing hospital capacity issues, and investing in new health infrastructure.
+
+Energy and Infrastructure (EI):
+- LNP: Criticized Labor's Pioneer-Burdekin Pumped Hydro Project as financially unviable and canceled it upon taking office, opting to explore smaller-scale hydro projects instead. 
+- Labor: Proposed large-scale renewable energy projects, including the Pioneer-Burdekin Pumped Hydro Project, to transition towards 80% renewable energy by 2035.
+
+Abortion Laws (AL):
+- LNP: Stated there would be 'no changes' to abortion laws under their government, maintaining the status quo established in 2018. 
+- Labor Party: Supported the existing abortion laws and opposed any attempts to repeal or amend them. Asserts that LNP intend to restrict access to abortion services based on the views of some of their members.
+
+Analyze Reddit comments and code them based on the positions they support or oppose concerning these issues. You will output JSON, so valid values are strings or null. Use the following codes: YC, COL, H, EI, AL. If a comment's position is unclear or does not pertain to these issues, output null.
+
+Secondly identify which party the comment appears to support. Use the party code ALP, LNP, Greens, ON, KAP if this can be determined, otherwise a null value if undetermined.
+
+Output JSON as a list of objects where each object has an "id" (integer) property of the comment id, an "issue" property set to the issue code string (or null value), and a "party" property set to the party code string or null value. Null means JSON null, not a string. Values MUST be quoted, e.g. {"party": "LNP"} unless they are null, e.g. {"party": null}. Comments follow:
+
+1. Sense? I am not seeing any sense in the discussion anymore. I can’t give you what you want to hear I’m sorry.
+2. No, I’d definitely like to see offenders, not just young ones, managed differently. My point is the ALP has no high ground in this matter.
+3. Okay? Look bud, I'm not happy with my options. I'm still not voting for the actively malicious weasels when I can potentially browbeat the apathetic party into doing the right thing.
+4. Yep I can’t wait till Crisafulli bans crime
+5. Hey sunshine, I just went for walk, outside, in the dark. And now I am home, still safe... I know there's alot of unhinged pro labor post. But the fear mongering over crime is too much.
+6. I can’t wait till Crisafulli bans abortions and women who struggle with addiction breed even more criminals.
+7. Hey mate - the case of Emma Lovell is psychologically compelling, and that's why politicians invoke such stories, but it is nonetheless just one case. [Youth crime is down](https://www.abc.net.au/news/2024-10-25/youth-crime-statistics-using-data-incorrectly/104488958at) the state level. There is just no getting around that fact. With that said, its obvious that you still don't feel secure. That might be because crime is especially bad or getting worse in your area, or because media fear mongering has combined with availability bias to create that impression in your head. Maybe you think youth crime was always out of control. Whatever the case, if you support the LNP's approach to dealing with youth crime, then by all means, vote them in - just remember that there are more issues in this election than just crime.
+8. It’s really low to blame and individuals fatal crime on any government. Crisafulli won’t fix this and Labor already changed legislation after that case. Crisafulli is using this, as it’s pretty much all he’s got to get elected so he can reduce mining royalties and privatise public assets to run for profit. It’s not a secret that LNP stands for small government, big business, even they will tell you that. There’s still people in the LNP who try to sell trickle down economic theory.
+9. >It’s just been getting worse Except the stats show crime is trending down. That doesn’t get any clicks though, so the media is happy to focus on and amplify the crime that *does* happen to scare people like you who just read headlines and don’t put any further thought into things. >you can't go outside after dark I walk my dog at night and have never had problems, and I live in fucking Caboolture which is supposedly a crime ridden shithole.
+10. Youth Crime is statistically down. The media lives to constantly push out stories about it which makes people believe that Youth Crime is up. Have a bit of a Google about it then make up your mind about who you're voting for.
+11. He starts every speech with 'ask yourself, after 10 years are things better when it comes to crime, housing blah blah blah' and it really starts to get annoying. His entire campaign has hinged on trying to convince people that we need a fresh start. The exact same thing Campbell Newman said in 2012. He's going back on his promises already and jobs will be cut. and it is a fucking EMBARRASSMENT if he actually gets elected.
+12. I think we should just copy the Singaporean model, that'd slow down various types of crime.
+13. Statistically youth crime is _down_ as a result of Labor’s efforts since the last LNP government. Hardline approaches to crime often don’t work, and cost more money on a per person in the system basis. Putting someone through the revolving door of the criminal justice system greatly increases reoffending tendencies. I’m not saying that a soft no punishment approach is what’s needed. The real answer lies somewhere in between with focus towards education, prevention and restorative measures. A person who commits a crime but avoids jail needs to be set up with access to programs that assist with skills and reintegration into society. There is always a percentage that chose that lifestyle but hardline approaches to locking people up costs us as taxpayers more money and makes the problem worse.
+14. You’re keen for him to cut services?
+15. Youth crime has reduced in the last six months
+16. Here's the problem with views like yours about legislation of tough sentences they don't work There is legislation in QLD that states the price for assaulting a health care worker is 14 years mandatory sentencing but last time a paramedic was assaulted the judge let her off because she had a tough childhood the problem isn't legislation it's the judicial system
+17. Very brave of you to share your feelings like that. This is the number one issue facing the state at the moment! We can no longer live in fear. Let’s lock them up and throw away the keys!!! Those pesky leftys can suck eggs am I right
+18. The anti-LNP karma whoring and pitiful whining in this sub is extreme. It's an election, not the end of the world if someone with a different opinion is elected (meaning a majority of people preferred the other opinion, BTW) And I didn't vote LNP.
+19. Why has no one thought to do that already! Apparently it's that easy
+20. I too, went for a walk last night. Took my dog and my kid. Fuck. Guess that means we were mugged and killed. Shame Dave wasn't in power to prevent that. Fucking Miles, how dare he allow that to happen to me?
+21. Hey sunshine, people eat moldy tomatoes and don't die. Doesn't mean it's safe.
+22. People eat moldy tomatoes and don't have problems. Doesn't make it safe.
+23. What is the singaporean model ?
+24. "The real answer lies somewhere in between with focus towards education, prevention and restorative measures." But that's what he promised. Will he deliver? I can't be sure, but I think it's time to change the government.
+25. Legislation can change the judicial sytem.
+26. Clearly only your vengeful spirit has kept you alive just long enough to cast a ballot for the LNP thus allowing you to die peacefully knowing crime has been solved.
+27. Death penalty, capital punishment, etc. Jail is for punishment, constant punishment. The public knows what the real consequences of crime are.
+28. “Adult crime, Adult time” doesn’t reflect what you’re claiming.
+29. Also social housing, and a general collectivist attitude
+30. Look further than that slogan. If you actually looked at the full extent of his promises, you would see the full scope, the commitment to prevention and rehabilitation. Again, I can't be sure he will honor that commitment, but I think it's worth a try.
+31. This is how the QLD Nationals (the cunts in charge of the LNP) have always been like this, look at Joh, same shit, different smell.
+32. In my suburb there are heaps of people in the breakaway churches like the pentacostals (evangelicals), baptists, Presbyterian, etc... we also have heaps of people from overseas, from countries where social freedoms are non-existent due to religion being mixed with matters of state. Which ironically is why they fled those countries. All of these people are voting based on their ideals and pushing those ideals on others. So they will all be voting LNP and family first. Family first want teaching Christianity to be mandatory in public schools. As a Catholic, if you want your child to be taught that, take them to church and enrol them in a Christian school. Dont force it upon everyone. It is also unfair to vote based on religious ideals. If they think abortion is a sin, they can simply not get abortions. They cannot take away a woman's rights simply because they don't agree.
+33. There is 100 people in a room in QLD. 50 of them are all paying 70% or more of their wages towards rent or a mortgage, leaving them little to live on. 20 of them can't afford to eat at every meal so they skip multiple meals every week. 28 of them are considered professionals like Teachers, Nurses and Paramedics, yet they can't afford to buy or save up for a deposit for a house in the city they work in. 2 of them are females who wish to get an abortion. Which in reality is really no one else's concern and their right to do so if they wish. The LNP really only cares about what is happening with the two females in the room. The rest are just ignored, you would think they would broaden their political ideology to actually try and help people who need it. And not vilify and wreck the lives of those who don't.
+34. What do you mean short notice period? The election occurs every 4 years since 2016 when the referendum passed. Consider this your notice that the next election is on the last Saturday of October in 2028.
+35. Hiding behind Christian values and scaremongering are Trump's two biggest cards to play. It's not a coincidence that LNP has the same hand.
+36. This election is secretly really being driven by whether or not there will be billions in coal taxes available to pay for all the stuff that’s either been in place recently (50 cent fares) or promised (bulk billing clinics). There’s never been an election so heavily paid for by a single market before (coal companies). Probably not the best money spent as it’s been a bit of a cluster in LNP marketing this year but certainly no one can say they didn’t have the funds to communicate whatever message they thought would work far and wide.
+37. Rupert Murdoch ruins everything.
+38. 6 candidates on my ballot paper this election and 2 of them I believe are non religious. I voted early. This was the deciding factor for me. I voted for a secular parliament. Nothing more nothing less. The tug of war between the left and the right seems to be getting more extreme. It's getting harder to find "centrist" candidates.
+39. Maybe they have and I missed it, but I really wish our politicians would call it out, the first thing they all should have said when abortion was raised as an issue is “that is a medical issue not a political one, we will leave it to healthcare professionals to decide what is best for their patients.”
+40. They're all slimy, they've always been. What's new?
+41. Ugh yeah they were bolsted by the last Trump win and I genuinely shudder to think what will happen over here if he wins again. The biggest mistake you can make is to not listen to people who are afraid (even if you think they’re dumbasses) and make fun of them. They multiply. It’s really important to discuss - in a non combative way - certain issues you care about with your family.
+42. I always find it entertaining when I see who they get to promote the One Nation Party, it's always unattractive bogan women who still think they are better than someone of colour 😅🤣 and the bright orange T-shirts are so unflattering. Also does anyone else remember Clive Palmer's party? He hired models for his promotion and it also was so fun to see that. You don't see pretty people often where I live.
+43. At least one side is literally using US Republican advisors. We live in an age of disinformation and emotional voting. The only way to get out of it is to consistently vote against people who are trying to get your vote by making you outraged.
+44. Don't wait for the news to feed it to you. Use the resources you have to source good, verifiable information
+45. I used to be low-key worried on the surge of American style religious surge in qld, now I’m fking concerned, I’m with you Op, wtf?
+46. Personally I voted Labor this election. But what is it with people and posting this kind of hyperbolic garbage nowadays, making baseless accusations that the other side are fascists and a threat to democracy…it’s ridiculous. We sound like the god damn USA where both sides just sling shit at one another hoping that it eventually sticks. Where did the days go when we could just agree to disagree and think “We’ll, that parties policies don’t align with me so I will not be voting for them”. Instead nowadays it’s “That party is a bunch of racist fascist pigs who hate women and minorities and want to watch the world burn” 🙄🙄
+47. So if LNP win I’m going grocery shopping because its going to be so much cheaper. Right? And my power bill will reduce. Right? 😂 Cos they say this We will get the maximum benefit out of every dollar by stopping budget blowouts during project construction and delivering on time. We will ease pressure on car, home and business insurance costs by getting crime under control. We will ease pressure on rents and mortgages by delivering more housing supply. We will ease pressure on transport and insurance costs by investing money into regional roads. We will ease pressure on home and business insurance costs by investing in natural disaster resilience projects. We will ease costs at the checkout by investing in skilling up Queensland workers to give businesses the capacity they need. We will lower the cost of groceries by delivering water security to ease costs for food producers.
+48. Did you just realize there's an election? Where have you been? It's been going on for much longer than Kamala has even been in the race against Donald. You're more interested in the US election than the QLD election.
+49. The word fascist has really lost its meaning these days because people sprout it everywhere, calling anyone they don't like one.
+50. I was angry when I voted today. 4 of the parties all of whom deserve to be put last. When one canvasser called out "fresh start" I replied back "like no abortion?" and I heard some of the other canvassers guffaw, so maybe that hit home. I'm sad that my vote probably won't make any difference.
+51. I sometimes wonder how people like you exist 🙄😒
+52. Realistically, both parties suck in this country. Too busy taking shots at each other and not caring about the people at all.
+53. Qld will get the government it deserves.
+54. Queensland, for the most part, has always been a stupid, evil and backward state. The ALP got in because Queenslanders were punishing Newman (who was too obviously disastrous even for morons), not because they got smart or found values all the sudden. We have returned to the norm.
+55. Seethe ! 😝
+56. The problem is actually you. You've exaggerated everything.
+57. It’s a sad state of events. My neighbour (retired for a long time) and I talk about none of the parties running were appealing. Labour with the olympics. LNP as usual and now family first and One Nation running. There’s the Greens but…. There’s their own agenda. Just feels like there is no option for someone to be voted for the people by the people and not just looking after their own interests/ donors. Tough on crime yet won’t fix the root cause, government spending waste, it’s insane. BPIC and the payment rates are vastly inflated, yet same quality work. The housing shitshow has been predicted for decades yet nothing was done…. Can’t hurt the developers and investment property owners. Lack of choice shopping wise. There used to be Action, Franklins (RIP), Bi-Lo and others. Now just 2 majors, which is a prime example for why we need anti trust laws like in the US. My neighbour says for a young 30 year old I’m extremely jaded with politics. I feel like as a whole, our political system needs to do better, be better and actually serve its citizens
+58. How did the greens go?
+59. Hahahahah leftist scum have lost!!! The real world and people who contribute value to society have spoke .
+60. If you think voting is likely to change anything think again. Elections aren't cheap and those with deep pockets who fund political parties will make sure their interests come first. Do you really think they would risk a party coming to power who would oppose them making more $$$ from a variety of dodgy projects?
+61. You woke lefties got what you deserved to be voted out! now bring on the federal election and say good bye to Albo! Can’t wait!
+62. All political parties are slimy and cunning. Just sometimes one looks slightly more polished than the other.
+63. Can’t wait for all these buggers to evaporate after loosing tomorrow and a having a whinge on Sunday.
+64. A semi fascist? Is that what you label someone you disagree with these days?
+65. This post and the comments are so cringe. Is everyone here 19 years old and just discovered the word fascist? 🤣
+66. Everyone over 55 will vote LNP. It will prove boomers are still the biggest cohort of the generations before and after.
+67. Trump 2024!!
+68. An LNP win tomorrow and a Trump win in November is going to have reddit eating itself and I’m here for it 😂
+69. Basically what is happening just like in Canberra there is rebellion ATM with cost of living and crime on Labor. Albanese will feel that at the polls next year too
+70. I voted for the first time an hour ago. I thought i would just go in there give my vote to who i want only to learn that i need to put the 5 options in order of preference, so the parties i don't want to give a vote for still get one. Thats messed up and surely just props up the most popular parties. How is this justified? I get that "its the way it is" but its a crap setup
+71. If you look around the world, you will notice the scars of the Western world's dabbling with left-wing ideology. Most people, hopefully, have now had a gutful of the empty promises, endless immigration and fruitless government spending. The short-term kick of handouts just results in higher costs of living and more homelessness.
+72. [removed]
+73. If you think the LNP and Crisafuli are anything like Trump or the Republicans then you’re delusional. I’m no fan of them either but it’s not even close
+74. sounds like youre watching the us democrat news bubble
+75. Have a cry haha fingers crossed he criminalises abortion.
+76. This lot are amateurs compared to Joh 😅 holy shit he was awful. I remember the Fitzgerald inquiry...
+77. Some Queenslanders will never learn the lesson. LNP are a mob of religious hypocrites, rorters and thieves
+78. A lot of people have short political memories Or the ol' But it happened before my time so I don't know about it!
+79. But there is abolitely no proof that LnP are going to even make ANY alteration to abortion policy so what are you talking about abortions for?
+80. I mean, they also care about the 4 who own multiple investment properties and the 1 mining magnate, but yeah. Dicking everyone else over as hard as possible is their whole reason d'etre.
+81. How do you determine that 50% of the population is paying 70% or more of their wages towards rent or a mortgage? I’m calling you on that saying it’s completely untrue.
+82. The absolute state of this… Labor has been in charge for 8 years and you post like this claiming the LNP is the problem… yikes
+83. There’s only 2 real professions. Doctors and Lawyers.
+84. Judging by the polls, by your logic the majority of voters only really care about what is happening with the two females in the room.
+85. Smh. When did you learn Crisafulli’s name? When did he start campaigning? When did he reveal his costings for this election? When did you discover the quality of his character? It’s short notice for THIS election. Particularly when compared to the drawn out US election cycle Do you know the candidates and policies for 2028 already?
+86. Yeah like Trump isn't even a Christian! 😅
+87. Old rupes has always used christian fundys as a bulwark when he needs to.
+88. If Murdoch's so great and all powerful who can sway elections as he pleases then why have Labor won every single Queensland election bar one since 1989?
+89. 5 candidates in my electorate, I’m putting the LNP candidate 3rd because the other two are more right wing. FML
+90. You can vote Labor if you’re after “centrist”. And all the centre /left wing parties are secular
+91. They were being disengenuous when he said abortion issues aren't on our agenda. He knew full well that KAP planned to bring up their Babies Born Alive policy the second the polls closed and LNP will allow a conscious vote.
+92. The few who are not don’t last.
+93. The local LNP branch that I ran against has been taken over by a Christofascist church group. They are slowly taking control of the QLD LNP from within. I actually hope Robbie Katter backflips again and triggers an abortion vote. The voters of this state need to reap what they have sown to grasp the magnitude of the damage they have just committed us to for the next 4 years.
+94. While I do agree with the civility sentiment, I also don't think we gain anything by sugar coating the people *who aren't* meeting that same standard of civility. For example, anti-abortion policies are very simple: they kill A LOT of women when implemented, and children's welfare takes a massive tumble too. Killing women and harming children at scale across the state isn't civil in the slightest. Let's stop pretending there's anything civil about that. We can debate how much taxes to pay and how many benefits people should get all day long with total civility but if someone stands up in the town square and says "I want to implement policies to kill 2 out of every 100 of you every year" then they don't get to act like they're being civil. They actually lose the right to speak in the town square as soon as they suggest killing other people in the square. This is literally political civility 101: the only rule you have to follow is not to incite violence against people. So no, you're not going to flip that around and try to point your fingers at the victims of those sorts of policies and claim that they're not being civil because they are trying to defend their lives, their bodily autonomy and the welfare of children in their community. No. Some of the policies in this election from the LNP are in the bucket of violent extremists; absolutely no hyperbole. Its the sort of woman controlling BS you'd expect in a medieval fiefdom like Saudi Arabia or something
+95. Amazing that you think hyperbolic garbage is new. “Nowadays” we have the internet, which allows it to spread wider at a faster rate, but slagging the other side has ALWAYS been a thing since…democracy I guess.
+96. So fair, like it is fricken state government - relax. Legit nothing will change whoever wins.
+97. >You're more interested in the US election than the QLD election. This is pretty much the problem in Australia. We like not having to pay attention. We'd have much better politicians in every party if people just watched Question Time.
+98. Yeah the ones who say “oh it’s just like the U.S.!” Are only paying attention to America lol
+99. The upcoming US election is going to affect everyone a lot more in the long run.
+100. It’s lost meaning to who, you? Do you know fascism is, generally speaking?
+101. They use fascist tactics to pass fascist laws. What else should we call them?
+102. Fascism is a slippery slope my friend. Do you think Hitler just went 'full Hitler' from the beginning? It was a slow, calculated climb to the top. Once power is secured the full fascist show begins. Read a fucking book. The LNP literally use pages straight from the fascist playbook. 'Youth crime is out of control!' No it's fucking not. They use fear and lies to convince people to vote for them. Does that sound familiar?
+103. Seems like you have a lack of perception 🧑‍🦯‍➡️
+104. “both”. It is this misunderstanding of politics that is at the heart of it continuing to fail us.
+105. Hilariously every point you just made was in line with Greens policies. Did you actually read anything or just watch TV?
+106. Routed. Well financed lies trump well researched facts in the state of stupidity.
+107. Not going to get into a chain of hate with you, this is the only reply you deserve. Within 10 seconds of reading your scant history, I’ll bet good money the only thing you’ve contributed to society are rear-end collision claims and a future stripper with daddy issues. I hope your kids are better than you.
+108. So angry. You okay?
+109. Can’t wait til everyone that voted for lnp to realise they screwed over there own state and themselves
+110. Losing is the word you're after.
+111. What a relief ay
+112. What about Trump makes you froth so hard
+113. Mate have a go at the salt you called it 😅
+114. I think that happens when Redditors realise they are not the world. Or even a decent avg representation.
+115. Can you imagine the complaining hahah
+116. Hahaha I hope to god this happens! The OP sounds like such a pathetic coward, I bet they work like 2 days a week and think they’re a part time activist. What a loser.
+117. Prepare to be downvoted into oblivion 😂
+118. https://www.chickennation.com/voting/ This explains preferential voting
+119. Preferential voting is the goat
+120. the cause of homelessness/high cost of living isnt poorly paid workers, a disfunctional social safety net, or corporate/landlord greed? but "handouts"? i want to what mechanism caused this. and how right wing ideas could fix it.
+121. What a grasp of the world you have!
+122. Dabbling 🤣
+123. interesting that you fail to mention the interference by the US of said left-wing ideologies you cronies always do
+124. Are your friends in Lebanon? Do you think Trump will be different to Biden or Harris?

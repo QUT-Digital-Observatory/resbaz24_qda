@@ -1,0 +1,151 @@
+Your job is to analye a series of Reddit Comments are drawn from sbumissions related to the 2024 Queensland State Election. The comments are drawn from a collection of comments before, during and after the election itself on the 26th of October. The parties that sought election were the Australian Labor Party (ALP), the Liberal National Party (LNP), the Queensland Greens (Greens), One Nation and Katter's Australian Party. The LNP prevailed in the election, with David Crisafulli becoming the new Premier of Queensland. 
+We have identified several key issues that the major parties campaigned on during the 2024 Queensland State Election: Youth Crime (YC), Cost of Living (COL), Health (H), Energy and Infrastructure (EI), and Abortion Laws (AL). Below is a summary of each party's position on these issues:
+Youth Crime (YC):
+- LNP: Advocated for stricter penalties for young offenders, including the 'Adult Crime, Adult Time' policy, proposing that serious offenses committed by youths be met with adult sentencing. 
+- Labor: Focused on rehabilitation and prevention programs, aiming to address the root causes of youth crime through community engagement and support services.
+
+Cost of Living (COL):
+- LNP: Proposed measures such as abolishing stamp duty on new builds for first home buyers and re-establishing the productivity commission to review building industry regulations, aiming to alleviate housing costs. 
+- Labor: Introduced initiatives like 50-cent public transport fares, a $1,000 energy rebate, and free lunches for state primary school students to ease cost-of-living pressures.
+
+Health (H):
+- LNP: Committed $590 million to an 'Easier Access to Health Services Plan,' aiming to reduce ambulance ramping and hire additional healthcare workers. 
+- Labor: Focused on maintaining and expanding healthcare services, addressing hospital capacity issues, and investing in new health infrastructure.
+
+Energy and Infrastructure (EI):
+- LNP: Criticized Labor's Pioneer-Burdekin Pumped Hydro Project as financially unviable and canceled it upon taking office, opting to explore smaller-scale hydro projects instead. 
+- Labor: Proposed large-scale renewable energy projects, including the Pioneer-Burdekin Pumped Hydro Project, to transition towards 80% renewable energy by 2035.
+
+Abortion Laws (AL):
+- LNP: Stated there would be 'no changes' to abortion laws under their government, maintaining the status quo established in 2018. 
+- Labor Party: Supported the existing abortion laws and opposed any attempts to repeal or amend them. Asserts that LNP intend to restrict access to abortion services based on the views of some of their members.
+
+Analyze Reddit comments and code them based on the positions they support or oppose concerning these issues. You will output JSON, so valid values are strings or null. Use the following codes: YC, COL, H, EI, AL. If a comment's position is unclear or does not pertain to these issues, output null.
+
+Secondly identify which party the comment appears to support. Use the party code ALP, LNP, Greens, ON, KAP if this can be determined, otherwise a null value if undetermined.
+
+Output JSON as a list of objects where each object has an "id" (integer) property of the comment id, an "issue" property set to the issue code string (or null value), and a "party" property set to the party code string or null value. Null means JSON null, not a string. Values MUST be quoted, e.g. {"party": "LNP"} unless they are null, e.g. {"party": null}. Comments follow:
+
+1. Let me put this to you. What would actually convince you that the law would not change under the LNP? If the answer is "nothing" then that should tell you all you need to know about how you're approaching this and how effective the scare campaign has been
+2. [deleted]
+3. And even in that answer, he didn’t specifically say he expects his party to toe the line and vote against whatever drivel Katter presents to them. The guy is slimier than a worm farm and dirtier too.
+4. because of how it was set up, some did vote purely on abortion being wrong, but others had issue with how bill was done up. but since the bill went up late term abortions have double, so it very much needs to be look at, but doubt the LNP are going to do that.
+5. It's not rooted in fact at all.
+6. wow you sound very biased and bigoted sound more like American politics/media has rotten your brain, and its very much is a scare campaign, LNP have repeatedly stated they will not be changing the laws.
+7. Uh, huh. The standard ALP, "Look over there! Look over there!"
+8. There are 2 separate issues here. Every person is entitled to have personal views. About anything. But that does not necessarily mean a politician tries to use their position to push their beliefs on others.
+9. Stop being a knob. I have zero connection to any political party. All actually makes zero effect on my life. I can't stand it when people get suckered into silliness and game playing.
+10. Oh gotcha.
+11. And if there is a medical reason that endangers either mother or child then sure. As I said, if it’s medical reasons I’m not against it
+12. Plenty do.
+13. What the SA bill was had to do with very late term abortions and babies being born live, put in a Petri dish with a towel over it and taken in the waste room to die. Theres loads do midwives who have come out to explain the process. Late term abortion where a baby is compatible with life shouldn’t happen (unless medically indicated). That’s what that bill was about, not to eradicate abortions completely.
+14. No, I’m just pointing out a fact. I can’t vote here, so have no foot in the race. Doesn’t worry me too much who is in and who is out. It’s just an impartial observation.
+15. I mean they are all politicians aren’t they. I wouldn’t trust any of them realistically. Doesn’t matter what colour they wear. Trusting a politician is about is stupid as thinking a ripper is actually into you. Bit of an exaggeration, when someone says something, you do have to give them the benefit of the doubt.
+16. [deleted]
+17. It's always possible, that's how parliament works, stupid shit doesn't usually happen as the party knows they will lose power at the next election if something out of step with public opinion is implemented. Labor is trying to revive a campaign that was dead by running a fear campaign, as your post shows, it's working. Abortion is a health issue, look at public opinion, LNP aren't touching it and they have said as much. If they backflip and do change it they will a) lose the next election and b) Labor will reverse it and campaign (rightly) on it. It's a non issue, imported into QLD cause Labor have nothing else going for it but drummed up fear, and speaks volumes how effective it is. Again, please go touch some grass and realise everything is going to be fine, there is no boogeyman coming for women's healthcare.
+18. I stayed home and raised my daughter until she started school then I went back to work. So don't assume it's only women who do that. Biological reality means we can't bear children , that shouldn't exclude the fathers from having a say other than where domestic violence is an issue
+19. Well that’s their promise and I can only trust their promise as much as the others.
+20. Yeah, it truly would have been a scary country to live in if we didn't allow elective late-term abortions
+21. Hysterical
+22. Seriously the fear mongering is just making people look desperate. Wait and see .. this will get no oxygen after there is nothing to be gained by driving the wedge.
+23. Are you?
+24. Absolutely no one. Ever.
+25. The words 'unless you are planning' are a rhetorical phrase used to indicate the following words are something which *should not be* planned, for one reason or another. In this instance, the thing which should not be planned to be relied upon, because of its absolute barbarity, is the ability to kill a healthy unborn human past the point of viability, where the intent is clearly not to just end the pregnancy, but to do so with the desired outcome being the deliberate death of the unborn child. If you are ok with killing an unborn human which would otherwise survive if it was to be delivered alive at the same point in time, you may as well just say you support infanticide. Edit: typo
+26. I agree.
+27. To be fair as a centrist I’m just as unlikely to vote labour as LNP. They’re both soooooo bad
+28. It’s a myth that they are good for business. They are good for billionaires. But that’s all.
+29. Unfortunately u got duped my friend. They don't care about or help small business, only big businesses and their m/billionaire mates
+30. A someone who runs a small business, government support for our sector flourishes under Labor. I can't even remember the grants under Newman but I do remember there weren't many.
+31. Where has it been said that LNP are changing abortion laws? They have even said that they would not change the laws? KAP has said they will introduce a bill for this but have walked that back to late term abortion changes. [https://www.abc.net.au/news/2024-10-22/robbie-katter-abortion-laws-queensland-election/104502092](https://www.abc.net.au/news/2024-10-22/robbie-katter-abortion-laws-queensland-election/104502092) Not once has anyone mentioned KAP's stance here, this is your real enemy. Bugger all to do with LNP, so stop the scare campaign and if you disagree with the KAP stance then hound them to pull their heads in.... The LNP cannot stop them from introducing any bill. The Qld public can express their distain for what KAP is proposing which may sway them to pull their heads in so your anger is best directed in that direction?
+32. Boo.
+33. Mate he voted against decriminalization... He will vote yes idgaf what he says, or anyone else in his party. He won't allow a conscious vote. Smoke and mirrors. Then he will deny all culpability when it does happen saying he was against it
+34. Bless you. May your scrotes be forever licked.
+35. In my experience, most women are always right. So it seems pretty dumb to start thinking for them. Didn't we try that. Me 55yo male. Go girls, you go get yours.
+36. I assume you are referring to women as the 50% you support. If so , do you support women who are anti-abortion ?
+37. Yeah, look unless ALP can the old guard on the cabinet I’ll remain skeptical. Mark Ryan can eat a bad if syphlitic dicks.
+38. While it's great theyve adopted these policies, it is worth noting that they are basically watered downs greens policies they are pushing because they are under threat of dropping progressive voters to the greens in key brisbane seats.
+39. Surely this election has put that idea to bed? Compare Labor's plans for Green Jobs and Energy, 50c fares, QLD train and bus manufacturing, free school lunches for kids, bulk billed satellite hospitals, ending unpaid placements and providing free Tafe courses for in demand professions. Not to mention legislating the most ambitious carbon emissions reduction target in the country 75% by 2035 with actions that mean we're actually on track to meet that.
+40. Surprisingly only about 30% are actual public servants. But our Labor government has got a bit too complacent and the Libs just thought it was their turn but they opposed things like voluntary assisted dying and the drug reform laws treating drug addiction as a health issue…. So they lost last weekends election in fact all they changed was greens lost 2 seats and independents gained 2 seats…. Although that’s to be finalised I think end of next week.
+41. I hope that's the line... I really do. But I doubt people would do shit. Buttttt we are the ants, and they are the grasshoppers...
+42. Thank you for explaining, well said.
+43. r/boneappletea
+44. Yes, thank you. Autocorrect fail now sorted. Anyways, this idiot should be preparing to get loud. It's going to be an absolute demolition job by the LNP tomorrow. There are no indicators in either the polls or the betting markets that suggest Miles has a snowballs chance in hell of holding office. How good??? 💪💪💪 But irrespective of who wins the election, to suggest it's dangerous to protest in Australia is just plain moronic. What does he think is going to happen?? Water cannons, bean bags, rubber bullets, tear gas? Geezus 🤦
+45. I'll be joining you for the protest, if the LNP win, I'll try to get in contact with as many people as possible to organise one.
+46. If they get in protesting won’t help. What will help is ensuring the safety and security of the clinics which will once again be secret pop up clinics run by doctors and nurses who will risk their licencing to ensure they provide healthcare. Support Children by choice they’ll need the dollars to assist women. Practical support will be required and needed.
+47. No you won’t. You’ll be on reddit bloviating.
+48. [removed]
+49. Appreciate the well thought out reply. Not sure why I not negged. It’s nice to hear someone else’s opinions regardless of what party they support. Cheers
+50. Wasn’t David 1 of the 3 that voted against legalizing abortion?
+51. Just like the entire Labor movement with their fear campaign about late term abortions. Pot/kettle
+52. Obviously more informed than you... Please explain your understanding of the 'abuse' that you're referring to.
+53. Yeah typical bullshit from that lot
+54. Please be respectful though. You don’t have to agree with them but don’t yell, be aggressive or insult appearance etc. We are better than that
+55. It’s not labor! It’s Trump. It’s South Australia. It’s the LNP who have voted before, it’s Katter, it the LNP who voted against the banning of gay conversion therapy, it’s women who are terrified, it’s men who support women mic it’s journalists. It’s not labor.
+56. It will be their fault but lying through theyre teeth is what theyre best at...
+57. Bro too busy spamming the same 3 illiterate comments
+58. I couldn’t for the life of me figure out wtf they were on about with this. Your comment made the lightbulb go on. I think they’d be happier supporting onp than lnp tbh
+59. Typo aside you didnt answer my question 😭
+60. I hate it, but I do agree with you.
+61. That's the thing. I know that there hasn't been anything that's happened to them to make me believe that they "believe women should have the option".
+62. Elderly people??? WTF are you talking about. You worried if the status quo of women being able to control their own reproductive outcomes means the evil doctors are coming to terminate you in your comfortable over valued home?? You really need to be removed from the voter role of this is your actual level of logic.
+63. Well it’s the fact that he has MPs who have come out and said they would challenge David on the abortion issue. HE may not want them changed. But those that support him do.
+64. Don’t make it sound like the people are being unreasonable. There might be nothing he can do now to convince people that the law wouldn’t change under his goverment, but there abso fucking lutely was 10 million fucking ways he could have made it crystal fucking clear over the last couple of weeks. He fucked around instead of just putting it to bed and he got found out. Coming out now and being all righteous about it just makes him look like an ever big fuckwit.
+65. Sure, if the LNP messaging across the party was “no abortion law change”. But that is absent, and instead there’s lots of weasel words. The language is very telling, trying to avoid tackling it head on and keeping to their small target strategy. Edit: uh what
+66. I’d be more likely to believe them if Crisafuli was explicit that he wouldn’t allow a conscience vote if a minor party brought the bill to the parliament. I’d also be more inclined to believe them if they preselected moderate liberals rather than evangelical ultra conservatives like Amanda Stoker.
+67. Have you seen the Libs in Oz recently? They’re mainlining US culture wars issues like trans panic, abortion. This isn’t new, they just haven’t been successful at getting it up. Fringe dwellers like anti-trans, anti-abortion, future minister Amanda Stoker are going to be elected into parliament. That’s the kind of change coming.
+68. Four years is a long time to make women suffer
+69. Yeah, I'm not big on him either. It's as if he's a parody of a politician. It's beyond baffling the number of people believing slogans = solutions. Not to mention the simping for coal mining conglomerates. Yes, let's pretend we have the people's best interests in mind by removing coal royalties, which play a significant role in paying for public services. Let's claim we will rehabilitate the public health system by firing thousands of service workers. People will just spread their cheeks as far as the moon is to the earth and happily sing, "Labor has been in for too long."
+70. Could you provide a source supporting your claim that late-term abortions have doubled?
+71. Private members bill to be introduced by Katter,93% of the LNP voted against the changes to abortion law in 2018, the LNP allows a conscience vote. The LNP are going to repeal the abortion laws. Only a completely disingenuous grub would pretend these are not the facts.
+72. Then David Cristfulli should be able to clearly state he will step down if abortion laws are rolled back undee him. Oh wait, he'd be out of a job in 3 months when he votes in favor of katters bill
+73. Amazing argument. You convinced me.
+74. And so the conscience vote means what for women...?
+75. Dream on dickhead.
+76. Name them
+77. There's a handful of midwives (note no actual doctors) making up lies and wilfully misinterpreting statistics to spread dishonest anti-abortion rhetoric. There's only 2 cases they can even point to where this *possibly* could have happened, and both foetuses were already incompatible with life (ie deformed/disabled beyond survivability), so the boogeyman of 'perfectly healthy babies being aborted and left to die' is simply non-existent. These 'activists' also like to include the very few cases where the parents declined the abortive injection in favour of being able to hold their baby as it passed away- again due to being incompatible with life. This strategy is taken directly from the playbook of American anti-abortion movements, where they try to erode abortion rights through lots of little legislative changes, chipping away abortion access each time and intimidating doctors out of performing perfectly legal abortions through the looming threat of prosecution. Late term abortions where the baby is perfectly healthy and would otherwise survive, simply don't happen.
+78. Did you change your mind halfway through that comment? You start by saying you can't trust them as far as you can throw them, but then end on saying that you have to taken them at their word and give them the benefit of ther doubt?
+79. You alright mate? Are you that lost in the woods you don't understand the difference between hypocrisy and breaking a promise? I mean this shit isn’t that hard, Miles isn’t a saint, it’s not that hard to find a broken promise but instead you fart out this?
+80. Again, when you suffer all the awful symptoms and forever health issues and body changes that come with pregnancy, then I will support you. Thank you for being a wonderful father. I am so greatful that your child has that. We need more of you. However I disagree with you on the point that you should be able to force another person to go through a life changing medical procedure.
+81. So you think a party that is only pro business Will just phone up the insurance companies on Monday (should they win) and just tell them to drop their prices!?! If anything, they’ll get them to increase the prices to ensure their businesses are fully covered come any foreseeable disruptions to their revenue flow.
+82. You have correctly self-identified what is wrong with your behaviour. Well done. Now, can you identify what you need to do to fix your behaviour?
+83. First time with LNP Government in QLD hey…
+84. Just remember to put Labor before the LNP on your preferences and make sure that anyone in front of them isn’t worse. Some small parties sound good but turn out to support the LNP on crazy shit.
+85. Yes my husband owns a small business and the LNP have never seemed to have any policies that have helped us
+86. It was great for Crisafulli when he used Newman's influence to slip himself 320k under the table and also used 200k to settle insolvent trading accusations.
+87. Long term they are not even good for most billionaires. Countries (and states) with abortion bans stagnate.
+88. KAP initially said they would push a private members bill criminalising abortion, if both labour and liberal parties said they would vote against it and not call a conscience vote the bill would be impossible to pass. Labour has said no and no conscience vote. Cristafulli initially said that lnp would not change the laws which is true because it was KAP that was changing the laws. He then said it would not change under LNP despite refusing to say no conscious vote which means either he can see the future or he's straight up lying because he has the power to make these changes impossible (as labour has committed to) and refused to use it over 130 times. The only reason he would so strongly commit to refusing to say whether or not he would call a conscience vote is because he plans to call one. LNP candidates have quite literally said as much. https://www.google.com/amp/s/amp.theguardian.com/australia-news/2024/oct/18/qld-election-2024-freya-ostapovitch-lnp-stretton-candidate-abortion-ntwnfb Cristafulli has both voted against reproductive rights and outright stated he is pro life this directly support his agenda and he has stated that on abortion his position is(in relation to the 2018 bill): “Well, it’s a conscience vote,” Crisafulli responded. “I voted against the legislation, and I did so, and I articulated my reasons because I thought the content of the bill was too far.” https://www.theguardian.com/australia-news/2024/oct/22/queensland-election-2024-lnp-abortion-policy-david-crisafulli Cristafulli will call a conscious vote, according to cristafulli, all but 3 liberals last time voted for it meaning there is a strong chance that a KAP +LNP will criminalise abortion. While KAP is the force behind it LNP are whats currently letting it be a reality.
+89. Crisafulli refused to rule a conscience vote out if somebody else proposed something. The Katter Party have been spamming Parliament with abortion proposals for months now and Crisafulli previously said last year in an interview that he will allow a conscience vote. Given that 90% of his party previously voted to keep it criminalised, it's super alarming. People have hounded Katter to pull his head in which is why he revised his proposal. The LNP can't stop them from introducing a bill, but what they can do is tell people whether they will allow a conscience vote if they do and Crisafulli repeatedly refused to answer that question because he knows he can't answer it with a straight face. Also you complain about people running scare campaigns. What the fuck else has Coalition ads about youth crime epidemics despite having all time record low levels of youth crime and ads that Labor is removing bulk billing for healthcare been?
+90. I agree. Boo Crisafulli and his lot. 38/41 mp’s voted against women’s rights. Boo them all
+91. I’ll settle for a bidet thanks
+92. I just want women to have the choice as to what they do with their bodies. Don’t want an abortion? Don’t have one. Don’t want preventative measures for pregnancy? Don’t use them. Don’t push your own agenda onto others, especially if you’re male.
+93. I support a woman’s right to have a choice in matters regarding her body so yes, I do.
+94. Yeah I’m super impressed with QLD Labor recently. I used to be of the opinion that they were just a more useless, less right leaning LNP, but Miles and his government have started some policies and put forward some policies which have genuinely good impacts on the community and cost of living. 50c fares are unbelievably useful and free school lunches is how you ACTUALLY stop youth crime. There are a bunch more too that have the potential to make life just easier. As cliche as it sounds, they really seem to be “for the people” which is so refreshing to see from a government in power
+95. I actually quit teaching at TAFE under Newman because of all the outrageous changes to the system that ripped the guts out of it. They did it so fast too... Course curriculums were cut by half and more but prices quadrupled. It has had an enormous effect on my industry to this day. Those fee free TAFE options were bloody fantastic and only something you could ever expect to see under Labor.
+96. Unfortunately, the right of the ALP will use the election loss as an excuse - "see we offered them real left wing policies and we were rejected - let us never ever make this mistake again".
+97. Labor has been doing pretty alright lately but let's not forget a lot of these were ideas originally pushed by the Greens (& that Labor scoffed at initially) like the cheap/free public transport and free school lunches. Greens have also been continuously pushing Labor further left on emissions targets and renewables. If you like these policies and want to see more, don't forget to preference your local Greens candidate :)
+98. I think you will be pleasantly surprised the number of people who are willing to protest for abortion access
+99. Yeah I’m sure it’s gonna be good for *reads list* - women - public servants - QLD in general
+100. Count me in!!
+101. Pay attention to what many LNP candidates have said - and what they have refused to say.
+102. Only 3 members voted to legalise abortion and Crisafulli voted against legalising it
+103. Crisafulli voted for abortion to remain in the criminal code, as did his deputy
+104. He was one of the 38 that voted against it. 3 voted for it
+105. Did you actually think you had something with that one, champ?
+106. corporal "punishment"
+107. I don't have to. The Greens have been guns blazing with their bullshit, and the ACT showed them what they thought of it.
+108. Well, according to your logic, people who aren't living self-sufficiently deserve to die
+109. There is one MP, to my knowledge. One.
+110. "the people" give me a break. "these people" is what you meant to say, at best, "us" I'm sorry, but when you close yourself off to all avenues of being convinced otherwise it becomes the definition of an unfalsifiable argument. And the problem with unfalsifiable arguments is that they have a religious dogmatism to them - there's no amount of evidence that will now convince you that you're wrong, so why bother? I see your point, and I agree, he has been shifty and shady. That's in large part why I'm not voting for him. But its important that everyone see that even if they end up being correct, they *are* being unreasonable on this issue by definition because they are now, by definition, beyond reason - and that is in large part due to an extraordinarily effective scare campaign
+111. My bad on the edit, I've fixed that. Assumed it was you - it wasn't. David has used weasel words as he has tried to figure out how to frame his position without putting people offside, but he has now said "the law will not change" in dozens of different ways and contexts. Are you saying that the party needs to unite behind him and say the same thing, but they haven't? I think that would be a fair standard and you're right, that hasn't happened, or at least it hasn't been reported on.
+112. Amanda is just one candidate, but yes I take your point. I don't know if it would be feasible for him to do that, but yes, that is one thing he could do that he hasn't done.
+113. [deleted]
+114. Welcome.
+115. Same as anyone. They vote on their conscience. Women have varying opinions too you realise.
+116. Your a hateful person aren’t you
+117. No, as mentioned, I said “bit of an exaggeration” for a reason. You can’t trust politicians but by the same coin, you have to believe what one says, otherwise what do you have to go off?
+118. To make a really long story short, in the mid 90's a mate of mine was having a child with his long term partner she went and had an abortion without telling him till after . He then committed suicide that's when I stopped supporting women having the absolute right to choose. It may only affect women's bodies but it does not just affect their mental health
+119. Why would they choose this issue if it wasn’t something they wanted to support.
+120. Yes, Big Brother
+121. Must be first time LNP government period...
+122. So many people vote for Family First Party knowing nothing about them because the name sounds good. *Please I beg do not do this*
+123. Me too

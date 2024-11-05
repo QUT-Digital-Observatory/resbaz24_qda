@@ -1,0 +1,157 @@
+Your job is to analye a series of Reddit Comments are drawn from sbumissions related to the 2024 Queensland State Election. The comments are drawn from a collection of comments before, during and after the election itself on the 26th of October. The parties that sought election were the Australian Labor Party (ALP), the Liberal National Party (LNP), the Queensland Greens (Greens), One Nation and Katter's Australian Party. The LNP prevailed in the election, with David Crisafulli becoming the new Premier of Queensland. 
+We have identified several key issues that the major parties campaigned on during the 2024 Queensland State Election: Youth Crime (YC), Cost of Living (COL), Health (H), Energy and Infrastructure (EI), and Abortion Laws (AL). Below is a summary of each party's position on these issues:
+Youth Crime (YC):
+- LNP: Advocated for stricter penalties for young offenders, including the 'Adult Crime, Adult Time' policy, proposing that serious offenses committed by youths be met with adult sentencing. 
+- Labor: Focused on rehabilitation and prevention programs, aiming to address the root causes of youth crime through community engagement and support services.
+
+Cost of Living (COL):
+- LNP: Proposed measures such as abolishing stamp duty on new builds for first home buyers and re-establishing the productivity commission to review building industry regulations, aiming to alleviate housing costs. 
+- Labor: Introduced initiatives like 50-cent public transport fares, a $1,000 energy rebate, and free lunches for state primary school students to ease cost-of-living pressures.
+
+Health (H):
+- LNP: Committed $590 million to an 'Easier Access to Health Services Plan,' aiming to reduce ambulance ramping and hire additional healthcare workers. 
+- Labor: Focused on maintaining and expanding healthcare services, addressing hospital capacity issues, and investing in new health infrastructure.
+
+Energy and Infrastructure (EI):
+- LNP: Criticized Labor's Pioneer-Burdekin Pumped Hydro Project as financially unviable and canceled it upon taking office, opting to explore smaller-scale hydro projects instead. 
+- Labor: Proposed large-scale renewable energy projects, including the Pioneer-Burdekin Pumped Hydro Project, to transition towards 80% renewable energy by 2035.
+
+Abortion Laws (AL):
+- LNP: Stated there would be 'no changes' to abortion laws under their government, maintaining the status quo established in 2018. 
+- Labor Party: Supported the existing abortion laws and opposed any attempts to repeal or amend them. Asserts that LNP intend to restrict access to abortion services based on the views of some of their members.
+
+Analyze Reddit comments and code them based on the positions they support or oppose concerning these issues. You will output JSON, so valid values are strings or null. Use the following codes: YC, COL, H, EI, AL. If a comment's position is unclear or does not pertain to these issues, output null.
+
+Secondly identify which party the comment appears to support. Use the party code ALP, LNP, Greens, ON, KAP if this can be determined, otherwise a null value if undetermined.
+
+Output JSON as a list of objects where each object has an "id" (integer) property of the comment id, an "issue" property set to the issue code string (or null value), and a "party" property set to the party code string or null value. Null means JSON null, not a string. Values MUST be quoted, e.g. {"party": "LNP"} unless they are null, e.g. {"party": null}. Comments follow:
+
+1. Depends what they do about 50c fares. Half of these commenters think they'll be here till the heat death of the universe and half think they'll be gone by Monday. That will have a very real impact on my literal day to day life.
+2. While I'm very sad about the outcome, if the LNP have any sense, you might be right. It's a big if, but hey, stranger things have happened.
+3. LNP can’t help themselves. It’s gonna be a shit show. If the issues weren’t so serious I’d be eating popcorn and enjoying it.
+4. Watch this comment age like milk as the pre-poll votes keep coming in.
+5. Ir might be that it's actually very hard to defend LNP positions without media running interference.
+6. It has made for a remarkable echo chamber, hasn't it! One that after tonight is demonstrably well out of touch with the mainstream, too.
+7. They want you to point towards some achievable policies. I'm reading the LNP policy document right now and they're promising a lot of vague and unrealistic things. It mentions a bunch of stuff that doesn't exist either. Like patient and renters tax...the "renters tax" never made it into law and GPs are exempt from the payroll tax >.> They make a lot of promises to do work without any concrete plans or identifiable goals.
+8. I love coal mining too! We should keep selling all our natural resources and get nothing for them!
+9. I accept it, I just don't like it
+10. It's a big difference if they repeal the coal royalties like they plan to. That's billions that goes to state they'll either need to cut or raise elsewhere. That's not very good at all.
+11. Trust in them because they simply wanted something different? Not that we have any problems but they are sick of the same party in power so they want a change simply for the sake of it? And what has LNP said it’ll do? Tackle youth crime. Even if they actually do that and pull it off, that’s one thing. That’s all their campaign has been about.
+12. At least the kids will get free lunch in prison. And woman's rights going backwards is always a good sign...
+13. Federal LNP will disavow Qld like always, unless their Republican advisors think it's a winner.
+14. Ok doomer
+15. People like you are why I voted LNP
+16. I will be messaging you in 1 year on [**2025-10-26 20:22:28 UTC**](http://www.wolframalpha.com/input/?i=2025-10-26%2020:22:28%20UTC%20To%20Local%20Time) to remind you of [**this link**](https://www.reddit.com/r/queensland/comments/1gck577/honest_thoughts_on_positives_for_someone/ltwkgva/?context=3) [**CLICK THIS LINK**](https://www.reddit.com/message/compose/?to=RemindMeBot&subject=Reminder&message=%5Bhttps%3A%2F%2Fwww.reddit.com%2Fr%2Fqueensland%2Fcomments%2F1gck577%2Fhonest_thoughts_on_positives_for_someone%2Fltwkgva%2F%5D%0A%0ARemindMe%21%202025-10-26%2020%3A22%3A28%20UTC) to send a PM to also be reminded and to reduce spam. ^(Parent commenter can ) [^(delete this message to hide from others.)](https://www.reddit.com/message/compose/?to=RemindMeBot&subject=Delete%20Comment&message=Delete%21%201gck577) ***** |[^(Info)](https://www.reddit.com/r/RemindMeBot/comments/e1bko7/remindmebot_info_v21/)|[^(Custom)](https://www.reddit.com/message/compose/?to=RemindMeBot&subject=Reminder&message=%5BLink%20or%20message%20inside%20square%20brackets%5D%0A%0ARemindMe%21%20Time%20period%20here)|[^(Your Reminders)](https://www.reddit.com/message/compose/?to=RemindMeBot&subject=List%20Of%20Reminders&message=MyReminders%21)|[^(Feedback)](https://www.reddit.com/message/compose/?to=Watchful1&subject=RemindMeBot%20Feedback)| |-|-|-|-|
+17. Crime is lower now than it ever was under LNP...
+18. You are right! If we all do that, overall victim numbers will increase and LNP will resign in 4 years. I love your thinking, very strategic.
+19. What makes you think anything will actually change? Just because that’s literally the only thing they were campaigning about, doesn’t mean they will actually do it.
+20. I mean, if you’re doing that anyway you deserve to be broken into
+21. That sounds like naivety at best
+22. both my frontline parents losing their jobs under Campbell when I was young isn’t reddit propaganda
+23. I was there. I remember extremely well. And I see the damage that is going to be done over the next 4 years
+24. Last LNP, crime was high, the economy was desperately worse off, public assets were gutted or sold off, the public health system was stripped bare which made it one of the worst in the country, Newman fed projects into personal coffers, job rate fell on it's face, property prices floundered horribly. But no you keep believing your own propaganda instead, go right ahead.
+25. Who needs propaganda when you can actually just look at archives and the records showing everything LNP have done in the past and their actual performance at governance? For someone continuously spouting the inane things you do, you certainly never stopped to consider you've drank the kool-aid of your 'team' and their own propaganda. You're just being the right wing flavour of everything you level at your left wing opposition.
+26. I was in my first year as a student nurse when the last LNP was elected. Watched as many entire departments of hospitals were permanently closed or repurposed because “we just send them to the major hospital” Health services like assisted dying and hospital in the home services that didn’t exist last time are going to be slashed because they cost a lot of man hours to process and don’t fit the slogan. Last time LNP was in power abortion was a criminal act. If you think his promise of it’s not going to be changed holds any water remember the kata party has 3 seats. 3 seats the LNP might need to form government.
+27. Couldn't agree more,
+28. Old enough to be around for Newman but not Joh, and i remember the Rim Carmody affair and such so it's not all propaganda. But we did just have a very disappointing decade of liberals in federal that everyone should remember. It's difficult to think of any positive policies they willingly implemented over that decade, and it'll certainly go down as a list decade for productivity and climate change.
+29. "develop public servants' skills" is just code for making fewer people do more work.
+30. As a Labor voter, I am choosing hope as well. Nothing is going to change the fact that a new government has been decided. But I am going to just stay hopeful that despite that, this will stay a state that I love and be proud to be a part of, and that I continue to enjoy my time hanging around the people of this state regardless of there preference in party, as has been the case since before the election.
+31. Mate, DC doesn't have any principles.
+32. Criminals flock to the LNP like flies to a turd. They always give their supporters ways to launder their money. So, more casinos are on the way.
+33. I'm really hoping they don't reduce ambulance ramping by privatising QAS. That would mean less people calling for ambulances because you gotta pay for it, but it would also mean more people die or are financially encumbered because of chronic conditions.
+34. It'll be gone in 3 months. You watch...
+35. Already got my free travel access pass in preparation for goodbye 50 cent fares.
+36. The thing is "let's how dumb they are" is a test of US, not them. They went on record to repeal mining regulation, iffy about abortion and have a history of privatising good public projects, haven't released their budget or costings and they STILL got in. How dumb are WE?
+37. Surely not favourable in the regions as they don’t benefit?
+38. The real positives are for business. Environment and humanity is dead, but businesspeople will get massive gains.
+39. Thank good, you don’t know what you’ve got till it’s gone
+40. The QTU purposefully hasn’t striked since Newman was in to make Labor look good. On the other hand the Labor government has continually screwed teachers over the same time. For example despite there being a massive teacher shortage, there has not been pay increase that has outpaced inflation over that time period. During covid labor even stopped teachers from getting any incremental increase for 12 months, effectively making pay go backwards. Every time this happened the QTU just rolled over and agreed since all their friends are in Labor and the top Union members all want to become Labor politicians in the future.
+41. You would think so, but take the main union for the federal public service as an example, the CPSU. Multiple people from union leadership have made the hop into a Labor political career, leveraging their union position. (Looking at you, Finance Minister Katy Gallagher.) As a result, union officials always act with an eye to their future political career, and go soft on any industrial action, when they negotiate with Labor governments. And the membership gets dudded. That's how we ended up this year with an Enterprise Agreement that barely offered parity with inflation, and the Union recommended that to staff as the "best possible offer on the table." I'm guessing the Teachers Union is similar.
+42. Yeah, cafeateria service, *something no one has ever done before*, apparently too hard, let the children continue to starve.
+43. Why would this be hard for the school to administer? They already do provide lunches, but for financial exchange instead. Every school has a tuckshop where kids can buy foods. They'd literally just not take money for 'marked' foods before school starts. Kids would stand in line, and ask for one of those foods - cereal or some fruit.
+44. I’ve worked as a police officer and I am now a teacher. Our watch houses are fed by local businesses who have a contract to cover the catering on a specific day. Local businesses would have been able to supply say sandwiches on a Monday (and another business has a contract for Tuesdays etc) to help the tuckshop with the increased demand. The government has handled more complex tasks than catering. It could have been done. I now work as a teacher in a state primary school. I have about 6 children in my class who have low attendance. I guarantee those parents would be more motivated to send those kids to school if they are being fed. It saves the family money which is especially important in a cost of living crisis. If we can get them to school, we can teach them. Or we can fix their mental health. Hey it might even prevent them getting in to crime at a later stage if they are educated and they get access to the programs that our state schools run on social skills or zones of regulation. It’s a good policy to feed children. It’s a good policy to encourage public transport. The society I want to live in needs to look after people and provide equality for all. I’ve seen first hand how hard some children have it (by policing and now teaching) and it’s in theirs and everyone’s interest to build them up. It worries me that people cast their votes based solely on their interests (or lack of proper education in to what exactly they are voting for) and not thinking of others in our society.
+45. The lnp will reduce the royalty rate.
+46. sorry you didn't get a bite last time champ. Good to see you running it back
+47. We're in a third consecutive surplus, have the best economic performance in the country, the biggest expansion of private renewable investment and related job growth (in addition to our public works), the cheapest power with our coal royalty fun-bucks, consistently dropping crime rates, and the cheap public transport has already shown to invigorate the local economy.
+48. The YMCA Schools’ Breakfast Program began in September 2006 with the support of the Clem Jones Group and Foodbank Queensland. The program started at five state schools in the heart of Logan, deemed by Education Queensland as ‘most in need’ of a breakfast program. https://ymcaqueensland.org.au/services/schools-breakfast-program https://www.foodbank.org.au/hungry-queensland-children/?state=nsw-act https://www.abc.net.au/news/2024-09-09/food-insecurity-children-outreach-programs-free-lunches-school/104318308 This isn't a new thing but when you only give a fuck about what you can get you miss the forest for the trees
+49. For anyone who isn’t a self-serving asshole, yes it’s that much of a concern.
+50. It's a good program but when you know why. The lnp policy is lock them up more longer terms etc. The lunches, cheap transport and things like that are to prevent people becoming criminals, instead of just waiting til they are and locking them up
+51. I have a friend who was made redundant by Campbell Newman (with a big payout), and was then hired back as a private contractor (for more pay) because they needed her to do the job.
+52. We said that about Abbott too
+53. This is ridiculously hyperbolic.
+54. If you think about it, it's really just intermittent fasting...which is good 🫣. I tried... it's grim up north mate
+55. A lot more renewable energy being made and not spending billions on reviving coal power.
+56. What could Labor do to stop every other state from moving here cause conditions were so much better lol
+57. Fuck off.
+58. I'm in regional Queensland where both my local seats went to the LNP. I didn't vote for LNP. A lot of the LNP votes came from one nation and the greens.
+59. 5.4% swing in Brisbane. You want all them to flood too? What a prick.
+60. I moved from Sydney to Brisbane in 2011 and never feared for my life more when crossing the road than I did in Brisbane. I found Brisbane people to be cold, cliquey and definitely asserted their rights as drivers over those of pedestrians. I don’t have data to back this up, but in my social circle it’s the people who have moved from elsewhere that vote Labor/Greens and QLD natives that vote LNP. Housing affordability is awful everywhere, but I really don’t think it can be blamed on Southerners entirely. Melbourne has higher population growth and Brisbane and their housing market is actually one of the few that is still somewhat affordable https://www.abs.gov.au/media-centre/media-releases/capital-city-growth-highest-record Us southerners can’t be blamed for everything, and if we all left QLD would be a mess. If overseas and interstate migrants left you’d lose at least half of your public health workers for a start.
+61. Yeah, considering it actually champ
+62. I really don’t understand the thought process that’s leading people to assume the LNP are going to jump onto building a new stadium at Vic park, especially now that it looks like they have limped over the line pretty much entirely on regional votes. Victoria Park only polls [around 22%, ](https://archive.is/20240504205548/https://www.couriermail.com.au/sport/brisbane-olympics-and-paralympics-2032/brisbane-2032-poll-queenslanders-lose-faith-in-delivery-of-promised-benefits/news-story/174ab87dc65103278a6e7bd316e0e366?amp&nk=a36743fcee2c19b9fdb093909e7932f3-1714856164)and the Olympics as a whole are unpopular statewide, but especially in regional Queensland. The Queensland construction sector is [significantly overcapacity](https://www.smh.com.au/interactive/hub/media/tearout-excerpt/25452/r_Wave-5-Longitudinal-Research---Full-report.pdf), so a new stadium build isn’t going to be cheap. I just don’t understand the argument that the LNP are going to burn their very limited political capital breaking one of the few commitments they made (no new stadium), to build a stadium that has limited public support and significant cost and in the process alienate the regional voters that got them over the line this election.
+63. I'm sorry you're struggling too. Be gentle with yourself and take the rest you need. Reach out if you need also. I am doing my turtle walk tomorrow so hoping spending time with an amazing women (has been doing turtle monitoring for years) will help. Then I will be coming home and spending time with my flatmate. He's going to be taking it worse than me so I am glad we have each other for support. I might take a mental health day also next week. Just to bedrot and decompress.
+64. Given that the federal election is in around six months, they'd be dumb to ditch the 50c fares before then.
+65. I'm not going to lie and say the LNP have an amazing policy platform. But there's one message from tonight, it's that the cost of living and housing crisis is no joke. Ignore them at your peril.
+66. It's so vague, I have no idea what the lnp policies are.
+67. So like the greens?
+68. Dude. The ALP approved many mines...you think a mine hasn't been approved in 12 years? 😂 Uuummm..... Righto😂
+69. Pfft. Not concerned.
+70. Too right.. lock the little shits up. They'll get 3 meals a day👍 As long as they are off the streets & not committing crimes? It's positive. Not the slightest bit concerned about women's rights. We are doing just fine and will continue to do so.
+71. We’ll see. In any case, people knew what they were voting for so good luck to them.
+72. People passionate about who is in their government are why you voted LNP? I thought smart voting meant to vote based on policies and the people you want to enact those policies…
+73. So like...not on the merit of the LNP platform? Just spite?
+74. Glad to see that a sophisticated understanding of policy issues drove your decision 👍
+75. i am like him, i think you shouldn't drink petrol its bad for you.
+76. I remember Newman and Joh.
+77. I remember Newman. And I remember living under - Joh.
+78. Wrong, we should all feel comfortable doing that because crime should not exist! Just like a female should be able to safely take a stroll without fear or worry at midnight if she wants, but nope we can’t do that as it’s unsafe. Reality is that crime is real and impacts our decisions and how we live our lives daily but really we shouldn’t have to.
+79. No one "deserves" to be broken into.
+80. This genuinely might be the most stupid comment I’ve ever fucking read. You’re joking right?
+81. Sounded like sarcasm to me, their profile also seems to have a history of sarcastic comments so I’m pretty confident, I can always be wrong tho…
+82. Nope, not naivety at all - sarcastic.
+83. [removed]
+84. My father worked for utilities. Nearly lost his job every time Labour got elected with endless restructuring to cut costs. Now he is retired. They were looking to can his whole department. People really need to understand that what affects your parents with team blue might affect someone else's parents positively and visa versa. Too many just think of themselves.
+85. Queensland lost its credit rating
+86. This is exactly the example of reddit propaganda. You know Labor have been the majority over in the last 50 years? Lol. I bet you weren’t even voting age when LNP where last in
+87. You guys make me happy. This is what we need. ♥️
+88. I know, and even though he can't promise it, time and time again he did effectively say thr law wont change. But then again I stiill cant believe he has still been voted in despite what we know about that vote.
+89. Co-CFMEU-ugh.
+90. Hopefully we are proactive enough to riot. Privatising ambulance isnt going to stop ramping. They need to open more trauma centres and aged care to free up space.
+91. Honestly wouldn't be surprised when it ends the prices increase
+92. They've already said they're keeping it
+93. Hope so. It’s of zero benefit to me or my entire electorate, or to many, many electorates within the state.
+94. Should be gone immediately.
+95. how?
+96. From a state level a lot of projects will be in the shit- gunna be a mess
+97. This is laughably inaccurate.
+98. I see what you mean, it's mates the other way around, the party is mates with the unions and twists their arm, not the other way around. I feel ya.
+99. One of the easiest ways to address youth issues. We'll just lock them up instead...
+100. One of my customers is literally a catering service that does school lunches for schools that "sign up". I'm pretty sure their cutoff for orders is 8:30. So clearly the process works, it just needs scale and the government paying for it.
+101. Not every school has a tuckshop operating every day. A city school might, but most rural areas are lucky if they have the staff or volunteers to operate a tuckshop 1 or 2 days a week.
+102. Mate, our local state school has 1300 kids P-6, add allergies and dietary requirements how will they get all of that done on a daily basis and have 1300 kids all line up for lunch? Edit: not saying the whole thing was a bad idea but for schools with huge student numbers will be an incredibly hard task to administer whichever way you cut it.
+103. Many many schools have “tuckshop” maybe once a fortnight which is home bake made by the P&C. Many, many schools have “tuckshop” that is not every day. Additionally, P-9, P-10 and P-12 schools in rural areas particularly are going to face an awful lot of pressure to fund the initiative for their high school students out of their own budgets. In the many schools in the South East Corner that are 2000+, the tuckshop doesn’t prepare food for 2000-3000 students a day. So there will need to be expansion of facilities in those schools. There will need to be an allocation added to school staffing in almost all cases to account for this. Which wasn’t accounted for. The policy once again particularly showed Labor’s complete lack of understanding of anything outside Brisbane, Gold Coast and Sunshine Coast. Just like their public transport policy.
+104. So they’re going to reduce them from the 2013 minerals resource regulation. Super likely lol……..
+105. Ok genius, look at the data behind that and let me know the results. Let me know what you find
+106. What's it based off then? Where's the data ?
+107. Based off what though? How many people are really affected by this, how is this going to change it? Will the mass served slosh even be wanted by kids lmao?
+108. In what universe? We’ve already got people homeless due to the cost of living crisis. Thousands of people that definitely weren’t back then. It’s about to get a lot worse.
+109. Oh that intermittent non baseload power... Funny how we have a cost of living crisis and power bills keep going up the more we will out renewables.
+110. Easy skippy. I'm sorry that asking for facts hurt your precious little feelings.
+111. Yeah, I'm talking about the methed up bogans who live in places like Townsville who see a single ad on Sky about "Yowth Criimeeee" and then immediately vote LNP/ON.
+112. It absolutely can in the regions.
+113. Melbourne property has stagnated in the past year or two while Brisbanes has absolutely boomed. It’s really easy to understand. You sell your house in Melbourne for 1.5mil, you buy a house in Brisbane that’s twice/three times the size with a yard for 1 mil. Now you have 500k to invest and sit in a high interest account. This doesn’t take into account the absolute slaughter that is happening regionally where house prices are nearly that of Brisbanes a few years ago. All because cashed up southerners are moving up and bringing their money and pricing out residents who work in the area. People from down south are absolutely bringing their political mindset with them and this will be a struggle moving forward.
+114. I don't know what you mean. They aren't building Vic Park. I think they should. It won't be cheap, it's the most expensive solution, and it's unpopular because of that. But I think it's the best long term solution. LNP position is no new stadia. So I don't know what you mean about me assuming the LNP is doing it. I shall be interested to see what their 100 day plan to make a plan comes up with.
+115. City LNP figures like Schrinner and Quirk are pro Vic Park. So are pro LNP prominent voters in the architecture and construction space. DC will blame Miles for fucking it up and say they are fixing it and making the Olympics what they deserve to be while not disrupting the Cricket and Football at the Gabba. Vic Park definitely will go ahead. I would be shocked if it didn’t. They can’t rebuild the Gabba as that displaces Lions/cricket for 5 years. That won’t fly.
+116. So my shopping is going to be cheaper under LNP? And my rents going down?
+117. I dont know anything, except that I love when multi-national companies pillage our country or everything of value and aren’t made to pay anything by the government!
+118. Lol, well it clearly won't be very good for us all if they repeal those royalties. How do you think ALP paid for rego, daycare, electricity rebates and such? The only reason not to be concerned is because you already have yours - safe to assume your a boomer.
+119. Do you actually fathom how fucking expensive it is to house people in prison? Genuinely
+120. Andddd this is why our democracy is a dogshit system, you just admitted your concerns don’t align with 50% of the population, and yet you’re free to vote… for the guys I hope they don’t get someone they don’t love pregnant and are forced to look after or pay child support to a kid they don’t want, and for the women, I hope they don’t fall pregnant to guy wonder who turns around and abuses them the moment they are tied down with his kid, and hey if that’s what you want then I think that’s your choice, but that should be solely your choice, not yours to make for 50% of the population… I’m not even going to touch on the rest of your comment.
+121. What a truly fatherless thing to say.
+122. So they knew what they were voting for, and it wasn't big scary *mUrDocH* hoodwinking the state? Glad one of you lot finally admits the public made an informed choice to get rid of giggles and his thugs
+123. Not everyone agrees on the same policies. Not sure why this is such a foreign concept to so many people?
+124. A hatred the humanity of those with different options is not something I want to align myself with.
+125. Well if you’re doing that they aren’t breaking in you’re pretty much inviting them in and youth crime really is just a scare tactic.
+126. 😁 Yes, I was being sarcastic.
+127. Wow… you’re in the healthcare system and yet so misinformed. The next 4 years will teach you a lesson.
+128. Ignorant comment, sorry. 14,000 roles made redundant at the direction of someone so far up the bureaucratic chain that they couldn't possibly have any meaningful insight into your individual performance.
+129. Hope you're in a private hospital, because the public system won't see any new funding for a while. Enjoy!

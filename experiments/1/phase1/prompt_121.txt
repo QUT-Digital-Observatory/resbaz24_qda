@@ -1,0 +1,152 @@
+Your job is to analye a series of Reddit Comments are drawn from sbumissions related to the 2024 Queensland State Election. The comments are drawn from a collection of comments before, during and after the election itself on the 26th of October. The parties that sought election were the Australian Labor Party (ALP), the Liberal National Party (LNP), the Queensland Greens (Greens), One Nation and Katter's Australian Party. The LNP prevailed in the election, with David Crisafulli becoming the new Premier of Queensland. 
+We have identified several key issues that the major parties campaigned on during the 2024 Queensland State Election: Youth Crime (YC), Cost of Living (COL), Health (H), Energy and Infrastructure (EI), and Abortion Laws (AL). Below is a summary of each party's position on these issues:
+Youth Crime (YC):
+- LNP: Advocated for stricter penalties for young offenders, including the 'Adult Crime, Adult Time' policy, proposing that serious offenses committed by youths be met with adult sentencing. 
+- Labor: Focused on rehabilitation and prevention programs, aiming to address the root causes of youth crime through community engagement and support services.
+
+Cost of Living (COL):
+- LNP: Proposed measures such as abolishing stamp duty on new builds for first home buyers and re-establishing the productivity commission to review building industry regulations, aiming to alleviate housing costs. 
+- Labor: Introduced initiatives like 50-cent public transport fares, a $1,000 energy rebate, and free lunches for state primary school students to ease cost-of-living pressures.
+
+Health (H):
+- LNP: Committed $590 million to an 'Easier Access to Health Services Plan,' aiming to reduce ambulance ramping and hire additional healthcare workers. 
+- Labor: Focused on maintaining and expanding healthcare services, addressing hospital capacity issues, and investing in new health infrastructure.
+
+Energy and Infrastructure (EI):
+- LNP: Criticized Labor's Pioneer-Burdekin Pumped Hydro Project as financially unviable and canceled it upon taking office, opting to explore smaller-scale hydro projects instead. 
+- Labor: Proposed large-scale renewable energy projects, including the Pioneer-Burdekin Pumped Hydro Project, to transition towards 80% renewable energy by 2035.
+
+Abortion Laws (AL):
+- LNP: Stated there would be 'no changes' to abortion laws under their government, maintaining the status quo established in 2018. 
+- Labor Party: Supported the existing abortion laws and opposed any attempts to repeal or amend them. Asserts that LNP intend to restrict access to abortion services based on the views of some of their members.
+
+Analyze Reddit comments and code them based on the positions they support or oppose concerning these issues. You will output JSON, so valid values are strings or null. Use the following codes: YC, COL, H, EI, AL. If a comment's position is unclear or does not pertain to these issues, output null.
+
+Secondly identify which party the comment appears to support. Use the party code ALP, LNP, Greens, ON, KAP if this can be determined, otherwise a null value if undetermined.
+
+Output JSON as a list of objects where each object has an "id" (integer) property of the comment id, an "issue" property set to the issue code string (or null value), and a "party" property set to the party code string or null value. Null means JSON null, not a string. Values MUST be quoted, e.g. {"party": "LNP"} unless they are null, e.g. {"party": null}. Comments follow:
+
+1. Why does Murdoch’s voice count more than any other Australian’s? Why does he get to shove his fist up you folks assholes and play you as fools in his puppet show?
+2. The vote resulted in a majority of liberal seats. Again, there is more nuance to politics and a health democracy is not one with two centralist parties, a month if bickering, and then a “welp!” This is peoples rights and lives that are priceless- so you email, you talk, you donate, you protest, you educate, you work harder. Thats what believing in something is, not going to the polls, voting for your own selfish interests, and falling over in a sulk if it doesn’t go your way.
+3. Wow you're ignorant. Kids wielding knives stabbing each other, stealing cars, robbing people and stores. Get caught, quick slap on the wrist and back out on bail which they break the conditions of and it starts again. Go live out in the suburbs a bit. Caboolture, Logan, Ipswich. Rampant crime. Oh they can project a meagre surplus, but does it come to pass? Oh and for how many years have the dug themselves into debt for? Most of their surplus comes from stifling mining operations and how long will the last with China slowing down? Go read the domestic and family violence protection act. Have a read about former minister for women, shannon fentiman and her rabid feminism and interference in police process. Many lives destroyed at a state level and the federal labor party has been watering down father's access to kids for 25 years. On a final note, you should get your news from multiple sources, including ones you don't necessarily agree with. It widens your underatand and stops you sounding like you just read the headlines of the guardian.
+4. Murdoch is also truly global. He brings foreign issues to our shores to spread his ideology here and divide the nation. The amount of right-wing Aussies with MAGA and the Israeli flag in their bios is really staggering. All these people do is listen to Murdoch media all day and become brainwashed.
+5. And the major point I’m making is: Both sides do it, no one will argue that. It’s not *just* a Murdoch Media problem. It’s a problem in general across ALL media in 2024.
+6. Plot twist. His doesn’t. There’s plenty of other media outlets out there that isn’t his. We aren’t N Korea.
+7. You can just stop right there with your "both sides do it" rhetoric. Australia has exactly one journalistic provider that has impartiality as a standard and that is ABC (look at the ABC charter), but even that has been compromised. Yet you'll still have Murdoch, brainwashed idiots saying ABC is biased because they're so used to the blatantly biased media system we have in Australia. You've only just moved here and look at you, parroting the Murdoch talking points like they're truths. Slow clap. You need to take a bloody step back mate. You're doing that parroting bullshit because you've fallen for it. Murdoch owns most of our media, which is why you feel so comfortable saying "everyone does it", the next huge slice is owned by who? There's a bit of homework for you...
+8. ABC is pro ALP… and pro Green before it’s pro LNP. Without a doubt. So the rest of your comment, isn’t even worth reading.
+9. That is laughable. Seriously pathetic. [The ABC is a corporate Commonwealth entity operating under Public Governance, Performance and Accountability Act 2013 (the PGPA Act). It has a requirement for accuracy in reporting that no other journalistic entity in Australia has to operate in. ](https://www.abc.net.au/about/legislative-framework/103700608)
+10. What’s even more laughable is the fact you just follow along with that. Every state media company says that. I’m a kiwi and they are all left wing [source](https://www.bassettbrashandhide.com/post/david-farrar-media-bias-exposed) I’m coming in here as a centrist, can’t vote in Aus yet and within about 30 mins realised ABC was left wing bias and 7 and 9 were right wing. But you keep drinking the Kool Aid.
+11. Oh, **I'm** drinking the Kool-Aid? Uh huh. Riiiiiight.
+12. Yeah for sure. Obviously not having an open mind to the subject.
+13. Just like every "centrist" who says "both sides do it". You're going to get splinters from sitting on the fence. An open mind doesn't include ignoring facts. Try to do some actual research into media laws in Australia, you can start by actually reading [this](https://www.abc.net.au/listen/programs/rearvision/the-history-of-media-ownership-in-australia/6831206)
+14. That source has absolutely nothing to do with any media outlet required to not be biased hahahahha. Wowee, look at facts, and don’t spread hate. That’s your learning for the day, if you wish to take that onboard. Either that it’s stop “attempting” to troll.
+15. You've misunderstood "media laws". The link goes into the history of media regulation. I wasn't attempting to link to anything other than that. If you don't want to know, then don't bother. I'm not concerned either way. Nothing I've stated is spreading "hate", you've gone way overboard on that but you do you, ya know. Have a good day.
+16. Which proves my point. ABC or any government funded media outlet can put bias on things as much as they please. They have absolutely no requirement to remain neutral (and naturally will not due to various factors). Case closed.
+17. [The ABC was given statutory powers that reinforced its independence from the government and enhanced its news-gathering role. Here you'll find the framework they are bound by. ](https://www.transparency.gov.au/publications/communications-and-the-arts/australian-broadcasting-corporation/australian-broadcasting-corporation-annual-report-2022-23/appendices/appendix-4---abc-code-of-practice-(%26-associated-standards)-) Under the ABC code, impartiality does not require that every perspective receives equal time, nor that every facet of every argument is presented. [The ABC is obliged by law to produce accurate and impartial journalism. Here is the legislation. ](https://www.legislation.gov.au/C2004A02723/latest/text)
+18. So you now agree that it can and is biased. Sometimes more, sometimes less, and even in the other direction at times. But from all that you’ve given me, it can be biased, and will be biased. Thankfully we got you through there. Will say my patience was tested but we got the outcome.
+19. Your reading comprehension is not it mate. I linked you the legal framework they are bound by, ergo, proving you wrong. "impartiality does not require that every perspective receives equal time, nor that every facet of every argument is presented". Do you seriously think that's its possible to put forward **every** argument? It's not, and it's reasonable to accept this as a standard. It is also not biased to **not give every perspective** *equal time*. That's a childish notion.
+20. However after all that you have said you will agree that the ABC can provide bias? Let’s see if your IQ is between 80 and 90 or sub 90 here.
+21. QPS statistics can be found here: https://mypolice.qld.gov.au/queensland-crime-statistics/
+22. Sir, this is reddit. Not the ABS
+23. i voted labor and i find the seething on reddit to be rly cool.
+24. Why did you remove female adult aggressors and boy victims from point 2? I think it would be more interesting to know how many children were killed by adults given the context of point 1.
+25. Not current but good. Seems homicide isn't in the top 10 though: [sentencing-of-offences-committed-by-children-aged-under-14-in-queensland.pdf](https://www.sentencingcouncil.qld.gov.au/__data/assets/pdf_file/0005/757013/sentencing-of-offences-committed-by-children-aged-under-14-in-queensland.pdf)
+26. Is Google broken? Crime stats are public. You can find this yourself.
+27. I wished someone would have asked this in the leaders' debate...
+28. Child crime adolescent schedule unless its our kids then don’t be to harsh they’re just kids. And i think you what i mean by our kids
+29. Because that was the specific conversation I had with someone last week. But yes it would be interesting.
+30. It would be a great gotcha huh? because we all know murder is the only crime. I like it.
+31. What's that sound? It's the sound of you missing the point. Femicide is a much more serious problem in this state than youth crime. Two women were killed in Queensland over the weekend. Looking forward to seeing our new leader do absolutely nothing about our femicide problem.
+32. you do know that there can be more than one problem existing at the same time right?
+33. [deleted]
+34. Men consistently outnumber women 2:1 as murder victims in Australia. Why do you ignore male murder victims?
+35. Who's crying? Stop projecting.
+36. When people talk about breast cancer in women do you pipe up with “but men get breast cancer too!” And who’s murdering the men? Which gender? Where are all the men advocating to end man on man violence? Where are all the orgs started up by men for this? *crickets* OP asked a specific question about man on woman violence. I was answering that specific question.
+37. [deleted]
+38. >“but men get breast cancer too!” Asking such a question demonstrates you don't understand proportionality at all. >And who’s murdering the men? Which gender? So it's okay for men to be murdered, because other men are murdering them? Fuck it, why don't I start a group advocating that women murder other women? By your level of irrationality, that's okay, right? Your response is the typical dribble I expect from people good at chanting slogans, but incapable of original thought.
+39. One thing is they started youth foyers to give young homeless people somewhere to live thereby lessening the chance of offending. Another thing is coercive control laws. Would you like another example? Or are you enjoying being contrarian for the fun of it?
+40. [deleted]
+41. I love how we started on one specific thing and now you're onto something else. If you think the LNP is gonna solve a housing crisis you've got crayons up your nose.
+42. This is the funniest one yet! OP, I'm not "having a go" here. I voted ALP and obviously am disappointed at the result. Some of the threads have been a little daft. This is funny! Well done!
+43. Iced coffee all over the table
+44. Genuinely funny
+45. Holy shit this is SO funny. Thank you.
+46. Say goodbye to 50c fares. Hopefully they'll honour the 6 month duration, by then I'm fucking outta here.
+47. Sad but true 🤣
+48. Got a solid laugh out of that title. Well played.
+49. Very funny, but sadly very bloody true.
+50. Well done recycling the old joke Victorians say about South Australians. Spring is here, time to turn you clocks forward 30 years.
+51. Hahaha fuck that’s actually pretty good, and depressing.
+52. Daylight savings is so rubbish. I get that’s not the point of the post but I really hope it never comes to qld
+53. Had me worried for a second. (Daylight savings genuinely terrifies me)
+54. Sour grapes much. (I don’t even live in QLD and I can see it)
+55. Don't get sad, get angry... And engage in the political process outside of 6 weeks every 4 years.
+56. Stay mad :)
+57. Aaaawww, did someone lose an election?
+58. This post is ironic because the standing joke among the other states has always been that when you cross the border from NSW to QLD you need to wind your clock back 1 hour and 20 years. Now those on the other side have attempted to flip it. Unoriginal and doesn't work.
+59. Cry even more
+60. Election is over. Regardless of who you voted for its done and you can’t change it. Move on - we are supposed to accept election outcomes in Australia.
+61. I got really excited for a second, I love daylight savings.
+62. Left wing fools losing their mind over the leader chosen by people democratically
+63. Lmao, Gold!
+64. Wa Wa Wa Waaaaaaaaaaaa. Another reddit thread where people just don't like the results of democracy when it doesn't go their way.
+65. Leftism always fails. Regardless of the place, the people, the culture, the economics, etc. Always fails.
+66. Even before the election youse cunts are further back than 70 years from the rest of us.
+67. this is how I know Imm in a qld subreddit
+68. Bye
+69. Get a car brokie 😂
+70. How exactly is it rubbish, it does virtually nothing outside of the first day when it switches. After that, everyone adapts like nothing has changed and you have more daylight in your day which means you don't work all day and then everything is pitch black at 5-6pm. More natural light equates to less electricity being used because you have less time turning on your lights and are able to enjoy doing any hobbies in your backyard or front yard when you get home rather than waiting for the weekend because that's the only free time you have. It's a vibe, I prefer it not being darker at night until it hits 8:30pm. There's no negative effects, the whinging and whining that people make about there being negative effects are idiots who are being absurd about something that is rather minor in the grand scheme of things. It really shouldn't be a debate, it's a nothingburger that the majority of people wouldn't give a flying fuck about if they actually had it. Some people just really, really hate change and find it scary it seems.
+71. Yes, Queensland.
+72. No one was ever claiming the conservative party was forward thinking...
+73. Get a grip, people are still allowed to complain, if people didnt complain and raise issues about currently governments in power we would never change and have dictatorships.
+74. Hope you have that same view next election that doesn't go your way.
+75. Well no one's stopping you getting up an hour earlier than you need to, have at it
+76. Friendo, have you not been in the subreddit the past few weeks? There’s a pretty clear ALP bias online. Generally because the LNP voter base is geriatric and do t know how to use the internet bar Facebook their grandkids helped them set up. Also both parties, LNP and ALP by policy are right leaning. ALP is centre right LNP is far right. Sooooo?
+77. Bro it's a shovel article, calm down.
+78. Wa Wa Wa Waaaaaaaaaa. Another Reddit user whining that people are openly expressing their opinions and sentiment about an election on a social media platform. Amazing how many LNP supporters on here get so pissy when they read people's comments about how disappointed they are. Don't like it? Don't read it then snowflake.
+79. Lefties are only tolerant when they get their way.
+80. Lol it's embarrassing how entitled the majority of reddit has been after LNP got in. I didn't vote for them but I've been enjoying the crying going on
+81. Go visit Norway and see for yourself why you are wrong, troll.
+82. Leftism has been winning for a long time. Leftism is the progression of society. The fact you're using the definition of Left and Right is a win for leftists. See below Wiki definition and try counting the number of wins: Left-wing politics describes the range of political ideologies that support and seek to achieve social equality and egalitarianism, often in opposition to social hierarchy as a whole[1][2][3][4] or certain social hierarchies.[5] Left-wing politics typically involve a concern for those in society whom its adherents perceive as disadvantaged relative to others as well as a belief that there are unjustified inequalities that need to be reduced or abolished[1] through radical means that change the nature of the society they are implemented in.[5] According to emeritus professor of economics Barry Clark, supporters of left-wing politics "claim that human development flourishes when individuals engage in cooperative, mutually respectful relations that can thrive only when excessive differences in status, power, and wealth are eliminated."[6] Within the left–right political spectrum, Left and Right were coined during the French Revolution, referring to the seating arrangement in the French National Assembly. Those who sat on the left generally opposed the Ancien Régime and the Bourbon monarchy and supported the Revolution, the creation of a democratic republic and the secularisation of society[7] while those on the right were supportive of the traditional institutions of the Ancien Régime. Usage of the term Left became more prominent after the restoration of the French monarchy in 1815, when it was applied to the Independents.[8] The word wing was first appended to Left and Right in the late 19th century, usually with disparaging intent, and left-wing was applied to those who were unorthodox in their religious or political views. Ideologies considered to be left-wing vary greatly depending on the placement along the political spectrum in a given time and place. At the end of the 18th century, upon the founding of the first liberal democracies, the term Left was used to describe liberalism in the United States and republicanism in France, supporting a lesser degree of hierarchical decision-making than the right-wing politics of the traditional conservatives and monarchists. In modern politics, the term Left typically applies to ideologies and movements to the left of classical liberalism, supporting some degree of democracy in the economic sphere. Today, ideologies such as social liberalism and social democracy are considered to be centre-left, while the Left is typically reserved for movements more critical of capitalism,[9] including the labour movement, socialism, anarchism, communism, Marxism and syndicalism, each of which rose to prominence in the 19th and 20th centuries.[10] In addition, the term left-wing has also been applied to a broad range of culturally liberal social movements,[11] including the civil rights movement, feminist movement, LGBT rights movement, abortion-rights movements, multiculturalism, anti-war movement and environmental movement[12][13] as well as a wide range of political parties.
+83. Why do you say that?
+84. See ya Bruce. Keep hooning.
+85. Ah yes, the endless pit of wasted money. Enjoy throwing your money away genius.
+86. Maybe no-one from QLD... The other states would disagree. I've lived interstate for a period. Once you've done that and you experience a different perspective you realise how damaging the resistance to change in QLD is to the state. What's the alternative? Socialism/communism?
+87. Yes this complaining on reddit how shit people are who voted differently in a democracy will surely keep away the dictators. Keep it up reddit.
+88. I didn’t say this one did go my way. I just said its over stop blame gaming democracy.
+89. I think it's because most people who vote LNP have jobs. Things to do, you know generally be successful in their lives, and they don't have much time to have a cry online. So we pop in here for a laugh every now and again to watch the unwashed masses having a massive hissy fit. :)
+90. Just your opinion I see? Oh wait calling everyone far right that don’t agree with the left is a latest trend by the left.
+91. Labor lost. Get over it.
+92. It's crazy. Labor have been in for what, the last 30 years except for the 4 years of Newman and they think everyone's is retarded for voting LNP.
+93. The Norwegian parliament is a 3 way split between Left (72), Right (60) and Centre (37). I don't think they have had a majority government in decades, their whole system involves negotiating amongst the sides, something that will never happen in Australia. It also has a combination of a very powerful private sector and a very powerful government owned sector. The idea that Norway is "left wing" isn't accurate any more than it would be to call it "right wing".
+94. Don't they have issues with crime after letting in large numbers of refugees?
+95. Or Zimbabwe?
+96. Bold of you to assume they'd understand any of that
+97. The entire Iron Curtain and its collapse shits on your comment. Nice try though.
+98. Pretty convoluted way of saying you want a communist police state because ironically enough that’s all leftism ends in he’ll maybe Stalin will have some pointers or even a family favourite to minorities Mr Adolf
+99. It’s funny, as the Greens have suggested that ALP lost QLD due to low education. Meanwhile, the comment you’re replying to… 🤣 I say this as an educated QLDER who moved and came back.
+100. We can go anywhere we want, at any time. It’s so good ✌️
+101. You've lost me. The conservative movement in Queensland is the one "holding things back", but you seem to think voting the LNP is progress... The last 10 years was progress. The Joh years are where that stereotype comes from. I've lived in other Australian states AND lived in the US for 6 years. The resistance to change is the government that just got voted in, and people are making fun of them winding back the clock which is exactly what they want to do. Which side is which in your original comment because you're arguing against yourself.
+102. Thats like saying people aren't allowed to have varying opinions, the very thing democracy is based upon. Also, it has nothing to do with reddit as a microcosm. Do you think people wouldn't have said conversations between themselves,. Keep it up misterflyn, whatever lack of logic thinking you seem to have.
+103. Oh, sorry. Here's the federal compass for 2022 and the one from ABC to see where you actually sit in regards to policy back then too. If there are state resources for things like this I would love anyone else to tell me too as I can't find them. Please, enlighten yourself. And I don't recall calling you far right. Just the LNP. By the vote compass itself. The LNP is, factually a "Right wing" party. Just look at their constituents. The KAP and The Nats. The ALP, while center right, is allied with the Greens, who are moderate left. And frankly if you ask me, they are just as bad as the KAP/Nats in the opposite direction. Keep in mind this is a US based website and is based off the US political leanings which dont super apply to Australia. USA>AUS: [https://www.politicalcompass.org/aus2022](https://www.politicalcompass.org/aus2022) ABC: [https://votecompass.abc.net.au/](https://votecompass.abc.net.au/)
+104. People have different opinions to you. Get over it. If you can't handle that then you're not mature enough to be on the internet in the first place.
+105. Maybe that's because the 4 years of Newman set us back 30 years.
+106. In this case they might be right.
+107. Tbf i think that regardless of an election win or loss.
+108. And a sovereign wealth fund enriched by resources royalties instead of handing profit to multinationals, free universal healthcare, free education, high rates of collective bargaining, among the highest world rankings for protecting workers rights & happiness, great criminal rehabilitation outcomes - the sorts of science backed policies that educated Queenslanders want, that the poorly educated unfortunately describe as ‘leftism’ and just voted against to lurch right and take the state backwards a decade.
+109. No, some of the lowest crime rates in the world and declining.
+110. You are thinking of Sweden. Which is struggling to wind back its policies.
+111. The education system is shaking its head at you.
+112. Which is funny because you say that because Nazism and communism as it was in Russia was right wing with being authoritative
+113. It's true, it's me Mr Hitler alive and totally socialist. You can tell because socialism is in my party name so it must be true. I'm hanging out here in Argentina with Felix Tshisekedi who's the leader of the so very Democratic Republic of Congo and John who owns Crazy Johns Rugs and mobile phones who is, you guessed it, actually crazy. John just killed himself 7 times then drank through a crazy straw just to prove how crazy he is. Got to go, I'm about to have the best pizza in the world at this dive bar, you know it's true because of the sign out the front.
+114. Pretty convoluted way to say you didn’t read what they posted.
+115. seems like you don't know the difference between Communism, Marxist-Leninism, and Stalinism.
+116. You... Just... Don't... Get... It... Who pushed back against daylight savings, as was the example given?? Who said that it will not be put to Parliament under her leadership? I'm intrigued to know how you think we advanced in the last 10 years... Give me some examples outside of boosting the public service to diddle the employment data. The problem with the left is that you think that you are progressive. Maybe you're progressive when it comes to allowing men to compete in women's sports, but you're certainly not progressive when it comes to development and advancement in economies and quality of life...
+117. I wouldn't bother. Just another person who wants to keep the status quo
+118. Polite contention. The ALP is not allied with the Greens in any formal sense. Likewise the LNP is not allied with KAP. And the "N" in LNP means "Nationals" as the parties merged on a state basis in Queensland. There might be some policy overlap Venn Diagram style ALP / Green and LNP / KAP but no formal agreement. Everything else you've said I concur with :)
+119. Like your opinions, I have got mine. LNP is far from far right. But there’s no longer left. There’s just far left. Greens? I don’t know what they are but they certainly don’t have best interests of Australia. Just the flag of this country offends them. They speak for Middle East than anybody else at the moment.
+120. Yes they have all that but they also have a bunch of things I imagine you don't support like having 16% population of migrants and half of that is from Western countries compared to Australia having 30% of the population as migrants. Or that until 2012 it was a requirement to be a member of the Church of Norway (Lutheran) to sit in parliament. They have a bunch of social policies but they're also a borderline monoculture that takes more white european and european adjacent migrants than anything else, they're extremely protectionist and something like 30% of their economy is in fossil fuels. They're not some paradise of left wing doctrine.
+121. Which makes sense, people whose needs are largely looked after don't tend to fuck their lives up by stealing or hurting people.
+122. Ah ok, yea maybe you're right
+123. They never even met.
+124. It all goes the same way after some point let’s be honest dosent matter what side your on with politics we’re all just getting fucked over by them by the looks of things it won’t be a big surprise if we’re about to go round 3 anyway

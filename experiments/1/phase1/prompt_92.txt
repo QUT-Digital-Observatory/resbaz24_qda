@@ -1,0 +1,148 @@
+Your job is to analye a series of Reddit Comments are drawn from sbumissions related to the 2024 Queensland State Election. The comments are drawn from a collection of comments before, during and after the election itself on the 26th of October. The parties that sought election were the Australian Labor Party (ALP), the Liberal National Party (LNP), the Queensland Greens (Greens), One Nation and Katter's Australian Party. The LNP prevailed in the election, with David Crisafulli becoming the new Premier of Queensland. 
+We have identified several key issues that the major parties campaigned on during the 2024 Queensland State Election: Youth Crime (YC), Cost of Living (COL), Health (H), Energy and Infrastructure (EI), and Abortion Laws (AL). Below is a summary of each party's position on these issues:
+Youth Crime (YC):
+- LNP: Advocated for stricter penalties for young offenders, including the 'Adult Crime, Adult Time' policy, proposing that serious offenses committed by youths be met with adult sentencing. 
+- Labor: Focused on rehabilitation and prevention programs, aiming to address the root causes of youth crime through community engagement and support services.
+
+Cost of Living (COL):
+- LNP: Proposed measures such as abolishing stamp duty on new builds for first home buyers and re-establishing the productivity commission to review building industry regulations, aiming to alleviate housing costs. 
+- Labor: Introduced initiatives like 50-cent public transport fares, a $1,000 energy rebate, and free lunches for state primary school students to ease cost-of-living pressures.
+
+Health (H):
+- LNP: Committed $590 million to an 'Easier Access to Health Services Plan,' aiming to reduce ambulance ramping and hire additional healthcare workers. 
+- Labor: Focused on maintaining and expanding healthcare services, addressing hospital capacity issues, and investing in new health infrastructure.
+
+Energy and Infrastructure (EI):
+- LNP: Criticized Labor's Pioneer-Burdekin Pumped Hydro Project as financially unviable and canceled it upon taking office, opting to explore smaller-scale hydro projects instead. 
+- Labor: Proposed large-scale renewable energy projects, including the Pioneer-Burdekin Pumped Hydro Project, to transition towards 80% renewable energy by 2035.
+
+Abortion Laws (AL):
+- LNP: Stated there would be 'no changes' to abortion laws under their government, maintaining the status quo established in 2018. 
+- Labor Party: Supported the existing abortion laws and opposed any attempts to repeal or amend them. Asserts that LNP intend to restrict access to abortion services based on the views of some of their members.
+
+Analyze Reddit comments and code them based on the positions they support or oppose concerning these issues. You will output JSON, so valid values are strings or null. Use the following codes: YC, COL, H, EI, AL. If a comment's position is unclear or does not pertain to these issues, output null.
+
+Secondly identify which party the comment appears to support. Use the party code ALP, LNP, Greens, ON, KAP if this can be determined, otherwise a null value if undetermined.
+
+Output JSON as a list of objects where each object has an "id" (integer) property of the comment id, an "issue" property set to the issue code string (or null value), and a "party" property set to the party code string or null value. Null means JSON null, not a string. Values MUST be quoted, e.g. {"party": "LNP"} unless they are null, e.g. {"party": null}. Comments follow:
+
+1. Well you see, the council has been busy wasting money on the metro so of course there's no money for pedestrian safety. Poor excuse of a council can't believe they've been in for 2 decades.
+2. I'm keen to understand why BCC is so committed to ensuring that our city such a pedestrian unfriendly environment.
+3. >MacKenzie referred to comments made by a Brisbane City Council planning manager, who told the court all governments were constrained by budgets. >“I agree with this observation, but we are dealing with human lives,” MacKenzie said. Brisbane being the largest LGA in Australia is clearly too much for these Councillors to handle. If they don't have enough budget to address their own issues, perhaps they should organise a competition or auction off a couple of [BCC Wards](https://www.ecq.qld.gov.au/__data/assets/pdf_file/0021/6492/Brisbane-Existing-Boundaries_Overview.pdf) to neighbouring Councils that are keen to absorb and manage these areas appropriately and safely for the constituents. https://preview.redd.it/wjsgvcks8nwd1.png?width=1686&format=png&auto=webp&s=81fdc42bb477df0415df46da201cb190fa3ec43a [Source](https://www.ecq.qld.gov.au/__data/assets/pdf_file/0021/6492/Brisbane-Existing-Boundaries_Overview.pdf) Contests for Wards could be: * Redlands and Logan for Chandler Ward * Moreton Bay, Somerset & Ipswich for Pullenvale Ward * Ipswich and Logan for Jamboree & Forest Lake Wards Obviously just chatting shit, but what else can BCC do aside from cry poor whilst spending billions of dollars putting wheelcovers on buses.
+4. Council is in a $400 000 000 cluster fuck.
+5. I dont have brisbane times access. did they detail how much protected arrows would cost the entire network? I'd be surprised if we got change from 100 million.
+6. Well it’s true, there is a limited budget. I would like every single street to have a dedicated separated bike lane but that is not financially possible. It’s already a road rule to give way to pedestrians - what makes them think people wouldn’t ignore the red arrow just like they ignore existing road rules.
+7. Is there any evidence this will actually stop the morons who threaten pedestrian safety? Or is it really just going to slow down those who follow the rules?
+8. Cars still have to give way to pedestrians. Programming can be an issue, but there are so many shitty drivers out there. If possible, underpasses for pedestrians or over passes or change the flow. Walking down a normal street I have seen cars speed down like crazy. Street design needs to be reassessed. However, without funding and development it wont happen.
+9. Yes! I regularly get honked while completing my crossing because the red turn arrow turns off and cars seem to think I should run to complete my crossing.
+10. Don't forget the Indooroopilly roundabout.
+11. They did not detail that. It seems like a small sum of money compared to the congestion busting budgets.
+12. Yep. But when a roundabout in Indooroopilly goes $200m over budget, council can't get the credit card out fast enough..
+13. I do think that some greater education on this particular rule should be a priority of the state government. Barely anyone knows that cars have to give way to pedestrians crossing if you are turning onto a street regardless.
+14. I think it's the blatancy that would reduce at least the number of instances. That being said; I see soccer mum vans speed through school zones - that one gets me the most.
+15. [deleted]
+16. ![gif](giphy|fXnRObM8Q0RkOmR5nf)
+17. No more rape tunnels please. There are better ways.
+18. You don't have to run, but if you dawdle, well I won't honk you but I will call you every name imaginable, and put a curse on all your descendants.
+19. Indooroopilly round, omfg, all we are going to do is push the traffic quicker to the next intersection. Should of just built some bike and walking paths and called it a day.
+20. Yep. Has cost 220% of the original budget, and isn't finished yet. No trouble finding a quarter of a billion dollars to cover these blow outs though..
+21. The underpass at Kessels Rd & Mains Rd in MacGregor cost something like $300M and disrupted all the businesses for a very long time while under construction. All it did is move the congestion to the city bound freeway onramp slightly faster, outbound traffic down to Sunnybank plaza intersection and down the road to the Logan Rd intersection at Westfield Garden City. I think the argument though is that it's now 3 choke points instead of 1 chokepoint.
+22. - what I mean sorry. If it were an actual red arrow or in some places like Dutton park - a flashing amber arrow it creates a legal need to justify the action of running it rather than "I didn't see them"
+23. The kinds of bike lanes that are just paint and a bit of concrete arent actually an improvement.
+24. I'll remember that when I'm crossing the road with my three year old.
+25. The rorting on that project was fucking eye watering, absolute shit show.
+26. There is endless money to "congestion bust" which is just another term for induced demand. There were existing perfectly good roads at Indooroopilly. The problem is planning for 80% of journeys to be made by car, including the walkable distances.
+27. Yes I guess that’s true.
+28. Yes they are
+29. I'll also make sure to tell every person using a cane or walker to remember that. 🤣
+30. The concrete moreso than the paint.
+31. Can you cite an example?
+32. It's being rolled out one operator at a time. Currently all Sunshine Coast bus operators and most Moreton Bay bus operators are online. Not sure which operators are next. I guess they switch on each operator all at once because that makes it easier for the operator to manage their fleet. And I suppose they are doing one operator at a time because that given them time to identify and fix bugs at a manageable rate.
+33. Well the software has been fixed/created and is now being rolled out. They're starting with small operators and will slowly roll out to larger operators over the next few months. TfB will probably be the last operator, but subject to no teething issues will likely have the software update by the end of the year. Remember it wasn't just turning the software on, it was developing the software because for some reason cubic couldn't roll out software and hardware together, and buses use a somewhat different backend to the trains
+34. Honestly I find it hard to believe the implementation is that difficult. The vehicles must already be location aware and networked due to the ability to charge your go card swipe on/off appropriately. Isn’t it just a case of having NFC capable swipe points?
+35. It'll be way more involved than that. The old system was a fully offline system, where your account was actually stored on your gocard. Each time you touched the reader, your account was copied off your gocard onto the reader, which updated the account and then copied it back to your card. Details of the transactions were then stored on the reader until they could be downloaded (originally once a day via wifi). Translink would go through these records and identify any transactions that needed further processing (like credit card payments). These transactions could then be sent back to the readers (via wifi) and uploaded to your account next time you touched your card to the reader. When you went online, you weren't looking at your actual translink account per se, but a reconstruction of it based on Translink records. That's also why top ups through a gocard machine were instant (because the machine can actually interact with your actual account that is on the gocard), but topping up online took 24hours before you could use it (because the transaction needed to be uploaded to the readers overnight and then copied onto the gocard where your actual account was stored the next time you touched on). The new system is more like what you'd expect, the card is simply a token that identifies you when you touch on/off, but all the rest of the processing happens on the back end. It's a fundamentally different system and it has almost nothing in common with the old system.
+36. That cannot be true because trips are immediately visible on your account. I know because I recently checked. They were visible while I was on the bus. Is this an informed opinion, because I find it very hard to believe trip info is stored on the card and read/write cycles occur. The tap is just an unique ID - all of the info is stored in the system and in my experience synced to online trip history virtually instantly.
+37. The system is built so it can operate offline. These days with the better mobile network it doesn't typically operate offline. But that's the way it currently works. That's why it's actually your go card that stores your balance, your very recent travel history and tell the reader that so it can't charge you appropriately. You'll find some buses aren't connected for various reasons and these fares won't show up on your account until the bus returns to it's depot and uploads the data to network.
+38. Was that on the new readers? The new system is an online system and you may have noticed the behaviour of the go card changing as they roll out the various features. With the old readers, journeys didn't originallt appear online until 24 hours later. Even a couple of years ago, just as the old readers were being withdrawn, a touch on the old reader wouldn't show up online for up to two hours.
+39. Yes it can store taps offline when data is not live and sync later, but that is not the default mode of operation these days and hasn't been for a long time afaik. I find the claim that the card is storing data very hard to believe. I find the claim that the card is written by a tap even harder to believe. In fairness, I could be wrong.
+40. Honestly I don't know. That still doesn't mean balances are stored on the card. I'm trying to find technical info now. I see you posted this 6mo ago that it does store the data on the card. [https://www.reddit.com/r/brisbane/comments/1c6m716/comment/l02o5lg/?utm\_source=share&utm\_medium=web3x&utm\_name=web3xcss&utm\_term=1&utm\_content=share\_button](https://www.reddit.com/r/brisbane/comments/1c6m716/comment/l02o5lg/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button) That seems like a daft way of doing it. Why wouldn't it just register a unique ID against your account and store all transactions on Translink servers? Seems unnecessarily complicated.
+41. There is plenty of evidence: Have you ever wondered why it takes 3 hours for a top-up to come through? It takes time for all the buses to be sent that data and have the ability to write it your card. That's why a fare machine can do it instantly, but you need to tap your card after payment so the new balance can be written. The actual specific card is this: [https://en.wikipedia.org/wiki/MIFARE](https://en.wikipedia.org/wiki/MIFARE) They cheaped out and bought the 1kB version, which is why are fare structure is so restrictive as the cards can't store enough data like more expensive cards. So don't believe me if you want. But Translink and Cubic know how the system works and are developing it accordingly no matter how much it frustrates or may seem stupid to you.
+42. > I find the claim that the card is storing data very hard to believe. I find the claim that the card is written by a tap even harder to believe. In fairness, I could be wrong. It is. There's an app called metrodroid which can read the data off a gocard if you get the encryption key (which is trivial with the right equipment). It can show you all recent trips as well the last few topups, current balance, whether the card is touched on or not, etc.
+43. You gotta remember that the gocard is based on the original Oyster Card in London. This system was designed in 1998/1999. The most primitive form of mobile internet had only appeared as a commercial product a year or two before, and it was incredibly expensive (billed by the kB), and about 20,000 times slower than modern mobile internet. The issue is, if you want to do things the way you are suggesting, the reader has to communicate a bunch of data with the translink server (such as gocard number, bus number, direction, stop location etc etc). The server then needs to process this and send back a response including card balance, whether it's a transfer etc etc. This could have taken more than a few seconds per person in the ideal case. And, because it was a brand new technology, coverage was poor. Public transport operators weren't interested in a technology that only worked at a third of the bus stops and gave away free rides the rest of the time. It seems daft today. But in the late 90s, it seemed like bloody sorcery.
+44. OK fare enuf. Seems oddly complicated but probably explained by the system being able to work 100% offline.
+45. Yeah I realized this 5hrs ago when 2 people provided excellent info. I admit I was wrong.
+46. Yeah mate. After the other comment pointed out the card tech it all makes sense - designed for complete offline capability.
+47. "The lord mayor said an LNP government would do a better job providing "community safety" for the people of Brisbane." ... By forcing homeless people away from central areas that have electricity and cooking facilities? How is this making anybody safer you deluded piece of shit.
+48. We've traded in Australian Mateship for the good ol' USA version - "I've got mine, pull yourself up from your bootstraps - anyone can make it in this town you're just not working hard enough"
+49. They need to be relocated. The concerns are legitimate. Lots of mental heath issues amongst the economically homeless. Council has plenty of parklands - set up a dedicated area with showers, bbq etc in an area that isn’t going to be too problematic. Strict fire ban that needs to be policed.
+50. Doesn't help when his council consistently screws over the suburbs and hates any kind of mixed use high density housing which could become social housing helping to get people off the streets.
+51. The LNP + being heartless sacks of shit… name a more iconic duo. Perhaps the LNP + doing the thing that will actively make an issue worse.
+52. What about setting up a homeless camp at 5/156 Boundary St, West End? Make the people who have helped cause the homeless crisis deal with it.
+53. Putting the 'dog' in 'Schrinndog'
+54. Helping to raise the crime rate so their statement can come true hey?
+55. Adrian, as a bcc rate payer let me say how proud I am of you for kicking those who have really fallen on tough times. But really, Where are these people go? To collect their lotto win?
+56. the state of the park is horrendous !! the campers have destroyed infrastructure to gain access to power, BBQ's are left in a filthy mess as are the surrounds of the camp sites. Some of these campers are doing nothing to endear themselves to the public. It may well be, the actions of a few are spoiling it for everyone !!
+57. Schrinner looking pretty fucking well-fed as he decides to cut off food essentials to the homeless. I'd call him Schrindawg, but that'd be offensive to dogs.
+58. For a man who plays up his Christian values this seems at odds with this
+59. I wondered could we start a community powerbank library? Maybe people with power and means could charge a few powerbanks each day and drop them off. It’s only a small step but might help power small fans, run a speaker, lights or charge some iPads etc. Community can beat shit policy
+60. Council should be providing HOUSING. Not cutting power to rough sleepers. I’m enraged by this.
+61. "It's very frustrating with the state and federal government squabbling, when it's actually them that are primarily responsible for causing the shortage of social housing and crisis accommodation," Cr Schrinner said. Pushing the blame onto someone else, it's the LNP way!
+62. I work in crisis housing. Working in an NGO, funding motel accommodation for people who are homeless and then working with them to identify their barriers to housing, and how to overcome them. Daily we turn people away because we're at capacity.
+63. who the fuck reelected this scumbag
+64. Fuck him, there has to be better ways to provide for homeless people
+65. This piece of shit and his fellow LNP scumbags can all eat a giant bag of dicks... But only after I microwave them for 10mins first. Disgusting excuses for human beings.
+66. Nothing to see here just the LNP doing LNP things
+67. Even the Catholic Church with all of its perceived issues would make itself look good if they could offer up an alternative for homelessness right now. Schrinner is batting out of his league by suggesting that cutting the power is the state government's fault.
+68. REVOKE THE SHRINDOGS BRISBANE SUBREDDIT SNOO BADGE
+69. What a POS
+70. This makes me sad..standard MO for LNP politicians. Show strength by smashing the weakest in society. This is what Australia has become
+71. A.S. Highest paid mayor in the country.
+72. Fascist cunt.
+73. LNP doing LNP things. *Pretend surprise*
+74. They wouldn't be homeless in the first place if the Federal Government hadn't ramped immigration to unsustainable levels, and the State Government hadn't failed to plan for sufficient housing.
+75. We need to stop blaming these people for their situation and start helping. Stop calling this a housing crisis and start calling it an immigration crisis due to poor governance…..
+76. Can homeless people even vote if they don't have an address?
+77. You expect this from the I got mine generarion
+78. The cooker in charge is busy working on his next budget debacle.
+79. Are there no lawyers who are willing to go to court and argue on the behalf of the homeless for free? I'm no law expert, but surely there MUST be something at state or federal level that would require duty of care to homeless people that requires the power to be on.
+80. LNP doing this - heartless capitalism devil ALP doing this - restoring order good mayor Typical echo chamber in this r/brisbane
+81. We should relocate them to Alice Springs.
+82. Parks are for ratepayers not homeless people to setup shop.
+83. Its a state issue and ratepayers shouldnt have to pay for this.
+84. This link has been shared 1 time. First Seen [Here](https://redd.it/1garqsw) on 2024-10-24. --- **Scope:** Reddit | **Check Title:** False | **Max Age:** None | **Searched Links:** 0 | **Search Time:** 0.00242s
+85. 100% his honest response to this would be “homeless people don’t pay rates so why would we do anything for them”. They are greedy fucks. For example, the reason the LNP and by extension Brisbane City Council is so hostile to cyclists is because they don’t have to pay registration or parking fines to use roads and infrastructure.
+86. He doesn't see them as homeless people. To him, they're just homeless. It's an important distinction since it means that if the homeless are gone, he can think that all the people will be safe.
+87. The council isn’t kicking them while they’re down, they’re saving them from electrocuting themselves doing dangerous unlicensed electrical work.
+88. When has LNP actively funded public health like ever..🤯
+89. If the 205 people who upvoted your comment opened up their spare bedrooms to a homeless person the council wouldn't need to supply power to a homeless camp. Is the issue that we don't have a way to link an r/brisbane armchair warrior with a person in need? Surely a crafty person could build us a quick Google Form where those with more than they need can register their interest to house someone they virtue signal for.
+90. It feels like they want homeless people to piss off and die, but they’re being polite about how they say it?
+91. But it seems almost everyone is swayed by "community safety". A lot of dodgy stuff is accepted by the public in the name of safety. People will get angry and attack you when you try and explain that people aren't as unsafe walking around as they feel. That's the way it goes. Fear wins out.
+92. been like that since at least the Howard years mate
+93. When you’re on a low income or need healthcare that you can’t afford, its way too easy to slip off a cliff into homelessness.
+94. Is tall poppy syndrome dead? Because it certainly doesn’t apply to our politicians
+95. “Australians all let us rejoice, Buddy, hold your horses, It’s time patriotism was, Exposed to market forces, The love of country may not fit, In with efficiency, Costs exceeded benefits, At Gallipoli, Self-sacrifice just cannot pass, A profit loss assessment, Those ANZAC boys were slaughtered on, Returns for investment, A government will only stop, You getting what you can, It just distorts the market, If you help your fellow man…” https://youtu.be/YWIXZzg2KJI?si=wtlPUywi0lCIFKbW
+96. Shrinner went out of his way to shut-down the East Brisbane Bowls Club. Its just standing there empty and wasted. It could be used for your idea. Plenty of flat space for tents, access to water, toilets and electricity. Much more easy location to address safety issues. It's structural cruelty to make people live like this in such a rich country.
+97. They are in parkland with bbqs?
+98. Good luck finding a councillor who will take on the associated issues into their division. It’s not a council issue to solve for.
+99. The State Gov earlier this year introduced legislation to allow developers to lodge their applications directly to the State when they have mandatory affordable housing components (and the right infrastructure is there etc). This bypasses local government (who get to provide input but don't get the final say). Has its pros and cons, to be fair.
+100. Exactly, there’s actually enough in the current zoning to cover projected demand for over a decade. But instead developers are focused on building luxury apartments as high as possible in the inner city
+101. LNP + funnelling public funds to your mates
+102. > The LNP + being heartless sacks of shit… name a more iconic duo. Homeless people + damaging public property ?
+103. Fuck Ray White.
+104. Don't insult dogs! They have tons more compassion. He's more like a cockroach.
+105. "Why don't poor people just buy more money?" - Adrian Schrinner, probably
+106. If you'd read what has been said previously, they had to constantly send out electricians to fix the damage caused in these parks. It was becoming dangerous for all involved and a complete waste of time and money as if kept on happening. But don't let that get in the way of the constant glorification of homeless people on this sub...
+107. If I were homeless, I'd go out front his house and office. Fuck 'em.
+108. I can see both sides of the issue, and since I'm fortunate enough to have never been homeless, I can't *not* have some empathy for the people who have ended up like this. However. As one poster said it, if you're going to use public land, whether it be for a picnic or to set up a tent, remember that this space is for everyone to use and treat it with respect. Don't throw your shit everywhere, leave trash out, get in fights, break bottles, tip over rubbish bins, and basically act like an ungrateful degenerate. Don't use mental health as an excuse for acting like a fuckwit and ruining the park for the other patrons, which includes the rest of the homeless folks who are quietly minding their own and not going on drug-fueled rages.
+109. Guarantee no one commenting in uproar against this has actually been out and seen the state of the park. You’d think if you’d set up camp in a public park and connected to the local power supply you’d try and keep your head down, clean up after yourself, treat the facilities with respect and generally try to fly under the radar - not trash the place.
+110. Yes. The park belongs to all, not just those there to grift and abuse it. Dedicated space somewhere that is policed needs to be setup for them. Not the disaster zone they are currently creating
+111. If the Council hadn't been trying to screw people over for years, combined with housing shortages and prices over the last 20, maybe they wouldn't need to camp in the park... The people "spoiling it for everyone" are the previous generation who have done everything possible to board wealth and exclude the most vulnerable groups, to the point that they have to live in a park...
+112. Yes a clean bbq is more important than people trying to survive. Clear where your priorities lie.
+113. [deleted]
+114. What do you mean by “destroyed infrastructure to gain access to power”? What have they destroy? How did this help them get power? Presumably there is a limit to the number of outlets etc
+115. "Fuck the poor" \- 1 John 3:17
+116. Or perhaps enlist a few electricians to connect things back up.
+117. He’s a wanker for this but that statement’s not really wrong. State and federal policies have a significantly bigger impact on housing affordability than anything the council can do. Zoning here is shit and absolutely a council problem but denser housing only goes so far when a) developers aren’t incentivised to build affordable housing and b) investors *are* incentivised to dump all their money into property.
+118. Sure state and federal government are responsible for building housing on a large scale. But Council has a huge role to play and could directly invest in community housing themselves. In a cost of living crisis, Council in the 24/25 budget only allocated $4 million to support services for the homeless. Thats 0.1% of council’s budget and bloody atrocious!
+119. If we were not 2 days from an election I bet this would not have happened. It’s back door campaigning for the lnp.
+120. Importing 600,000 people a year when there’s no homes is bad for homelessness

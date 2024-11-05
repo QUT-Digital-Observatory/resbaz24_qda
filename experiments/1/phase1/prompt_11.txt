@@ -1,0 +1,158 @@
+Your job is to analye a series of Reddit Comments are drawn from sbumissions related to the 2024 Queensland State Election. The comments are drawn from a collection of comments before, during and after the election itself on the 26th of October. The parties that sought election were the Australian Labor Party (ALP), the Liberal National Party (LNP), the Queensland Greens (Greens), One Nation and Katter's Australian Party. The LNP prevailed in the election, with David Crisafulli becoming the new Premier of Queensland. 
+We have identified several key issues that the major parties campaigned on during the 2024 Queensland State Election: Youth Crime (YC), Cost of Living (COL), Health (H), Energy and Infrastructure (EI), and Abortion Laws (AL). Below is a summary of each party's position on these issues:
+Youth Crime (YC):
+- LNP: Advocated for stricter penalties for young offenders, including the 'Adult Crime, Adult Time' policy, proposing that serious offenses committed by youths be met with adult sentencing. 
+- Labor: Focused on rehabilitation and prevention programs, aiming to address the root causes of youth crime through community engagement and support services.
+
+Cost of Living (COL):
+- LNP: Proposed measures such as abolishing stamp duty on new builds for first home buyers and re-establishing the productivity commission to review building industry regulations, aiming to alleviate housing costs. 
+- Labor: Introduced initiatives like 50-cent public transport fares, a $1,000 energy rebate, and free lunches for state primary school students to ease cost-of-living pressures.
+
+Health (H):
+- LNP: Committed $590 million to an 'Easier Access to Health Services Plan,' aiming to reduce ambulance ramping and hire additional healthcare workers. 
+- Labor: Focused on maintaining and expanding healthcare services, addressing hospital capacity issues, and investing in new health infrastructure.
+
+Energy and Infrastructure (EI):
+- LNP: Criticized Labor's Pioneer-Burdekin Pumped Hydro Project as financially unviable and canceled it upon taking office, opting to explore smaller-scale hydro projects instead. 
+- Labor: Proposed large-scale renewable energy projects, including the Pioneer-Burdekin Pumped Hydro Project, to transition towards 80% renewable energy by 2035.
+
+Abortion Laws (AL):
+- LNP: Stated there would be 'no changes' to abortion laws under their government, maintaining the status quo established in 2018. 
+- Labor Party: Supported the existing abortion laws and opposed any attempts to repeal or amend them. Asserts that LNP intend to restrict access to abortion services based on the views of some of their members.
+
+Analyze Reddit comments and code them based on the positions they support or oppose concerning these issues. You will output JSON, so valid values are strings or null. Use the following codes: YC, COL, H, EI, AL. If a comment's position is unclear or does not pertain to these issues, output null.
+
+Secondly identify which party the comment appears to support. Use the party code ALP, LNP, Greens, ON, KAP if this can be determined, otherwise a null value if undetermined.
+
+Output JSON as a list of objects where each object has an "id" (integer) property of the comment id, an "issue" property set to the issue code string (or null value), and a "party" property set to the party code string or null value. Null means JSON null, not a string. Values MUST be quoted, e.g. {"party": "LNP"} unless they are null, e.g. {"party": null}. Comments follow:
+
+1. In my opinion the transit authorities and analysts could better track data from both public transport and major road use, for how they can best improve services . for example a lot of people drive to Ipswich for work but having asked around, I know many workers at the hospital and surrounding Ipswich CBD would much rather catch an express train that arrives just before 8 or 9 a.m. according to QR when I called them in 2019, the Brisbane to Ipswich train route was barely used at peak hour in mornings (and this supposedly justified lack thereof) but from what I have gauged asking people, many folks would certainly catch a train there to work if they could.
+2. What if they made it free but still use the infrastructure for a loyalty system, like if you make 200 trips in a year you get a small rates rebate or something. Incentivise regular use and encourage people to tap on for data analysis (No I don't think this would actually happen under the new government)
+3. If the Woolies produce scale can determine that I have weighed a mandarin, surely tech can solve for this!
+4. It doesn't feel like they make adjustments to the services that often. And there'd be other ways of getting that data. Getting rid of it all together would save so much money.
+5. Melbournes free network seems to not have a problem?
+6. It slows down the efficiency of moving people though. There’s alternate ways of determining ridership, but having zero tap on/tap off would make people entering and clearing buses and trains much faster. You also wouldn’t have to maintain all those terminals, nor have the bus driver turn them on and off for their stops
+7. Yeah but that's not really valid. Bus drivers have a button to tally people coming on the bus, that's that ding sound when you show a busdriver a paper ticket.
+8. Can’t they just install some turn styles or track another way?
+9. You don’t need a $300 million infrastructure to track usage.
+10. They could come up with another way to track the usage given planning time and infrastructure upgrades ... But not with the speed with which Miles brought that policy out.
+11. I think it's also a really simple system to implement and maintain. We could issue people with cards (much like Go Cards) which give free access to cardholders, but they cost money to maintain and wouldn't give data that's significantly more reliable than a simple 50c transaction.
+12. Surely there are other ways to track usage, buses and trains and ferrys have cameras, you can surely install a device that could decently estimate usage even based on a little lazer on each door. You could have a much simpler card to swipe on and off also, ie one that doesn't interact with financial systems or identificaiton and be free.
+13. [deleted]
+14. They don't need a tap on for that. A camera can people count.
+15. I guarantee they will scrap them
+16. Step 1: Hire a big 4 consultant to do an "independent" and "objective" analysis in exchange for a cheeky couple mil Step 2: Ask them for recommendation whether to make public transport free (*frowns*), keep the 50c (*shakes head*) or massively hike the price (*grins and nods*) Step 3: Throw your hands up and say that you are just following the data and best practice. Nobody who votes LNP cares. Step 4: Get more political donations from transport and toll company lobbyists for some reason (*shrugs*)
+17. Or will the LNP work collaboratively with BCC to position themselves as the cheap transport heroes?
+18. What about turn styles? The cost of go cards and maintenance is extremely high, there has to be a cheaper way.
+19. True but free public transport encourages people to get cars off the road where free tolls has the opposite effect.
+20. The dirty little secret is that they never finish recouping the cost. For example, the Gateway Bridge was not fully paid off by the time they needed a second gateway bridge. So the toll got extended to pay for the upgrade. Major renovations of the bridges will be required before the new bridge is fully paid off. Standard BOOT concessions don't cover these costs, so the taxpayer will be on the hook for billions in maintenance. Or, more likely, the toll will be extended. Rinse and repeat until the bridge needs replacing. Roads are hugely expensive, and if the government didn't give you must of them for free, you'd never drive.
+21. Amen
+22. Fucking oath 🙌🏼🙌🏼🙌🏼
+23. I saw a toll removed one time leading to Maroochydore. I remember because my mum said "well that was 20 years after they said they would". I was very young and 20years felt like an eternity
+24. Maybe. I wouldn't mind the charge so much if it went to the State coffers to fund services or a working class tax cut. My problem is mainly with letting the private sector extract rent indefinitely from public infrastructure, far above any reasonably expected profit for the capital they fronted.
+25. If toll roads become free, watch them also become massively congested. Then people will realise building more roads is a scam that doesn't really work unless you can restrict or discourage usage somehow. Really the big problem with toll roads is the dodgy deals that have been done with the likes of transurban to their benefit. Should have been kept in public hands & toll profits used for transport infrastructure in general. Current model is the classic 'socialise costs, privatise profits' system.
+26. When the original Gateway Bridge was built we were told its toll was to fund it. Then we were informed a new bridge was needed and the toll was increased to fund the new one. Then the company which collected the toll was privatised… See how our government(s) work for “us”?
+27. RemindMe! 3 years
+28. Any well-behaved person would do that. It is sad that we see it less nowadays eh!
+29. 53 million a year is nothing. The state is kicking in 32 million a MONTH now to subsidise the fare reduction.
+30. Came here to say this
+31. It's still a service, and one provided by the government. You would still be required to abide by a code of conduct. Drs and ambulances are free. Does that mean I'm not bound to behave in a certain manner? Nope.
+32. The people you see behaving antisocially on trains absolutely do not care about a code of conduct, or even know it exists. I can guarantee you will see no more dodgy behaviour if it was free beyond that driven by growth in the sheer number of people using the service. Having a nominal fare is 100% driven by data collection and completely necessary to make the system run efficiently
+33. >The issue is by having a tokenistic fare as opposed to absolutely free you are still entering into a contract and a code of conduct that goes with that. I don't think this is the case. You can agree to the conditions of riding on the train by riding on the train, without paying a token fare. In any case, the state government could just legislate without needing to rely on any sort of contract.
+34. Have you seen the behaviour of people on public transport. They have to put up spit guards to protect drivers. I don't think anyone is thinking of it in contractual terms and being bound by a code. But thanks for giving me a laugh.
+35. I feel similarly. I think $50c for very short trips, $1 for regular trips, $2 for long distance (like Bris to GC) once you’ve spent $3 in a day you pay no more (like a cap) and concessions get a 50% discount on all of the above and $1.50/day cap. Fares then frozen for 10years. Revenue (not profit as it doesn’t profit) goes directly into infrastructure maintenance and expansion of routes, on top of existing government investment. Program gets expanded to cover all of QLD. Reduced airport train price hopefully can be negotiated to continue.
+36. Article says it all - barely any car drivers switch, it's mostly people who would have walked or biked short trips. Same experience in the free tram zone in Melbourne.
+37. This is actually one of the huge benefits to making it free. And I don't think people realise, our transport already runs quite slowly.
+38. I wouldn't be surprised if there aren't also some contractual obligations in there, contract termination fees, guarantee of a certain cut, whatever.
+39. Because removing ticketing saves time in the commute and our services are quite slow already. And removing ticketing saves a huge amount of money on the back end, not just for the ticketing systems but also financial processing and customer service queries. Usage data could be tracked other ways.
+40. We should keep fares because 1. Poor people are more likely to commit crimes and this helps us know who is poor 2. There is no other way of gathering data, like making public transport free but asking nicely for people to tap on and off. 3. Just take the bus to the hospital if it's bad and ask the bus driver to let you on anyway
+41. I disagree, the fairs allow for the system to be maintained or expanded, they should definitely be cheap though
+42. I'm with you. There seem to be a lot of narrow minded people who can't think beyond using ticketing to track usage.
+43. You can't go to Bundy on a 50c fare. You can go as far as Gympie north but there's literally nothing there
+44. tbh, if you’ve travelled before you’d be very familiar with the idea of buying a bus card to travel in other cities. If anything, it’s great that Brisbane has a single transport card, not one for bus and one for trains, plus the fact it works on ferries and they’re not their own independent tickets… yeah it’s already pretty easy for tourists.
+45. The reason it isn’t on busses is because they are BCC controlled, rest of the network is state govt
+46. I feel like a good system would be like resident parking. Charge an annual administration fee for residents (e.g. $30) to get a card for tapping. Visitors (i.e. tourists) pay for daily or weekly unlimited travel passes.
+47. Rolling out a new tracking system would be a massive waste of taxpayer funds given they just rolled this method out a year or two ago. Every change is a cost.
+48. Now do roads
+49. But we already did that even when the fares were higher. Translink annual reports show them only really covering 10% of the running costs.
+50. I do agree with this sentiment that having it funded at the local level makes sense in theory. However local governments routinely block or refuse to fund many local projects, especially when they will go across other LGAs. I can't see it working for an area like SEQ, but could work for other council areas. If anything public transport should be federally funded with services based on population density. Federal funding would also help interconnect states and major hubs. High speed rail between all the capitals sounds great.
+51. Health fund? Unemployed people still get Medicare. This isn't America.
+52. The person suggested where it would come from. It would come from the savings of not having the 50c system in place. It'd be like registration for cars. The costs of having the system and enforcing it eat up most of the money it produces.
+53. Get the rich people to actually pay tax perhaps?
+54. Gina, Twiggy and maybe Uncle Rupert could chip in too…
+55. Fares only cover a tiny portion of the running costs of transport.
+56. I'd rather somewhere in the middle on public transport and drop the tolls, like $2 flat rate tolls all day $2 flat rate public transport all day, I think it would be easier for workers to justify travel and using tunnels freeing up the roads less traffic jams more productivity and likewise still an incentive if leaving car at home means $2 to get to work and back again. I assume this can't happen due to privatised tolling companies but it would make a lot of money in increased productivity and unemployment down because people could get jobs further away.
+57. Yes we know taxes exist
+58. We're already paying for it. The fares don't cover much of the operating costs.
+59. Here come ‘off-peak’ 25c fares!
+60. Actually I thought about this for another 30 seconds and slightly more reasonable idea, keep it at 50c fares but you get the total $100 back if you reach 200 trips in a year, & again for 400 trips
+61. Not everyone owns a house to get rates rebate
+62. That would add extra admin costs. Loyalty schemes are really about data mining and Is 50c vs free such a huge burden? Make it free for Centerlink recipients.
+63. Not a bad idea, doesn’t help people renting or house mates. Though I thing it should be a dollar fare.
+64. Agree with this queer take. Hate the fact they're charging us 50c, would be better if they actually paid us to take public transport
+65. Yeah, it can't possibly be difficult to recognise that a human has boarded a bus or train. Though you'd only get absolute numbers of people on the service at a given time, not linking where people were boarding to where they were getting off - not without invasive camera surveillance anyway.
+66. OK, now tell me which station the mandarin got on at, and where it got off at. You're talking about Orwellian facial recognition shit now.
+67. In some countries where they can tell you how full a train is - this is done by scales measuring the weight of the carriage!
+68. You absolutely can, and they do, with Bluetooth/Mac address tracking Sure, not EVERY person has a phone on them, and some people have 2+ but you can average it out
+69. Melbourne free network is a limited city loop. They accept it’s going to be packed at times. There’s been occasions I haven’t been able to board due to too many people.
+70. You could get rid of it, but the amount they would ahve to spend to track the usage of each service across the state would far, far, far exceed the current system. The 50c fare works so perfectly to track each and every interaction, and it is small enough that (hopefully) fare evaders are ignored and let through (since, statistically, most of them are fare evading because of circumstance).
+71. Yes, that would be "not optimising".
+72. I am empathetic to this argument if the charging infra wasn't already in place, but it \_is\_ in place. And I think the point of 50 cent fares is partly that it's "almost free" so the ask is fairly low, and we still get tracking.
+73. Cant do point to point tracking: how many people travelled from station A to station B This sorta data informs service planning, lets them know when or where to run more/less services. Was a big thread on this earlier. Uses all the existing infrastructure, without needing to set up intrusive and expensive recongition software and cameras
+74. The payment infrastructure was already there.
+75. That's not an effective way of capturing data
+76. More surveillance?
+77. How much would that cost to setup? It’s not like they have a “let’s switch to counting users via cctv” button
+78. RemindMe! 3 years
+79. No
+80. I reckon people downvoting you didn’t quite catch that this doesn’t mean the LNP is good, just that they might place themselves as the bearers of benefits from 50c fares. That’s pretty common LNP behaviour, acting like they did anything positive for the average person
+81. Nope. … They’ll work out someway to funnel more money to their mates though…
+82. Lnp wouldnt do that
+83. Turn styles don't know where your journey started and finished.
+84. How high is it? Honest question. I have no idea how much would be saved. Do you have any stats?
+85. Don’t disagree with that. For road users though it’s a rort
+86. Traffic bypassing the city to get from a suburb to a suburb (where PT is not practical or reasonable option) should be encouraged to use the tunnels rather than driving through the city centre. If for no other reason than public health. So yes, I agree with significantly reducing or removing the tolls. The problem is that they've been sold to corporations to operate for a profit.
+87. Yeah but there isn’t really a world where there are no cars on the road.
+88. So you're idea is to try and force people onto public transport ignoring that people require cars and that infrastructure for them should also be improved? Weird that you want to hamstring one necessary mode of transport.
+89. That’s something I didn’t think about was ongoing maintenance. I guess that’s partially why we pay rego
+90. I will be messaging you in 3 years on [**2027-10-28 02:06:03 UTC**](http://www.wolframalpha.com/input/?i=2027-10-28%2002:06:03%20UTC%20To%20Local%20Time) to remind you of [**this link**](https://www.reddit.com/r/brisbane/comments/1gdq0fy/do_you_think_instead_of_50c_fares_it_should_be/lu432bt/?context=3) [**10 OTHERS CLICKED THIS LINK**](https://www.reddit.com/message/compose/?to=RemindMeBot&subject=Reminder&message=%5Bhttps%3A%2F%2Fwww.reddit.com%2Fr%2Fbrisbane%2Fcomments%2F1gdq0fy%2Fdo_you_think_instead_of_50c_fares_it_should_be%2Flu432bt%2F%5D%0A%0ARemindMe%21%202027-10-28%2002%3A06%3A03%20UTC) to send a PM to also be reminded and to reduce spam. ^(Parent commenter can ) [^(delete this message to hide from others.)](https://www.reddit.com/message/compose/?to=RemindMeBot&subject=Delete%20Comment&message=Delete%21%201gdq0fy) ***** |[^(Info)](https://www.reddit.com/r/RemindMeBot/comments/e1bko7/remindmebot_info_v21/)|[^(Custom)](https://www.reddit.com/message/compose/?to=RemindMeBot&subject=Reminder&message=%5BLink%20or%20message%20inside%20square%20brackets%5D%0A%0ARemindMe%21%20Time%20period%20here)|[^(Your Reminders)](https://www.reddit.com/message/compose/?to=RemindMeBot&subject=List%20Of%20Reminders&message=MyReminders%21)|[^(Feedback)](https://www.reddit.com/message/compose/?to=Watchful1&subject=RemindMeBot%20Feedback)| |-|-|-|-|
+91. This is true but it’s not common these days. Mum & I are perfectly able bodied, but it was still very kind. On that note somewhere up near Logan or Beenleigh an older lady came onboard with 2 suitcases, she struggled to get them up, one person jumped up to grab the bigger one from her & I grabbed the smaller one, & again lovely people gave their seats up for her. I had this vision in my mind that the doors would close on her with her suitcases halfway in, which I’m pretty sure doesn’t happen but I panicked for her!
+92. Yes but if those people don't have a tickets it's a million times easier to police them because they can be told to leave for fare evasion alone. No one has to wait for their behaviour escalate.
+93. It will also benefit people who don't have private transport in a big way. I know it's nice to have the goal to get people out of cars and all that, but there also needs to be a focus on helping people who don't have cars as an option.
+94. Less cost than a system that has financial transactions as well.
+95. Yep, so that 10% now needs to be paid fully by taxpayers and not by fares. Either way you end up paying.
+96. Then you vote in local council that will fund the required projects and hold them to account by attending council meetings. Each council would pay their % of ownership of the infrastructure for maintenance and manning. Rates would need to increase but that is the cost of living in an area with that service.
+97. So you missed the point the people whom you had sacked no longer have private health so that puts more pressure on public system more debt for government.
+98. Nobody would ever abuse that.... Edit :Sorry I read this as taking free trips and getting rewarded. Not spending and being credited back.
+99. Good point
+100. Blue City Gliders are equipped with passenger count detectors that feeds numbers to the drivers screen, so they can gauge how many are on or off the bus. The newer Consat system also has the ability to track passenger count and declare a full bus by itself, but that feature isn't used in the fleet that have the system. They are a pair of IR sensors above each entryway, and have the capacity thanks to blasting on a 3D landscape to understand what movements have occured to work out what comes on or off. But you are right still on the part where it isn't linking where the data is coming from, but I imagine a little piece of software code to transfer data from an on board computer directly to the ticket machine wouldn't be too far out of the realms of possibility
+101. I very much doubt that cameras would be the only way to detect movement. Heck, I'm sure a digitised version of the clickers that drivers used to use (and last time I went out bouncers still used) could produce enough data. And if the council can track traffic from mobile signals, that might be another type of technology to investigate. It's not like we have to solve it here, I'm sure there would be other things the global transport industry has on offer. But it's pretty narrow minded to think that only ticketing can effectively track passengers getting on and off a bus or train.
+102. This won't tell you individual travel data, just how many get off the train, but not where they came from
+103. I've worked with that and it's very unreliable. Firstly, people have to have a phone and they have to have Bluetooth switched on. Even then it's hit and miss whether or not they get detected. It's only useful for broad, relative metrics.
+104. Not really though, it’s pretty extensively and covers a huge chunk of the CBD. Living there for 4 years, often the trams/trains are completely empty, and sometimes yes, there are very full (although not once have i not been able to board in over 1000 trips)
+105. I’ve seen people on the Beenleigh train get pulled up by inspectors, and have just been told to get off and tap on at Bowen hills
+106. And it _does_ cost a fortune to maintain.
+107. You still don't need the tap on and off nor facial recognition. You just need to know how many got on or off at all stops. Sure, you won't get such fine grain details. But you don't really need it for planning routes.at least not for every single trip. This would only be needed if your routes and number of buses changed on the fly to meet live demand.
+108. You think the state government doesn't already utilise facial recognition?
+109. They are already tracking you with tapping on with an RFID tag.
+110. I’m sensing sarcasm, but as people seem to not be picking up what I’m putting down - This is 100% what they do! You don’t think that the LNP BCC would put on more bus services where needed with the risk of allowing the ALP to look competent right? No, now it’s in at state level, things will be moving smoothly all of a sudden.
+111. Good point actually I never thought about that.
+112. Couldn’t find anything up to date but 2011 costs from a report were 1.3 million and revenue was 1.3million so break even. Another 2023 report said 165million revenue 223million cost. (This number might include more than just the go card infrastructure /maintenance though) Initial start up costs 2006 or something and updates in 2018 was about 500million to an American company cubic corporation. So numbers aren’t exact but if it costs more to manage especially now with 50c fares then there could be a better/cheaper way to track numbers. Sources: https://www.brisbane.qld.gov.au/sites/default/files/documents/2022-06/20220620-Annual-Plan-and-Budget-2022-23.pdf https://www.publications.qld.gov.au/dataset/65792fcb-b904-4bdc-960e-230594b661c1/resource/55259b1b-7fd4-4da0-a641-ed3d4815cc6a/download/201011financialstatementoverview.pdf And wiki.
+113. Cars off the road is a direct benifit for road users. 50c fares is a direct benefit to road users
+114. Problem is we have our tolls the wrong way around. There should be a toll to go through the city, not to bypass it
+115. I drove/moved to Melbourne years ago - then my car sat in the carport unused for 6 months as it was never “needed” due to their awesome tram/train network.
+116. Making toll roads free would make more people use it and therefore it’s going to make congestion worse. The point of having tolls is to give people the option to pay for congestion free travel. So if you’re in a rush to get somewhere you pay for the idea that it will not have much traffic and you can reach your destination on time.
+117. Yep, I cannot physically get to my work on public transport within 2 hours of my start time.
+118. [deleted]
+119. The problem is that generally the people who don't have cars due to financial circumstances tend to not live in areas well serviced by public transport whereas those who don't have one for lifestyle reasons do meaning it's generally richer people who benefit. Focus is much better spent on expanding network coverage and frequency for areas where less wealthy people live.
+120. Doubt it. Financial transactions are a solved problem. People tracking is still emerging tech.
+121. Eliminating ticketing and the associated financial transactions could, quite possibly, save that much.
+122. Abuse it how, by taking the bus? Lmao
+123. And how would you abuse it?
+124. I meant to be able to identify where a particular trip started and ended, you'd need to be able to identify individuals, which would require surveillance. Just tracking that someone got on or off would be trivial.
+125. If we follow this thought to its logical conclusion to reap all the data benefits and incentivize buying in, we end up with go cards.
+126. A Bluetooth monitor, like used for road use estimates, would work pretty well at estimating occupancy of buses. Look for changes and log a +1 and -1 at that location. Trains could do something similar.
+127. >It's only useful for broad, relative metrics. Which, in my opinion, is exactly what is needed for transport patronage numbers
+128. It *just* covers the CBD. 50c fares cover a way bigger area than that.
+129. ... I live in the CBD and multiple times a week, I have to wait for a second tram.
+130. On transport? No we don't. Too expensive,too wide of a scope, too much possible legal trouble for our pay grade. The tap on and off data is still the best way to get some usage data for the resources our budget has

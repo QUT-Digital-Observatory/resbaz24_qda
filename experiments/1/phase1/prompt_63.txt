@@ -1,0 +1,173 @@
+Your job is to analye a series of Reddit Comments are drawn from sbumissions related to the 2024 Queensland State Election. The comments are drawn from a collection of comments before, during and after the election itself on the 26th of October. The parties that sought election were the Australian Labor Party (ALP), the Liberal National Party (LNP), the Queensland Greens (Greens), One Nation and Katter's Australian Party. The LNP prevailed in the election, with David Crisafulli becoming the new Premier of Queensland. 
+We have identified several key issues that the major parties campaigned on during the 2024 Queensland State Election: Youth Crime (YC), Cost of Living (COL), Health (H), Energy and Infrastructure (EI), and Abortion Laws (AL). Below is a summary of each party's position on these issues:
+Youth Crime (YC):
+- LNP: Advocated for stricter penalties for young offenders, including the 'Adult Crime, Adult Time' policy, proposing that serious offenses committed by youths be met with adult sentencing. 
+- Labor: Focused on rehabilitation and prevention programs, aiming to address the root causes of youth crime through community engagement and support services.
+
+Cost of Living (COL):
+- LNP: Proposed measures such as abolishing stamp duty on new builds for first home buyers and re-establishing the productivity commission to review building industry regulations, aiming to alleviate housing costs. 
+- Labor: Introduced initiatives like 50-cent public transport fares, a $1,000 energy rebate, and free lunches for state primary school students to ease cost-of-living pressures.
+
+Health (H):
+- LNP: Committed $590 million to an 'Easier Access to Health Services Plan,' aiming to reduce ambulance ramping and hire additional healthcare workers. 
+- Labor: Focused on maintaining and expanding healthcare services, addressing hospital capacity issues, and investing in new health infrastructure.
+
+Energy and Infrastructure (EI):
+- LNP: Criticized Labor's Pioneer-Burdekin Pumped Hydro Project as financially unviable and canceled it upon taking office, opting to explore smaller-scale hydro projects instead. 
+- Labor: Proposed large-scale renewable energy projects, including the Pioneer-Burdekin Pumped Hydro Project, to transition towards 80% renewable energy by 2035.
+
+Abortion Laws (AL):
+- LNP: Stated there would be 'no changes' to abortion laws under their government, maintaining the status quo established in 2018. 
+- Labor Party: Supported the existing abortion laws and opposed any attempts to repeal or amend them. Asserts that LNP intend to restrict access to abortion services based on the views of some of their members.
+
+Analyze Reddit comments and code them based on the positions they support or oppose concerning these issues. You will output JSON, so valid values are strings or null. Use the following codes: YC, COL, H, EI, AL. If a comment's position is unclear or does not pertain to these issues, output null.
+
+Secondly identify which party the comment appears to support. Use the party code ALP, LNP, Greens, ON, KAP if this can be determined, otherwise a null value if undetermined.
+
+Output JSON as a list of objects where each object has an "id" (integer) property of the comment id, an "issue" property set to the issue code string (or null value), and a "party" property set to the party code string or null value. Null means JSON null, not a string. Values MUST be quoted, e.g. {"party": "LNP"} unless they are null, e.g. {"party": null}. Comments follow:
+
+1. Countries like middle eastern nations that keep a huge margin via resource royalties beg to differ. The nation is rich, and companies like Royal Dutch Shell, British Petroleum, and Chevron still profit. There is absolutely no evidence that supports your claim, it is disinformation peddled by miners that want taxes gone, and nothing else. The person I replied to is an LNP shill through and through, that gives no fucks about Queenslanders. Blocked.
+2. Yes and there’s never been any evidence of Labor dodgy deals. But don’t mention those here.
+3. Name one dodgey dealing. I surely remember Gordon Nuttal
+4. So the other guy can make wrong accusations without any counter points and that doesn't get criticised? Weird standard
+5. I said 2031 is six years away, you seem to think it’s already passed going on about how they haven’t done what they said they would do by 2031. Also most of those projects never left the “concepts of a plan” stage so that’s arguably better than promising them and having to retract. Rail takes centuries to get any funding and the Inlander was never going to be completed this decade either. Yes it’s shit that things get postponed or cancelled but under the LNP none of it would even happen. Late is better than never
+6. Wrong. Contradictory. You say miners mine where profitable Recognise that a tax eats into profit Claim this doesn’t have an impact on investment Failed logic.
+7. Sure thing. Remember when ol' Gladys gave away millions of public money to her boyfriends shooting club? Or when Scomo gave a boat company millions for dodgy boats to help prop up their share price? Or giving millions to a woefully incapable Paladin to run a concentration camp on Manus? Or when they give News Corp money for seemingly no reason at all? (this one happens a bit)
+8. [https://www.insolvencynews.com.au/queensland-election-crisafulli-secures-320k-grant-for-donor/](https://www.insolvencynews.com.au/queensland-election-crisafulli-secures-320k-grant-for-donor/)
+9. Ugh… the window to begin major infrastructure projects like NWTC has absolutely passed if it were to be built by 2031 or even 2032.. it would have needed a funding commitment back in 2022, but it never came about… Fact is 90% of those major rail projects determined necessary for SEQ by 2031 won’t be built, or have been scrapped. At least LNP have committed to extending the Sunshine Coast to Mooloolaba, when Labor said they couldn’t do it.
+10. No, I’m right. You are wrong. The failed logic is yours. They can still be profitable - and are - even while paying taxes.
+11. Don't forget donations to Hillsong
+12. None of these were ever to the level of corruption or misappropriated funds, which is what your comment was inferring. I'm not a die hard LNP supporter and I frequently vote against them but I won't buy into your hysteria that money just flows to private hands without due process. Even Labor has done it (and a few have been convicted of it as well). The government has and always will twist the bureaucracy to their favourable choice but most of it definitely does not constitute corruption. P.s the government didn't just give money to newscorp, it had to pay out a tax rebate of nearly a billion dollars and the court of appeals overruled an appeal by the federal government. If you're talking about the $900million payout.
+13. This wasn't even investigated by the CCC, and they have a low bar to investigate.
+14. The LNP also can’t do it is what I’m saying
+15. Imagine thinking taxes on profits don’t impact profits Your head is in the sand sir
+16. So it's not dodgy? From The Australian: > David Crisafulli secured a taxpayer-funded $321,600 grant when he was a Newman government minister for a call centre to be set up in Townsville by an LNP donor who gave him a job when he lost his seat six months later.
+17. Can’t build the rail line to Mooloolaba? Yeah I agree on some of the projects, LNP can’t deliver them by 2031 because too much time has been lost.
+18. No, it is not. You are still wrong. Imagine thinking the state and its people should not benefit from the state's resources. Fuck off, capitalist fascist.
+19. You seem to think I'm a die hard LNP supporter that defends everything they do. Well I'm not, I frequently vote against them but that doesn't mean I'll buy into the hysteria OP is on about that they just "hand money to the private industry". This is corruption plain and simple , and whilst I think Crisafulli secured favourable terms for this call centre grant, I don't in any way, think it's corruption and neither does the CCC. The grant was done in due process with the respective department. Is it dodgey? Maybe. Is it favourable and unfair? Probably. Is it corruption ? Definitely not. But this is how politics is played on both sides.
+20. Even if we had 20 years the LNP would scrap them, even if we had a budget surplus. A budget surplus for the LNP just means they didn’t give enough money to Gina, property developers, and their friends - it doesn’t mean they now have a chance to do public works
+21. Actually, that incident is very much the definition of corrupt. He utilised his power for personal gain. Much like he did by getting the tax payers paying for his rent in Brisbane despite him already having property in Brisbane.
+22. Gina doesn’t have mining operations in QLD
+23. Corruption is a criminal offence. If it's so obvious that a Reddit bush lawyer like you could prove it, why wasn't he convicted? Or better yet, he wasn't even investigated. Are you saying the public prosecution are so incompetent they couldn't prove corruption from a simple google search that you did? Why are you on Reddit and not heading up the CCC if proving corruption is so easy
+24. Ffs that’s not the point of why I said that and you know it
+25. Congratulations. You are finally experiencing corruption. If your naivety wasn't so strong, you'd understand it. This is how corruption works. Using power to your advantage.
+26. What a nonsensical response to not understanding that corruption is a crime that Crisafulli has not been convicted of.
+27. Ah, the irony
+28. Can you explain what corruption I have experienced please?
+29. A politician getting away with corruption. You have to be really naive if you think corruption does not exist in the political sphere, and quite clearly this is a conversation that no one will get you to realise that. The LNP has a history of corruption. Getting away with it, is a form of corruption. The fact they haven't been arrested is evidence of corruption. Anyway, don't think you get that. Have a good day!
+30. By this guys logic if you go above the speed limit while driving it's not speeding unless you get caught and convicted. Naive doesn't begin to cut it. Ignorant buffoonery would be a better description.
+31. I'm not denying the existence of corruption on both sides but politicians are highly scrutinised in their decisions. They have multiple people trying to catch them out, including the opposition. This case has obviously been looked at and not even qualified to be looked at as possibly corruption. Not even Labor called for it to be referred to the CCC. What does that tell you? it's most probably not a crime, or the whole government, including Labor themselves are colluding with LNP in corruption. So I say again, are you a better lawyer than the CCC, who didn't bother to investigate because they saw nothing in it?
+32. Dumb analogy but I'll play along. If you speed past multiple speed cameras and police officers checking speed and nothing happens not even a flash by the cameras, were you speeding? You've gone through multiple checks and none picked you up, so what does that tell you? Is the whole system just corrupt or did you maybe not speed at all.
+33. Oh you sweet summer child. Never lose your innocence
+34. "If you were speeding, were you speeding?" Buffoon.
+35. Never stop being bitter and cynical
+36. Hence the dumb premise of this analogy. Corruption isn't a standard unit of measurement. But I guess you could critically analyse that.
+37. I mean, you know, people are entitled to their sexual proclivities. Let there be a thousand blossoms bloom, as far as I am concerned but I ain’t spending any time on it because in the meantime, every three months, a person is torn to pieces by a crocodile in north Queensland
+38. A 90% success rate is wild. We need this thing predicting cyclones or something fuck
+39. Petition that next election we dangle the politicians and whichever one isn’t eaten is elected.
+40. And if he's wrong, miles will wrestle jack to the death
+41. So... who's here after the election results? This is awkward...
+42. We're counting on you Jack
+43. Losing candidate gets fed to the croc.
+44. You bloody ripper!!!
+45. This has to be the best thing i've seen in 5 years
+46. Did it just grab the one closest? Maybe it's the camera angle. But certainly looks that way to me.
+47. Well we can all go home then
+48. stop the count
+49. I hope so. Despite their intentions I think greens are starting to do the Liberals work for them. Greens handing out stuff more anti labor than the Libs
+50. C'mon jack you ripper! Let's please see the LNP told to shove it. I think a minority Labor government where they have to work with the Greens, even if it means they sometimes have to work with Katter, is something I am hopeful for. We need more cooperation between parties, especially in a unicameral state.
+51. This aged well lol
+52. Jack will either be shot or starved to death. He totally fucked up. The LNP won Qld, so if he survives he will eat scraps for the next 4 years like all the less well off Qldrs while his minders eat lobster.
+53. Phew thank fuck!
+54. whew... thank goodness
+55. "The crocodile joke—I see you're a man of culture."
+56. Okay, now we need to convince the rest of the world this is how we elect politicians exclusively.
+57. Good crocodile
+58. Thanks a lot Jack.
+59. YOU WERE THE CHOSEN ONE
+60. this didnt age well
+61. Jack fucked up
+62. Looked rigged 🙂🤪🤣
+63. far out... whos gonna be the brave cunt to break the news?
+64. Jesus, even ancient reptiles make better choices then most of the NQ electorates 🙃
+65. ..and now Jack the Ripper is a crocodile belt. He's a useless predictor but typical of North Queensland resident... Fuck you , North Qld.....Look your kids in the eye and tell them you screwed them over.
+66. Not a 100 %.
+67. Just saw something I'm not thrilled about for the first time in any state or federal election and they were signs out the front of my polling booth (saying cut Crisafulli - which whatever that is their message) but in the authorised by it did not list a party. Only a name and location. I've around for long enough to know what that location is being Peel St but it could deceive other voters to think there is some 3rd party not identified that has a campaign against Crisafulli. Nothing can be done about it now obviously and Labor will come under scrutiny after the election for it but they need to clean up their acts when it comes to the authorised by lines
+68. It’s a shame ol Bob and KAP went particularly off the rails this election
+69. the change in his face as he progressed through this statement
+70. Iconic
+71. Hands down the best red herring in the history of Australian politics. 👏
+72. Can't trust a crock to predict that, all those lovely dinners getting swept his way! 150kph winds, rivers swollen, rain lashing down, and the croc says "nothing to see here, everything is fine, perfect weather for a riverside stroll, bring those plump tender babies with you"
+73. Melbourne Cup is next week
+74. I love this. Hope floats.
+75. This is a great idea. Jack could come very handy in the near future.
+76. No! The croc would spit Crisafulli out and he'd win by default!
+77. :(
+78. The croc is now boots.... Never trust a croc or a North Queenslander...
+79. I've been scrolling through this post for a while and was starting to get worried that I was the only one who thought the exact same thing. Thank you, fellow redditor.
+80. How else would they manage the 90% success rate
+81. The people who will vote green and be swayed by greens ads will almost always preference labour over liberals.
+82. If I had to guess I'd say the majority of greens voters preference Labor. The ones preferencing LNP over Labor were probably never going to vote Labor to begin with.
+83. LNP volunteers didn't even bother to turn up to the polling place I went to this morning.
+84. I support the greens but I'd never preference LNP over Labor. I am sick of Labor shitting on the greens though, Labor need to realise the Greens are a serious party and either work with them or lose more seats to them My electorate, both state and federal, is pretty safe for Labor. It gets more Green first preferences every election though
+85. Greens preferencing Labor ahead of LNP in Cooper.
+86. This...so true. Fkn North Queenslanders have totally shot the state in the foot...because they believed the bullshit about youth crime. Almost hope their kids get caught doing something, so they experience what Liberals want to do to them.
+87. If anything they’ve helped Labor. See how it plays out.
+88. 4D chess to spook outer suburban swing voters while making a deal with the ALP to pick up preferences in Townsville to form some sort of supply deal
+89. When were they ever on the rails? Did a miss this?
+90. So, no change there…
+91. I can't help but think of him as the starwars empire like one second his Palpatine next his Sheev yelling unlimited power.
+92. No meat on those bones, compared to the Premier that can bench 2 plates!
+93. Not necessarily. There are areas where votes switch between Libs and Greens. Like Ryan in the federal election.
+94. Not always, there's some former rusted on Liberal voters who use the greens as a protest vote, will never vote for Labor.
+95. I worked the previous federal election, the sheer amount of votes that I personally counted that were greens 1 one nation 2 lnp 3 was mind boggling.
+96. those messages get in the hands of all types of voters push the idea of labor being a traitor on policy areas that’s not good enough for greens. That has ongoing damage. They don’t isolate LNP anymore. Every flyer today focused on Labor not one on LNP
+97. You know what...you listen to the Channel 9 coverage...and LNP were just too cocky about their prepolling data. No matter how much Labor was leading...they were smug about early voting... Why is that ? Who was feeding them the data ?
+98. I try to take them seriously, but they don’t help themselves. Their candidates are rude and dismissive when constituents try to ask reasonable questions about policies that impact them. I tried to read their policies and many of the pages for specific policy areas have last updated dates that are 5 or more years ago. I’d like to believe the fundamentals haven’t changed and that’s the reason for the dates, but for a policy area I’m reasonably knowledgeable about, I know one of the policies is already law and another is already in effect to the extent plausible, so facts don’t support that hope.
+99. Greens have let themselves down.... They have crashed and burned in this election.... How did Greens go in your area ?
+100. The problem you run into with greens vs labor preferences, is where the greens win. I mean, I’m all for a greens winning more seats generally, but in such a close election, greens taking more seats off labor is a real risk and if labor can’t form government then it’s the LNP. The question you have to ask yourself is if you want a greens member with an LNP government or a labor member with a labor government.
+101. I always had considered Bob mostly harmless and eccentric. Nobody can deny he has been a great public servant for that region.
+102. ![gif](giphy|3ornk7nts29Am5LIfm)
+103. Not really, in 2019 the LNP got 52 percent of votes before the Greens were even excluded (ALP - 25.6 percent and Greens 22.3 percent), so ALP would have still lost. In 2013 and 2016 the LNP won on first preferences alone. I have never seen a seat where the small proportion of Greens preferences that go to the LNP (usually like 10-20 percent) resulted in an LNP victory.
+104. So if they weren’t going to ever vote for Labor then the Greens aren’t doing anything to make them not vote for Labor.
+105. Some people just want to break apart the major parties. The more independent voices the better.
+106. Oh lord.
+107. What's the policy area?
+108. Labor could form government by getting support from the greens even if the LNP got more seats if they don't have enough for a majority. The government is only necessarily formed by the biggest party of they win a majority. What I want is a greens representative in a minority Labor government
+109. Labor were trounced and Greens crashed and burned....so no, majority is LNP. This is the worst possible outcome for Queensland. It is mortifying what a massive step backwards this is... So instead of Greens , we get a shithead party like KAP floating around to bolster the already racist /bigotry/misogyny shit that LNP lives on. Well done North Queensland...you fucked up.
+110. Potentially, but it’s pretty desperate and minority governments almost always fail before the term is over after lots of very public fighting. They rarely actually get anything done. I don’t think Stevo will give that a go tbh. He’s stated openly that he doesn’t intend to, but let’s see.
+111. Minority governments are the norm in many European countries. They only fail here because the major parties are used to being able to run things their way and aren't used to having to co-operate
+112. I hate that question, because every candidate has to say no, and then yes after the election. Because you get whacked before for trying to subvert democracy, and whacked after for sending everyone back to the polls. It's stupid, and everyone knows it, but it's a game we have to play.
+113. As someone who regularly travels between Australia and Europe, I will say that there is a significant cultural variance between Europe and Australia, and that includes how we do politics. Further, in much of Europe there is widespread government corruption, and due to overregulation, it’s almost impossible to get anything done. I do not think we want to emulate “Europe” in Australian government at either the state or federal level. I also don’t think hoping for a unicorn minority government is overly realistic. I’d rather we just get a government who can implement their priorities and policies.
+114. “The figures reveal a reduction in the rate of youth offences of 6.7%. In addition, the total number of unique youth offenders has reduced by 2% since last financial year and by 18% since 2012/13. The rate of unique youth offenders has reduced by 4% since last financial year and by a staggering 32% since 2012/13” https://statements.qld.gov.au/statements100936#:~:text=The%20figures%20reveal%20a%20reduction,32%25%20since%202012%2F13
+115. The problem remains that we need to treat the cause of youth crime, spike or no spike. Locking the youth up for longer so that they become more disenfranchised with society and police is not the answer. The cause is many things but lack of job ready skills, unemployment and an unstable employment market, cost of living, housing etc all cause desperation. Lets soend the money on providing opportunitues and security for these young people. Unfortunately we are often ruled by fear and I am worried that today will be no different. Enjoy your democracy sausage folks ![gif](emote|free_emotes_pack|laughing)
+116. All the criminologists interviewed have said it's lower than ever. Those who work in youth services seem to indicate education, housing and family priorities reduce homelessness and resultant crime. It's up to the electorate to apply critical thinking when they read news or stats
+117. With population increase, you are always going to get an increase in crime..
+118. I think there was a spike during COVID as well. School is actually a safe place for a lot of kids. Without schools open a lot of kids were left in less than ideal homes or left to fend for themselves.
+119. No evidence for this, but I put it down to the lack of jobs, lack of accessible third spaces and the increased costs of everything. It drives me crazy as an adult so I can imagine teenagers are feeling the same a hundred times over.
+120. [deleted]
+121. You are right op.
+122. I understand the youth crime spike is hitting the likes of North Queensland very hard, here in Brisbane it’s a very minor increase comparatively
+123. It's because parents weren't able to discipline their kids 20yrs ago.
+124. We had people break into our house and try stealing cars, turns out they are know in the community. They get caught and brag on socials about it and how nothings going to happen. That message is going out to all their other friends, until they make an example out of a few the problems only going to grow in my opinion.
+125. Depends on how you breakdown the actual data Drug crime is down while in some crime categories such as robbery it is up 40%, despite our population only increasing 8% in the past decade
+126. The “unique offenders” metric is one way to look at the data. However, a community doesn’t care if 50 burglaries were committed by 4 kids or 20 kids. The issue is that 50 burglaries happened, and not enough is being done to stop re-offending.
+127. Something I haven’t seen talked about, is how the current government failed to ensure adequate youth detention facilities. The current facilities are busting at the seams. As a result, they quickly and quietly passed amemded laws to allow police watchhouses to hold youth offenders for longer periods of time. Sometimes, offenders need to be locked up. However, QLD currently doesn’t have enough fit for purpose spaces to detain young offenders. As a result, we’ve got hundreds of kids being held in shitty conditions in police lockups.
+128. What I was thinking just makes sense
+129. Just FYI, kids who commit serious crimes often aren’t in school.
+130. There’s been a spike in media coverage.
+131. [removed]
+132. It's more a spike in youth crime being advertised on social media, especially by those who have an agenda*. Yes a lot of repeat offenders doing crime but it's gone down, have family and friends in 3 different areas north and they (and yes this anecdotal ) all said they've had less problems. And 2 of those own businesses. * Any one remember that mob going around and being neighbourhood vigilantes, talking up crime and how they didn't feel safe in their own homes?? Well some of that group have started charging a fee to patrol the neighbourhood streets for each house. Sounds more like a protection racket now, pay us $20 a week so your house doesn't get broken into.
+133. They are full as we are locking up 10’&11 years olds for shoplifting and have 18 year olds still in there as you need to jump through hoops to move them to adults prison
+134. For me it isn't even the rate of crime but the actual level of such crime is too high regardless Even one violent home invasion is too many, and we have dozens of gangs from Cairns to Coollongatta breaking into houses and stealing cars to go on joy rides on a daily Some people might be happy to accept these sort of crimes as youthful misadventures, but as soon as innocent people started being murdered (at least three or 4 prominent cases in the past year alone) the mainstream Queenslander has decided the current status quo has to change
+135. That’s not true. Maybe by the time they are teenagers but not younger kids.
+136. [deleted]
+137. You can't blame the "media" when the kids themselves are live streaming their crimes on instagram I had a mate have to watch live as her stolen Lexus was destroyed for 48 hr around the streets of SE Qld. The police told her there was nothing they could do Of course she is going vote for a party who puts her crimes as a priority
+138. No need to insult OP. I did read that as a percentage it's down. Come one we all grow up in 90's aus the kids just get busted a lot more nowadays haha.
+139. I know what I meant and I know what OP meant. The fact that despite crime rates significantly decreasing over the last few decades, there’s a perception that youth crime is increasing and as well as the LNP exploiting it, the media amplifies every single minor incident because doorbell camera footage is easier than in depth stories
+140. The govt has criminalised live streaming but the media still shows footage of it giving the thieves the infamy they want
+141. Still not the media fault that the criminals are recording their crimes in the first place Arguing that the media shouldn't report on the crime because it only angers the public is ridiculous. People have the right to know what is going on in their streets otherwise it is censorship for political reasons.
+142. https://www.abc.net.au/news/elections/qld/2024/results?utm_campaign=election-overall-results&utm_content=link&utm_medium=content_shared&utm_source=abc_news_web
+143. NUMBER EVERY BOX!
+144. Will all the stories/CCTV footage about crime featured on the nightly news stations disappear now that the LNP have got in?
+145. Not part of my plan! Omg Antony what a fucking troll

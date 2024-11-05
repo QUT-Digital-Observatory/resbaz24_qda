@@ -1,0 +1,145 @@
+Your job is to analye a series of Reddit Comments are drawn from sbumissions related to the 2024 Queensland State Election. The comments are drawn from a collection of comments before, during and after the election itself on the 26th of October. The parties that sought election were the Australian Labor Party (ALP), the Liberal National Party (LNP), the Queensland Greens (Greens), One Nation and Katter's Australian Party. The LNP prevailed in the election, with David Crisafulli becoming the new Premier of Queensland. 
+We have identified several key issues that the major parties campaigned on during the 2024 Queensland State Election: Youth Crime (YC), Cost of Living (COL), Health (H), Energy and Infrastructure (EI), and Abortion Laws (AL). Below is a summary of each party's position on these issues:
+Youth Crime (YC):
+- LNP: Advocated for stricter penalties for young offenders, including the 'Adult Crime, Adult Time' policy, proposing that serious offenses committed by youths be met with adult sentencing. 
+- Labor: Focused on rehabilitation and prevention programs, aiming to address the root causes of youth crime through community engagement and support services.
+
+Cost of Living (COL):
+- LNP: Proposed measures such as abolishing stamp duty on new builds for first home buyers and re-establishing the productivity commission to review building industry regulations, aiming to alleviate housing costs. 
+- Labor: Introduced initiatives like 50-cent public transport fares, a $1,000 energy rebate, and free lunches for state primary school students to ease cost-of-living pressures.
+
+Health (H):
+- LNP: Committed $590 million to an 'Easier Access to Health Services Plan,' aiming to reduce ambulance ramping and hire additional healthcare workers. 
+- Labor: Focused on maintaining and expanding healthcare services, addressing hospital capacity issues, and investing in new health infrastructure.
+
+Energy and Infrastructure (EI):
+- LNP: Criticized Labor's Pioneer-Burdekin Pumped Hydro Project as financially unviable and canceled it upon taking office, opting to explore smaller-scale hydro projects instead. 
+- Labor: Proposed large-scale renewable energy projects, including the Pioneer-Burdekin Pumped Hydro Project, to transition towards 80% renewable energy by 2035.
+
+Abortion Laws (AL):
+- LNP: Stated there would be 'no changes' to abortion laws under their government, maintaining the status quo established in 2018. 
+- Labor Party: Supported the existing abortion laws and opposed any attempts to repeal or amend them. Asserts that LNP intend to restrict access to abortion services based on the views of some of their members.
+
+Analyze Reddit comments and code them based on the positions they support or oppose concerning these issues. You will output JSON, so valid values are strings or null. Use the following codes: YC, COL, H, EI, AL. If a comment's position is unclear or does not pertain to these issues, output null.
+
+Secondly identify which party the comment appears to support. Use the party code ALP, LNP, Greens, ON, KAP if this can be determined, otherwise a null value if undetermined.
+
+Output JSON as a list of objects where each object has an "id" (integer) property of the comment id, an "issue" property set to the issue code string (or null value), and a "party" property set to the party code string or null value. Null means JSON null, not a string. Values MUST be quoted, e.g. {"party": "LNP"} unless they are null, e.g. {"party": null}. Comments follow:
+
+1. I think your missing the broader point here. While the overall stats are indeed going down. The fact that that was Labor msg ignored that in key constituencies there is indeed increasing levels of crime. Townsville and Mackay, and the far north all have increasing rates and numbers of crime. It is only really in the South East corner that there have been significant improvements and because aggregate statistics don't reveal these regional differences Labor's message that the LNP was lying on this issue rang hollow in its traditional heartlands of regional QLD cities. They are now on track to lose every seat in these regional area bar Bunderburg and Cairns i think. The ALP was truthful when they said crime is falling but ignorant when they said it shouldn't be an issue (and that the LNP where lying). The LNP where not truthful when they said there is a crime epidemic but critically they where also not lying, there is, in very specific pockets, and they used this to there advantage. If it wasn't for the piviot in the campaign around abortion the LNP would have picked up more seats, particularly in outer South East QLD, where again the crime stats are not as good as central Brisbane. https://preview.redd.it/2mkv3d1k77xd1.jpeg?width=1394&format=pjpg&auto=webp&s=817ee4787fb67632f0905a79b0a5fda26feabd72
+2. The fact that it is an issue tells you nothing? The fact that you aren't interested in hearing new perspectives based on the lives of registered voters doesn't say something about you? So if there was police corruption alleged would we all be happy with the police investigating that and reporting on what happened? I wouldn't. I guess you would because you are perfectly happy with the police reporting on their own performance and saying that they're great. I'm sure the Queensland government and its police would never do anything to make themselves get promoted, reelected or paid more. As Prime minister hacker was advised so many years ago about unbiased official reports. Hacker: I thought these planning inspectors were supposed to be impartial? Bernard: Oh, really, Minister. So they are. Railway trains are impartial too. But if you lay down the lines for them, that's the way they go. I guess you already know everything and there's no new information of value. We lost the election because of know-it-all lefties with no empathy or tolerance, full of hate speech for those with different experiences. We're gonna stay out of power until we make friends with registered voters.
+3. Spoken like a person that's never had to make a police report. And a person that's never worked with government statisticians. Instead of telling people their lived experience is wrong, maybe ask them about their experience. You can't insult people into supporting you. There's why we lost the election.
+4. Sorry it’s in the link .gov.au. It’s right there. The problem.
+5. And here come the keyboard warriors
+6. True, but in that specific case it was Russians and the One Nationers had initiated the meeting to ask for money.
+7. ok boomer
+8. That's great >Can you link it?
+9. Awesome, tyvm :)
+10. Dude, what I’m saying is that we haven’t even _tried_ prevention. Labor has failed us pretty hard on that, but I don’t think the LNP’s approach is better. And, truthfully, even the Greens have not really given this a solid try. The others I write off, they’re too right wing to consider it. You say “what about the cases where prevention doesn’t work” - the answer to that is kinda simple, the criminal justice system still exists, as a backstop. But we haven’t even _tried_ other agencies intervening sooner. I don’t think you were intentionally being obstructive, but you kinda hit on the entire problem.
+11. > Now, do I think the Libs will solve this problem? The NSW Libs did over the past 12 years, but I have no faith the Qld LNP will! > > But I also have no faith Queensland Labor would solve either of the current sentencing issues for high risk offenders, or that the will improve the system in the way you suggest because they are too busy with simple solves and announcables rather than real, proper structural reform. We are 100% on the same page. The problem is complex, and it doesn't matter who's in power - the answer is the same. More co-ordination to stop crime before it happens. That's at every level of government. It's inarguable that this is the clearly better outcome - less crime, less victims, more opportunities. Like, fucking DUH. Terrifyingly, it seems like Brisbane Reddit thinks "shove them in jail" is the only answer, and punishment is better than prevention. To this I say: fuck you, /r/brisbane. Do better.
+12. Thank you your rant tells me all I need to know
+13. Robert/Robbie is short for Bob/Bobbie. Your general naivety
+14. A woman requiring termination is nice? Gee you’re an odd person. Maybe re-read the headlines, KAP didn’t win government. They can propose whatever they like, just like the Labor party - doesn’t mean anything changes. Enjoy your Sunday.
+15. Haha wrong on many fronts. I'll leave you to your tears.
+16. They aren’t pushing for that. If they push for that then I’ll rage and fight along with you. Until then, you’re making something up to be outraged about. You’re the one who asked about the lunches, I answered.
+17. if you read everything I said and you're still talking about lunch you are a dotard
+18. They agree that there is a small core of offenders who keep on reoffending and are getting charged with more and more crimes each time, and those are more serious crimes. That’s supported by my own experiences.
+19. Out of curiosity where do you live?
+20. No I understand the point, I just believe it's overblown. I absolutely concede that there are some pockets where certain classes of crimes have spikes. It's inevitable, and no government's policy will ever combat that. We can manage and intervene with education and funding and social programs and the like, but "tough on crime" achieves precisely zero net positives. Also, showing a graph that shows all crimes, which includes traffic and other (for the lack of a better term) irrelevant crimes, doesn't really drive home the point. Also, also, pretty expected uptick after opening up post COVID, and a very sharp drop off this past year (so far). It's of course a nuanced topic, and I appreciate when the debate around it is meaningful and good-natured. It's when people claim "CRIME EPIDEMIC" that I'll roll my eyes at.
+21. >Spoken like a person that's >maybe ask them about their experience. Again, the irony. I'll insult stupid people saying stupid things. You're now in that group.
+22. Ohhhh sorry I didn't realise you were stupid, stupid. Good luck with that
+23. We can do this all day people. Like I said. Come out to the real world for a day
+24. [deleted]
+25. Oh that’s even worse somehow! Thank you for the info :)
+26. I mean, it’s weird you can’t use Google, but sure: https://open-crime-data.s3-ap-southeast-2.amazonaws.com/Crime%20Statistics/region_Reported_Offences_Rates.csv
+27. 1000%! I think in typical Reddit fashion it’s either “throw everyone in jail!” Or “no one should ever go to jail” and no in between appreciation that the problem requires much better coordination of government to address all points in the chain, rather than expect that an announcable will fix the problem, or a simple change to sentencing will
+28. Likewise Mr or Mrs racist
+29. Yes, it is. But why would you shorten it when his father goes by Bob. Why not use Rob in that case? Either way it is the least of your problems.
+30. You're a short sighted fool. You know what I meant despite trying to be clever.
+31. Enjoy posting moronic comments on social media.
+32. Crisafulli voted against it in 2018, he's flip flopped on this to the media but also stated he will allow the public to decide. This is not taking a hard stance, this is clearly a topic he would easily vote against again along with all but 3 of the LNP at the 2018 vote. This is an idea floated several times by the LNP and it is medically dangerous to even do this, they know this. They have just also lowered the criminal age of responsibility to 10 in the NT.
+33. Calm down, buddy. There aren't too many places where people discuss policy without resorting to childish name calling. No one is forcing you to hit that post button. You can hop off the internet if you're angry.
+34. Fewer offenders committing a greater number of crimes (is that what you meant by higher degree?) is very different to saying that youth crime is increasing overall, which is what they are talking about.
+35. Tbh it doesn’t really matter where I live. I travel lots for work. To places that dont really matter to the real world but I live in far North Queensland Sorry, this is not directed at you personally I’m getting fed up defending myself to people that have no clue about what happens outside of there street who’s lives have never been affected by this. It would be a beautiful world/country/state if we all lived in the perfect neighborhood. And I don’t live in a said bad neighborhood. I have money, a career, a beautiful family and friends. But I choose to try and change the parents of these kids who constantly rampage the streets day and night. It’s a lost cause that quite simply will not change. I could go to any town,city,suburb in Australia and find this problem. To state statistics that is on the downfall is purely a joke. It sounds like a political stance that makes our country look good, but the sad fact is our politicians can continue to sweep issues under the rug but how long till under the rug is full and the minute someone speaks against the grain(government) they are labelled. This country is falling badly and something needs to change. It’s high time people stop living in a dream world and accept the fact of what is happening to this great nation of ours.
+36. I mean I can get any graph you like I just chose that one as a catch all to show the issue. Interestingly enough traffic related offenses are falling in Townsville. https://preview.redd.it/isr4fh33i7xd1.jpeg?width=1339&format=pjpg&auto=webp&s=32dc6a6405c3869cc4c217cecfec39d79fb4e6e2 more violent crime is generally increasing however (sorry can only post one pic at a time.
+37. Again, that's how you lose elections.
+38. Seems I have been bested again by another keyboard warrior. Alas what am I to do
+39. You assume I’m broke.
+40. Mr or Mrs Adult crime for Adult time
+41. Is that really the issue here??
+42. ![gif](giphy|10JhviFuU2gWD6)
+43. He’s said that they won’t be touching abortion law and until they do, I think we’ve got to believe them. It would be the fastest ticket out of power there is, and they know that. I’m hoping the US election will be a massive demonstration of that fact.
+44. there's bigger things in this world than a child eating food and anyone debating otherwise is a dotard. You don't get to take food from a child an demand asylum from ridicule.
+45. I can agree on that, if you can agree that there are far more instances of serious crime being committed by youths. I’m fairly certain I’ve never seen groups of teens wandering the streets and breaking into houses armed with machetes in my life before this.
+46. Nah no offence taken, just genuinely curious to know what your experience is, thanks for sharing
+47. https://preview.redd.it/k0fgfju9i7xd1.jpeg?width=1351&format=pjpg&auto=webp&s=5469acf23a91e7fb13599bf39b05e2b867b96583 I know the LNP was making big hay with stolen vehicles in townville however and you can see why.
+48. Nah dude. Pull your head out of your ass. You said something was an issue, I provided the state data saying otherwise, and you don't believe it because...? There's no beneficial debate to be had when I don't know where you're moving the goal posts to.
+49. Get an education? Just a thought
+50. Or I live in the wrong area
+51. [deleted]
+52. "least of your problems"
+53. after voting against it and backing people voting against it, yeah - so solid. NT are now able to imprison 10 year olds. you still think a fucking lunch is the problem?
+54. 🤝
+55. I live and work in the communities where it’s a growing problem. Everyday people like myself try to stem the influx of crime in general not just youth crime. We try to educate and show these people there is more to living a life where you are constantly looking over your shoulder. As for the youth we need to change the parents way of thinking. kids only know what they see on a day to day basis. It’s why the cycle continues to grow. Unfortunately it mostly stems from money. Or lack there off. But changing the way a person thinks is truly a running into a brick wall type situation. Violence breeds violence, education helps but some people don’t want to learn or change. It’s all they know. So why bother changing. If I can help one person, then I see it as a win. I just can’t stand the comman person living in their perfect bubble when there is no such thing as perfect. We as a human race need to change. Why can’t we all just get along. Help your neighbor instead of ignoring them. It’s a dream I guess
+56. What goal posts. Seeing people broke into times stolen, vandalism, bashed, victimized. Not much of a prize if that’s the goal
+57. It seems that you can’t venture past assuming the worst of people. It’s fine. The true values of a keyboard warrior
+58. Sorry keyboard warrior.
+59. Excuses, far from it. Again you assume. Assumption is the mother of all fuckups.
+60. Nothing like getting outraged over shit that hasn't happened, and is unlikely to happen. But hey... go off
+61. I’m happy to have a civilised conversation, but I’m not going to be spoken to like that, and I’m not going to be wilfully misunderstood. Best wishes.
+62. The. Stats. Of. All. Those. Things. Are. Down. I don't know what else I can say here. The goal posts of the debate, you dunce. There can't be a meaningful discussion if you don't accept the data.
+63. You've made it abundantly clear that you are a fucking moron. I was just trying to be helpful.
+64. You are right and the real world is wrong. My bad
+65. There’s no other explanation your street is just randomly ripe with youth crime while everyone else around you in a supposed nice area doesn’t have an issue? Cmon mate. It’s either that or you’re exaggerating to make a point on the internet which is probably more likely now I think about it.
+66. Nothing like dismissing legitimate concerns because you dont understand and it doesn't affect you
+67. I am dead serious. Do you still think a fucking lunch is the problem? answer my question.
+68. you really are both a dotard and a coward to not reply. You do not get to take to moral high ground here when you're ignorantly defending a party you didn't even know just legalised imprisoning prepubescent children in the Northern Territory. Trying to play the political correctness card because you cant think of a retort does not work in this argument. You are disgusting.
+69. Can't fix stupid.
+70. Again with the name calling. If the stats say that 80% of our country lives above the poverty line does that make it true. It would if you polled everyone single person in this state. But sadly this does not happen. Honestly how many people of some position that deals with this matter do you actually know. 100-200 police officers. Does that account for the other what 10000 officers in the country. What about the ones who live and work in rural areas that deal with this on a day to day basis. Sure. Let’s all move to the golden neighborhood where everyone lives in wonderland filled with love and joy. What about the young families how have no choose but to live in areas that aren’t rich. It’s called the real world. Try coming out from under your rock from time to time. Spend a day in the real world and see how life actually works.
+71. Why do you assume anything. I haven’t attacked you on a personal level. Called you names. I haven’t attacked you. I have only stated the fact that people live under rocks. Ie, have no real grasp on the world we live in.
+72. Keep up saving the world your doing a bang up job
+73. No sadly you can’t. You can’t seem to reason with it either. Opinions are like assholes. Everyone has one
+74. >If the stats say that 80% of our country lives above the poverty line does that make it true. Yes. >It would if you polled everyone single person in this state That's... That's not statistics. >Honestly how many people of some position that deals with this matter do you actually know. Irrelevant. I think a fundamental issue here is you don't understand what stats and data actually means. You don't poll the population to see what crimes are happening. You have arrest reports and sentencing etc etc. Logical reasoning doesn't work, hence the name calling.
+75. Hardly helps calling anyone names. It only makes the obvious keyboard warrior shine bright.
+76. Maybe I should move in next to you. Seems you live in heaven street
+77. And what all the instances that aren’t put on paper. You know the ones that involve youth. Because they are underage or the police are trying to deal with the problem in the real world. Again the stats don’t reflect anything. They cover up the problem so it looks good. But in reality it is far from the truth. Instead the common person who lives in there bubble chooses to not see the world for what it actually is. They choose to believe in what the media tell them on a day to day basis. Honestly come out into the real world and actually live abit. You would be surprised to find out how much of the problems are clouded over. There are so many subjects that fall into this category. I choose to go into the world and deal with these problems. Try to fix something. Something is better than nothing living in a make believe place where all your magical fantasies come to pass does not help anyone accept yourself. It’s a sad fact that no one is willing to help anyone else. Everyone has to be on top. What happens when there nothing left to be on top of. As I said before in amongst the name calling and idiotic comments, this country needs to change. Until it does we keep going around and around stuck in a cycle. And this all started because of a statement against youth crime. And we end up in political debate on issues that will never change. People will always be different. Some good some bad. I’m going to ask you a genuine question. There is no right or wrong answer to this question. But I would like you to answer it. I’m guessing you won’t but it won’t be nice to hear your answer. I’ll give you mine after you answer. If you had three wishes, what would you wish for ?
+78. Hate to break it to you, but you might have typed this on a keyboard.
+79. A make believe fairy land where everyone’s wishes come true
+80. Wow. You sure showed me didn’t you 😂
+81. It's like watching a child become self aware. Fascinating really.
+82. Do you feel better for calling me names. Maybe you feel better helping the people that are affected by this in the real world. Have you stopped to think for a second I’m baiting you now. Clearly you think that you live in a perfect world. With no troubles to be had. The fact of the matter will not change. You live under the rock. It will crush you one with its enormous weight I just hope that it dosent affect the people around you. Not everyone needs to pay the price for stupidity
+83. 😃 I think that's enough internet for you today, gramps.
+84. Again assuming about me. Do you know who I am what I have lived through, my financial standing, my political or religious views. No you don’t. As I know nothing about you, hence why I don’t assume a thing about you. But you call me names to justify to yourself that you are right and everyone else is wrong. Does it make you feel big and important. You’re just another keyboard warrior that lives in a bubble. Like I said before I really hope you come out into the sunshine one day. You will be truly surprised at what you find. Life is not as perfect as what you perceive it to be.
+85. Old mate crocodile should probably retire from predicting elections.
+86. There goes the mining royalties
+87. Channel 7 had Robbie Katter on early last night, he said he was absolutely putting abortion reform to the floor as quickly as possible
+88. Fuck me nice one mum and dad.
+89. One of the most impactful causes of cost of living pressures, is rent. And Queenslanders just handed the keys to the people most likely to support landlords.
+90. Labor were always in trouble after being in power for three terms and, rightly or wrongly, being blamed for the cost of living crisis. Here’s hoping the small majority deters Crisafulli from going full Newman.
+91. Pretty gutted. Palaszczuk just held on too long, delusional about her overall support. If she had have moved on a year earlier things would have looked a lot different. Miles got in and was immediately copping ~20% swings in Inala and Ipswich West. The damage was done and lasting. He did an amazing job of getting it back but it was ultimately hopeless. I hope Labor keep him, he’s a good dude
+92. Wonder what comes first criminalising abortion or privatising what’s left of the public sector
+93. Damn. My 50c fares :(
+94. This is a trend worldwide though, whoever was running during covid gets kicked out asap once things settled down. Covid straining public systems just made it easy for oppositions to go “see they’re bad”.
+95. The fact that LNP had such a poor campaign, without costings and still won shows how easily swayed the population is. It boggles the mind.
+96. Here we Joh again...
+97. Queensland will regret this very stupid decision.
+98. The fact that my father, a decades long KAP voter, who regularly rubs shoulders with these political freaks and knows all of their insidious back end bullshit, voted for Labor should tell you enough about who Queensland doomed themselves with as their newest Premier. Crisafulli is a fucking weirdo, and was run out of Townsville for his shit. We are worse off, and only idiots with no understanding of the political realities would vote for a man with multiple failed businesses under his belt. He can’t even manage a business properly, how is the fool meant to manage an entire state even with his self indulgent sycophants propping him up?
+99. Hands off my womb cunt
+100. Fucking knew it. Watch this clown state complain about this fuckwit because they “wanted a change”. Democracy is a bit shit when half the people are plebs.
+101. Fucking morons, the lot of us
+102. Qld is fucked. Seriously who voted for this slime bag with zero credibility and a history of company failures? Qldrs must be desperate for a change.
+103. Coal miners will be frothing at the mouth.
+104. ![gif](giphy|fnl7WmVTgdS8pRQSLM|downsized) Welp. Here we fuckin go.
+105. Hooray!! $15 bus fares for Xmas.
+106. can't wait to just die because the help I need isnt "essential"
+107. God help Qld. The bloke can't keep a straight face and commit to Yes or No, so how is he going to provide leadership to manage Qld?
+108. Lol you stupid cunts
+109. urgh that beady eyed little fuck
+110. Oh for crying out loud, seriously? How dense are people in this freaking state? The LNP are not the good guys. It is dumb to ever vote for them. You suck if you voted for them. And you make me give up on hope that we will ever have a real progressive world with this dumb thing. Guess the rest of the world better get ready because we know it's gonna be the same right wing parties that win.
+111. Wow you dumb cunts, for how much Aussies say they hate America, then vote someone in like this, this country has no hope.
+112. Welp they goes our energy assets. They’ll be the first thing sold. Anything they can privatise they will. I give them one term and power before Labors back in. Unfortunately Labor got complacent and I think they needed this kick in the backside. But as I said they’ll only be out for one term. On the plus side, maybe we have a chance of not being humiliated over our budget QSAC Olympics.
+113. Good one Queensland. Because who likes cheap rego, cheap electricity, bulk-billing GPs, free school lunches and 50c fares, right? No, no, you'd much rather some revolting little weasel who doesn't see women as human. The guy who has the mining industry's hand up his ass like he's a meat puppet. LNP voters are complicit in the decimation of our planet, and they are also responsible for the very predictable shitshow that is about to begin. I am done feeling sorry for the brainwashed people too stupid to get their news from anyone but Murdoch. I have 0 respect for any of them.
+114. This Slimeball will ruin this state
+115. There's a dude on my street with a sticker on his bin "don't blame me, I voted LNP". All the blame sir. All the blame.
+116. Don’t blame me, I voted for Kodos
+117. Absolutely gutted. What Stevie Miles has achieved in just 10 months is incredible (also top bloke) and this bozo is about to undo it all and worse. Sad day.

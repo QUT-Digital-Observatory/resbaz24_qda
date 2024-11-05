@@ -1,0 +1,178 @@
+Your job is to analye a series of Reddit Comments are drawn from sbumissions related to the 2024 Queensland State Election. The comments are drawn from a collection of comments before, during and after the election itself on the 26th of October. The parties that sought election were the Australian Labor Party (ALP), the Liberal National Party (LNP), the Queensland Greens (Greens), One Nation and Katter's Australian Party. The LNP prevailed in the election, with David Crisafulli becoming the new Premier of Queensland. 
+We have identified several key issues that the major parties campaigned on during the 2024 Queensland State Election: Youth Crime (YC), Cost of Living (COL), Health (H), Energy and Infrastructure (EI), and Abortion Laws (AL). Below is a summary of each party's position on these issues:
+Youth Crime (YC):
+- LNP: Advocated for stricter penalties for young offenders, including the 'Adult Crime, Adult Time' policy, proposing that serious offenses committed by youths be met with adult sentencing. 
+- Labor: Focused on rehabilitation and prevention programs, aiming to address the root causes of youth crime through community engagement and support services.
+
+Cost of Living (COL):
+- LNP: Proposed measures such as abolishing stamp duty on new builds for first home buyers and re-establishing the productivity commission to review building industry regulations, aiming to alleviate housing costs. 
+- Labor: Introduced initiatives like 50-cent public transport fares, a $1,000 energy rebate, and free lunches for state primary school students to ease cost-of-living pressures.
+
+Health (H):
+- LNP: Committed $590 million to an 'Easier Access to Health Services Plan,' aiming to reduce ambulance ramping and hire additional healthcare workers. 
+- Labor: Focused on maintaining and expanding healthcare services, addressing hospital capacity issues, and investing in new health infrastructure.
+
+Energy and Infrastructure (EI):
+- LNP: Criticized Labor's Pioneer-Burdekin Pumped Hydro Project as financially unviable and canceled it upon taking office, opting to explore smaller-scale hydro projects instead. 
+- Labor: Proposed large-scale renewable energy projects, including the Pioneer-Burdekin Pumped Hydro Project, to transition towards 80% renewable energy by 2035.
+
+Abortion Laws (AL):
+- LNP: Stated there would be 'no changes' to abortion laws under their government, maintaining the status quo established in 2018. 
+- Labor Party: Supported the existing abortion laws and opposed any attempts to repeal or amend them. Asserts that LNP intend to restrict access to abortion services based on the views of some of their members.
+
+Analyze Reddit comments and code them based on the positions they support or oppose concerning these issues. You will output JSON, so valid values are strings or null. Use the following codes: YC, COL, H, EI, AL. If a comment's position is unclear or does not pertain to these issues, output null.
+
+Secondly identify which party the comment appears to support. Use the party code ALP, LNP, Greens, ON, KAP if this can be determined, otherwise a null value if undetermined.
+
+Output JSON as a list of objects where each object has an "id" (integer) property of the comment id, an "issue" property set to the issue code string (or null value), and a "party" property set to the party code string or null value. Null means JSON null, not a string. Values MUST be quoted, e.g. {"party": "LNP"} unless they are null, e.g. {"party": null}. Comments follow:
+
+1. They will find staff - no different to the police recruiting. Look first at private security personnel
+2. They changed the way they reported domestic violence in July 2021 resulting in a big jump in the figures. [https://www.qgso.qld.gov.au/issues/7856/crime-report-qld-2021-22.pdf](https://www.qgso.qld.gov.au/issues/7856/crime-report-qld-2021-22.pdf)
+3. “It’s a health issue that can become a crime issue”, he said, ignoring both health and crime experts.
+4. Found the fascist
+5. And every rational person knows which side it is, and yet the people on that side will nod thinking it's the other one lol
+6. Sorry to say they both do it,state and federal.
+7. On the contrary I’m tired of people like you downplaying the issue.
+8. Shows the level of care I felt for the good old ABC once she was installed as emperor. She just screwed it sideways from day one. And it’s gonna need some serious none LNP leadership to fix it up.
+9. So we should pay youth detention workers 90 grand out of the gate? And privatisation of corrections is a terrible, terrible idea
+10. **Unique** victims, sections 7.0 Total unique victims from 36,962 to 52,202 increase of 41.2% >Analyses were conducted on selected recorded offences data and, while the analysis below indicates a significant increase in recorded assault offences in particular since the practice change was implemented, it is difficult to quantify how much of the observed increase in this and other DFV–related offences can be attributed to this change alone. that from 1.2 So they themselves couldn't quantify how much it changed.
+11. And we are tired of people like you exaggerating the issue.
+12. Kim Williams was appointed by Albo
+13. Might not have such a recruitment problem soon with the rising unemployment
+14. I reckon you can see about how much. https://preview.redd.it/mho37s0rizwd1.png?width=1336&format=png&auto=webp&s=6f28ff205526da4ab4cb0331f6b1238090228a20
+15. We, who is “we”? You victim-blaming piece of trash. I really hope you don’t have to have go through what my family did. Have some compassion you hurtful person. Or were you one of these people when you were younger?
+16. What on earth are you talking about
+17. have some logic, lashing out at all children and lying about statistics because you are the victim of one crime is hurtful to literally every child that isn't the one that hurt you. someone disagrees with you and you start name calling and assuming i was a criminal, and then say i need compassion? you are cooked.
+18. Well you're talking about that there is no one to recruit but that will be solved fairly soon when there are more people looking for work when unemployment inevitably keeps rising
+19. You disagree with a victim. Yeah you are part of the problem.
+20. Well if they criminalise abortion and drug possession the crime rate is just going to go up
+21. Crisafulli = Campbell Newman 2.0 Crisafulli has been fearmongering on "Youth Crime" for the past fours years as Opposition Leader, and his whole election campaign is based on his signature "Youth Crime" policy, where he promised to resign as Premier if the rate didn't decrease. They are backflipping on their flagship policy **before** the election. Crisafulli and the LNP will criminalise Abortion and dismantle Women's reproductive healthcare rights, with jubilation.
+22. Maybe he realised his stupid ‘adult crime adult time’ and his ‘make QLD great again’ esk vibe is actually going to create more victims because instead of rehabilitating and therapeutically supporting people of offend so they actually deter from a life of crime, it will just made it worse. This man is a joke and I can’t believe we are at this point where there is a chance he’ll be Premier.
+23. F\*cking Slimeball...
+24. Headline assumes he'll get in. Queensland needs to make sure he doesn't.
+25. It is fucking hilarious that the reason he has had to walk this back is because the crime rate is so low that a small population change might negate the effect of their policies.
+26. How did anyone accept this would happen? Only a fkn moron would have believed he will resign if crime doesn’t go down.
+27. Even if he does get elected, how many sound bites has he created for himself to run as political advising against him.
+28. I wouldn't trust the LNP to run a bath let alone the state.
+29. *pretends to be shocked*
+30. https://preview.redd.it/x28ohmvlktwd1.jpeg?width=1290&format=pjpg&auto=webp&s=c9fb6fe8db9bc1f5005463a7e13635d3fee11fad Also weird, isn’t there meant to be a news media blackout?
+31. And if Queenslanders still choose this arsehole then they deserve him. Source. A Queenslander.
+32. I guess that exposes the obvious, crime isn't up at all, and there will still be victims if the government changes.
+33. Slippery fish to put it mildly. Deceitful cunt would be apt according to some
+34. Well he’ll let it go up first so when it drops by a single percent (after sacking a whole bunch of cops so they aren’t recording the data that converts into the statistics) he can sing and float about how great he is.
+35. Do we have to vote tomorrow (sat)
+36. My God this man's bloated and impacted with fecal matter!
+37. Is this on population - that isn't that unreasonable given our population boom and no doubt more people would come to Qld if Labor wasn't in power
+38. I think you mean revised not broken. It’s hard to break a promise to resign from a role under certain conditions if you haven’t been appointed yet.
+39. good thing they're opening private prisons then
+40. He realised it a day before the election lol. Dearie me. Also I’ll edit with a link, but Murdoch media is so angry at him that even sky news is turning on him. https://preview.redd.it/15whuvcfstwd1.png?width=1284&format=png&auto=webp&s=1bbd7f58314efcf26489f03708991d900104b40d Edit: [https://www.reddit.com/r/friendlyjordies/s/3oqZQMfqG5](https://www.reddit.com/r/friendlyjordies/s/3oqZQMfqG5)
+41. But if they legalise it there will be more babies aborted, which means lower population, which means the crime rate per capita will go up.
+42. Watching FTA TV few years ago. Every time Crisafulli comes up on the News he just says the opposite of Labor. When I harass liberal boomers voters on facebook, they have zero, I mean ZERO understanding of LNP policies. They think they are voting on a another version of Labor. In the context of Labor building 50 new GP clinics, they cannot separate state and federal government. Quizzing them on free market principals, and I paraphrase myself, ' that if you are waiting two weeks for a appointment to the GP, to capitalise on demand and the Doctors can turn a bigger profit. You (to the LNP voter) would have no problem for a doctor to paying 800 dollars per visit for a shorter waiting times as per LNP policies; LNP will not build clinics' All I got "LABOR BAD HURR HURR" response.
+43. They already knew it would create more victims because of what Newman did in 2012. They just don't care.
+44. Esk is Nationals Country
+45. What has he done with the vibe of Esk 😩
+46. He said it, be mad at him.
+47. *\*shocked Pikachu face\**
+48. Do you mean political advertising blackout? pretty sure media can still report on the election
+49. The blackout only applies to broadcast media. It doesn't apply to print media and online services.
+50. No an advertising blackout. Although I’m still getting ALP ads in my The Australian podcast.
+51. Agreed ♥️
+52. Yes it’s tomorrow.
+53. I don’t. It’s an election promise and it is a day before the election closes. Hundreds of thousands of QLDers have already cast their vote.
+54. Maybe but the fact remains, he made a dumb soundbite promise to get votes but which never had any substance, that the right - wing media amplified, and now he's quietly walking away from it.
+55. With this great advice, I am considering revising my wedding vows.
+56. This is the party that invented the non-core promise.
+57. Honestly surprised this didn't happen under Newman
+58. More likely they'll privatise the ones we have then overcrowd them.
+59. Jesus imagine falling out of favour with Murdoch in a state where every paper is Murdoch owned. I'd say the chance of a leadership spill regardless of whether they win is pretty likely
+60. Donors need to get to build prisons and get their other (hidden) promises.
+61. They care, because it generates political targets in the future. What else does a party do to make sure people can't fix the problems they're making money from? Housing, fair work, welfare, taxes, etc. So make sure the party who might actually have these goals are instead needing to put more resources into problems the other party manifests.
+62. I’m not mad at him. I don’t believe anything he says. Not my problem. It’s the problem of those who trust him and he fails to deliver. That’s on them.
+63. No, it's a news media blackout too but only applies to broadcasting media like network TV, not digital media or social media.
+64. Oh you might be right. I’m super interested in politics so I’m happy but I’m sure lots of people were looking forward to the break in political content. Oh well 29 hours to go!
+65. Ah that makes sense, thanks.
+66. Is it quiet if it’s in the media like the original comment?
+67. For it to be the same you’d have to not be married
+68. Only because he ran out of time and wanted to privatise ambos first
+69. That’s so strange to me, but thanks for explaining your perspective.
+70. Miles is going super hard on social media right now
+71. Thanks for clarification. This rule probably needs to be reviewed as it seems antiquated with internet revolution
+72. Ah. That’s why my non-adblocked YouTube app kept getting LNP propaganda this morning…
+73. What about unsolicited phone calls and messages?
+74. If only that existed on this sub...
+75. … if the Lying Nasty Party receive a majority, for example, we’ll all not receive any break.
+76. It's quiet if it isn't all over the Murdoch media and not just in the Guardian. Unless LNP voters can read it in the Courier Mail, or see it on Sky News, it's invisible to them.
+77. God he was a cunt
+78. Whats strange?
+79. I believe so but not sure, though usually there's a tonne of workarounds with anything when it comes to unsolicited calls and messages because usually the information is obtained via some sort of agreement the individual documented had online that they totally didn't know about.
+80. I get them when I forget to take my meds.
+81. You can mute the sub and then unmute it after the election. I think you will still receive reply notifications though.
+82. And still is!
+83. Not being angry at a politician for making a promise that he had no intention of following through on. You’re here often enough to be well informed, you know that there are plenty of people in QLD of different levels of political comprehension - people like my 65 year old nurse mum who hasn’t got a clue about any of them nor the familiarity with technology to competently fact check things - and who also believe in the good of people and are somewhat naive. Why on earth would you be mad at them for believing what this doe eyed man says? Why wouldn’t you be angry at the wolf in sheep’s clothing? Edit: though thanks to her daughter’s - my mum isn’t actually voting for the LNP.
+84. Me being angry doesn’t achieve anything. Just be old man (not that old) yells at clouds ☁️. I lament at the stupidity of people in our country. Since Trump and Covid, we have a massive amount of people who are now incredibly stupid. These party’s prey on these vulnerable people. There are always less of them, but with preferences, they can be elected. Same as in the USA. Trump was elected after gaining less votes, because it’s set up to help conservatives. I’m not angry. It’s got nothing to do with me. My vote only counts for one vote. For some reason, many people think their voice counts for more. I can only be content with my vote.
+85. Thanks again for explaining, I was misunderstanding your tone over text 👍🏼
+86. He has also walked back "resigning" if crime numbers don't go down https://www.theguardian.com/australia-news/2024/oct/25/queensland-election-david-crisafulli-lnp-crime-numbers-policy
+87. This has always been the way
+88. I'm incredibly sorry for what happened to Russell Field's son, wife and unborn child but I think he is still way too emotional about what happened to be as effective as he needs to be. Also this seems to be his only issue and has no other policy to speak of..
+89. Modern conservative politics in a nutshell.
+90. Where can I find the LNP costings? You’d think they’d put them on their website!
+91. # Staff shortages could derail LNP's youth detention reform plans, Queensland criminology professor says >In short: >If elected, the Liberal National Party promises to conduct youth detention reforms, including mandating education and isolating children who use violence. >A recent Queensland Ombudsman report on a Queensland youth detention centre has found children can not access education and are locked in cells when there are not enough staff.... A Queensland Liberal National Party plan to reform youth detention has been met with doubt as the sector struggles with staff shortages.
+92. Correct. The LNP's policies over the last 15+ years in particular have always been based on ideology. Most galling to me is the way they've been parading victims of crime around, as if their populist based crime policies are going to deliver justice to these people. And of course these people, Russell Field especially are far too angry and grief stricken to realize they've been taken advantage of. The populist policies of the LNP are not going to deliver these people justice. Populism isn't designed to help the people, it's designed to get politicians elected based on emotion. But as I've said before, angry voters are stupid voters 🤷
+93. AS THEY HAVE BEEN SINCE THE PARTY STARTED. No one gets to be surprised by conservatives any more. If you didn't know, you were intentionally misleading yourself. This is your fault.
+94. Yep. Just another day for LNP.
+95. Bit like Abbott in 2013 with stop the boats but it worked
+96. Did OP make up the post title or did the ABC change the article headline? Also based on this article it looks like CYDC has a staffing issue that Labor has been unable to fix. Not exactly a ringing endorsement.
+97. FACTS
+98. This link has been shared 1 time. First Seen [Here](https://redd.it/1gbhugo) on 2024-10-25. --- **Scope:** Reddit | **Check Title:** False | **Max Age:** None | **Searched Links:** 0 | **Search Time:** 0.00264s
+99. The political component of this sub is 100% based on emotion 😆
+100. Spoiler alert: All political parties rely on emotional hype leading into elections. It's what gets votes.
+101. Projection is real. You just have to see the name calling and abuse directed to people here. Labor is all emotion. Support us or you hate child, hate women,are racist. Look at the free lunches spending 1.6b on a problem that does not exist for 95% of the population. A non emotional policy would have targetted intervention so kids that need it. Do get better access but that does not make you feel as good as feeding everyone even if it a waste
+102. Can’t wait to see this sub’s reaction tomorrow night when the LNP win rofl
+103. Miss the age where ABC news non bias simple strict forward. Now turn into leftist playground.
+104. You made a slight spelling mistakr there. I'm sure you meant to say. The AlLP policies are all fluff and bubble like all brain dead LWNJ's
+105. Yeah because they have to wait for their policies to be handed to them
+106. I don't understand what's happening. He couldn't be doing a better job of trying *not* to be elected. Continual backtracking and a total lack of clarity on what his positions are. And yet people are buying it up and we're still going to elect him. I don't know who is worse, him or us.
+107. Yeah, if you ask the police to target a certain demographic, i.e.young people, then the crime numbers will go up for that demographic.
+108. What a coward
+109. Shocking
+110. I don't know if turning your grief into a political campaign is really a good way to mourn. I understand that he probably wants to turn his pain into some sort of change, that's a very human thing. But surely there are much more constructive ways to do this without letting a political party exploit your grief.
+111. He’s been well and truly taken advantage of by the LNP. He’s running for Capalaba which sits on a 9.8% margin and has a popular mp- I doubt it’s going to flip so he’s not going to get the spoils of being a government MP. But his story, broadcast ad nauseam has gained the LNP a lot of voters and has probably helped parachute them into office.
+112. Yeah I really truely felt sorry about what happened to that guy’s family. It just was gut wrenching reading about it and I wanted to know more what happened to the offender/murderer. I couldn’t find much information online but I truly feel that the affected family has justice to the best. From the sound of things he was telling, the government didn’t do enough and that’s what got me a bit concerned at his speech. He lost quite a lot and I think it would have been great from the government to at least tell public what have been done particularly in Russell’s case and let people be judge if it was enough or not but if it’s not being clarified, it just means to me it was either not worth bringing or it would have been a negative impact on their campaign. I can say for sure it’s worth bringing so yeah the other reason is the only thing I’m a bit concerned about. Could more be done? In what ways it wasn’t enough? Why Russell’s thinks it’s not enough and what his family wanted the outcome from it? All these questions unfortunately I couldn’t find satisfactory answers too. His story is very sad and deeply concerning for the youth crime issue.
+113. I just found this.... and ok it puts LNP costs less than LAB but 6.4B for the Department of Transport WTF! 60% of their spending is to the department that did a ton of work on the South East Freeway and now less than a decade after finishing that are removing or have plans to remove the exits they put in. The Department of Transport needs a serious audit and this is the opposite. But take a big drink of water, hold it in your mouth and then check the Green's number lower down. [https://research.qut.edu.au/best/queensland-election-spending-promises/](https://research.qut.edu.au/best/queensland-election-spending-promises/) This document really needs some dates on it though. I dont think it could capture all the things that were dropped last minute yesterday but it was the only thing I can find.
+114. Hidden away from any scrutiny and yet people want to vote for them?
+115. Just to be somewhat objective the article is pretty daming of the current situation under Labor. "When there is not enough staff, children are locked in their rooms alone. They do not go to school, play sports or socialise. The lockdowns, known as separation, can last for many days at a time. The report found the separations were affecting the wellbeing of children and posed human rights issues."
+116. What are you guys gonna do with your spare time after the LNP wins tomorrow? This has obviously been an incredibly taxing few weeks of foaming mouth outrage, I hope you get to wipe your mouth and take a breath.
+117. They only have slogans, not policies.
+118. I did post that title and it is different from the articles, my bad.
+119. Hang in there, only a couple more days till the ALP operatives delete their accounts and leave.
+120. No you can go labor way of just buying votes.
+121. Pretty emotional and poorly written comment right there, projecting much?
+122. ...but will they?
+123. > Miss the age where ABC news *was unbiased*, simple, *and straight* forward. >Now *it has turned into a* leftist playground. Corrections in italics for you there bud. Thanks for confirming that most people who support the LNP are barely literate and poorly educated 🤙🏻
+124. ^[Sokka-Haiku](https://www.reddit.com/r/SokkaHaikuBot/comments/15kyv9r/what_is_a_sokka_haiku/) ^by ^bobbakerneverafaker: *Yeah because they have* *To wait for their policies* *To be handed to them* --- ^Remember ^that ^one ^time ^Sokka ^accidentally ^used ^an ^extra ^syllable ^in ^that ^Haiku ^Battle ^in ^Ba ^Sing ^Se? ^That ^was ^a ^Sokka ^Haiku ^and ^you ^just ^made ^one.
+125. > I don't know who is worse. If he gets in, the Queensland Voter is worse, for seeing all of this and *still* thinking *"Yeah, this is my guy"* I'm holding out hope that Labor can scrape through by the skin of their teeth though, they've done a great job closing the gap over the last few weeks.
+126. Over this campaign he done a very good job of showing us who he is and what kind of leader he will be. Recent polling shows that some people have been paying attention. When someone shows you exactly who they are, you would do well to listen to them.
+127. Capalaba will likely go LNP this election.
+128. Conceded before 10pm...
+129. 17 yo got 10 years, has to do 60% of the sentence, out in 2027.
+130. Yeh! I just wanted to know if they were giving $2b back to their mates (coal tariffs)
+131. Agree 100% *but history shows* the LNP always make massive cuts to government services and staffing and without them clearly stating they are going to undertake a massive recruitment drive and or a plan to address the high turn over rates from the article (25.5%) we know things will only get even worse under LNP.
+132. Frankly I don't care as I don't vote for Labor but ***know QLD*** will go massively backwards if the LNP win, see massive budget blowouts and a really poor preparation for the stupid Olympics that we really don't need. How are they going to have any budget if they cut the coal Royalities and give them massive TAX breaks just so 1-2 of them will get a golden parachute post-politics? The grift is real.
+133. Yeah because we're all fake accounts, even though mine is 10 years old and organic... The fucking mental gymnastics of LNP supporters is seriously impressive.
+134. You say that as if the LNP, some of their more rabid supporters, and sometimes just outright bots haven't been hard at work canvassing all the different subreddits, Facebook pages, online newspaper forums, etc. I've seen more than a few accounts feverishly responding and commenting to every post, and sometimes even every comment thread. And not about to forget that there are companies who are paid to do exactly this kind of thing and have done so for the LNP before. Cambridge Analytica ring any bells?
+135. Yea, mostly likely. It will seem insane on this sub though, which is why it’ll be funny to see.
+136. Ah yes insults. Not emotional at all.
+137. It's pretty terrifying to know that close to the majority of the people you interact with on a day to day basis look at the things he's doing and are perfectly able to consciously vote for him with 0 issues. Like I'm not great fan of Labor but it's beyond fucked that they've had to "close the gap" instead of instantly jumping to overwhelmingly astronomically favoured the second any of Crisafulli's shit started to come out.
+138. It’s actually not that hard to understand really. There are those who believe the fluff about the crime and think crime is rampant (they get their news from one of 3 channels (7, 9 or 10) or the newspaper) and then believe abortion is murder. At that point, it’s really easy to understand why some people will still buy into it. I’m not saying it’s a good idea or anything but I can totally understand the rationale behind why those people still support DC.
+139. Gotta say I didn’t see Capalaba flipping and not Springwood.
+140. It is just unsettling. I wish I knew the full picture. If the person feels the guilt and what is his state now. It’s so sad. My heart sinks on Russell’s story. The world I left behind didn’t leave for the world like this if it turned out like that one day. Anyway thank you for the information.
+141. Don't worry, I'm a 14 year Reddit veteran and apparently i'm an LNP shill :D
+142. The account that posted this is 59 days old. Cmon bro. There’s zero mental gymnastics here.
+143. Not all …
+144. The evidence is not that strong - [Exit poll shockwaves: Phenomenal Labor surge makes election too close to call | The Courier Mail : r/queensland](https://www.reddit.com/r/queensland/comments/1gcft00/exit_poll_shockwaves_phenomenal_labor_surge_makes/)
+145. Yeah this dude’s borderline illegible comment has me overcome with emotion, I’m wracked. How will I ever compose myself enough to get to the polling booth?
+146. I think they're just isolated from information and aggressively defensive to anyone who tries to help.
+147. Man, one entire side of my family is fully on board with the LNP platform and it’s really concerning. Usually I just overlook this stuff, but this time round I’ve lost a lot of respect for their political intelligence and/or moral compasses (depending on which is most relevant) because to vote for this party in this election is to either lack empathy for your fellow human beings or be deliberately ignorant of the situation.
+148. My reply wasn't to the parent comment, it was to digby99, who implied that the pro Labor comments were from fake accounts. This is a biiiig stretch, considering the party known to deal in misinformation, bot farming, and doublespeak is not the ALP, but spooks who answer to big businesses and mining lobbyists.
+149. Yea, we shall see - pre polling likely LNP they say, ballot less of a swing…maybe it won’t be called tonight like I said
+150. What about it would make them lack empathy?

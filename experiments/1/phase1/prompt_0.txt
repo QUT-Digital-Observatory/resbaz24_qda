@@ -1,0 +1,143 @@
+Your job is to analye a series of Reddit Comments are drawn from sbumissions related to the 2024 Queensland State Election. The comments are drawn from a collection of comments before, during and after the election itself on the 26th of October. The parties that sought election were the Australian Labor Party (ALP), the Liberal National Party (LNP), the Queensland Greens (Greens), One Nation and Katter's Australian Party. The LNP prevailed in the election, with David Crisafulli becoming the new Premier of Queensland. 
+We have identified several key issues that the major parties campaigned on during the 2024 Queensland State Election: Youth Crime (YC), Cost of Living (COL), Health (H), Energy and Infrastructure (EI), and Abortion Laws (AL). Below is a summary of each party's position on these issues:
+Youth Crime (YC):
+- LNP: Advocated for stricter penalties for young offenders, including the 'Adult Crime, Adult Time' policy, proposing that serious offenses committed by youths be met with adult sentencing. 
+- Labor: Focused on rehabilitation and prevention programs, aiming to address the root causes of youth crime through community engagement and support services.
+
+Cost of Living (COL):
+- LNP: Proposed measures such as abolishing stamp duty on new builds for first home buyers and re-establishing the productivity commission to review building industry regulations, aiming to alleviate housing costs. 
+- Labor: Introduced initiatives like 50-cent public transport fares, a $1,000 energy rebate, and free lunches for state primary school students to ease cost-of-living pressures.
+
+Health (H):
+- LNP: Committed $590 million to an 'Easier Access to Health Services Plan,' aiming to reduce ambulance ramping and hire additional healthcare workers. 
+- Labor: Focused on maintaining and expanding healthcare services, addressing hospital capacity issues, and investing in new health infrastructure.
+
+Energy and Infrastructure (EI):
+- LNP: Criticized Labor's Pioneer-Burdekin Pumped Hydro Project as financially unviable and canceled it upon taking office, opting to explore smaller-scale hydro projects instead. 
+- Labor: Proposed large-scale renewable energy projects, including the Pioneer-Burdekin Pumped Hydro Project, to transition towards 80% renewable energy by 2035.
+
+Abortion Laws (AL):
+- LNP: Stated there would be 'no changes' to abortion laws under their government, maintaining the status quo established in 2018. 
+- Labor Party: Supported the existing abortion laws and opposed any attempts to repeal or amend them. Asserts that LNP intend to restrict access to abortion services based on the views of some of their members.
+
+Analyze Reddit comments and code them based on the positions they support or oppose concerning these issues. You will output JSON, so valid values are strings or null. Use the following codes: YC, COL, H, EI, AL. If a comment's position is unclear or does not pertain to these issues, output null.
+
+Secondly identify which party the comment appears to support. Use the party code ALP, LNP, Greens, ON, KAP if this can be determined, otherwise a null value if undetermined.
+
+Output JSON as a list of objects where each object has an "id" (integer) property of the comment id, an "issue" property set to the issue code string (or null value), and a "party" property set to the party code string or null value. Null means JSON null, not a string. Values MUST be quoted, e.g. {"party": "LNP"} unless they are null, e.g. {"party": null}. Comments follow:
+
+1. It's an authorisation charge. It used to be $1 but has decreased to 10 cents under 50 cent fares. Your proper fare for the day will be charged at the end of the ticketing day at 3am.
+2. Man, my go-card charged 83c on Friday. I guess I had to make up for it 😔
+3. Be careful using your phone for payment. I was using my bank card and it was always the 50c. I then started using my phone as payment and even though I 100% scanned on and off (green tick), I was getting charged as if I didn’t tap on/off. Costing me $5-$6 per day instead of $1. Took me a while to pick it up but I challenged the transactions with my bank and said they should have been $1, but CBA refunded the whole lot (which I didn’t ask for lol). Back to using my bank card now
+4. It’s the temporary hold they charge. Money isn’t deducted straight away from the bank account but after a few days it deducts rest. Earlier it used to be $1
+5. See how it says "pending'? You went somewhere yesterday but didn't touch off / touch off didn't register. The small charge is to verify the account has funds. The pending becomes an actual fare at touch off. Next time you use that card it'll turn the ten cents into fifty cents and begin the process anew with the new fare. This is why you need to touch off.
+6. Does anyone else not get charged until they’ve used the train X many times? Like I’ll get one 3 dollar charge every now and then.
+7. My comment is pending up vote.
+8. Its 10 cents if you used eftpos and 50 cents if you use go card, i believe.
+9. Were you tapping off with the exact same bank card on your phone as well? Whatever you tap on with has to be identical to what you tap off with. Otherwise double default fare charges, same as go card
+10. This isn't correct. It's the pending authorisation charge.
+11. I used to get charged $10 if touch off didn't work!
+12. Did touch off but we'll see what happens once it's no longer pending.
+13. It's 50c for every form of payment, 10c is a holding fee to verify a new card.
+14. I could have sworn I said that..... ??? Anyways. Split that hair.
+15. Yes it’s less now due to 50c fares ($2.50) but this 0.10c one is just a temporary auth/hold. It will get released in a few days. Actual charge due the day will appear separately
+16. concession?
+17. There's a strong chance it didn't register on the touch off. Have had that happen several times. It's annoying. I'm not saying you didn't, I'm saying it didn't work.
+18. It’s 0.10c every new day you travel as an auth. Then it gets released after a period and the actual charge is billed separately as an aggregate of the whole day
+19. 2 mates of mine live in South Ripley with vastly different lifestyles. One is a single guy who built a large house there due to how cheap it was at the time. He works in Darra, so the commute isn't terrible for him. The other has a wife and kid and has a modest family home near the school. He works remotely 3-4 days a week, and is on-site at random locations the other days. His wife runs a creative business from their home. In both instances, they love living there. Orion has everything they need and the area is great.
+20. Flagstone seems a long way from anything still. Lots of driving. Central Ipswich seemed the best solution for us.
+21. I don't live there, but I did go on a property tour earlier in the year that went to Springfield Central, Collingwood Park, White Rock, and Redbank Plains. The houses we toured were very modern and sleek. They were actually very spacious. There wasn't much backyard room, but there were decent sized patios. Honestly depends on the estate on how close the buildings are together. Some of them felt like a regular Brisbane suburb. We drove past others that looked like somebody copy/pasted the same house next to each other with minimal space. Some of these places already have train stations that are a 10-15 minute drive. I saw no buses at all. Once the Ipswich to Springfield rail line gets built I'd imagine there would be more train stations along the line. If you need to get to Brisbane CBD, driving there, doing park'n'ride, or taking your bike/scooter onto a train works. Most of the major roads were 1 lane, and I'd imagine they'd get widened over the years. What surprised me were the bike lanes. These places were definitely built with active transport in mind, and I saw many kids riding their bike or scooter. Although, driving around, the vibe felt like I was in a country town. There's already a lot to do in the Ipswich area. There's already many shopping centres as well as a Costco. There are also many schools being built up. I honestly wonder how they'll get more teaching staff to these areas. I definitely think that they'll be a lot of growth in the Ipswich corridor. I think it is the only place around Brisbane that you can use FHOG on (under $750,000), so it's appealing to first home owners. You can get a new 3 bedroom house there for the same price as a shabby 1 bedroom house in Brisbane. Give it 5-10 years and I definitely think these places will end up like a moderately built-up Brisbane suburb, I'm thinking like a Toowong or Indooroopilly.
+22. Living out this far has its positives and drawbacks: Good: - houses are okay, home ownership awesome - things are shiny and new - local shopping precinct is handy Bad: - only one road in and out of each estate, sucks when you all have to drive to leave to go to public transport/school/work - you can’t walk anywhere of substance. In Brisbane city council areas you can walk to a random cafe or side store, or have industrial and commercial (local mechanic etc) within walking distance. As it’s all preplanned in the estates, once again you have to drive everywhere. - shops close at 6pm… after my hour commute I can find coles/woolies closed. - no street parking for everyone’s giant 4WDs, everyone has a double garage and no one uses it but with new streets and all of the houses jammed in, there are barely any spaces for visitors or multiple occupants. - no third places
+23. This is a list of suburbs I never knew existed.
+24. We built our house at Ripley circa ~ 8 years ago. Our subdivision/ estate (ecco Ripley) is very quiet, there's a big park in the middle, everyone is friendly and a lot of people here own their homes. We built when it was a one lane country road with no shops here whatsoever. The amenities have all come to us with the exception of the extension of the train line. The drive to springfield central train is around 15 min, and I find it much more convenient than driving as I work a couple of days per week in Brisbane CBD. The coles runs out of things sometimes, and the ambulance station down the road has meant a noticeable increase in sirens, but its not an insane amount. Most days I don't hear any but then you'll get the odd day where you hear them half a dozen times. Lots of schools and childcare centres going up, they're constructing a new swimming pool for swimming lessons, and between springfield and yamanto we have kmart big w and target, Dan murphys, liquorland, Coles, woolies, 2 x aldi, etc. We are getting ready to build again in another area,but we have loved living here and raising our family and I would happily recommend it to anyone. Nowhere is perfect but we would never have gotten into the property market without our little house at Ripley and for that I will always have a soft spot for Ripley.
+25. I moved to a newly developed housing estate in Ipswich almost 2 years ago. Pretty much with new builds nowadays, its cookie cutter with very little space between them. Personally I got a big block (600 sq m) and a normal 4 bedder low set on it so I have quite a big buffer between my neighbors. I work in the city and I drive. With morning traffic on the motorway, it takes me about just under an hour to get to work. Its not too bad, yet. Personally I like living there as it's quiet and peaceful. Ipswich has a bad rep but I can see with the amount of people moving there, it is going to get gentrified pretty quickly.
+26. I don't live in one of the housing estates, I have lived in an older established suburb in the Jimboomba area for the last 15 years. I work in Brisbane and the driving sucks because no one thought through the infrastructure when putting in these estates. Also there is an abundance of $2 shops, cafes, and takeaway shops, Woolies, and Coles, but no department store so you have to go to Springfield or further North to get any basics beyond food. There are also more primary schools than high schools. A lot more was promised for Flagstone but it has stopped and started over the years swapping developer hands. It was meant to have a train station about 15 years ago. No one goes to Yarrabilba, unless you live in Yarrabilba.
+27. Ripley and Whiterock are great for families and have a lot to do especially if you consider Springfield part of the equation. If you’re an active person in particular having the various recreation reserves around and the proximity to the scenic rim is great. If you’re working in the city it is a nightmare to get in however the Park and Ride at Springfield and 50c fares has made it a lot easier. The future out that way does seem good with proposed heavy rail and Springfield Central has a lot of development space to meet demand (the under construction Mater Public as an example)
+28. I could never live happy knowing I lined the pockets of developers to live on a tiny block that was recently koala habitat with everything so far away that I need to drive a car everywhere.
+29. The free pool at Orion is a must do for the kiddies during the summer months! Except sometimes you'll see people with more tatts than teeth.
+30. 600 is a big block now dam
+31. Hey, just reading your comment, ie gentrification of new estates. I don't live in one, but I guess a frequent guest. Do you even think it's possible for some of these estates to gentrify? What seems to assist is gentrification is being close to good transport infrastructure, a different layout of commercial (high street style compared to town centre style) chance for densification and mixed used Zoning. The new estates don't really have any of that... Just thinking out loud.
+32. Thanks for the insight. That's a pretty good size land plot these days. Glad to hear you are enjoying life there! What was your main reasoning for moving there? And were prices/value better than somewhere closer to Brisbane when you bought?
+33. God forbid the sinning tattooed scum use the free public pool, shame on them! /s
+34. Good heavens no!
+35. I'm speculating here saying its getting more gentrified though its not a big stretch TBH. Where I am, its literally very close to the motorway and with 3 train stations in close proximity. The people I saw on trains are mostly working professionals. The shops are a short drive away. Ipswich Grammar is down the road. There's Queen's Park with the free zoo and Japanese garden attached. Really, all the infrastructures are there. Its just a matter of time I think.
+36. No worries. Ipswich is not as bad as what others claim though some parts can be.....edgy. But soon they'll get pushed out for sure as more working professionals like me move in. My main reason is that I wanted land. At least a yard I can kick a ball in with my kids. Also at my budget back then, there's nothing I can afford under Brisbane City Council that comes with decent size land anymore. At most I can only get like a townhouse or an apartment with my budget. Bugger that. I chose to build too because I just couldn't be f dealing with agents anymore. Give me dealing with builders any day over dealing with slimy agents. I love it out here as it still feels spacious everywhere compared to cramped, older suburbs in Brisbane. Oh and I live on top of the hill and I have a great view of the mountains in the distance. Just really lovely.
+37. It’s more the toothless gronks shelling out hundreds/thousands of dollars on tats when they could instead pay to fix their broken mouth that is kinds gross. Not so much that they have tats alone
+38. That's interesting, it sounds like you are in an area adjoining some more historical areas of Ipswich. Queens Park is a nice little area. But if you were near a historical area, like yarabilba etc, what does th future hold there...
+39. > cramped, older suburbs in Brisbane. Not all the older suburbs are cramped. I'm on the same side of town but much further in. It's all 800 and 900 blocks here.
+40. Nice one, totally understand wanting some space, especially with kids. Some of those new estates have no backyards or very little, which would work for some people I guess. Love the view of the mountains out that way, also a great spot to watch the storms roll in.
+41. Well yeah, given the state of the dental system I’m not shocked. Regardless, I don’t see how tatts or teeth are relevant at a public pool, unless you’re just a judgy cunt.
+42. Yeah I used to rent a townhouse in Forest Lake and boyo, I share the same fence with 5 other neighbors and if they're sitting in their backyards for a piss up, I literally have to tell them to go easy on the swearing cause I got kids in the house. It's that cramped and noise just bounce off the walls between townhouses. Speaking of storms, I literally saw yesterday's storm coming a mile away from my place! Oh and the sunsets....the sunsets here are STUNNING!!!
+43. Government: https://preview.redd.it/pau6zq8dnmxd1.png?width=500&format=png&auto=webp&s=a8d1dc124f3d2b224cda2df18e38c2b41b726ea1
+44. Uh the LNP only care about kids before they are born.
+45. Can't have youth crime if they're all dead
+46. "Just don't do drugs kids!" is as effective as "don't have sex kids!". Do you want to save lives or do you want to be a smug cunt who gets on the piss 7 days a week yet feels morally superior to some poor kid who dies due to a dodgy bit of mdma?
+47. Don't you just loathe how days after the LNP wins an election, everyone has to come out and literally beg them not to just fucking destroy a decade of progress? The worst part? They'll probably do it anyway.
+48. Didn't they ride off an out of context quote from the AMA trying to attribute it to a "patient tax" from Labor? Interesting how their opinions only matter when it suits them
+49. What about if all recreational drugs had the same testing requirements? So if no standards or testing for concert pills, then no standards or testing for the wine in the parliament house dining room
+50. The pandemic showed conservatives would rather die in denial than listen to medical experts and have to admit other people are smarter and better informed than them on certain topics.
+51. I mean great that doctors are looking out for the kids, but I reckon it won't be too long before they should be looking out for themselves...
+52. can we start a rally to try and force government on this? this could fuck some kids up for life if they get bad pills
+53. Drug test our politicians and make voting conditional on passing a drug test. Even better would also be to have compulsory IQ tests at age 25 to be allowed to vote or run for politics. Average or above gets to make the decisions.
+54. If doctors advise this and they don't do it. Are they negligible for not following professional advice
+55. lol, more than 16.5 tonnes of methamphetamine, cocaine, heroin and MDMA was consumed in the year ending August 2023 across Australia. Source: Australian Criminal Intelligence Commission (ACIC) wast water analysis. So yeah nothing to worry about, just a minor issue.
+56. This link has been shared 2 times. First Seen [Here](https://redd.it/1gehz3p) on 2024-10-29. Last Seen [Here](https://redd.it/1gemhwp) on 2024-10-29 --- **Scope:** Reddit | **Check Title:** False | **Max Age:** None | **Searched Links:** 0 | **Search Time:** 0.00665s
+57. No
+58. Making the mistake that the LNP actually gives a shit about facts surrounding it.
+59. Excuse my language but whoever want to eradicate testing is retarded.
+60. The comments here are sickening All pure assumption and karma farming
+61. When are they going to bring in gun testing for drug dealers and Bikies?
+62. Sorry but if you’re stupid enough to do drugs, you deserve what’s coming.
+63. Maybe if they were more focused on their future, they wouldn’t be rolling the dice with drugs cut with fentanyl. Sounds like natural selection of you ask me.
+64. It is like asking pilots of helicopters to wear parachutes ....
+65. Government: ![gif](giphy|CxjAa8LFNSRXoQeyy8)
+66. Not even then. They just like to torment women.
+67. Adult time!!!
+68. I just saw the channel 9 news headlines in a waiting room. No youth crime. Youth crime has been solved.
+69. Now you’re thinking with portals!
+70. But they make the choice to consume such stuff
+71. guess which one becomes a politician
+72. Queensland literally voted for this, they're just doing what they said they would. Doctors should have said it all before the election.
+73. Bold of you to assume the pollies aren't doing recreational drugs.
+74. I've sampled QLD Parliament House branded wine while at the place once. Sure wished they tested their wine back in 2019. Puked twice my stomach after that wine...
+75. They don't care.
+76. Nope. See also: abortion bans, despite doctors advice.
+77. Wait until you find out just how much of that cocaine is being consumed by the people who make our laws and regulate our money.
+78. No, they're not. They're cunts, and the bad kind. They know exactly what they're doing, and they **don't give a fuck**.
+79. ^[Sokka-Haiku](https://www.reddit.com/r/SokkaHaikuBot/comments/15kyv9r/what_is_a_sokka_haiku/) ^by ^Rank_Arena: *When are they going* *To bring in gun testing for* *Drug dealers and Bikies?* --- ^Remember ^that ^one ^time ^Sokka ^accidentally ^used ^an ^extra ^syllable ^in ^that ^Haiku ^Battle ^in ^Ba ^Sing ^Se? ^That ^was ^a ^Sokka ^Haiku ^and ^you ^just ^made ^one.
+80. You have no idea what's coming, that's why there's pill testing
+81. How is that what it’s like?
+82. Horrendous false equivalence. Helicopter pilots don't jump out of helicopters for fun
+83. Youth crime is about to skyrocket when possession of a bit of weed makes you a criminal
+84. Right. That's why I think we shouldn't help people who were in a car crash. After all, it was their choice to drive. We should also not help people give birth, it was their choice to get pregnant. Actually, what if we didn't help anyone ever? That would make our taxes so cheap!
+85. Yes, they do. They’re teenagers, who have been making stupid impulsive decisions since before the beginning of recorded human history. Most people, except for the most extreme of right-wing ideologues, regard it as a good thing to try and mitigate the worst consequences of teenagers making those decisions. Unfortunately those extreme right-wing ideologues get quite a lot of airtime.
+86. Which is why its great to have services that allow people to make informed decisions instead of relying on guesswork
+87. Teenagers don't make good choices because their brains aren't developed. Risk taking is also hardwired biologically. It's a government's responsibility to protect its constituents from themselves.
+88. Those kids still have parents who would prefer that their child’s youthful idiot phase didn’t end in their death, mate.
+89. Why should you/your kids pay with their life for one bad choice. In the Americas, [Naloxone](https://nida.nih.gov/publications/drugfacts/naloxone) is being stored behind the bar in a lot of nightclubs, & can be administerd as a nasal spray as an antidote for OD on opioids, Examples of such include heroin, fentanyl, oxycodone (OxyContin^(®)), hydrocodone (Vicodin^(®)), codeine, and morphine. One niteclub owner was saying he looks at it the same way he looks at his fire extinguishers. A MUST have & hopes he never has to use it.
+90. Trouble is a percentage of people ain't voting for policy, it's that the current mobs been in too long, they not doing enough (but can't name anything the who they'd vote for would do), or the premier smiles/giggles...if only voting meant people actually paid attention we'd probally not be in this mess.
+91. If the LNP were clear about what they were actually going to do, they’d never get elected. They have no real options except lying.
+92. They did
+93. I'm certain they are, alcohol is absolutely a recreational drug.
+94. And then you could have a second rally - and they wouldn't fucking care
+95. Yes absolutely spot on. Given the high cost of cocaine, one can only conclude that the upper income bracket of society is the consumer segment. Cocaine consumption in Australia is massive, it is also relatively less dangerous than a lot of the new synthetic drugs. Although when you discover how cocaine is derived from the coca leaf you wonder why one would. I don’t understand why society / Government would not invest in pill testing. If someone bothered to buy an unregulated drug, the intent to consume is already made up. At least we can ensure they can get an appraisal of what they are about to ingest and make an informed choice. It would certainly save an ambulance, ER, hospital bed and police time. Let alone, a foolish mistake might not cost a live of someone that can positively contribute to society once they have grown up.
+96. Good bot
+97. After what they’ve done to me, I don’t care about the human race.
+98. political suicide, people that vote LNP are generally against abortion rights
+99. Asking helicopter pilots to wear parachutes seems like a sensible safety measure. However, in the context of a helicopter, parachutes offer a false sense of security because ejecting from a helicopter is incredibly dangerous due to the risk of being caught in the blades. Similarly, pill testing services provide drug users with a sense of safety by identifying harmful substances in their drugs. This can create a false reality where users feel more protected from the dangers of drug use. Just like the parachute might give pilots a false hope of safety in an emergency, pill testing might give users and their loved ones a comforting but ultimately misleading sense of security. The reality is that both measures—parachutes for helicopter pilots and pill testing for drug users—can only offer limited protection. They can’t eliminate the inherent risks entirely, and relying on them might give a false assurance that could lead to dangerous outcomes if the situation goes wrong
+100. The core of the analogy was to highlight the potential false sense of security both parachutes for helicopter pilots and pill testing for drug users might create.
+101. Burned by statistics of their own doing.
+102. I'm curious how they'll frame this, actually. They promised that the number of *victims* would fall, not the number of crimes. So now they either have to identify the victims of drug possession crimes and add them to their statistics, or admit that it is indeed a victimless crime. If they want to stand by their slogan that "drug use harms all of us", well then the number of victims of crime just jumped up to five and a half million. Time to resign like you promised, you snivelling fuckwad!
+103. Or don't tuch the stuff at all
+104. Your comment completely sums up the difference in thinking between the left (and to a slightly lesser degree the right) and libertarians. The left believes that people can't be trusted to know what's in their best interests and need to be protected (which usually results in being controlled). Libertarians believe they can choose what is in their best interests and want freedom, not protection.
+105. The media also have some responsibility here. I guess when you actually tell people clearly what they believe and whether their policies actually work it sounds too partisan/biased or something.
+106. I’m just trying to understand what that has to do with old mates analogy tho
+107. Objectively false statement. Almost all Australians are pro life and half vote LNP. This is such a nothing issue in this country and in your mind it is the only issue people vote for. Ridiculous.
+108. Why are you posting responses from ChatGPT?
+109. The Russian kamov series helicopters have ejection seats/parachutes Still a pretty below average analogy
+110. That's still not even a remotely good comparison lol
+111. Welp, you know what to do. We got to get those numbers up!
+112. > 'm curious how they'll frame this, actually. 30,000 pot deviants off the street, making your community safer. Joking aside, they'll say 'arrest rates up'.
+113. But since we reliably know that a significant percentage of them will touch the stuff, it’s better to provide some safeguards to reduce harm than not. I hope my children don’t take drugs, but if they do then I hope pill testing is available to them to reduce the risk. Isn’t that reasonable?
+114. People are gonna do drugs. You will not end drug use by moralising about personal fault. Far more useful to actually help people know what’s going in their bodies and provide information that may result in them changing their minds.
+115. room temp iq

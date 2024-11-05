@@ -1,0 +1,159 @@
+Your job is to analye a series of Reddit Comments are drawn from sbumissions related to the 2024 Queensland State Election. The comments are drawn from a collection of comments before, during and after the election itself on the 26th of October. The parties that sought election were the Australian Labor Party (ALP), the Liberal National Party (LNP), the Queensland Greens (Greens), One Nation and Katter's Australian Party. The LNP prevailed in the election, with David Crisafulli becoming the new Premier of Queensland. 
+We have identified several key issues that the major parties campaigned on during the 2024 Queensland State Election: Youth Crime (YC), Cost of Living (COL), Health (H), Energy and Infrastructure (EI), and Abortion Laws (AL). Below is a summary of each party's position on these issues:
+Youth Crime (YC):
+- LNP: Advocated for stricter penalties for young offenders, including the 'Adult Crime, Adult Time' policy, proposing that serious offenses committed by youths be met with adult sentencing. 
+- Labor: Focused on rehabilitation and prevention programs, aiming to address the root causes of youth crime through community engagement and support services.
+
+Cost of Living (COL):
+- LNP: Proposed measures such as abolishing stamp duty on new builds for first home buyers and re-establishing the productivity commission to review building industry regulations, aiming to alleviate housing costs. 
+- Labor: Introduced initiatives like 50-cent public transport fares, a $1,000 energy rebate, and free lunches for state primary school students to ease cost-of-living pressures.
+
+Health (H):
+- LNP: Committed $590 million to an 'Easier Access to Health Services Plan,' aiming to reduce ambulance ramping and hire additional healthcare workers. 
+- Labor: Focused on maintaining and expanding healthcare services, addressing hospital capacity issues, and investing in new health infrastructure.
+
+Energy and Infrastructure (EI):
+- LNP: Criticized Labor's Pioneer-Burdekin Pumped Hydro Project as financially unviable and canceled it upon taking office, opting to explore smaller-scale hydro projects instead. 
+- Labor: Proposed large-scale renewable energy projects, including the Pioneer-Burdekin Pumped Hydro Project, to transition towards 80% renewable energy by 2035.
+
+Abortion Laws (AL):
+- LNP: Stated there would be 'no changes' to abortion laws under their government, maintaining the status quo established in 2018. 
+- Labor Party: Supported the existing abortion laws and opposed any attempts to repeal or amend them. Asserts that LNP intend to restrict access to abortion services based on the views of some of their members.
+
+Analyze Reddit comments and code them based on the positions they support or oppose concerning these issues. You will output JSON, so valid values are strings or null. Use the following codes: YC, COL, H, EI, AL. If a comment's position is unclear or does not pertain to these issues, output null.
+
+Secondly identify which party the comment appears to support. Use the party code ALP, LNP, Greens, ON, KAP if this can be determined, otherwise a null value if undetermined.
+
+Output JSON as a list of objects where each object has an "id" (integer) property of the comment id, an "issue" property set to the issue code string (or null value), and a "party" property set to the party code string or null value. Null means JSON null, not a string. Values MUST be quoted, e.g. {"party": "LNP"} unless they are null, e.g. {"party": null}. Comments follow:
+
+1. > zero polices If your head is buried in the sand maybe. I haven't even particularly been keeping up with either campaign in the US but even I can see she has policies, some announced within the last 2 days or so with the minimum wage stuff.
+2. I mean if Kamala has zero policies then what does Trump have? He's not put forward a viable or intelligent policy initiative since he entered US politics
+3. Like how Trump is Elon and Putin’s puppet?
+4. Russian cooker says what?
+5. [https://www.macrobusiness.com.au/2024/09/australian-property-the-worlds-money-laundering-honeypot/](https://www.macrobusiness.com.au/2024/09/australian-property-the-worlds-money-laundering-honeypot/)
+6. And Australia is an even bigger money laundering racket.
+7. I didn't think this would be a thing, but I saw a lady pretend to tap yesterday. It was the act of tapping with an empty hand that caught my attention. Had she just walked, I probably wouldn't have noticed, thinking maybe she had a paper ticket.
+8. They write in the name, a box, and number it. Problem is, a name on a ballot paper other than a candidates name renders it informal. Doesn't count for anyone.
+9. Yeah there's absolutely a difference between working an actual shift in fast food with the chaos and exhaustion that involves and doing a photoshoot at a closed fast food place where you're guided and coddled and everyone tells you you're the best worker they've ever had and no one cooks chips like you.
+10. Or just draw a little pencil moustache over his lip
+11. When I refused the 💉because I looked up what the side effects read in the vaccine insert I saved my health and probably my life. Turbo cancers and sudden heart attacks in even young people are brand new post Vax side effects. So I'll stick to what I know and what millions globally have opened their eyes to. What others choose is up to them.
+12. Or maybe if you don't agree with my findings you can search for your own answers. I'm just saying .
+13. Nah, not a bot. Just a useful idiot.
+14. Bush...behind Trump in so many ways. It all goes back to Bush. Bush's "yes people" on the Supreme Court. Bush SILENT on Trump...
+15. At the same time I wear a parody maga hat “Make Aliens Greet Again” at the beach and rabid morons come up to me telling me I can’t wear that hat and I’m a fascist I greatly question these people’s intelligence and literacy
+16. Hitler had a fair amount of support in the UK back then also.
+17. Yes. I think there is still a slight difference between the liberals and the Nationals in an ideological sense currently, but it is fading fast. I would say that Scott Morrison or Malcolm Turnbull were still more of a Howard era style liberal compared to where Peter Dutton is leading that party now. I do think One Nation, Palmer United and KAP would join a National party led coalition, but wouldn't if the Liberals were still involved.
+18. Gonna be egg on your face once fluffypipe reveals that they're actually a seppo billionaire/oil tycoon.
+19. Things in Australia were cheaper while he was in office, this rise in inflation is because of the democrat war machine based on hatred. He is the first US president in 70 years that didn't start a new war. The inflation we are experiencing in Australia is directly related to how well they do, if the US does well, we will do well. It is widely reported that over 150 million people outside the US escaped poverty while he was in power. All this stuff is worth the mean tweets. The left is completely weak
+20. While FEMA left the hurricane hit people of Ashville with no help(the money went to Ukriane ) Trump sent supplies and Elon set up free Starlink access for communications. Trump has personally helped many people along the way including Pro Boxer Michael Austin. Look up his story. He recently spent a day working at McDonalds and talking to all the staff while cooking and serving food. He was in a shop to buy something and he handed over $100 to a woman paying for her groceries at another till. When he was president he brought in many executive orders which are now in place to safeguard the public's safety and free speech. He flew to every country in the world when he was president and spoke with military leaders. As anyone knows the government is really run by civil servants, the actual politicians do very little and we don't need them, the military leaders serve the public. Trump spoke to them all to ensure that when devolution of government come into force the people will be protected by the military. Several places in US have kicked out their local government and changed the locks. This will continue until everyone realises we are free to make our own local community decisions. People need to use their brains and search for the answers themselves. Why do you think whistle-blowers get silenced? Why did Assange get imprisoned? Why did Snowden get exiled to Russia?
+21. Yeah you're right then there's the people that should know better but refuse to vote for a democrat. There is some misogynistic aspects I think too. The US is still pretty backwards.
+22. It doesn't matter though....due to their electoral college, they have much more clout and win their states. They don't even have fair representation. Montana has a Rep for every 515,000 residents. Using 1 Rep for every 515,000 residents....leaves BLUE California 20 something Reps short !
+23. Trumpism completely bypasses the logical thought process. I'm not joking.
+24. You just summed it up so perfectly, my god! It makes so much sense too. My older sister is a Trumpy fan, and I couldn't figure out why. But yeah, she's been going on rants about how much she thinks certain LGBTQ people are groomers/pedophiles, being rabidly anti-woke, anti-feminist, anti-vegan/environmentalists, anti-immigrants etc. I knew right-wing media was the culprit, but I never thought to sum it up like you did. She said that the left 'betrayed her' during the pandemic because she's anti-vax. So basically, she switched political sides out of spite. That's so pathetic too. Trump pisses of 'The Libs (TM)' so that means this 78 year old, dipshit, mentally ailing, narcissistic, sex offending, Russian shill, convicted felon, dictator gonna-be who's going to tank the economy and take so many people's rights away; should have the reins to a powerful country! I've never been so disappointed in people.
+25. Trump is Organised Crime...therefore anyone loving Trump is into fraud and felon activities. It is why he has Libertarians supporting him. NO GOVT, no LAWS. It's all about abolishing the Rule of Law so Organised Crime and the uber rich can do what they want and the little person has no leg to stand on. He is using dumb Conservative racism and religious zealot tendencies (using trigger words to incite cult response) to get himself elected but he doesn't give a flying fock about them. It's all about Organised Crime.
+26. It's this and because they want to feel part of something.
+27. This....\^\^\^\^\^. They actually don't think much further than their racism, their religion and their misognyy.
+28. This…
+29. Trump isn’t a conservative. Romney, Christie, Cheney. These are real conservative Republicans. I’m not a loony left. I was hoping Romney beat Obama. But Trump is no Romney.
+30. Why do you like Trump then?
+31. I’m interested in what they think. You can DM me if you want.
+32. It's the bloke who's also got something like 40+ felonies
+33. We have a live one here boys.
+34. Being a never-Trumper is a pretty low bar for basic decency. You deserve congratulations for that just as much as for, I dunno, not stealing money from a beggar on the street.
+35. You sound like school teachers when the bullied kid fights back after 5 years of abuse.
+36. Bollocks...Conservatives have been at Liberals for years because (in the USA) they can't get past the civil war loss. Poor darlings can't cope with Progressive thought patterns and acceptance of minorities. "Insulting conservatives" ? Don't make me laugh. How can you even go low enough to insult a Conservative...they are worthy of every factual statement about them.
+37. Spoke to a one nation vollie at a polling booth the other day and she was adamant that Trump was amazing and wished they had a trump like candidate in Aus. It's the extreme social conservatism and economic protectionism that they like. In a case of a Trump presidency. They think the answer to the USA getting Trump again should be us doing our own Trump politics.
+38. Exactly this. I've always been Centrist but now I'm Left ...because the Right has gone so far RIGHT. 99% of people have not changed...but the centre point has. Most of us have balanced views but now being humane is LEFTIST ?
+39. I wouldn’t say their economy is doing great when they are also suffering a cost of living crisis
+40. People care about jobs to feed their families. Tariffs help protect American industry (such as the car industry from Chinese BYU factories in Mexico). Unemployment is increasing and we are likely to enter a recession next year based on the layoffs which are continuing. https://fred.stlouisfed.org/series/UNRATE/
+41. [deleted]
+42. Who’s invading us? No one dude… idea troops landing in our shore for a ground invasion is nonsense. Wars these days are about expensive toys which Australia has
+43. I think you need to research the war in Russia a little bit more and realise why the price of fuel is the way it is … Wars absolutely equal inflation
+44. Oh look a gates puppet
+45. Lol, l guess what Channel 9 says is so true
+46. The fake tap is crazy, my move is using my MyWay and pretending to be a confused tourist
+47. Yeah I’m not sure why they’d think it would work
+48. Considering their actual vote is highly likely to be have been One Nation or LNP or Family First, I call that a win.
+49. And everyone claps at every move you do (somewhat) correctly lol
+50. OH and confirmation bias too you’re hitting all of the points!
+51. No one wants to engage with you, they just don't want to be around you. Think about if you'd rather be "right" or alone.
+52. some most would rather parrot the narrative of the corporate media, pacs and super pacs
+53. Lol true but tomato tomatoe at this point.
+54. So you were walking around with a hat styled to look like a MAGA hat, and then got upset because people thought you were wearing a MAGA hat?
+55. ..and still does.
+56. Dutton is a MAGAt and so was Morrison. Turnbull was the last centrist standing. I think the Teals are the slight different between Libs and Nationals. They are the breakaway group from a party gone AWOL up the extremism path. The current Libs will do everything GOP is up to. Dutton harping on about nuclear...when the only countries pumping them out is China and Russia (says a lot). Not in their country either.
+57. That was pre-covid where everything was cheaper worldwide 🤦 purely coincidental. It wouldn't have mattered if Mickey mouse was in office back then, prices would've been the same. "Because of the democrat war machine". Maybe a lesson in basic economics is required; explaing what causes inflation... Re-read what you wrote, it isn't making much sense.
+58. Trump pulled troops out of Afghanistan and let the Taliban take over. Also, Joe Biden is not "the left", he's a centrist at best
+59. "the money went to Ukraine" is absolutely not how a country's budget works lol. Some of those things are true - do any of those affect Australia in any way?
+60. (citation required)
+61. The alt-right pipeline in full-effect folks🤦‍♂️
+62. Are you trolling? If not, I'm astonished you know how to write (albeit badly)
+63. There is a massive misogynistic aspect...MASSIVE !
+64. Yay for your sister - convid was a giant SCAM.
+65. Yes, he is using cultism to solidify his base...and it was easy to do. America is already a religious cult so fine tuning them was easy.
+66. He's a Libertarian using Conservative drawcard and religious cult. He's also a rapist , a traitor, a fraud and a felon. Well done you...your morals are in your ass.
+67. I wasn’t saying that doesn’t define Trump, I was saying that defines many US politicians -_- It was a joke.
+68. You seem to have a hate filled stereotype of what conservatives are. This is the problem with labels like left/right and progressive/conservative. Each side bundles all these preconceived images upon the entire group. Try not being so filled with hate.
+69. How exactly?
+70. lol not all Conservatives are Confederates. You talk about facts. How about the fact that it was the Democratic Party who were actually the Confederates during the civil war. > Before the American Civil War, the party generally supported slavery or insisted it be left to the states. After the war until the 1940s, the party opposed civil rights reforms in order to retain the support of Southern white voters. and > The crisis for the Democratic Party came in the late 1850s as Democrats increasingly rejected national policies demanded by the Southern Democrats. The demands were to support slavery outside the South. and > During the Civil War, Northern Democrats divided into two factions: the War Democrats, who supported the military policies of Republican President Lincoln; and the Copperheads, who strongly opposed them. In the South party politics ended in the Confederacy. https://en.m.wikipedia.org/wiki/History_of_the_Democratic_Party_(United_States) 🤦‍♂️
+71. I don't suppose you asked her how she could support such a morally bereft, vile pig regardless of his politics? I understand that you probably wanted to get out of there.
+72. It’s happening on the other side too. The hard left is becoming more and more extreme. The world needs more moderates.
+73. > US Unemployment Rate is at 4.10%, compared to 4.20% last month and 3.80% last year. This is lower than the long term average of 5.69%. https://ycharts.com/indicators/us_unemployment_rate#:~:text=Basic%20Info,long%20term%20average%20of%205.69%25.
+74. You do know Australia has had conscription during times of war too, right?
+75. Now you’re just contradicting yourself.
+76. So you moral compass is “won’t happen to us to I don’t care”. Makes sense. BTW you’re dreaming if you think we can’t be invaded. It wouldn’t be a traditional invasion like Ukraine. It would be a naval blockade of shipping routes slowly bringing us to our knees. Before an eventual invasion or most likely an Australian surrender if we didn’t have US support.
+77. I know that the war in Russia is absolutely spiking fuel and gas prices. My point is that the war in Russia is not Ukraine or the USA's fault and the USA should absolutely not just let Ukraine fall.
+78. I assume you mean Bill Gates? Anti-vacer I assume?
+79. Y’all have fake taps? People I see who don’t tap just walk straight past it
+80. There's a concept in cooker land on "vote nullification" derived from very American ideas of somehow usurping the result. Here in the free world, they're just plain old informal. As in, the votes are counted as being issued and returned without a voting intention licitly marked. Writing in "Donald Trump" isn't specifically recorded. Neither is "Mickey Mouse" or "no candidate reflects my views". The what of the informal vote isn't recorded. Just that it's informal. The idea is is enough votes are returned then the result is somehow invalid. My understanding of election law is incomplete, but, that solution is I believe not valid.
+81. Assessing things based on whether they would work or not, or even *have* worked or not, is outside the scope of a Trumper.
+82. I mean if you can’t read and see that it’s a hat designed to mock the maga hat that’s on you Being able to read and understand a joke requires only minimal intelligence
+83. Morrison was a bit plain and had nothing really going for him apart from his religion, but I still think he was more traditional. He was just a guy who would have been far better suited as a Governor than as P.M. based on his experience. There is a reason both federal Coalition leaders come from Queensland, because traditionally it was a National's stronghold. Campbell Newman was technically a liberal pre LNP, but before that the last Liberal to win an election in Queensland was in 1911. If the Liberals stay in the coalition, they become nothing more than a brand name. If they leave, they probably will probably be able to join with the Teals up and become a strong third party independent of the Nationalist b/s.
+84. *"[ERROR] The Citation requested does not exist"*
+85. Yeah it's sad.. I watched a few woman saying we can't have a woman in the white house . Woman have periods and they can start wars because they are too emotional... Imagine being a woman and misogynistic? It blows my mind. Sad state the US is in.. Maga is like Isis for white people.
+86. What? Did you mean to respond to another comment? Nothing I said was in support of Trump.
+87. It’s possible to look at what people do, and listen/read what they say, as a tool of assessing their character. It’s possible they could be “pretending” for some reason but frankly I don’t give a shit. Advocating for, and enacting oppression of women, racial minorities, renters, employees etc: evil. I don’t really care why they think they’re “correct” to do that and I wouldn’t believe their self-serving lies anyway. What did they *actually do*?
+88. Usual Conservative retort....but so self absorbed you cannot see that it is Conservatives who hate homosexuals, trans, poor people, people who need monetary help. In fact Conservatives hate everyone...and whinge about everything.
+89. Oh god..the old Democrats were the Confederates during the civil war. You know that was just a name, right ? The Republican name didn't even exist. Correct...they broke away and formed the new party leaving the 'democrats' to become Republicans who wanted their slaves. Quite like the Teals and the Liberal Party. You know others are up on history...but not cherry picked history, right ?
+90. It was a smile and wave situation
+91. You are correct in your statements. Looking at the directional trends will add additional insight. Look at what happens to the unemployment rate just before a recession. And The number of people unemployed for over 27 weeks is increasing in the same manner it has in all prior recessions: https://fred.stlouisfed.org/series/UEMP27OV 27 weeks is significant as it’s the time period of when unemployment runs out.
+92. Not to mention the so called "Land of the Free" has also used conscription before, including in wars where the security of the US itself was not at threat, like in Vietnam.
+93. [deleted]
+94. Which part … you said we are getting invaded I’m telling you we are not.
+95. Our best line of defense is our coast line dude… you don’t think the RAF wouldn’t take out the boats with thousands of troops on it or shoot down the incoming jets with paratroopers ??
+96. In my head if I get pulled up if I tried to tap SOMETHING I have a card to play
+97. It most certainly is...and I've said that for years. Ruffled the religious zealots feathers on many an occasion. It's the Conservative way...they hate people who progress , especially career women. They want to be pregnant and controlled so they don't show their lack of intelligence.
+98. You’re stereotyping again. I suggest following The Bulwark to expand your horizons. Tim Miller is an ex-Republican campaign manager for presidential candidates. He’s married to a man. Has a child. He supports the rights of undocumented immigrants. He hates MAGA. Sarah Longwell is a Republican. She is married to a women. She has a child. She did a town hall with Harris. She hates MAGA.
+99. Ok edge lord.
+100. I’ve not said anything. You said inflation is due to wars. We’ve had rampant inflation here yet we’re not at war. Hence the contradiction.
+101. You clearly don’t understand how small our Airforce and Navy is without US support🤣
+102. Cool. Two people with some level of basic common sense, hooray. You’re not getting it. Not being a Trumper is the sociopolitical equivalent of not sticking forks up your nose as dinner etiquette. It means they’re not a total blathering moron. It doesn’t make a person *smart* or *decent*. You can be six kinds of idiot and/or asshole without being a Trumper at the same time. I don’t *like* conservatives, I don’t respect them, and I don’t agree with their “philosophy” that amounts to nothing more than advantaging their in-group and disadvantaging the out-group for no reason whatsoever beyond “I wanna”. I don’t believe at this late stage that they’ve come up with anything more novel and insightful than that. If they’re conservatives but not Trumpers, goody-gum-drops. Hooray. *I am not obligated to take the rest of their crap seriously.*
+103. Maga...extra horrible... Conservatives....the START of MAGA. MAGA didn't pop up out of nowhere...they are Conservatives. There were many disgraceful Conservatives before Trump and MAGA. All deplorable human beings. Mitch McConnel, considered 'a conservative' now but only because he doesn't quite want to lynch minorities on the street.
+104. The inflation is happening because of energy security. Australia does not refine its own oil. Russia is a huge exporter of oil which the democrats are trying to defeat with sanctions
+105. Yeah it’s not huge but the alliance is an unbreakable bond.. You clearly don’t understand how wars are fought in the 21st century - but that’s ok. Agree to disagree and let’s move on
+106. I applaud your comment. So true... Conservatives ...the ass end of morality...
+107. Sad you have so much hate that you feel the need to stereotype a huge segment of the population and assume you know each of their “philosophy” based purely on a preconceived image of them. I hope we as a society can get past this extreme tribalism both sides are developing.
+108. Of course there were horrible conservatives before MAGA like the Tea Partiers wanting to take away Obama Care. But you again, many doesn’t equal all.
+109. > the alliance is an unbreakable bond I’m sure Ukraine thought the same too. But it still comes down to you don’t care about how bad Trump’s Ukraine policy is simply because you don’t think it can happen to us. Real conservatives want to protect democracies around the world.
+110. I do too. To do so, we would need to get rid of conservatism. Conservatism plus time and power equals fascism. People fascists hate: Academics, Anarchists, Blacks, Communists, Disabled, Ethnic Minorities, Feminists, Homosexuals, Intellectuals (that’s me!), Jews, Muslims, Socialists (ooh I’m in there too!), Transgender, Union Members. People antifascists hate: Fascists.
+111. Preconceived ? The PROVE every point by themselves. There is no preconception. Believe them when they clearly show what they are.
+112. Actually it does include all if they don't step away from voting "Party above Policy" , which is a Conservative law. Oh, I don't like Hitler but I will vote for his party.....get it ?
+113. If you’re so blinded that you think all conservatives == fascists then there’s really no point continuing this discussion. Have a good one.
+114. Again with the stereotyping. You know there was a time when progressives were against stereotyping.
+115. You didn’t even read my comment. You just *assumed* that was what I said. I said, conservatism turns into fascism given enough time and enough power to accumulate. Which is historically how it has always gone. Do all conservatives go along with it? Of course not. *But most do.* Because ultimately conservatism is nothing more than “the law should protect but not bind me and mine, and bind but not protect others”.
+116. Do you not understand what I wrote ? "Believe them when they clearly show what they are....."
+117. Who is against higher coal royalties? More taxes for them means more services for us! (or lower personal taxes, both good)
+118. It's that 20% or so that say 'no difference' that's the killer
+119. Show us your costings LNP!
+120. Interesting that 59% of KAP voters support funding for abortion services and pregnancy termination care.
+121. What's the link to where you got these, pretty hard to read.
+122. These read well. Though there's nothing about crime, nor the credit rating consequence of paying for these. People now just want a change of government.
+123. Giving out free money is always popular!
+124. It's why LNP has gotten over 4 million in donations to slander the labour party. They have been promised tax breaks which will equal more debt for qld
+125. [deleted]
+126. https://australiainstitute.org.au/report/polling-queensland-labor-policies/
+127. It's not free money, it's *our* money. It's taking *our* cut of *our* resources and giving it back to society. It's taking the cream off the top of the insane profits of mining companies and feeding the kid who's Mum didn't have enough to buy lunches that week, or cutting public transport costs so Grandma can afford to go to her appointments *and* eat a healthy diet for her heart issues. But by all means QLD, go ahead and vote back in a Government which has proven time and time again that they don't care about that. They don't care about you unless something is in it for them.
+128. Qld isn't in debt.... Without the mining royalties, there will be debt in the future.
+129. Are we not already seeing it in Queensland with the policies that have already been rolled in by Labor being funded by coal royalties?
+130. What? This isn't trickle down economics
+131. Yup, it’s literally why these COL measures and consequently Miles’ popularity have surged. In 2012 Campbell Newman immediately implemented a ten year moratorium on coal royalties. In 2022 it expired, and the Labor state government reformed the tax legislation to increase coal royalties leading to over $15 Billion in revenue directly funding COL measures. The pragmatic effect on individuals day to day living is likely why the attack ads by the QLD Resources Council haven’t worked.

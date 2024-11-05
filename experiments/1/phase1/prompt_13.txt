@@ -1,0 +1,150 @@
+Your job is to analye a series of Reddit Comments are drawn from sbumissions related to the 2024 Queensland State Election. The comments are drawn from a collection of comments before, during and after the election itself on the 26th of October. The parties that sought election were the Australian Labor Party (ALP), the Liberal National Party (LNP), the Queensland Greens (Greens), One Nation and Katter's Australian Party. The LNP prevailed in the election, with David Crisafulli becoming the new Premier of Queensland. 
+We have identified several key issues that the major parties campaigned on during the 2024 Queensland State Election: Youth Crime (YC), Cost of Living (COL), Health (H), Energy and Infrastructure (EI), and Abortion Laws (AL). Below is a summary of each party's position on these issues:
+Youth Crime (YC):
+- LNP: Advocated for stricter penalties for young offenders, including the 'Adult Crime, Adult Time' policy, proposing that serious offenses committed by youths be met with adult sentencing. 
+- Labor: Focused on rehabilitation and prevention programs, aiming to address the root causes of youth crime through community engagement and support services.
+
+Cost of Living (COL):
+- LNP: Proposed measures such as abolishing stamp duty on new builds for first home buyers and re-establishing the productivity commission to review building industry regulations, aiming to alleviate housing costs. 
+- Labor: Introduced initiatives like 50-cent public transport fares, a $1,000 energy rebate, and free lunches for state primary school students to ease cost-of-living pressures.
+
+Health (H):
+- LNP: Committed $590 million to an 'Easier Access to Health Services Plan,' aiming to reduce ambulance ramping and hire additional healthcare workers. 
+- Labor: Focused on maintaining and expanding healthcare services, addressing hospital capacity issues, and investing in new health infrastructure.
+
+Energy and Infrastructure (EI):
+- LNP: Criticized Labor's Pioneer-Burdekin Pumped Hydro Project as financially unviable and canceled it upon taking office, opting to explore smaller-scale hydro projects instead. 
+- Labor: Proposed large-scale renewable energy projects, including the Pioneer-Burdekin Pumped Hydro Project, to transition towards 80% renewable energy by 2035.
+
+Abortion Laws (AL):
+- LNP: Stated there would be 'no changes' to abortion laws under their government, maintaining the status quo established in 2018. 
+- Labor Party: Supported the existing abortion laws and opposed any attempts to repeal or amend them. Asserts that LNP intend to restrict access to abortion services based on the views of some of their members.
+
+Analyze Reddit comments and code them based on the positions they support or oppose concerning these issues. You will output JSON, so valid values are strings or null. Use the following codes: YC, COL, H, EI, AL. If a comment's position is unclear or does not pertain to these issues, output null.
+
+Secondly identify which party the comment appears to support. Use the party code ALP, LNP, Greens, ON, KAP if this can be determined, otherwise a null value if undetermined.
+
+Output JSON as a list of objects where each object has an "id" (integer) property of the comment id, an "issue" property set to the issue code string (or null value), and a "party" property set to the party code string or null value. Null means JSON null, not a string. Values MUST be quoted, e.g. {"party": "LNP"} unless they are null, e.g. {"party": null}. Comments follow:
+
+1. They're the only 24hr a day new channel in Australia, also the largest news corporation.
+2. You would be very surprised. Many people in regional areas will only watch Sky News and will only listen to conservative shock jocks.
+3. Where are these left wing news outlets? From what I can see, it's mostly Murdoch right wing everywhere.
+4. >There are just as many left wing as right wing news outlets No there isn't. https://rsf.org/en/country/australia
+5. on the contrary, the only constant is self-interest.
+6. A lot of tin foil hats being worn in these subs after seeing what’s been written here over the last 24 plus hours.
+7. Sky News is not just TV. It is very aggressively pushed through YouTube and Google and Microsoft news feeds. It is not unusual for After Dark opinion headlines being pushed under the Sky News banner giving it an undeserved air of legitimacy.
+8. And QLD is the only state in the country where roughly 50% of people live in regional and remote areas.
+9. Not in Queensland, which is all that matters
+10. youd be amazed that they probably feel the same about you...but they probably respect your right to an opinion more than you do theirs.
+11. You might need to understand QLD’s demographics a little better. QLD is the only state where more people live outside of the capital city than inside.
+12. The area that I moved to last year has one bus in the morning and one back in the evening to get people to/from the train to Brisbane. If you miss the bus you're SOL. Nobody here could give a shit about it. I voted Labor (Mum was a career teacher, Dad a vet) but I understand why the Liberal Party was more popular in my region.
+13. yep, close regional hospital wards but subsidise Brisbane commuters, seriously what did they expect...
+14. I lived in Mount Isa for 6 months. There were no school buses, let alone public buses in the town. The only school bus was for the special school. Tbf most people walked or drove but good luck if you have a disability or struggle to walk in the blistering heat.
+15. Someone who lives on hope Island isn't going to build rural buses 🙃
+16. No awards left to give, please accept my faux 🏆🏆🏆
+17. I don't understand why Labour voters keep bringing this 50c fare up as a reason that life is going to suck under Liberal. I'm unsupportive of state Labour because of the negative impact their policies have caused to my life. The support of sexist agendas against males, their pressure on the police to follow a sexist agenda, the Domestic Violence laws that have catastrophic impact for men which are pushed onto the police and that there are no consequences for women who fabricate accusations. I support family values, read into that what you will. I'm worried about the momentum being given to minority rights "always was, always will be" is now a direct statement about taking my freedom away. I respect other people's rights to make their own decisions but draw the line at the point that those decisions start to require me to change. The state Labour party in Queensland has been going hard at legislation to become increasingly intrusive in our lives and control people.
+18. It's not just the regions. It's the outer suburbs that had some huge swings. They're the places where people are struggling with their mortgages or struggling to find a rental after having the rents jacked up. Cheaper fares may be all well and good, but it wasn't really helping when your home isn't secure.
+19. I looked at the ABC this morning and I was flabbergasted at some of the swings even in seats the ALP managed to retain.
+20. Correct, I live in Miles's electorate and almost *everybody* has to drive to PT. The local Council refuses to bus beyond the main drag and QT does SFA about it. Traffic was the worst I've seen in 25 years until the 50c fare came in
+21. you are right, and I have no idea why you arent being downvoted :-)
+22. Do you mean “the enmity toward Labour”?
+23. If that was the case then the scaremongering on abortion would have worked better
+24. This is a take so out of touch it’s incredible. They’re not “wallowing” or “blaming the media”. They’re acknowledging what has become a massive issue for progressive parties all over the world, but particularly in territories dominated by Murdoch press. People are being tricked, en masse, into voting against their own best interests by the only media that is available to them. In many cases, they have better policies. I’m many cases, they are doing a pretty good job of getting the message out. And theirs still losing elections. It’s a massive issue, and they’re having trouble overcoming it. I honestly can’t see how they CAN overcome it.
+25. > Wallowing in their sorrows is not the way to handle this surely the fact that regional media is openly hostile to labor, regardless of their policies, is worth consideration and discussion?
+26. ahh Whitlam..."Its time for a change"...
+27. Weird millennia spanning conspiracy theory nonsense. Great way to prove my point, lol. Go outside and breath some fresh air. The world is not ending because the LNP are back in power in qld. You will be just fine my paranoid little scamp. For the record, I didn’t vote for the LNP but I’m also not about to have a psychotic break due to them winning.
+28. You’re being downvoted because your comment is nonsensical as a response to theirs. Don’t interpret the downvotes as having anything to do with Aboriginal people or your position. You need to re-read their comment, because yours has nothing to do with it.
+29. I get you, but that counts as appealing to him. It satisfies an urge.
+30. Do both.
+31. >OP is expressing concern at the influence of media in regional areas Fully understanding their point. There is nothing stopping the leftists from creating their own TV or internet streaming channels and getting their word out. Find some rich benefactors or raise money. And they already have the ABC. Media influence works both ways.
+32. >That's how we got Pauline Hanson. No. That was the fluke of all flukes. [https://en.wikipedia.org/wiki/Pauline\_Hanson](https://en.wikipedia.org/wiki/Pauline_Hanson) >She was disendorsed shortly before the election after making contentious comments about [Aboriginal Australians](https://en.wikipedia.org/wiki/Aboriginal_Australians), but remained listed as a Liberal on the ballot paper. Hanson won the election and took her seat as an independent, before co-founding One Nation in 1997 and becoming its only MP
+33. Yep. I mean I get it if you disagree or think it was an undesirable result, that’s cool, but at the end of the day we have compulsory voting and >50% of the population determined this was the right result. If you think that many people are so clearly wrong, it might also be worth taking a look at yourself and asking whether you’re wrong, or at least why they made the decision they did.
+34. No it’s not. Democracy is intended to express “the will of the people”. It has nothing to do with right and wrong. Of course people are going to call people who have a different opinion to them wrong, that’s how opinions work.
+35. Except they did in the 2019 Federal Election and we had 3 years of a corrupt, incompetent Morrison govt. We had a chance to get rid of future negative gearing (which could have eased the current housing crisis) and tax rorts but people preferred to believe a bullshit campaign of scary lies. No forward thinking at all or learning from past behaviour. There'll be more to come from this Qld LNP govt too.
+36. No matter how we vote, the government still gets in!
+37. I know, I just don’t get it. If you want your voice to be heard and your vote to be counted, and you should, then you must extend that right to others. Sometimes your side will win, sometimes it won’t. If you carry on like a pork chop when your team loses you just look like an ill informed idiot. You can certainly imagine most of the people complaining now would be deriding the Libs supporters if they lost and were similarly whinging about the result.
+38. Huh? There is literally more media content and so called independent content available today than at any time in history.
+39. Exactly
+40. Sure, but how many people \*actually\* watch it? The Courier Mail is a different story, it's hugely powerful particularly among, of course, older people. I'd suggest that, longer-term, it's not going to be TV news streaming that influences people - it's online content, which is where Sky News is getting a foothold regardless of geography.
+41. The ABC has a 24 hour news channel with a larger audience than Sky, just without the associated press to pump it up https://www.abc.net.au/news/newschannel
+42. Have you genuinely not heard of ABC24?
+43. Sure, but that doesn't mean they have a huge viewership for Sky News. 7 and 9 are far bigger, as is the Courier Mail.
+44. Right wingers consider balanced, factual reporting "leftist" outlets rather than just "the news".
+45. What exactly do you think you were showing me there? Your opinion? Cool story. The ABC is the largest news outlet in Australia and is globally recognised as being left leaning. Just looks at the US, let alone Australia. In fact, I know a journalist who works at the ABC (who admittedly is probably more right leaning) and tells me he knows he will never progress or get promoted there because he doesn't buy into and push their agenda.
+46. I think both things can be true.
+47. It has become an entertainment opinion programme masquerading as "news". Like its American affiliate, Fox.
+48. OP is talking about federal not state election.
+49. The post is about the federal election.
+50. Yes but individual electorates are still smaller. Example: Warrego = 20000; Maiwar = 30000
+51. but the libs won’t do shit for them. it’s just a smokescreen.
+52. You support family values as long as it’s a straight white family with subservient women
+53. You sound like you worry too much.
+54. Dude just wants to beat his wife in peace.
+55. > I'm unsupportive of state Labour because of the negative impact their policies have caused to my life. The support of sexist agendas against males, their pressure on the police to follow a sexist agenda, the Domestic Violence laws that have catastrophic impact for men which are pushed onto the police and that there are no consequences for women who fabricate accusations. how has this, specifically, impacted you life? Like what's an example of this impacting you personally?
+56. Some really informative and interesting posts about how things have been on the ground in regional Queensland which, as tough as they might be for the ALP to hear, are broadly correct. And then there's this fact free, pretty hateful screed of misinformation. People don't reflexively hate alternate views being put forward but there is zero evidence of any sexist agenda against males. If you really feel that way you need to be a better person.
+57. Yeah clearly a lot of city dwellers are as culpable as regional folks. I wonder how many of them had any reason better than "time for a change". I saw some bullshit ads on Facebook run by the Australian institute for progress or something just blaming Labor for everything under the sun. I also talked to someone yesterday about the election and they admitted to voting for LNP because they were on solar and the 1000 dollar rebate for electricity was bullshit because it didn't help them...
+58. I feel like both work for the point I'm making but yes, that would probably be a better way of putting it.
+59. where exactly are these internet free places where someone is forcing the people to read a newspaper?
+60. Not if all you watch is said media.
+61. Yes, subjugation of people is a conspiracy. Good work proving my point, champ.
+62. Them: People just can't accept different views. Me: That's not true when you've forced your views onto people for millennia. We know exactly what you want. Them: It is surely a mystery what anybody is thinking.
+63. i dunno if appeal is the right word. It's like when you have a sore tooth and you keep poking at it to confirm that it's still sore. It's that, but for his emotions.
+64. Yes, 100%. The problem is that most leftists don't want a leftist voice - they want an impartial, factual voice. Last I checked, this is what the ABC is, yet you call them out as leftist. News should be news, not opinions.
+65. >Hanson won the election and took her seat as an independent, before co-founding One Nation in 1997 and becoming its only MP Thanks to who? Murdoch. Why does she even have seats? Why does Katter?
+66. Yeah, don't know if it was 50% of the pop. Only a majority of electorates That's diff to majority of pop
+67. I’m always in favour of more self-examination, but when someone you’ve never met sticks their hand in a blender, you can be forgiven for thinking they've made a mistake.
+68. interesting point. Is there an objective "right and wrong"? or is it whatever is the will of the majority?
+69. I hate those guys
+70. Regional Qld is dominated by courier Mail and local rags like the Cairns post and Townsville bully.
+71. The boomers are on Facebook. Tv news is simply a content generator to pump into the social media space for outrage, rev clicks and echo chambers.
+72. The Courier mail **is** Skynews (News corp) So is: News.com The Australian The Weekend Australian The Sunday Mail Bowen Independent Business Daily Burdekin Advocate Cairns Sun News Xtend Realestate.com.au Gold Coast Bulletin Gold Coast Sun Herbert River Express Home Hill Observer Innisfail Advocate Northern Miner Port Douglas & Mossman Gazette Tablelander – Atherton Tablelands Advertiser The Cairns Post The Noosa News The Sunshine Coast Daily Townsville Bulletin Toowoomba Chronicle Townsville Sun weekender Daily Mercury (Mackay) Albert & Logan News (Fri) Albert & Logan News (Wed) Caboolture Shire Herald Caloundra Journal City News City North News City South News Ipswich News Logan West Leader Maroochy Journal North-West News Northern Times Northside Chronicle Pine Rivers Press/North Lakes Times Redcliffe and Bayside Herald South-East Advertiser South-West News/Springfield News Southern Star The Noosa Journal weekender Westside News Wynnum Herald Weekender Essential Sunshine Coast Soooo do you still think Skynews (newscorp) has not got much reach in QLD? And channel 9 has had ex LNP MPs on their board for years lol
+73. Aren’t 9 & the Courier Mail part of the Murdoch Press ?
+74. Funny, when that balanced news is critical of the left suddenly it's because of the right and is no longer to be trusted.
+75. To tha end, left wingers consider anything they agree with "factual" and everything they don't, "Right wing". To not accept there is left leaning news sources is extremely ignorant and calls into question your ability to provide an even slightly balanced view of the world/country.
+76. You said there are as many left wing media as right. There isn't. If you can't read the chart there then that's on you
+77. My apologies
+78. The "How?" is about Queensland though.
+79. Neither did Labor, and they had 26 of the last 30 years to do it. If you've suddenly got money for reduced rego, 50c fares, electricity, more police helicopters and school lunches then why have we been bled dry up until now?
+80. Happy 🌏☀️
+81. Always the aggressive attacks on people who are of a differing opinion. It's a wonder the silent majority took so long to speak up and boot out the Labour government
+82. He's a raging bigot, but now the damn minorities are telling him he can't be bigot no more. How dare them woke police tell him his views are outdated and unacceptable. Mildly unrelated, and I'm sure there's an etymological reason for this but I've always enjoyed that bigots are the littlest people.
+83. As much as I'd like to provide a response I'm not going to do that on Reddit any more than I already have
+84. Dude I'm the evidence. And there are many other men, and women, who have had and been part of that experience. Good riddance Queensland Labour. And thank you for putting your opinion forward without resorting to insults
+85. I realise the ridiculousness of that person's statement already, but as an aside to their 'point', it was trivially easy to get the rebate paid out to you by switching providers if the $1000 really could benefit you more in some other way. No matter how they swing it they're still up $1000--it's not Labor's fault if they're too stupid to collect...
+86. Culpable for what? Casting a vote?
+87. I wasn't sure if "amnesty" was deliberate, as I've never seen it used to describe a feeling, but it is an interesting way of putting it. Are you describing swing voters? Did you mean that the LNP's success in this election is in part due to a good proportion of regional voters being willing to forgive them? I find it easier to comprehend the people who vote LNP no matter what, in QLD and the rest of Australia, than I do actual swing voters.
+88. A millennium is 1000 years. Europeans began settling in Australia less than a quarter of a millennium ago. That’s why they think you’re crazy. That and your comments are irrelevant to their point.
+89. Again, you’ve entirely missed the point of their comment. They didn’t say anything about a specific group of people. They didn’t say anything about accepting other views. No-one has been subjugated for thousands of years.
+90. I get you, this is just heading in to silly semantic territory. The point is that he is a willing audience member, and they have enough of them. I don’t know why you’re being downvoted though.
+91. If you don't think the ABC is left leaning, perhaps you should try watching it
+92. Katter has seats because of Bob Katter. He is the force from the north.
+93. Yes fair point, but that’s how the system operates. Unquestionably they won a majority of the seats in parliament.
+94. The first and second parts of your sentence appear quite divergent
+95. Again, the point of my comment is that "the will of the majority" (which isn't necessarily what our voting system results in, but that's another conversation) has nothing to do with right and wrong, in the ethical or logical sense, unless you're in the mood to debate the ethics of the Holocaust, which I'm not.
+96. Because they don't get the internet out there?
+97. Generally, I agree. I suspect that Sky News is probably run at a loss, at least for the time being, in order to wield broader influence.
+98. Sky news, no. News Corp, yes.
+99. Outside of the CM, the rest of those "papers" aren't anything since Murdoch made them all online only. And then when you follow the link, it's just to the CM website. Since he shut down local hard copy, we don't really have any local journalism here anymore. Local politicians in council and state, are under far less scrutiny then they were before. Public services like hospitals are too....you can't get traction with the CM if you're making noise these days (patient complaints especially), whereas before a local journo would do some hunting on a story (if you gave them enough credible stuff). My local paper, which is in that lot you just listed, is viewed as a joke now. It's presence is only pushed through Facebook and then the people how comment say they read the story because it's behind a paywall.
+100. I'd rather there were no left wing or right wing propaganda sources, just reporting of the actual news. Murdoch turned everything into a magazine style opinion show and allows the commentators to run with the most ludicrous rubbish. Gullible people accept these opinions as fact, which is very dangerous, as we've seen in the US. I certainly don't accept anything I don't agree with as right wing, but I am discerning enough to spot bullshit when I see it, left or right, without having to call people ignorant.
+101. It likely appears like that - yes. However, I think it's more nuanced. Personally, I am trusting of the scientific method and people who are experts in their field rather than the opinions of unqualified people. That and right wing commentators have a long history of being factually incorrect/going back on their previous comments. Trust must be earned, and it's hard to do that when they lie for whatever reason (be it engagement or personal gain).
+102. 'implications for the upcoming federal elections'
+103. There was reform to mining royalties in 2022 which has now started generating the funds to start providing these. The LNP opposes those reforms but lets wait and see if they change their tune to keep giving back to the people of QLD and claim credit for something Labor did.
+104. …? what are you on about mate? the dude who did all that is steven miles because he’s an actual progressive voice in the labor party and he’s only been in for like a year. but nah we can’t give him a chance to continue doing the great shit he’s been doing because we need the libs in for 4 years to gut our public services and enrich the wealthy before they’re voted out in 2028
+105. So you vote out the party that hasn’t done enough for the party that’s says they won’t do anything, ah yes outstanding move.
+106. Not everyone with a differing opinion, just the racist misogynists
+107. Leading out with insults as usual? You want acceptance and tolerance but you don't want to reciprocate. The art of debating is about discussing differing points of view in a civilised manner and ubiquitously people on Reddit who disagree with another person's point of view can't get out of the gutter.
+108. so it hasn't impacted you life at all and you're just all upset and worked up about things you've read on social media. got it
+109. For electing the LNP
+110. Yeah, I think I meant it in a way of a willingness to forgive previous blunders/issues with the LNP, in the hope that they will follow through with their campaign promises of reduced crime ECT. I was mid morning coffee when I commented so wording might have been off. Also, yes, in this case I am referring to swing voters as preferences between the 2 main parties have drastically changed over the last 4 years due, partly, the ongoing effects of the pandemic eg. Inflation, crime Ect. Which has put additional strain on regional communities compared to larger townships/cities.
+111. It's a broader statement about conservatism and social progress. Reading comprehension is truly cooked.
+112. 🤷🏼‍♂️ it's fake internet points. I've still got 43,499 left to... Uh... Do... something... With? You're right about the semantics, but Im not trying to obstreperous or contrarian. I just don't think he actively enjoys it or even looks forward to it, but that it gives him something to focus on. It's appealing in the same way that meth would be appealing I guess? I dunno. It's just been weird watching the transformation from kind, logical person to... Whatever he is now.
+113. I watch it (the news at least) when I'm out at my parents farm. Every time I've watched it it's just been the news presented factually. Not sure about the rest of the content because I haven't voluntarily watched FTA TV in decades.
+114. Yeah. Radio is worse. Holy shit ABC Brisbane mornings is horrible. I have to listen to it sometimes when driving oldies around. No wonder the ratings are dropping.
+115. So you don't question why Dutton constantly trashes the ABC? His voter base only has 2 choices. Murdoch or ABC.
+116. Which is not what you said.
+117. No, they’re not. The probability I had anything to do with people voting LNP is essentially zero. This is a conclusion that holds regardless of the amount of self-examination I do. Your argument boils down to an ad populum. If a preponderance of people believe the Earth is flat, no amount of self-examination is going to make the Earth flatten itself. This “democracy means the majority is right” is just utter bullshit. Democracy is intended to be the will of the people, and people often will themselves into situations that are worse for them.
+118. Murdoch must be blocking it
+119. It's the same thing.
+120. I'll agree with this. I have all but stopped watching or listening to news because its all bullshit
+121. I’d have a look at those royalties if I were you. They are basically coming back to pre-hike rates in the forecasts. They delivered a big boost for all but 2 years. The increase in royalties did however also antagonise future investment in coal mining in our state, moving it elsewhere across our own country (in terms of exploration and investment) and even overseas. This ends up meaning it may cost us more in royalties.
+122. So your ignoring 26 years of labor mismanagement and buying into 4 months of election promises?

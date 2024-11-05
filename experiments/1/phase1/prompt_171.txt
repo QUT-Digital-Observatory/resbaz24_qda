@@ -1,0 +1,175 @@
+Your job is to analye a series of Reddit Comments are drawn from sbumissions related to the 2024 Queensland State Election. The comments are drawn from a collection of comments before, during and after the election itself on the 26th of October. The parties that sought election were the Australian Labor Party (ALP), the Liberal National Party (LNP), the Queensland Greens (Greens), One Nation and Katter's Australian Party. The LNP prevailed in the election, with David Crisafulli becoming the new Premier of Queensland. 
+We have identified several key issues that the major parties campaigned on during the 2024 Queensland State Election: Youth Crime (YC), Cost of Living (COL), Health (H), Energy and Infrastructure (EI), and Abortion Laws (AL). Below is a summary of each party's position on these issues:
+Youth Crime (YC):
+- LNP: Advocated for stricter penalties for young offenders, including the 'Adult Crime, Adult Time' policy, proposing that serious offenses committed by youths be met with adult sentencing. 
+- Labor: Focused on rehabilitation and prevention programs, aiming to address the root causes of youth crime through community engagement and support services.
+
+Cost of Living (COL):
+- LNP: Proposed measures such as abolishing stamp duty on new builds for first home buyers and re-establishing the productivity commission to review building industry regulations, aiming to alleviate housing costs. 
+- Labor: Introduced initiatives like 50-cent public transport fares, a $1,000 energy rebate, and free lunches for state primary school students to ease cost-of-living pressures.
+
+Health (H):
+- LNP: Committed $590 million to an 'Easier Access to Health Services Plan,' aiming to reduce ambulance ramping and hire additional healthcare workers. 
+- Labor: Focused on maintaining and expanding healthcare services, addressing hospital capacity issues, and investing in new health infrastructure.
+
+Energy and Infrastructure (EI):
+- LNP: Criticized Labor's Pioneer-Burdekin Pumped Hydro Project as financially unviable and canceled it upon taking office, opting to explore smaller-scale hydro projects instead. 
+- Labor: Proposed large-scale renewable energy projects, including the Pioneer-Burdekin Pumped Hydro Project, to transition towards 80% renewable energy by 2035.
+
+Abortion Laws (AL):
+- LNP: Stated there would be 'no changes' to abortion laws under their government, maintaining the status quo established in 2018. 
+- Labor Party: Supported the existing abortion laws and opposed any attempts to repeal or amend them. Asserts that LNP intend to restrict access to abortion services based on the views of some of their members.
+
+Analyze Reddit comments and code them based on the positions they support or oppose concerning these issues. You will output JSON, so valid values are strings or null. Use the following codes: YC, COL, H, EI, AL. If a comment's position is unclear or does not pertain to these issues, output null.
+
+Secondly identify which party the comment appears to support. Use the party code ALP, LNP, Greens, ON, KAP if this can be determined, otherwise a null value if undetermined.
+
+Output JSON as a list of objects where each object has an "id" (integer) property of the comment id, an "issue" property set to the issue code string (or null value), and a "party" property set to the party code string or null value. Null means JSON null, not a string. Values MUST be quoted, e.g. {"party": "LNP"} unless they are null, e.g. {"party": null}. Comments follow:
+
+1. Why blame me, this goes a lot further than a small percentage of constituents on this sub ???
+2. Because they didn't have any representation in my local state electorate.
+3. [deleted]
+4. You talk about fear mongering and then list a fear mongering campaign you clearly fell for hook line and sinker. Jesus, mate.
+5. That's why I asked for something 'real'. People are voting out of fear of a fictional crisis because they have the narrative pushed on them non-stop by free to air Sky News. The saddest political dysfunction in qld is the complete media monopoly that gets away with peddling straight-up lies. How can you really call that democracy, if the citizens are being purposefully misled?
+6. Yeah but it's true. All of you sooks crying doom & gloom because your preferred team didn't win the bullshitting competition. Whatever happens now is very unlikely to materially affect you.
+7. Giving Labor *another* 4 years certainly isn't the answer. If there's one message from tonight, it's that the cost of living and housing crisis is no joke. Ignore them at your peril.
+8. As a percentage, no due to massive amounts of immigration. As a raw number, yes absolutely.
+9. Sorry I meant this in sarcasm/jest
+10. Delicious, wish I could upvote twice.
+11. Shut up this isn’t America. Go outside and grow up.
+12. Yea no agree to disagree politicians aren’t really known for there honesty
+13. So the mining companies get to keep it all now ?
+14. Jesus wept. That is literally, 100% what one off means. Far out.
+15. What planet do you live on? It's not earth.
+16. Makes your post even more tone deaf than I thought.
+17. They do from the outside. But I'm sure you love Labor heaps more.
+18. Me when I'm a sore loser
+19. Stop drinking the Kool-Aid
+20. Covid was a hoax.In North America. They were claiming car accidents as Covid deaths. Hospitals were getting paid more for Covid deaths, the world was fooled by big Pharma.
+21. Murder should also be death penalty. Sorry you wasted your money learning nothing from your studies 🤷
+22. Nah, makes sense. Everyone should suffer for you. Maybe just stay home yourself?
+23. You didn't have to go out. No one is forcing you. Forcing others to stay lockdown is a bit over the top
+24. You always had the right to stay home - and still do. But the theft of the freedom of others was an absolute abomination.
+25. Correct, they’ll go back into Gina The Hutts pocket. Cristacunty will fuck this state and make all his dodgy mates rich(er) but DCs up north fell for the ‘Adult Crime, Adult Time’ bullshit
+26. LNP rusties are dumb af
+27. I think you mean wasting mining royalties, fuelling inflation and hurting the most important businesses in the country.
+28. After this campaign with barely any policies coming from Libs while Labor were loud and clear with their policies + the history of the last LNP gov, I don’t know how anyone could vote for them. Do people really just assume by voting the other way that things magically get better overnight? Especially as a woman, I don’t know how you can vote for them.
+29. Yes unsustainable surpluses that are hurting our most important industry.
+30. They don’t care about relative risk. A brutal public stabbing is horrifying and people respond emotionally. They don’t care that LNP cuts to health services are far more likely to kill them than a random attack.
+31. The people have no power to remove magistrates or judges. I wouldn't have voted LNP in Queensland over this issue. However there is a strong argument that judges and magistrates are taking too much liberty with their social licence and ignoring community expectations for justice. So people are using their vote to try and get politicians to ram through justice that meets their expectations; which is a blunt instrument and probably means more mandatory sentencing and less judicial discretion. I'm not particularly fond of any of this to be honest, but it could be avoided if judges just considered community expectations a little more and employed a little less arrogance whilst trying to reform via the bench.
+32. Doesn’t matter how often you renew, you get the same discount.
+33. Not only is it not on the table, if it was put on the table, it would be quickly stomped into oblivion. I will honestly bet anyone, anywhere, any amount that this LNP government doesn’t pass an anti-abortion bill. It’s the most transparent fear mongering campaign I think I’ve ever seen in politics 🤣
+34. >people complaining about cost of living. >Labor introduces coal excises to help support policies and actions which could help alleviate cost of living. >implement cost of living measures through free lunches and cheap public transport because obviously the people on the bottom are going to be most effective. >’Labor is implementing desperate cash payouts.’ How else is cost of living supposed to be handled if policies which were introduced specifically to curb it are shameless cash payouts?
+35. Far left is various flavours of communism, socialism, and anarchism. Far right is fascism, monarchism, ancaps, etc. Modern media, propaganda, and social media has just skewed people's perception of what the terms mean.
+36. David Crisafulli has specifically avoided denying plans to make changes to abortion and has voted for abortion bans previously, so that is very on the table. Second. Yes, that is how normal people view reducing abortions. Preventative measures are always more effective. This is nothing new. This is the problem with centrists. You've got all to say about how "both sides are terrible," but you care more about being doomer about it than actually saying anything substantive. Give me something man, what should we vote for? Because doing nothing is a coward's option
+37. Sure pal, if you think so. I'd explain why they're different but something tells me it falls on deaf ears.
+38. So if it doesn’t affect me, I just shouldn’t care? That’s a shit mentality, because the point is it will affect people in a negative way. It’s easier to say you don’t care about others if you think that way. With that said, you still haven’t actually pointed out how an LNP government would be better for healthcare and ambulance ramping. Seems political debate is not for you.
+39. What will the LNP do to improve cost of living and the housing crisis?
+40. >Giving Labor another 4 years certainly isn't the answer. Still doesn't answer the question.
+41. Its going to get worse under the LNP you swine
+42. It seemed like most of Miles policies where going to address cost of living pressures, but go on.
+43. That doesn’t fix anything though.
+44. [Queensland Police would disagree with you](https://mypolice.qld.gov.au/news/2024/04/15/youth-offending-declines-as-government-agencies-unite-against-youth-crime/) But lets not let facts get in the way of a good fear campaign, clearly they work to get you elected.
+45. Lol it might as well be, crybaby conservatives like you voted for the party importing dogshit American politics.
+46. But they are known for THEIR good grammar.
+47. I live on earth, just not under a rock like you.
+48. Or it's just a meme and you should take it as that instead of getting so worked up
+49. I don't love Labor. I like not cutting the public service for the sake of cutting it with no rhyme or reason which is what happened the last time Crisafulli was a government minister.
+50. Fuck you’re thick lol Keep your dim mind off other people’s reproductive rights
+51. True suffering is staying at home for a while, maybe you could stop being a virus ridden public health burden you tantrum throwing baby?
+52. Good to know you hate your community and fellow Australian's so much you'd rather exercise your "freedom " during a temporary health measure than kick in for the good of everyone
+53. I did have to go out. My job was classed as essential and I couldn't afford to quit because I still had rent and other bills to pay.
+54. Selfish prick prefers a higher death toll so he can go out and do skids. Pos
+55. No one was forcing you to stay in qld....could have fucked off at any time.
+56. You do realise the whole world locked down right?
+57. Mate, you're supporting literal cartoon villains. What is wrong with you?
+58. Yeah, feeding hungry kids, what a waste of money
+59. Media gave the lnp free reign to smear without needing to show policies. That's my main gripe with the landscape. Labor ain't perfect, but they don't sit behind an empty desk shouting about how bad the other guy is while having no plan of their own except cutting everything to shreds and to put kids in jail for longer. Mind boggling!
+60. They’re only “unsustainable” in your eyes because someone with vested interests told you they were unsustainable. I’m not going to get into the economics of inflation with someone of your calibre, because you’ll continue to rattle off LNP talking points. Go read a book or something.
+61. I’m not even talking about the LNP.
+62. I'll show you how: - imprisoning people with birth issues - mixing children into the bikie prison population - Magic wand I guess? ETA: - entering into a dark pact with whatever satanic entity Abbott has joined forces with
+63. [deleted]
+64. Not true, you’re completely disregarding the y axis (Authoritarian/Libertarian) you just listed authoritarian far-right/left ideologies. You can still be far left or right and not be a communist or fascist Ghandi is far left without being communist
+65. The irony of the deaf ears comment. Just reply here when the LNP table an anti-abortion bill. I’m not going anywhere. I might even check in every few months to remind you how you fell for a fear mongering campaign though if you don’t mind. How many years do you think it will take you to realise?
+66. Never said you didn't care, just that you'll shut up about it in a week or two when you calm down, like every other whining millennial/zoomer retard. The hubris of thinking you can predict the future is breathtaking. I didn't vote LNP, so I don't know what their plans are, I'm just amused by the epic butthurt on reddit.
+67. Labor voter here: The answer is that Labor wouldn't fix it in the next 4 years. Voting in LNP means that Labor will fix it in the next 8 years.
+68. I guess we’ll have to wait and find out. But we know Labor clearly couldn’t do it so it’s certainly fair to give the (now ex) opposition a crack
+69. \> Lol, does your dad slip you a bit of tongue everytime you respond to someone with that? You really think I'd bother engaging with someone with this level of maturity and intellect?
+70. Too little, too late. It's not as though the cost of living crisis popped up overnight. It's been a reality for at least 2 years that has been worsened by inaction at all levels of government.
+71. Labor makes all the debt, then the lnp has to pay it off. Happens every time.
+72. Trust me, I'm not worked up at all. Just here for the ridiculous overreactions from people who haven't lived through enough democratic elections to understand that their worlds won't suddenly come crashing down.
+73. Labor brings in the migrants. Liberal cuts the services. Two sides of the same coin my friend.
+74. Lol. Found you.
+75. I'm like my community enough to not want people forced to be locked down. It's glad to know how much you hate your community that you don't want to give people the freedom to choose
+76. That's a shame but people still shouldn't have been forced to be locked down
+77. No one is forcing you to stay in qld now that the LNPs in power
+78. Not the whole world. Doesn’t change the fact that theft of freedom is an abomination. Should not have happened, should never happen again.
+79. This is Clive's burner account
+80. Feeding hungry kids, giving energy rebates to QLD families doing it tough and subsidising affordable public transport to reduce traffic. What a hellhole he’s turned QLD into /s
+81. Their campaign literally had nothing of substance. It infuriates me that this went over so many people’s heads
+82. I study these things daily. What do you do? Oh, you listen to ALP spin?
+83. I know…? Except you weren’t the original comment were you? The original comment said stuffing around with abortion rights is ‘firmly on the table’. I asked where, you chimed in with KAP intends to test the government. That’s not stuffing around with abortion rights firmly on the table. That’s not on the table at all. And even if he ‘tested the government’ which is now an LNP majority government (see, here’s where the LNP comes in), it would be a resounding failure. So it’s not firmly on the table by any metric. It’s a labour fear mongering campaign, plain and simple.
+84. Ah okay, you’re just against the UN Rights of the Child, all good obviously I’m going to do nothing to convince you. Hope you have a good rest of your day
+85. I didn't list everything, just examples. Please read a book on political theory anyway and get outta my replies, lol.
+86. Weirdo
+87. It’s not like we’ve picked someone at random and given them a turn. We know the LNPs ideology and policies and should be making an informed choice based on that. Labor didn’t do a perfect job but there is absolutely no indication that the LNP will do any better.
+88. Bruh you have no idea whether labour could fix it or not, you've just given Queensland the Tasmania treatment lol, please enjoy toasting marshmallows on the ashes of your kids futures.
+89. Just say it bro. You voted for lnp because you always have but have no actual idea of their policies or mandate. It’s ok.
+90. "Those Social Democrats couldn't fix Deutschland's problems, so might as well give that Austrian guy a crack" Germans, 1933
+91. The $1000 we all got for our electricity bills didn't help at all, I suppose. Basically almost entirely free public transport didn't help? Satellite hospitals? Mining royalties bringing money to the people instead of corporations? There's more but come on.
+92. They were trying to https://statements.qld.gov.au/statements/99493
+93. > asks a question > dodges question twice > can you answer my question tho? > "YoU'rE iMmATuRe" No wonder you're an LNP voter. All you're good for is dodging questions and throwing insults.
+94. >Copium I dunno man, you don't seem the sort for maturity or intellect.
+95. So voting in the party that won’t address at all is the solution then, ok got it.
+96. [Lol. Lmao.](https://statements.qld.gov.au/statements/100536) [Lol. Lmao.](https://kpmg.com/au/en/home/insights/2024/05/federal-budget-australia.html?pageAccordionID=executive-summary&nocache=true)
+97. You've just made a song and dance about people's lives - the homeless - that have come crashing down due to poor government performance lol Also easy for your to say when topics like abortions are on the line and women's lives can and will come crashing down around them when they can't get life saving healthcare
+98. Last time the lnp got in Queensland 25,000 people suddenly lost their jobs, abortion is likely to be banned and mining royalties will be cut.. There is plenty of room for worry here dipshit.
+99. Rights must be balanced in a just society. I struggle to think of how the rights of tens of thousands of people to *not die* is worth less than the temporary restriction of your ability to go outside. You sound like the kind of person who does things because you have a "right" to do them, even if you shouldn't. Human beings are cooperative animals. We must cooperate to survive. This sometimes requires sacrifice. If you can't even stay inside for a bit, then how could you handle ever being asked to make a serious sacrifice?
+100. I know...I'm not complaining haha
+101. Interesting. I was originally annoyed at your comment, but now I'm just curious. How would you feel if the mortality rate was higher? What if it was 50%? If you caught it, you'd have a 50% survivability rate...
+102. You've already proven yourself thicker than pigshit mate
+103. All you can do is attempt to educate and pray you cut through the noise.
+104. “Study” i.e. reading Facebook comments on “articles” posted by Murdoch-backed media. Well done champ.
+105. Not sure you understand how a democracy works. A party who is in power for several years and fails to address key issues among the voting public \*should\* be voted out. Political bias aside, the alternative wouldn't be good for anyone.
+106. … And there’s every indication ALP won’t do any better. That’s the key point you’re not understanding
+107. I think first hand experience shows Labor is incapable of fixing it, in fact it’s only gotten worse. But yeah be a doomer all you want
+108. I didn’t vote for LNP bro. Cheers and if you want something to go with your salt I recommend vinegar
+109. Yeah, nah didn’t happen like that. But appreciate the tears
+110. How do any of those things help the people living in tents because their rent increased by 60%?
+111. I tried to be an NBA basketballer once upon a time. So long as I tried hey?
+112. 564m surplus out of a 132B debt. LOOL, Loooool
+113. \> You've just made a song and dance about people's lives - the homeless - that have come crashing down due to poor government performance lol That wasn't sudden. It was through years of mismanagement of the housing situation that was exposed during the COVID mass migration. Perhaps if Labor had addressed the shortages there wouldn't be a need for a song and dance. \> Also easy for your to say when topics like abortions are on the line and women's lives can and will come crashing down around them when they can't get life saving healthcare Zero evidence that this will be the case. I'm no LNP fan but I'm equally not a fan of scare campaigns that prey on the most gullible in society.
+114. Why did my comment annoy you? Attitude remains the same. It is not the governments role to lock you up at home. Theft of freedom is an abomination. This will never change. It is up to the personal risk tolerance of the individuals, not the government, to determine when and if they decide to go outside. The mortality rate of the threat is not relevant in this belief. The governments job is to inform - and they failed this as well, miserably, but that’s another conversation entirely. Theft of freedom will always be an abomination. It has no place in a free nation.
+115. Financial reports, production reports, and globally supply and demand forecasts. Meanwhile you're getting your opinion from the r/Queensland mouth breathers.
+116. Unfortunately neoliberalism will never address those key issues in any meaningful way. But we had a choice between a party that was making incremental improvements vs one that will gleefully reverse course.
+117. So you voted out a party attempting to fix something and voted in the party with no plans (policies) to fix anything. Gotcha. Sound logic.
+118. But plenty to say the LNP will do significantly worse.
+119. In what way? Queensland, like pretty much the entire country is still recovering from a global economic downturn and the after effects of Covid, and they've done fantastically. I grew up in Tasmania, I know exactly what having an LNP government gets you. I'll tell you right now, it isn't a better cost of living situation, or a better healthcare system, or housing situation.
+120. !remindme 3 years
+121. lol. It quite literally did. Source: the Germans.
+122. I suspect the LNP's planned $45m cut to homelessness services certainly won't help. However, hopefully the LNP can somehow fix the global cost of living crisis by giving away our natural resources for almost nothing (and that means the taxpayer must either pay for more things or receive less things).
+123. The majority. What do you think the LNP will do to help the people in tents? I didn’t see any policy directed that way.
+124. Do you seriously think that is a QLD Labor induced issue? Do you know what their plans were to help address this? Better still, do you know what the LNP plans are? Do you think they'll do anything about the out of control rental market? The Liberals ran a federal scare campaign based on Labor wanting to reign in negative gearing (which would have absolutely helped). This is the wrong horse to bet on to even get near helping people out. You might want to look at the Federal Liberals regarding the wage stagnation that put us all in a much worse position... Look how far back it goes.
+125. Reckon this helped people? https://statements.qld.gov.au/statements/99493
+126. “Well they e been there too long let’s give the other guys a chance even though we know how badly they stuffed it up last time” is certainly a take
+127. First, you're moving the goalposts, and you were objectively wrong with your first point. Secondly, the LNP has been in power for the majority of the time we've had that debt. Like I said, dude, under a rock. Stop mindlessly believing propaganda.
+128. Fuck man how'd you move the goal posts all the way over there when my back was turned
+129. Dunning Kruger cooker alert.
+130. > was making incremental improvements Evidently the improvements were too small, too late and not making enough of a difference to the lives of the voting population. That's how a democracy works.
+131. Based only on opinions, not actual real lived experience. I always prefer reality over unfounded opinions, but you do you. In either case we’ll both have to wait and see. That’s just the… wait for it… reality
+132. Cool, so Tassie can vote them out then? And correction: it’s not the after effects of Covid per se, it’s the after effects of governmental response to Covid, of which Labor was terrible (repeated lockdowns, restrictions etc forced money to be printed … and here we are, paying for it). So your argument appears to be that a government who stuffs up and then tries (but fails) to get things back to levels prior to their stuff up has done “fantastically”. Tell me more. (Don’t)
+133. I will be messaging you in 3 years on [**2027-10-26 14:46:01 UTC**](http://www.wolframalpha.com/input/?i=2027-10-26%2014:46:01%20UTC%20To%20Local%20Time) to remind you of [**this link**](https://www.reddit.com/r/queensland/comments/1gckejr/queenslanders_waking_up_on_saturday_and_deciding/ltuv8mo/?context=3) [**CLICK THIS LINK**](https://www.reddit.com/message/compose/?to=RemindMeBot&subject=Reminder&message=%5Bhttps%3A%2F%2Fwww.reddit.com%2Fr%2Fqueensland%2Fcomments%2F1gckejr%2Fqueenslanders_waking_up_on_saturday_and_deciding%2Fltuv8mo%2F%5D%0A%0ARemindMe%21%202027-10-26%2014%3A46%3A01%20UTC) to send a PM to also be reminded and to reduce spam. ^(Parent commenter can ) [^(delete this message to hide from others.)](https://www.reddit.com/message/compose/?to=RemindMeBot&subject=Delete%20Comment&message=Delete%21%201gckejr) ***** |[^(Info)](https://www.reddit.com/r/RemindMeBot/comments/e1bko7/remindmebot_info_v21/)|[^(Custom)](https://www.reddit.com/message/compose/?to=RemindMeBot&subject=Reminder&message=%5BLink%20or%20message%20inside%20square%20brackets%5D%0A%0ARemindMe%21%20Time%20period%20here)|[^(Your Reminders)](https://www.reddit.com/message/compose/?to=RemindMeBot&subject=List%20Of%20Reminders&message=MyReminders%21)|[^(Feedback)](https://www.reddit.com/message/compose/?to=Watchful1&subject=RemindMeBot%20Feedback)| |-|-|-|-|
+134. Lesson being never trust anyone who identifies as a socialist?
+135. And seemingly a more popular take than “labor’s had 9 years and things are getting worse, but this time I reckon they’ll get it right”
+136. The bottom line is MrRock that in 2015 Qld net debt was a bit under $11B and today it is $26B. So the QLP has increased net debt by $15B in 9 years or $1.6B a year. I'm not moving any goalposts, the Qld Labor Party were & unfortunately it's in a downward direction. It is critical for our states health that the goalposts are not put six feet under.
+137. No dog in the race, but there was no goal post shifting. They answered your points and didn't shift the discussion at all. If you can't be actively involved in discourse then don't engage in it.
+138. Good one, that really hurt my feelings.
+139. What are the LNP going to do to address the cost of living and housing crisis?
+140. Did you not live through the Newman horror show? I did and that lived experience was unbelievable... Of which Crisafulli was a member of. He's got a track record already and it's terrible.
+141. I don’t need to wait and see if the LNP will favour privatisation, slash public jobs, and suck up to the mineral council.
+142. >Cool, so Tassie can vote them out then? Tassies a retirement village, nothing will change. >it’s the after effects of governmental response to Covid, You mean the Federal Liberal government response? I mean they were in power until almost midway through 2022, the cost of living crisis, poor healthcare funding and inflation were all Federal responsibility. >So your argument appears to be that a government who stuffs up and then tries (but fails) to get things back to levels prior to their stuff up has done “fantastically”. My argument is that you're blaming state Labour for Fed Liberal caused issues, and you don't seem to understand that even with the liberals trying their level best to actively fuck the country into the ground, Queensland is absolutely objectively in a better position than they would have been under LNP.
+143. I honestly don't know how people like you function, but it might be representative of the average LNP voter that they just swallow what they're told without doing the most basic research. Queensland & WA have been the best performing states when it comes to reducing public sector debt and both were done under Labor, just as Labor has been performing better than the LNP at a federal level. It's all easily researchable, make a coffee and spend a few hours, and maybe you'll change your mind, but I doubt it, and I'm wasting my time arguing with you.
+144. Asymmetry of bullshit rebuttle
+145. I appreciate the skepticism, we should always be skeptical of all politicians and we should never ever stick to one party. Don’t you agree?
+146. In fairness none of that, especially slashing public jobs, is necessarily a bad thing. But I can tell by the tone of your comment your mind is already made up. What a sad existence to be so determined to be so stubborn. An open mind makes an open life, feel free to try it.
+147. Federal LNP government I was no fan of, but don’t pretend the huge majority of restrictions weren’t Labor state based decisions. And it’s not “absolutely objectively”, it’s “absolutely subjectively”. I don’t understand why labor types think they can decide their opinion is fact

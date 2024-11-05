@@ -1,0 +1,168 @@
+Your job is to analye a series of Reddit Comments are drawn from sbumissions related to the 2024 Queensland State Election. The comments are drawn from a collection of comments before, during and after the election itself on the 26th of October. The parties that sought election were the Australian Labor Party (ALP), the Liberal National Party (LNP), the Queensland Greens (Greens), One Nation and Katter's Australian Party. The LNP prevailed in the election, with David Crisafulli becoming the new Premier of Queensland. 
+We have identified several key issues that the major parties campaigned on during the 2024 Queensland State Election: Youth Crime (YC), Cost of Living (COL), Health (H), Energy and Infrastructure (EI), and Abortion Laws (AL). Below is a summary of each party's position on these issues:
+Youth Crime (YC):
+- LNP: Advocated for stricter penalties for young offenders, including the 'Adult Crime, Adult Time' policy, proposing that serious offenses committed by youths be met with adult sentencing. 
+- Labor: Focused on rehabilitation and prevention programs, aiming to address the root causes of youth crime through community engagement and support services.
+
+Cost of Living (COL):
+- LNP: Proposed measures such as abolishing stamp duty on new builds for first home buyers and re-establishing the productivity commission to review building industry regulations, aiming to alleviate housing costs. 
+- Labor: Introduced initiatives like 50-cent public transport fares, a $1,000 energy rebate, and free lunches for state primary school students to ease cost-of-living pressures.
+
+Health (H):
+- LNP: Committed $590 million to an 'Easier Access to Health Services Plan,' aiming to reduce ambulance ramping and hire additional healthcare workers. 
+- Labor: Focused on maintaining and expanding healthcare services, addressing hospital capacity issues, and investing in new health infrastructure.
+
+Energy and Infrastructure (EI):
+- LNP: Criticized Labor's Pioneer-Burdekin Pumped Hydro Project as financially unviable and canceled it upon taking office, opting to explore smaller-scale hydro projects instead. 
+- Labor: Proposed large-scale renewable energy projects, including the Pioneer-Burdekin Pumped Hydro Project, to transition towards 80% renewable energy by 2035.
+
+Abortion Laws (AL):
+- LNP: Stated there would be 'no changes' to abortion laws under their government, maintaining the status quo established in 2018. 
+- Labor Party: Supported the existing abortion laws and opposed any attempts to repeal or amend them. Asserts that LNP intend to restrict access to abortion services based on the views of some of their members.
+
+Analyze Reddit comments and code them based on the positions they support or oppose concerning these issues. You will output JSON, so valid values are strings or null. Use the following codes: YC, COL, H, EI, AL. If a comment's position is unclear or does not pertain to these issues, output null.
+
+Secondly identify which party the comment appears to support. Use the party code ALP, LNP, Greens, ON, KAP if this can be determined, otherwise a null value if undetermined.
+
+Output JSON as a list of objects where each object has an "id" (integer) property of the comment id, an "issue" property set to the issue code string (or null value), and a "party" property set to the party code string or null value. Null means JSON null, not a string. Values MUST be quoted, e.g. {"party": "LNP"} unless they are null, e.g. {"party": null}. Comments follow:
+
+1. Yeah, and I have a spray painted white horse with a tusk shell glued onto it's forehead- I mean, a unicorn I can sell you.
+2. Geeetttttttt fuckeddddddd
+3. As someone who has worked in the engineering and construction sector here in Queensland for 20 years, our construction workforce doesn't even have the skills to build a school building that isn't riddled with defects. I am pretty sceptical of whether we can build a nuclear plant. The only way this is happening is if we import the workforce from France or somewhere else that actually has the expertise. So virtually no jobs for locals. Unlike wind, solar, and pumped hydro, which generates tens of thousands of jobs here in Queensland.
+4. Queensuckers.
+5. The typical construction time for a nuclear power plant, the 2 being proposed for QLD; is 6-8 years. I wonder, why didn't the LNP start construction, at the beginning of the 9 year term in Federal Gov. They'd have been finished by now. Oh that's right, no previous LNP Gov, nor State Gov, wanted nuclear power in Australia. Why now this big push. Because Peter Dutton and his Party. Have never had an original thought, in their entire political careers Nuclear power is relatively safe. It would have been a fantastic idea, 10 years ago. Now, its a political stunt and nothing more. It will take 2-3 years to pick a site (some lucky Nth QLD town no doubt), pick a technology, gain community backing. Then, 5 years or so to build it. Not one but two btw. Therefore we're looking at 2033 or so before its close to operational, at best estimate. With elections in between. FMD this country is going down the wrong path. There is no consensus on whats best for OUR country. "Its just politics" bullshit is damaging our country. We've all been so convinced by this "team red" "team blue" shit. We've 100% missed the point that we're on a knifes edge. Australia needs a locked in plan, that no change in Gov, can stop. Or we're all going to be screwed. Cool, if you don't believe climate change is real, alright. But, you'll be long dead and your grand kids, great grand kids, and their kids, will suffer the consequences of your "team spirit". Its not about whats best for you, right now. Its about whats best for them 20 years from now. The what if the sun doesn't shine or wind blow arguments. Are a morons arguments against renewables.
+6. AHHHHHHHH
+7. I can’t wait to get my nuke scooter.
+8. Would be good to finally get nuclear and move into the 20th century with the rest of the world
+9. Why not just good old cheap coal fire then ?
+10. Lets hope so . It makes sense that we have a nuclear component for base load.
+11. *\*surprised Pikachu face\**
+12. Hah, I wish it was that long. The ABC coverage had some of the candidates backflipping minutes after the polls closed.
+13. Plans change. Especially when new factors like winning the election weigh in. Got to adapt. /S
+14. Didn't he roll back the one where he said if youth crime wasn't down he'd quit like a few hours before winning?
+15. The Noalition is angry at one of its own parties for saying No. If that isn't hypocrisy I don't know what is.
+16. It really is NBN2. We have the best plan in place for the country and LNP want to throw it out the window and replace it with the best plan for their donors.
+17. Look what they're saying even from last night though. Previously Crisafuli said "no nuclear in Queensland". Last night his MPs had a different tune. "Nuclear agnostic" "that's a federal issue". And of course "that's not our plan". They're waiting to see if Dutton gets in then they'll flip on it.
+18. Its a bag of d
+19. It's nothing but a delaying tactic to keep the coal monopoly alive.
+20. "20th century" I see what you did there 😁
+21. Coal is the second most expensive form of power after nuclear.
+22. It's the most expensive form of power and the private sector has said it's not viable.
+23. THEY BACKFLIPPED ON THE ELECTION LIVE STREAM ON ABC!!!
+24. Yes. Wuss. https://www.brisbanetimes.com.au/national/queensland/crisafulli-walks-back-key-crime-commitment-on-election-eve-20241025-p5kldd.html > David Crisafulli has walked back a key commitment on the LNP’s crime policies one day out from the election. >The opposition leader added a significant caveat to his earlier promise to resign if victim numbers don’t go down in an LNP government’s first term, saying the statistics would be adjusted for population growth. >“It will be tied to population growth, of course,” he told reporters on the Sunshine Coast on Friday.
+25. Iirc he did that *before* polls even closed.
+26. "Multi Energy Mix!"
+27. There’s no way Dutton will win the next election. Labor would have to do something unbelievably stupid between now and May for that to happen.
+28. But he didn’t take population growth into account when complaining of an increase in crime in QLD under Labor.
+29. Were you awake for the last 48 hours? Qld labor did nothing stupid and the LNP still won.
+30. Anything is possible when you got the media rag. Too many people don't understand that you literally cannot trust Murdoch media to tell you what is good for the country. My proof? This election.
+31. Were you awake for the last 12 months? The main arguments against Labor were youth crime (not a federal responsibility) and the fact that Labor had apparently been in too long (Albo has been in for less than three years), neither of which are going to be applicable in May.
+32. Well, youth crime wasn't any worse and was arguably better over the last few years, so that one's a furphy. IOW, a lie propagated by the LNP. "In too long" is not a valid argument - the libs were in power for decades in the 50s and 60s, which was coincidentally a period of unprecedented economic growth (albeit zero social progress), so that's another furphy, and a line of BS. Qld Labor did ~~nothing~~ little wrong and much right, and still lost. Don't underestimate the willingness of voters to believe the bullshit spouted by the LNP and the murdoch media.
+33. Townsville rednecks and bogans will be proud as punch right now, yet when they go to the hospital and get told their surgery has been cancelled or suddenly their wait times are over 4 hours, then they might realise they got it wrong ...hmm doubt it with their pea sized brain mentality
+34. When their son or daughter who could do no wrong gets pined for carrying weed and ends up with a jail sentence at age 15. Adult crime, adult time.
+35. Trust me, maybe 2 people in health care voted lnp. They allll hate lnp with passion.
+36. Last time, everyone tended to know someone who got sacked, so it became apparent how bad shit was. That an asset sales were kept up, despite that being a massive issue they ran on in 2012. I had pro lib class mates who watched their taff courses and life plans get fucked up and go, oh my parents and all the bs i learnt in my private boys school middle class/rich life style was wrong... the lnp fucking suck. All of them never will vote lib again, and its been annoyingly great to see all the people i used to argue with now agree with what i was saying then. Many different groups of people can remain isolated from the greater reality we live within, for a while, but it does come knocking. Things will snowball into shitness if the LNP do what they useally do, I would say they should do their damage slowly so its not noticed, but given the fuck ton of money to make and propensity for people to want to get rich quick, they will do what they useally do. Fuck up the state in a manner that helps their mates, whom donate back to them. Cut public health, props up private health, for example.
+37. By third week of December when companies start laying off workers just before Xmas. It's coming.
+38. Most people will perform feats of self-deception to avoid being accountable for their actions. Why should this be any different. You can always find someone to blame. It's even easier to find a scapegoat if you feel that self-analysis and critical thought are con jobs run by "the elite".
+39. The neo-liberal strategy is underfund a service until the public don’t see value in continuing to fund it at all. Them the private market fills the gap, pumps prices and pays out politicians to keep them from making it public again. For education and health, both have been underfunded in the regions. So its understandable that they don’t see as much value in these public systems.
+40. No need to predict the future. Just call it out as it happens.
+41. Your the minority and lost. Stop whinging about it and do better next election
+42. Election is over. Regardless of who you voted for its done and you can’t change it. Move on - we are supposed to accept election outcomes in Australia.
+43. Geez, candidate didn't win and you're hoping things go tits up. Crab mentality doesn't help, our horse lost, we just pick up the pieces, learn and do stuff for the better for now
+44. When they realise the ALP are just red LNP, that’s when.
+45. Oh please, the Health System is already seriously broken & 1 cause was the sacking of experienced health professionals because they refused the “safe & effective” mandate, the same as the Education System. Oh, and don’t forget the baby who died because “QLD hospitals are for Qlders”. Both systems could do with some decent streamlining. Have you been to a hospital lately ? I have & a good boot under some staff is sorely needed. Schools need to get back to basics, full stop. Pretend renewables are pushing our power bills through the roof. Time to stop that hugely expensive experiment that is only benefiting China. So please stop bleating about the Losing Lefties.
+46. The Townsville Great Beer Garden Debates start soon. Likely it will boil down to who could bench more, Miles or Crisafulli. And tales of a mate who has a mate who has a job in the mines and when the LNP remove the royalties there will be so many jobs, jet skis, ford raptors and the only work you will do is carrying the bags of money from your car to your house in north shore. I heard Queensland Nickel is opening back up soon too.
+47. To be fair, that sounds really good.
+48. You would be doing this exact thing if the roles were reversed.
+49. It cuts different when the ones you voted for screw you over.
+50. Corrupt bandit supporters are the minority, They are one term warriors won't be long til they are gone just depends how much they can ruin before the federal election will decide whether people want to vote for them or keep with Labor who know what they are doing.
+51. That's a fair comment, so OK. But the question wasn't "we shoulda won", but "when will people realise they made the wrong choice?"
+52. We accept ones that make sense. Anyone that voted LNP will never admit to it in person.
+53. Given their history, its more so a prediction of what will likely happen given the LNP do this every time and its made up of the same people from last time they got in power. The LNP at the end of the day are not a party of government, they dont guide the state, they exploit it. A corpertate consult firm with some of the worst kind of christian beliefs thrown into the mix. (Your welcome to have a religion, but dont make it everyone else's problem please. Lot of Christians get that, the worst kind of, my belief system should be mandated by the state, join the LNP)
+54. for pot? lol
+55. Hell, they *were* doing this exact thing for years. Just let them get it outta their system before they're stuck in opposition again for a decade or so
+56. I was labour all my life until they sold QR national. My dad even made me do those stupid bbqs on election day. All those guys that supported them.. gone. Lib isn’t much better, but they have a better Olympic and energy plan then the labour. Also maybe some chance to improve the crime. If they are crap they will get voted out next election. Simple.
+57. You accept elections that make sense? Mr Trump entered the chat. Luck us.
+58. I can’t stand the Libs but this ain’t it…
+59. Sure, why not? It’s illegal. If it was with a few hundred grams of Skittles it would be a different story.
+60. What is the energy plan?
+61. Libs have policies other than giving more money and more power to their cronies? Amazing.
+62. QR National had to be sold sorry, for a number of reasons. What didn't follow was competition in the heavy freight market. That part they got wrong.
+63. Thats what I said yes, we accept ones that make sense. Did you miss something?
+64. Oh well accept what you can't stand then. I don't care. I think its best you talk about it though.
+65. Now \*there's\* a skittles-to-brains comparison! Thanks!
+66. would you like to be thrown in jail for speeding? Because that is illegal and have potentially more serious consequences than a teen with a gram of weed in his pocket.
+67. You are simply reinforcing the belief that all conservatives are stupid! But gloat while you can, your ego has been stroked. That’s all you care about, win, win, win. Not the consequences.
+68. Illegal? In a lot of cases, yes. Stupid that it’s illegal? Also yes. To be fair, I unfortunately wouldn’t be surprised if we saw this happening though while (actual) recidivists walk free.
+69. No you made yourself very clear. Enjoy your MAGA hat dude.
+70. You have to accept that your viewpoint isn’t shared by the majority of Qlders and it’s a shitty bitter pill to swallow in the current climate. Plenty of people will admit they vote Libs and shaming people who don’t follow your perspective risks pushing more away. Progressive voters have to find a new way to communicate IMO.
+71. Yes, I clearly said we accept the ones that make sense. I think you are reading too much into it, probably intentionally.
+72. People claim Labor have been in for too long, conveniently forgetting *why* Labor were repeatedly voted in. It's always to clean up the LNPs mess.
+73. I give it 3 tops.
+74. My prediction is surplus to massively in debt, cut government jobs to say look how much I've saved in the budget when spending 5 times the amount on consultancy mates. Take credit for easing of the housing crises when the ball had already started on building townhouses and modular housing. Taking credit for youth crime when there are already measures in place now. But will he throw in the job if youth crikes doesnt go down , ahhh but theres more, the other day stated that yourh crime is proportional to the growing population. So it population increase 5% then you crime can increase. Do the adult crime do the adult time, well did cristafulloshit cop anything for the trading insolvent business ?? People voted him in based on bullshit spoken a long time ago , i bet you wish you didn't vote him in whe. It hits 100 days from now and he hasn't done a thing.
+75. If it’s any consolation, [here](https://amp.abc.net.au/article/104510856) is the budget that LNP have created going forward. They Want to cut down consultancy and invest in the workers already in the public sectors. Let’s see if that happens.
+76. Just like last time.
+77. My prediction is, massive overspend on Olympics, including unnecessary expensive consultancy review of games venues. With no coal royalties leading to sell off of energy companies to help pay for it. Then blame Labor about the position we are in for choosing to host the games, justifying massive public worker layoffs. It wouldn't even surprise me if this ends up sending us broke like our southern neighbours.
+78. Overly generous.
+79. Yeah likely losing my job tomorrow :( been a bit of a mess today.
+80. Did you say 6 days?
+81. I can also bet all the reports on youth crime will stop overnight as if by magic... (there will still be crime but the media reports will stop).
+82. Yes you probably should wait until they actually try to do something before you blame them for doing it. Good rile of thumb across the board I reckon
+83. THE SKY IS FALLING!!!!
+84. Have a sook
+85. Sook on snowflake
+86. More like 3. How could labor do this to us?
+87. Say goodbye to the Great Barrier Reef
+88. [deleted]
+89. Every.Fucken.Time
+90. "Copeacetic" lol
+91. Yeah I can’t wait to say I told you so to the old cunts at works when they start complaining about how their rates, taxes and bills all start going up. And how things aren’t actually better
+92. The one silver lining, Qld people will get upset by state LNP cuts and unfairness and be more likely to vote ALP federally
+93. Does anyone here like Liberal ? They did win.
+94. OP: C'mon. Feel buyer's remorse...
+95. But we're BEttER MoNEy MaNAgeRs Will proceed to return back to back deficits
+96. Boo Hoo . Whinging Left tards.
+97. honestly? as a single parent whose about to graduate as a RN. I am terrified. I have no idea how i'm going to afford rent even on a QLD health wage, or if I will be able to keep my graduate position and i'm one of the lucky ones. I am so tired of the class divide, the rich getting rich and the poor getting poorer. I have felt numb and sick all day.
+98. My prediction for /queensland: 4.2 billion posts lamenting democracy in 4 hours
+99. 1 tops just like last time
+100. This is a real mess...
+101. I'll be before Christmas. Once all the voters realise that he's going to do the things he told them he wouldn't do, that they were told he was going to do and now they've lost their jobs and they can't afford those presents for their kids, they're definitely going to have that buyers remorse.
+102. mate buyers remorse tomorrow 7am
+103. Sweet. Might actually be able to buy a home when everyone starts packing up.
+104. Just legalise weed ffs…. Then everyone would be chilled 💚
+105. Dunno about anyone else but I voted with logic and labor is garbage n toxic. Last thing were the Australian people asked when our tax payer dollars was sent to aid Israel in a war that we have nothing to do with..
+106. This is a very arrogant view. You are basically suggesting that only you as a buyer matter. Half the state had buyers remorse with the previous government. They voted for change and that’s it. Nothing they do will make full lefties happy.
+107. Wait until they start building "Emergency gas peaking plants" and then run them 24/7 while billing you 48c per kWh to do so.
+108. Buyers remorse seems to be the way of things in most governments these days. Many of the issues that are so important to people are either so embedded and complex they take years, multi terms to fix and or the government literally doesn’t care.
+109. Hope so I can swoop in and grab a bargain
+110. That's how its going in New Zealand, Queensland will be the same.
+111. Funny how health and education get hit badly when they are probably 2 of the most important government departments. GG to all government workers. Russian roulette time.
+112. They're all corrupt. All of them. Labour, greens, liberal, Nationals party.
+113. RemindMe! 6 months
+114. I wonder how many public servants are on their second day of quiet quitting
+115. Still better than victoria
+116. There’s allot of anti LNP posts in reddit none for that I have seen. Why is that? Is it backlash against losing? Is it algorithm generated? Or something else?
+117. And Queenslanders get all uppity when people call them dumb… Dutton is peak QLD. Being stupid is not admirable.
+118. My prediction is like most reddit forums it will be incorrect. Suggest everyone go out and get some vitamin D and relax
+119. I personally don’t know because I don’t work in gov, but a friend who does says that the qr side of gov is in dire need of a clean out.
+120. All these posts just tell me it is so many redditors first election.
+121. The reverse, actually. Leftism is a disaster, from the USSR to Cuba to Venezuela to Zimbabwe.
+122. The leopard bit my face
+123. Eh, both major parties have policies I like & policies I dislike. The amazing thing is how both parties just happen to always pull through the most on the policies I dislike while growing forgetful on policies I like. Its almost like I'm just being offered raspberry or blueberry flavored disappointment.
+124. The 50 cent fares will be gone within 6 months for sure. They have promised to repeal the additional mining revenues that were paying for them, so they have to break one or the other of those promises, and you better believe they won't break the promise to the mining companies. Abortion will be gone shortly after Katter puts forward his members bill and Crisafulli allows the conscience vote that he was asked about 50 times and never was able to answer the question. They will rebuild the Gabba for the Olympics. Personally I think the Olympics is mostly a waste of taxpayer money, so I would have preferred just using existing facilities with a facelift, but here we are. As for job cuts, we might be surprised??? He did just send out a letter to public servants claiming there wouldn't be any and they learned their lesson from the Newman years. I truly hope that is right, but I doubt it. Also they claim they want to build up the public service while cutting back on consultants. That is actually a great promise, but I have a hard time believing them since that goes completely against their principles as a party. Tax cuts for mining companies. Complete stop to all reconciliation efforts for indigenous Queenslanders, as their primary indigenous policy will be locking up their kids, No effort at any evidence based approaches to reducing crime, just what we already know doesn't work.....locking kids up in isolation cells and then letting them loose as mentally ill hardened criminals years later. Harsh penalties for drug possession and no pill testing or redirection into support. Probably laws protecting religious schools that want to fire and kick out gay people. Trans bathroom bans. That is what I expect,.
+125. Reading this constant barrage of doomsday hissy fit posts makes me realise just how irrelevant Reddit is to the real world.
+126. Everyone loves a sore loser. You guys should organise a convoy to drive to all of the regional seats that Labor has lost for the first time in 4 generations. People really love being told they are evil or ignorant for exercising their democratic rights and responsibilities and voting for their preferred candidates to represent their local interests. You should definitely go to CQ, NQ, and FNQ and let them know how great it is that there are 50c trains in Brisbane, and how crime is down in SEQ, so it must be down everywhere in the state. It's obvious right, if crime is down statistically statewide that means it's down everywhere in the state, duh?
+127. I can't wait till they show us how much Labor cooked the books. My great great grandkids will be lumped with Labor debt.
+128. Well we know labor voters are sore losers
+129. Gosh there’s some bitter people on here😂 get some cold hard facts into you instead of fearmongering
+130. Is this a gender studies chat room? It smells like it.
+131. Come to Victoria and see what long term Labor looks like :)
+132. Won’t happen. Wasted energy on something that isn’t even on the plan.
+133. Labors gone too far. Who asked for a misinformation disinformation bill who asked for the bloody e safety commissioner like come on, where has the bloody aussieness gone in the country
+134. Anything was better than another 4 years of Labours bullshit.
+135. What happens if/when your prediction is wrong? Nothing? No accountability? Cool.
+136. But it’s time to give the face-eating leopards a turn. That’s FAIRrrrrrr. *sighs*
+137. Look im all for bagging shit cunts BUT "always" to clean up their mess ? They've only been elected like once in 30+ years lol
+138. We said the same about the LNP getting in NSW. To clean up the corruption in the State Labor government
+139. 6... Weeks
+140. That is the cycle, surplus because they sold government assets, then debt, because the government assets we sold off were great value to the government.

@@ -1,0 +1,163 @@
+Your job is to analye a series of Reddit Comments are drawn from sbumissions related to the 2024 Queensland State Election. The comments are drawn from a collection of comments before, during and after the election itself on the 26th of October. The parties that sought election were the Australian Labor Party (ALP), the Liberal National Party (LNP), the Queensland Greens (Greens), One Nation and Katter's Australian Party. The LNP prevailed in the election, with David Crisafulli becoming the new Premier of Queensland. 
+We have identified several key issues that the major parties campaigned on during the 2024 Queensland State Election: Youth Crime (YC), Cost of Living (COL), Health (H), Energy and Infrastructure (EI), and Abortion Laws (AL). Below is a summary of each party's position on these issues:
+Youth Crime (YC):
+- LNP: Advocated for stricter penalties for young offenders, including the 'Adult Crime, Adult Time' policy, proposing that serious offenses committed by youths be met with adult sentencing. 
+- Labor: Focused on rehabilitation and prevention programs, aiming to address the root causes of youth crime through community engagement and support services.
+
+Cost of Living (COL):
+- LNP: Proposed measures such as abolishing stamp duty on new builds for first home buyers and re-establishing the productivity commission to review building industry regulations, aiming to alleviate housing costs. 
+- Labor: Introduced initiatives like 50-cent public transport fares, a $1,000 energy rebate, and free lunches for state primary school students to ease cost-of-living pressures.
+
+Health (H):
+- LNP: Committed $590 million to an 'Easier Access to Health Services Plan,' aiming to reduce ambulance ramping and hire additional healthcare workers. 
+- Labor: Focused on maintaining and expanding healthcare services, addressing hospital capacity issues, and investing in new health infrastructure.
+
+Energy and Infrastructure (EI):
+- LNP: Criticized Labor's Pioneer-Burdekin Pumped Hydro Project as financially unviable and canceled it upon taking office, opting to explore smaller-scale hydro projects instead. 
+- Labor: Proposed large-scale renewable energy projects, including the Pioneer-Burdekin Pumped Hydro Project, to transition towards 80% renewable energy by 2035.
+
+Abortion Laws (AL):
+- LNP: Stated there would be 'no changes' to abortion laws under their government, maintaining the status quo established in 2018. 
+- Labor Party: Supported the existing abortion laws and opposed any attempts to repeal or amend them. Asserts that LNP intend to restrict access to abortion services based on the views of some of their members.
+
+Analyze Reddit comments and code them based on the positions they support or oppose concerning these issues. You will output JSON, so valid values are strings or null. Use the following codes: YC, COL, H, EI, AL. If a comment's position is unclear or does not pertain to these issues, output null.
+
+Secondly identify which party the comment appears to support. Use the party code ALP, LNP, Greens, ON, KAP if this can be determined, otherwise a null value if undetermined.
+
+Output JSON as a list of objects where each object has an "id" (integer) property of the comment id, an "issue" property set to the issue code string (or null value), and a "party" property set to the party code string or null value. Null means JSON null, not a string. Values MUST be quoted, e.g. {"party": "LNP"} unless they are null, e.g. {"party": null}. Comments follow:
+
+1. Well nuclear is not cheaper. In terms of cost overruns nuclear is worse than any other mega project type, even the Olympics. Here’s what possibly the world expert on mega projects has to say. https://twitter.com/BentFlyvbjerg/status/1662016016493191169 And it’s backed up everywhere else. Uk, flagship project is over budget by $92 bn. https://reneweconomy.com.au/cost-of-uks-flagship-nuclear-project-blows-out-to-more-than-a92-billion/ Tbh I’m a fan of nuclear. But we have left it too late, we don’t have the capability or capacity to build manage and maintain nuclear. There’s still huge opposition to it, especially when people might need to live near a plant. I think small scale reactor projects look promising but it’s decade before we will have them up and running. And it isn’t cheaper.
+2. Sounds like you are volunteering to have the nuclear reactor or its waste stored next door to you
+3. Exactly, fits into the "social gains" category that these fuckers want to send back to the 1950s.
+4. Shhhh. You'll destroy their carefully crafted, bullshit narrative.
+5. Going by the Qld police stats, Bundaberg has more than a 50% higher crime rate than Brisbane. If you think that is acceptable then OK that is your choice. Others however may disagree. What rights are we surrendering? Victims of crime rights?
+6. What?
+7. Brother, crisafulli cancelled it himself by not budgeting a cent for it
+8. LNP already canned those in favour of coal plants being open indefinitely despite being hailed to close down in 2025 and 2030 iirc
+9. LNP already canned those in favour of coal plants being open indefinitely despite being hailed to close down in 2025 and 2030 iirc
+10. If the UK project has over run by $92b AUD or a cost over run of just over 5 times the original estimate. Our Snowy project has cost over run of 10 fold from original estimates and has way, way, less capacity and only 40% availability. With those metrics nuclear is the cheaper option by far. You should not sell our Australian engineers and trades people short. If Argentina can do it, I cannot see why we could not? We may even retain our top engineers here instead of losing them overseas. If we take another 10 years for nuclear to come on line then so be it. They are an 80+ year asset. Australia's energy transition will be our generations single biggest investment ever. Some would say the biggest investment since WW2. We need to get it right for many generations to come. Nuclear becomes cost effective if calculations are done over the 80 year life span. Wind and solar will be replaced at best 3 times but more likely, 4 times in this same time scale. As the Gencost report states (in the fine print), storage is not factored into the published figures. More expense. A 100% renewable plan leaves us with no base load security into the future. Something that large scale manufacturing and industry needs if we are to bring this back on shore. Same deal with green hydrogen and green steel. Now with the exponential rise in power requirements for data centres and AI super computers, base load power is essential. Currently Nuclear is the only zero emissions solution to the problem. This is why Google, Microsoft, Amazon, etc. are all investing in their own nuclear plans to ensure energy security for these emerging technologies. We have our own data storage and AI companies that will require powering which renewables cannot securely do. I cannot see a modern Australia staying competitive against our rivals without nuclear. If people still don't believe nuclear is cheaper, then simply lift the ban on nuclear energy generation and let the market decide. It is as simple as that.
+11. I would. Cheap land and lower radiation than beside a coal fired power plant.
+12. As Dutton has said, they are best placed at retired coal plants so we can reuse existing infrastructure. That would be the "greenest" thing to do. Reuse, Recycle and Re-purpose.
+13. 50% higher doesn't really give me anything. If the crime right is 1 in 10,000, 50% higher would be 1.5. On top of that, crime comes hand in hand with lower socio-economic situation. Concerning how low bundaberg is compared to Brisbane, that not noticeable difference is actually not bad. What's needed is jobs and investment in the rural areas to give jobs and improve the situation for rural Queenslanders. And the LNP is not going to do that. Labor has and is doing that. Also I want a criminal code and system that works at rehabilitation and not punish children as adults.
+14. Well, Brisbane has a crime rate of 6,818/100,000 people while Bundaberg has a crime rate of 10,793/100,000. This will be a 58.3% increase than what Brisbane would experience. If you want to drill down further, crimes against the person greatly increased over the last several years. If you can't get a job in regional Queensland at the moment then you don't want to work. Employment is everywhere hence why we are having to import labour.
+15. The LNP will implement a criminal code and system that works at rehabilitation, but serious offenders need to be punished accordingly. Also, a 17-year-old who stabs and kills an innocent mother is not a child.
+16. You can't honestly believe that you can be "tough on crime" yet also be a system that works at rehabilitation because those are mutually exclusive. Bringing up a hypothetical to prove a point is pointless. Like what about the 13 year old who has been physically, emotionally and sexually abused for 10 years, kills there rapist? Surely the deserve compassion. See I can do it too and doesn't contribute anything
+17. "punishment" isn't the point of the justice system you stupid fucking fascist
+18. Yes, they do deserve compassion and shouldn't be locked up. Sometimes there is nuance to a case, but most of the time there isn't. And no, they are not mutually exclusive. Saying that they are just goes to show how you lefties think.
+19. It's fascist to believe that someone who stabs and kills an innocent mother should be put in prison for the rest of his life? Emma Lovell's family have lost her from their lives because of that 17-year-old with a knife. He was given 14 years in prison, but Emma's widower has stated his completely justified belief that it is not enough. Sorry if you think his desire for justice is fascist. And yes, punishment is a very big part of the justice system, and is the main component to a lot of people. In the majority of cases, rehabilitating criminals is a waste of time. Murderers shouldn't be let out. They have irreversibly taken someone from their loved ones, and they get to walk free? They are evil and need to be put away.
+20. "Get tough on crime' policies such as mandatory sentencing aim to reduce the level of crime by (1) using increased costs of punishment if caught as a deterrent, and (2) by incapacitating convicted criminals." That's from the ANU doing a report for what these politicians were saying. This is literally the opposite of compassionate policing. I'm not sure how you reconcile both in your doublethink head, but you can not be tough on crime and also have nuance. Also, reducing things down to name calling really shows that you don't actually think for yourself. Do better for yourself, your family and your community.
+21. Some criminals don't deserve compassion. Some crimes have nuance, some don't. The LNP policy will respect the nuance in a crime if said nuance exists. I called you a lefty because that's what you are. I suppose it is a pejorative, it has negative connotations. I was just pointing out that you have rather simplistic views on policing. My family are LNP voters and have a general disdain for left-wing thought. They'd be quite happy with my conduct. And as far as I'm concerned, I am doing good by my community.
+22. Evidence to this apparent LNP reversal of policy. "I said so I guess" like you can believe that words mean the opposite of what you think they mean if you like but if you start doing that to everything, then the world's going to get pretty complicated for you. I'd prefer socialist to be honest. As I consider myself a radical humanist so I dont take particular offence to anything you call me. I mean, your family isn't a community. If anything, you are just convincing me that you live in a bubble and just want your views reinforced. Won't get that from me, you see.
+23. You can't. Sadly. Political communication is immune from the spam act. Most times its a virtual SMS gateway texting a number range. It's the same technology that allows those emergency alert SMS functions. The only way to opt out is to not have a phone.
+24. Unfortunately you can't. Your personal information comes from the electoral roll and political parties are exempt from Do Not Call and spam laws. EDIT: By way of explanation, the High Court has ruled twice (Australian Capital Television Pty Limited v Commonwealth (1992) 177 CLR 106 and Nationwide News Pty Ltd v Wills (1992) 177 CLR 1) that there is an implied right to freedom of political communication in the context of an election. While the High Court held that this was a freedom from government restraint rather than a freedom conferred on individuals, it means that political parties are exempt from the Spam Act 2003 and Do Not Call Register Act 2006. If political parties had been included the relevant sections those laws would likely be unconstitutional.
+25. You can't
+26. Political parties are exempt from the Do Not Call Register. It's pointless replying to these text because they are virtual numbers which are used through Clicksend or similar so your replies don't go anywhere or get seen by anyone.
+27. Unfortunately just delete and move on. You really have 2 options in this world, accept spam or run two numbers - one number for banking and government agencies, a second number you burn every 2 years.
+28. Me too - they’re perpetuating lies. —> Lying Nasty Party.
+29. They get a lot of info from the ECQ. They are exempt from the no call register. No major party will get rid of this ability.
+30. Delete it, decide whether it will affect your vote, and move on.
+31. Hi, For just $50 I can stop all Qld Political SMS for you for 40 mmonths starting monday.
+32. I still get hammered periodically with NT political survey and polls even after leaving nearly 10 years ago
+33. I’ve had three from LNP , it’s so annoying as I will not vote for them. I hate this type of invasion
+34. They messaged me but the name was wrong? Lmao.
+35. I signed up to their mailing list. Fake, but realistic name or it'll get filtered out by auto filter. Email address is dontfuckingspamtextme@gmail.com This shit takes time to remove from your mailing list.
+36. I’ve got a handful in the past few weeks. Two so far today… make it stop!
+37. I'm trying "fuck off, nutjob"
+38. I got one this morning, too. But mine was directed to ‘Tamara’. My name is not Tamara. An easy mistake for them to make, though - I’ve only had my phone number for 22 years. I just replied ‘Fuck off’. They haven’t got back to me yet.
+39. If someone had Cristufullis personal number I will send him a personalised goatsie or whatever the kids call it these days.
+40. I reported it as spam. Don’t know if it’ll help.
+41. Block and mark as spam. 100 reports later they are paying for messages that are not being read by anyone with a phone manufactured by a participant in the supplier anti spam scheme, which is a commercial scheme not a legislative scheme, and not subject to those constitutional legal issues If your phone does not support this scheme, get one that does. It blocks over 90% of this and scam texts
+42. The same way millions of men across the world do: send unsolicited dick pics.
+43. Block the number like I did.
+44. Can’t opt out of political advertising.
+45. They are allowed to and use available lists for your contact (electoral role etc). You can’t opt out of political adverts.
+46. Unsolicited d I c k pics may fix this….or make it much worse, but there’s no in between.
+47. Even though I know I'm replying to an automated message service I still reply and tell them to eat a whole bag of dicks and then go play in traffic.
+48. Never give you main phone number or email address to register anything online. Get a $5 SIM from Aldi and use that number to register for anything on the internet. If you need to get a code on that number, stick it in a phone, get the number and then remove that SIM and store it in a safe place. That prevents the SPAM SMS messages from political parties (and others) as they go to the number that you do not use. Use an Alias email address and not your main personal address. Register for free with SimpleLogin and you get 10 free aliases that you can point to your address that stays private. Personal privacy is a basic human right.
+49. 🤣🤣🤣🤣🤣
+50. I have gotten sooooo many texts this election round with my name on it. Infuriating
+51. Lol my dad keeps getting these texts too and its pissing him off so hard
+52. I’ve asked to be unsubscribed from my LnP member’s email list like 15 times. These is no recourse and the bastards don’t care.
+53. Move to Mexico, cancel Australian citizenship.
+54. Which is why I voted for the cannabis party
+55. the moment you shop eg: coles, woolies, Good guys and pillow talk , they sign you up and sell your number and intrude your privacy you shouldn’t be surprised That includes any charities as well, unfortunately 😞
+56. It’ll stop tomorrow. Don’t let it worry you.
+57. How do they know your name and location? I remember you had to write these details on a public piece of paper before you had to enter a shop 2-3 years ago
+58. I never receive any of this shit. Never have. I dare say they use your voter registration details and based on that they send them out. I'm a permanent resident so don't vote. I've never enrolled so this is likely why I have never received any of this crap. Keeping a low profile online also helps. I don't use social media.
+59. I was fine until I emailed our local LNP councillor for assistance with something and now I’m inundated with slop.
+60. Law needs changing.
+61. Wow didn't really think of this - and doing the latter with an eSim would be so easy too. Great advice
+62. A copy of the electoral roll is, by law, provided to every elected member of the Legislative Assembly and available on request to any registered political party and candidate.
+63. They aren't required to care because, by law, they are exempt.
+64. > How do they know your name and location? From the electoral roll.
+65. Nothing like that at all. It’s from the electoral role.
+66. Yea they use the electoral role
+67. I’m a citizen and vote every year. I’ve only ever received 2 of these. I think they have something to do with signing petitions. I also do not have any personal social media accounts.
+68. Ahhh, that explains it.
+69. To what? The Commonwealth had legal advice that including political parties would be unconstitutional.
+70. But numbers in Australia are against supplied info (100 points like licence etc) it’s not an anonymous number.
+71. Other sources too - I'm a permanent resident as well, not on the electoral roll, but get junk from the LNP and occasionally, One Notion. Name misspelled, in exactly the same way as the mailing list of a developer I once foolishly interacted with and who made it exceptionally hard to unsubscribe (opt out button did not work, emails were ignored until I finally found the number of someone competent).
+72. Get money out of politics
+73. Any sane person who sees this would probably agree it's problematic. Honestly why is it still allowed?
+74. And will Crusafooli and co be referred to the crime & Corruption Commission for accepting bribes when they roll back the changes to mining royalties.? The funds have obviously been paid by the miners to get a pre-agreed result¡
+75. Always, follow the money $$$$$$$
+76. Just some change lying around from all the taxes they don't pay.
+77. That would explain why I’m seeing their ads literally everywhere. Trying to buy the election through mass propaganda.
+78. Lots of coal doners. Imagine spending a few loose million to save yourself billions. Hardley feels fair for the rest of us.
+79. And these donors will be expecting favours from the LNP.
+80. One Nation budget is such BS
+81. Time to ban lobbying
+82. There's a few million reasons why they want to get rid of the hydro electricity plant...
+83. Not counting the millions of dollars of free advertising they get from the Murdoch press.
+84. Using a lot of trees on printing a load of shit and leaving it in my letterbox to go straight in the bin. At least it may get recycled into something useful.
+85. Damn, for a party of its size comparatively. Half the donations to the greens as Labor?
+86. That's what happens when you're going to remove mining taxes. The miners reward you handsomely for your treason.
+87. This is exactly why Crisafulli said he will scrap governments being involved in mining royalties. We are giving away our state, and country to the highest bidder. And that happens to be international resource companies that have your best interests at the bottom of the pile
+88. Also remember that Labor has unions funding millions that doesn't show up in that graph.
+89. You need to include the 3rd parties advocating who receive funding and their spend for this graph to be fair. The lnp on direct donations did indeed receive more. However if you look at the overall spend by unions on 3rd party campaigns, amnesty international misguided view of the youth crime intervention etc. you'll see the overall spend is swung far and away in the direction of Labor.
+90. As much as I find the money spent on elections disgusting. 1. The $0.50 fares were a thinly veiled attempt to buy an election. How much does that add to the ALP spending? 2. All these people who are in disbelief that the ALP lost are completely out of touch with the rest of Queensland. Both the major parties need to realise that QLD exists outside of Brisbane.
+91. How the fuck is this not corruption
+92. Where’s the chart with the union money? They run their own ads etc so they don’t have to show it in the labor figures.
+93. Instead of the "Authorised by the X Party Queensland" message at the end of political announcements, it should be "Sponsored by our donors: " and a list of who's giving money to who.
+94. Labor lost because their campaign was focused on a negative scare campaign and not on what most Queensland's saw as priority.
+95. Miles is a strong candidate it’s just such a shame he’s tarred by the dirty grimey palacek brush.
+96. Union funding has been helping out the ALP for decades. Maybe the CFMEU needed to save funds for legal fees.
+97. Or could it be that everyone is waking up to the fact that we can’t afford another term of bully boy Miles and Labor
+98. Yeah this is straight bullshit unless you include the advertising spend by the unions under Labor
+99. So how are parties supposed to pay for campaigns?? Advertising and marketing isn’t free
+100. The people who make the laws are the ones receiving the money.
+101. Yeah, that warrants an investigation. They're clearly laundering their "not donations" somehow.
+102. Agreed, the advertising Ashby has done in Keppel alone
+103. The Labor figure is misleading - the unions spend millions pushing labor, but don’t actually give them the money.
+104. Less than half the size. They only hold 3 seats while Labor has 47ish. It gets interesting when you start looking at where the donations come from. The vast majority from a single donor Duncan Turpie. Then a few hundred thousand are passed between branches so you can't identify the original source. I don't particularly expect a high level of transparency with donations, I'm sure all parties are similar in this sense but I find it ironic for a party that constantly talks about their transparency to launder large donations between branches like that.
+105. Doesn't it? Why not?
+106. And also, how much do the unions spend on political campaigns..?
+107. Imagine comparing the unions that represent working class Australians with the owners of coal mines. Lol.
+108. Parties who get 4% or more of total first preferences get government payments like the dole to cover election expenses. I think the commenter is referring to what amounts to electoral bribes by the corporate interests and rich individuals.
+109. They can be given a flat budget from tax payer funds. As it stands lobbyists in particular those of the mining companies have an absurd level of influence in campaigns and this shows. If Labor had an equal amount of publicity and funding to what the LNP did I have absolutely no doubt Labor would have secured another term.
+110. Nah i am sure the please explain cartoon makers are paid $2 per video s/
+111. Nothing to do with where the money comes from - it’s about representing the actual flows of money. Unions have about 12.5% of working adults as members & this continues to fall. The majority of these people are public servants, construction or teachers.
+112. I haven't voted yet, but common sense logic feels like early voters would be the least likely to be swinging voters.
+113. No. That's why I voted early.
+114. Early voters tend to have had their minds made up early
+115. I'm a swing voter, but miles seems like a nice cunt and the other bloke seems like a cunt cunt, so I'm gonna vote labor
+116. A large percentage of the population always vote for a particular party. For argument's sake, let's say 35% always vote LNP and 35% always vote Labor so it's the 30% swinging voters that determines the outcomes of any elections. I'd say that the vast majority of early voters are those with fixed voting patterns; might as well get it out of the way since one always votes a particular way.
+117. Steven Miles is one of us. I felt his determination over last few days. He wants QLD to be the best, but does not compromise on taking us all on the journey. LNP is about dividing community & scaring it into obedience. I changed to Labor for DC arrogance.
+118. Changes to abortion laws and no concrete funding plans? I don't regret my early vote
+119. I'm surprised there aren't any more outspoken people about 'adult crime, adult time' I worked in a detention centre up in Townsville for a few years and the biggest thing is capacity and staffing. There is no way this policy gets put through, even if the LNP builds another 60 beds or whatever staffing the thing will be impossible and the courts will let them out. Most of the policies and promised changes from the LNP are baseless which is why when someone who has actively voted against pro choice previously says 'no changes to abortion laws' the voters can't trust it. This mob may aswell be wearing snake skin suits at this point. I don't doubt the LNP will scrape in even with all that, they run a pretty convincing scare campaign on ads between the block and dash cam videos.
+120. Right leaning but voting labour. The campaign and policies by the LNP is pathetic to say the least.
+121. Nope. I always read the presented policies and end up voting: Greens 1, decent indies, Labor, whacko/nutjob parties, Lying Nasty Party last/greatest number.
+122. Hard no. Greens 1, LNP last. Always
+123. The thought of LNP winning makes me feel ill.
+124. I think the title for this should be "Early LNP Voters - any change of heart?" I have voted early, but I voted for the party that had their policies out further than 2 days from the election, and supports taxing mining companies to do things like 50c public bus fares and electricity rebates... And oh yeah, is CLEAR in their support of Women's reproductive rights and health issues. Vote Labour if you have Women/Girls in your life that you love and want to protect. Vote Labour if you want Electric Hydro work to continue to reduce your electricity bills and to progress work on addressing climate change.
+125. the way the campaign has gone since I voted has just reinforced my decision
+126. I voted day one of pre poll and there's no way I'd change my vote unless Labour turned out to be secret Nazis
+127. Not a chance. I live in Toowoomba, solid LNP ground. I voted Labor proudly, with Green as my next choice. The idealist in me would have put the Greens at 1, but the pragmatist in me wants to see actual change. Fuck Trevor Watts, fuck David Janetski, and fuck the LNP.
+128. Nope
+129. I’ve been on the polling booths. Heaps of people are changing to Greens 1, Labor 2, as the vote flows to labor anyway, (in a standard seat).
+130. No.
+131. Absolutely not. The LNP are still cunts and I don’t want them in.
+132. Nope fuck LNP
+133. I voted ALP because all I care about is upvotes in r/Queensland
+134. Actually yeah, I was quite conflicted at the early voting and was/am concerned that I couldn't place one nation any lower.
+135. No change of heart, just further confirmation I voted the right way.

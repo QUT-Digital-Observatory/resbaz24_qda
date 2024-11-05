@@ -1,0 +1,158 @@
+Your job is to analye a series of Reddit Comments are drawn from sbumissions related to the 2024 Queensland State Election. The comments are drawn from a collection of comments before, during and after the election itself on the 26th of October. The parties that sought election were the Australian Labor Party (ALP), the Liberal National Party (LNP), the Queensland Greens (Greens), One Nation and Katter's Australian Party. The LNP prevailed in the election, with David Crisafulli becoming the new Premier of Queensland. 
+We have identified several key issues that the major parties campaigned on during the 2024 Queensland State Election: Youth Crime (YC), Cost of Living (COL), Health (H), Energy and Infrastructure (EI), and Abortion Laws (AL). Below is a summary of each party's position on these issues:
+Youth Crime (YC):
+- LNP: Advocated for stricter penalties for young offenders, including the 'Adult Crime, Adult Time' policy, proposing that serious offenses committed by youths be met with adult sentencing. 
+- Labor: Focused on rehabilitation and prevention programs, aiming to address the root causes of youth crime through community engagement and support services.
+
+Cost of Living (COL):
+- LNP: Proposed measures such as abolishing stamp duty on new builds for first home buyers and re-establishing the productivity commission to review building industry regulations, aiming to alleviate housing costs. 
+- Labor: Introduced initiatives like 50-cent public transport fares, a $1,000 energy rebate, and free lunches for state primary school students to ease cost-of-living pressures.
+
+Health (H):
+- LNP: Committed $590 million to an 'Easier Access to Health Services Plan,' aiming to reduce ambulance ramping and hire additional healthcare workers. 
+- Labor: Focused on maintaining and expanding healthcare services, addressing hospital capacity issues, and investing in new health infrastructure.
+
+Energy and Infrastructure (EI):
+- LNP: Criticized Labor's Pioneer-Burdekin Pumped Hydro Project as financially unviable and canceled it upon taking office, opting to explore smaller-scale hydro projects instead. 
+- Labor: Proposed large-scale renewable energy projects, including the Pioneer-Burdekin Pumped Hydro Project, to transition towards 80% renewable energy by 2035.
+
+Abortion Laws (AL):
+- LNP: Stated there would be 'no changes' to abortion laws under their government, maintaining the status quo established in 2018. 
+- Labor Party: Supported the existing abortion laws and opposed any attempts to repeal or amend them. Asserts that LNP intend to restrict access to abortion services based on the views of some of their members.
+
+Analyze Reddit comments and code them based on the positions they support or oppose concerning these issues. You will output JSON, so valid values are strings or null. Use the following codes: YC, COL, H, EI, AL. If a comment's position is unclear or does not pertain to these issues, output null.
+
+Secondly identify which party the comment appears to support. Use the party code ALP, LNP, Greens, ON, KAP if this can be determined, otherwise a null value if undetermined.
+
+Output JSON as a list of objects where each object has an "id" (integer) property of the comment id, an "issue" property set to the issue code string (or null value), and a "party" property set to the party code string or null value. Null means JSON null, not a string. Values MUST be quoted, e.g. {"party": "LNP"} unless they are null, e.g. {"party": null}. Comments follow:
+
+1. Townsvillian here. Please don’t lump us all into this bucket. It’s a big area with lots of different views. I agree it can get pretty rough and some of these people are as bogan and redkneck as they come. They have big mouths but there isn’t as many of them as they think there are. Unfortunately when an electorate consists of dozens of tiny towns in the outback, they end up electing some real nutjobs to represent them and while they don’t have much power, they do end up making noise and drawing attention to themselves on the state level. When in reality their electorates have tiny populations compared to anywhere else.
+2. Never go full tropo
+3. I think we have heard just about enough from FNQ if all they are going to vote for is misogyny, racism and religious nutjobbery.
+4. I absolutely cannot stand this woman.
+5. To be fair, this woman was a Townsville councillor, and she got voted out. People don't want her, she's not right in the head. (noting that people in Townsville also voted for some serious crazy for their Mayor)
+6. Haha my previous councillor doing the hard yards
+7. Old mate is desperate for a shag
+8. Is she touched in the head?
+9. What in the boomer is this?!
+10. Tropical qlders are weird ay. But I recognise they're happier than south east qlders so obviously they're doing something right. Kind of jealous northern qlders can find happiness in stupid embarrassing stuff.
+11. Weird.
+12. We have MAGA at home
+13. To be fair I live in FNQ and the general sentiment of people is a bit crazy so the tag line is not entirely wrong.
+14. Hearts, maybe. Minds? Not so much.
+15. That's definitely a huge no thanks from me!!
+16. Irrefutable proof that the further north you venture in Australia, the clearer the evidence that the brain is eviscerated by heat and humidity!!! If you've ever seen the movie Escape From New York, maybe it's a life meets art guidepost that a fence needs to be built across a certain parallel to protect us from not just those who they call criminals but also those who are effectively lobotomised and criminally insane!
+17. Man, the way people talk about you folk up there disgusts me sometimes. Just as much as the better among us down here understand that you're not all racist caricatures of cowboys, please don't think we're all like the worst commenters in here either. Thanks for chipping in, we're all Queenslanders.
+18. Well said
+19. They don't represent all of us, but sadly a lot. Not all of us are brain-dead boomer cookers. But on behalf of the sane FNQlders, I am sorry Queensland.
+20. don't forget domestic violence.
+21. In Cairns all the Freedum numpties have a regular gathering where they mark through the city and around the lagoon pool banging drums while holding signs with slogans like "What ever happened to climate change!". Then they gather in a park to circle jerk their beliefs. That said people are generally super friendly, easy going. I'd choose them over Sydney any day. But there it is definitely a cooker stronghold.
+22. Yeah honestly let that reef state shit become a reality. Not like we invest anything up there anyway. We should just Czech it and have a clean break.
+23. The current speaker of the house is a Labor candidate, his Leichhardt electorate is in FNQ. That's like me saying the same things about Brisbane because PHON is from a Brisbane electorate. Please Explain?
+24. Have I mentioned I cannot fucking stand her?
+25. Wild when you think about it. Talk about a protest vote and a half.
+26. Hopefully voters dump her again.
+27. I agree with your point, in a way. Seeing other people from down here absolutely *seething* at people from FNQ and the tropics is amusing, given how often it happens. It's almost like they're not allowed to form their own views or have their own opinions. Hell, just look at this comment section for great examples. And then it'll be the usual shocked Pikachu face when that tactic doesn't convert to votes. "What do you mean calling them idiots and knuckle-dragging racists didn't change any minds! How can this be!" Meanwhile they're just plodding along happily doing shit like this video. It's great.
+28. They are happier because they live in a bubble of heavenly bliss and ignorance. They are happy in their delusion. Just where their politicians want them. Controllable.
+29. FNQMAGA
+30. As long as you're fenced out of the profits from our mines, go nuts.
+31. Wait the further north u go the higher the representation there is of first nations people, to the point where they vastly outnumber other groups of people past cooktown...what exactly are u saying here about them? Because what you've just written is a straight up request to segregate the first nations Australia from the rest of the country amongst other racist garbage you've just spewed
+32. Thanks for that. Yeah sometimes it’s hard to remember how varied every region is. I know these places have reputations and some of it justified. But NQLD is also full of working professionals living in cities of cairns and Townsville with most of the amenities that we would have if we lived in Brisbane, doing the exact same thing we would be doing if we lived in a major city. The only difference is we drive to work in 10 mins and our house is worth half of yours - for better or for worse :) I’m an engineer. I work at a major hospital. I don’t like football or fishing. I barely drink and value air conditioning above all else. Maybe it’s me that’s the odd one out around here lol.
+33. I loved up there for 7 years, the people honestly didn't seem that different to most of the people I see down here, or grew up with in the sunny coast
+34. FWIW it’s not like regional Queensland has disproportionate electoral power. They’re physically large electorates but they don’t have more power. Plenty of LNP voting weirdos in and around Brisbane
+35. https://www.theguardian.com/australia-news/2020/feb/19/three-dead-including-children-after-car-allegedly-set-alight-in-brisbane You were saying.....
+36. Back in my day we kept domestic violence behind closed doors.
+37. In Mackay too.
+38. Yeah all 4 fnq seats are currently held by Labor
+39. You and me both.
+40. Bob Katter went full [boot scooter ](https://www.youtube.com/watch?v=xXSTjOjaNFA)in 2012 and though he would win a dozen seats.
+41. Yeah I think you found a nice middleground tbh. Good comment you got there. Tbh .I approve of other opinions and put myself into the shoes of others. But without being rude idk how to say it. North QLD is weird and I struggle to jump into their shoes to figure out why they think the way they do. I just don't understand (without any hate towards them) I moved from Bundaberg to Brisbane so even just a central to south east change put me with people more more aligned with my values and opinions. Central qld culture suffocates me with isolation and the thought of further north just seems worse on a basic level So like. I struggle to imagine how it is north of Bundaberg. When Bundaberg to me is bogan as heck, like. Moral standards, speech standards, dress standards, all of it. Genuinely curious enough to sit down at a pub and drink with these people to find out though. Like how do they live the rural/regional life without waking up every day feeling like they're missing out on life because they're out in the middle of nowhere? That's one secret I'd like them to bless us with tbh
+42. In other words. If I choose to be a sheep I'll be happy? I'm almost acceptable to that idea tbh
+43. I think it's because they get to spend more time outdoors and the sun is almost always shining, tons less traffic and crowds, cleaner air (except Mt. Isa) etc. Also they don't have to get along as much, as there's less people to deal with. Not being faesictious. Studies have shown why.
+44. Personally I'd just be happy to segregate KAP voters
+45. As an indigenous person your logic is so bad.
+46. I hope you don't find this insulting, but as a former Canberran who moved to SEQ 20 years ago for a trade job and had to learn the accent you sound like my kind of person, thanks for chiming in.
+47. Not sure what you're trying to say but Regional Queensland, especially North Queensland has the lowest representation in the country aside the NT and ACT
+48. I don't get what you're trying to say. Margie Ryder has come out this week to say that, basically "if you have to use your jug cord to dicipline your kids, do it" Nick Dametto, my MP, has basically said "why do the police need to get involved in DV issues? Just take a couple of cousins over and sort them out". These views are abhorrent and I'm fucking ashamed of my local community.
+49. Yeah but now all these kids just come into your home, domestic violence all over the place and then just leave...at least that's what I always tell the cops.
+50. \*High five\*
+51. Wow thanks for the link haha. Makes me realise that if this was Europe the Northern qlders are the equivalent of living on the opposite side of Europe to us. Almost completely different cultures at this point. Soon we will be north Aussie and south Aussie and coastal Aussie Edit: sorry I forgot WA, WA as well I guess
+52. >Like how do they live the rural/regional life without waking up every day feeling like they're missing out on life because they're out in the middle of nowhere? That's one secret I'd like them to bless us with tbh In the words of Douglas Adams: >Man had always assumed that he was more intelligent than dolphins because he had achieved so much—the wheel, New York, wars and so on—whilst all the dolphins had ever done was muck about in the water having a good time. But conversely, the dolphins had always believed that they were far more intelligent than man—for precisely the same reasons.
+53. Oh hell no. Been there done that. I have a sister like that. She is forever online chasing conspiracy theories and rabbit holes.
+54. Aaahhh, no. I would love to see that study. I have seen neurological research to see that conservative are driven by fear as they have primitive centres of the brain. Me thinks this is over compensation for the fear?
+55. I could get behind this.
+56. I think we’re all just fish out of water wherever we are, in the end. If suddenly we start to blend in, maybe we need a change :)
+57. What do you mean by lowest representation? Electorates are proportionate to population size
+58. Understand why you are confused, when using stereotypes you generally are ignorant to things around you. Read the article, this didn't happen in FNQ. There is a fucking huge difference between using a jug chord for discipline and being burnt alive in your car.
+59. Excuse me while I take notes. I once heard something similar about "a lion refuses to do anything more than sit on his rock enjoying the wind in his face with an air of superiority as the King of the jungle despite doing nothing at all" Thought this was worth dropping under your comment
+60. Dang it. Guess I'll buy a kayak and convince myself floating down a river is fun or something idk.
+61. You might be on to something there, happy cake day by the way!
+62. [removed]
+63. also DON'T FUCKING HIT YOUR KIDS WITH ANYTHING! THAT'S DOMESTIC VIOLENCE.
+64. I know how you feel. It's been very engaging and I look forward to a break from it, it can be exhausting. Personally I've seen far more election content from grassroots campaigners/meme pages than ads. Perhaps it's because of the type of content I usually consume. Supposedly Crisafulli will now finally feel safe to release his costings and the meme pages will take over to make sure everyone is aware of it. The next 48 hours is the main event. This election is extra spicy because the many months of certain defeat (or victory) has just become complete uncertainty. It's going to be a closer finish than I had anticipated.
+65. Guess the LNP can finally release their costings now, huh?
+66. I'm in CQ and I swear if I see that anti mining royalty ad with the sad people wearing hi-vis and sitting in a pub one more time... Although It's really done a good job on making my partner become a little less an LNP fan boy. He screams at the TV "If you have millions to show me this commercial a thousand times a day, you can live with what you're losing in royalty fees!" so at least there is that.
+67. I haven't seen any ads yet. Where are they?
+68. I probably only saw like 30 ads the whole time. Probably because I don’t watch mainstream tv at all. So the few I did see were either on billboards or YouTube. I guess I’m lucky lmao
+69. And the posts on this sub, sweet fuck it’s been a long campaign.
+70. anyone got a link for David's costings? He promised to release them today
+71. I haven't seen a single ad. Why would you watch free to air TV?
+72. I don’t watch tv thankfully, but I’m so ready for this election to be over. I’ve only been back in Australia 3 years and I’ve already “participated in” a federal, local and state election. That’s enough “democracy” thanks.
+73. I am sure the laborites will not stop in r/queensland, for the next four years.
+74. [deleted]
+75. Haven’t seen any posts yet. Assuming this date was a lie to from the LNP?
+76. There’s this horrible ad of a crying woman at a press conference. I hate it.
+77. Do you use and adblocker in your web browser? I do and I haven't seen shit. They've been smashing YouTube apparently.
+78. TV. We watched The Summit (no judgement please) on 9Now and it was a shit show of awful ads. One was promoting positive results and commitments from Labor and the rest just attacks.
+79. Same. Haven't seen a single one.
+80. Outside on billboards, bus stops etc, on every social media platform, on Reddit, on YouTube, on radio, on tv, on….
+81. What about youtube?
+82. What? No tv, no Facebook, no instagram, not TikTok , no YouTube , no being outside and around seeing billboards etc … must be boring.
+83. So many of you lot have accounts less than a month old and have frequent commentary in circlejerkaustralia. It's as if you're all trolls just trolling each other at this point
+84. Hasn't stopped you from banging on, bruised_teste.
+85. adblockers + streaming + offshore youtube premium. I don't often look at the courier mail or facebook but have seen only a few ads.
+86. That is why I use the Brave Brower. Don't see a single ad and watch YouTube all day. When I go round my parents and see Dad watching YouTube ads on his TV I am very glad I don't get them. I might try and put an ad free version of YouTube on his Chromecast for him.
+87. Media blackout from today, standard election rules.
+88. I have seen adult crime, adult time billboards that have a boy with an old mans face on them. I guess he must be an drug addict doing time or something.
+89. Brave Browser blocks them for me.
+90. Never watch free to air TV, I ad block YouTube. Fuck TikTok! Don't pay attention to billboards.
+91. Dude has a profile name that is often used as a pejorative for trans people. Thinks lnp isn’t corrupt and let’s be real is probably vile, hence he gets banned. So sad if they are a real person and not bot
+92. You must be on iPhone. Brave is about the only adblock solution you can get on IPhone that's not a hassle to set up. I use ublock in Firefox on Android. Works a treat! Try smarttube app dude. I use it on Nvidia shield TV. Works really well and auto updates etc.
+93. There you go. That’s LNPs plan to give a private company $80million for 4 years for a prison that can have only 60 teens at a time.
+94. I am on Windows. I have a PC plugged into my TV. I rarely watch YouTube on my phone but do have SmartTube installed.
+95. Saved you a click: Mike Jessop is running as an independent.
+96. Do the adult crime do the adult time says christafulloshit
+97. The geriatric crime wave is hitting hard in Caloundra. Michael Norman Jessop, 69, is on bail. The boat builder from Little Mountain was arrested on July 22 after police were called to reports of a man acting suspiciously outside a property in Bli Bli. Police allege they found weapons, and camouflage clothing inside a car belonging to Mr Jessop.
+98. I have to have my tools!
+99. This guy should be on remand
+100. Lol I see this dudes signs everywhere.. he has ran a few times I think.. not a serious character at all.
+101. It looks like OP posted an AMP link. These should load faster, but AMP is controversial because of [concerns over privacy and the Open Web](https://www.reddit.com/r/AmputatorBot/comments/ehrq3z/why_did_i_build_amputatorbot). Maybe check out **the canonical page** instead: **[https://www.abc.net.au/news/2024-10-23/charges-laid-sunshine-coast-caloundra-independent-mike-jessop/104506270](https://www.abc.net.au/news/2024-10-23/charges-laid-sunshine-coast-caloundra-independent-mike-jessop/104506270)** ***** ^(I'm a bot | )[^(Why & About)](https://www.reddit.com/r/AmputatorBot/comments/ehrq3z/why_did_i_build_amputatorbot)^( | )[^(Summon: u/AmputatorBot)](https://www.reddit.com/r/AmputatorBot/comments/cchly3/you_can_now_summon_amputatorbot/)
+102. Sounds like he will fit in perfectly with the other LNP nutters.
+103. Not sure if a knife in your car is a weapon.
+104. Stalking* tools
+105. Or union thugs??
+106. "It is also alleged that during a further search of the vehicle officers located a shovel, axe, gloves, duct tape, ropes and a cadaver bag." Looks like the knife charge is only part of it. I'd be more concerned about the axe, especially in the context of everything else. Normal people don't have cadaver bags
+107. How the fuck do you even get a cadaver bag without raising questions?
+108. https://www.medshop.com.au/products/sentry-body-bag-with-handles Surprisingly easily, it seems.
+109. That’ll appeal to his base.
+110. The LNP scrapping policies meant to help first nations people? Big surprise there. Another important program that's going to be cut so they can give the mining companies their untaxed profits back.
+111. You can see that the LNP are just a retread from the past. A leopard never changes its spots. But at least a leopard can learn. But you can’t educate a conservative.
+112. >By Alex Brewster Claudia Williams Kate McKenna >Indigenous leaders are vowing to "fight the fight" to help their communities tell their stories as the LNP stands by its promise to stop Queensland's Truth Telling and Healing inquiry, if elected on Saturday. >Cherbourg Aboriginal Shire Mayor Bruce Simpson said the inquiry was helping to correct "so many hurts and wrongs" the community had faced. >"The healing can only begin when Queensland and Australia hears our truth," he said. >"Cherbourg has the opportunity to finally tell their truth and to continue the history of our people. >"This inquiry will begin to break down those walls and to open those doors of opportunity to tell more of the wrongs that were done to our people." >The inquiry started in August in Brisbane and hearings are scheduled to be held in Cherbourg in November and Stradbroke Island in December, as well as two inquires on youth justice and education. >The hearings are part of the state government's Path to Treaty Act — which passed parliament with bipartisan support in 2023 — and are set to run for three years. >Chair Joshua Creamer said while the result of the Voice referendum had a "devastating impact" across the community he believed Queensland was "absolutely ready" for such an inquiry. >"This is the last generation living to tell those stories and when they’re gone that direct evidence an inquiry like this needs will be lost," he said. >"It is really important to take this opportunity to capture those stories and if we lose that I think it will be devastating for the community, but I will also be devastated for the Queensland community because they will lose an opportunity to hear those stories." >Mr Creamer said part of the role of the inquiry which was set up as part of the state's Path to Treaty was to understand the barriers in Aboriginal communities. >“This is an opportunity for Aboriginal people to take a lead in that process and to actually get real outcomes, because there is a such a long history of failure that’s well documented and has been acknowledged,” he said. >LNP leader David Crisafulli reiterated his party's position to scrap the inquiry on Tuesday and said he did not want a repeat of the "division" of last year's Voice referendum. >"The public discourse and the level of debate was a low the likes of which I've never seen from both sides, and I was determined not to put Queensland through that. >"And so, I've taken a decision. I understand not everybody agrees with that decision, but I bet you everyone agrees with this statement; we need to do more for indigenous communities." >Mr Creamer rejected Mr Crisafulli's stance that it was dividing the community saying it was about unity, but could not continue without government support. >Mr Simpson said the community would support its elders and those who have had to carry the weight and burden of the "punishment and wrongdoings of our generations". >"Our people are resilient, so it doesn't matter who gets in in leadership, we will fight the fight to tell our story and tell our truth regardless of the political climate," he said. >Mr Crisafulli said he respected the views of the Cherbourg mayor and Doomadgee mayor Frederick O'Keefe, who also addressed the media, and was committed to improving housing in remote communities. >"We are going to move everything we can to get people owning homes in these Indigenous communities. It's the bedrock of aspiration." >Former Brisbane lord mayor and LNP life member Sallyanne Atkinson said she would be disappointed if the LNP scrapped it but was optimistic the truth telling inquiry may continue in “some form” if the party is elected. >“All Queenslanders need to understand our history, we need to accept, we need to acknowledge and then we need to work out how we deal with it to move on,” she said. >“If you are going to have true reconciliation the truth must be understood.”
+113. Can do Campbell cut many of the services like this in his term too. Why would we expect any different ?
+114. JFC can we please just let indigenous people have a fucking go. Swear to God the carrying on and muck around that the LNP and their fragile supporters have when it comes to indigenous people is ridiculous. Grow up. Let the elders speak truth about the atrocities that happened before they are all dead. Should have happened decades ago.
+115. Conservatives are racists all around the world, this is not surprising, stop voting for idiots
+116. Whenever anyone talks about “their truth” it is a major red flag. Shutting down a ‘truth telling’ commission that is designed to achieve one outcome is a very good idea and a great saving of public money. Bye bye.
+117. The referendum on the voice was clear.
+118. [removed]
+119. [removed]
+120. Sticks and stones. Your insults are meaningless
+121. I was on the fence. But reading this post has swayed me. I'll vote Labor.
+122. Ten day old account with negative karma telling pork pies about Labor's spending, the state of the budget, and where the tax money comes from - while also making vaguely racist allusions to "the Aboriginals". That's a bingo!
+123. Sounds like you have a misunderstanding as to how government debt works vs individual/household debt. Or maybe you're just being dishonest. Either way, not surprising considering the supposed low levels of financial education our population has, but it's always suddenly so prevalent everywhere you look come election time. LNP and their supporters are always so gung-ho about surpluses and deficits when they're in opposition, constantly giving misrepresentations and twisting/cherrypicking statistics to fool the populace, whilst at the same time both couldn't care less and are awfully quiet about their own generally terrible economic record. Always with the slogans like "Back in Black", "A Fresh Start" and espousing of themselves being the 'better economic managers'..
+124. Correct, Steve is throwing all money at winning this, what about the 1.4 billion on school lunches, while laughing at victims of crime
+125. Agree. Sounds like we share similar views. I also think that Israel has the undeniable right to exist. Thanks for sharing your enlightened opinion on Labor and the LNP. For all of the LNP's corruption, its important to completely ignore it and espouse LNP talking points on Reddit even though you're completely politically disengaged and have no idea what you're talking about! I love doing it too!
+126. What LNP corruption? What government was it that handed something like a quarter of a million dollars to a business owned by palaszczuk's chief of staff? Oh the labor government. But no corruption there, it was all legit and above board. What about ex labor politicians given jobs on the boards of government owned corporations. Nah no corruption there.
+127. It's interesting how some people highlight alleged corruption while overlooking similar issues in their own political affiliations. It's crucial to examine all sides fairly. I am a bit concerned though that some critiques (including yours) seem to carry undertones that could be interpreted as antisemitism, especially when discussing the roles of individuals in power. We should focus on facts and accountability without resorting to harmful stereotypes or assumptions. Let’s aim for a more respectful discussion.
+128. [removed]
+129. You're a whacko LNP shill, probably working class, not benefiting from a single one of their policies, yet you're voting for them anyway, harming 95% of the population. Get it together mate. Go and touch some grass and get some fresh air. How's that for being a bot? Also, yay for Zionism.
+130. Talk about triggered.

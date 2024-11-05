@@ -1,0 +1,211 @@
+Your job is to analye a series of Reddit Comments are drawn from sbumissions related to the 2024 Queensland State Election. The comments are drawn from a collection of comments before, during and after the election itself on the 26th of October. The parties that sought election were the Australian Labor Party (ALP), the Liberal National Party (LNP), the Queensland Greens (Greens), One Nation and Katter's Australian Party. The LNP prevailed in the election, with David Crisafulli becoming the new Premier of Queensland. 
+We have identified several key issues that the major parties campaigned on during the 2024 Queensland State Election: Youth Crime (YC), Cost of Living (COL), Health (H), Energy and Infrastructure (EI), and Abortion Laws (AL). Below is a summary of each party's position on these issues:
+Youth Crime (YC):
+- LNP: Advocated for stricter penalties for young offenders, including the 'Adult Crime, Adult Time' policy, proposing that serious offenses committed by youths be met with adult sentencing. 
+- Labor: Focused on rehabilitation and prevention programs, aiming to address the root causes of youth crime through community engagement and support services.
+
+Cost of Living (COL):
+- LNP: Proposed measures such as abolishing stamp duty on new builds for first home buyers and re-establishing the productivity commission to review building industry regulations, aiming to alleviate housing costs. 
+- Labor: Introduced initiatives like 50-cent public transport fares, a $1,000 energy rebate, and free lunches for state primary school students to ease cost-of-living pressures.
+
+Health (H):
+- LNP: Committed $590 million to an 'Easier Access to Health Services Plan,' aiming to reduce ambulance ramping and hire additional healthcare workers. 
+- Labor: Focused on maintaining and expanding healthcare services, addressing hospital capacity issues, and investing in new health infrastructure.
+
+Energy and Infrastructure (EI):
+- LNP: Criticized Labor's Pioneer-Burdekin Pumped Hydro Project as financially unviable and canceled it upon taking office, opting to explore smaller-scale hydro projects instead. 
+- Labor: Proposed large-scale renewable energy projects, including the Pioneer-Burdekin Pumped Hydro Project, to transition towards 80% renewable energy by 2035.
+
+Abortion Laws (AL):
+- LNP: Stated there would be 'no changes' to abortion laws under their government, maintaining the status quo established in 2018. 
+- Labor Party: Supported the existing abortion laws and opposed any attempts to repeal or amend them. Asserts that LNP intend to restrict access to abortion services based on the views of some of their members.
+
+Analyze Reddit comments and code them based on the positions they support or oppose concerning these issues. You will output JSON, so valid values are strings or null. Use the following codes: YC, COL, H, EI, AL. If a comment's position is unclear or does not pertain to these issues, output null.
+
+Secondly identify which party the comment appears to support. Use the party code ALP, LNP, Greens, ON, KAP if this can be determined, otherwise a null value if undetermined.
+
+Output JSON as a list of objects where each object has an "id" (integer) property of the comment id, an "issue" property set to the issue code string (or null value), and a "party" property set to the party code string or null value. Null means JSON null, not a string. Values MUST be quoted, e.g. {"party": "LNP"} unless they are null, e.g. {"party": null}. Comments follow:
+
+1. reversing VAD laws. Probably burning homeless people on piles. Halving housing builds which were poor to begin with. They probably had someone writing a list of assets to sell within five minutes of realising they would gain majority. Third on the list is opening flogging and mental abuse camps for kids and their siblings who've missed school for a day.
+2. They are staying for 4 more years at least.
+3. Yep. As sad as this is, I understand that changing political alignments is normal at a national/state level every so often. Think this will be a good reminder to the everyday Queenslander at least, so let's just hope they burn all their goodwill by the next election.
+4. I'm not sure if it was a coincidence thing or higher but I just want the $2 pool entry back this summer. That was awesome
+5. It's OK you get to keep them for 4 years. But to pay for them say goodbye to state owned power generators and poles and wires.
+6. They’re staying in place. You’ll be fine
+7. Realistically 50c is too cheap - I would be happy for $2 fares
+8. Despite we did pretty damn fine during covid. A lot of people got to live during those times.... Although a lot of those people are also the same people who just voted for this "Premier' mhm. They are alive and got to choose wrong because Labor kept us safe for covid.
+9. Fear mongering politics goes along away apparently. Oh well, can’t wait for qld to become a shithole but idiots are gonna point their fingers to Labour for leaving it in a messy state🙄
+10. To be fair, I looked at the last 9 years more than the campaign. Politicians will say anything to stay or get into office.
+11. Shows how much the ALP spent and spent our taxes
+12. Hopefully it’ll only be for four years rather than *[checks notes]* nineteen.
+13. It’s like he’s a New man.
+14. The 3% who’ll benefit and will walk away with all our public assets will be very happy for the help the 47.9% of the states population gifted them though.
+15. I hate to admit it but our state is full of morons. I know I shouldn’t be surprised but I am every time.
+16. Oh. My small hippy village, who you would think would be progressive, are a bunch of fucking morons. They don't know what they've voted out. It's all for "we need a change because change."
+17. I went to bed with hope and I wake with none.
+18. As a Queenslander who votes for labour, I’m disappointed as fuck.
+19. My word they will...this State was sailing along and those fuckers went and did this.
+20. Nah it's a great decision. Labor were shit.
+21. Cheers to the LNP 🥂 Heres to four years of right wing policy
+22. Wah wah wahhh
+23. Someone who used to work with him said in an interview that his own party don't like him, and are much more conservative, so they're likely to be looking to oust him and get extra conservative over this first term, so. we have that to look forward to.
+24. Yeah, Dad wanted to change his boomer vote when he found out about the abortion debate
+25. People just didn't want the other hack.
+26. Your womb will be fine. Be careful of feline toxoplasma though.
+27. It’s just education on policies. Most people aren’t fully aware of what they’re voting for because the parties always spin their policies to capture the most. It’s like anti abortion voters hear the talking points but they don’t think about “oh what about health complications or my daughter gets pregnant, or if a SA victim does”.
+28. Right? First question I'll be asking now is "okay, so who did you vote for" going forward when the complaints come. Like it's 2024 and labour lost a election cause "they've been in too long". Great. Let's loose abortion rights, sensible drug laws and control, cheap bus fairs and electricity and rego concessions + more cause one parties been in a little bit long. I cannot get over how fucking mad I am about this
+29. I love in Rockhampton.. it's more than half of people.
+30. I hate it when the majority don't agree with me
+31. [deleted]
+32. I am done defending this state. I always want to believe in us so much, that Queensland is going to be better, progressive, I mean we choose Annastacia and that was a good call, Covid stayed out of our state for like 2 years and it was good. But yeah, guess I hoped a little too much. Well boys and girls, it's back to being the laughing stock of Australia. Was nice having a left wing government, and it was nice when it was Victoria being a problem during Covid or NSW with that Gladys Premier.
+33. Don't count me in. I voted for Labor.
+34. Hahaha grow up buddy
+35. The LNP voters I know voted because of a few reasons. “It’s time for a change”, “Crimes out of control”, “People are struggling” and “They are better for the economy” They had not looked into any policies by either party or really took much interest in politics.
+36. Boomers who don't care about the younger generations
+37. My mum and her partner. And my Aunty and her partner. When I ask them they just say because their partner says to vote for them. Even when I insist its not in their best interest. Even after pointing out all the proofs and policys they just won't change their vote. They would rather double down being wrong than admit to having made a bad vote in the past. Like the more proof you provide in disproving their past mistakes entices them sticking their bad choices even more.
+38. My alcoholic, racist, boomer aunt did. Our next family function will be extra spicy.
+39. Qlders are very reactionary and I think this is why we see such intense changes of government.
+40. Honestly, it's more than just the boomers and if we want to change this, we shouldn't just write it off as 'oh silly boomers making choices again, sit down grandpa'. In my small, rural town I think the swing to LNP is mainly people who have suffered terribly from the economic downturn, have watched the lifeblood of our town disappear and have lost faith in the ALP doing anything positive for us. As misguided as it may be. Then there is the perception of high crime. Then there is the fact that no one can access the health care they needs because all the GPs leave the region and specialists visit the regional hospital less and less. Hopefully we just have to sit back and watch the promise of a fresh start fizzle out.
+41. Fifo workers and miners voted for him because they get more money and they think lnp will fix the crime in nt/nq Can’t wait for 6 months down the track where we hear sob stories from nt residents cause nothing has been done. Fuck there are too many morons that don’t realise our mainstream media is liberal biased.
+42. Mother in Law was single issue on the youth crime thing (to be fair there are some hooligans in her area so she was easily swayed) and believing that they'll keep the 50 cent fares. Like... Ugh.
+43. As a Queenslander who voted labour, I’m deeply fucking disappointed. Absolutely fucked.
+44. BuT Its tiMe foR a CHAnge KIds On my LAwn sCAre ME tHey'rE BEtTEr ECnonOmic leaders
+45. boomers and people who moved into the state in the last few years, from what i’ve seen. people who don’t care what they’ll do, and people who don’t know what they’ll do
+46. Most people
+47. Most of QLD. This state is fucked. Simple as that. They won a majority. No use in wondering why, they voted in what they wanted.
+48. > who voted for this At least half of the voting population, keep that in mind as you go about your day amongst the public, half of those people literally want to see us return to the dark ages.
+49. Most of qld.
+50. The Majority of people voted for him.
+51. "millions of people are Morin's because they don't share my political view"
+52. The majority, fuckwit
+53. As they should, they did, after all, give Crisafulli millions of dollars of *campaign funds* (definitely not trying to buy him out so he will repeal the coal royalty tax)
+54. I LOVE PAYING $3.14 TO TAKE A BUS ACROSS TOWN. IT DEFINITELY ENCOURAGES PEOPLE TO USE MORE PUBLIC TRANSPORT.
+55. That’s exactly what I asked Santa for.
+56. What help do you need that wouldnt be considered essential? Heart attacks etc?
+57. Drama!
+58. But that would happen under the existing government. Medical treatment has been pathetic.
+59. We getting the male verison of Gladys it appears.
+60. To top it off he drives a black 10 year old shit box mustang with e plates “QLD OZ”. He’s a fuckin tosser
+61. That's the vibe I'm on tonight. It means so much more than this. People are literally voting against a progressive society. Why would anyone want to go backwards?
+62. Apparently now with LNP we’re getting rid of stamp duty to bring in a new tax based off the American system - Land Tax that you pay annually - yipee! Thanks everyone!
+63. The trouble is , those idiots see what a tool like Trump has done and just want the same
+64. Honestly I think QLD Labor is the only Labor Party that didn't get complacent. They were actually quite competent managing to take a pretty strong Greens seat because, unlike federal Labor, they competed with the Greens on policy rather than bitching and moaning about them
+65. > On the plus side, maybe we have a chance of not being humiliated over our budget QSAC Olympics. Who gives af about sportsball ffs
+66. Maybe they really should split the state. I can imagine most of the South East is dismayed this morning.
+67. Yeh I want to pay taxes to pay people to pay me back the money I payed
+68. [deleted]
+69. Thankfully doesn’t apply to this election where the two major parties were miles apart
+70. Rioting just because a vote didn't go the way you wanted it to is not a French thing. They riot because the party in power fucked up. To answer the question, then, wait til they fuck, or propose fucking, something. Like abortion. Or utilities. Or jobs, hell even renewables and energy resiliency particularly.in the far north. That's the French way.
+71. Australians don't riot generally
+72. So u want January 6th in Qld?
+73. Calm down dipshit. The world is not ending
+74. Don't forget Thuringowa, Mundingburra, Townsville and Barron
+75. Why is it all majority fucking Gold Coast. Actual dumb cunts just doomed us all.
+76. Where did you get this list? I’m in Ipswich West and ABC is predicting an ALP gain despite the fact we’ve been LNP since 2020. It was the only bright spot out of this whole election for me, especially since the other electorates in Ipswich (Bundamba and Ipswich) look like they’re retaining their ALP seats.
+77. I'm honestly so disappointed in my electorate.
+78. ![gif](giphy|l3diT8stVH9qImalO)
+79. They've promised to bring them back by allowing developer donations again. Also known as Brown paper bag building approvals.
+80. Channel that anger to make changes over the next 4 years. Support groups that are making changes for the better, get involved. The biggest reason this can happen, is that people only get involved in politics during the campaign.
+81. he kinda looks like the rat from flushed away
+82. I think his campaign manager's name is actually Ferret lol.
+83. And its already shit as a renter, so Im scared.
+84. First google result has the big milesdog at $4m himself.
+85. Yet people generally don't recognise this.
+86. The average LNP voter is not smart enough to figure out reddit. They need spoon-fed pap like Facebook.
+87. Please leave.
+88. If you had bothered to do even the most cursory research instead of getting your information from Reddit you would know this isn’t the case.
+89. Only the second time LNP has won in like 35 years, we can't be that bad, just a short blip to remind everyone how bad they are
+90. >Honestly think it has less to do with LNP being good and just ~~ALP being so hated~~ murdoch just not fucking dying already.
+91. Agreed
+92. This is the usual reason governments seem to go
+93. I think it has a lot to do with LNP being blue and being called "liberal" and Labor being red and looking like Maga supporters. Dumb, but I honestly think it's the reason. The majority of voters are not doing any kind of research.
+94. ALP made that reputation? Yet you are proactively blaming LNP. Just listen to yourselves
+95. Perhaps.... Reddit is a loud minority? Just maybe? Something to think about
+96. As no one will save the LNP Premier next election.
+97. Thupert.
+98. The Joh years. Because we never learned anything
+99. Time to steal from woolies and coles I guess. "Wait why is crime going UP didn't we just elect an LNP government!?"
+100. You do realise that heaps of people irl don't use reddit?
+101. It's just dumb people voting against their own best interests everytime.
+102. I never got a chance to try that. Live too far from PT.
+103. They said they were committed to them as well.
+104. Most state governments have an upper and lower house, similar to the Federal government. That means that bills/changes in policy are put forward and have to be debated and agreed upon in both houses. Often but not always, the upper and lower house has a different majority, eg LNP in lower house vs Labor in upper. The upper house has to also agree to the bill before it gets through. Queensland doesn't have this, so whoever holds a majority government, especially if each member votes along party lines, can push bills through government very quickly with very little debate or question. That's why Campbell Newman was able to do so much damage in such a short time and what a lot of us are worried about now.
+105. You can read the policy platform for what they view as the key issues [here](https://online.lnp.org.au/therightplan). I would have preferred labour, but in my view it is not nearly as bad as everyone here is making it out to be, but make your own decision.
+106. Fuck off then.
+107. Better stock up while we can
+108. Federal issue.
+109. *Apparently* Robbie Katter has confirmed they’re bringing it to the table as soon as possible.
+110. ^hehehe
+111. That crocodile gave me hope 😅
+112. Reddit isn't everyone
+113. It was mostly dumbfucks on the Gold Coast who kicked labor and went LNP. So yeah, retirees and bogans.
+114. No, boomers are a very small minority. A majority of QLD has voted LNP. Not just boomers.
+115. >I put greens 1, labor 2 and LNP last but what’s done is done now and it’s time to try and make strawberry jam from pig shit. Now it's time for me to book a vasectomy because I have the kind of body the religious nutters aren't trying to control.
+116. It's been Labor for 30 of the last 35 years. It's the right wing owned media that set the narratives in weak minds.
+117. Toodles.
+118. The problem with this election is that the LNP have been running essentially a single issue campaign and were banking on the “Time for a change” argument from non political voters. Genuinely, what policy from the LNP is actually worth voting on? And this is coming from someone who has traditionally voted blue in most elections. They have had more support from the media, more money donated to them from big business. Everything has been screaming shady for a number of months now.
+119. This is so true. The definition of an echo chamber. What people don’t see through their hatred of the other side is that they are on the slippery American style path. There is nil respect for people with differing views and no attempt to understand it. QLD is not SEQ and demographics vary. While I don’t take a lot of delight in the LNP winning I respect the democratic process and my fellow Queenslanders, something which seems to be very very lost in this place.
+120. >and “uneducated boomer” An*
+121. Thank you 🙏!!!!
+122. It is orchestrated by interest groups. The mods know it but there isn’t much they can actually do. The problem is reddit advertisers don’t want an echo chamber so let’s see what happens. Twitch has just lost a number of big advertising accounts due to the above so reddit may see this and take action.
+123. Miles was the one who pushed the QEII option and LNP have said QEII is dead under their government.
+124. I voted Labor, but one thing they won’t be doing is QEII imo. It’ll likely be a new stadium or Gabba Reno imo ,
+125. The only good thing from LNP is that we may go back to the Gabba plan and scrap QEII. That was the only thing I didn’t agree with the ALP on
+126. Who fucking cares about sportsball ffs, it's just a big money pit anyways and gonna make the city an absolute cunt to navigate in 2030wheneverthefuckitis
+127. u/Fandango70, Good luck in your hunt for an “amazonian milky goddess” in reddit adult breastfeeding personals.
+128. You think you're edgy but you need to understand how unbelievably pathetic that is. Enjoy you win, my god.
+129. Au revoir.
+130. Have a safe flight home.
+131. You are valid. 🫂 We can only hope they get kicked to the curb next time 😑
+132. I didn't. I've seen for myself how myopic, selfish and idiotic LNP voters are. 'She's a bully... wonder if she votes LN... yep, she does.'
+133. His entire brain is level from what I understand
+134. Yeah tell that to the thousands of public servants that will lose their careers and livelihoods over the next 4 years. Their Christmases will be either unemployed or wondering when it's their turn for the axe. Tell that to the millions of people relying on the public services that they provide. Tell that to women who just lost autonomy over their own bodies.
+135. You would've thought QLD have just elected a dictator reading some of these comments
+136. I’m with you on this mate.
+137. Why would it be?
+138. But if you come back and are lucky enough to purchase a house you’ll now be paying land tax - yipee.
+139. Please do.
+140. ALP Forum loses its mind
+141. He was the Minister for Local Government under Newman, and the Leader of the Opposition since 2020. People need to pay attention to politics outside of the campaign.
+142. Uhhh, there's not much wrong with Russia tho... At least they have 50c bus fares and try their best to be supportive of LGBTQIA+ rights.
+143. God, I fucking hope so. I love war.
+144. LNP completely gutted enviro laws last time. They pretty much said to their developer and construction/mining mates "build what you want, don't worry about environmental impact". Their plans to "keep running coal plants" are going to be more expensive and more harmful long term. It's terrifying.
+145. Said like someone who has never had to face the decision to terminate for medical abnormalities at 22 weeks.
+146. So let’s see “abortion ban lite”! Hooray!!!!
+147. You forgot to add the /s ....
+148. According to ABC radio, fares are subsidised to the 10’s of dollars. Making them $1 will make basically zero difference.
+149. There's more issues than unions... Thanks to labor the state was actually receiving royalties and revenue from foreign mining companies which helped pay for 50c fares, when the LNP scrap the royalties they'll be “forced” to sell assets like the ambulance service to a private company which will fuck people over more by forcing them to pay a call out fee on an ambulance when it was free not only that why are the LNP cutting 47 million from homelessness services when we currently have so many homeless people?
+150. You're exactly right. But this sub is a left-wing echo chamber. You will get nowhere fast stating pure facts, having common sense, or trying to have a normal conversation. Been proven time & time again they'll just lash out at you with abuse, anger & hatred.
+151. You think the LNP are going increase pay and improve conditions enough to fix the shortage of new recruits / officers quitting? You'll just stop hearing about youth crime in the media. There's over 4500 vacancies for Police Australia wide, 2000 NSW, 900 QLD, 800 VIC etc. It's just not a job people want to do for the pay / conditions.
+152. Worst leader our state has ever had. He's an extreme narcissist
+153. It's easy to be graceful when you win lol But I do agree, it wasn't a great speech
+154. Yes one speech was a lying Newman government plant and the other was a proper premier. Those who voted for the LNP are absolutely brainwashed into thinking they are some how superior and now All Queenslanders will pay the price of there stupidity.
+155. Kept trying to get policies out of the LNP. They said 'nope, wait for the media blackout'. Tried to pin them down on the abortion thing. Dodged an answer on that literally ***hundreds*** of times. Tried to get a straight answer about bulk billing and immigration - it's ***all*** fear mongering and no substance. So... I gave them the opportunity to tell the truth instead of lies and they declined the offer. LNP voters did not even attempt any of this.
+156. It's because all the rednecks who have 4+ children each are now voting age. They're overtaking educated people.
+157. The downvotes on this comment is a barometer in how the reddit base is so different from the voting base!
+158. Yup I remember working under Campbell in QLD Health. It was a shit show, LNP just spent a massive amount of money plugging staff shortages with contractors after firing people. I don't want to be in charge of regards that will kill people by accident. Good luck QLDers with the Jesus freaks. I am quitting, pulling all my super out Qsuper , investments in QLD and leaving the state.
+159. Go have a swim in Brisbane River. It'll clear your head. The weather has been kinda hot after all.
+160. Agreed. Disregard the leftard redditors downvotes 😆
+161. Yes!
+162. You think Bandt’s going to lose in inner city Melbourne? HA.
+163. Yeah but we want your mixed member parliament style.
+164. Lol bye
+165. If he was my croc, he would be a pair of boots by now...
+166. Down to 80% accuracy now mate.
+167. Where are they getting all the extra money to build more youth detention centres if they cut coal royalties though? LNP are a bunch of lying fucking cunts, always have been and always will be.
+168. The biggest issue should be the fact he is going to change preferential voting to FPP. He is going to strip the safest form of voting in the world.
+169. More resource industry donations to the LNP.
+170. In theory, it means jobs for longer, the mining companies make decisions based on the price of coal and how much revenue they’re making. I work at a coal adjacent company, so I’ve definitely see mines where they’ll close off entire sections based on profitability and reopen them later when it’s monetarily worth it so that’d affect jobs. In reality I don’t really think it much much at all, if anything they’ll keep operating in the same way they have been, if the coal royalties tax goes away, they’d know it’ll come back as soon as Labor is back in power so they’re probably going to just try to make as much revenue while they can. For whatever reason people seem to think they’ll just pack up and go somewhere else, but the resources are where they are, if they were somewhere else they’d be there already.
+171. He's the result of when someone with the iq of a cactus is still slightly smarter than the people voting for him.
+172. Australia always follows America in shit like this
+173. Hope they enjoy their kerosene baths
+174. Paid ambulance alone will fix the ambulances ramping outside the hospitals.
+175. And for actually passing on extremely well considered cost of living measures which worked as intended while not fanning the inflation flames.
+176. I noticed it was a big thing, you could tell people straight to there face is they thought Labor was responsible for cost of living crisis in Canada, they'd say no. And then 10 minutes later be talking about Labor and cost of living again.. Not sure what's happened, but people have turned Into the absolute dumbest of the dumb
+177. [removed]
+178. ABC was desperate to credit Albo for it
+179. Apparently it was all Joe Biden’s fault.
+180. how is labor not responsible for the cost of electricity in queensland? or the lack of sovereign owned mining and resource revenue like you the countries often touted who invested heavily and didnt just expect to tax their way into wealth
+181. But will this mean my house will go up in value even more or nah
+182. They will not be able to help themselves. I’d say they will do their worst in their first year, giving them 3 years to let people forget.
+183. 4 years is a long time ...and a lot of damage...

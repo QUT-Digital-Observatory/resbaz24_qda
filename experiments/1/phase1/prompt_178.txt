@@ -1,0 +1,174 @@
+Your job is to analye a series of Reddit Comments are drawn from sbumissions related to the 2024 Queensland State Election. The comments are drawn from a collection of comments before, during and after the election itself on the 26th of October. The parties that sought election were the Australian Labor Party (ALP), the Liberal National Party (LNP), the Queensland Greens (Greens), One Nation and Katter's Australian Party. The LNP prevailed in the election, with David Crisafulli becoming the new Premier of Queensland. 
+We have identified several key issues that the major parties campaigned on during the 2024 Queensland State Election: Youth Crime (YC), Cost of Living (COL), Health (H), Energy and Infrastructure (EI), and Abortion Laws (AL). Below is a summary of each party's position on these issues:
+Youth Crime (YC):
+- LNP: Advocated for stricter penalties for young offenders, including the 'Adult Crime, Adult Time' policy, proposing that serious offenses committed by youths be met with adult sentencing. 
+- Labor: Focused on rehabilitation and prevention programs, aiming to address the root causes of youth crime through community engagement and support services.
+
+Cost of Living (COL):
+- LNP: Proposed measures such as abolishing stamp duty on new builds for first home buyers and re-establishing the productivity commission to review building industry regulations, aiming to alleviate housing costs. 
+- Labor: Introduced initiatives like 50-cent public transport fares, a $1,000 energy rebate, and free lunches for state primary school students to ease cost-of-living pressures.
+
+Health (H):
+- LNP: Committed $590 million to an 'Easier Access to Health Services Plan,' aiming to reduce ambulance ramping and hire additional healthcare workers. 
+- Labor: Focused on maintaining and expanding healthcare services, addressing hospital capacity issues, and investing in new health infrastructure.
+
+Energy and Infrastructure (EI):
+- LNP: Criticized Labor's Pioneer-Burdekin Pumped Hydro Project as financially unviable and canceled it upon taking office, opting to explore smaller-scale hydro projects instead. 
+- Labor: Proposed large-scale renewable energy projects, including the Pioneer-Burdekin Pumped Hydro Project, to transition towards 80% renewable energy by 2035.
+
+Abortion Laws (AL):
+- LNP: Stated there would be 'no changes' to abortion laws under their government, maintaining the status quo established in 2018. 
+- Labor Party: Supported the existing abortion laws and opposed any attempts to repeal or amend them. Asserts that LNP intend to restrict access to abortion services based on the views of some of their members.
+
+Analyze Reddit comments and code them based on the positions they support or oppose concerning these issues. You will output JSON, so valid values are strings or null. Use the following codes: YC, COL, H, EI, AL. If a comment's position is unclear or does not pertain to these issues, output null.
+
+Secondly identify which party the comment appears to support. Use the party code ALP, LNP, Greens, ON, KAP if this can be determined, otherwise a null value if undetermined.
+
+Output JSON as a list of objects where each object has an "id" (integer) property of the comment id, an "issue" property set to the issue code string (or null value), and a "party" property set to the party code string or null value. Null means JSON null, not a string. Values MUST be quoted, e.g. {"party": "LNP"} unless they are null, e.g. {"party": null}. Comments follow:
+
+1. If its any consolation, i have just had a conversation with my current paramedicine mentor (on placement atm) about this exact thing. He started uni when libs were voted in last time and of course a bunch of jobs gor cut. By the time he graduated, labour was back in and rebuilding the healthcare workforce so there were plenty of jobs around.
+2. If this is truly devastating, consider a different career for all our sakes.
+3. IT WAS PUTIN ALL ALONG!
+4. Only if the new voting model of Cris isn't so FPTP that you are doomed.
+5. That’s if he’s the next Newman. He might want to be the next Joh.
+6. nope you are doomed. In fact by the time the decisions are made Dutton will probably be PM.
+7. Not at all, the writing was on the wall ages ago. I was expecting something like 60-70 seat majority for the LNP.
+8. How good is this 😂
+9. BLAH BLAH BLAH
+10. Well you'll be taking the Public service cuts real well soon, don't you worry. your own stupidity will come back to bite you.
+11. You like nurses to be sacked huh?
+12. What a very mature and rational response
+13. And he was 2 days away from selling Energex to Chinese investors if Newman got elected
+14. I was voting age. I remember. In fact, I'll never forget what a shitshow it was. And I'll never forget the peak of all bumper stickers: "Can Do is a Can't".
+15. I could add the N part of LNP and include old Joh if you want from lessons not learnt, but 100 days make that statement again.
+16. The old Australian voter saying "give the other guy a go." Great way of viewing politics..
+17. Maybe you were, how do you " your your own brains"?
+18. Want to repeat that at 100 days from now?
+19. People have short memories.
+20. i think you are a bot.
+21. Yeah. Public health was at breaking point a decade ago and now with rampant large family immigration and the inevitable lib cuts it's going to be so much worse. I hate how little wealthier lib fans with private health insurance care either. "Just don't be a nurse/doctor/etc". Yeah ok who's going to do it then mate. Sorry some of us care about other humans and aren't in finance or charging $200/hr as a tradie.
+22. It's hard. The Bruce needs a massive overhaul up north. Neither the Libs or Labor are doing dick about it in the last 12 years. But hundreds of millions on infrastructure on top of the over a billion already sent to tourism operators in bailouts? bit of a tall ask I think to taxpayers.
+23. This is literally the best way to describe so many rural voters. How the fuck do they expect 4-6 lane highways to literal towns of a few thousand. Browse facebook for an hour, so many of them are ego-y as fuck.
+24. The Bruce Highway north of Gin Gin is straight up dangerous.
+25. It's nuts. Like you got RFDS flown down for what should have been routine surgery in Bundy Base but now your in Brisbane. And it's Labors fault your local Katter/LNP/ON member for xyz years haven't spend billions expanding the hospitals up there.
+26. Legitimately it's insane. They are all elderly, or unemployed and live on benefits, in deadbeat rust belt towns that died decades ago, and hold on to their glory days and watch sky news. They cost actual tax payers such insane money to keep going to, and the vote against the people that keep them alive.
+27. Define their disaster?
+28. how was the ALP a disaster?
+29. Genuine question from someone in the suburbs who admittedly is often apathetic to people outside greater Brisbane (just being honest). What havoc?
+30. I hate no hate, and just don’t understand how you vote for a party of no morals, no values, and has no plan for anything. When I see a party making great steps forward in renewable energy. Using royalties to get people back on public transport ( due to large interstate migration and roads full) and paying for free lunches for kids and energy bill rebates, I see that all as positives. I don’t understand how people see a negative in the ALP. They are trying to make the state better. Then the LNP just have zero plan except to make abortions illegal again and strip back royalties, which leads to reduced services.
+31. You wont be loving it soon enough when LNP sucks us all dry like a leech looking for its next prey
+32. What’s happened out west under labor that’s been so bad
+33. Im from the Gold Coast but anyway. LNP voters got all excited about some buzz words an Italian greasy Man made but that man has already fallen back on his plans as he has nothing but the name he is an essay with a fancy title but blank pages miles long. LNP come in with some bright shiny neon lights and sucked Queenslanders up in them like Las Vegas on a Friday night
+34. You're in for an absolute shocker when youth crime doesn't immediately dissipate, and your dwelling up north is still being neglected by the state.
+35. LNP isn't going to do shit for you. They're going to reduce mining taxes and then who has to pay for that difference? ALL OF US. The LNP hasn't come into this election with any budget or even clear policies and the rural people ( who 100% Labor needs to do more to assist) don't think of the bigger picture.
+36. thank you
+37. doing the double at acu (hopefully), paramed the dream but will also have nursing as backup
+38. Idk maybe Billy Joel was wrong.
+39. 😩
+40. He can’t install FPTP without calling a state referendum and imo he doesn’t have the balls for that
+41. Dang. Would there be any possible way to overturn the government if we all wanted to?
+42. yeah, overall Labor did a great job in this campaign to turn it around, very much hoping Miles stays on as Oppo leader and comes back again next election to take another shot
+43. Oh yeah, everybody else’s fault Labor lost… the majority wanted the fuckwits out, just accept it
+44. I was a nurse when Newman was in. Where you? Or see you following reddit rhetoric? Btw no nurses I knew lost their jobs
+45. No nurses were sacked under newman you twit. I have a good friend that is a nurse and there isnt a nurse in the state that wants a job and cant find one. Newman never sacked anyone. They were redundancies and almost none of them from frontline staff. Australia has a disproportionate amount of people employed within the health industry relative to other OECD countries. Its not that we need less nurses, we need less bureaucracy and administrators.
+46. Sorry that was my bad I’m having a few drinks in celebration 🥳
+47. RemindMe! 100 days
+48. Somehow I actually doubt it. Feels like astroturfing rather than bots. So many accounts under 2 months old with negative karma
+49. That's what pains me so much about people working in health or education or emergency services. Dismissive people just write them off "get a better paying job" or "just don't try to live in affluent areas if you can't afford it" and then suddenly there's no staff in these affluent areas. No nurses, no teachers, no police. Because why would they want to spend hours commuting because they can't afford to live near work? People want to help people and do a damn good job of it. At least pay them what they're worth!
+50. And with the cut to mining royalties it’s def not going to happens.
+51. >on top of the over a billion already sent to tourism operators in bailouts This storm season should be an interesting one for FNQ, let's see how LNP handle it...
+52. How was Labor not doing dick about it? They literally spent $12 billion on the Bruce Highway Upgrade Program since 2013 and had just committed to increasing their funding yet again. As of this year the program has delivered: - 120 new bridges - 66 new and upgraded rest areas - 489km roadside safety barriers - 72 township entry treatments - 247km wide centre line treatments - 100 new overtaking lanes - 204 protected right-hand turns - 73km of highway duplication - 8 flood immunity upgrade projects completed How is that “not doing dick”?
+53. Those mega-wide highways often bypass the little towns, which in itself wipes them out further…
+54. Like, theres a few pot holes but people make it sound like the kokoda track. I've done the whole length twice this year, its fine.
+55. Maybe the speed limit should be adjusted to make it safe for the conditions.
+56. You have never been out of the city have you
+57. I live in "one of those rust belt towns" that provides the food SEQ eats every day. Our local economy contributes 100's of millions every year to QLD's economy. I'm also a long term public hospital worker. Since Covid we've been inundated with thousands of people moving from Sunshine Coast, Brisbane, Sydney and Melbourne. House prices have doubled. But the Labor govt didn't fund out HHS, dragged it's feet doing anything and put in an incompetent Board to manage the service. We prefer to be treated locally, but the methodology is to fly people to Brisbane. So blame the government, don't blame the people here. Oh, and btw, 5.4% swing to the LNP in the Brisbane local government area. So it's not all regional QLD. Edit: Peak Reddit. Down votes despite facts.
+58. *crickets*
+59. Specifically to my issues? Changes in the export rules mid season, so we don't know what our livestock will be valued at. Water regulation and drought assistance. Constant changes and cuts have happened. It's an awful stress.
+60. Adding on, not pertinent to me, but allowing overseas conglomerates to overtake and undercut the dairy industry. Look, I'm not saying that what will work for me will work for inner Brisbane. But you can't just pretend we don't exist or marginalise our contribution. Labor have always been a disgrace to the agricultural sector at a state and federal level.
+61. All the issues you listed don't really matter here. Belittling who I vote for also isn't a good way to try and express your point. Labor won't ever win out here, so maybe that's why they ignore us, who knows. But you asked why I have my views. Simply sweeping all LNP under the rug and saying no values isn't a fair shake either. If only we could go back to NP.
+62. Then you can appreciate what it's been like out west. I'm already there buddy.
+63. I think you mean the fuckwits wanted them out. Had it the other way around
+64. Yes its everyone fault they voted in a incompetent newman era politician.
+65. I was sacked - sorry, *made redundant* - by CN. Frontline mental health.
+66. I will be messaging you in 3 months on [**2025-02-03 20:47:51 UTC**](http://www.wolframalpha.com/input/?i=2025-02-03%2020:47:51%20UTC%20To%20Local%20Time) to remind you of [**this link**](https://www.reddit.com/r/queensland/comments/1gcjrpj/100_days_in_the_future/ltwp5wp/?context=3) [**CLICK THIS LINK**](https://www.reddit.com/message/compose/?to=RemindMeBot&subject=Reminder&message=%5Bhttps%3A%2F%2Fwww.reddit.com%2Fr%2Fqueensland%2Fcomments%2F1gcjrpj%2F100_days_in_the_future%2Fltwp5wp%2F%5D%0A%0ARemindMe%21%202025-02-03%2020%3A47%3A51%20UTC) to send a PM to also be reminded and to reduce spam. ^(Parent commenter can ) [^(delete this message to hide from others.)](https://www.reddit.com/message/compose/?to=RemindMeBot&subject=Delete%20Comment&message=Delete%21%201gcjrpj) ***** |[^(Info)](https://www.reddit.com/r/RemindMeBot/comments/e1bko7/remindmebot_info_v21/)|[^(Custom)](https://www.reddit.com/message/compose/?to=RemindMeBot&subject=Reminder&message=%5BLink%20or%20message%20inside%20square%20brackets%5D%0A%0ARemindMe%21%20Time%20period%20here)|[^(Your Reminders)](https://www.reddit.com/message/compose/?to=RemindMeBot&subject=List%20Of%20Reminders&message=MyReminders%21)|[^(Feedback)](https://www.reddit.com/message/compose/?to=Watchful1&subject=RemindMeBot%20Feedback)| |-|-|-|-|
+67. House prices have doubled everywhere mate. People then ran out rural thinking it was cheaper. Just like how everyone moved to Perth and prices skyrocketed. Billions of dollars are required to set up brand new hospitals (as you'd know being a long term public hospital worker), and both the LNP and Labor are guilty in that department. At-least Labor has tried to set up some satellites. Remember when our new Premier was HM under can do Cambpell? and they destroyed healthcare up here in about a year and a half? And then we had to pay everyone they fired to come back? We are still recovering from that shit. Half the middle managers they hired to chase KPIs are still fucking everyone over in our hospitals down here. It's only going to get worse now. Because if you're liberal, You have private health, Public is for freeloaders. However, incompetent hospital leadership and boards full of assholes with personal agendas that lead to no money being spent where it should be? That I understand and agree with you on 100% mate. We can have a beer over that one!
+68. Look at the above comment to see the contempt they have for rural people. Rust belt is an American term too, but good work trying to graft an American term and the seething you have for the people that live in that area to regional Australians.
+69. Federal gov controls boarders and export not the state. Feds have a future drought fund and qld gov drought assistance loans. Doesn’t maranoa council determine water use? Do you really think the LNP are going to help you get more water at a state level? Mate, they are there to serve their doners and masters.
+70. And how will that change under the LNP?
+71. Thanks. I was being serious in my question so thank you for the genuine answer. Even though I'm disappointed with the result, I hope things improve for you under the new government.
+72. All those issues irrespective of your electorate is should matter. If you have a daughter and she had an abortion ( clinical abortions could happen to save her life, not just casual sex abortions) would you be happy to see her go to jail for it. It comes back to values, and when someone goes “ that doesn’t affect me so I don’t care” that is a classic LNP voter. LNP voters can’t see past their own self interest. I expect the North and West to vote blue because that’s what they have always done. It doesn’t matter what they do or don’t do, West will never vote ALP.
+73. This guy is the epitomy of “misery loves company”. Sad sad life
+74. So you admit to it then?
+75. And what are you doing now?
+76. We had the Borg as Health Minister during Newman. Crissa was local government. I'm over the Boards. They aren't working for the good of the HHS's, they're just doing the 100% bidding of the govt. They need to go into Brisbane and argue and refuse to sign service agreements if HHS's aren't funded for the WAU they expect us to do.
+77. The Liberals? Their masters are the same corporate overlords you speak to, same as the CMFEU is buddied up with labor. The water use you are referring to is residential, not irrigation. DAF payments are 80% less than what they were 10 years ago. And who is the federal government at the moment? I'm not going to fight with you and I doubt you have any practical experience out here.
+78. Hasn't changed in 9 years under Labor, I need to keep waiting?
+79. I do to mate and thanks. I dislike the Liberals probably as much as you. But when you get kicked over and over, hard to support the government. Hope all works out for you too.
+80. I do, I have a 3 year old and a 4 month old. You are once again trying to imply all voters are alike and vote the same, as in anyone who voted differently to you is somewhat less than you or heartless. I vote for what will help me, my wife, my family and our farm. Tough it doesn't align with you, but that's democracy. I'm unapologetically pro life, pro farming and pro family. I don't care if you disagree, I don't care if you don't like it. It's my choice and I won't feel less than because someone on reddit tells me so.
+81. Had a sea change. Different frontline now.
+82. But how will it change under LNP? I'm genuinely curious.
+83. Bro deleted his profile after tiny bit of push back.
+84. They still couldn't answer you straight. Such a Crisafulli answer
+85. They pledged a fair bit, better than the 0 we were getting from Labor. So it's either vote for a promise of some funding vs no funding. I'll go for the chance, we've been lied to for 9 years, what's a bit more
+86. I think he might have been telling a lie and actually did feel less because someone on reddit told him so. Cheeky bugger.
+87. And, it seems they've deleted their profile.
+88. Unfortunately we can't just delete Crisafulli :(
+89. Wouldn't that be wonderful. It would be like Christmas came early.
+90. This is a State Election. The swing is determined what percentage for or against opposed to last election.
+91. I think it’s the change in first party preferred vote from the last election
+92. That particular graphic shows a projected two party preferred swing between the top two parties on the ballot in that electorate.
+93. Australia has a stupid trend of always comparing one election to the last, so everything is done 'as a swing'. Its completely pointless and stupid. They do it even if the electoral boundaries have changed. It means literally nothing compared to the 2 party preferred estimate.
+94. It’s a State election mate. A swing means a favour to the party
+95. Thanks! Also, I appreciate the correction, I'm from the UK, so we just have the 1 election for the whole country rather than differentiating state/federal!
+96. Think of it as governments in Scotland, Wales and Northern Ireland. Except the fact the Federal Government in Australia came after the State Government.
+97. So the Scottish / Welsh / Stormont Parliaments don’t have separate elections to the Westminster elections?
+98. Thanks! I find the level of autonomy each state has to be interesting. I've moved to QLD recently from Vic (only arrived just when their state elections were kicking off so didn't really pay it much mind at the time). The idea that a state, which is still part of a singular nation, can determine things like abortion laws, corporation tax, public holidays and time zones is an interning concept. In the UK the differences between the individual countries, from the perspective of governance and legislation, are very similar. You'd not notice any significant difference when you cross into Scotland or Wales from England
+99. If this gives you some context on their importance, I had to Google the Stormont parliament (I assumed it was NI but had genuinely never heard of it). They do have separate elections and elect a prime minister to represent the individual country, but the level of autonomy and importance compared to the State Vs Federal elections here is far less. For example, I'm not sure a Scottish Prime Minister & their parliament could repeal abortion laws like has been discussed in this election. I'll caveat this by saying, I'm english. So our "Westminster" elections are just the general elections for the UK. We don't have a separate English PM. I'm sure there's a Scottish or Welsh person out there who would tell me how important their elections are!
+100. This might be of interest if you’re interested in the UK laws: “Abortion law was devolved to Scotland under Section 53 of the Scotland Act 2016.” https://yourviews.parliament.scot/health/abortion-services-saz-bill/#:~:text=The%20Abortion%20Act%201967%20did,of%20the%20Scotland%20Act%202016.
+101. Just about everyone I know voted LNP said it was because they need a change and some didn’t even know the party leader. Crazy stuff.
+102. Watching this bloke continue to squirm and not answer the question is lol
+103. I will not put stock in early results with a hundred out of 35,000 votes I will not put stock in early results with a hundred out of 35,000 votes I will not put stock in early results with a hundred out of 35,000 votes
+104. We should all aspire to find a job we enjoy as much as Antony Green enjoys his lol
+105. Antony Green "not part of my plan" 😆
+106. Compliments to the LNP spin doctor who thought “not part of our plan” was brilliant copywriting and political gold 😂
+107. What I like about Antony Green is that I have absolutely no idea how he votes. Not a single clue.
+108. Someone should put some lettuce out in the sun and see if Christfooli breaks an election promise before it spoils.
+109. Just heard someone suggest that if Miles loses government he should contest duttons seat in the federal election? As dumb as that idea sounds it’s a shit show id find funny to watch.
+110. Bundaberg has a 8.9% swing to labor….
+111. That was possibly the most fake woman I have ever seen, the switch from scowling to smiling was almost comical
+112. LNP Slogan: "Not a part of our plan."
+113. This Stoker cunt
+114. You could ask an LNP member if the sky is blue and they’d dance around it somehow 😂
+115. The shadow treasurer has no idea what to do about the Olympics
+116. I swear, abortion coming up made him look weak as a leader. They can’t even win Rockhampton.
+117. Just thought "I wonder if the qld subreddit has a link to the results". Apparently I arrived within a minute of that becoming true. :D I'm not optimistic after seeing how much the LNP spent on scare messaging about "the youth crime crisis" and "Labor inflation" (as if Qld Labor somehow controls the global inflation occurring everywhere) outside of the voting location. Too many low information voters will fall for it. The fossil fuels billionaires will get a return on their investment here.
+118. Relatively big bed shit from LNP in the past week considering the polls and betting odds. But will likely still form some sort of government, possibly striking some deals with KAP. Federal greens will have to look at this with some concern. Pretty clear indication that the more extreme performative shit might go down well with their vocal minority but doesn't sit great with the majority of more central voters.
+119. i think Crisafulli is getting knifed sooner rather then later regardless of the final result
+120. Omg in the space of 5 minutes my level of detest and anger to Robbie Katter has somehow managed to triple
+121. LNP were so far ahead before KAP threw a grenade in the election in the form of the “anti-abortion” shit, and now it’s ironic that the LNP who lost their majority due to KAP will need them to form minority.
+122. What a woeful performance from Stoker there lmao, went off script and immediately put her foot in it
+123. And for the LNP folk, there is no backsies. Enjoy the ride with Campbell Newman 2.
+124. What can we expect from a new LNP government? Mass sackings? Criminalisation of abortion? Bulldozing koalas? Those are the worst things I can think of. But maybe that is just my fears.
+125. That pedo Ashby losing Keppel is a godsend
+126. Watching the LNP and ALP representatives both flounder on the "no deals" and "no minority government" questions is pretty funny. Everyone knows both parties would sell out pretty heavily to form a minority government.
+127. So we voted for: No 50c fares No royalties from our natural resources Making abortions illegal No school lunches No electricity bill subsidies $7 billion reduction in healthcare No renewables or sustainable projects No price reduction with state owned petrol stations Are we legitimately retarded
+128. hats off to milesey way closer than expected, it might actually go down to the wire
+129. I just don’t understand how Queensland can vote for a party that wants to abolish preferential voting, sack thousands of public servants, potentially re-criminalise abortion and fold to federal pressure to allow nuclear to power the state (after promising they wouldn’t!). If you thought the current housing and living crisis was bad… get ready for a whole new level of pain. People are actively voting against their own interests!! I feel like I’m taking crazy pills.
+130. Stoker is just the worst. Booted out of the Senate and she's back again. Stick to Sky News.
+131. I’m a bit confused, has LNP won yet or not? I can see nobody reached 47 yet but people are acting like LNP have already won so what’s going on?
+132. QLD never learns. The last time LNP was in power, they sold off everything they could get their filthy hands on, then sacked a ton of public sector workers to give juicy government contracts to their donor mates.And they'll do it again. This time trying to take away women's rights over their own bodies along the way.
+133. 51-49 2PP at the moment. Ipswich west which labor lost to a by election has been regained by labor. LNP win Currumbin.
+134. Are we looking at a minority government for Queensland? I wonder which party will have more success negotiating with a crossbench to form Government.
+135. "Labor were able to frighten people"...ffs, the LNP did this to themselves by answering explicit questions with "it's not part of our plan"
+136. Townsville fucked us.
+137. That anti-abortion stuff actually better not be part of the plan.
+138. No deals
+139. As someone old enough to remember the shitshow of the 2012 election and is still suffering some level of PTSD from it, I’ll take this result.
+140. Antony Green just said he can't see the LNP **not** forming Government.
+141. It makes me happy that in my electorate, the legalise cannabis party is doing better than the family first party
+142. Crisafulli? More like Crisafooled-u. Can't wait to see all of the u-turns on their policies and those who voted thinking they'll do the 'right' thing find out just like we all did with Newman.
+143. Good bye to 50c cent fares *sigh*
+144. Wow ABC calling Ipswich West, lost in the by election, being regained by Labor.
+145. I wonder if one of the “deals” the LNP will strike with KAP is on abortion. Could be a disaster for women in this state.
+146. LNP are going to win with a minority or majority just. A disaster for the LNP and Miles will destroy them over the next four years. 2028 is going to be a labor win of 2012 proportions

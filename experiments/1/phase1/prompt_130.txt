@@ -1,0 +1,141 @@
+Your job is to analye a series of Reddit Comments are drawn from sbumissions related to the 2024 Queensland State Election. The comments are drawn from a collection of comments before, during and after the election itself on the 26th of October. The parties that sought election were the Australian Labor Party (ALP), the Liberal National Party (LNP), the Queensland Greens (Greens), One Nation and Katter's Australian Party. The LNP prevailed in the election, with David Crisafulli becoming the new Premier of Queensland. 
+We have identified several key issues that the major parties campaigned on during the 2024 Queensland State Election: Youth Crime (YC), Cost of Living (COL), Health (H), Energy and Infrastructure (EI), and Abortion Laws (AL). Below is a summary of each party's position on these issues:
+Youth Crime (YC):
+- LNP: Advocated for stricter penalties for young offenders, including the 'Adult Crime, Adult Time' policy, proposing that serious offenses committed by youths be met with adult sentencing. 
+- Labor: Focused on rehabilitation and prevention programs, aiming to address the root causes of youth crime through community engagement and support services.
+
+Cost of Living (COL):
+- LNP: Proposed measures such as abolishing stamp duty on new builds for first home buyers and re-establishing the productivity commission to review building industry regulations, aiming to alleviate housing costs. 
+- Labor: Introduced initiatives like 50-cent public transport fares, a $1,000 energy rebate, and free lunches for state primary school students to ease cost-of-living pressures.
+
+Health (H):
+- LNP: Committed $590 million to an 'Easier Access to Health Services Plan,' aiming to reduce ambulance ramping and hire additional healthcare workers. 
+- Labor: Focused on maintaining and expanding healthcare services, addressing hospital capacity issues, and investing in new health infrastructure.
+
+Energy and Infrastructure (EI):
+- LNP: Criticized Labor's Pioneer-Burdekin Pumped Hydro Project as financially unviable and canceled it upon taking office, opting to explore smaller-scale hydro projects instead. 
+- Labor: Proposed large-scale renewable energy projects, including the Pioneer-Burdekin Pumped Hydro Project, to transition towards 80% renewable energy by 2035.
+
+Abortion Laws (AL):
+- LNP: Stated there would be 'no changes' to abortion laws under their government, maintaining the status quo established in 2018. 
+- Labor Party: Supported the existing abortion laws and opposed any attempts to repeal or amend them. Asserts that LNP intend to restrict access to abortion services based on the views of some of their members.
+
+Analyze Reddit comments and code them based on the positions they support or oppose concerning these issues. You will output JSON, so valid values are strings or null. Use the following codes: YC, COL, H, EI, AL. If a comment's position is unclear or does not pertain to these issues, output null.
+
+Secondly identify which party the comment appears to support. Use the party code ALP, LNP, Greens, ON, KAP if this can be determined, otherwise a null value if undetermined.
+
+Output JSON as a list of objects where each object has an "id" (integer) property of the comment id, an "issue" property set to the issue code string (or null value), and a "party" property set to the party code string or null value. Null means JSON null, not a string. Values MUST be quoted, e.g. {"party": "LNP"} unless they are null, e.g. {"party": null}. Comments follow:
+
+1. I'm still pissed about it, but what can we do? What can we bloody well do?
+2. *echo chamber intensifies* That’s democracy pal, you love it when it works for you, it’s a meme when it doesn’t
+3. Anyone surprised by the election result must either be a new migrant to the state or have lived in a cave for the past year.
+4. We get it. Posting anti LNP gets you upvotes and you feel like you belong. Just remember reddit doesn’t equal reality.
+5. Ç
+6. Election is over. Regardless of who you voted for its done and you can’t change it. Move on - we are supposed to accept election outcomes in Australia.
+7. Its almost as if 65,000 redditors were only a drop in the bucket for this state's election....
+8. This is good in the long run. If the alp were doing a good job they would have been voted back in. Let them do some soul searching in opposition for a few years and they might realise how and where they've let people down and come back a better party.
+9. [removed]
+10. ALP and LNP are still two sides of the same coin, no better than each other 🤷‍♂️
+11. Yep that post was a hard read.
+12. Link?
+13. Got a link to the dumpster fire This is why I'm starting to feel we deserve what we vote in at this point
+14. There should be a licence required to vote, and you have to prove you’re mentally capable of it - it should have to be renewed before every election and you should have to accurately prove that you understand the policies offered by each party. Without an understanding of this, I don’t get why people are able to vote, they don’t know what they’re voting for or against. …keep the downvotes coming, I know it’s from crybabies that vote yet don’t understand anything about what they’re voting for.
+15. LNP will never be held to account, their entire platform is built on lying
+16. Looking forward to asking them how youth crime got worse after they dump tens of millions (at minimum) into solving an issue that was already on the decline.
+17. It’s not a full democracy if the public is deliberately misinformed by a media monopoly.
+18. QLD is the warm up act to the shitshow that is the US election. Locked into four year terms ending just before their elections.
+19. Add in the crowd that are upset because of social issues and inflation causing strain so they vote fir the cunts who always make it worse.
+20. They(qlders) do the same with US politics. FIL ruined Xmas dinner last year cus he had trumps d#ck in his mouth the whole evening.
+21. I work in a supermarket and yesterday (election day if you’re reading this not today) some dude came in with a full MAGA hat and Trump 2020 shirt. He presumably wasn’t American (had Australian accent) so was just wearing it to support the ex-president of a DIFFERENT FUCKING COUNTRY. The Liberal party wants to turn this place into America, powerful government and political divide and all, and they’re bloody succeeding
+22. Weird that America got a politics betting platform before us hey.
+23. I live near a town with LNP propaganda posted up on the big signboard in the middle of town, and antivax posters plastered all over town 💀
+24. I am a bit TBH. Polls haven't been that accurate recently, and QLDers have shown for the past 30 years our judgement for State Government is suspect.
+25. I benefit from either side winning. One side benefits my career and age group. The other benefits my investments/future investments. But yeah I'm shocked. I had the vibe lnp took it to a narrative based election and that put miles in for a fair shot as he's basically for the people (or atleast for personal gain chose to give handouts which is cool I guess)
+26. Eh still not as bad as prisoner work camps and the ol work for the dole scheme (modern day slavery)
+27. We knew why they were going to vote the way they did years ago when the media started its constant "crime out of control" propaganda to get Labor out and conservatives in. I wish I could dig up a post I made years ago predicting this exactly would happen, that it was always their plan, and that the election buildings would be plastered with propaganda about the scare campaign they manufactured. It was all so predictable to anybody who has been around for a while and knows how conservative media operates.
+28. Hey, you should just be grateful that people come to reddit to express their dissatisfaction. It's not like people are rioting. Expressing dismay/disappointment/anger on a forum is a lot better than the street.
+29. They voted differently because the vast majority make their mind up based on misinformation and are largely ignorant to what any party represents. Voting for the LNP because you're upset about youth crime when its at a low, and the LNP promises to lockup kids who assault guards does nothing, voting for the LNP because worldwide inflation is high and their plan is to sack qld health staff, gut renewable energy, gut the energy rebate is being misinformed and does nothing for you. There's always one of you in every thread trying this weasling "it's not that bad" approach to try and normalise what absolute scum the LNP are.
+30. I have my security clearance and my lil white access card thank you very much. I do my part to make a difference :) Haha *beep beep* door slides open
+31. They are wrong and people will suffer for it.
+32. The misinformation is totally rampant and the LNP got in on fixing a problem that doesnt exist that they spent a couple of years blowing out of proportion. They are talking about bringing in mandatory sentencing which is so stupid and ineffective that other jurisdictions are activly getting rid of it right now. Solving the problem of judges being easy on crime by forcing them to give everyone a massive prison sentence like a repeat offender even on their first case is a horrible idea and this is despite the fact that we have never been tougher on crime than we are now. The incarceration rate in QLD is up 53% over the last decade. Why let a judge that has all of the information about a person and a case make an informed decision when a politician who knows nothing about it can decide in advance what penalty a person should get. What an idiotic idea. Even youth crime is no higher now than it was before it slumped during the pandemic. The worst part is that people get so mad when you tell them the truth. They genuinly dont want to hear things that dont fit their view of the world that they obtained by mindlessly watching garbage news that only care about clicks. Dont believe me... watch this post get downvoted by furious people who are certain crime is out of control but are aparently unable to take even a few moments to do a quick google search and see they are wrong. Here is a link that shows the actual data that the number of crimes committed in January 2020 was 50,432 right before the pandemic made crime rates fall and sicne then the higest month has been 53,553. september 2024 (the last complete month) was 49223. [https://mypolice.qld.gov.au/queensland-crime-statistics/](https://mypolice.qld.gov.au/queensland-crime-statistics/) Crime has been increasing very slowly since 2011 and shoudl be a topic for discussion but holy shit, this massive campaign makes it sound like we live in a post-apocolyptic wasteland. I have actually had someone yell at me for telling them the actual facts.
+33. It’s hilarious. A repeat of the Voice referendum. Labor loses and all the faithful on reddit say ‘anyone who voted for the LNP must be an idiot’. Next thing will be ‘it’s rigged, they stole the election.’
+34. [removed]
+35. Yoooo good band!. Personally I post a meme and move on with my life after the comments die down
+36. Most of that was plucked chook.
+37. Eh, it will only be a year at best, two at most. The whole nation is a tinderbox right now and we all decided to go out bush and let the kids play with matches. Once the budget rolls down next year and job losses start rolling in people are going to get rather upset. Couple it with the recession we get to endure for a minimum of another year and, well I am looking at NSW, ACT now. The borders are still open between the states for now. Won't be shocked if it closes next year again though once the hospitals and other services along the border get overwhelmed.
+38. Eh, it will only be a year at best, two at most. The whole nation is a tinderbox right now and we all decided to go out bush and let the kids play with matches. Once the budget rolls down next year and job losses start rolling in people are going to get rather upset. Couple it with the recession we get to endure for a minimum of another year and, well I am looking at NSW, ACT now. The borders are still open between the states for now. Won't be shocked if it closes next year again though once the hospitals and other services along the border get overwhelmed.
+39. Both sides benefit me. I went as far as to not vote. But my opinion likes Labor more. But still not enough to vote. I like memes. So posting this required less effort than you'd think. Also I watched star wars episode 2 today so I was laughing at that as I posted it. :D
+40. Living in that old Reddit bubble.
+41. Or only gets their news and opinions from echo chambers like reddit.
+42. Yes, some of us are acutely aware of how many abusive morons are around us.
+43. Sir it's basically a low effort meme post. I'm good either way.
+44. :) Before we judge the opinions of another. You should first take the time to read the opinions the other person.
+45. An electorate can most definitely make a mistake... It's only identified a few years after the fact...
+46. lol. Newman would like a word- the “electorate” makes mistakes all the time. Imagine if you will an average person, you wouldn’t consider this person well informed or educated - half of the electorate is slower than that fella/sheila. It’s a fuckin nightmare. I’ll debate in good faith with a labor or lnp supporter but what we say and discuss is irrelevant to some sky news adult crime crap
+47. That doesn't make even a vague possibly form of sense. If the electorate doesn't make mistakes, why would the government have changed?
+48. "the electorate never makes mistakes" if that were true we'd only ever need to vote in one government every generation. You know, since the electorate can't make a mistake.
+49. https://www.reddit.com/r/australian/s/mcy3jGwbOS
+50. https://www.reddit.com/r/australian/s/y9jniZp0Vh
+51. bro doesnt know what a democracy is
+52. Just give up and complain then I guess...
+53. Are you hold ALP accountable? They been in power for majority of the time in Qld. Yet apparently LNP is a at fault the the current state of Qld.
+54. You'd be delusional to think both sides don't lie. Some lies just sound better, so they get more votes.
+55. Which media monopoly? 🤔 This is the least concentrated we've ever seen, so much so the government wants laws to control the flow of information?
+56. If you had told me in 1990 that my father would one day wear a political propaganda hat replete with the American flag, I would have said you were dreaming. But here we are.
+57. I've seen a concerning amount of cars around North QLD with Trump stickers and confederate flags. It's bizarre that Australians would do this
+58. American politics is basically evil vs stupid and you have to pick one. It’s been like that for a while now over there. In Aus though, it’s not a prerequisite to make politics your personality. But seems a lot of people want that.
+59. Umm highly likely that guy is a KAP voter
+60. I’m reading this today and yesterday wasn’t election day.
+61. We've been able to bet on the outcome of Australian politics for at least the last 10 years on Sportsbet
+62. Nothing worse than a free handout, especially if the “free” part of it means fuck all, the government giving out money they don’t have to fix problems they’ve created? Where’s the sense… debt isn’t free.
+63. Just trying to wrap my head around this comment... working for the dole you get paid for and is voluntary?
+64. Go to the police website and look at the crime statistics. QLD as a whole is trending down but North Queensland has the opposite trend. I thought the same as you until I actually drilled down and looked at the statistics. I could go through the rest of the points but I doubt you would bother to even think about the issues. Time to grow up, buddy. You don't agree with the party, fine, at least be a supporter of democracy.
+65. [deleted]
+66. And so the should!
+67. Thanks for sharing the link. Go to advanced and filter on North Queensland for rates.
+68. Hey mate, There is more to Qld than Brisbane. Drill down on the crime rates by areas then compare to Brisbane. Compare Brisbane crime rates to Rockhampton, Mackay, Cairns, Townsville, Mt Isa, etc. You will see that these rates are far elevated above what Brisbane is. This is why ALP got a trouncing and why you are now crying... I sugest you do some homework so you do not keep spreading your mis-information. Albo will be most unpleased.
+69. Are you using the far American right reactions to explain how the Australian left will react? That’s some serious mental gymnastics.
+70. >Next thing will be ‘it’s rigged, they stole the election.’ Considering it's straight out of the Republican play book, I wouldn't be surprised if that is heard after the next election assuming Crisafulli follows his former leader to being a one term premier.
+71. No, that's not what out of touch means.
+72. [deleted]
+73. Err Queensland Hospitals (or lack thereof) are for Queenslanders. Gladys will be dusted off to shut the border. Temporary fence hire company shares soar.
+74. Not being able to accept a democratic result is the reason for your “tinderbox”. Bet you have never volunteered your help to anyone in your life to make something better, just whine and run away.
+75. It wouldn’t have taken *that* much more effort to vote than it would to post this. Next time, skip the meme and just vote you lazy bastard.
+76. Your disdain of the electorate will be your downfall. The left needs to learn this very quickly, or they will lose any remaining goodwill that Queenslanders (particularly in the regions, have for them
+77. Yeah the shite that sky was spouting was offensive and not aligned with facts To be fair they don't hide their preferences, but people watch these networks believing them to be journalists, when they are clearly not.
+78. Look, keep on insulting the electorate, it makes the job a hell of a lot easier for conservatives
+79. That shit gave me cancer..
+80. Greens have won a seat. PHON didn’t win a seat even though they had a 0.8% swing. But when you sit down and look at the fact that most of these swing seat are only 1000 votes between them. Some less. You know, except for the hard Labor or Conservative seats. It really shows how polarised Qld is, but so is Australia. I think a great deal of the topics in USA have reflected in Qld.
+81. Bro just wishes people had to have a brain before they could vote.
+82. What’s the current state of qld?
+83. Never said labour don't lie, but their platform isn't entirely built on lies
+84. Can't say I've seen any of this around Cairns and surrounds. Most of the farmers and harvest groups I speak to during my former seasonal work on the cane trains despise him. I haven't met a great deal of people that support him outright. I'll keep my eye out though.
+85. its bizarre that i see people waving around palestinian flags
+86. Ehh I brought a trump sticker but it’s on my skateboard because it’s kinda goofy and out of place but I also have the opinion that both sides are full of shit and don’t care about the people regardless of how they conduct themselves people need to be smarter and not pick a side but understand that both sides probably have a bit of something relevant I’d rather be in the middle and try find compromise somewhere
+87. No, American politics isn’t like that at all.
+88. This just in - experts say the concept of time exists.
+89. .........thanks for letting me know. I'll be looking into that haha
+90. It was mining royalties genius.
+91. You sound like you actually asked. So I will actually answer you Okay so about 10 years ago. It was not voluntary. It was mandatory for 6 entire months of placement if you were unlucky enough to not find someone who wanted to hire you For for people stuck in an unemployment cycle. They were forced to work for free for 6 months a year. Which cut their payments if they didn't turn up or get a med cert for a sick day. You were expected to work as if you were paid. But the entire boost to your basic human right that is a welfare payment in Australia? An entire 20 bucks a fortnight. So in reality. Some of us got paid $10 a week to do 6 months of labour we had no choice in that took us away from actually looking for work. And the worst bit was that it took you out of your normal social circles you can network in and find work through friends... and forced you to hang out with unemployed people WHO BTW ARE ALSO CONVICTS who avoided jail for their crimes and got community service. So there you were. A fresh 20 year old keen for life, forced to hang out with a 70 year old retired woman and a 30 year old criminal who has already been to court for his crimes It was a horrible time for everyone involved. Work for the dole caused me tp develop a drug habit that took years to free myself from (because it placed me with pill popping junkies and you are only as good as the ones you hang out with. Which WFD forced you to hang with. It was rough haha
+92. You do understand I can, I will voice my concern as that is my democratic right, so you can just piss off with your weasling words. And again how is locking up kids going to improve youth crime? And say it loud, by north Queensland you're talking about aboriginal communities which is a whole fucking other kettle of fish and is going to take a whole lot more effort than any government wants to undertake.
+93. You do realise those areas comprise less than 10% of the population, right? Even if every single Labor voter in those regions switched to LNP, that *still* wouldn't have been enough to swing the election. The majority of people who voted in the LNP are not in an area where crime in increasing.
+94. Would kind of hope so since it wasn't meant to be taken seriously.
+95. Again. As others have said. The new reporting of this have not treated it as as an NQ problem. They’ve pushed it state wide. Saying it’s real in NQ does not explain or limit why so many voters state wide felt it was an issue. The LNP need just enough leverage to get enough people to forget what happened last time. They spent a lot of (corporate) money pushing simplistic agenda items to leverage what ever dissatisfaction the average punter had with labour against them. So yeah, I think a lot of voters got conned and we will see buyers remorse very soon.
+96. Are you drunk? I never even looked at brisbane or mentioned it once. No idea where you got that from. I am talking about qld as a whole which is what is being discussed. Nothing i said was not backed by actual crime statistics as is completely true. You managed to find an area with a crime rate higher than Brisbane. Congrats, Unfortunately nobody is talking about areas with a crime rate higfher than brisbane. We are discussing if crime is getting worse and I am happy to report that crime is way down in Mackay over the last 4 years.
+97. No, not the left just the reddit intelligencia
+98. two wolves and a sheep vote on what's for dinner.. guess what happens next
+99. A moistened bint distributing swords is no basis for a system of government.
+100. Mhhm, see this is the mindset that will prevail as the services collapse. That somehow it is the fault of something other than our government. I was implying that NSW will be the ones shutting the border this time because it will be our health services that collapse as we sneak over the border to see a GP.
+101. Get fucked, I worked for years for meals on wheels preparing food for the elderly in the morning. At least I did before I had to stop work and become a full time carer for my partner and father to our two kids. Try again with your baseless assumptions. I am happy to accept a democratic result. That is why I am doing what I can to get out of this state, because I accept that the majority of people here wanted change and they think this is what they want. Mate I honestly could not care who is in government if they are doing their job and proving the services my community needs to function. Not that Labor was doing a good job mind you, but now we get to see exactly how conservative the people of Queensland really are because I actually took the time to learn exactly what their policy agenda is and it reads like The Handmaid's Tale.
+102. this specific post was just a lil joke around the fact Labor lost. Like I'm happy to joke against my own voting preference chill, you can laugh at the joke dude. Alao I may have a career in state government that makes me not really care who's running the joint overall. But I can still validate my opinion on what I'd prefer more y'know
+103. I am not from Qld, you probably should just read my post again.
+104. Sometimes those with a brain lose too. It appears hard for a fellow robot to admit his human fallacies as a product of humanity.
+105. That’s eugenic classism.
+106. Neither side is bud. It wouldn't hold up otherwise. Labor only governed the south-east region of the state. That's why they lost
+107. The “both sides are the same” people are some of the scariest voters imo. Dumb as heck and easily swayed either way. Either party could offer you a pack of chips and you’d side with them. Horrifying.
+108. I’m talking the free power rebate, or free school lunches free this free that. 🤡
+109. So get a job so you don't have to work for the dole? This is Australia, if you want to work, you will find work unless you are a tired prick which will see you get the arse once the employer sees what your work ethic is like. I can see why you are a fan of the ALP/Greens coalition. You like free shit hey?
+110. Okay that makes sense to me, my Mum has worked on the Dole and yea the employment prospects are definitely NOT favourable. I can see where you're coming from, however I do feel like comparing it to slavery is a bit exaggerated. Thank you for sharing your point of view
+111. And people have listened to your concerns...many times. You misrepresent the views of others and don't listen to what they are saying. Yes you have a democratic right to voice your opinion, but you also have an obligation to listen to others voicing theirs. I'm not sure if it's the Aboriginal communities causing an increase in crime, I haven't seen any data to suggest that.
+112. That was one example of a policy the left didn't seem to understand. I don't have all the answers for why they voted the way they did because I didn't vote LNP. My point originally is we need to make an effort to understand and address their concerns instead of just mislabeling the whole thing as misinformation and stupid. Or that it was simply for change, even though that's a valid position.
+113. Sorry, what do you mean by your first point? I think the statewide stats hide pockets, even in SEQ, which have higher rates. NQ was just an example. I wasn't saying that was the reason they voted LNP, you need to actually listen to them why they voted, I was just disputing the narrative that crime wasn't an issue at all.

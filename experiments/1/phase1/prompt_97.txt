@@ -1,0 +1,184 @@
+Your job is to analye a series of Reddit Comments are drawn from sbumissions related to the 2024 Queensland State Election. The comments are drawn from a collection of comments before, during and after the election itself on the 26th of October. The parties that sought election were the Australian Labor Party (ALP), the Liberal National Party (LNP), the Queensland Greens (Greens), One Nation and Katter's Australian Party. The LNP prevailed in the election, with David Crisafulli becoming the new Premier of Queensland. 
+We have identified several key issues that the major parties campaigned on during the 2024 Queensland State Election: Youth Crime (YC), Cost of Living (COL), Health (H), Energy and Infrastructure (EI), and Abortion Laws (AL). Below is a summary of each party's position on these issues:
+Youth Crime (YC):
+- LNP: Advocated for stricter penalties for young offenders, including the 'Adult Crime, Adult Time' policy, proposing that serious offenses committed by youths be met with adult sentencing. 
+- Labor: Focused on rehabilitation and prevention programs, aiming to address the root causes of youth crime through community engagement and support services.
+
+Cost of Living (COL):
+- LNP: Proposed measures such as abolishing stamp duty on new builds for first home buyers and re-establishing the productivity commission to review building industry regulations, aiming to alleviate housing costs. 
+- Labor: Introduced initiatives like 50-cent public transport fares, a $1,000 energy rebate, and free lunches for state primary school students to ease cost-of-living pressures.
+
+Health (H):
+- LNP: Committed $590 million to an 'Easier Access to Health Services Plan,' aiming to reduce ambulance ramping and hire additional healthcare workers. 
+- Labor: Focused on maintaining and expanding healthcare services, addressing hospital capacity issues, and investing in new health infrastructure.
+
+Energy and Infrastructure (EI):
+- LNP: Criticized Labor's Pioneer-Burdekin Pumped Hydro Project as financially unviable and canceled it upon taking office, opting to explore smaller-scale hydro projects instead. 
+- Labor: Proposed large-scale renewable energy projects, including the Pioneer-Burdekin Pumped Hydro Project, to transition towards 80% renewable energy by 2035.
+
+Abortion Laws (AL):
+- LNP: Stated there would be 'no changes' to abortion laws under their government, maintaining the status quo established in 2018. 
+- Labor Party: Supported the existing abortion laws and opposed any attempts to repeal or amend them. Asserts that LNP intend to restrict access to abortion services based on the views of some of their members.
+
+Analyze Reddit comments and code them based on the positions they support or oppose concerning these issues. You will output JSON, so valid values are strings or null. Use the following codes: YC, COL, H, EI, AL. If a comment's position is unclear or does not pertain to these issues, output null.
+
+Secondly identify which party the comment appears to support. Use the party code ALP, LNP, Greens, ON, KAP if this can be determined, otherwise a null value if undetermined.
+
+Output JSON as a list of objects where each object has an "id" (integer) property of the comment id, an "issue" property set to the issue code string (or null value), and a "party" property set to the party code string or null value. Null means JSON null, not a string. Values MUST be quoted, e.g. {"party": "LNP"} unless they are null, e.g. {"party": null}. Comments follow:
+
+1. sorry i meant identical to a metro that would have been built in brisbane, obviously the alternative was never going to be build a Sydney scale light rail lol > share at grade intersections with general traffic not for the vast majority of the route lol goes to show how much you know no one has yet explained why it matters though. even if they literally called it a hypersonic maglev train when it clearly isnt, who gives a shit? it is fit for purpose and thats all i care about other than "reee its misleading" .... ok? cool? will that impact the intent of it? no? exactly
+2. Nobody's getting "so mad" or suggesting it should be scrapped. We're just discussing if it should be renamed.
+3. Thanks for the explanation! I have definitely wondered why all the buses choke near there, and what would solve the issue. It definitely seems like a tunnel is the way to go. Maybe we'll get a phase 2 one day
+4. That video makes me depressed. What we could have had... 5 years later, and we're still stuck with a pedestrian death trap and a bridge that is basically a defacto bus depot.
+5. Well they can, but most use that busy intersection at Grey St, and the end of the Victoria Bridge, where pedestrians, or the metro/buses will have to wait for each other. I guess I'm just curious how 'dedicated' is dedicated.
+6. does the name impact the ability of the metro to perform its function? If not, why does it matter what the name is?
+7. Grey street will likely be closed as a crossing for that very reason, forcing pedestrians over the bridge. the other end of victoria bridge may even direct pedestrians over the busway by the treasury but even if not, 2 pedestrian crossings for the entire network is hardly enough of a reason to poo-poo a significant improvement to public transport
+8. Not really. What's your point? Nobody said it did. That's also not a reason to rename it.
+9. So they will build another pedestrian bridge over Grey St, if it's closed as a crossing? To go from Treasury to West End via Melbourne St, is what I mean.
+10. So why does it matter what the name is then?
+11. looks like grey street at grade crossing will remain. but again, 1/2 crossings over an entire network is hardly enough of a reason to poo-poo a significant improvement to public transport
+12. We’re not “poo-pooing” the project exactly we’re explaining why calling it a metro is incorrect.
+13. And why does the mane matter? No one has been able to explain that and every time I ask everyone suddenly goes quiet as they realise it doesn’t because it’s just pedantic
+14. I’ve replied several times explaining why it’s a bad name. You’re choosing to be ignore the reasons.
+15. Did you intentionally ignore my point? I know why it’s a bad name, I’m asking why it matters Calling my car the shaggin’ wagon would be a bad name because it’s a hatchback. But who cares? It still does the job
+16. Because words have meaning, using them incorrectly causes confusion. Hope this helps.
+17. Confusion how? Oh no this mode of public transport has rubber wheels I expected steel wheels…. Oh well Yet again: ….. and? Why does it matter if some people are confused that a bus is called a metro? This “confusion” will harm no one and cause no issues. I still don’t understand why everyone is so worked up about it as if people are going to see the metro and be so confused they’ll jump in front of it out of confusion
+18. The confusion comes from expecting a metro-level of service and reliability and that’s not what this will offer.
+19. oh no! people will have to wait 10 mins instead of 5 (sydney metro)! an utter disaster. this is simply the worst thing to happen to brisbane. again, why does it matter if people have to wait a whole 5minutes! ETA: some sources say it will be every 5 mins so identical to Sydney metro lol
+20. Really weird how some Australians, are rabidly obsessed with Trump. America is a cesspool, imploding from the inside.
+21. A Yougov poll of Australian voters from about a month ago asked if they could vote in the US Presidential Election who would they vote for - Harris 67% Trump 33%. Anecdotally that feels right to me.
+22. Haha a Trump supporter asshole spat at me in Melbourne during a rally a few years back. Fucked in the head.
+23. No matter how conservative you might be, I don’t understand how any Australian could want Trump to win. We need the US alliance for protection. We’ve heard how little Trump values alliances and protecting democracies. If his Ukraine policy was applied to us, he would be telling us something like “give the CCP all the land to north of Townsville or we’ll pull all support”. What true conservative would support that?
+24. Ugh. So gross to see Nazi shit in public here.
+25. I just don’t understand why people catching the 50 cent bus care so much about tax cuts for the mega rich
+26. I wont be scrutineering this time as I'm not in Queensland for the election. Every poll, state and federal, I've worked on since 2016 has had at least a dozen people "voting" for Trump. It boggles the mind.
+27. Love the not-so-subtle misogony there too. Classic MAGA.
+28. Trump is some sort of phenomenon that is for sure. It is definitely not a positive message that he spruiks. I think he appeals to the nihilists who have given up on the system and know he intends to burn it down. He is just not that good at anything.
+29. Imagine being that sick in the head. The internet is melting people’s brains
+30. Fuck Trump
+31. Can we please not idolise this rapist, insurrectionist, fraudster. We just don’t need that brand of toxic shit here.
+32. Whoever put that there, can fuck right off to America
+33. He may be the only *man* fit for the job, but the woman is a better choice.
+34. I am absolutely baffled at the whole trump shitshow. He is almost a cartoon of himself, but in real life. Like he lives his whole life as a character. Has wife, cheats on her with a pornstar, marries her, then cheats on her with another pornstar. With fraudulent money. His business dealings are like a how to for wannabe movie supervillains. The whole idea that he's a "self made man" when ALL of his money came from Dad, is ludicrous in and of itself. The idea that had the common man's interests at heart in any way is ludicrous. I've hated him as a human ever since I knew who he was. I can't see how anyone can want such a turd of a human, in control of anything. Baffling.
+35. ![gif](giphy|tsFs4w3ExMwFXVo5JV|downsized)
+36. Lucky there's a woman available
+37. Hang on, if the job is raping and being a cunt then he's the best.
+38. hope you ripped it off and tossed it in the bin
+39. 🤮🤮🤮
+40. https://preview.redd.it/ijpxn6jwrlwd1.png?width=428&format=pjpg&auto=webp&s=baaef66e85e56611fc979f075628e93a7c84628d Can't believe I'm actually saying this.. but I think Matt Walsh was right
+41. Burn it
+42. I really miss the days when anyone with class and those pretending to have it never discussed their political leanings. Thank fuck we don't treat our pollies like demigods here.
+43. its quite surprising how some australians are so passionate about trump. the challenges in America right now make it seem like the country is struggling internally.
+44. Good thing there is a woman who is better.
+45. Totally some shit stirrer who planted that sticker, opened reddit, then waited.
+46. Harris lifts helmet: "I am no man"
+47. We see way too much of that orange diarrhea generator.
+48. Gross. Hope you scratched it off.
+49. Trump. The Super Rick. Dense, orange and dumb as dogshit
+50. I hope you removed this vandalism. It’d do the community a favour. I did this for COVID denier crap and was thanked by a doctor friend.
+51. Time to call in ASIO and DHA to pull up these idiots for their possible acts of state subversion.
+52. I hope they realise that Australians can't vote in US elections
+53. I’m not used to seeing Australians so invested in politics. The amount of propaganda I’ve seen leading up to this election (qld) is insane. I guess nothing wrong with being invested in how the country is run, just not used to seeing so many people outspoken and conflicting with others.
+54. I wonder how many people tried/will try voting for Trump and be confused when he isn't on the ballot.
+55. of course it was a redlands bus 💀
+56. So now that group is advocating for immigrants? Because you know... If he's the right man for the job, he'd have to immigrate here? /s
+57. Definitely odd. I live in the USA and have yet to see a sticker of Anthony Albanese on the buses here
+58. Had a coworker who loved trump despite me trying to point out the flaws in his steadfast beliefs Right wingers are weird
+59. I need more context. What job are we talking about?
+60. https://preview.redd.it/0kyix0pqmmwd1.png?width=640&format=png&auto=webp&s=d6013910f96c16009bdff1acb3ccde656e41f84e
+61. I desperately wanted an explanation for the insanity and immorality of Trump and his supporters before and during his first (hopefully the last) term, and found this video that perfectly explains the Trump phenomenon and the post truth world using theories of group psychology. It's useful for understanding other unfathomable events too. I highly encourage you to check it out. https://youtu.be/SdWG8UiAtpE?si=yo9YVgPpFoLHJwyL
+62. QLD - the 51st state
+63. I’m an Aussie - and a US citizen. I’m completely appalled by the ridiculous reporting on the US elections. I haven’t seen anything that is reported in Aust that is remotely an accurate depiction of what things are actually like in America on a day to day basis. It is a ridiculous situation - but for people like me who pay tax, own property and have family in the USA, it’s as serious as a heart attack. I’m from a swing state and guess what - my red county has “not received” my ballot (I voted blue). I sat in my office and watched January 6 unfold live on tv. I’m disgusted with any American who still supports him; and as for Australians that may support him - it’s pure ignorance and not grounded in actual experience. 💯
+64. TRUMP 2024 BABY WOO
+65. Funny though because our own labor seems to be doing everything the Dems are doing in America. Imo down with labor. And rise one nation
+66. I'm ok with my opinion. Yours is called cognitive dissonance.
+67. This thread is a cesspool of mental illness and lack of understanding about how the world actually works.
+68. The main stream media have painted Trump to be an idiot when in fact he is literally draining the swamp from the inside out. The arrests of Epstein and Diddy are the tip of the iceberg which Trump put in motion. He now has JFK Jr on his side who is trying to make it public that the covid vaccines cause injury and turbo cancers. The courts have taken out an injunction against him because he is likely to win. Can yoi imagine the fallout( which is also not on MSM unless you dig for it). Make America Healthy again and Trumps plans to cut Tax's and bring the cost of fuel down hence making food production and distribution aff again is the biggest thing ANY politician has done ever. He is a businessman first and the people love him because he cared about the people. He has made his own money through hard work not from being born into elite silver spoon families. Seriously alot going on that people are not aware of. KH and Biden have allowed millions of illegal immigrants through the border to rob and steal from Americans. Thousands of immigrant children have been separated from family and sold as sex slaves...at the border. So your due diligence and search for the real answers instead of believing the information fed to you by the elite owned media. https://news.bloomberglaw.com/litigation/rfk-jr-wins-deferred-injunction-in-anti-vax-social-media-suit https://www.msn.com/en-us/news/us/ice-unable-to-track-nearly-300k-immigrant-children-dhs-report/ar-AA1ptdYQ
+69. Well Libs are supplying weapons to Israel while Trump is threatening to cut it if both sides won't go back into the table. Remember Syria? The left can keep rallying about peace in the middle east while they're providing weapons or they can go right and just cut weapons supply. It's a bad choice, having to choose the lesser of 2 evils
+70. Yeah man it just randomly became cheaper after Obama trashed the economy in 2 years..
+71. See nothing wrong with this. Retards would rather Harris. Bruh gtfo
+72. Cognitive dissonance. You had the first Vax and your legs gor totally swollen ,.you ended up.in Emergency room. But you still went and had the next booster when told to. And the next.
+73. Great quote. When the truth comes out don't ask how we knew but why you didn't know. There are millions out there fighting for global freedom. Soon enough you will see what it's all about.
+74. I'll leave the work of Matt Orfalea here [https://www.youtube.com/watch?v=GJmE54AXo3I](https://www.youtube.com/watch?v=GJmE54AXo3I)
+75. In 2016 after he won, some fwit put all these Trump posters up around Merthyr. Not sure if they were yank or not, but like wtf.
+76. Internet has warped the simple minded.. social media has caused most of this chaos.
+77. Facebook and qanon mindhole.
+78. I know quite a few. They're all lonely, middle-aged, and spend way too much time on social media in groups that make them feel welcome and part of a family
+79. In NZ here, we get the same. Like others said, it’s social media nonsense being drip fed into other countries. For me, the funniest part is how the same people will talk about how terrible immigration is in America (with racist intent), then vote for the right wing party here that boosts immigration during a housing crisis while public infrastructure continues being underfunded. I don’t think these people really follow any principle or policy, just indoctrination and the “everything I don’t like is woke and woke is bad” ideology.
+80. So many people want to be America Jr., and I’m like, “Fucking *why*?”
+81. You might have heard about it on the Internet, 'TDS' - it stands for Trump Dicksucking Syndrome.
+82. 💯. Driven recently by a owner driver taxi driver who was a member of the liberal party who loves Donald ( the PATHOLOGICAL LIAR) Trump. People who love him are nasty drama addict's.
+83. Ehh not really that weird. Combination of our largest combined media outlet being owned by a bloke that wants to turn us into his own little America. Then on top of that you have social media algorithms basically force feeding confirmation bias to its users.
+84. The one and only reason abortion has come into play in a QLD state election 🤣
+85. I have sometimes wondered if Trump and Maga were big X Files fans back in the 90's tbh. Trump's magnetic aura amongst his supporters does seem a bit stranger than fiction sometimes. I think we will try his style of politics here, but I don't think either major party will be able to adapt to it entirely. It might actually give rise to a four party preferred of Labor, Greens, Liberal and National parties with the Coalition between Liberal and National being ended. And I could then see the Nationals merging with the far right parties like KAP, One Nation and Palmer United and others from there.
+86. Seriously. I spent thousands of dollars to leave the US.
+87. That’s not true. America has a lot of fantastic qualities and people 🇺🇸 TRUMP and his MAGAts are not included 🇺🇸🇺🇸
+88. This actually happens everywhere. For example, I was in Japan from 2018-2023, and I saw a few Trump marches (by Japanese people, 0 whites). Oh, and I lived in a smaller city, not like Tokyo or anything. Which is really weird because you see almost 0 protests or marches in Japan but here we are, 2pm on a Sunday and a hundred or so locals in full support.
+89. Both for and against him.
+90. Where else can you implode from? The outside?
+91. The fake news smeared him bad.
+92. Rabidly because he is doing so much good and you don't see it on the news.
+93. It dropped there was another more recent one.. about 22% support.
+94. Highest support for Trump on that poll was in QLD though IIRC
+95. I'm very much in favour of more of these polls. Preferably with identifying data
+96. Now do Boomers...and it will be 80% Trump and 20% Harris.
+97. They’re all a bit fucked in the head down there in melbs
+98. It is a mistake to think that thought is involved. They are either wilfully ignorant or just plain stupid.
+99. The other day heard someone say Trump was the better candidate "because he's more *decisive*" ummmm ok
+100. Trying to apply reason to trump anything will get you nowhere. These people don't care, Trump just says racist and horrible things. Anytime he goes against the grain, they say what he says doesn't matter or say that it's fake or he didn't mean it that way. Look at their reaction to him saying people should get vaccinated for COVID lol.
+101. It's beyond me and the rest of the world why a large chunk of dumb Yanks want an old man who shits his pants, can't put a sentence together, gropes and rapes women and hangs out with sex trafficking Pedo's as their President.
+102. You are 100% correct with 99% of your post. Most Conservatives support him because they don't even think of that. They are all about racism and controlling women (putting them back in the kitchen), and religion. Religion is the strongest in a Conservative...and Trump has a cult of religious freaks. More people should be thinking about the majority of your post. WE ARE IN DANGER as an ally of the USA. That's the actual point of why so many are freaking out about him possibly being in power. He will bow down to Putin and Xi and with this brings danger to any alliance and to Europe because of that. If USA joins the enemy , we are all done for.
+103. Trump also doesn't support Israel. We got lots of them types here.
+104. They can have Townsville as far as I'm concerned ^^^/s
+105. Generally speaking the attraction to Trump is libidinal, not intellectual.
+106. Yeah they would. They would view and frame it differently to you or just disagree with your view/ opinion outright.
+107. I am an Australian living in USA and I will be voting for Trump to win. Reason is simple: I’m middle class and I believe Trump will be better for the economy. All the points you’ve mentioned are international relations. American voters are like Australians and will vote mostly with their bank accounts in mind
+108. FMD - I have the total opposite view of trump and what it means for Australia… inflation is running rampant because the democratic war machine keeps financing conflicts abroad - take me back to 2016-2020 when the world wasn’t at war
+109. Kamala is a puppet and has zero polices
+110. Ukraine is a massive money laundering operating that has been used by the CIA for decades.
+111. You do know that our alliance with the U.S. is non reciprocal, right?
+112. I doubt this person tapped on
+113. Do they just draw an extra box at the bottom how do you do that
+114. Most of them don't think that deeply. They will just do whatever they're told and believe whatever their algorithim shows them without any critical thinking at all.
+115. He's not even the only man, or fit for the job, though.
+116. Kamala2024!
+117. Bro his wife is his dom that high heels been up his ass it’s so obvious if you think about it
+118. God I wish they’d actually put him under some pressure. “Hey bunch of orders 5x small, 5x medium **MACHINES BEEPING** *unintelligible* large. Oh by the way one of the fryers is broken, you’re low on seasoning dunno where that is. The guy you were meant to be working with is running 40 minutes late… also you’ll be training Lisa here *gestures to the smallest woman you’ve ever seen who on the verge of tears*. Milkshake machine is up, but we are out of chicken. **random lady screaming at staff as a group of 10 teenagers walk in**. “WHERE THE FUCK ARE THE FRIES THERE’S SEVEN CARS IN THE DRIVE-THRU!” *lisa starts crying*.
+119. Would be better to add a sticker over the caption and leave it there for a while so the cooker doesnt come back and add another one (or more). I'm thinking we workshop text to go over the bottom part.
+120. Wow! What a relic. 2016 Matt Walsh making some sense! Reminds me of when Elon Musk used to be somewhat cool in the public eye, Right Wing media is a hell of a drug! Not even once, kids.
+121. And they’ve been in the comments rambling
+122. Makes you terrified for the federal election doesn’t it
+123. Maybe David Crisafulli considering it’s the state election on Saturday. Should put one up for the rep
+124. Maccas crew
+125. You should look up what cognitive dissonance is before saying it. All of your comments have a nice helping of self-serving bias though.
+126. > Thousands of immigrant children have been separated from family and sold as sex slaves...at the border. Wasn't that [specifically a Trump Administration order](https://www.pbs.org/newshour/show/how-a-trump-era-policy-that-separated-thousands-of-migrant-families-came-to-pass) to separate Children/Parents? The rest of your post is just as much waffle and bullshit... and I doubt you'll engage truthfully or in good faith. So I'll just leave this here and not further engage.
+127. Go away.
+128. Who’s you ?
+129. Put the pipe down mate
+130. Hey look, propagadna being spread by a bot.
+131. I doubt it was an American. The type of yank that would put up this sticker is unlikely to even have a passport.
+132. I wish, we had that shit during the Bush years too. It was gross.
+133. Yep, social media stretches beyond borders. Half these losers don't even know anything about Trump but they're so desperate to be a part of something they fully buy into the MAGA nonsense. It's insane.
+134. I mean, social media has definitely made everything so much worse, but this this always seems to happen when fascism in on the rise overseas. Australia had its fair share of rabid Hitler fanbois back in the 1930's too. The nutbag who famously gatecrashed the official opening of the Sydney Harbour Bridge on horseback with a sword was one, for instance.
+135. Too dumb and lazy to research anything. Try to sound 'informed' by just parroting what is fed to them on social media.
+136. Only thing I’d like to be more like America about is have access to guns easier than this crappy system we have now But since most states restrict the hell out of them now anyway that’s kinda moot
+137. Terminal Drumpf Syndrome
+138. Yeah when I saw that I was like “ merrrrrica “
+139. Religion is also behind a lot of funding...and they want their control back.
+140. You seriously think Liberals are less racist then the further right parties ? I think not...Liberals are steam rolling towards Nationalism themselves and I could see a merge more than anything. I could see KAP, Palmer United, Nationals , Liberals merging but One Nation couldn't cope with being part of a group.
+141. Well stamp it out....from the world.
+142. Name 3 good things he's doing in general and one that affects Australia in any way
+143. even better - from what I've seen in the US polls over the years the actual hardcore Maga base is pretty consistently in the low 30 percent
+144. I can't recall if there was a state breakdown but I'd not be surprised if that was the case given some of Qld current and past political figures
+145. There is no denying that poll . You would not believe how many love that asswipe...and his Australian counterpart, Dutton.
+146. Yeah that sadly checks out. 🤮
+147. The whole Trump thing is to just be anti left/progressive. Thats it.
+148. Or just racist AF.
+149. It's even simpler. He gives them permission to say all the hateful things they d always wanted to say because they're too embittered to do a bit of introspection and realise they hate themselves.
+150. that there is an example of why capital R redditors have absolutely no idea what conservative inclined people think, why would anyone respond in good faith to that? Enjoy the circle jerk lads!
+151. I’m sorry, I think you’re going to have to be more specific as to who that is.
+152. Insulting conservatives like that for the last decade is one of the reasons people have been pushed to people like Trump. MANY conservatives are never Trumpers.
+153. How would they frame it? Btw, I’ve always been centre right. Except the right keeps going more and more extreme making me seem left.
+154. How will Trump be better for the economy when he will bring in tariffs that’s will drive up prices (and inflation)? The US has post COVID inflation under control and unemployment is at record lows. Their economy is doing great (now).
+155. I mean let’s say you’re right and inflation is being caused by the “war machine” and not by the many other factors. So you’re willing to let Democratic countries be invaded to reduce inflation. Does that apply to Australia too? Or just others countries you happen to live in?
+156. The idea that inflation is due to the US funding Israel and Ukraine is a bit much for mine. Russia is to blame for the war in Ukraine anyway, not the USA.

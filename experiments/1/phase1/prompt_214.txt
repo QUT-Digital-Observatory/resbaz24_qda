@@ -1,0 +1,163 @@
+Your job is to analye a series of Reddit Comments are drawn from sbumissions related to the 2024 Queensland State Election. The comments are drawn from a collection of comments before, during and after the election itself on the 26th of October. The parties that sought election were the Australian Labor Party (ALP), the Liberal National Party (LNP), the Queensland Greens (Greens), One Nation and Katter's Australian Party. The LNP prevailed in the election, with David Crisafulli becoming the new Premier of Queensland. 
+We have identified several key issues that the major parties campaigned on during the 2024 Queensland State Election: Youth Crime (YC), Cost of Living (COL), Health (H), Energy and Infrastructure (EI), and Abortion Laws (AL). Below is a summary of each party's position on these issues:
+Youth Crime (YC):
+- LNP: Advocated for stricter penalties for young offenders, including the 'Adult Crime, Adult Time' policy, proposing that serious offenses committed by youths be met with adult sentencing. 
+- Labor: Focused on rehabilitation and prevention programs, aiming to address the root causes of youth crime through community engagement and support services.
+
+Cost of Living (COL):
+- LNP: Proposed measures such as abolishing stamp duty on new builds for first home buyers and re-establishing the productivity commission to review building industry regulations, aiming to alleviate housing costs. 
+- Labor: Introduced initiatives like 50-cent public transport fares, a $1,000 energy rebate, and free lunches for state primary school students to ease cost-of-living pressures.
+
+Health (H):
+- LNP: Committed $590 million to an 'Easier Access to Health Services Plan,' aiming to reduce ambulance ramping and hire additional healthcare workers. 
+- Labor: Focused on maintaining and expanding healthcare services, addressing hospital capacity issues, and investing in new health infrastructure.
+
+Energy and Infrastructure (EI):
+- LNP: Criticized Labor's Pioneer-Burdekin Pumped Hydro Project as financially unviable and canceled it upon taking office, opting to explore smaller-scale hydro projects instead. 
+- Labor: Proposed large-scale renewable energy projects, including the Pioneer-Burdekin Pumped Hydro Project, to transition towards 80% renewable energy by 2035.
+
+Abortion Laws (AL):
+- LNP: Stated there would be 'no changes' to abortion laws under their government, maintaining the status quo established in 2018. 
+- Labor Party: Supported the existing abortion laws and opposed any attempts to repeal or amend them. Asserts that LNP intend to restrict access to abortion services based on the views of some of their members.
+
+Analyze Reddit comments and code them based on the positions they support or oppose concerning these issues. You will output JSON, so valid values are strings or null. Use the following codes: YC, COL, H, EI, AL. If a comment's position is unclear or does not pertain to these issues, output null.
+
+Secondly identify which party the comment appears to support. Use the party code ALP, LNP, Greens, ON, KAP if this can be determined, otherwise a null value if undetermined.
+
+Output JSON as a list of objects where each object has an "id" (integer) property of the comment id, an "issue" property set to the issue code string (or null value), and a "party" property set to the party code string or null value. Null means JSON null, not a string. Values MUST be quoted, e.g. {"party": "LNP"} unless they are null, e.g. {"party": null}. Comments follow:
+
+1. It's Governments. They know our numbers and all our personal information. It's probably from the ATO. I do know that some years back when they updated privacy legislation and created "Do Not Call" registers etc that they specifically exempted election political messaging from political parties from any opt out provisions. I assume it was created at the Federal level and probably propagated and adopted down through State and most likely Local Council level. Something like that. The main message is they can spam you with election messages and recordings and you have no recourse to opt out or complain.
+2. That's what I want to know.
+3. I voted early too.
+4. i voted early but i've received them since i voted from both sides ...
+5. same with mine, but it keeps that little icon up the top saying i have a new message.
+6. well lucky us lol but thanks for the informative reply! :)
+7. Don't know what you mean by "beggars can't be choosers", it's a wonderful place.
+8. It's completely fine and an area a lot of people love loving in. Lots of hospital staff and retirees.
+9. Oh no a fairly high income area, high levels of home ownership, with decent accessibility, close to all amenities *and* the beach. What a terrible place to be forced into. Personally I would rather live in my car than live in such a place.
+10. I lived there for a few years, it's ok albeit a bit boring. And yes, the biggest issue there is parking (and travelling via Nicklin Way, I hate Nicklin Way with a passion).
+11. The parking is absolutely horrendous and the fact residents have to pay for a parking permit otherwise you'll get a fine from Sunshine Coast Council
+12. Ok great. Sorry, I wasn’t casting judgement, I was more referring to how built up it is in the area.
+13. A parking permit to park on the street? Do you know what that’s worth?
+14. You can check out the Birtinya community group on f/book, it will give an insight. Street parking during the day is the biggest issue because of the hospital.
+15. Yes to park on the street ridiculous I know and with the parking permit obviously doesn’t guarantee you a spot to park on the street so essentially paying to maybe get a car park every afternoon Last time I paid for it in June this year was around $47 from memory you have to lodge online application with council I believe the area is truely overpriced especially with the recent crime in the area we choose to move away
+16. Since they made the whole area 2p I haven’t had any issues parking since getting a permit. Bit more annoying when friends or family are visiting though.
+17. Thank you. I’ll go take a look.
+18. Oh right. I haven’t heard about the crime. What specifically?
+19. Mostly kids knicking stuff from unlocked cars
+20. It is always the ones you most suspect
+21. This guy has the worst photos for his placards. Always looks constipated.
+22. "located a shovel, axe, gloves, duct tape, ropes and a cadaver bag."... Let's not jump to any conclusions.
+23. JFC...
+24. I remember this guy! I reported him to the electoral commission for saying he was running as an independent when he was actually a candidate for Fraser Anning!
+25. RIP Whig Party
+26. > Police allege they found weapons and camouflage clothing inside a car belonging to Mr Jessop. > It is also alleged that during a further search of the vehicle officers located a shovel, axe, gloves, duct tape, ropes and a cadaver bag. And he was given bail! What was hus excuse? He got the Halloween weekend wrong and he was getting ready to go trick-or-treating?
+27. Dude’s Facebook has pro Trump posts…
+28. One of those "serial candidates" that gets nowhere.
+29. Model citizen!
+30. Off topic but relevant to the sub: I met a guy today that calls it "shine shine coast" and that was incredibly funny
+31. The cashier at Bunnings: “Got a little project for the weekend hey?”
+32. He forget to camouflage the car.
+33. consider me completely unsurprised next you'll be telling me he's anti-vax and promoting crypto
+34. *bro day dreaming about projecting a 2x4 into his neighbours head* : Yeah mate, something like that!
+35. I don't understand anything anymore.
+36. OP looking to get a herpes infection?
+37. I've only been herping once up here near crystal creek. I'm not reptile nerd and am not very knowledgeable on the subject but my partner and I found 6 different species of tree frog and various other frogs, geckos, snakes and a few other interesting critters including a Coremiocnemis tropiix in the middle of eating a small tree frog.
+38. Road from paluma township to paluma dam
+39. I googled it, so apparently "Herping is the act of searching for amphibians or reptiles.[1][2] The term, often used by professional and amateur herpetologists, comes from the word "herp", which comes from the same Greek root as herpetology, herpet-, meaning "creeping". The term herp is a shorthand used to refer to the two classes of ectothermic tetrapods (i.e., amphibians and reptiles).[3]" Heaps of geckos hang around near my outside lights, I'll leave it on Might see some goannas or a croc if you hike the swamp at pallerenda, been a bit dry though
+40. BHP black headed python and spotty is a spotted python I believe.
+41. You put the what in the who now? Glad commenters commented!
+42. Here I was thinking you're after some kind of dr*gs 😂
+43. There was a post recently, have a look
+44. Think this was asked here like 2 weeks ago?
+45. Out at the JCU is a good place for snakes. Plenty of carpets not sure about Bhps though. The town common is another one out at Pallerenda. You would have to walk in there.
+46. You want to give people herpes?
+47. Yeah I don’t even know what is being asked
+48. OP is asking where's the best place to look at wild reptiles. Herpetology certainly isn't a new field haha.
+49. I thought that too - sure if you rooted around Thuringowa you'd get herpes!!!
+50. 🤣
+51. I have seen a few posts I think were on here and Facebook about a few regular herpers up here who are posting their reptile finds semi regularly.
+52. Just exposing my ignorance to the world then. Hepatology, got ya. I just assumed, being Reddit, I just assumed it was a sex thing that I didn't understand.
+53. That was my first thought too, I only even know about it because I found one of those legless lizards in my back yard once and went down a google rabbit hole.
+54. I killed many a herptile in Red Dead Redemption 2
+55. Kirwan is fine....If you live on the correct side of Thuringowa drive.
+56. Then my experience of moving up here 5 years ago and living in West End, and now Garbutt, is that there’s no difference really between here and anywhere else I’ve lived in Australia. We’ve never had a break in or any property damage so 🤷‍♂️
+57. Your first mistake was thinking Kirwan was Central. Central to what!?
+58. You'll find that other regional centres are no better eg Cairns, Mackay, Rockhampton, Mt Isa. There are also large sections of Brisbane that are no better, and houses are priced accordingly. If you can afford to live in the more expensive parts of any city you'll find that the crime is a lot better, and Townsville is no exception. Also, living out of town a bit can help a lot too. Try living in Belgian gardens or Bushland beach or Alice River or Chelsea place and you'll probably see a big improvement. The issue is whether you can afford it. But it's the same in Brisbane. Live somewhere affordable like Collingwood Park, Forest lake, Springfield etc and you'll likely have the same poor experiences. Live in Graceville or Indooroopilly or St Lucia and you'll be fine. It's all about $
+59. Everyone that posts about moving TO Townsville is pretty educated by Townsville peeps about all the things you’ve posted. None of this is new information, people really should actually stay for a few weeks before deciding to relocate and research the history and socioeconomic disadvantages of being in this region. North QLD is not for everyone.
+60. Kirwan is pretty variable. My experience has been pretty different to yours, and I’ve lived some dodgy places in townsville. I would be frustrated with these shenanigans too. I’ve had one attempt two years ago, and I live in a suburb that seems to be regularly targeted, to boot. Good luck with whatever you choose, moving, better security or big dogs.
+61. My only recommendation is plant some Bougainvillea around those windows and the thorns will keep most of them away! So sorry you’ve had to deal with this ☹️ our house is like Fort Knox after 15+ years here
+62. Cue the people on reddit telling you that because of trends in statewide crime stats you must be imagining your local crime.
+63. If its an option to swap a house - there are much better places to live around Townsville. Lived here 3 years and outter suburbs are much better, less scum. North shore, Burdell, Cosgrove, Bohle Plains, Harris Crossing.
+64. I mean, no offence, but Kirwan would be one of the last places I would chose to live if I looked at the crime rates re. theft, robbery, unlawful entry ect. Like most urban centers, Townsville has its hot spots, and that area and its surrounding suburbs are deep in it. [I've spent the majority of my life in Townsville, and the Kirwan/Rasmussen/Condon area is the only place I've ever personally felt unsafe. ](https://ibb.co/FD1qSqF)
+65. I would feel the same way if I'd been through that many break in attempts :( I've lived here over a decade and not had a single incident like that. I did get a bike stolen in North Ward but that's it. If I were you I'd consider moving. I know that's easier said than done but it's what I would do to feel safe.
+66. Sorry it didn't work out for you here, but temper your expectations if you think moving to Brisbane would be any different.
+67. Lived in Townsville 2016-2021. Aitkenvale, Kirwan, Annandale, West-End. Except for Aitkenvale, I had break ins at each property. Always happened in Feb-March and Oct-November. In each instance where I had a security camera, it was youths of a certain persuasion, but that is merely a common demographic and means nothing really. I managed to retrieve 100% of my valuables and had the criminals persecuted because I took steps (don’t thief from a technician for a major telco). Crime is like water, it follows the path of least resistance. Do what you have to do and take steps. Townsville is classed as a remote location. It’s not Brisbane or Sydney. Best of luck.
+68. Ok so first mistake was choosing Townsville in general over Brisbane. You can do everything fun in Townsville in one weekend and then all everyone does it drink. Just look at the parks for examples. There's literally zero reasons why people would move to Townsville other than for a job they got.
+69. Please explain how public servants have been bundled up in your issue with crime? I agree the crime is too high in Townsville. Do you think the public servants are committing the crimes?
+70. It is a pretty rough town. We’re here for 2 years now and still feel that we don’t belong. In our last place we’ve had 3 attempted break ins. A lot of people recommended us to get a dog but it’s difficult when you’re still renting. Hopefully things will get better for you mate
+71. Sounds like you should move
+72. I hope you’re renting and are able to move, there are safe and quiet areas in Townsville that have lovely communities. I’m on the south side and been here for over 20 years, most neighbours are long term residents too. The only crime we have is opportunists, ie you forgot to lock up, or bikes stolen in yards. Keep looking and best wishes
+73. I lived in Townsville for 5 years, left in 2018 and it was due to the increasing crime, a break in to my home, my neighbour waking up to an intruder kissing her, someone being tazed in my front yard and much more. I also worked in real estate and out of all the houses I managed (190) least broken into homes was Vincent cos they don’t 💩 where they sleep so they were “lucky”. It’s honestly the pits up there.
+74. Kirwan is really 3 or 4 suburbs rolled into one massive suburb. Some parts are great, others are terrible.
+75. Lived in Townsville most of my life and have never had a problem - I do know people that have, but me and my family, none. It very much depends on where you live. Theres pockets of Kirwan that are nice, there’s pockets that are absolute ghetto.
+76. The crime is shocking everywhere, but Kirwan - it’s far enough out and suburban enough to be the perfect target for crime. Townsville is a large regional city so it’s not going to grow as quickly as a major city like Brisbane or Sydney. We’re going to have a water park here soon. There are major developments to upgrade the city, making the stadium area far better. The outer suburbs are also growing. But if you don’t like it here there’s really only 2 solutions - learn to like it here, or leave.
+77. Born and raised there in the 90's/ early 2000's. I NEVER recommend Townsville to anyone unless they are single and serving (to find someone to get them out of there) or elderly with lots of cash so they can get a good home and security and live in a good neighbourhood. The locals screwed it over when they refused to add more things for kids to do, then they refused to fix the city centre from the shitfight it was (in some places still is with half the streets still chockers with dilapidated 1980's buildings) and then refused to crack down on youth crime because *insert your favourite justification here, there's plenty*. I went back there and lived for about five years, I only ever go back with work or to see remaining family who live there... Until government gets serious there, you shouldn't have gone past the Brisbane Line...
+78. First mistake was moving to Townsville. Second mistake was not leaving.
+79. Sorry to hear about your experience. I've been living in Kirwan for 7 years now and have only had one instance of kids trying our front door. I'm up near the Av Tav/ dog park and even have a gully close by which I thought would likely be a trouble spot but not at all. There's a select few streets that I would only recommend to my enemies, the likes of kittyhawk cres, easterbrook cres, Hudson Street. A quick drive there will show you how terrible it is. Crime is everywhere, but you are in the thick of it if you are down in that cluster
+80. Far out. I grew up in Townsville in the 70's and 80's, Kirwan was the boonies....... Apart from that I can't help you. Sorry society has broken down to this level.....
+81. You have the right to defend yourself.
+82. First mistakes was moving to Kirwan
+83. Get a German Shepherd, not just as a mobile security device, they are just amazing family dogs too.
+84. The Brisbane subreddit will tell you that crime is down and youth crime isn’t a problem.
+85. Sounds to me like the town residents need to start a public whippings of any wrong doers.
+86. it’s bogan central
+87. My family made the decision to leave Townsville before our eldest had to start high school. We bought in an area that is considered dodgy in our new city and I feel safer than I ever felt in Townsville. I don't hide my keys or handbag anymore or get up in the middle of the night to check I key locked the doors. I do miss Townsville and the great friends we made but we've made the best decision for our family.
+88. https://www.abc.net.au/news/2024-10-25/youth-crime-statistics-using-data-incorrectly/104488958
+89. Sorry, but our locals have been saying this all along. Everyone from the capital cities gaslight us by saying, "crime is everywhere," or it's not as bad as ... Even when people post on Facebook and here, the locals warn people, and still, people minimise our lived experience. If you are going to Brisbane, consider the south side. Places like Wynnum and manly that used to have a bad reputation have cleaned themselves up. Also, check with the locals, and don't be like others and try and compare to where you have lived. If they are saying it's bad, then it's bad.
+90. Moved back here from a rather well to do area of Sydney, it's like chalk and cheese. Down south there is home invasions and car jackings flat out. Elderly people beaten waiting for public transport. Having been back a year have had less sirens, less helicopters flying over, and less unsettling moments when doing daily tasks. Seen a lot less public overdoses. And am less worried when taking the kids to the park that some junkie has hidden a syringe in playground equipment.
+91. this is exactly why we need to make nq its own state
+92. [removed]
+93. I live in north ward (near TSV grammar) and hate it. The level of noise with the medium density living and sporting fields is insane. Fairly sure I have PTSD from the sirens of the football field. It has seriously effected me. Also, most ppl I have spoken to in this area have had several attempted break ins as well. I want to move so bad. I'm looking out as far as ingham to live because I'm so jack of the noise and crime. I recently took a promotion here so have to stay but this place really effects my mental health. I definitely understand what OP is saying.
+94. On the old side..never had a problem. New Kirwan gets all the break ins
+95. I grew up in Townsville (late 30s now). Grew up in Aitkenvale. Lived in the city, west end, Belgian gardens, new Kirwan, Aitkenvale again, mundingburra, south Townsville and I now own a place in the old area of Kirwan towards Cranbrook. I have only had 1 incident back when I was in year 12( early 2000s). I came home drunk.from a party and left the garage door and front gate completely open. Kid came in and we saw each other and he ran away. That's it. I know that Burdell, north shore and the newer areas of Kirwan have a lot of break and enters but this is in general a safe place. I never feel unsafe walking even at night. I feel like a lot of people aren't used to seeing black people on the street walking around and shit themselves whenever they see them. It's NQ. We have indigenous people here. Deal with it. The vast majority of them are good people like everyone else.
+96. Kirwan is central because it’s one of the biggest and oldest, there’s a street that leads almost directly to each surrounding suburb very easily and it’s about the most central a western suburb can be, people say it’s the worst for crime but it’s simply the fact it’s so large
+97. Well when you open a map, and look at the whole of Townsville. Kirwan is like sorta in the middle of it all
+98. I wouldent call Springfield affordable anymore. My sisters 3 bedroom townhouse there is valued at 800k. Median property price is $785,000.
+99. This is good advice, and I recommend you stay in the months of December and January. Dont come in July and think everything is great, the weather in summer will make you think twice.
+100. Yeah definitely agree you've gotta trial living in FNQ, especially during wet season. People don't appreciate just how convenient/accessible life elsewhere in the country is. From big things like accessing doctors (particularly specialists), to little stuff like mail taking longer, it all adds up to quite a big change of lifestyle. One that I think is worth it, but you've gotta find out for yourself.
+101. Is North QLD for anyone?
+102. It's interesting, I've lived in a bunch of "dodgy" places and a couple of really, really nice ones. While the nice ones were safer to walk around in, they were the ones that I had the most thefts in. Most of the dodgy people don't shit in their own backyard, and they know that the valuable items aren't in that area anyway.
+103. They would be wrong. Per population Townsville has the highest youth crime rate in Queensland and it's not even close.
+104. North Shore and Burdell have high crime rates in terms of stolen cars though. Not saying they are not nice suburbs, but crime can be anywhere.
+105. Kirwan is Townsville largest suburb. https://preview.redd.it/0o3cyhdum9xd1.png?width=611&format=png&auto=webp&s=69a60ecf8512b7971d902da654336d8823aa2320
+106. Brisbane is awesome. Move there and try it out. I did and loved it, I regret coming back to Townsville.
+107. Brisbane is awesome. Move there and try it out. I did and loved it, I regret coming back to Townsville.
+108. I like the weather lol
+109. I think it was the part where he stated they were called and didn’t bother rocking up. It’s right there in the post.
+110. I’ve been here for 20 years and I feel like it’s gone so far downhill in the last 5 or so in terms of crime. OP is also living in hard mode in Kirwan. There are some streets there that seem to be terrible and some nice ones.
+111. The waterpark ain’t happening
+112. See this is wild to me, is there not a third option where the council sorts its shit out and sends twice as many cops thats needed to sort the area out? Thats what many states do when a town gets overrun by the crime. The whole accept it or move out attitude is incredibly incorrect. Thats partly what I'm saying in the above post.
+113. At the end of the day, the lived experience is all that matters. Not a single person that has been in this town for 20 years is going to believe crime is better now. We see it. We haven't all got amnesia.
+114. Cool. Now show data for Townsville only. Who's misusing data now?
+115. Yes, what is it about Townsville locals that make them commit crimes? Bit rich that Townsville locals blame other areas for their own self made problems.
+116. One of our rules is don’t be a dick, you’ve broken that rule by name calling, using and ethnic or racial slur, some other pejorative term, threatening to hurt children, or some other dickish comment.
+117. I totally agree about Indigenous people.
+118. Granted, I'm only up here for work for a few weeks, but the times I've been out after dark and been verbally abused reminds me of being back in Katherine NT. I have only been verbally abused by the indigenous.
+119. Kirwan used to be in a whole different city. It may be 'central' if you compare it's position to Kelso and Bushland Beach but they're just other suburban areas. The only place worth living in Townsville is near the Strand.
+120. Oh July fools everyone! Haha
+121. I think it’s worth it too. It’s also part of the lifestyle which requires patience 🙂
+122. I love it here lol
+123. I used to find it that way, but I think anyone’s fair game these days. I’m in Idalia, nowadays there’s a fair amount of movement- but I don’t know if it’s more than it used to be or not, because I only got vigilant after the 2019 floods, we were one of about six houses in the street that were habitable. There were a lot of creepers about.
+124. I'll stick with my easier cost of living here
+125. Police is quicker to type than Public Servant with an implied tone of meaning Police.
+126. It's been going downhill since they closed David Jones in the mall. I agree with the poster above, Ive been here most of my life and don't feel like I belong. I lived elsewere (big city) and I felt at home, I felt invisible or blended, (thats a good thing to me as you feel part of the place). Townsville feels foreign and I don't fit in.
+127. why would council have anything to do with State police? and where do would you like the new coppers to come from? Grab em from logan? Rocky? Gold Coast? maybe even Inala? You need to think
+128. Council has nothing whatsoever to do with the police. Why would you possibly think they do?
+129. Tell me, without expecting others to change, what’s within your control?
+130. That's Townsville locals for you though, why do you keep committing crimes?
+131. Okay, let's see it then 👀
+132. I can't even remember the last time an indigenous person said anything to me like that. Been years. I only.get asked for money once every few years. It's not even a big deal. " Hey brudda can you spot me $2/smoke." Me " sorry mate I don't have any". Ends like that most times I still laugh about the time someone called me a captain cook cunt back in the day though.
+133. And the four people verbally abusing me from inside their shitty ute whilst speeding off were (using your verbiage) the Anglos.
+134. I'd argue near Aitkenvale is far better.
+135. You must be rich to be able to say that

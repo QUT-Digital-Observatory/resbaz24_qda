@@ -1,0 +1,173 @@
+Your job is to analye a series of Reddit Comments are drawn from sbumissions related to the 2024 Queensland State Election. The comments are drawn from a collection of comments before, during and after the election itself on the 26th of October. The parties that sought election were the Australian Labor Party (ALP), the Liberal National Party (LNP), the Queensland Greens (Greens), One Nation and Katter's Australian Party. The LNP prevailed in the election, with David Crisafulli becoming the new Premier of Queensland. 
+We have identified several key issues that the major parties campaigned on during the 2024 Queensland State Election: Youth Crime (YC), Cost of Living (COL), Health (H), Energy and Infrastructure (EI), and Abortion Laws (AL). Below is a summary of each party's position on these issues:
+Youth Crime (YC):
+- LNP: Advocated for stricter penalties for young offenders, including the 'Adult Crime, Adult Time' policy, proposing that serious offenses committed by youths be met with adult sentencing. 
+- Labor: Focused on rehabilitation and prevention programs, aiming to address the root causes of youth crime through community engagement and support services.
+
+Cost of Living (COL):
+- LNP: Proposed measures such as abolishing stamp duty on new builds for first home buyers and re-establishing the productivity commission to review building industry regulations, aiming to alleviate housing costs. 
+- Labor: Introduced initiatives like 50-cent public transport fares, a $1,000 energy rebate, and free lunches for state primary school students to ease cost-of-living pressures.
+
+Health (H):
+- LNP: Committed $590 million to an 'Easier Access to Health Services Plan,' aiming to reduce ambulance ramping and hire additional healthcare workers. 
+- Labor: Focused on maintaining and expanding healthcare services, addressing hospital capacity issues, and investing in new health infrastructure.
+
+Energy and Infrastructure (EI):
+- LNP: Criticized Labor's Pioneer-Burdekin Pumped Hydro Project as financially unviable and canceled it upon taking office, opting to explore smaller-scale hydro projects instead. 
+- Labor: Proposed large-scale renewable energy projects, including the Pioneer-Burdekin Pumped Hydro Project, to transition towards 80% renewable energy by 2035.
+
+Abortion Laws (AL):
+- LNP: Stated there would be 'no changes' to abortion laws under their government, maintaining the status quo established in 2018. 
+- Labor Party: Supported the existing abortion laws and opposed any attempts to repeal or amend them. Asserts that LNP intend to restrict access to abortion services based on the views of some of their members.
+
+Analyze Reddit comments and code them based on the positions they support or oppose concerning these issues. You will output JSON, so valid values are strings or null. Use the following codes: YC, COL, H, EI, AL. If a comment's position is unclear or does not pertain to these issues, output null.
+
+Secondly identify which party the comment appears to support. Use the party code ALP, LNP, Greens, ON, KAP if this can be determined, otherwise a null value if undetermined.
+
+Output JSON as a list of objects where each object has an "id" (integer) property of the comment id, an "issue" property set to the issue code string (or null value), and a "party" property set to the party code string or null value. Null means JSON null, not a string. Values MUST be quoted, e.g. {"party": "LNP"} unless they are null, e.g. {"party": null}. Comments follow:
+
+1. Newman also assured public sector workers > In a December 2011 interview, Mr Newman told brisbanetimes.com.au the total size of the public service was in his sights although he wasn't keen to use the word “cuts”. “Well I'm saying that we do need to see over time through attrition a reduction in the overall headcount, but not on frontline services which actually in many cases need to go up,” he said. >“So this has to be a managed process. We'll work with the unions. > “Every year thousands of people actually do depart voluntarily from the public service and the idea is to manage that; that's an opportunity to actually not have pain, to not have cuts, but to actually change the shape and size of the organisation, so it then actually is affordable for all Queenslanders and we actually get the budget back into surplus.” https://www.brisbanetimes.com.au/national/queensland/has-newman-broken-public-sector-promises-20120803-23l4q.html Very hard to trust any QLD LNP party leadership
+2. "initial realignment in leadership and in machinery of government changes to effect these new policy and priority settings"... AKA... I'll get my LNP YES mates into leadership roles.
+3. Im in community and oral health, we all felt the luming job cuts the second we heard of his election, atmosphere that night on the wards was weird. I'll believe it when I see it, I still think he'll cut jobs. He's already scrapped 45 million from the housing services.
+4. In the private sector, I've twice been through the "no need to worry, jobs are safe" dance. Within the year the shutters were down and everyone was out. It's not just the public sector but new "owners" always lie to their own advantage.
+5. So holding off for six months before the cuts/freezes.
+6. When is he doing his adult time for insolvent trading?
+7. Chrisafooli me once, shame on me...
+8. The knives are sharpening again I see
+9. No cuts you say, lets see how that goes. But they didn't fire a heap of people in services Australia for example, they did hiring freezes and let these services atrophy, and only took in casuals otherwise.
+10. I don't want to sound sceptical but that's what all leaders say. Then the cuts happen and the employees learn about it first in the media. Tbf it's too early to speculate until after the first 100 days.
+11. No employment cuts being the key words. If you're a contractor being used by the QLD government but aren't directly employed by the government you won't have a job
+12. Mine was flagged as possible spam
+13. This is very crafty language. It doesn't rule out a hiring freeze, natural attrition, reducing contract labour etc. The public service will shrink, just more slowly.
+14. Newman promised the same thing. I wouldn't trust Bruz2.0
+15. He's going to cut mining royalties of YOUR coal and gas. Then he will cry about a budget crisis and the cuts will come in but 'he didn't want to do it'... We will oust lnp in 4 years and labor will then be pushing shit uphill if they get in. !remindme 4 years
+16. I'll believe when I see it buddy.
+17. Bulllshit
+18. He has a lot of work to do in rebuilding the extraordinary damage they did to their trustworthiness in 2012. He has the right idea in writing this letter at the outset. But I completely understand why those in the sector would be apprehensive about it. Let’s see where we are in four years, which is a long time with an LNP majority government.
+19. Those jerks! How dare they!
+20. Watch the 2015 sky news election coverage it’s still on YouTube he lost his seat so that’s what he really means re learning a lesson.
+21. Yea I got that email this morning. I’ll believe it when I see it. Best case scenario is just that funding for public sector services won’t be keeping up with demand for the next three years to “save on costs” or some bs
+22. Death by attrition
+23. I give it like 3 months until I’m called into the office over potential layoffs lol
+24. I’m 4 months into a new govt role. Last in, first our? I’m worried for my employment.
+25. Everyone frame this letter. I guarantee this promise will be broken.
+26. Already set up a rule to send anything from that email address to junk so I don’t have to see his slimeball face in my inbox
+27. I hope he really has 'seen the impact of job losses in the past on the productivity and morale of the org'. I don't know if I can trust him to hold his word. But I've got time.
+28. Where is he getting his money from then?
+29. 🤣😂🤣😂 time will tell
+30. The header of this letter made me vomit a little.
+31. This is a really good move by him and as a staunch lefty it has impressed me and given me a glimmer of hope.
+32. >I will be tasking ministers to have greater visibility in the departments they lead, including spending time in offices outside 1 William Street. This sounds a bit strange / ominous.
+33. "Priorities central to health," Meaning abortion changes that will in the long run, hurt Australians. LNP voters are either fools or bad people.
+34. This message was also within the budget they posted so I am hoping it is correct and not misdirection. If they want to invest in public sector workers then I’m in agreement. I’m hopeful and willing to give him a chance.
+35. He said hes cutting consultants and other external spending. Hes now reiterated he does not plan to slash jobs. Probably some scepticism is expected given Newman was a flog and Crisafulli seems to acknowledge this, so im ok with actually seeing what happens before pre empting what will actually happen for *reasons* Also, getting value from people isnt a bad concept, its going to be more necessary going forward. The Olympics for example, not sure who agreed to that, but a unified and "on point" Qld Public Service is 100% mandatory to pull off such a huge event
+36. First person to get fired gets to sue?
+37. Really hope he is not lying about not purging the public service (teachers, nurses and health services, biosecurity and conservation staff, park rangers, police, etc etc etc).
+38. Remindme!in 2 years
+39. Well at least when he inevitably does, this proves he absolutely knew the outcomes in advance.
+40. The butt face best out his words into action then hey? Maybe he can be the redeeming face post election. 😂 😂 🤣 I'm funny.
+41. No one getting fired = recruitment freeze
+42. Child Safety has already lost almost all support staff and family support services in NQ already!!
+43. Looks like the LNP slash and cut service days may be over (let's hope) They have four years so hopefully he keeps his word, but we will wait and see. I think he knows if he wants to even have a chance at another term, then public sector cuts and amendments to abortion laws are certainly off the table. But..... let's see what happens, it's the LNP after all.
+44. Wanker.
+45. Messages like this are usually followed up on by getting screwed over. I don't believe him. But if he is truthful, we will either go into debt or we will privatise certain services and then the new owners will cut jobs + run it into the ground.
+46. I'm not convinced that "security of tenure" drives excellence in the public service.
+47. All the negativity on here. Why don’t you give him a chance. Comparing him to a premier from over a decade ago is ridiculous. Obviously the majority of Queenslanders have spoken.
+48. Gold Coast city council did a massive restructure. Got rid of all contract roles. Offered full time roles and Didn’t have to sack anyone but saved themselves millions. There are always levers. Mind you, 50k pay cut for me so I bailed.
+49. Good start
+50. Why you guys keep voting these fuckers in I’ll never understand, you literally voted against your best interests….,
+51. So the lobby wins out, over qld getting a fair share for our resources ...
+52. The labor government lied about nearly everything! They overspent on nearly everything, and of course the numbers that David was given to work his budgets from would have been doctored and full of hidden figures. After 14 years they are going to find all these sweetheart deals and skeletons from a corrupt labor government. They will have their work cut out sifting through the details left by an out of control government. When they find issues you labor wankers will say well David did that! But no it was that Buffoon Steven Miles and his band of fuck wits who had trouble just counting to ten! Thank god they’re gone!
+53. A lot of government hires are short term contracts. Not renewing them will not break his promise. The consultant trail, I think most of us secretly (or not) wish was broken anyway: why the fuck are we paying these prices for a job a civil servant with flex time would do on a lower overall cost basis? (after all employment costs, most direct staff are cheaper per unit delivery than a consultant) Personally despite thinking Chrisafulli isn't worth the shoe-leather to walk over, I suspect he wants to do the right thing, and will be surprised picachu face when it turns out treasury tell him it isn't possible without a lot of unmarked bills stuffed up his rectum to pay people with.
+54. I work in IT and got this email yesterday too. Mostly hoping his promises to reduce the cost of living come to fruition but who knows
+55. Talk is cheap, show me the budget plan.
+56. I misread my email. Where it said "one-team", I thought it read "one-term", which made me feel better briefly until i read what was actually written.
+57. Here comes the broken promises and cuts: ***Queensland Premier David Crisafulli will issue warnings to incoming ministers following concerns of potential political ‘booby traps’ left by the Labor government.*** ***Queensland Premier warns of political ‘booby traps’ left by Labor*** ***The LNP has accused the outgoing administration of secretly leaving thousands of 'wasteful' programs in relation to the public service.*** ***Mr Crisafulli will ensure new ministers carefully analyse department briefs after concerns about possible cost blowouts for planned projects.*** [***https://www.msn.com/en-au/news/other/queensland-premier-warns-of-political-booby-traps-left-by-labor/ar-AA1t9ALZ?ocid=socialshare&pc=U531&cvid=7b89bf658caa46e48e1e164d4dbc66b3&ei=9***](https://www.msn.com/en-au/news/other/queensland-premier-warns-of-political-booby-traps-left-by-labor/ar-AA1t9ALZ?ocid=socialshare&pc=U531&cvid=7b89bf658caa46e48e1e164d4dbc66b3&ei=9)
+58. This qld government can go to hell. I will not listen to a word from people who support the criminalisation of abortion, conversion therapy, nor anything else that marginalises and harms already at risk communities. People will die because of these stupid cunts. We will see an increase in suicide rates and otherwise avoidable deaths, including deaths in custody. The next four years will be an absolute fucking disaster. I wouldn’t spit on them if they were on fire.
+59. So he just laid out what he’s going to do once more. He will cut mining royalties to line up his next job after parliament, cut public block sector by not renewing contracts or converting contractors into full time staff and continue claiming hundreds of thousands in expenses for being away from his electorate while actually living with his family who live in Brisbane.
+60. Sounds like Davey is telling those oxygen thieving bureaucrats actually do your jobs or be gutted. And I'm all for gutting mid management and keeping government small, limited and efficient. Now to get myself as the director of the NDIA.....
+61. Eh I never lost my job during Campbell Newman they actually trimmed the fat in my department which was good. Just hope they honour my next round of payrises!
+62. I came to ask this exact question. He has committed to most of Miles’ pre-election commitments (all except for free lunches if I’m not mistaken). There aren’t too many other levers for him to pull other than selling/leasing state assets to the private sector. The new private owners would then be free to cut jobs at will. I’m not aware of any promises regarding selling assets by LNP, unless I missed something.
+63. The secret: he lied. Almost all CEOs of major corporates had assured their employees that "no layoffs are planned" right up to the moment layoffs are announced. Every time.
+64. In two weeks he'll say "oh no Labor totally lied about the budget we can't do any of that anymore and it's all their fault just don't look at their budget numbers that showed it was possible"
+65. He's simply going to put it in a big pile and burn it.
+66. Well if it was me, it would be increases in the rates of land tax that investors pay.
+67. He went to K-Mart and bought a $89 bubblejet printer and will be printing money.
+68. Also considering it costs upwards of a million dollars a year to imprison a child, that's going to be an expensive endeavour
+69. Where did they say they’re going to cut royalties? I haven’t seen this anywhere. Have I missed something?
+70. They don't, LNP never does. They come in, fuck everything up and then ALP have to clean up all their mess when they inevitably get voted back in again. Such is the life cycle of Australian politics ¯⁠\⁠_⁠(⁠ツ⁠)⁠_⁠/⁠¯
+71. There's no royalty super tax at the moment anyway and hasn't been the past year since the coal price dropped...
+72. Easy, forcing everyone back to the office, and making everyone have 8 bosses they'll be micromanaged out the ass, there won't be cuts. It's called "natural attrition"
+73. Taxes
+74. Where has he said that he’d cut mining royalties
+75. The triennial review of the defined benefit superannuation scheme is due to be released soon, effective 30 June 2024. It will show an enormous funding surplus due to the strong investment returns generated over the past 3 years. Expect a contribution holiday for all contributing employers and perhaps a billion or two to be repatriated from the consolidated fund back into government coffers.
+76. 20 odd billion saved from stopping pumped hydro I’m guessing will go a fair way.
+77. Maybe he won't be cutting mining royalties then?
+78. Please show me the policy that says he will cut mining royalties.
+79. There's not going to be a surplus for the next few years regardless. ALP had deficits at least the next 2 years and probably more.
+80. The QNMU (literally every nurse in the state is a member as we need liability insurance) sent him a letter as well. He promised us that he'll negotiate our EBA in good faith and hire more nurses (approx 18,000 FTE) but I wouldn't trust anything he or his mob says. Since Newman cut all those positions back in 2012, it's next to impossible to get a permanent position as a nurse in a metropolitan Qld Health hospital. Your contract just keeps getting extended over and over, and you literally have to wait for someone to quit or retire, or for a new hospital to be built to snag a permanent position. If you want a mortgage, the bank won't touch you if you're on a contract so you have to wait until someone quits or retires so you can snag their permanency. Neither side of government has addressed the lack of funding for permanent FTE for current staff and it's all been empty promises so far. I don't hold my breath for any change under this government, nor did I under the last one.
+81. Are ambos allowed to strike? I’m pretty sure cops aren’t allowed to.
+82. Doesn't really answer your question as it doesn't relate to ambos specifically, but I know one of the people who are helping to write their health policy. She is very high up in QLD ambo service, and apparently, the Libs have a long-term plan to bring back apprenticeship style training with block university study for nursing staff in hospitals to address the staffing issues. Not too sure if they would apply this to ambo training as well or not.
+83. Global corporate standard operating procedure.
+84. Completey different situation. What recourse do *legally* sacked workers have? Nothing. It would be political suicide for a Polly to pen an open letter like this then go back on it in a big way.
+85. There are huge numbers in NGO’s that provide services to the community on behalf of or along side the public service. You can bet your left arse cheek that those people are in the firing line for cuts.
+86. Yes lets watch what they do not listen to what they say. Maybe the whole Newman fiasco is front of mind and they will be cautious but ideologically their instinct is to cut. The Queenslanders who voted for the LNP are the frog crossing the river and the LNP is the Scorpion getting a lift on it's back.
+87. He never said crime rate, he said victims of crime which is an arbitrary number because one crime can have 1 or 5 victims. Doesnt matter though he still backed down. He has no intention to lower crime. If anything, LNP want it to increase.
+88. The trick is he convinced people it was going up, but the stats showed a different story, give in 3 months and he will be saying, see told you i would make it go down. Pollies use the electorates stupidity to not research anything as their greatest weapon
+89. No cuts on a per capita basis
+90. Newman’s words from 2011…. Well I'm saying that we do need to see over time through attrition a reduction in the overall headcount, but not on frontline services which actually in many cases need to go up,” he said. “So this has to be a managed process. We'll work with the unions. “Every year thousands of people actually do depart voluntarily from the public service and the idea is to manage that; that's an opportunity to actually not have pain, to not have cuts, but to actually change the shape and size of the organisation, so it then actually is affordable for all Queenslanders and we actually get the budget back into surplus.”
+91. Already happening in Brisbane City Council.
+92. Business Case for Change. Realignment = less jobs = your not redundant there just is no job for you. You are on your leave entitlements and best of luck finding a job before it runs out.
+93. Filling spots with their mates.
+94. I did have a chuckle about those lines when I received my letter today. Time will tell...
+95. I'm 100% with your opinion here. Really hard to tell this early. We wait, and we watch.
+96. LNP never invest in public services. So he's either lying or not LNP?..
+97. He has never come across as sincere to me.
+98. Leaning from mistakes should be applauded? No, it's a base expectation for any half intelligent person. As others have said, we will keep our eyes on him and summarily turf him out next time.
+99. Definitely - but Newman had a massive majority and thought he'd be able to get away with whatever he wanted. I doubt they'll be anywhere near as bold this time.
+100. Probably be a big voluntary redundancy drive so no cuts , people opted to leave.
+101. It is standard practice for government departments to MOG based on ministerial portfolios. Some departments get MOG’d several times within a single term. The amount of MOGs the public service has been through in the past four years has been extensive so this certainly isn’t limited to the LNP. It was even raised in the coldrake report as a failing. It is also standard practice for a Minister to select their Director General for their department from a list of recommended candidates prepared by the government. This again makes sense, you wouldn’t want who is essentially your chief public servant to be someone you can’t work or govern with. It would be ineffective.
+102. Yep, this is no different to the ALP really.
+103. Like every government does?
+104. There is at least a stated aim to have people who are not politically affiliated in senior leadership roles. What that means in practice might stretch that definition a little but it is the stated aim.
+105. Really? Have a link?
+106. Miles certainly fooled you a few times, he was widely known as a bully in public service
+107. Good they cost far too much
+108. Has Crisafulli stated he will aim to remove the mining royalties? Any research I've done has shown he supported the increased royalties revenue back in 2022 and has no plan on changing the current royalties imposed. That, along with Labor pushing a bill to safeguard the current royalties means that it would be absolute political suicide to change any of that.
+109. I will be messaging you in 4 years on [**2028-10-28 06:41:39 UTC**](http://www.wolframalpha.com/input/?i=2028-10-28%2006:41:39%20UTC%20To%20Local%20Time) to remind you of [**this link**](https://www.reddit.com/r/queensland/comments/1gdtyro/email_from_the_premier_to_the_queensland_public/lu501ra/?context=3) [**7 OTHERS CLICKED THIS LINK**](https://www.reddit.com/message/compose/?to=RemindMeBot&subject=Reminder&message=%5Bhttps%3A%2F%2Fwww.reddit.com%2Fr%2Fqueensland%2Fcomments%2F1gdtyro%2Femail_from_the_premier_to_the_queensland_public%2Flu501ra%2F%5D%0A%0ARemindMe%21%202028-10-28%2006%3A41%3A39%20UTC) to send a PM to also be reminded and to reduce spam. ^(Parent commenter can ) [^(delete this message to hide from others.)](https://www.reddit.com/message/compose/?to=RemindMeBot&subject=Delete%20Comment&message=Delete%21%201gdtyro) ***** |[^(Info)](https://www.reddit.com/r/RemindMeBot/comments/e1bko7/remindmebot_info_v21/)|[^(Custom)](https://www.reddit.com/message/compose/?to=RemindMeBot&subject=Reminder&message=%5BLink%20or%20message%20inside%20square%20brackets%5D%0A%0ARemindMe%21%20Time%20period%20here)|[^(Your Reminders)](https://www.reddit.com/message/compose/?to=RemindMeBot&subject=List%20Of%20Reminders&message=MyReminders%21)|[^(Feedback)](https://www.reddit.com/message/compose/?to=Watchful1&subject=RemindMeBot%20Feedback)| |-|-|-|-|
+110. Exactly the kind of public servant we need!
+111. What are you 12 years old?
+112. What hope is there when people like you are so biased they can’t even give someone a chance, sometimes we have to accept that the majority have chosen and give it a chance
+113. Same.
+114. Personally, I think this is a great idea. I’ve been through four ministers since I joined public service, two of them I never met, one of them visited once, and one of them visited regularly. The one that visited regularly certainly got the most done. They listened to people at every level and then made decisions. Not all of them were welcomed but the fact we knew we could make a suggestion and be listened to went a long way to improving morale and feeling part of a vision.
+115. >This sounds a bit strange / ominous. In what sense is this strange? Its a good step forward to have the brass on the frontlines to actually see whats happening
+116. "You will be watched by the henchmen, you've been warned"
+117. “Does not plan to slash jobs”, ey? Just like all the other things that “aren’t part of the plan”.
+118. You got off lucky. I know many other areas that never recovered.
+119. Free lunches!?!? Fuckin commies trying to feed my children, how dare they!
+120. Yeah there's a difference between a CEO and a politician though. A Polly penning an open letter like this then going back on it would be political suicide... Where as *legally* sacked workers... What are they going to do? Nothing.
+121. If it was you, I think we'd all feel a great deal happier whether we were in the public service or not.
+122. Until he has to buy more ink.
+123. They didn't, Labor made that claim. Near as I can tell the only thing the LNP has said in regards the royalties is they will remain unchanged during the term of this parliament. So that would imply no further increases as well as no decreases. This was reported in in the courier mail on September 2nd. Also Crisafilli stated in his budget reply speech that he supported the royalty increase (and other proposed revenue measures of the government). The proof will be in the pudding but based on my admittedly brief and relatively cursory research this notion that the lnp will repeal the royalties is down to Labor comments not lnp statements.
+124. I have 8 bosses now; they could make it 16 bosses that follow me around all day like Kim Jong-Un with notepads and I could still play chess like a grandmaster with them all. They will tire after 3-4 hours. I easily do 10-15k+ steps a day, every day, without fail+ plus real work with that across a very broad portfolio, regular overtime, massive amounts of phone calls and half the time the work is in shitty environments. They will retreat to air-conditioned comfort the moment the brow sweat forms on their fat heads.
+125. Plenty of press coverage of him saying exactly that plus allowing developer donations to political parties. Join the dots.
+126. Your kidding right? This was one of his earliest promises.
+127. Getting ahead of the narrative, nice
+128. https://www.forgov.qld.gov.au/pay-benefits-and-policy/directives-policies-circulars-and-guidelines/review-of-non-permanent-employment-directive-0223
+129. Yep, it's not like we are running out of sick people so may not need all of this medical staff...
+130. So what did Labor do to change that in the last 9 years??
+131. You can still get a mortgage on a contract. If you’re casual it is harder
+132. I fully agree with you, but just wanted to point out not every nurse is in the Union. There are at least 80,000 ENs, RNs, and Midwives in QLD, but 70,000 union members, which includes some AINs. It’s certainly most nurses, but not quite all.
+133. Sometimes the most effective strikes are the ones without planning or permission
+134. Cops can but not every single one of them at the same time. They must supply the minimum to keep things running. Still impacts a shit ton though...
+135. We're you here in 2012? They committed political suicide before.
+136. The other thing is you can bet your bottom dollar they will reduce it with a hiring freeze, ie they just don't replace the staff that have left .
+137. Bye bye TransitCare!
+138. And you can bet there will be a lot of contract to contract workers who simply won’t be renewed despite having a job for the last 10 years
+139. There will be for sure particularly is you a re a consultancy firm. [https://www.abc.net.au/news/2024-10-24/lnp-reveal-costs-commitment-queensland-election/104510856](https://www.abc.net.au/news/2024-10-24/lnp-reveal-costs-commitment-queensland-election/104510856)
+140. Ngo?
+141. >He has no intention to lower crime. If anything, LNP want it to increase. Why would they want that?
+142. Yes. LNP want to increase crime. What a hilarious and dumbass thing to say.
+143. Auspicious words
+144. It's hilarious watching that train wreck in slow motion. Not so funny knowing that's the reason why deliveries are rarely good value for money, if even deliveried.
+145. Schirmo is cut from the same cloth as Newman and Cristufuli

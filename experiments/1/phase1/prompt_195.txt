@@ -1,0 +1,162 @@
+Your job is to analye a series of Reddit Comments are drawn from sbumissions related to the 2024 Queensland State Election. The comments are drawn from a collection of comments before, during and after the election itself on the 26th of October. The parties that sought election were the Australian Labor Party (ALP), the Liberal National Party (LNP), the Queensland Greens (Greens), One Nation and Katter's Australian Party. The LNP prevailed in the election, with David Crisafulli becoming the new Premier of Queensland. 
+We have identified several key issues that the major parties campaigned on during the 2024 Queensland State Election: Youth Crime (YC), Cost of Living (COL), Health (H), Energy and Infrastructure (EI), and Abortion Laws (AL). Below is a summary of each party's position on these issues:
+Youth Crime (YC):
+- LNP: Advocated for stricter penalties for young offenders, including the 'Adult Crime, Adult Time' policy, proposing that serious offenses committed by youths be met with adult sentencing. 
+- Labor: Focused on rehabilitation and prevention programs, aiming to address the root causes of youth crime through community engagement and support services.
+
+Cost of Living (COL):
+- LNP: Proposed measures such as abolishing stamp duty on new builds for first home buyers and re-establishing the productivity commission to review building industry regulations, aiming to alleviate housing costs. 
+- Labor: Introduced initiatives like 50-cent public transport fares, a $1,000 energy rebate, and free lunches for state primary school students to ease cost-of-living pressures.
+
+Health (H):
+- LNP: Committed $590 million to an 'Easier Access to Health Services Plan,' aiming to reduce ambulance ramping and hire additional healthcare workers. 
+- Labor: Focused on maintaining and expanding healthcare services, addressing hospital capacity issues, and investing in new health infrastructure.
+
+Energy and Infrastructure (EI):
+- LNP: Criticized Labor's Pioneer-Burdekin Pumped Hydro Project as financially unviable and canceled it upon taking office, opting to explore smaller-scale hydro projects instead. 
+- Labor: Proposed large-scale renewable energy projects, including the Pioneer-Burdekin Pumped Hydro Project, to transition towards 80% renewable energy by 2035.
+
+Abortion Laws (AL):
+- LNP: Stated there would be 'no changes' to abortion laws under their government, maintaining the status quo established in 2018. 
+- Labor Party: Supported the existing abortion laws and opposed any attempts to repeal or amend them. Asserts that LNP intend to restrict access to abortion services based on the views of some of their members.
+
+Analyze Reddit comments and code them based on the positions they support or oppose concerning these issues. You will output JSON, so valid values are strings or null. Use the following codes: YC, COL, H, EI, AL. If a comment's position is unclear or does not pertain to these issues, output null.
+
+Secondly identify which party the comment appears to support. Use the party code ALP, LNP, Greens, ON, KAP if this can be determined, otherwise a null value if undetermined.
+
+Output JSON as a list of objects where each object has an "id" (integer) property of the comment id, an "issue" property set to the issue code string (or null value), and a "party" property set to the party code string or null value. Null means JSON null, not a string. Values MUST be quoted, e.g. {"party": "LNP"} unless they are null, e.g. {"party": null}. Comments follow:
+
+1. He hasn't addressed whether his party line will vote for or against recriminalising abortion in line with Robbie Katter's proposed ban. He has previously stated he would allow a conscience vote on the matter, and 93% of the party voted against decriminalisation including him so it's important. He simply says it's not part of his plan which fails to address the point that Katter introducing a bill isn't part of the plan but happening regardless.
+2. Because these people are hysterical fools or deliberately trying to run a scare campaign .
+3. Absolutely agree! I feel nauseated by the thought of Crisafulli as premier
+4. [removed]
+5. Wow thanks for dramatising questions towards an opposition leader about abortion to “screaming about abortions” what a bright lightbulb you are. Now idk what dystopian place your relegated to but In this country we protect a womens right over her body and if a women wishes to have an abortion then it is within her own self to do so. That is apart of Australian society and of Australian discourse and unlike any other forms of hate speech isn’t criminalised. Why? Cause it’s not hate speech you fucking idiot
+6. What a world you must live in where you defending the LNP who are going the Trumpian route and expect Australians not to voice their anger. Go on X to see where "hate speech" is 24/7
+7. Oh dear. Sorry for attempting to bringing some levity to the situation. I apologised for offending you. I was attempting to show solidarity and support for the ladies in my life and the rest of QLD, but I guess I’ll always upset someone.
+8. But they won’t, just like the Americans, you won’t make that exception. The entire point is to make it vague so you can prosecute anyone involved.
+9. Sorry, the issue is a red herring. No chance it ever happens, it would be political suicide. We are not a fanatical Christian society. Only about 10/15 % attended church. It’s up there with daylight saving and negative gearing as a vote killer.
+10. How are you not understanding this? Reproductive rights are vitally important, but it should not be an issue we're debating, it should be set in stone. it's a distraction from actual issues and it's meant to rile up stupid ppl and start pointless arguments like this one. Enjoy your kool-aid, troll
+11. >The Queensland Nurses and Midwives’ Union says abortions after 20 weeks’ gestation occur where “the foetus has late-diagnosed lethal or significant abnormalities, genetic conditions, severe growth restriction, or maternal health risks, where continuing the pregnancy and/or birth poses a significant threat to the mother and the foetus has zero chance of survival”. https://www.theguardian.com/australia-news/article/2024/aug/28/australian-conservatives-claim-babies-are-sometimes-born-alive-after-an-abortion-whats-the-truth
+12. Your link is baseless disinformation from a disgrace of a professor who has no qualifications or experience in healthcare or any related field. Also SA ALP allow conscience votes on all sorts of ridiculous things including whether sex workers should have basic worker's rights. [Here's a fact-check of some of Prof. Joanna Howe's claims. ](https://drive.google.com/file/d/10cJfeDBIAYVZklthAT2blcZvcrXsP7lg/view)
+13. >deliberately trying to run a scare campaign . You mean like the youth crime scare campaign the LNP having running at every opportunity?
+14. I'm sorry, women's rights in Queensland being under threat is somehow a scare campaign? Tell me how you have never talked to a woman without telling me you have never talked to a woman
+15. [deleted]
+16. Ok so hate speech is just stuff you disagree with. Gotcha.
+17. It was a legitimate question. Not offended, just giving an opinion and asking for clarification.
+18. I know if I was a politician I would certainly make that exception. You can't paint everyone with the same brush.
+19. All but 3 LNP MPs at the time voted against decriminalizing abortion in 2018 - I don't think this is as far fetched as you think it is.
+20. One party will not take it away. The other is dancing around it and counting an extreme party that will outlaw it. It's not a distraction to 50% of the vote.
+21. It's directly relevant to the OP statement where the LNP has shut it down yet here's yet another false narrative thread. Disinformation flows both ways, thats what politics is, included in OP's statements is calling a conscience vote bad whilst bring partisan, so balanced discussion is not disinformation, otherwise the entire thread is disinformation and mods should lock it and not allow plainly partisan political threads. Uset name checks out too. Peace.
+22. Don't forget the medical bulk billing scare campaigns against Labor and accusing the Greens of promoting meth and heroin.
+23. No it's a helpful suggestion
+24. No. He means it literally. <Slaps mollydooka's forehead>
+25. You drive with conservative stickers on your car, does that make you a staffer?
+26. I’ve defined it on the basis of the law in this country. If you don’t agree with it you’re more then welcome to ~~fuck off~~ leave
+27. I've read your question 3 times and still have no idea what you mean, it comes across as a rhetorical question that you're offended by
+28. You must be a new grad in the corporate world fully absorbed by the greenwashing fake corporate woke culture. Don't worry a few more years and you'll realise nobody real actually cares - about being woke or about you 🤣
+29. There’s a big difference between voting against a bill along party lines 5 years ago and reintroducing an unpopular bill that would be political death. Queensland had some of the most archaic abortion laws in Australia for decades, we aren’t going back.
+30. It's a distraction to everyone based on bullshit morality. I shouldn't have to be casting my vote to protect what should be a basic human right when there are actual problems. Ppl who believe post birth abortions happen are stupid and shouldn't be a part of the conversation.
+31. Balanced discussion is not disinformation but the vast majority of "research" Prof Joanna Howe puts out on abortion absolutely is disinformation as in 'false information deliberately intended to mislead or intentionally misstating facts'.
+32. [deleted]
+33. [deleted]
+34. Na I'll stay and keep voting one nation, soz 😅
+35. The bill wasn't along party line. They had a conscience vote like Crisafulli last year said he'd do again. They were even warned by Tim Nichols at the time to vote for it would be political suicide yet 93% of MPs did anyway because they're loyal to God before party or the public. They'd do it again, especially given they're now lead by one of the MPs who voted to keep it illegal. Also its not political suicide if they aren't the ones introducing the bill - they can blame someone else for it, exactly what we're witnessing Katter try. The issue would be put to bed if Crisafulli came out and said there will be no conscience vote on the matter which he repeatedly refuses to actually specifically answer and address.
+36. So you agree that women should be protected? But you think your vote to a party that can't make up their mind is smart? How do you sleep at night?
+37. I don't consider testimony from a midwife who is visibly distressed recounting what must be horrific as disinformation either. I don't have an opinion on th professor as I don't know enough to comment. The OP and many threads like this deserve balance however. Thanks for the courteous discussion.
+38. Are you 12?
+39. well its a good thing that Cris knew that before ignoring her questions. It also means she can't ask him questions without being mocked because you know "future premiers can just ignore all questions from opposition staffers" its written down as a rule definately.
+40. Cool that’s ur right…to vote
+41. Wait, do you think I'm voting LNP? I'm saying they're trying to distract ppl from real issues with a bullshit morality issue coz they've got nothing to actually offer about real problems. I don't get how you're not getting that
+42. I'm not sure which "midwife" link you posted because I can't access it but I do know that the only legitimate current midwife Howe has featured is also a long time supporter/member for the Australian Christian Lobby and is not a reliable witness since ACL have a habit of lying in evidence to parliaments. Some of the others are long retired, or the wife of the MLC that introduced one of Howe's disinformation Bill. Lies and disinformation aren't balance. Balanced coverage of an unbalanced issue distorts reality.
+43. Rekt
+44. And you sound like a boomer that doesn't get what we are actually voting for
+45. Just click the link it's not 1977, concerning you already made a conclusion without seeing anything
+46. You're as perceptive as you are skilful at reading comprehension
+47. Did you even read my replies or the fact check I provided on Prof Joanna Howe's claims? Lol She's a lobbyist for the Australian Christian Lobby and so is the midwife. They're lying.
+48. Who you give your first preference vote to is important — 1st pretence votes are used to allocate gvt electoral funding. Any candidate that achieves 4% of the first preference vote in their electorate is entitled to claim government funds. The amount depends on how many first preference votes the candidate gets. Under full preferences your vote will end up with one of the two main candidates in your electorate anyway. But voting 1 for a minor party or independent candidate can increase that candidate’s war chest at the next election which can help make that party/candidate more viable. Vote 1 minor or independent! Source: https://www.ecq.qld.gov.au/election-participants/state-election-participants/candidates/claiming-election-funding
+49. True. Put independents first. Labor above Liberal.
+50. Don’t waste your time on the Australian population. They’re too dumb to realise they’re voting against their own interests. They can’t even comprehend that the crazier policies of any party (small or large) will never get up, but the ones that make sense actually do have a chance which is the whole point of democracy…
+51. Totally agree - but people who love their fav team refuse to deviate?
+52. \*voting for a Major Party *first*.
+53. [Link](https://www.aph.gov.au/About_Parliament/House_of_Representatives/Powers_practice_and_procedure/00_-_Infosheets/Infosheet_22_-_Political_parties) > The party (or coalition of parties) which has the support of the majority of Members of the House forms the government. The Westminster system of government that ours is, relies on parties to function. By definition of the Parliament's existence, I reject the notion that a party vote is a wasted vote. Edit. One ought notice I didn't say which party. In the interests of honesty and probity I am a paid up member of the Australian Labor Party. These words are authorised by me alone, lol.
+54. Labor are a major that is making progressive changes. For instance, they have adopted Greens policies (free lunch, 50c fares etc). A seat lost to an independent/Green is one less seat to Labor and, therefore, one less seat the LNP need to win.
+55. On the other hand, not having a majority means your party platform gets watered down. Labor have several policies languishing in the senate that could be helping our housing issues right now. Who knows what deals would need to be done to get the votes to have done any of the things Queensland labor has done this term, or in future terms. What do you give up, and what do you get?
+56. I'm completely disillusioned with the major parties.
+57. Bullshit.
+58. Voting for the nutjob independents in my electorate seems a worse choice. I can choose from Family First, One Nation or the Greens. I've voted for the Greens in the past but right now they have entirely lost the plot so they're out. Definitely can't vote for either of the other 2 so major party it is.
+59. Technically you vote for all but one party in Australia; which preference counts depends on the outcome of the ranked ballot process. Arguably, you vote for every candidate, but your last ranked candidate will never be your vote in a 2 party preference. So if there is a Nazi on your ballot, put them last.
+60. I agree but my 2 other options are greens and one nation.
+61. "absolute power" A parliamentary majority is not absolute power. You're sputtering meaningless rhetoric and slogans. Go and read some political theory, and then go and read the Qld and Australian Constitutions.
+62. Power attracts the worst and corrupts the best
+63. Eeeeeveryone votes for the minor parties. The minor parties become the major parties. The previously minor parties now hold power. Power corrupts. You see how this works, don’t you?
+64. On the power corrupts quote. [The quote Power tends to corrupt; absolute power corrupts absolutely comes from the nineteenth-century English historian Lord Acton (1834–1902) in a letter to Bishop Mandell Creighton about how historians should judge the abuse of power by past rulers, especially popes.](https://www.dictionary.com/browse/power-tends-to-corrupt-absolute-power-corrupts-absolutely) I would postulate the answer to shit governments is to vote them out not to vote for a ragtag group of independents who would be too mired in their own pet causes to form a governing coalition.
+65. And enjoy that LNP government numnuts
+66. What a load of rubbish. You put everything into the protest vote as 1 and that candidate becomes the member for the seat. Be very careful putting a protest vote in as 1 and your preferred in as 2. Enough people do this and the seat gets a potential lame duck that can’t do anything for you. If you want to vote then vote your intent, don’t try to be tricky. You want to give a candidate a piece of your mind in protest. Put it in writing - it’s more direct and you may just get a visit from the candidate seeking more information and they may take your issue up.
+67. >These words are authorised by me alone Thanks for the laugh! 😂
+68. Your last point is false. A seat that Labor looses to the Greens means nothing as the Greens seat will be used to form a Labor government if Labor is short on seats
+69. Correction: Labor have several bills tabled that don’t do shit for housing that the greens are rightly asking to be renegotiated to actually make a difference.
+70. In what way have they lost the plot? Locally or federally?
+71. And how do you vote OUT a shit government if only to replace by another shit government, without voting for the minor parties?
+72. Happy to help.
+73. Not false. If the Greens win a seat that Labor could have secured, it could lead to a scenario where the LNP forms a minority government instead of Labor, especially in a close election. Every seat is crucial in determining the overall balance of power.
+74. Those hypocrital federal greens are just looking out for their property portfolies.
+75. What you're doing is something called begging the question. You've not established why it's shit. For most people "shit", politically, is when the opposition to their lot isn't in. Most people also expect insta fixes and betterment to happen immediately. Governments try to govern for all and because you or I don't like it, we complain. I know I've been guilty of that in the past. So. What's shit about the incumbent and what do you want that's not shit?
+76. I think you’ll find that’s entirely untrue. Have you ever listen to what Max says in Parliament?
+77. You’ve entirely avoided the point that you yourself brought up. I should’ve put “shit” in quotes, which exactly the spirit I meant it in. Now tell me, if you want to vote out a “shit” government, as you said, how do you do that without also ensuring another “shit” government?
+78. Max's parents don't even like poor people parking near his multi-million dollar west end home and catching the bus. https://12ft.io/proxy?q=https%3A%2F%2Fwww.brisbanetimes.com.au%2Fnational%2Fqueensland%2Fsick-of-his-street-being-used-as-a-parknride-west-end-man-demands-action-20170704-gx4dw3.html
+79. Yes and Mad Max certainly has a febrile imagination. Disclaimer: former green party member of the NZ branch; left when they went SJW and focused on minorities instead of “for everyone”; and Aus Greens are even crazier than NZ Greens. I’ll stick with Labor. Cognisant that real change has to be by consent, unlike LNP that change because they want it. Long term, just gotta wait for the boomers to die off which should start happening en masse in 5-10 years before electoral profiles change enough to support high estate taxes so the Murdochs of the world pay 75% tax on their inheritance.
+80. Max is a flog. I’ve had the displeasure of listening to many of his speeches. He’s rightly been called out on his bs many times
+81. You would need a shit government in the first instance. Here lays your quandary.
+82. Yeah, my parents are dicks too, which is why I vote the way I do.
+83. By whom? Albo, the soft-grip, hypocritical, Rio Tinto-sponsored property investor himself?
+84. >I would postulate the answer to shit governments is to vote them out not to vote for a ragtag group of independents who would be too mired in their own pet causes to form a governing coalition. Literally OCs words.
+85. Palmer appears to like suing our governments...
+86. Cooker cops cooking up a class action?
+87. The lawsuit, filed in the Supreme Court in Brisbane on Friday, is being funded by billionaire Clive Palmer. Why doesn't this surprise me, Hey Clive how about you pay your Townsville Nickel Refinery workers their entitlements you fucking waste of space piece of shit
+88. It won’t go very far. One persons human rights doesn’t usurp the one that are vulnerable. If you area is essential services then you know you have to serve during extreme events and situations. This is no different. The UN Convention on Human Rights and WHO cover this. https://www.ohchr.org/en/treaty-bodies/covid-19-and-human-rights-treaty-bodies
+89. The cooker in charge.
+90. I heard from a JP that they witnessed an affidavit by one of these cookers. 100 pages long with articles from Facebook about the Covid vaccine containing aborted foetuses. Skimming it, they said it was ‘against gods will’ to have a Covid vaccine. When time to swear on the bible or affirm… they affirmed. Fucking nut jobs.
+91. How's lard asses heart nowadays? Surely it must be under incredible stress and vulnerable to such frivolous, vexatious pursuits?
+92. Good to know only a couple of hundred cops are really fucking stupid.
+93. “I don’t want a youth to die of Astrazeneca” I can assure Pfizer is safe as the US says so. No action on her..? oh yeah she is in top place now, you can’t touch her ..
+94. With the financial assistance of cooker Clive.
+95. Agree it won’t go far, but you’re a bit off on the reasons. One persons human right to bodily autonomy absolutely does override the “rights of the vulnerable” but bodily autonomy was clearly not violated here. Nobody was forced to get the vaccine. There is no human right to keep your job if you refuse to meet new requirements for employment. It’s as simple as that.
+96. First of all- hundreds of officers are launching a class action, not “one person” Secondly- you don’t get to decide who’s human rights are to be upheld over another’s, especially when you’re talking about removing an individual’s right to body autonomy,(insisting know you have to serve during extreme events and situations.This is no different..” the human guy th the
+97. The fact that these shots did not stop transmission renders the mandates null and void and a violation of human rights
+98. Oh agreed, but if you are a carrier then you are a threat to those you are meant to protect. Viruses don’t respect boundaries or human rights. As I have said. This argument will go back and forth for years.
+99. You are entitled to your opinions, so am I. Let the court decide. It will tied up in court for a long time. https://www.abc.net.au/news/2024-02-28/covid19-vaccine-frontline-worker-mandate-supreme-court-ruling/103517798
+100. It did reduce transmission and severity though. Your argument is like saying we can’t have seatbelt laws because it doesn’t stop car crashes.
+101. Years later and people still pushing this bullshit. Really awesome that this is one of two of your only posts. Gtfo
+102. The human right to bodily autonomy was never violated. There is no human right to keep your job if you refuse to maintain the requirements of your employment.
+103. It did reduce transmission, just because it was 100% effective means nothing (especially because literally no one claimed it would ever be 100% effective, lol).
+104. But they did lower transmission.... But let's face it, no matter how much evidence your shown, you won't listen lol
+105. I hate how they have given me hope - still internally expecting an lnp landslide
+106. I personally hate gambling and gambling ads. Sports bet is offering 8 to 1, half tempted to take a punt. Wish I had weeks ago back when it was 20 to 1
+107. Is the LNP landslide rhetoric a result of the Murdoch media trying to will it into existence based on biased polling? Because most people seem to be on board with Labor yet the polling paints a different story
+108. The people handed out the flyers for candidates at the local polling office as you walked in. The labour and green candidates were there. The LNP just had 2 fossilised boomers. They tried to hand me a flyer, and as much as I wanted to question their logic and mentality, I politely declined. Then, as I was voting and also driving away, I noticed other people were very abruptly, with very "disagreeable" body language, refusing to take any LNP pamphlets I don't know any millennials or younger who are easy to reach without a txt first. It's a generational thing. Millennials are now the LARGEST voting demographic in the world. We are combating the boomers and gen x's. I feel this is a labour victory with more seats being taken by greens and teals. We are watching the major parties erode. Labour needs to start shifting to more socialist and left leaning policies if they don't want to haemorrhage more seats to independents and greens. Bring on the Whitlam level socialism with nationalising our minerals, mass public renewable energy and massive pushes into public housing and tax reform
+109. please please please I'm hoping for a lot more greens and as many labor as possible after that
+110. ALP will have my vote
+111. This is deeply concerning. I like Steven Miles, but I want a clear message sent to the greatest traitor in Australia’s history.
+112. I'll be happy with them having as few seats as possible. Although I do worry about an lnp + katter minority government. That will be a coalition of cookers.
+113. I've been hopeful the whole time. Gonna be shattered if Labor loses
+114. I'm hoping polls have been off from simple apathy and those who respond... but at least damage control has been incredible for the ALP, won't be maybe as bad as it could be if they lose.
+115. The polls were predicting a small majority or minority Liberal government in the ACT just 8 days before the poll.
+116. Sportsbet reckons $8 odds, rekt
+117. Not a gambler myself outside of the odd meat tray raffle at the bowlo, but literally just signed up for an online betting account to throw $20 on Milesy for the upset. Hopefully this isn't the start of a slippery slope 😅
+118. Just dropped again my dude, now $7.50 [the hopium](https://tenor.com/en-AU/view/dumb-and-dumber-lloyd-theres-a-chance-jim-carrey-gif-11098164) is being huffed
+119. They're offering $2.50 for Harris in the US too. I'm not a gambler, but surely that's free money?!
+120. I think it is. I expect a large generational gap in their polling methods, but that’s an assumption.
+121. Exactly this. It’s not even transparent. They are manipulating people into it. It’s very clear.
+122. I was just saying that same thing to my teenagers yesterday. The younger generation don’t answer calls from unknown numbers. They barely answer calls from people they know. I’m hoping they’ve been under-represented in the polls 🤞🏻
+123. Good points and I have some good news for you - Qld Labor are spending over $60bn on publicly owned renewable energy, transmission and deep storage. Combined with an energy worker jobs guarantee for affected coal workers as the cow fired power stations shut down. Better than what the Germans or Spanish did and faster because we were coming from so far behind
+124. Polling stations can be VERY slanted to a particular political lean. As an example, in my electorate, all of the wealthy homes are on the east side and the low-median income homes are central and west side. If you look at the polling breakdown for past elections, the numbers for the east side polling booths are like 80-90% in LNP favour while the others are like 60-70% ALP.
+125. Using "Labour" is a big hint that you don't really know what you're talking about. I could go to a polling booth on West End or Spring Hill and find the Greens polling 50% primary. That's not indicative. I could also go to Mt Isa and see Katter polling 50%. Also not representative. If people wanted a more progressive ALP then the LNP wouldn't hold as many seats and be threatening to take government at the moment; the Greens would be taking even more seats.
+126. usually im more aligned to the greens but the current qld labor gets my vote, miles is the best
+127. Who is the traitor and what's the message?
+128. Apparently crisafulli is piss mad at the katters and won’t be doing that, it was in todays paper according to my resident paper reader.
+129. Ahhh no they weren’t?
+130. Lol....no they weren't. >Everything points to Labor being re-elected to lead government for another four years. Determining the balance of power between Labor and the Greens in government may be the major outcome of the election. The Canberra Liberals will hope to do better than in 2020, but few give Liberal Leader Elizabeth Lee much chance of winning the Chief Minister ballot at the first sitting of the new Legislative Assembly. https://abc.net.au/news/elections/act/2024/guide/preview
+131. We can only hope my dude - feel like the rednecks and boomers are goan fuck us
+132. What polls?
+133. I considered putting $500 in for crisafuli, because I never win anything!
+134. Nothing wrong with the odd bet here or there 😄

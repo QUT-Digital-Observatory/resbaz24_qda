@@ -1,0 +1,176 @@
+Your job is to analye a series of Reddit Comments are drawn from sbumissions related to the 2024 Queensland State Election. The comments are drawn from a collection of comments before, during and after the election itself on the 26th of October. The parties that sought election were the Australian Labor Party (ALP), the Liberal National Party (LNP), the Queensland Greens (Greens), One Nation and Katter's Australian Party. The LNP prevailed in the election, with David Crisafulli becoming the new Premier of Queensland. 
+We have identified several key issues that the major parties campaigned on during the 2024 Queensland State Election: Youth Crime (YC), Cost of Living (COL), Health (H), Energy and Infrastructure (EI), and Abortion Laws (AL). Below is a summary of each party's position on these issues:
+Youth Crime (YC):
+- LNP: Advocated for stricter penalties for young offenders, including the 'Adult Crime, Adult Time' policy, proposing that serious offenses committed by youths be met with adult sentencing. 
+- Labor: Focused on rehabilitation and prevention programs, aiming to address the root causes of youth crime through community engagement and support services.
+
+Cost of Living (COL):
+- LNP: Proposed measures such as abolishing stamp duty on new builds for first home buyers and re-establishing the productivity commission to review building industry regulations, aiming to alleviate housing costs. 
+- Labor: Introduced initiatives like 50-cent public transport fares, a $1,000 energy rebate, and free lunches for state primary school students to ease cost-of-living pressures.
+
+Health (H):
+- LNP: Committed $590 million to an 'Easier Access to Health Services Plan,' aiming to reduce ambulance ramping and hire additional healthcare workers. 
+- Labor: Focused on maintaining and expanding healthcare services, addressing hospital capacity issues, and investing in new health infrastructure.
+
+Energy and Infrastructure (EI):
+- LNP: Criticized Labor's Pioneer-Burdekin Pumped Hydro Project as financially unviable and canceled it upon taking office, opting to explore smaller-scale hydro projects instead. 
+- Labor: Proposed large-scale renewable energy projects, including the Pioneer-Burdekin Pumped Hydro Project, to transition towards 80% renewable energy by 2035.
+
+Abortion Laws (AL):
+- LNP: Stated there would be 'no changes' to abortion laws under their government, maintaining the status quo established in 2018. 
+- Labor Party: Supported the existing abortion laws and opposed any attempts to repeal or amend them. Asserts that LNP intend to restrict access to abortion services based on the views of some of their members.
+
+Analyze Reddit comments and code them based on the positions they support or oppose concerning these issues. You will output JSON, so valid values are strings or null. Use the following codes: YC, COL, H, EI, AL. If a comment's position is unclear or does not pertain to these issues, output null.
+
+Secondly identify which party the comment appears to support. Use the party code ALP, LNP, Greens, ON, KAP if this can be determined, otherwise a null value if undetermined.
+
+Output JSON as a list of objects where each object has an "id" (integer) property of the comment id, an "issue" property set to the issue code string (or null value), and a "party" property set to the party code string or null value. Null means JSON null, not a string. Values MUST be quoted, e.g. {"party": "LNP"} unless they are null, e.g. {"party": null}. Comments follow:
+
+1. So move closer or work at a different mine. And that's a disingenuous claim anyway. You're not making the 8 hour drive every day. An office worker commuting to work an hour each way in Brisbane is doing more driving to work in any given month anyway.
+2. Maybe you should relocate closer.
+3. Cool thanks for defending them, We should continue to increase royalties on resource extraction until it reaches 70% of total income on any given year. If Mining and gas companies want to operate in Australia, they need to be paying there fair share back to Australians.
+4. Would the market being flooded with coal drive the price down? Could the mines now slow production and drive the price back up once the LNP removes the royalty mechanism?
+5. You're blatantly lying throughout this thread
+6. My bet is by 2030, BMA is spun into its own standalone business on the ASX. Too much remaining demand & mine life to shutdown, too much infrastructure to sell to another player.
+7. Found the LNP voter.
+8. Is it better or worse for the State of Qld if mining companies pay more royalties?
+9. Aww but the boomers and single minded organisms take pleasure in throwing their idiocy level ideology around on LinkedIn, they’d be basking in idiot praise!
+10. yes
+11. I did say shut them down you smooth brain troll. If they’re so profitable then the state taking them, running them at cost and exporting then what the problem?
+12. Because unions do their own advertising. Don't have to donate then.
+13. How were they negligent?
+14. Active is the word you are missing. We have tons of coal we can mine.
+15. Not scared of them, just think there are better things to spend my time on
+16. Absolutely. And QCoal needs a hammering on safety.
+17. [deleted]
+18. [deleted]
+19. you know of a cheaper 24/7 power?
+20. That's where we're headed if we don't get the media monopoly in this country under control.
+21. We are already there.
+22. From 1 July 2024, all households receive $1000 off their energy bills in 2024–25, funded by coal royalties. Look for the ‘Queensland Government Cost of Living Rebate’ on your bill. The electricity rebate is being funded from coal royalties. How about everyone opposed to taking profits from coal mining show some character and refuse to apply for the assistance!
+23. Imagine how much the executives are making
+24. Implement national laws around executive salaries and bonuses being tied to workers pay and bonuses. No more than ___% or something.
+25. Please cite your references because not only does the Australian government disagree with you expecting prices to further decline in 2025 but so does the world bank. [coal price outlook](https://blogs.worldbank.org/en/opendata/coal-market-developments--falling-prices-amid-record-high-output)
+26. Yeah they’re not .. long term forecast is well below $150/t
+27. Why, I thought the world was not keen to use coal?
+28. Nice one. One incorrect "fact" after another. Your ignorance of the coal mining industry, pricing, tax take and commodity outlook is showing.
+29. I’ve seen credible info on the second one. What can you do? Old mate has a medical episode and then drives into a greenie dumpie operator that’s a few weeks on the job. Like you can’t eliminate a random medical episode. The first one was a classic misunderstanding of what a crane is actually good for and cowboy antics I agree.
+30. Now I know you’ve never worked here 😂😂
+31. Yeah but it was Queensland LABOR resources minister Scott Stewart that approved the camp. This whole thread is trying to twist albeit a stupid statement from QCoal into an election whinge. [ABC article on Glenden, Glencore and Qcoal](https://amp.abc.net.au/article/102672746)
+32. [deleted]
+33. [deleted]
+34. An office worker isn’t doing a 12 hour shift of physical labour in harsh conditions.
+35. Unfortunately, I’m not the only person in my household with a job. I can’t just force my wife to abandon her career. That would be a dick move. And no jobs where I live pay what I earn here. Not really sure how that’s a disingenuous claim. I’m still driving 8 hours to get to the site. Why would I want to do an extra 40minutes X 7 days on top of that?
+36. My wife had a career as well. Can’t just make her move can I.
+37. To where? If you went to Mackay it’s still a solid 2-3 hour drive. If you’re at say, Home Hill, that’s still 3-4 hours. Bowen is 2-3.
+38. I think you’ll find a mine like Qcoal would just shutdown. They’re allready operating at slim margins. Efficient miners like BMA are only mining at a cost of $100/T and actively selling their assets to smaller miners like Whitehaven and Stanmore. How could you tax them at 70% of INCOME rather than the current 15% like you suggested and they be viable companies ? You would shut railways down and all the associated towns.
+39. The mines will shut, paying no royalties & providing no jobs in regional QLD - did you not have to do some economics at school?
+40. Not really it’s not like oil. China produces 3BT a year and use it nearly all themselves we do 0.5BT and mainly sell to Japan and Korea as a bit of a stop gap. It’s not a market Australia has huge influence on.
+41. I shared the link to the prices and to the royalties, please tell me how ?
+42. I think you’re spot on ever since Rio Tinto left QLD and sold themselves as the “green” non coal miner, BMA, Glencore and Anglo are left with these toxic publicity assets that no one wants to be associated with except for the little miners who don’t care that QLD has a lot of now.
+43. Wrong again!
+44. You're saying carrots can generate electricity?
+45. Is it better or worse for the tens of thousands of people who rely on the mining industry if it goes away?
+46. Oh, you mean "siezed", not "ceased". Sorry, I was speaking English. Not whatever language you used. Also, I assume you meant to say, "I DIDN'T say shut them down". It's hard work understanding you when you can't spell and don't type what you mean.
+47. Even if we accept that false premise, Nine, News Corp, and the mining sector have way more reach and money, along with a greater influence over the LNP.
+48. https://amp.theguardian.com/australia-news/article/2024/sep/04/mastermyne-industrial-manslaughter-queensland-graham-dawson-ntwnfb
+49. Tones is an understatement. I would argue majority of the coal mined in Queensland would be wasted on coal fired power plants and most of it is Met coal used for steal making being sold overseas. The only way we see a benefit is via taxation
+50. then don't focus on made up boogeyman groups lol
+51. You should be well aware then that fifo workers and on site mining camps actively hurt local businesses. This isn’t even a camp in a town. You HAVE to stay on site during your swing and are bussed directly to the airport. I grew up in regional Queensland. I moved because the local mine shut. Edit: I also want to highlight a small town called collinsville. A perfect example of the problem.
+52. Literally in the budget - bet you can’t tell me what the LNP budget is. They didn’t even have one
+53. As opposed to nothing at all from the LNP, other than “oh we will do the same”
+54. 😂
+55. Hydroelectric power is cheaper, the dams last 100 years or more and its clean doesnt cause dire health issues in the workers, is reliable and maintenance is cheaper, doesnt require tearing up the earth and transpoting materials and can be backed by other cheaper renewables like solar and wind. Geothermal is another cheaper one the trircky part is finding reliable vents near population/transporting the power is also consistent. But the same exploration is required to find and dig for coal and that needs to be constant by comparison.
+56. Oh, yeah. Too late there. Given one of the pillars of democracy is a free press, not a monopoly or duopoly owned by billionaires, we can no longer say we’re a democratic country. These interests and lobby groups are totally out of control now. The whole thing needs to be shut down, shaken up and restarted. We need a model like some of the western European countries instead of America lite or whatever it is we are becoming. The jerks at the top are now white anting the middle classes. This new government doesn’t have much left after Newmann’s spree to sell off to their mates or privatise. But they’ll leave this state looking like a crater covered in coal dust and dead species, fringed with a filthily polluted ocean. We should go the UAE route, get real about resources being finite and invest in tourism and polishing up our natural environment or we’ll end up with a place even the Chinese won’t envy. Maybe that’s the point?
+57. Headed? We’ve been there since AT LEAST Howard… Australians *should* be the wealthiest nation in the world *by far*. The shortsighted nature of its politicians and the dishearteningly ignorant (often belligerently so) electorate have squandered unbelievable sums of material wealth and all we have to show for it are…… incredibly expensive property prices, in what is one of the most sparsely populated countries on Earth. It’s pathetic.
+58. How much is the coal industry making stripping our natural resources? I'll trade that $1000 per person per year for their actual profits. Who do you think would come out on top?
+59. A small benefit from a broken system doesn't make that system immune to criticism. How about the mining companies show character first and take their social licence to operate seriously?
+60. First off, no one applied for the assistance, it was automatic. Secondly, if someone is going to profit from minerals ripped from the ground, surely it should be all of us and not just the mining companies?
+61. Happy to as long as my children, grand children, great…. can sue you and the coal companies for thieving their futures.
+62. #inconvenientFacts But the fact this has to happen is completely fucked to start with
+63. That moneys going away anyway so what does it even matter at this point 🙏
+64. I know so many pensioners (through my mother) in Maryborough and Hervey Bay that voted LNP claiming the health care system failed them. It’s going to be interesting seeing the leopard eat their faces when their next electricity bill comes through without the rebate or when LNP eventually cut more healthcare jobs or privatise Ergon Energy.
+65. It’s not being funded from royalties. The last Budget shows the government going into deficit this financial year (when the rebates are introduced). It’s being funded from debt.
+66. A lot of executives are paid very well, but not all industries have strong unions.
+67. Who controls the supply of coal that helps drive the price down below the magical $150/t?
+68. Again, just going off the rumours… HV/LV separation for a start. But yes pretty tragic. No one wants to die at work.
+69. Never worked where you are but worked on multiple metals and minerals minesites around Australia and SE Asia in both operations and construction. Coal is known for its issues with safety in Qld specifically - they’re rather an arrogant bunch to deal with as they are long tied to Joh and the LNP and resist regulation. So, yes, I raised the safety issue as a little poke - but people keep going to work there and the accidents and black lung continue in spite of attempts to bring in more regulatory checks and balances. Coal mining is cowboy territory. In construction of coal mining facilities the construction companies do much better on safety… actual their better on safety across the board.
+70. He approved the camp for construction faze only. Hence why qcoal has lost 3 legal challenges. https://www.statedevelopment.qld.gov.au/__data/assets/pdf_file/0023/22658/byerwen-coal-project-2019-annual-report-to-the-coordinator-general.pdf
+71. QCoal are sabre rattling.
+72. It looks like you shared an AMP link. These should load faster, but AMP is controversial because of [concerns over privacy and the Open Web](https://www.reddit.com/r/AmputatorBot/comments/ehrq3z/why_did_i_build_amputatorbot). Maybe check out **the canonical page** instead: **[https://www.abc.net.au/news/2023-08-02/mayor-fights-for-homes-glenden-newlands-coal-mine-closure/102672746](https://www.abc.net.au/news/2023-08-02/mayor-fights-for-homes-glenden-newlands-coal-mine-closure/102672746)** ***** ^(I'm a bot | )[^(Why & About)](https://www.reddit.com/r/AmputatorBot/comments/ehrq3z/why_did_i_build_amputatorbot)^( | )[^(Summon: u/AmputatorBot)](https://www.reddit.com/r/AmputatorBot/comments/cchly3/you_can_now_summon_amputatorbot/)
+73. Oh god another climate change denier
+74. I haven't even stopped using Electricity and Steel that's only possible from Coal... why does that mean I can't point out the direct impact to lives? A question that *you yourself* asked?
+75. Fair
+76. Minor context. I don’t believe the mine should shut down its existing camp as fifo/dido workers are essential for any mine in those remote area. I do believe qcoal should support the local town and its know its had to since the mine was first approved back in 2015.
+77. What about Glenden?
+78. Qcoal's CEO received $575m in dividends for the year ended 2023 and in the months that followed. He's worth around $2billion so I think they'd be ok with his support.
+79. Coal needs to go, no loss there then, Maybe if they want a short future they can cut down the on the insane C-Suite salaries to increase profitability.
+80. Yeah man I’m sure they’ll go elsewhere to get resources. They’ll whine but never leave, and if they magically leave then we’re better off without them
+81. "*did you not have to do some economics at school?*" Did you not learn that we have resources they want so they won't go away and at the end of the day Losing out on Coal and gas isn't an issue it needs to go anyway. They only complain and whine to whoever will listen, they never leave as at the end of the day we always have what they want.
+82. HA yeah cute.. guess they can go to all the other places... oh wait they either tax far higher or dont exisit. What a joke
+83. All I can say is bravo.🤣 Nice to see someone else who understands the industry actually commenting not the average 17 year old here.
+84. You're question has been answered by other Redditors. And you blatantly ignored it. Also you work in civil engineering. My guess is in mining.
+85. Indeed. Metallurgical Coal is still important… but leave it much longer it’ll become a stranded asset that gets usurped by other steel making methods.
+86. Again, an LNP voter trying to put words in my mouth.
+87. Technically yeah actually, you can burn them as biomass, or process them into ethanol and burn that. It’s not unreasonable to criticise appeals to populism with phrases that are emotive nonsense like “mining is for the people” or similar. You could also potentially be a bit more open to understandable criticism of coal specifically when we know we should stop using it, though sure “you can’t eat coal” is rather irrelevant in this circumstance.
+88. You brought up carrots, you plank.
+89. $120B in profit for miners in QLD and you reckon (a) none of that should go to helping the public, and (b) the mining industry would "go away" because of a cut to the state. As for "if you don't need the royalties", there are millions of people who benefit from the mining royalties, who speaks for them? You?
+90. I suppose. Union memberships are a lot lower these days...
+91. How is that Qcoal and Byerwen related?
+92. [deleted]
+93. [deleted]
+94. Sure… and slave labor camps no doubt turn a profit as well. Of course there’s no way a decent person would take a hand out form a company which profited in such a way. If you take this handout you are undeniably comprising your moral opposition to coal mining.
+95. Agreed! If only had stayed the hell away from energy policy.
+96. All fair points. And don’t get me wrong. I do not believe Qcoal actually care about us. All I’m saying is that I don’t want to drive an extra 40 minutes a day when we have a perfectly serviceable camp 5 minutes away. I’d rather decompress by having a shower and a beer with my crew and calling my family than sitting on a bus for 40 minutes a day. As for black lung, that’s an underground mining issue. Don’t really see cases in open cut.
+97. From the article in 2023 (below) vs your document from 2019 “Some weeks later I received a phone call from Queensland Minister for Resources Scott Stewart,” she said. “He informed me of his preliminary approval of a 450-bed workforce camp on QCoal’s mining lease. “My heart sank, my blood boiled and all I could feel was the heartache for the residents of Glenden.”
+98. I feel eventually they should just be called reality deniers since they all seem to think they're living in a different one then the rest of us
+99. [deleted]
+100. Have you ever been to Glenden? I’m being serious. The fact you’re suggesting it shows you’ve never been. There’s no essential services, a servo that’s open half the time, the ghost of a community centre, a bar/pub/corner store (that is never stocked with anything) that’s run by backpackers from Blackdowns. It’s barely liveable and if you need groceries, medicine or quite literally anything, you need to drive to Mackay or Bowen. Not to mention if you move, what’s your partner going to do for work?
+101. So sell coal at roughly the current $150 a tonne but pay 70% on it rather than 15%. So you get $45/T on coal that costs you +$100/T to get out of the ground and onto a ship. Byerwin can do 10Mt, so you want Chris Wallin the CEO who grew up, still lives in Brisbane and developed the mine to lose $550m per year ???? Yeah I don’t think they will be ok…..
+102. He’s the owner which is the reason for the massive amount he got paid - was also effectively a one off.
+103. So how do you propose we make steel then ? Which QLD coal is predominantly used for.
+104. If the government takes 70% of their revenue they will 100% leave - they’ll be bankrupt. How are we better off without them? No jobs, no royalties.
+105. How does the government generate royalties without coal & gas?
+106. So you can't tell him how.
+107. So you’re saying the coal price hasn’t dropped and labor’s royalty policy wasn’t for coal over $150/T ?
+108. Still trying incorrectly to work out who I voted for.
+109. Whoosh.
+110. I'm saying you trivialised miners as a pittance of the population and downplayed the any effects on them as a relatively small number of people. "So...1% of QLD" I'm saying if they don't matter that much to you, then get stuffed and don't rely on the fruits of their labour. Without them, you wouldn't have mining, or royalties. That 1% is keeping you afloat, champ.
+111. Work Choices killed them. We're just seeing the death rattles.
+112. My original comment wasn’t directed at Qcoal (that’s why I edited it to clarify)
+113. USA, UK are 2 Democratic developed countries with the EXACT same issues of housing and inflation. Is QLD Labor at fault for nearly 500M people having the same issue? At least the QLD Labor Government had world class initiatives to curb the cost of living pressures without raising inflation. USA, UK and the rest of Australia are getting 2 buttons and a dance from their governments.
+114. Housing prices would need federal laws to take action on. Not a state issue. Inflation is also up all over the developed world; not a state issue. Now instead of those policies benefitting the populace, the mining companies and big business get to benefit in the name of trickle down economics. We know how that works. Something will trickle down to the poor from the wealthy, but it won't be money.
+115. LNP voter has no idea about the differences between state, federal and international issues. Colour me shocked. Do you really have no understanding of the massive interstate migration we experienced because of how good our state was being run vs the ones down south? People voted in Campbell Newman in 2012 probably thinking the same thing after the 2008 financial crisis killed productivity. The whole state took a nose dive with still lasting impacts on the health system he left us with. LNP voters don’t learn from history though do they
+116. Delivered nothing except massive state revenue from progressive coal royalties that were opposed by the opposition, had the best gains in Australia in terms of economic productivity, jobs growth and personal income gains, given some of the best childcare subsidies in Australia, delivered below national average inflation, given a significant boost to first home buyers in order to assist with housing. Our land price and rents aren’t double the other states, the growth we have has been higher than the other states but it’s still cheaper to buy a house here than in nsw or Melbourne. That was part of the appeal for young southerners moving up here. Land zoning and building permits is not under state government genius, it’s local government ie the LNP run council. Turns out you literally don’t understand anything that you’re complaining about. Surprise surprise Edit: I see you deleted the comment lololol
+117. “My government”? Do you live in Queensland? If you do then it was your government too dickhead. My point, which you failed to address, if the promises were empty why did the opposition also make them? Were they also making false promises? Or were the promises only empty based on who was speaking? Mate, you seem like a low information, big opinion loudmouth. As to brags for QLD labor, hows about **coal royalties**?
+118. So you're saying slave labour camps are morally on the same level as coal mining?
+119. Haha. I’d take the odds that none of them would refuse the hand out. Lol
+120. The numbers of people with black lung in any type of coal mining has long been know to be refused by the mining companies. No scientific basis for the pushback. The science and medical record says that it’s happening in open cut as well as underground mines. Like asbestos and tobacco the mining companies don’t want to admit to the issue our take accountability for the outcomes. All the more reason to tax them harder and put money back into healthcare and other services to deal with the aftermath.
+121. What is the drive for? Is it to keep a local town alive or something?
+122. You know that it was approved back in 2015? Not 2023?
+123. [deleted]
+124. So we're shifting the goal posts now? No-one talked about shutting down an entire industry. Is there any reason you're unable to discuss the direct impact to lives, a topic you opened, in good faith?
+125. Stayed there many times over the years working for 3 different mines. In the towns peak it had over 1500 people living there. Had everything you could need. Sure not everything but definitely enough. The reason it’s the way it is now in thanks to Qcoal and Glencores hatred for each other. We make a sacrifice to work in these places and still be able to live comfortably in our preferred areas. If your complaint is about the fact you have to travel, maybe work in a different industry.
+126. Or maybe move to a nice town that’s closer, Oh wait…
+127. How about we nationalise the mines and send all profit to be used to better the lives of qlders
+128. Dude are you Chris Wallin?
+129. There are already alternatives being developed like Hydrogen with Commercial plants being developed as we speak as Trial plants have already proven themselves. No need for coal and gas quicker we can remove it the better as it only makes the climate worse.
+130. Heaps of places are screaming for labour so I’m sure they won’t be out of work for long and the coal isn’t worth enough per tonne to charge the royalties right now
+131. That they'd have to figure out, they've got a decade or two to do so before they are phased out completely.
+132. He's already been told. In other threads. Links and all. He completely ignored it which means his arguments are nothing but bad faith and a self interest. Oh the coal companies lost money... The horror.
+133. Dropping yet still far higher than 2020
+134. Still assuming I mentioned food generating power? Just stop. You're making yourself look worse. Just admit you voted for the LNP and it'll explain everything.
+135. Regular fucken Billy Connolly over here.
+136. So you can understand then that the removal of mining royalties is a benefit to the minority (the 1%) to the detriment of the general public. The mining industry would not fold over having to pay a royalty that's complete bullshit tbh - you keep putting this forward like mining companies don't know how to make money or something. They aren't keeping me afloat. I live in Victoria we're fucked.
+137. On the plus side, it killed Howard's prime ministership too.
+138. [deleted]
+139. [deleted]
+140. [deleted]
+141. The mining industry sure would never refuse a handout.
+142. Allegedly, although you’d think the mining company that originally built it and then abandoned it and is building a camp half an hour down the road would be tasked with that job.
+143. You know the Newlands mine shut in 2023 not 2015……
+144. The previous hot/cold cycles are understood to align with the hot/cold cycles the sun goes through. The sun is currently in a cold cycle while earth's temperature is increasing. This is out of alignment and the reason why is well understood: human caused climate change.
+145. You're a genuine sped.
+146. I don't drive.
+147. [deleted]
+148. I’m not getting what you’re saying? In one comment you’re screaming about Glenden being saved without realising it’s a company town that’s nigh impossible to move to if you have family or any sort of special needs. The next closest is all 2-3 hours away minimum. If people are working 12 hour shifts doing physical labour in harsh conditions, adding 40 minutes drive to and from can cause serious fatigue for the workers and increase the risk of an incident. Plus that stretch of road is littered with Roos.

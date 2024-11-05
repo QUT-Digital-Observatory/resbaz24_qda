@@ -1,0 +1,151 @@
+Your job is to analye a series of Reddit Comments are drawn from sbumissions related to the 2024 Queensland State Election. The comments are drawn from a collection of comments before, during and after the election itself on the 26th of October. The parties that sought election were the Australian Labor Party (ALP), the Liberal National Party (LNP), the Queensland Greens (Greens), One Nation and Katter's Australian Party. The LNP prevailed in the election, with David Crisafulli becoming the new Premier of Queensland. 
+We have identified several key issues that the major parties campaigned on during the 2024 Queensland State Election: Youth Crime (YC), Cost of Living (COL), Health (H), Energy and Infrastructure (EI), and Abortion Laws (AL). Below is a summary of each party's position on these issues:
+Youth Crime (YC):
+- LNP: Advocated for stricter penalties for young offenders, including the 'Adult Crime, Adult Time' policy, proposing that serious offenses committed by youths be met with adult sentencing. 
+- Labor: Focused on rehabilitation and prevention programs, aiming to address the root causes of youth crime through community engagement and support services.
+
+Cost of Living (COL):
+- LNP: Proposed measures such as abolishing stamp duty on new builds for first home buyers and re-establishing the productivity commission to review building industry regulations, aiming to alleviate housing costs. 
+- Labor: Introduced initiatives like 50-cent public transport fares, a $1,000 energy rebate, and free lunches for state primary school students to ease cost-of-living pressures.
+
+Health (H):
+- LNP: Committed $590 million to an 'Easier Access to Health Services Plan,' aiming to reduce ambulance ramping and hire additional healthcare workers. 
+- Labor: Focused on maintaining and expanding healthcare services, addressing hospital capacity issues, and investing in new health infrastructure.
+
+Energy and Infrastructure (EI):
+- LNP: Criticized Labor's Pioneer-Burdekin Pumped Hydro Project as financially unviable and canceled it upon taking office, opting to explore smaller-scale hydro projects instead. 
+- Labor: Proposed large-scale renewable energy projects, including the Pioneer-Burdekin Pumped Hydro Project, to transition towards 80% renewable energy by 2035.
+
+Abortion Laws (AL):
+- LNP: Stated there would be 'no changes' to abortion laws under their government, maintaining the status quo established in 2018. 
+- Labor Party: Supported the existing abortion laws and opposed any attempts to repeal or amend them. Asserts that LNP intend to restrict access to abortion services based on the views of some of their members.
+
+Analyze Reddit comments and code them based on the positions they support or oppose concerning these issues. You will output JSON, so valid values are strings or null. Use the following codes: YC, COL, H, EI, AL. If a comment's position is unclear or does not pertain to these issues, output null.
+
+Secondly identify which party the comment appears to support. Use the party code ALP, LNP, Greens, ON, KAP if this can be determined, otherwise a null value if undetermined.
+
+Output JSON as a list of objects where each object has an "id" (integer) property of the comment id, an "issue" property set to the issue code string (or null value), and a "party" property set to the party code string or null value. Null means JSON null, not a string. Values MUST be quoted, e.g. {"party": "LNP"} unless they are null, e.g. {"party": null}. Comments follow:
+
+1. Miles was never going to last, he tried to buy his way giving freebies in the last few months, didn’t work, landslide lost
+2. The purple haired lefty’s are gonna have a field day with this one
+3. And social media wasn't such a big thing. These days, there are so many panicky posts from people complaining about teenagers walking down their street at night. When I was a teenager in the early 80's, we wandered the streets all night too. Just talking and smoking, and probably being too loud and disturbing the pearl clutchers. But it wasn't broadcast to the entire town. So between local FB groups and Murdoch media, it anecdotally sounds like youth crime is on the rise.
+4. Back then, cross media ownership was limited.. but thanks to Mel turncoat..they can own the lot,.paper tv radio stations online
+5. This. Anna needed to resign 12 months before she actually did. Basically she fucked the ALP by waiting until 10 months before the election. She can go kick rocks
+6. That’s a fair point about you make about reacting to hardship and overemphasising that
+7. Or daughter.
+8. I love how fucked our "Aussie spirit, she'll be right" attitude has snow cone to the point where this is potentially going to be policy. How did we get to the point that cookers are protesting 5Gand covidmeanwhile, this is the baseline now 🫠
+9. Woman still have the rights to take the morning after pill if they're worried about being pregnant. Know the facts what they are against are woman wanting to have an abortion when they are actually babies with eyes, ears etc! ![gif](giphy|xT9DPJVjlYHwWsZRxm|downsized)
+10. Spot on.
+11. We had that exact conversation. I’m generally sceptical of the media and their propensity to inflame for the sake of it. I believed the LNP when they said they wouldn’t change it. If they go back on that, they’ll never get a vote for me again
+12. On the other hand there’s plenty of women who don’t support this either. The argument mostly boils down to who get priority - the mother, or the baby who can’t defend itself. The latter choice isn’t *about* controlling the mother, although yes it has the impact of controlling or limiting her choices.
+13. To add to this what's the point of being in budget if that means the public are suffering and things become even worse. You aren't going to fix cost of living by taking money out of the system.
+14. Some would say that borrowing more money to inject into an economy suffering from inflation is not such a wise or effective move. Popular, sure.
+15. If the LNP don't spend $10billion on ine railway line that helps a few people only in central Brisbane they will have money to spend everywhere to cover everything.
+16. Hang on, the energy rebate was a once off and it cost $2.3 billion. The reg freeze was limited time too. They aren't getting axed
+17. Will admit wasn’t impacted by Newman and can’t even remember much from back then. Can appreciate the scarring from those in the public service.
+18. This. According to the Coorparoo Facebook group, it’s worse here than in South Central Los Angeles.
+19. Facebook seems to be the newest hotspot for indoctrination
+20. Because kids with their developed brains also weigh the consequences of their actions and make fair decisions based on it, specially when committing crime. Oh and our justice system is really affective at reforming everybody, with low recidivism rates. It's gonna be the golden ticket to safe neighbourhoods for suuuuure. I don't know how anyone with a shred of intelligence can look at youth crime and think that sentencing in the problem.
+21. you forgot to mention UNIONS who walk slow thru construction and undermine it at every turn. Example of this is ETU/Energix not allowing developers using there own workers to hook up power to new developments and refusing to do so. Unless its there guys. just look at the RNA train station...
+22. The only response worth reading
+23. No one getting crime stats of facebook is gonna be able to personally weigh policy anyway.
+24. Almost every one of my wife’s friends voted LNP. They are none of the things you mention in your last paragraph. But they are LNP voters. That’s just the way it is.
+25. RemindMe! 3 years
+26. That’s a really poor reply to a good post. You’re better than that I’m sure.
+27. Maybe pick one issue and talk about it. Start with the cfmeu one :)
+28. So I’m not allowed to have my own emotions about not wanting to be broken into, and being able to think critically about pretty basic finance? You’re the troll.
+29. You move from a fair point to fairly conspiracy focused very quickly there. Do you think Russia invaded Ukraine so that mostly American investors in black rock could buy up some of the pie? Also Isreal's invasion of Gaza isn't about oil....
+30. I think some of the left policies were quite popular (50c fares, power rebates), just not enough to offset the popularity of the LNP going after youth crime.
+31. I also like to remind people it was LABOR who sold most of the assets off.. but that get's lost. And when Labor took over newman Government. They were crooking about how there budget was so well balanced.
+32. Nah mate it is.
+33. Hardly a landslide.
+34. Well, you better hope they stick to their word. Not like they’ve been shown to bullshit before. Oh wait.
+35. The loophole they gave themselves is if the KAP proposes it, the LNP can allow their party to vote with their conscience (not whipped) and given how much the LNP is against abortion, that will pass.
+36. He already voted to keep abortion a crime last time. That sealed it for me already.
+37. I would divorce my partner in that scenario, zero questions or remorse. Almost the entire party voted against bodily autonomy last time it came up in 2018. The party can say what it wants but it’s a conscience vote. Members have already shown their positions, most didn’t clarify how they’d vote today.
+38. In [2018](https://amp.theguardian.com/australia-news/2024/oct/22/queensland-election-2024-lnp-abortion-policy-david-crisafulli) Crisafulli voted against legalising abortion. They may not introduce the bill but I can absolutely see them voting to criminalise abortion again. Do you really think they’ve changed their stance in the last six years?
+39. So criminalising abortion is something you are against, but you still voted for the guy who said he would be fine bringing about abortion criminalisation?
+40. After the fact is not as effective as before the fact. LNP & ALP are both going for conscience votes when KAP brings forward a private members bill; what are the numbers on both sides - or your own new representative? (Asking even though I haven't had s chance to do the maths myself yet) Edit: fixing autocorrect
+41. You're gonna cop a lot of hate, but I think LNP would be stupid to touch it this term. All bets are off if they get in again though.
+42. As a child that absolutely should have been aborted, I can say that any woman who wants an abortion for any reason should be able to have access to it. My mother was forced by catholic parents to marry the guy she got pregnant with. That 18 year old girl should never have been allowed to have children, let alone be forced to. My childhood was hell.
+43. it's not a baby
+44. The problem though is if not in budget, while might make things better for the short term, eventually the long term situation is worse. Again, Victoria is the example there. I like the sensible cost of living stuff. Free lunches seemed a straight bribe. Appreciate there’s a % of people that can’t afford to feed their children properly. Spend the money to fix that - my kids don’t need free food so it’d be a waste of public money on them
+45. Austerity has never worked. You need to inject money into an economy to get it moving again at times like these or else spending will stop as cost of living rises and you go into recession.
+46. As someone who didn't even live in the state during that period of time and yet knew of how badly things were from both local friends and the likes of FriendlyJordies? It was fucked across the board and we may be in for worse cuts, worse abuses of power and the LNP basically trying to convince you they're doing a good job when in reality they're doing dogshit like usual. Just because you weren't impacted doesn't mean you shouldn't be able to see the warning signs from the past.
+47. Rubbish......I live at the Gabba and went to Coorparoo high school in my youth. Seriously, nothing has changed other than easier access to illicit drugs. The difference is that social media is more accessible, every person has a camera in their phone and it's easier to spread the doom and gloom. The reality is that local problems and crime always existed, but weren't reported as widespread as they are today because we didn't have the modern tools, cameras, internet and Facebook that exist in society today.
+48. Facebook can be a bit of a cesspool, it’s not a good place to get news. I don’t think I the offical stats tell the true story, a lot of crime just isn’t making into the stats any more because what’s the point in doing a formal report when it won’t make a difference.
+49. If they voted for a party that wants to lengthen jail sentences for minors and a party that said it would consider putting abortion criminalisation back on the table then they are literally voting against their own interests. They are by definition misogynistic, classist and heartless. Women can be those things.
+50. 4 year term
+51. I will be messaging you in 3 years on [**2027-10-27 05:45:27 UTC**](http://www.wolframalpha.com/input/?i=2027-10-27%2005:45:27%20UTC%20To%20Local%20Time) to remind you of [**this link**](https://www.reddit.com/r/brisbane/comments/1gd3ymq/help_me_understand/ltywink/?context=3) [**1 OTHERS CLICKED THIS LINK**](https://www.reddit.com/message/compose/?to=RemindMeBot&subject=Reminder&message=%5Bhttps%3A%2F%2Fwww.reddit.com%2Fr%2Fbrisbane%2Fcomments%2F1gd3ymq%2Fhelp_me_understand%2Fltywink%2F%5D%0A%0ARemindMe%21%202027-10-27%2005%3A45%3A27%20UTC) to send a PM to also be reminded and to reduce spam. ^(Parent commenter can ) [^(delete this message to hide from others.)](https://www.reddit.com/message/compose/?to=RemindMeBot&subject=Delete%20Comment&message=Delete%21%201gd3ymq) ***** |[^(Info)](https://www.reddit.com/r/RemindMeBot/comments/e1bko7/remindmebot_info_v21/)|[^(Custom)](https://www.reddit.com/message/compose/?to=RemindMeBot&subject=Reminder&message=%5BLink%20or%20message%20inside%20square%20brackets%5D%0A%0ARemindMe%21%20Time%20period%20here)|[^(Your Reminders)](https://www.reddit.com/message/compose/?to=RemindMeBot&subject=List%20Of%20Reminders&message=MyReminders%21)|[^(Feedback)](https://www.reddit.com/message/compose/?to=Watchful1&subject=RemindMeBot%20Feedback)| |-|-|-|-|
+52. It's not really a good post. Very low effort of using talking points and crowing about backing a winner...
+53. You’re allowed to have emotions. You are also wrong in believing that the LNP’s plans to jail children will ~~import~~ improve that, it’ll likely make it worse. Your vote was a vote to increase recidivism, and create more victims of crime. Edit: typo
+54. I'm hoping you're replying to me here. You've thought nothing about the financial implications of an LNP vote, especially on resourcing public services but that's ok. You've got your own. Crime is a social problem, it doesn't get solved by throwing people in jail, it just transfers the problem for a while. Last time this mob was in they destroyed the crime prevention space, you know, things that have success in minimising crime while enriching their mates with boot camps etc. Seeing the Liberals are the party of personal responsibility, be responsible for the security of your own home. Good luck when the cuts inevitably happen, because those CFMEU folks you complained about have strength like all unions. You'll be on your own, but hey, have a dig at the group that forced employers in your industry to have safety standards. I'm sure you'd much rather the construction conditions in Qatar or Bangladesh... You're allowed to have your opinion, sure. Just don't pick on the opinions that point out how wrong you are.
+55. Russia invaded Ukraine in 2022. By a year prior, Bayer-Monsanto already owned a half of Ukraine’s agricultural sector, Zelensky having made foreign ownership legal only a year prior (to that). But the main proximate reason Russia invaded was NATO involvement in Ukraine’s military since 2014, and especially the increase in skirmishes and troop movements since the US pulled out of Afghanistan (Aug 2021). America has occupied the oil-producing third of Syria since 2016 or so, and that is Israel’s main source of oil besides postwar Iraq. Gaza sits on a lot of oil and gas, and Hamas was helped into ruling the place because the Palestinian Authority had negotiated exploration deals, since taken over by Israel, years ago. There are other reasons they want Gaza, but that and building an alternative to the Suez Canal are the main ones.
+56. They were popular... And they could have also gone after youth crime. But here we are.
+57. Newman sold 11 billion worth of assets during his term and went to the second election intending to sell 37 billion more
+58. I’m genuinely sorry to hear that.
+59. We could argue about definitions of life, human, baby til the cows come home (& scientists do), but at the end of the day we don't even expect our dead to donate organs if they don't want to, no matter how many lives they could save. I have O+ blood with no weird clotting factors, I get emails from the red cross all the time. No-one's shown up to my door with an arrest warrant - & that's half an afternoon and about half a litre of blood. Why is the uterus any different?
+60. At what week gestation do you consider them as a 'baby'?
+61. Call it what you like, it’s still a human being in the eyes of many.
+62. Trying to income test people to see who needs it would cost more than just making it available for everyone
+63. I was talking about inflation? Injecting more money is not the solution to inflation.
+64. I'm firmly hovering between the Labour and Greens on policy, and even I can admit Friendlyjordies isn't the most objective source, especially when you're talking to liberals, just mentioning him is gonna keep a lot of people from reading the rest of whatever you say.
+65. 100% this. And now watch as the media stops showing any security footage of this youth crime issue overnight. Just like federal LNP and the boats, if it’s not reported on it doesn’t happen
+66. They aren’t. You just don’t agree with other people. Life isn’t just about the two issues you mention. Only a very small brain would suggest as much.
+67. Nah
+68. Yeah, not arguing.
+69. Oh, yeah, I get that now, I was more speaking in a retrospective sense given that's when I was following him at his most "honest" I guess? When he started to shift from saying "the greens are fine but their base needs to chill" to "The Greens can't govern, just Vote Labor" that's when I tuned out 'cause that's when I knew he drunk the "only labor" koolaid,
+70. Do you or your immediate family own a mining company?
+71. Well, I doubt they're reducing payroll taxes, so you'd probably have to own a mining company or have shares in them to benefit from the removal of mining royalties.
+72. I don't see anyone that's isn't a corporation benefiting from anything this government has planned. I'm glad I'm not a public servant right now. I was during Newman, and that was horrendous. It's like people think the leader of the party determines what the party stands for even though it's the complete opposite.
+73. Own at least one property. Have shares in coal mining.
+74. If you qualify for private banking right now, you’ll come out on top.
+75. 7 figures plus whatever you get from your investment properties.
+76. I don't think the average punter is going to experience too much in that regard. You'd have to be paying payroll tax or subject to mining royalties mostly. Company owners and private enterprise could be seeing some dollars coming their way as I'm pretty sure they already said would outsource youth facilities as part of their youth justice crack down. Average Joe on wages earning less than couple hundred thousand a year prob won't experience much. Public service probably getting some cuts through natural attrition and not backfilling roles and potential outsourcing of some functions. That's my guess
+77. I dunno, but I'm seriously contemplating ~~increased~~ ~~premium~~ differential pricing for known LNP supporters. Gotta do my part to help them with the cost of living.
+78. To suggest that the LNP don't care about all citizens is ludicrous.
+79. If you buy a house right now you’ll only pay stamp duty not life long annual land taxes !
+80. Your hero is using tax dollars to give everyone a thousand dollar cheque - non means tested And you’re here bleating about LNP You people are beyond help
+81. And whining continues.Probably best to accept reality and move on.
+82. $0. You’ll always get more money from the government when you don’t work than when you do. Checkmate.
+83. Oh FFS. You lost the election. Get over it and spare us all the moaning.
+84. Most people own shares in mining companies through their super.
+85. Yes, that is a ludicrous statement. The LNP doesn’t care about *any* citizens.
+86. To be fair the OP didn't say "care", they said "benefit".
+87. HA HA HA.
+88. Crisafulli voted against abortion so that’s at least half the population right there
+89. Well, for starters they clearly don’t care about women. Nor do they care about children, as they were/are opposed to Miles’ free school lunches. They also don’t care about people struggling with the cost of living as they opposed 50¢ fares.
+90. Maybe, but they definitely care more about rich people.
+91. Here, you forgot this: /s
+92. The two major parties care about people who are likely to vote for them
+93. Well I hope we all see a 1% bump on our pension in 40-60 years time
+94. You don't get the point?
+95. They promised to reduce the cost of living, they're reducing coal royalties, so you can eat as much coal as you like on the cheap.
+96. I'd actually disagree strongly with this. The LNP give zero fucks about regional Queensland. Regional Queensland, as a voting base, are just very gullible and have Sky fed to them for free.
+97. Instead of pointing out youth crime stats and saying it's lower. labor and greens should have said: There are still areas with high rate of youth crime, to solve this we intend to ....
+98. There’s already an attitude in NQ that they’re forgotten and fuck SEQ, was there an effort to engage with those communities pre election to offer community youth programs , sport skills days or holiday programs , graffiti community walls, cook outs etc to try and give youth a different lane? Anything to show there was a real attempt at hearing how bad the crime feels in those specific areas? Genuinely curious. It was a missed opportunity to say we hear you our plan xyz will help. Although the statistics say crime is down, personally I do feel safer than I did 10 years ago. That just isn’t everyone’s reality in this state which is fair. It did seem for the most part it was an avoided subject and people unfortunately went with tough on crime to make them feel safer whether they’re in a safe community or not. Media and social media saturation of course amplifies those feelings of “danger”.
+99. I think that ALP not having a stance on it was fucking stupid. Might’ve been blown out of proportion by the media, but it obviously meant a lot to a lot of Qld’ers.
+100. I work all the way along the north coast of QLD to Cooktown. It’s certainly a problem and It’s a regular topic of discussion with the locals. Ignoring it won’t make it go away.
+101. And now in a few weeks it'll disappear from the news and then they can claim they did something about it when in fact they just stopped caring
+102. IMO it was both the youth crime issue and labor’s response to it (and responses like yours on it). The stats pretty clearly show that youth crime has decreased in qld, but qld is a biggg state. It has decreased nicely in Brisbane, but outside of Brisbane, and in some key towns it’s a completely different story. So you have these people living in towns where youth crime is sky rocketing, looking at the ALP and some media who are telling them they are wrong. They then look at comments etc like yours where you say ‘the perception’. Then they get really angry, because it’s not just a perception, it’s very real for them. It is increasing in their area. Maybe they have been directly impacted, or someone they know. But everyone in brisbane is going ‘no no no, it’s fine here, look at this broad statistic where your little town is insignificant, stop lying’, so they vote for the only major party that is at least pretending to give a shit about them, the LNP.
+103. Youth crime was a lot of people's equivalent of the abortion issue in the sense that they just couldn't trust the other side's position on it.
+104. Yeah it was a manufactured outrage on the monopoly media. You couldn’t turn on the TV without it starting with “youth crime wave” or “crime out of control” and then show a single incident recorded on a Doorbell camera. It’s not hard to find one youth committing a crime out of a population of 5.2 million but by showing those rare isolated incidents as if it was a growing trend (the opposite is true) tricked people into thinking it was a real issue and also Labor’s fault.
+105. I don’t think it was that. I think it’s more of a message to federal Labor. Albanese is seriously disliked among a growing majority. The fact that Peter Dutton is level in the polls, after the Morrison government, speaks volumes.
+106. It appears that outright dismissing people's concerns over a very real issue they are facing is not a great way to win an election.
+107. I’m actually not seeing youth crime where I live. It’s just adult crime. Adults stealing our parcels or breaking into the garage.
+108. Until there are true consequences imposed by judges, not a lot is going to change. The issue is complex, multi-layered and involves everyone from parents, through to police. Without respect for the law and there being little to no consequences, we will see this continue to escalate.
+109. Have they announced anything on adult crime? I keep hearing about businesses being broken into, especially in the outer suburbs, West End etc. Drug trafficking/manufacturing? The city is crawling with junkies screaming at people.
+110. I think the deciding factor was people making it very clear what they care about and Labor went.... "Naaah"
+111. Anyone who has spent more than a few days in Townsville knows that youth crime is very much a problem. Obviously LNP's "solutions" are pretty shit, but it doesn't change the fact that ALP didn't mention it at all aside from saying "it's not a problem". Big mistake on ALP's part - they should have addressed it and offered solutions.
+112. The feeling on the ground is it’s up, not down as the stats suggest. Anecdotally, people see crime worse around them and they don’t feel safe. Especially those with young families. This is a serious issue and the LNP played that card very well. The main issue now is that they are only throwing a tiny amount of money at it, and they don’t have anywhere to house anyone they have said will do adult time for adult crime.
+113. Give it 6 months and Qldrs will finally wake up and realise that the LNP has no answers to issues such as youth crime, ambulance ramping and the cost of living. The new Olympic stadium will be in Victoria Park, the Olympic accommodation in Hamilton and all designed to help their white shoe developer mates. Nothing in the Gabba will change for the next decade, even though it's the best option, with transport at the door and now with the local Greenies base totally wiped out. God help Qld
+114. Preparing my shocked pikachu face for the study in four years time that reveals Youth Crime statistics haven't changed at all under the LNP because the party is totally unwilling to do anything about any of the social issues that actually cause Youth Crime.
+115. Is it true that the son of the LNP candidate for Capalaba was killed by a repeat youth offender, and the sitting Labor member called youth crime a 'media beat-up' in response?
+116. I know Townsville people are "fed up" with crime - that was a huge factor here.
+117. Fair summary I think.
+118. “I believe crime has not become worse” that’s just nonsense. People (labor supporters) keep sprouting this like it’s the truth. People only have to look around and read the papers. Mothers and grandmothers being stabbed to death. Things are definitely getting worse. Remember what Mark Twain said about statistics before you quote those to us.
+119. I think alot of people on reddit dont realise why boomers are so concerned by youth crime. They're all going through their grey nomad phase, all they talk about atm is what wild shit they saw some abouriginal kid do while on their camping trip to where ever they went
+120. The thought that youth crime has increased is cherry picking https://www.abc.net.au/news/2024-10-25/youth-crime-statistics-using-data-incorrectly/104488958
+121. I guarantee “youth crime” will stop being reported on by majority of news networks now the lnp are in.
+122. As someone who worked in a booth yesterday it was disappointing to hear the number of people that asked “which one is getting tough on youth crime?” They clearly knew the buttons to push to trigger voters and their campaign was enough to get them over the line. Maybe one day we’ll have an informed electorate that expects more from our politicians
+123. I absolutely agree how the campaign team got this so wrong when the focus should have been opposing DC’s strategy why it won’t work and labours stance on it there’s even research debunking his strategy very odd campaign team

@@ -1,0 +1,147 @@
+Your job is to analye a series of Reddit Comments are drawn from sbumissions related to the 2024 Queensland State Election. The comments are drawn from a collection of comments before, during and after the election itself on the 26th of October. The parties that sought election were the Australian Labor Party (ALP), the Liberal National Party (LNP), the Queensland Greens (Greens), One Nation and Katter's Australian Party. The LNP prevailed in the election, with David Crisafulli becoming the new Premier of Queensland. 
+We have identified several key issues that the major parties campaigned on during the 2024 Queensland State Election: Youth Crime (YC), Cost of Living (COL), Health (H), Energy and Infrastructure (EI), and Abortion Laws (AL). Below is a summary of each party's position on these issues:
+Youth Crime (YC):
+- LNP: Advocated for stricter penalties for young offenders, including the 'Adult Crime, Adult Time' policy, proposing that serious offenses committed by youths be met with adult sentencing. 
+- Labor: Focused on rehabilitation and prevention programs, aiming to address the root causes of youth crime through community engagement and support services.
+
+Cost of Living (COL):
+- LNP: Proposed measures such as abolishing stamp duty on new builds for first home buyers and re-establishing the productivity commission to review building industry regulations, aiming to alleviate housing costs. 
+- Labor: Introduced initiatives like 50-cent public transport fares, a $1,000 energy rebate, and free lunches for state primary school students to ease cost-of-living pressures.
+
+Health (H):
+- LNP: Committed $590 million to an 'Easier Access to Health Services Plan,' aiming to reduce ambulance ramping and hire additional healthcare workers. 
+- Labor: Focused on maintaining and expanding healthcare services, addressing hospital capacity issues, and investing in new health infrastructure.
+
+Energy and Infrastructure (EI):
+- LNP: Criticized Labor's Pioneer-Burdekin Pumped Hydro Project as financially unviable and canceled it upon taking office, opting to explore smaller-scale hydro projects instead. 
+- Labor: Proposed large-scale renewable energy projects, including the Pioneer-Burdekin Pumped Hydro Project, to transition towards 80% renewable energy by 2035.
+
+Abortion Laws (AL):
+- LNP: Stated there would be 'no changes' to abortion laws under their government, maintaining the status quo established in 2018. 
+- Labor Party: Supported the existing abortion laws and opposed any attempts to repeal or amend them. Asserts that LNP intend to restrict access to abortion services based on the views of some of their members.
+
+Analyze Reddit comments and code them based on the positions they support or oppose concerning these issues. You will output JSON, so valid values are strings or null. Use the following codes: YC, COL, H, EI, AL. If a comment's position is unclear or does not pertain to these issues, output null.
+
+Secondly identify which party the comment appears to support. Use the party code ALP, LNP, Greens, ON, KAP if this can be determined, otherwise a null value if undetermined.
+
+Output JSON as a list of objects where each object has an "id" (integer) property of the comment id, an "issue" property set to the issue code string (or null value), and a "party" property set to the party code string or null value. Null means JSON null, not a string. Values MUST be quoted, e.g. {"party": "LNP"} unless they are null, e.g. {"party": null}. Comments follow:
+
+1. They technically have to find you a permanent job at the same level. This mechanism has always been in place.
+2. Who knows mate, but if he’s lying, it is an enormous lie that’s handing a huge amount of potential political ammo to Labour from day one for no real benefit to the LNP.
+3. And the LNP backers always say Labor never invests in Defence yet look at them doing exactly that. Both parties are capable of change just be ready to call the cunts out if they go against their word
+4. I might politely suggest you are letting the perfect be the enemy of the good there mate
+5. I agree. Fundamentally, governments want to get re-elected. If acting rationally, they'll do whatever they believe will get them re-elected. Since he was voted out, I've come to realise that Campbell Newman was and is a delusional ideologue of the highest order. He still genuinely believes what he did in government was right and it was us who got it wrong. I don't mind a bit of libertarianism myself if I'm being honest, but Newman is an extremist. The current LNP surely realise this. They've seen what happens when you behave like an extremist in Queensland politics - you get voted out on your arse at the next election. If they want to have another term, they know what not to do.
+6. I don’t have the same confidence. Yeah, granted there’s only 9-19 seats between the two majors depending on what goes down with remaining counting. I don’t believe LNP feel secure enough in next election to not go for the throat and “get it done”. A lot rides on the next federal election but surely Australia aren’t drunk on the same juices to have LNP ruled by Dutton in the hot seat…. I have zero expectations that I’m right in that. Given Scumo (Morrison) got a ticket to the top job. Things are bad and nothing really looks like much will drastically improve for average Australians under federal Labor. I’m scared about a future with Crisafulli, Dutton, and a US empire run by Trump… fuck me…what a shit time…
+7. Source?
+8. Agreed, but they do need to be replaced with FTEs
+9. Probably looking for people to sack.
+10. Back in my day I had to hunt wild boar, with sharpened sticks, in the snow, while fending off other tribes, while bare foot. And that was during little lunch, didn't do it in 10 mins, you went hungry and got detention
+11. I know I'm extra happy I pay Crisafulli $130 a day meal allowance too, I mean fuck the kids, David needs nourishment..
+12. What suicide? Hes on the gravy train for a 4 year trip and if hes a one termer he will have made sure there is cruisy board or company jobs lined up for him after he leaves. Its only suicide to him if HE wants to stay premier more than one term, but in terms of career and earning power, if he sacks the public service and loses the next election, he wins either way. Youd argue one term and out would be a bigger win for him anyways as the cruisy corporate jobs pay more.
+13. That'll blow the budget unless he sacks a few public servants to pay for it.
+14. Thank you, that explains why I couldn’t find anything.
+15. He’s committed to maintain it over the current forward period (4 years). If he cuts it it’d be a mandate at the next election
+16. The LNP will not make any changes to revenue-raising coal royalties in the first term of government Opposition Leader, David Crisafulli has declared, skewering the government for ratcheting up a “ridiculous scare campaign”. https://www.couriermail.com.au/news/queensland/qld-politics/qld-election-2024-labor-warns-lnp-will-decrease-coal-royalties/news-story/8fa644978f7757ea58b5e08655520c3c?amp Please supply a link to a press conference with the information you claim. All the press conferences I saw from the then opposition leader advised the above.
+17. You say plenty of press coverage, but I've not managed to find any, got a link?
+18. Should be easy to show me a recent policy statement then
+19. It's a commonly known detail for those of us who don't just spout shit without any knowledge or thought. From the [Budget Overview](https://www.treasury.qld.gov.au/resource/state-budget-2024-25/) document > Across 2024–25 and 2025–26, a deficit is forecast as revenue growth is flat and the government prioritises the provision of elevated cost-of-living support
+20. Literally look at the budget fukin monkey
+21. Look at old nurse nerd here with numbers.
+22. Striking without permission carries almost 20K a day in fines and you can be reduced in pay grade. That being said, if nurses or cops threaten to strike they have public support, which is a better position to be in than teachers.
+23. Ahh. I just remember a thing from WA cops who said they can’t strike but are pissed about pay and conditions over there
+24. Why would they want to do that again?
+25. Labor was already doing that though, understaffed teams deliberately so that they could give pay rises to the executive management.
+26. That'll be a good start.
+27. By bye Home Assist Secure Medical Aid Subsidy Scheme Security initiative grants Etc...
+28. I thought they were Federally funded. Is that not the case?
+29. Vietnamese guy, does an excellent Ban mi
+30. Non-government organisation.
+31. So they can take kickbacks from their buddies in the private sector of the prison industry. The only reason politicians ever campaign on crime is to leverage the criminal justice system for personal gain
+32. Because anyone who doesn't wear a red or green shirt are literally the devil incarnate, woe is me, the sky is falling... it's the end of the world and nobody will ever convince me otherwise. /s
+33. I don't think they wanna increase it. But it's very pharmaceutical in a way. Let's lock up the criminals, instead of putting things in place to stop people becoming criminals.
+34. They won this election on "crime" and putting kids in jail. It is in their best interests to keep the trend going. Solving or lowering crime is not the goal for them, if it was cristfulli wouldnt have renegged on his "promise" or made a promise of actual substance in the first place. Things like free school lunches would lower youth crime, get kids back in school, crime will only increase as the LNP leave behind and screw the working class, all their policies and lack of progressive policy will only increase inequality and widen the gap between upper and lower classes these things cause crime.
+35. I didn’t know that! Quite the benefit.
+36. Quite right, sometimes it happens, sometimes they find you something you don't want or can't take, then they are quick to start the process of moving you on and out. And the same level thing is never a guarantee, they will find you something with nothing more than wage maintenance for 12 months after which you end up on the level of your new substantive.
+37. Here we Joh again.
+38. This is my position too. SURELY they learnt the lessons of 2015 where they lost a giant majority entirely by themselves. Only holding office for 5 of the last 30 year. This is absolutely the crossroads for LNP in QLD. A repeat of Newman = death.
+39. Yeah that’s pretty much it isn’t it.
+40. Fair call, but can we maybe just have a slightly better "good".
+41. I reckon Scomo only got PM cause Dutton knew once he's there he'd be out of politics sooner.
+42. Go ask for yourself, my information came from sister inlaw who works in public service in Brisbane
+43. 100%
+44. …and then you went home and copped a flogging from Dad for no reason. Ahhh them good ol days…
+45. And you try and tell the young people that
+46. He just needs a little snackie to make it through the day. He's a wee lil fella.
+47. After a donation of $1.26M to the LNP the likes of Coal Australia are not going to wait four years. They'll want ROI within months.
+48. You are going to have to show a link for that.
+49. Haha your quoting a) the absolutely deceitful and deceptive LNP b) the Courier Mail. Watch what they do not what they say.
+50. What policy statement. Lol. I stand corrected. It looks like (can't read behind a paywall) they have temporarily stayed this rollback for at least one election cycle (or so they claim).
+51. It also says the two years after that are forecast for a .0.9b and a 2b surplus, I guess we'll see if the lnp can follow the plan.
+52. Not sure how true that is, has the public supported the AFP in the past 12 months?
+53. they can threaten fines all they like. The workers have the power. If they don't work, nothing gets done. Although I absolutely can't wait for new labour laws to be introduced that cuts workers rights at the knees like Work choices /s
+54. Parent: "wait you mean I have to deal with my children and it's not even holidays? Fuck that, get back to work teacher scum"
+55. Well then, you best stick together and not come back from striking until that bullshit is abandoned.
+56. I just looked and what do you know that's true. But it doesn't actually say police specifically its a blanket thing... 'The right of uniformed employees to engage in any strike, work slowdown, or stoppage is not granted.' Some WA legislation it seems
+57. Why did they "do it again" back then? Ask yourself why the last two term conservative government in Qld was corrupt? They just won't do good for Qld.
+58. Because black and white ideology matters more to them than common sense.
+59. Not really mate. Work still needs to get done. All that will happen is that tax payers will end up overpaying various consultants and contractors to do the job instead of public servants who ostensibly get paid a lot less. Return to the Newman days. Don’t get me wrong, I work for an engineering consultant and will appreciate the cash handout. But it’s not a great outcome for taxpayers.
+60. Not really, critical roles don't get filled
+61. It’s like 70/30 or something
+62. Like a tiny bit, majority state.
+63. All Qld prisons are run by the state government
+64. Queensland doesn't have private prisons
+65. Do both, the former work right now in making people feel safe, which they currently do not. We don’t want programs, we want to feel safe and to stop giving these repeat offenders slaps on the wrist.
+66. Bizarre take, if they lower crime it will be considered a success and they will move focus onto the next issue they have to fix. We don’t want your programs, the taxpayers want to feel safe right now. Fk the school lunch when the kids don’t feel safe at school currently. Those are fixes you do when people aren’t scared to get public transport.
+67. I've heard this as a rumour, but anyone with a union has never had this happen (which is basically anyone in the public service). The worst I heard was someone who did a job that was a grade below them, for their original job's pay.
+68. Hahah
+69. Yeah that’s how I see it
+70. Unfortunately you're assuming a basic level of self awareness and empathy that, sadly, I don't think they have. But, we'll see. Queensland has thrown out bad governments, and they'll do it again.
+71. People said back then they would never vote LNP again. Given enough time that all gets forgotten. And here we are.
+72. Tony Abbott once said something, then said later that while he said that, it's not what he meant.
+73. Hahahaha absolutely mate
+74. I would absolutely support a better good
+75. So your source is Baz from down the street. Ok.
+76. Source: trust me bro.
+77. Yeah with the jug cord! Builds character /s
+78. It would be the greatest ROI in the history of investing if they repealed it for a measly $1.26m. It’d also be political suicide and another decade in opposition. I imagine they will have learnt a bit from the Newman govt. Government owned businesses won’t be getting privatised. Abortion laws won’t fundamentally change and the world will keep on turning.
+79. Here’s a couple https://www.couriermail.com.au/news/queensland/qld-politics/qld-election-2024-labor-warns-lnp-will-decrease-coal-royalties/news-story/8fa644978f7757ea58b5e08655520c3c?amp# https://amp.abc.net.au/article/104456928
+80. Love how all of a sudden lefties care about a balanced budget 🤣 You guys are the ones always banging on about how it really doesn't matter if the gov racks up a lot of debt, as long as it kicks the can down the road and maintains everyone's living standards for the time being...
+81. They believe that the cops do real work and are important. If they threatened to strike they'd get public support on pay increases. Likely the QIRC would not sanction a strike, but the threat would carry weight. Teachers, not so much. The QTU has data showing the public will blame us rather than the government if we strike.
+82. There are enough teachers living hand to mouth that the threat of being fined $20K ish per day and losing your job means they won't risk it. There's also a large portion nearing retirement who can't risk being reduced two steps in grade or more. About 60% of the work force is in their first five years and probably 30% is in their last five working years. We don't have the power. We would if the public supported us and would pressure the government, but between fixed term governments and the public having a dim view of education workers, we can't leverage the court of public opinion.
+83. Bingo.
+84. Earlier this year, the QTU wanted to work to rule (25 paid hours) for a single week to highlight the discrepancy with pay and average workload, including unpaid work time (55 hours of total work per week on average, so 30 hours of unpaid overtime). Behavioural issues were also going to be highlighted that week. We were ordered not to, on pain of fines and mass dismissals. Polling around this showed that the wider public believes we are overpaid and that there isn't a workload issue. They believe that such behavioural issues that exist are the result of teacher incompetence. Since we would be destroyed by the Industrial Relations Commission and the public rejected what we were saying, the planned week of action was abandoned. I don't think people understand how busted industrial relations laws are. Or how hostile the public can be to public sector workers.
+85. Also a paramedic here, The other issue is there is a real cost to the community if we strike. Personally I would struggle to justify striking knowing how difficult it is to identify truly unwell callers for the staff remaining. I would happily engage in other forms of industrial action like other states do however.
+86. Nah I believe more 60-40 state 60.
+87. Yeah. Not like the LNP is infamous for its campaigns of privatisation
+88. Yet... If you sold them, then contracted out the services, you'd stand to have a surplus that might last a couple of years before the crippling payments caught up with the state, might even be good for a reelection if done late enough in the term.
+89. You dont want programs proven to lower youth crime........... got it...... so you want more crime....... great. How about we take those "criminal" kid, line them the fuck up and shoot em then.
+90. Only 14% of public servants are in a union. I have seen it happen; and it happened in 2012 with the Newman cuts. They told all those staff they had opportunities to get another placement, but in the end, there was no other position. Remember in 12 months' time the EB negotiations start, I can see an erosion of protections as history repeats itself.
+91. More likely Shaz, being a sister in law. Still doesn’t mean it’s not true though.
+92. I’m sure it would go down well if I put her name up here
+93. You underestimate the LNP. However given the underwhelming landslide they have a lot of thinking to do. That said money talks in the LNP and the roll back of royalties will occur. The National Party has been hooked on mining since Joh and the Minister for Everything Russ Hinze (how else did Clive Palmer get a leg up). It's never been about farming for the National Party.
+94. It looks like you shared an AMP link. These should load faster, but AMP is controversial because of [concerns over privacy and the Open Web](https://www.reddit.com/r/AmputatorBot/comments/ehrq3z/why_did_i_build_amputatorbot). Maybe check out **the canonical page** instead: **[https://www.abc.net.au/news/2024-10-23/queensland-election-promises-steven-miles-david-crisafulli/104456928](https://www.abc.net.au/news/2024-10-23/queensland-election-promises-steven-miles-david-crisafulli/104456928)** ***** ^(I'm a bot | )[^(Why & About)](https://www.reddit.com/r/AmputatorBot/comments/ehrq3z/why_did_i_build_amputatorbot)^( | )[^(Summon: u/AmputatorBot)](https://www.reddit.com/r/AmputatorBot/comments/cchly3/you_can_now_summon_amputatorbot/)
+95. Not to pick on your sources here but neither one presents evidence that the lnp will repeal the royalty increase. The ABC one actually quotes the LNP promising no changes. The only source in both that they will decrease royalties is from Labor, who I hope we can both agree have a vested interest in making that claim.
+96. And yet we hear constant screeching about 'Labor debt' i guess we get to see now if the lnp are the financial masterminds they claim to be, perhaps by putting out a surplus or two?
+97. "those who do not move, do not notice their chains"
+98. Teachers should be one of the most highly paid professions going. IDGAF if it's preschool or year 12. They provide more measurable benefit to society than almost every other profession, and yet parents seem to treat them somewhere between childcare and customer service
+99. Yeah so the point of a union is to act as one. So if there's mass sackings, all teachers strike. They are shit terrified of the masses ignoring the threats and grinding operations to a halt. Cause sure, they can mass sack, but really they can't because it's take wayyy to long to recruit back and cost too much in the interim. I get what you're saying, and I'm not saying it's easy. I wouldn't test it myself in that situation, but we've been softened by our employers, gave them too much power and striking reminds them that they need us like we need them.
+100. Labor under Wayne Goss was the first state government in Australia to commission a private company to manage a prison
+101. So you're saying LNP wants to increase crime (despite reduction plans being a core election policy) to benefits their mates who own private prisons (even though Queensland have no private prisons) because they want to private the prisons. Mate you are literally cooker status.
+102. I do, but I would prefer more immediate action before them :).
+103. No. Being safe and wanting safe communities doesn’t mean I live “in a bridge under mummies basement” lmao. Grow up
+104. When you say another placement, do you mean they willingly moved to a temporary position?
+105. That's not my point. My point is that "my sister in law said so" isn't exactly hard proof of anything. Also it's a little bit ironic seeing as "youth crime is bad because bob down the road told me" is basically the LNP party platform.
+106. Of course they’re hooked on mining. Both major parties are (otherwise you wouldn’t have wild ideas like Copperstring with bipartisan support). And rightly so - it’s a critical component of the state economy! I may be underestimating them, but I genuinely think/hope they’ll be more measured than last time. To your point, the landslide didn’t really eventuate which provides some food for thought and it seems clear from how both ON and Greens fared that the electorate is looking for a more centrist approach.
+107. I agree with you - refer earlier comments. No change over the current budget period
+108. Starting salary for teachers is $85k straight out of uni and $120k+ for an experienced senior teacher. It’s not the highest paid profession but it’s reasonably good, pays above the median full-time salary pretty quickly.
+109. In that case people were told that best effort would be to get them another placement, few got them, others were basically offered temporary positions as nothing could be found. One person I knew was offered a permanent position on a lower level, they got to keep their higher rate of pay for 12 months but then they would revert I guess you could say to the positions level at highest step. They seemed to had found a loophole as they kept changing temp positions every 6 months and the arrangement of salary maintenance followed them around and that went on for almost 3 years. I think in the end they found something permanent but did end up going down a level.
+110. Like I said go ask for your self, there might be more come out now that he is gone, you seem happy to believe the fanciful tale that LNP would gut the public service
+111. Sorry missed that comment.
+112. Once my 11 weeks of holidays are taken into account, my salary of $96k nets me about $48 an hour. Which isn't bad and I feel well compensated in my current role. Average of 50 hours per week but with 11 weeks PTO each year. I have a pretty cushy job in a private school without any major behavioral issues on a day-to-day basis. My workload fluctuates a lot but I have gotten a lot better at maximizing productivity while at work, which the lesser behaviour management load allowing me to get work done while students are working on their tasks, more time for spares & less supervisions, which would probably, added all up make my real hourly closer to $52. My old position in the state system paid about the same $96k but with an increased workload netted me about $40 an hour per real hour worked, which is just above the median of $39.50. I had to deal with violence, verbal abuse from students and parents as well as the general enmity from parents, students and school administrators. Major violent behaviour towards staff was seen as the fault of the teacher, and admin refused to expel a student who barged into a staffroom to assault a teacher. Comparable jobs to what I do, which require a comparable skillset net around $52 per real hours worked, with some variance from role to role. There is no way I would ever go back into teaching in the state system, the only reason I'm still teaching at all is because of my current position. Teachers aren't badly paid, they just aren't paid what they are worth & they aren't paid to put up with the bullshit they are expected to.
+113. This right here is why teachers should start on $110/120k and go up from there.
+114. That's the conversation I had with a few colleagues at work this morning: Queenslanders are quick to call the result and move on with their lives - the 'Can't do anything about it now' rings so true for me, and a lot of other people in my circles who voted Labor. Instead of adding to your stress - think about your local electorate's MP. Are they LNP or Labor? You're allowed to request in-person meetings with them to ask about these things and to build a relationship with them. A few interesting things to come out of this election: the new LNP MP for Pumicestone, Ariana, is 22 years old. I was still head down in a toilet bowl after too many goon bags at that age - imagine what kinds of things young people can do or the ideas they have, irrespective of the aligned party! Also, Bisma, new ALP MP for Sandgate is the first ever Muslim MP in Queensland. Another big step for multiculturalism, diversity and acceptance in our state. The most important thing, however, is that we have to hold LNP accountable for the promises they have kept. They've written up this nice First 100 Days pledge that outline some of the commitments they have to stay on. [https://online.lnp.org.au/first-one-hundred-days](https://online.lnp.org.au/first-one-hundred-days) And to also protest if they don't hold true to what they say.
+115. The loss of renewable infrastructure is unlikely to be noticed in the next four years. The State Government has very little influence in the development of renewables, and very few if any actual policies in place. The subsidies which renewables tap into were a federal LNP policy (at odds with the noise they make about them), so the new State Government cannot touch that. Most wind and solar projects are being developed by private consortiums, not the State which is a very LNP-esque system, but doesnt cost the State anything directly. the proposed cancellation of the Burdekin-Pioneer Hydro Project is a blow to meeting the State's renewable targets, but not alot of work has been done on it, so not a big loss. The interesting part will be whether the State will continue to contribute to the construction of transmission lines to connect the projects to the grid. As someone working in the industry, the vibe is OK for the next couple of years but after that the political landscape could be very different. So you can at least save some stress for a bit.
+116. I'm mostly worried about the rolling back of compulsory preferential voting. I find it very hard to trust a party that wants to reduce the representativeness of our democratic system. Are they actually fascist, or are they just unaware of history?
+117. If you’re worried about changes to abortion and in Brisbane, there is a rally Friday 6pm, Brisbane Square. It’ll at least show the LNP we won’t take any changes lying down
+118. More than likely redundancies will be voluntary. Crisafulli has been keen to distance himself from Newman.
+119. The thing I don’t understand most is why they’d cut health workers. I get they don’t like abortion because religion. Makes sense. I get they want to cut a lot of workers to save money. Makes sense. I get they want to get rid of mining royalties because their friends in mining. Makes sense. Cutting workers from healthcare makes zero sense.

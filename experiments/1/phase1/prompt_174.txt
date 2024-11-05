@@ -1,0 +1,149 @@
+Your job is to analye a series of Reddit Comments are drawn from sbumissions related to the 2024 Queensland State Election. The comments are drawn from a collection of comments before, during and after the election itself on the 26th of October. The parties that sought election were the Australian Labor Party (ALP), the Liberal National Party (LNP), the Queensland Greens (Greens), One Nation and Katter's Australian Party. The LNP prevailed in the election, with David Crisafulli becoming the new Premier of Queensland. 
+We have identified several key issues that the major parties campaigned on during the 2024 Queensland State Election: Youth Crime (YC), Cost of Living (COL), Health (H), Energy and Infrastructure (EI), and Abortion Laws (AL). Below is a summary of each party's position on these issues:
+Youth Crime (YC):
+- LNP: Advocated for stricter penalties for young offenders, including the 'Adult Crime, Adult Time' policy, proposing that serious offenses committed by youths be met with adult sentencing. 
+- Labor: Focused on rehabilitation and prevention programs, aiming to address the root causes of youth crime through community engagement and support services.
+
+Cost of Living (COL):
+- LNP: Proposed measures such as abolishing stamp duty on new builds for first home buyers and re-establishing the productivity commission to review building industry regulations, aiming to alleviate housing costs. 
+- Labor: Introduced initiatives like 50-cent public transport fares, a $1,000 energy rebate, and free lunches for state primary school students to ease cost-of-living pressures.
+
+Health (H):
+- LNP: Committed $590 million to an 'Easier Access to Health Services Plan,' aiming to reduce ambulance ramping and hire additional healthcare workers. 
+- Labor: Focused on maintaining and expanding healthcare services, addressing hospital capacity issues, and investing in new health infrastructure.
+
+Energy and Infrastructure (EI):
+- LNP: Criticized Labor's Pioneer-Burdekin Pumped Hydro Project as financially unviable and canceled it upon taking office, opting to explore smaller-scale hydro projects instead. 
+- Labor: Proposed large-scale renewable energy projects, including the Pioneer-Burdekin Pumped Hydro Project, to transition towards 80% renewable energy by 2035.
+
+Abortion Laws (AL):
+- LNP: Stated there would be 'no changes' to abortion laws under their government, maintaining the status quo established in 2018. 
+- Labor Party: Supported the existing abortion laws and opposed any attempts to repeal or amend them. Asserts that LNP intend to restrict access to abortion services based on the views of some of their members.
+
+Analyze Reddit comments and code them based on the positions they support or oppose concerning these issues. You will output JSON, so valid values are strings or null. Use the following codes: YC, COL, H, EI, AL. If a comment's position is unclear or does not pertain to these issues, output null.
+
+Secondly identify which party the comment appears to support. Use the party code ALP, LNP, Greens, ON, KAP if this can be determined, otherwise a null value if undetermined.
+
+Output JSON as a list of objects where each object has an "id" (integer) property of the comment id, an "issue" property set to the issue code string (or null value), and a "party" property set to the party code string or null value. Null means JSON null, not a string. Values MUST be quoted, e.g. {"party": "LNP"} unless they are null, e.g. {"party": null}. Comments follow:
+
+1. Governments shouldn't gamble on maybes. We know nuclear works, we know we have the resources to sustain it indefinitely in Australia alone. Batteries will be cheaper for now, so long as the resources are available to keep making new ones. There are hot and cold proxy wars being fought in Africa right now over the minerals needed for batteries. Relying on resource we do not control for something as essential as energy is a poor strategic decision. Every investment is too expensive for some people, until it's needed, then they are usually the ones who will take the credit for being forward thinking when they had to be dragged kicking and screaming into the future.
+2. Because the alternate is less reliable or worse for the environment. In the grand scheme of things cost is a non issue, it's a political issue.
+3. We know batteries will get cheaper, we know renewables will proved cheaper and crappier electricity. We know nuclear will be be more expensive, we know it won’t be able to expanse later if needed, we know we have no way of disposing waste, and we know we won’t have nuclear running for at least 20-30 years. Based on what we know, I don’t get how you could still say nuclear.
+4. We don't know that batteries will always continue to get cheaper, because of the reasons already noted. The scramble for battery materials has already begun, and there is no surety on how it will play out. Despite the upfront cost, the benefit of nuclear is consistency. It is know how much it will cost, how much it will generate. It is well established technology. I am not opposed to batteries as a stop gap to bridge the transition from coal to renewables, however I believe ruling out nuclear as an option is short sighted given the instability of material supply for batteries alone.
+5. Well it’s good you aren’t opposed to batteries as we will need to invest in it anyway as a stop gap between now and nuclear. Currently globally there is global push into research for energy storage, as most countries have also acknowledged the future will require energy storage. Many of the storage options do not involve batteries btw. There is research into readily available materials and even waste products repurposed.
+6. Renewables is just a better investment than nuclear.
+7. "Better" is a very subjective term to use when talking about infrastructure that is essential to the very existence of our nation. There are good reasons to want nuclear power to be part of our clean energy future.
+8. Positives - democracy doesn’t start and finish at voting. Keep in touch with your local member about issues that matter. Tell them you want to keep mining royalties. Tell them about homelessness in your area. Report crimes when you see them. Make a public interest disclosure if you see someone in office do something corrupt. - 50c fares, let’s hold them to account on this - increased police numbers - again let’s hold them to account - Crisafulli says there will be no change to abortion laws, so Labor calling this out should help safe guard this. Miles has actually done an astounding job getting Crisafulli to commit to some of the big things that matter. I’ve actually been really impressed with his leadership and hope he stays around in opposition.
+9. We got some great policies out of this term of government that will be continued on, especially the 50c public transport, which will be unpopular to roll back. I'm glad we got what we got tbh
+10. The Queensland Teacher’s Union might finally grow the balls to take on the government and improve conditions for teachers, now that their friends aren’t in power any more.
+11. At the headquarters of a mining company in a tax haven somewhere, a line on a graph will go up a bit.
+12. A lot of things have been started that can't be stopped. From 50c fares and Qld made trains and buses in Maryborough to the massive amount of renewable energy projects being built in QLD, the Satellite Hospitals and the housing solutions. We have left a solid legacy for the state and one that the LNP can't immediately chop. Obviously there's still some things like Pioneer-Burdekin, mining royalties and youth justice that are very disappointing but all in all we not only forced the LNP to play a small target but we forced them to move to the centre and adopt some genuinely progressive social policies.
+13. over the next 4 years you get to see first-hand why we let Labor run things
+14. Well, kids whose families struggle will not have free food at school to keep them educated, but we have plans to lock them all up now, so you won't even know they existed
+15. I’m glad I didn’t take on/accepted for a graduate role with qld gov public service. It would have meant moving to Brisbane and then finding out in no time my position will be made redundant… I could see the writing on the wall there: first in first out. Newman years were lousy in my last public sector role.
+16. Mining company execs get to buy new yachts.
+17. If Cris really screws Queensland quickly, it might keep Albo in government over Dutton in the federal election.
+18. I'm honestly gutted, i was actually leaning towards voting for LNP prior to Steven Miles taking over because i felt like the labour government wasn't really doing anything. I completely backflipped on that notion once he introduced the 50c fairs and actually stuck to it. I was hopeful that he would get re-elected because it seemed like he actually cared and was trying to implement change. But now it feels like it was all for nothing. What sucks the most to me is that i feel like people voted for LNP just because they wanted change for the sake of change. They had no noteworthy policies on the table (happy to be corrected) and Crisafulli came across like he had no clue what he was doing (going off the clips of the debates and the whole thing regarding abortions). Either way I'll remain hopeful that we won't end up going backwards with the progress that we have made and that the LNP will be held accountable for any mistakes they make.
+19. Life goes on. We survived Newman, we'll survive a change in government. The alternative to our democratic system is having a dictatorship that lasts a lifetime or generations. Take it on the chin and move on. What we don't want is the state of politics like the US where lines are drawn between people and they can't even get along and ready to tear themselves apart. Edit: and if the government of the day does something vile and undemocratic, then do your part and raise your concerns, and protest if you must.
+20. LNP will achieve NOTHING, they will do NOTHING, but they’ll take credit for Labor’s policies and initiatives and likely fuck something that was genuinely helping people.
+21. You can still purchase XXXX bitter. Liquid of champ
+22. I literally feel like I've been abandoned. I'm feeling incredibly sad and hopeless about these results. I feel like what's the point in fighting for change when it's the same shit every time. Our environment is going to be destroyed, housing will remain unaffordable, but big businesses will be fine so it's okay. You wanted this QLD, so you got it.
+23. It wasn’t as big win that the LNP would have wanted so the abortion debate really put a dent in them. Also Miles force Crisafulli’ s hand and he said he supported a woman’s choice, so if he brings the conscience vote in he will be out next election. Also last time LNP were in for more than one term was Joh. They will fuck it up, they repeat the same mistakes as Newman and be out. The benefit of not having an upper house is that all their fuckups will be reversed.
+24. Regardless of your voting preferences, or other people's voting preferences; if you're in trouble on the side of the road...another Queenslander will probably stop and give you a hand. If a fire or flood, devastates your community, a fellow Queenslander will stop to give you a hand, even if they've had it rough. You drop a coin, or something at the shops and don't realise it...9/10 times; another person in your community will probably stop and let you know. I don't know, if that helps; but it's the reality of the situation. "And when you give that speech, you're boring Springfield"
+25. QLD becomes a less desirable place to live due to LNP, resulting in house prices tanking
+26. Stadium fuckup will get mostly fixed. Only thing I can think of.
+27. They'll only get one term.
+28. I am thankful I planned ahead and got emergency meds. My mental health just tanked and thoughts went immediately suicidal. I'm also thankful I have parrots because I need to get through for them I'm likely losing my job Monday because of this. I'm not okay.
+29. I don't think they will do much that's controversial if they're hoping for a second term. You may not see much difference in your day to day life.
+30. I’m feeling the same. Not much help, though.
+31. I guess it's okay now to be corrupt because our leaders are?
+32. The rest of the country will get to see how behind QLD is compare to everyone else. Let's see what they do with the Olympics for example. Not looking good bruv.
+33. I just hope this result in Qld doesn't trend to the Federal level.
+34. The main positive is LNP blew a massive lead and barely eked out a one seat majority. This isn’t the story of Labours loss, this is the story of Chrisafulli folding in the final weeks as Queenslanders saw through his dog and pony show.
+35. Use that disappointment to get involved in the political system outside of 6 weeks every 4 years. The majority of governing happens between elections.
+36. there are now 0 one nation seats in Queensland (at a state level)
+37. The positives is that you should invest in mining companies in QLD but they'll be sure to make money. And maybe invest in probate prisons operating in Australia. You should be happy that LNP has promised to continue the 50c fares, for now anyway. If you're not a woman, or one that can't have kids, or one that supports pro-life then you should feel comforted by the fact that abortion rights might change.
+38. good news is you now have a list of places to avoid
+39. The LNP will only be one awkward hot mic or inappropriate social media post from years gone by from falling into minority.
+40. LNP supporters (or anyone who questions Labor) don't last very long on this sub, so I wouldn't expect much of a response
+41. we're on the verge of ww3 which will make the election feel trivial! 😬
+42. Not sure what you want? If the LNP do what they said they'd do? It's going to be very good for us all. Reddit & this sub are very "young labour" If you support the LNP in here you are abused & trashed. So don't expect to get answers from LNP voters. Trust in your fellow Queenslanders. People have exercised their democratic right. If you believe in democracy? You accept the will of the people and move on. That's how democracy works. If you refuse to accept it and carry on? You're no better than Trump and his cult of supporters. Think about it. Tomorrow is a new day
+43. Honestly after Newman, the lnp would be fully aware if they want to stay in they have to be careful on what they do. Say they do cut all these jobs and criminalize abortions... Do you know how easy it is then for labor to get back in ? Change can be good, but we the people need to keep them honest and keep them to their word.
+44. All is not lost. Channelling Trump, the mincing chihuahua SMiles has won a historic victory and not conceded graciously. I repeat he has NOT conceded.
+45. A discussion on abortion will impact the national vote.
+46. Our massive state debt might actually stop growing for a change?
+47. It will be a short honeymoon once Blejie fires up to his usual self as he did last time LNP were in power. Given his performance and cunt attitude toward Cameron Dick for that debate Blejie refused to show up to, and the fact Amanda Stoker is in QLD parliament, it will indeed be a one-term government. The writing is on the wall.
+48. " I’m feeling down and could do with some positives to look towards. " Politics on both sides but mainly on the left use scare tactics instead of Policies . Many of the younger generation seem totally vulnerable to these scare campaigns and swallow them hook line and sinker. Of course there will be some change but grow up please . Get on with your life . The sun will still rise tomorrow,
+49. The reality is that there are two States of Qld - Brisbane ... and the rest.
+50. I think we have significant sway if we live in Brisbane, regardless of who your MP is. It’s clear that Brisbane wants progressive politics so we can keep demanding the new government gives us that. And we can kick up a stink if they don’t.
+51. So what is this LNP pelicans actually plan?
+52. Potentially good news if you work in mining, I guess? That's about the only consolation prize for me.
+53. All of the above and also let’s see what they do with the Brisbane Olympics.
+54. The two major parties are essentially the same. I wouldn’t panic.
+55. The dread of the boogieman is wildly exaggerated and largely akin to group self brain washing. It will be pretty mild and none of the doomsday stuff people are saying will eventuate. Some Ef up will eventuate though and people will wail and screech that they were right (even though it will be nothing like all the ‘end is nigh’ BS this subreddit has been spewing over the last 24hrs). The the pendulum will swing back and we’ll be back to another decade or so of ALP after 1 or 2 terms.
+56. Nothing much will happen only the smaller things will change like the 50c public transport but even then I doubt it
+57. For me personally I make more money from the LNP and the ALP. When the LNP are in office nobody in the public service gives a fuck about the budget and I simply rip them off. And people just pay.
+58. I'm not in Queensland, but one positive is the LNP in QLD cant do any worse than Federal Labor. :)
+59. Look, end of the day, theres no massive diference between either party. People will swear nlack and blue one does this or the other does that...Its all brainwashing bullshit. End of the day the idiots alll get together and vote on what they want/dont want. In every other smart state theres an upper house to perform checks and balances on their votes. Qld doesnt have this, thats why we have so many bullshit laws that wouldnt fly in other states. I mean it could benifit things by sometimes speeding change along, but you have to ask yourself, how many multi billion dollar mistakes could have been prevented if we had an upper house. Single chamber legislative goverment... Queeeennnn sssslllANnnndddd diiiiirrrrrrr....droollll.
+60. No greens in is a massive positive
+61. There are no positives. When people show you who they are believe them. Queenslanders deserve every bit of societal destruction coming their way because that is what they voted for.
+62. Wow nice one dumb qlders we are fucked now ..... LNP is in power, start finding a new job....... Remindme!in 1 year
+63. We'll all be able to leave our houses unlocked and the doors/windows wide open, keys in our cars and not need to lock them when shopping.
+64. I have never been disappointed in you QueenSSland
+65. They probably won’t get a majority so if you are a rural Queenslander Katter will probably get the balance of power which means better infrastructure for rural Queensland. Ignore the crazy abortion stuff no one will waste their time on trying to pass that.
+66. As an LNP supporter I ask you this… how old were you when Liberals were in? If you don’t remember then don’t get caught up in the reddit propaganda
+67. What a sore lose, he wouldn't even concede defeat graciously. Time to sack him as ALP leader.
+68. The way you are feeling is the way I feel everytime a Labor government wins state or federally. How I rationalise it is:- Ok, I'm in the minority with my views. Let's see how this lot go with implementing their policies. (Sometimes I lament on the blatant lies in a campaign that are run as it confuses the issues even more but this isn't a useful emotion.) I always wish them well in mind and hope they can implement what it is they want to do as they are just people standing up for what they believe in and theyve earnt their spot and shot at controlling the big game. I then also reset my judgement meter. I put it in the centre and then I just start again. On the difficult losses to accept I just remind myself that there's no way I'd seek or so that job so I'm thankful there are people amongst us willing to play that extremely unattractive game. That's how I deal with day 1 of the other side winning. And being a Qlder, I've been there many times. 😁
+69. I am also extremely disappointed, Crisafulli ran a horrible campaign and committed to little while stating “that’s not the plan”. However this is their budget planning [here](https://amp.abc.net.au/article/104510856) stating that they want to upskill and ensure that their public service workers are capable and to cut jobs from consultancy companies. This has put my mind at ease a little. Edit: This is a direct quote “The LNP has vowed to rein in almost $6.8 billion in spending on consultants if it wins government, flagging it would instead develop public servants’ skills and saying it wants pay packages to be “competitive” with those of private organisations such as KPMG”. I think putting focus into public sector workers and ensuring that the cream of the crop won’t run off to private is a very good idea. Let’s hope they go through with it.
+70. Great win, so happy, less hate more hope.
+71. My only positive thought is 'I'm moving states'. Queensland got what it deserved.
+72. Told myself I'd help people if Labor won like charities and stuff. Told myself I'd finally give into greed and use policies to help me get rich by ripping off people younger than me and paying them as little as I can using multi-year outdated acts and awards if Lnp won. Sorry. I didn't vote for this outcome. All of you did.rhe good news is, I have juuuuuuust enough capital to get the gravy train rolling. Now excuse me whole I go research just exactly how little I can get away with paying my future employees. Lnp policies enable people like this and I got sick of being mad at them so. Switching from Labor to Lnp today. Switching from caring about others to 'fck you I got mine' (Not actually fck you for the purpose of this comment, it's just the terminology, and I'm not being salty. I'm genuinely making the switch of beliefs because I'm getting to old to be mad at things all the time)
+73. I doubt the abortion laws will be wound back as DC would need to resign on principle.
+74. Once they make abortions illegal it might at least help boost the birth rate.
+75. Keeping mining royalties would be nice though. Hopefully they don't privatise and sell off more assets. Build all the casinos that idiot Campbell was trying to do.
+76. Thank you. I needed that reminder today. I’m extremely disappointed we won’t get our big wet battery though.
+77. Let's see how dumb they are to try and roll this back. Surely they're not that stupid, but let's see.
+78. It’ll go. Once they do in with the mining tax, there’ll be no money to fund it and they sure won’t make any effort to fund it another way.
+79. yeah Miles has definitely shifted the conversation on these things
+80. This is a city issue and I think labor just realised that Brisbane red and the rest of the state blue means they can’t look after city dwellers and neglect rural and still win an election. Have a look at the election map and realise that Brisbane city and outliers are the only labor seats.
+81. Wait...what? The last couple months were the ONLY positives from the last term....buying votes... for an election.
+82. They will need to as the LNP are looking to save money.
+83. Man I really hope so
+84. Yeah, the unionists, with much reduced chances of joining the Party in the near future, will be busy.
+85. This statement doesn't make sense does it? Wouldn't they have more power for change with their so called mates in?
+86. Also on the teachers front, while free lunches were probably a net good, they would likely be hell for schools to administer. At least until the system settled done and become entrenched.
+87. Will they though ? Royalties are the exact same as they were before Labor raised them for high coal prices because the coal price has dropped so much, back to royalties being back at their base rate.
+88. Mate, give it 6 months and 50 cent fares gone. Just ask your doctor to sign off on the form for free travel because you forget to tap on and off. Free to apply.
+89. I really hope they only last one term, but we all know how much damage the LNP can do in one term…
+90. Newman 2.0
+91. Right into the ground. Cost of living crisis. Mental health crisis. Housing crisis.... The list goes on. Great job ALP...i don't understand why you got your ass kicked in the election.
+92. Yup.. Right into the ground.
+93. At least they’ll get a free sando behind bars I suppose.
+94. And at least woman can be forced into producing kids into this system as well.
+95. They can enjoy free juvie "food". How fucking great.
+96. Hahaha
+97. I would encourage those who are able, to talk to your P&C and school tuckshops and see if you are able to help a hungry kid in need sometimes. Sucks we have to do it instead of government…. But we can do little bits to help.
+98. Might have to work too
+99. What report is this food insecurity based off, is it really that much of a concern?
+100. I think I lasted seven days under the Newman government.
+101. Yeah my partner started in payroll at qld health 3 months ago. I'm worried for her job.
+102. I interviewed for a job just prior to the Newman slashing. We were told that job was going to be absorbed into the floor staff they needed to cut. It sucked because I wanted the job but necessary to try keep as many nurses on the floor as possible. Still ended up having to drop one nurse from each shift. I feel for nursing and midwifery students in their final year. There won't be the same number of grad positions now despite the desperate need for both.
+103. What was the role?
+104. Gollum is unelectable
+105. Yes have to say Miles did seem to actually care really, gutted.
+106. Well said
+107. That was a long time ago. Things are far more costly and hard now than ever before. A lot of us won’t survive.
+108. Not with the current cost of living and having to already skip meals :(
+109. Beer is liquid bread, it's good for you https://youtu.be/M8JsgB4_m40?si=u_lB-jTs9w1yAFJs
+110. You did get change
+111. Hopefully the rest of the boomer population that voted lnp will be dead by the next election.... with all the cuts that will be coming to the public health sector
+112. How much better did house prices get while ALP were in office? And the environment?
+113. [deleted]
+114. That's the funny thing isn't it? QLD just voted for change. QLD housing became the most unaffordable it has ever been, and by a large margin, while ALP was at the helm? Are you familiar with Stockholm syndrome?
+115. If QLDers cared about others they wouldn't have voted against school lunches and abortions
+116. Except for the hundreds and thousands of southerners who migrated here and priced a lot of good quality Queenslanders out of their home towns, and have contributed to this dog shit outcome of a vote…. If you’re in trouble on the side of the road they’ll run you right the fuck over.
+117. ✌️
+118. i expect the opposite, fewer houses built, more expensive homes.
+119. Go on, move to Victoria then
+120. Will it though? This is one of their vaguest plans. Their plan is to spend 100 days forming a plan, except with no extra money, no new stadium, and not upgrading QSAC. So that leaves.... Back to rebuilding the gabba. The unpopularity of this being the cause of the mess. I think they should have just bit the extra cost and built the Vic Park stadium. Hopefully the libs agree, and quickly. It is a mess they need to fix and I wish them the best in solving it.
+121. I've gotten fucked up really badly in terms of drunk at the moment, and I probably will try to just sleep in sunday. I'm honestly thinking of trying to move to shit nowhere victoria at this point. Anywhere out of Queensland really. I hope you get through this mate. If you need to talk, I'm happy to chat.

@@ -1,0 +1,156 @@
+Your job is to analye a series of Reddit Comments are drawn from sbumissions related to the 2024 Queensland State Election. The comments are drawn from a collection of comments before, during and after the election itself on the 26th of October. The parties that sought election were the Australian Labor Party (ALP), the Liberal National Party (LNP), the Queensland Greens (Greens), One Nation and Katter's Australian Party. The LNP prevailed in the election, with David Crisafulli becoming the new Premier of Queensland. 
+We have identified several key issues that the major parties campaigned on during the 2024 Queensland State Election: Youth Crime (YC), Cost of Living (COL), Health (H), Energy and Infrastructure (EI), and Abortion Laws (AL). Below is a summary of each party's position on these issues:
+Youth Crime (YC):
+- LNP: Advocated for stricter penalties for young offenders, including the 'Adult Crime, Adult Time' policy, proposing that serious offenses committed by youths be met with adult sentencing. 
+- Labor: Focused on rehabilitation and prevention programs, aiming to address the root causes of youth crime through community engagement and support services.
+
+Cost of Living (COL):
+- LNP: Proposed measures such as abolishing stamp duty on new builds for first home buyers and re-establishing the productivity commission to review building industry regulations, aiming to alleviate housing costs. 
+- Labor: Introduced initiatives like 50-cent public transport fares, a $1,000 energy rebate, and free lunches for state primary school students to ease cost-of-living pressures.
+
+Health (H):
+- LNP: Committed $590 million to an 'Easier Access to Health Services Plan,' aiming to reduce ambulance ramping and hire additional healthcare workers. 
+- Labor: Focused on maintaining and expanding healthcare services, addressing hospital capacity issues, and investing in new health infrastructure.
+
+Energy and Infrastructure (EI):
+- LNP: Criticized Labor's Pioneer-Burdekin Pumped Hydro Project as financially unviable and canceled it upon taking office, opting to explore smaller-scale hydro projects instead. 
+- Labor: Proposed large-scale renewable energy projects, including the Pioneer-Burdekin Pumped Hydro Project, to transition towards 80% renewable energy by 2035.
+
+Abortion Laws (AL):
+- LNP: Stated there would be 'no changes' to abortion laws under their government, maintaining the status quo established in 2018. 
+- Labor Party: Supported the existing abortion laws and opposed any attempts to repeal or amend them. Asserts that LNP intend to restrict access to abortion services based on the views of some of their members.
+
+Analyze Reddit comments and code them based on the positions they support or oppose concerning these issues. You will output JSON, so valid values are strings or null. Use the following codes: YC, COL, H, EI, AL. If a comment's position is unclear or does not pertain to these issues, output null.
+
+Secondly identify which party the comment appears to support. Use the party code ALP, LNP, Greens, ON, KAP if this can be determined, otherwise a null value if undetermined.
+
+Output JSON as a list of objects where each object has an "id" (integer) property of the comment id, an "issue" property set to the issue code string (or null value), and a "party" property set to the party code string or null value. Null means JSON null, not a string. Values MUST be quoted, e.g. {"party": "LNP"} unless they are null, e.g. {"party": null}. Comments follow:
+
+1. Greens are conservative, not progressive. They are against for example, new housing development in their inner city areas. They are against people using stuff in the natural environment to better the lives of people. They want everything to stay the same, or go back to what is was eons ago. LNP are progressive, they want the country to progress technologically, they want people to have opportunity to do things. They want to utilise what natural resources the state has. Those things are progressive. Labor are just idiots these days. They want to allow select groups that give them lots of donations to be progressive, while others that do not serve their financial interests, they want to shut them down, thus conservative.
+2. All of these ads about elections and politics had me confused and stuck on "Aren't they both the same?" I was confused because they were both cutting at each other's throats and not bringing up any points about why they should be elected
+3. This is a very biased and dangerous opinion, and not even accurate. There is plenty of evidence easily found that shows both parties have helped the average person and the economy. It’s only when you get self serving leaders that don’t listen or act that everything turns to shit.
+4. My take: Labor are the feel good party, you will have more money but more likely to lose your job, LNP are the feel safe party, you will have less money but more likely to keep your job.
+5. Businesses go bust under Labor and get stronger under LNP.
+6. I know this might be stupid to ask/say but aren't conservatives typically right wing?
+7. Liberal name isn’t deceptive, as they *are* Liberals, in the sense that they are all about free enterprise and economic individualism, but clearly tend towards *neoliberalism*.
+8. Economically liberal I.e. small government I.e. few public services, minimal regulation of the rich/megacorps. I.e. Laissez-faire economics. But really it just means selling public assets to mates, cutting tax for the rich/corporations, companies freely polluting and screwing the public/customers, less funding for public schools, worse public healthcare, worse pay for govt employees like nurses or teachers, anti-worker policies, giving contracts that rip off the tax payer to consultancies. Basically, proving government sucks by sucking at governing. Oh and dumb anti-human policies that just make life worse. Anti-gay marriage, culture war BS, race baiting the public, "hard on crime"/"war on drugs"/"crackdown on dole bludgers" that all follow do exactly what is needed to waste money while increasing crime/causing more drug deaths/stopping people getting jobs. As opposed to socially liberal which is what the US mean by liberal.
+9. Seems fair 'nuff..
+10. My first impression of the greens (personally) was that they hated the police and defence contractors (this had been an opinion after i had seen news of the Melbourne protests) Now I just think they're outspoken conservatives
+11. Political ads are one of the worst sources of information to go by. They prey on fear and hope that no one does any research into it. From both sides here (I am not saying I agree nor disagree, I am just showing how all political parties can be deceptive): ALP ran the ad that crustafelli (leader of LNP in QLD) will be banning abortion. While he voted against legalising abortion and refuses to comment, it’s a very large stretch to say he will ban it outright. *in my non-psychic prediction* they will want to restrict abortion but will probably have to put it through a referendum (where they get everyone in the state to vote on it), which I doubt will pass. LNP ran ads that blamed ALP for the cost of living crisis. This isnt entirely true either. While they could be doing *much* more to solve it, they have put in some action to help such as 50c fares. The real reason for the cost of living crisis is a lack of regulation on price increases for essentials like groceries, rent/housing, fuel etc. (the LNP will not fix this, they will make it worse. This is not opinion this is as per their policy of privatising essential services to “stimulate the economy”)
+12. Focusing on your rival's perceived weaknesses is easier than focusing on your strengths because it means you don't have to actually be good at what matters.
+13. Getting the word correct and contributing anything factual rather than an opinion would help your case. It's 'biased'. Bias is what you show by being biased. Bias is the noun, biased is the adjective. Now please, enlighten us to this bias and danger.
+14. Oh? How did Newman help? Or Borbidge? Or Joh?
+15. dude is living in make believe land
+16. That’s not even remotely true
+17. Yes absolutely, and the LNP are - I may not be remembering this correctly but I think back in the day the liberals were an inner city party that were not so conservative, but never able to form a government on their own so they joined with the nationals which were a ultra conservative rural party, and became a coalition of governments….since then, they have gotten more and more conservative over the years, the liberal part of the name does not hold any meaning at all for the party they are today unfortunately
+18. Correct, that’s the meaning it’s being used in here. “Liberals” can be a variety of positions. You might be served well by reading this Wikipedia article: https://en.wikipedia.org/wiki/Classical_liberalism Liberals in the USA mean social liberalism, generally, and because the USA defaultism infests the world people sometimes get this confused, but in most of the rest of the world liberals mean classic liberalism, and hence are often right of centre. In Australia, that’s the case for the LNP.
+19. The LNP are right wing so that would track.
+20. That makes more sense now
+21. The Liberal name is deceptive because Menzies explicitly did not want the Liberal Party to be a conservative party. "We chose the word 'Liberal' because we want to be a progressive party, **in no way conservative**, in no way reactionary." - Robert Menzies The Liberal Party used to be a small-l liberal party. Now it's a hard right conservative party. The centre-right space the Liberal Party used to hold is now filled by the teals.
+22. That’s full of bias
+23. I do remember that one of the anti-ALP ads mentioned 4 years of crime rates rising, but there had been no statistics or sources Honestly, political ads should be regulated or something
+24. Better?
+25. Politics are so confusing...
+26. Yeah I get what you mean for sure. Both red and blue are moving right, as labor’s traditional stance is now taken by the Greens.
+27. Doesn't a Conservative party already exist?
+28. Please repudiate any untruths. Or is it just my tone and presentation?
+29. Yeah it would be great to not see any more of those Labor smear campaigns.
+30. Liberals are liberals in the sense they want freedom (liberty) from government intervention. Less government taxing you, less government making rules and regulations about your life/business etc. - hence they hate trade unions and distributing public money. It’s got muddy lately where the religion aspect has come into liberal politics and, against their very ethos, they want to make laws to control people (eg gay rights/abortion etc).
+31. Religion shouldn’t be a factor in politics. If you’re serving your religion you aren’t serving your constituents.
+32. Privatization of government services will be in his second term just like Newman planned. First he has to run them into the ground, QPS just made that nice and easy. Next minute, private contract companies are rolling in cash.
+33. He needs someone to arrest all those kids he wants in prison
+34. He's gutting education already. A friend had (past tense) a remote teaching gig they were paid good dollars for to move out of Brisbane for. Out back of Roma. Was told - today - that the contract won't be renewed. It's already happening.
+35. It’s seems he is copying NT LNP government? You think he would learn from their mistakes? But aaahh no…
+36. "adult time, adult crime" spending too much money on police though, sooooooo
+37. He strangely reminds me of Tim the therapist from Home and Away for some reason
+38. lol from New Zealand
+39. Crisafuckwit
+40. Will they be cutting the recruitment drive?
+41. insolvent trading?
+42. Generally speaking LNP are police friendly so would be surprised if cuts occur. A few friends are police, they certainly tell me a lot of administrative tasks and processes could be easily improved.
+43. This promise I expect them to stick to. Hospitals? Not so much. Hiring experts for the public service? Not so much. Keeping 50 cent fares? Not so much. But more cops to help feed kids to the new private prisons that will likely need to be built? Absolutely.
+44. See, a caring son of a sugar cane farmer. With many of his colleagues being doctors, ex police service people, and people with experience running business. Lucky we didn’t vote totalitarian Labor Lawyers and unionists hey?
+45. I'm convinced this subbredit is run by labor staffers.
+46. Yep the Labor clowns left a 200 million blackhole for LNP to fix.
+47. How would privatising the police actually work? Are there any examples of this in other Western countries? I'm genuinely curious.
+48. Hey, I’m a teacher in Queensland. I’d be very surprised if that was at Crisafulli’s direction at this stage. For a few reasons, although the anecdote you’ve given is how I predict it’ll eventuate within 12-24 months. - Staffing levels are very low, its in crisis mode but things have been kept on the down low leading to the election. Schools cannot get enough staff across the state, it’s insane on the ground. However, contracts themselves come and go all the time, but that could be for something like a staff member returning from LWOP or something. - Two days is far too quick for a turn around like that, the LNP is incompetent, I just don’t see them running the numbers and checking the reality this quickly. They only won this election because of mining donations, not intelligent policy. The cuts will come, but you’ll see the early sign closer to the end of November when all contracts are finalised (largely) for 2025. - Crisafulli did email my state school colleagues, and reiterated no cuts to staff. However, the general belief is that (yea you’re right) contract staff, administrative roles, and department/support roles. He may later be able to justify cuts to permanent positions later down the line, but that’d be political suicide.
+49. Yep. Within less than 2 days he's reviewed individual school budgets, made cuts, selected staff and given them notice. Or this was happening anyway. It is a contract.
+50. Fake news, he did not make that decision in 2 days
+51. Shit. He moves fast eh. It's a contract. It wasn't renewed, not some dastardly plan to cut workers. But won't matter, will be the lnp fault if you stub your toe tomorrow.
+52. LNP derangement syndrome on full display.
+53. Governments are a lot of things, efficient and fast is not it.
+54. This is the one I'm watching. Will be very interesting. I don't like the illogical tribalism in here, but I'm not a Crisfulli fan either.
+55. Thank God that we can stop taxing mining. This will help significantly.
+56. To which blackhole are you referring? I mean it can’t be the actual budgetary figures, because that’s currently a surplus.
+57. Look at the federal debt LNP put us in and tell us how good they are at fixing debt.
+58. Someone needs to fix all these bloody surpluses. It's not natural.
+59. Source?
+60. The UK went through this during the GFC. Things like control/communications room operations, custody suites, front counters and private security to augment police patrols were outsourced. In some cases specific roles were reclassified to civilian positions (in some of those cases they mainly recruited ex-police) but in other cases the service was completely outsourced to multinational contractors like Serco and G4S. Of course it didn't work. It ended up costing more and the contractors gamed the system to maximise profits. In one case the private operators of the communications room were found to be making fake 999 emergency calls to themselves to inflate their KPIs. In another case the private security patrols were concentrated in wealthy areas with relatively low crime rates.
+61. They don't necessarily privatise the police. They cut back on the services police provide to communities, and instead contract private companies to provide those services. For example, evidence management, administration, traffic camera operation, custodial services etc. Some of these are probably privatised already. But it would (and should) only be non-frontline services. It *may* save costs, but it could also be more expensive because of the niche requirements QPS would have. On top of the potential security, safety and quality issues arising from privatisation.
+62. Crisifulli early in his election run said he would introduce private ambulance services as the LNP's strategy to combat ramping times. They privatise other services outside of the police.
+63. If done it would be aspects of the police force. It could be community engagement, it could be domestic violence intervention and visits, it could be speed enforcement, administration, training, HR, IT, etc. It will be any area that private companies can offer and make a profit on. The government are left with the tricky and complex or dirty work that is costly and risky. Only the work private companies don't want to l ft behind, and then people point to government agencies as inefficient.
+64. More like leasing all QPS office space from mates rather than buying it outright.
+65. Like the health system nationally over the last 10 years it starts with a budget that can't be met and cuts, then soft contracts to pick up the public facing complaints. The TSA contracts out work on the US with federal oversight. Then the public-private partnerships start. Look up The City of London Corporation. Surveillance and monitoring for the police. Once the administrative and auxiliary services are outsourced all you're left with is beat cops who make no decisions. There are many examples of this in the US. Glad you asked the question, it's not just health and education that will be impacted by a conservative government.
+66. People just making shit up to suit their agenda. As bad as Trump and his supporters.
+67. There's a thing called "red books". Department heads would have prepared two sets, one for each presumptive Premier. Will there be sackings? No. But. Contracts won't be renewed, natural attrition won't be back filled. Options for contracts not taken up. Others have accused me of ridicule saying Crisafulli did all this in mere days. No, he didn't. Department heads fed the new Premier an executive summary, already prepared, and he has said "go for it".
+68. Which means a remote Queensland school is losing ALL of the contracted teachers ..... So, yeah actually. The contracts were known known before the poll, he wins, gone.
+69. It's well known that red books are presented to incoming governments by the bureaucracy on how policies can be immediately implemented, especially financial options. Crusafulli espoused no sackings and he may keep that promise, absolutely. However, the red book probably offered up immediate staff freezes and contract pauses for non essential services. No broken promise, but lots of weasel clauses that will no doubt typify this government given his 11th hour reinterpretation that absolute crime numbers really meant relative crime numbers per 1000 head of population. By the end of this term, less victims will mean managed crime and violence. Channelling former NP premier Sir JBP, you mark my bingo card!!!
+70. No you're clearly wrong. The new premier, has single handedly reviewed contracts of all public departments including police, education, health and all similar, and has personally wet ink signed termination letters of this commentors friend. All within 12 business hours. Incredibly efficient.
+71. If a coffee is indeed muted is it decaf?
+72. Hey, at least I'm not using a throwaway. Lol
+73. I remember seeing a documentary about this where they changed the emergency number to 0118 999 881 999 119 725…….3. It was very confusing.
+74. If cookers think every speed camera is a revenue raising scheme, just wait until a private company is in charge of them
+75. Because privatising non-urgent ambulance services worked so well in Victoria under Kennett?
+76. Probably a stupid question but how would this work? Wouldn’t the private ambulances also be waiting at the hospitals along with all the public ambulances? Wouldn’t it make it worse?
+77. Sure, now disprove what I've said in my reply.
+78. Yeah, I know. I just don't see these specific changes being enacted that quickly based on my own direct experience (a useless anecdote) - but I completely understand what you're saying, and wouldn't say it's impossible by any stretch of the imagination.
+79. Or it was happening anyway. It's coming to the end of the year when these decisions are made.
+80. "It's well known" "he may keep that promise" "the red book probably" "No broken promise" "reinterpretation" So you've really got NFI and have just decided to make it up. As for reinterpretation, that's already been done by the ALP and ABC to average crime across the entire state instead of just the regions to claim there is no crime problem. These are the electorates that threw out the ALP because in those areas, there most certainly is.
+81. Tell me you don't know about education employment practices without telling me you don't know.
+82. Yeah like a blend43 instant coffee, very muted
+83. I believe this was around the time when there was a fire at a Sea Parks?!
+84. Wait till AI is fully integrated into that whole system, yet this is the reality cookers embrace without realisation.
+85. Not to mention, how much revenue that actually loses for the gov too. Because they are revenue raising let's not dispute that fact here 😂
+86. Cookers mostly LOVE private companies over the government. Think how excited they get knowing Elon Musk will help run the United States for example, or how little they care about Musk's Starlink compared to government satellites that are apparently beaming mind control into your brain.
+87. It doesn’t need to be good or work well, it just needs to be profitable for the private market. These people fundamentally think that if someone can make a dollar doing it, government shouldn’t be doing it
+88. How good were they going under Andrews?
+89. How can anyone disprove some random prediction that you’ve just pulled out of thin air? You’re the one making the claim, the onus is on you to have the evidence to back it up.
+90. You’ve gotta provide some evidence of your claims buddy, not the other way around 😂😂😂
+91. I can guarantee this is the case, my wife has had a government job leading a team of educators educating job seekers whom have left school and are still under 18 and she knew that her team was going to be halved going into the next contract period. But don’t let the truth get in the way of a good story.
+92. Geez, there's lots of information and caveats in the reply that I'm struggling to understand the nuance of!!! FFS, crime stats are always interpreted relative to population, especially homicide rates. But Cunnilingus spent 4 years spruiking simple headline rates as the Newscorpse pin-up tart. Stop sooking about underprivileged communities lashing out when they are starved of community resources like health, education, jobs and training and every other white privilege we take for granted. But you guys keep voting conservative and electing jerkoffs at all levels of politics. Now before you argue that I'm supporting crime, stop there. My point is social breakdown is complex and those with economic power and privilege who deprive marginalised communities of a fair share of resources may one day develop the cognisance of their actions! But no, just go back to locking everyone up and not addressing the first principles issues leading to the underlying drivers of crime.
+93. Tell me that you've actually worked above director level in the APS in a parliamentary triangle department and know what the fuck actually happens in the big league and not some redneck boondock swampland being eaten by Katter crocodiles! I'd put my time at Treasury and Finance up against any gronk pissant role you've ever held. Tell me you actually understand how full and part time permanent roles around all of the states have fallen victim to casualisation and insecure roles!! No ho back to sleep and wait for the sun to come up and the electricity turns on!!!
+94. I'm a dirty chai kinda girl.
+95. And that time the Internet got destroyed.
+96. Would of been far worse if it wasn't under andrews.
+97. Also covid and that …
+98. A small family of jammie dodgers live on Neptune (and they’re nasty fuckers). Prove me wrong.
+99. Yep. My wife is on the typical term by term contract as a teacher also. No guarantees. 3 different schools this year (specialist teacher). QLD education is rooted the way they do recruitment and poor retention and continuity.
+100. Oh, you're another one of those who think making up clever insults for names makes you smart. Jesus wept.
+101. "I'd put my time at Treasury and Finance" Oh that explains things. It's your fault. I wouldn't be proud of your work. Some of us actually put our own money on the line to make an income instead of pissing away the neverending supply of taxpayer money. I'm quite secure in my abilities and accomplishments (of which you know nothing), and don't feel the need to challenge others on the Internet to a careers pissing contest. I also don't live in North Queensland, though I sure they are heartily sick of paying taxes to subsidise your mistakes.
+102. Where is she teaching that term by term contracts is common?? I've taught at 4 schools across 3 regions and never seen someone taking a contract like that. I absolutely wouldn't call it typical
+103. God botherer uhhhhhhh!!! FFS, citing a document written hundreds of years after the event by clerics who lacked first hand knowledge of any of it! And pray tell, is that the white Jesus that is the present stereotype or the Arab looking one that fits the geopolitical time period? 🤣
+104. LMAO. A classic reply of a no hoper. Blame Canberra and anyone that's worked there. I'd guarantee that any youth trainee has more nous than the mindless trope nincompoop nonsense you have extolled. There was only ever one problem with the Brisbane line. It didn't sacrifice enough deadheads and peanuts!
+105. Specialist teacher. Primary music. Most of them around here do. And it's a mix of 0.4 to 0.8 FTE as well. Quite rare to get a fulltime or permanent FTE. Even if you add up all the music teachers there might be 3 FTE at a school. For some reason they split that across multiple part time contract FTE to make sure no-one is happy and no-one has security. And it doesn't make sense for timetabling or year levels either.
+106. Yet another attempt at smart insults, and failing, proving *"There is a profound sense of self unawareness* that afflicts people who suffer from the smartest person in the room syndrome." You seem to be quick with the insults and name calling, not so quick to understand the opinions of the unwashed masses in your adopted State.
+107. Oh damn! I didn't realise our music colleagues get shafted so hard! That's a disgrace, honestly.
+108. Unfortunately evidence based guidelines and the LNP don't mix. They seem to be allergic to peer-reviewed evidence but very receptive to Sky 'news' rage porn.
+109. LNP aren’t known for “evidence based policy”
+110. "Haha, science? No, we don't do that here" - Liberals
+111. Experts in their field using evidence based advice has NEVER persuaded a conservative to do anything that is against their world view or philosophy. Won't work here either.
+112. They won't
+113. So will John Paul Langbroek actually take responsibility for the deaths in schoolies if he and the LNP repeal drug testing?
+114. Narrator - "They didn't"
+115. Let’s hope the new government surprises us and prioritizes health over outdated narrativess
+116. Not a chance...QLD just gave the LNP the 'mandate' to go fuck with science and common sense...the LNP born-to-rule mindset will take over very quickly.
+117. Yeah, we're gonna test em, and then lock em up! /chortles in LNP
+118. You know that's not going to happen. They push the narrative that drugs are bad and that people doing them are also bad. Maybe ask the Leader of the Oppositions son what he thinks? The sad thing is that harm minimisation is proven effective, you can't stop people doing it, but encouraging them not to do drugs and saving lives at the same time is a no-brainer.
+119. Our science is religion
+120. LNP don't listen to doctors. What the hell do doctors know about profiteering? The doctors are idiots who talk about lives over profit. Next.
+121. But where's the potential for punishing consequences in that? The LNP needs their punishment fox!
+122. Harm minimisation and the liberals go together about as well as oil and water .
+123. The lnp are the scientific gurus no need for real scientists
+124. Sorry no. We need young white kids to die so we can blame the minorities for selling drugs.
+125. Why ? They should stick to politics as it’s broken beyond belief !!
+126. I really really hope all pill testing continues. Timing could not be worse.. we have never found as much unexpected synthetic opiates in drugs as we have now. People WILL die, and this government will be held directly responsible..
+127. Anyone want to chat about the Human Rights Act and the role of the commissioner re this?
+128. Health experts vs moral crusaders... WHO WILL WIN 🏆

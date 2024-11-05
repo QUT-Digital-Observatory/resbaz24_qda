@@ -1,0 +1,160 @@
+Your job is to analye a series of Reddit Comments are drawn from sbumissions related to the 2024 Queensland State Election. The comments are drawn from a collection of comments before, during and after the election itself on the 26th of October. The parties that sought election were the Australian Labor Party (ALP), the Liberal National Party (LNP), the Queensland Greens (Greens), One Nation and Katter's Australian Party. The LNP prevailed in the election, with David Crisafulli becoming the new Premier of Queensland. 
+We have identified several key issues that the major parties campaigned on during the 2024 Queensland State Election: Youth Crime (YC), Cost of Living (COL), Health (H), Energy and Infrastructure (EI), and Abortion Laws (AL). Below is a summary of each party's position on these issues:
+Youth Crime (YC):
+- LNP: Advocated for stricter penalties for young offenders, including the 'Adult Crime, Adult Time' policy, proposing that serious offenses committed by youths be met with adult sentencing. 
+- Labor: Focused on rehabilitation and prevention programs, aiming to address the root causes of youth crime through community engagement and support services.
+
+Cost of Living (COL):
+- LNP: Proposed measures such as abolishing stamp duty on new builds for first home buyers and re-establishing the productivity commission to review building industry regulations, aiming to alleviate housing costs. 
+- Labor: Introduced initiatives like 50-cent public transport fares, a $1,000 energy rebate, and free lunches for state primary school students to ease cost-of-living pressures.
+
+Health (H):
+- LNP: Committed $590 million to an 'Easier Access to Health Services Plan,' aiming to reduce ambulance ramping and hire additional healthcare workers. 
+- Labor: Focused on maintaining and expanding healthcare services, addressing hospital capacity issues, and investing in new health infrastructure.
+
+Energy and Infrastructure (EI):
+- LNP: Criticized Labor's Pioneer-Burdekin Pumped Hydro Project as financially unviable and canceled it upon taking office, opting to explore smaller-scale hydro projects instead. 
+- Labor: Proposed large-scale renewable energy projects, including the Pioneer-Burdekin Pumped Hydro Project, to transition towards 80% renewable energy by 2035.
+
+Abortion Laws (AL):
+- LNP: Stated there would be 'no changes' to abortion laws under their government, maintaining the status quo established in 2018. 
+- Labor Party: Supported the existing abortion laws and opposed any attempts to repeal or amend them. Asserts that LNP intend to restrict access to abortion services based on the views of some of their members.
+
+Analyze Reddit comments and code them based on the positions they support or oppose concerning these issues. You will output JSON, so valid values are strings or null. Use the following codes: YC, COL, H, EI, AL. If a comment's position is unclear or does not pertain to these issues, output null.
+
+Secondly identify which party the comment appears to support. Use the party code ALP, LNP, Greens, ON, KAP if this can be determined, otherwise a null value if undetermined.
+
+Output JSON as a list of objects where each object has an "id" (integer) property of the comment id, an "issue" property set to the issue code string (or null value), and a "party" property set to the party code string or null value. Null means JSON null, not a string. Values MUST be quoted, e.g. {"party": "LNP"} unless they are null, e.g. {"party": null}. Comments follow:
+
+1. Cairns and Townsville both have public transport. So does Mackay (not sure if that's really north, maybe central), and a few other places as well.
+2. You do realise public transport exists outside of SEQ right?
+3. you don't have to personally benefit from something as a reason to support it
+4. Central Queensland, its not the same
+5. Tbf, the LNP have been pretty happy to break promises before
+6. You know full well they're lying about the 50c fares and coal royalties. They promised not to gut the public sector last time, promised to protect farmers too, so they cut 14000 public servants and decimated farmland with coal mines.
+7. Good factual comment
+8. You'll find out in 4 years dw
+9. Don't need luck lol, that's just how it goes in Queensland. Enjoy the 4 years while you have them champ
+10. ALP only introduced compulsory preferences in 2016, because it benefited them politically. Previous to the Liberals and Nationals combining to make the LNP, conservative votes would be split between the two parties in many seats. So optional preferences hurt the conservatives if their voter base didn't choose to list their preferences. Since the LNP was formed, optional preferences were no longer a benefit to ALP. And ALP was also aware that they are likely to benefit further from getting Greens preferences, so they made preferences compulsory.
+11. No. They want to remove it full stop. So u will vote for one party who u want in and that's it. No preferences
+12. Nice bait
+13. COVID was a once in a life time phenomenon compounded by so much public misinformation. As a nurse who had to nurse through the pandemic, she did a good job. We almost needed to just let it rip and have more people die, to actually show this. The only reason we didnt have USA numbers was because she essentially fucked herself over politically to save lives. just my opinion. Same with the floods. She had to deal with so much more compared to her opposition. The big head? Yeah. She shouldn't have gone to all those parties and ritzy gatherings post when most of us were attempting to financially recover, 100% agree there!
+14. >Rockhampton Base also serves out in the central west, if they get sick or injured there and the local medical centres can't fix it, off to Rocky they go. Doesn't Emerald have a hospital? Sure, it probably doesn't do everything, either, but it must handle some things, otherwise why would it exist? >Even if Yeppoon hospital were only half the size of Rocky Base Which is a bit different to suggesting it should be basically a duplicate of Rocky.
+15. > your goal is to get people out of the SE corner which is what we need to do. Why?
+16. >It’s also not inefficient Clearly, you don't understand the concept of efficiency.
+17. And it's pretty clear you don't understand that having two identical hospitals 40 km apart serving a population of < 300k people is incredibly inefficient, yet here we are.
+18. There are limited resources available, and transport costs will be substantial for people living in remote areas. What are you going to sacrifice funding instead? If someone with cancer costs $30k to treat, but someone in a remote area costs that $30k, plus $30k.in transport costs, where are you taking that $30k from? That's either $15k that could go to both people for better treatment and aftercare, or it's a third person's treatment costs. These are trade-offs that have to be made. So where do you draw the line of when ancillary costs to deliver a treatment are too high?
+19. The reason these seats aren't marginal is that Labor hasn't campaigned in them, don't get me wrong I see what you mean with the resource issue, it's why I'm not too peeved they don't campaign here. But the losses in the regions are only going to get worse if they don't.
+20. That’s literally not true all of Townsville and Cairns were labor MPs until this election. If you look at the results they are all marginal wins to the LNP with labor being the next largest voting choice. so if they had bothered to campaign in those areas they potentially wouldn’t have lost. Literally all they had to do is say there’s a youth crime epidemic and we need to do better and they’d have had a chance.
+21. And unfortunately LNP got more campaign and resources funding than every other party combined
+22. I can’t wait to see how many primary votes LNP get across the state. Bet it’s less than 50%
+23. QLD was on track for a renewable switch over. Crisafulli has promised coal fire power station will run indefinitely under his watch. Companies will see that as an indication not to invest profits into renewable storage, which we all desperately need. Therefore we have 4 years of little to no investment in renewables. That puts us at 2028. If the LNP lose and ALP are reelected. We've lost those 4 years of growth in the renewable sector. BTW. Why when LNP voters talk about youth crime. They always expect the State to fix the issue, with law enforcement. Meaning more police, tougher laws, longer sentences. Why don't they ever talk about the **parents** of these youth offenders. Or social services, outreach programs, after school programs, community programs, education. Its always lock the kids up. How about we start locking these parents up, for failing to monitor and correct their child's behaviour.
+24. Key words 'they finally get out and you are no longer running the state'... They already cashed their cheques, they don't give a fuck
+25. Hinchinbrook has a very solid local sitting in that seat though. Nick will be hard to unseat.
+26. So katter won ur electorate 😬 I fear one nation will be ur next step then if u are just cycling till something is done💩😬
+27. I have been through all of those idiots as well and one of the many reasons why I hate LNP. 😂😂😂 At the time I thought Howard brought in some ok things but I was only just learning about politics then. IV only been in QLD for 6 years at the start of next year though so I can't say the same for Joh. But IV had enough experiences to know what to expect 🤦
+28. There are disused rail corridors everywhere, I'd support them being rebuilt for commuters and holidaymakers. Not everyone can drive, like the elderly and disabled, and better public transport in the regions would improve independence and personal freedoms for these people.
+29. Usually they do, and they're located at the pub...
+30. And they are inaccessible, unreliable and at times, unsafe in some of those areas. 50c fares have changed nothing for regional areas.
+31. I tried using it a few times in Tville. It doesn't go to my suburb, so one time I had to switch to a cab later anyway another time it didn't arrive and third time there were 20 minute walk from the nearest stop to my destination. Than you very much.
+32. Every regional town above 1,000 people has a bus service, even if it's a shitty one. The press explicitly said the 50c fares were statewide, so I was happy it would increase usage and therefore potentially increase funding for it in the regions.
+33. Yeh it does. But it sucks arse.
+34. Barely. And the percentage of people who use it is negligible.
+35. Your right but why would I want to fund something that only a fraction of the state benefits from?
+36. This will be the thing to watch, either they try to play the long game and stick with their promises. Or do they hit a point where they realise their chances of winning consecutive elections is unrealistic and they just go for broke and break every promise and push as much through while they have the chance.
+37. Hey if they lie they’re gonna get absolutely reemed at the next election. I’m kind of hoping they reneg on their promises, it’ll make campaigning in 4 years time so much easier to secure another decade of Labor.
+38. Emerald hospital has 37 beds, that's not enough. Rockhampton has 300, which still isn't enough for a town of 80,000 people, plus surrounding localities. I think equalising the access and quality of medical care in every regional centre would be money well spent.
+39. Because we need to disperse the population. There is nowhere left for people to move to.
+40. They don't need to be identical, but sure dude. It sure is efficient having them be overcapacity as it stands. No way to improve that purely because of their location lol. Better to leave them as is, spend way more money on a new facility from scratch in a more remote location with less population growth because someone from Brisbane doesn't understand the nuances of a HHS the size of CQ.
+41. Labor found $220 million to build Wellcamp
+42. Yep, it is a chicken and egg problem. They also don't campaign much at all in secure seats either. You pretty much get ingnored by both parties if they think the seat is completely safe.
+43. At least for places like Maranoa there is a tribal aspect to it, even if Labor gave $50 cow rebates and free-for-all logging, they would vote LNP.
+44. >Many regional QLD I didn't say all. If Labor didn't campaign in Cairns or Townsville then they deserved what they got.
+45. LNP usually always win the primary votes, and get absolutely flogged on the preferences
+46. In my area it's kids in care. The fosters can't do shit to discipline and it's pretty bad. But it's literally 1 kid, maybe ropes a couple others every now and again.... But I do agree with everything u said. No1 really wants to be a cop here in QLD ever since the last LNP gov lol so good luck to them. But yes, more presence has also been called for here but it was also pretty overwhelmingly a labor win here
+47. As would I. But I don't think heavy rail is appropriate for all uses.. it used to be that rail was the fastest efficient way of moving more than half a dozen people, but today I feel like it's really overkill and cost prohibitive for many areas, which reduces the potential frequency of such services. It's also really only part of the issue, being inter-town transit, if the town itself doesn't have any PT, a train in/out is less urgent. But focusing on disused rail corridors.. West/Northwest of Brisbane used to have railways linking all the towns, Brisbane's housing sector would likely look very different today if there were active lines in place still. Some of them are now looking at being rebuilt (Beaudesert/Ripley areas of Ipswich for example)
+48. Last I heard the fed govtment is planning to use those railway corridors to expand the freight/logistic network. It was all big talk when I was working logistics literally only a couple years ago. Idea is basically to provide a quicker transport services and take pressure of road trains.
+49. And yet as someone who often has to take it, slashing the price by ~80% has been great for my back pocket.
+50. They deserve to get reamed, but sadly Murdoch will be there to kiss the wound better.
+51. Brisbane and south east Queensland are not occupied to the point of not being able to fit any more people there. Loads of regions and cities have much much denser populations. Essentially, you build up a bit.
+52. This person is an idiot. The biggest issue is specialists not wanting to work in regional areas. There are attempts to improve this, but the issue has very little to do with patient transport costs
+53. Yeah, feels like complacency of both the public and the parties is the second biggest vulnerability of our democracy.
+54. Which, I understand, happened in Mackay & Rockhampton?
+55. Japan wants a word. Shinkansen is super energy efficient for the amount it's used and it's output.
+56. Specialists not being in regional areas is the same problem. You either need to move the patients to the specialists, which is a transport issue, or put the specialists there which would usually require paying them more. If you put the specialists in remote areas then both the equipment and the specialists themselves will be underutilised because there just aren't enough patients who need their treatment. Ultimately it's all a trade-off. But at some point you have to confront the fact that people living remotely don't have the same access to medicine as people living in a city, and that that isn't really inherently unfair.
+57. They're impressive indeed, but the biggest efficiencies are when run in a controlled environment (tunnels) at cruise speed, and would be horribly inefficient on a per person basis if it was run at low utilisation rates, or over short distances (accelerating is where the majority of the energy is going to go) That's all assumptions on my part, I don't know the actual numbers, only that large systems like that are measured in peak efficiency in best case scenarios.
+58. I'm guessing you don't work in healthcare, nor have any experience in anything remotely related. It's not the same problem *at all*. Specialists and equipment are absolutely not going to be underutilised in regional areas, because no one is talking about having a permanent general surgeon in an MMM6/7 area lol. How ridiculous. Have you been to a regional centre, or a hospital in one? Obviously we aren't talking about having more than one specialised burns unit (Royal), or spinal unit (PA) in Queensland, etc units as these would be underutilised in regional areas. But, no, encouraging a few gen surgeons, psychiatrists, cardiologists and GPs to work in regional centres to ensure better regional access, *saving* the system money in the long term because of better outcomes and less delayed/advanced presentations is not only an equitable approach, it's an economic one.
+59. If a spinal treatment patient has to be moved from a remote area to the single spinal treatment centre in Queensland, that has a cost. That cost is a resource. That patient’s outcomes will inherently be worse too, unless you spend even more resources on them. These resources are trade offs. Where do you draw the line?
+60. There's endless cost analysis you can apply comparing natural units such as QALYs, DALYs, patient satisfaction, or economic units, like... Endless. You draw the line where having a specialised unit in a regional area doesn't give anymore advantage to patient outcomes and cost can be incorporated into that assessment. CQ has a stroke team that (last time I heard) didn't even have an onsite neurologist, but they invested in procedures to connect to Brisbane and have local doctors and nurses run it. Yeah, it cost money compared to letting people have bad outcomes from strokes - but it's one of the best performing teams in the state so it's worth every cent. You think you're asking profound questions that are going to magically make us hicks outside of SEQ realise we are dumb fucks for 'choosing' to live elsewhere, and are somehow less deserving of resources. But they're not clever at all. They're room temp IQ shit that show you have no clue what the fuck you're on about lol.
+61. Tip for when 50 cent fares go: If you have any sort of mental impairment, vision impairment, disability etc, then you can apply for the Translink Access Pass for free travel, and it's free to apply. You show it to a station attendant at manned gated stations, and to a driver on buses.
+62. Time is for the rich to get richer again, at our expense.
+63. Campbell Newman Mark 2!
+64. I wonder how this will affect the police service. They ran on being tough on crime which would insinuate to me, more police and resources. But everyone keeps saying the opposite?
+65. Not just public service, the arts too although I’m aware no one really cares about us and public servants are so much more important. I’m absolutely concerned over getting rid of stamp duty and the implementation of land tax. Good luck to us all who will be affected.
+66. I work with apprentices. I can't wait to tell them that this government will cut Free TAFE training for under 25s and they have to pay for their training and then listen for the ensuing "oh.....?" and dumbstruck look.
+67. Aurizon enters the chat. :S
+68. A great shame
+69. Well lets see how much of a fight they want to pick first. If they've learnt nothing from the past which is possible then a CanDo Campbell hubristic sneak attack may happen. They've had bigger victories than this and we've kicked them out in 1 term.
+70. ok but he will only cut the good parts of the public service and magnify the corrupt shit. prepare for Qhealth, QPS and everything that remains to be policy thinktanks for they own jobs and not public benefit or democratic demand. theyve been under every government and now they have the chance to fully legislate for themselves.
+71. The hourly doom and gloom post. This is getting old
+72. "It's been 3 minutes since someone posted some doomer nonsense, better do something about it".
+73. Next someone will post they saw crisafulli eating babies for breakfast…so many unhinged people going nuts before they even get to work.
+74. If I was a bureaucrat, I'd be sweating profusely. Hopefully the new administration sacks the lot of them.
+75. The salty tears in these posts is hilarious, Forest Gump lost, move on
+76. Well one public servant has already gone…
+77. Labor already sold it all. Cant do it twice
+78. Time to get a real job now
+79. Oh dear, another reddit thread whining about democracy when the vote doesn't go their way.
+80. "Hello sir, what is your mental impairment?" "I voted LNP" "Oh, right this way"
+81. >If you have any sort of mental impairment >you can apply for the Translink Access Pass for free travel So all the LNP voters get to go on public transport for free? This explains why they don't care about 50c fairs at all.
+82. Time to amp up the autism
+83. LNP have vowed to keep 50c fares
+84. Bruz 2.0
+85. Campbell-GPT4-Crisafooli LLM build.
+86. *mach
+87. They’ll cut police probably and then leave the tough on crime promise to a judge who will go hard on one youth , then it’s media spread about the promise and delivering on it and that’ll be the end of it. Oh and that media spread will come out as they take a scalpel to health but the media won’t let you know too much about that now will they.
+88. Can you link me to this new land tax thing? I can only find the stamp duty bit.
+89. I'm not too familiar with the arts but I do remember Newman dumped an annual art gallery or something that the government chucked 500 k at a year or something? I remember it not affecting me at the time but still remember him doing something like that.
+90. Arts is and should be first to go in a cost of living crisis
+91. There are no apprenticeships included in the Fee Free TAFE
+92. So much damage can be done in 4 years though. If only the people had a mechanism to trigger an election when the LNP voters realise they made a mistake. I can see buyers remorse in about 6 months, with 4 years of bad debt.
+93. Hourly? Sir this is a Wendy's
+94. Only because of all the things the LNP said they'll do, and their costings that didn't exist for important policy like energy. But yeah, I plan to engage Queenslanders and connect them to the news for the next four years. Sorry. Like, in a couple months, I'll go over how X public service was sold, or Y public servants have been fired etc
+95. Well if he'da let me abort it he couldn't have eaten it...
+96. Maybe the dingo ate your baby?
+97. Anyone at SES or above should have their positions cancelled and be forced to reapply for their job. This is where a lot of the dead wood are.
+98. Hope you’re a multi millionaire property investor already mate. If not, you lose.
+99. What did they sell in the last 10 years?
+100. I guess those police, nurses, teachers, paramedics, doctors, judges, and firefighters don’t have real jobs then. Weird statement.
+101. Enjoy your downvotes :) people are rightfully concerned that a party that has consistently proven itself as a group of con artists has somehow wormed its way back in. However, don’t let that distract you from the fact that the general populace appears to be filled with brainless idiots who would like to see their lives made more difficult apparently.
+102. Lol
+103. How about don’t be a bum and drive your car. Like the many million of us. We don’t give a fuck about a 50cent share
+104. Fuck yeah, ADHD, ASD etc are all valid. I used ADHD and ASD and got through lol
+105. Until the urgent review of finances shows that there is a huge costing blow out on some unspecified thing and it gets cut to make sure mining companies have low royalties
+106. They vow everything its just a call to make themselves look better wait a few months when they make up some bullshit budget review and remove all Labors budgets in one day.
+107. Oh my sweet summer child.
+108. Err no it's mark. Lol. Nothing to do with velocity.
+109. My man, we’re hanging on by a thread but that means there’s just more of us in the job pool competing for what jobs? Lol
+110. Don’t worry, the normal people agree.
+111. Hey. I want to help you on this one. Maybe a website that displays all these information in a non-partisan and easy-to-digest way could avoid the mis and disinformation we've seen.
+112. Genuine question, did he say he's cutting Qld health jobs or is it assumed?
+113. What would you do if you were running the government & were unable to balance the books? Let’s say the govt had income of $100, but expenses were $120 plus you already had $100 debt. How would you think it should be managed, reduce expenditure to less than $100 so you can start paying back the debt, do nothing & keep running up the debt or maybe increase taxes on QLD businesses to grow revenue to say $130.
+114. What we need is early intervention boot camps for dingoes
+115. 😩
+116. Does this suit your narrative? In 2011 Queensland Motorways was sold for $3 billion. SOLD under Labor. The Port of Abbot Point was sold for $1.8 billion. SOLD under Labor. QR National was sold for $4 billion. SOLD under Labor. The Port of Brisbane was sold for $2.2 billion. SOLD under Labor. Forestry Plantations was sold for $600 million. SOLD under Labor.
+117. No it's there fat cat bosses who all need the sack
+118. I drive ~400km a day for work cupcake, sadly i cannot use the 50c fairs, but i do notice the reduced traffic so it makes a big difference and also makes road upgrades and maintenance cheaper thanks less cars on the road, and helps so many others, other than my self.
+119. LNP voter right here 👆
+120. Reddit is so sure all these things are going to happen with 0 evidence. Just give them time to see what they can do and stop catastrophising before they’ve done anything.
+121. If you can see into the future can you please give me next weeks lotto numbers? Thanks mate
+122. I also plan to do this. Full stack developer here.
+123. It is assumed. LNP has a history of "caring more about the debt" and "making the hard choices". Problem is most of those "hard choices" are also "stupid choices" - voluntary resignations for example. Many of the best and brightest in the public service, who either knew they were necessary or knew they could get work elsewhere with their skillsets took MASSIVE redundancies, and some of them were given much higher contracts to keep doing their vital and necessary work. Later the LNP cried poor and fired more workers. They didn't release the costings until after the media blackout. They had a $7 Billion dollar black hole in their budget. No one cares about the QLD economy apparently, or how they're going to pay for it - especially if they completely remove stamp duty for everyone's first home - so nepo babies will be able to buy $5m mansions without paying any tax into the state coffers. How. Are. They. Going. To. Pay. For. It. They can't. And they'll have to cut. We'll probably see it after the federal election though - don't want to hurt Dutton before them, and we'll be well and truly locked into a shit state then. Or not! These are educated guesses, but guesses all the same. But they have released no policy that increases or maintains state revenue, while promising to maintain the same kinds of state government expenditure... I smell bullshit. I smell cuts.
+124. I'd use mining royalties... oh wait
+125. Are you Crissafuli trying to get ideas now that he scammed his way in to a job?
+126. Lunches for dingos
+127. Your first example is from 2011, famously known for being more than ten years ago. When were the others sold? QLD Labor has learned the public opinion since then.
+128. Ahh yes, that’s what happened last time.
+129. One nation :)
+130. They declared their costing had 10 bill of 'savings'... Yeah Can't Do. I didn't know, so I voted no Chrisafooley
+131. I mean, the LNP also admitted to lying about their plan to ban abortions. So the idea that the LNP is both lying about their plans AND planning to lower the quality of life for everyone in Queensland is not by any means a stretch
+132. [deleted]

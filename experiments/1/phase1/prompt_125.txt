@@ -1,0 +1,152 @@
+Your job is to analye a series of Reddit Comments are drawn from sbumissions related to the 2024 Queensland State Election. The comments are drawn from a collection of comments before, during and after the election itself on the 26th of October. The parties that sought election were the Australian Labor Party (ALP), the Liberal National Party (LNP), the Queensland Greens (Greens), One Nation and Katter's Australian Party. The LNP prevailed in the election, with David Crisafulli becoming the new Premier of Queensland. 
+We have identified several key issues that the major parties campaigned on during the 2024 Queensland State Election: Youth Crime (YC), Cost of Living (COL), Health (H), Energy and Infrastructure (EI), and Abortion Laws (AL). Below is a summary of each party's position on these issues:
+Youth Crime (YC):
+- LNP: Advocated for stricter penalties for young offenders, including the 'Adult Crime, Adult Time' policy, proposing that serious offenses committed by youths be met with adult sentencing. 
+- Labor: Focused on rehabilitation and prevention programs, aiming to address the root causes of youth crime through community engagement and support services.
+
+Cost of Living (COL):
+- LNP: Proposed measures such as abolishing stamp duty on new builds for first home buyers and re-establishing the productivity commission to review building industry regulations, aiming to alleviate housing costs. 
+- Labor: Introduced initiatives like 50-cent public transport fares, a $1,000 energy rebate, and free lunches for state primary school students to ease cost-of-living pressures.
+
+Health (H):
+- LNP: Committed $590 million to an 'Easier Access to Health Services Plan,' aiming to reduce ambulance ramping and hire additional healthcare workers. 
+- Labor: Focused on maintaining and expanding healthcare services, addressing hospital capacity issues, and investing in new health infrastructure.
+
+Energy and Infrastructure (EI):
+- LNP: Criticized Labor's Pioneer-Burdekin Pumped Hydro Project as financially unviable and canceled it upon taking office, opting to explore smaller-scale hydro projects instead. 
+- Labor: Proposed large-scale renewable energy projects, including the Pioneer-Burdekin Pumped Hydro Project, to transition towards 80% renewable energy by 2035.
+
+Abortion Laws (AL):
+- LNP: Stated there would be 'no changes' to abortion laws under their government, maintaining the status quo established in 2018. 
+- Labor Party: Supported the existing abortion laws and opposed any attempts to repeal or amend them. Asserts that LNP intend to restrict access to abortion services based on the views of some of their members.
+
+Analyze Reddit comments and code them based on the positions they support or oppose concerning these issues. You will output JSON, so valid values are strings or null. Use the following codes: YC, COL, H, EI, AL. If a comment's position is unclear or does not pertain to these issues, output null.
+
+Secondly identify which party the comment appears to support. Use the party code ALP, LNP, Greens, ON, KAP if this can be determined, otherwise a null value if undetermined.
+
+Output JSON as a list of objects where each object has an "id" (integer) property of the comment id, an "issue" property set to the issue code string (or null value), and a "party" property set to the party code string or null value. Null means JSON null, not a string. Values MUST be quoted, e.g. {"party": "LNP"} unless they are null, e.g. {"party": null}. Comments follow:
+
+1. Didn't the LNP try to make abortion a crime? Anyone who tries that isn't a "relax and breath" situation when they get into power again.
+2. This is the party which will ramp up land clearing and encourage accelerated coal and gas extraction and export. They won't be able to hold back the extreme voices in their party and we'll swing further to the luny right. We have to wait and see how they perform (or play up).
+3. mmm, all the children who are going to be jailed and changed for the worse for life ASAP won't be relaxing. They won't feel that a moderate approach has been taken or that their adult punishment for a minor incident doesn't feel like a military dictatorship, as they're stripped of their fundamental rights. I would bet the farm they'll be abused at these "reset camps" which is the most sickening dystopian term I've heard for a long while. That's going to be a pretty radical change to their lives, that affects them and their families for the rest of their lives. Sanctioned child abuse. Let's all just chill out about that guuuuuys.
+4. Akchewelly, I think they will through, death by a 1000 cuts. Nothing will happen serious now, but undoubtedly we are in the housing problem we are in because of LNP policy federally and some state legislation. I’m sure they will make it worse whilst thinking they are making it better. Past liberal leaders have specifically said they want to make it worse.
+5. This doesn’t apply to anyone that has a career in the LNPs line of sight. Plenty of people have good reason to be worried.
+6. You don't seem to understand how some of the proposed LNP policies can destroy lives. It's all good when you aren't affected
+7. I think this post is disingenuous and belittling of people genuine fears for the state of QLD. I don’t know your personal circumstances, but if you aren’t worried, then the LNP probably isn’t coming for you.
+8. #"#notmypremier" (/s) But hey that's democracy. I'm hopeful that LNP have learned their lesson after Newman and will do better this time. We just have to wait and see.
+9. Calling the Dems left leaning is wild brother 💀
+10. So you don’t consider the rights to medical treatments around fertility and dying with dignity to be human rights? We disagree.
+11. As a gay man I disagree - forgive me if I don't trust the lnp...
+12. Australia doesn't have ' basic human rights' .. Only what is legislated by the Govt of the time. While Australia is a signatory to the UN Charter for Human Rights the LNP in particular has never abided by its agreement.
+13. The ALP is a government that builds, and building takes time and patience and work. It's a hard and thankless job to build a state. The LNP are a party that destroys, and destruction is a quick and simple task. It's easy to be a party of destruction, and the LNP are so damn good at it. They are not the same in any way. Though the ALP is centre left, the LNP have fallen far to the most extreme views. 1 LNP term can destroy 3 ALP terms of work. We have lost so much progress, so much opportunity. That's why we're so collectively upset about this result.
+14. My partner works in a public hospital in women’s health and is currently talking to her union about what her strategies are if termination becomes illegal. All my family works in the public health system. I’m a student teacher currently working in the already massively underfunded state education system. If you don’t know what you’re talking about , do us all a massive fucking favour and shut up.
+15. You have no idea what you are talking about. Sure, even with Qld under LNP control, they still have minority in the federal government. But once they do have majority, conservative hate will screw the country big time. Mark my words, the LNP are now going to further test out how far they can push the legal creepfest envelope in QLD.
+16. Nope. I'm already planning to leave QLD completely, which is sad because I loved living here and it's my home. I just can't bear living here knowing what'll happen with abortion and the tearing up of environmental protections, among a slew of other stuff.
+17. OP, Believe me your wasting your time..
+18. Useless, empty message tbh
+19. I'm Crisafull-of the culture war shit that the LNP are tryna push.
+20. What a stupid comment. People have real reason to be concerned. Crisafulli is Newman mach 2,😡
+21. Nope we're all fucked, I'm going in my bunker. Wait fuck I FORGOT TO DIG IT, ah I'll do it next election
+22. Let's be honest, we're still on the same damned path we have been for decades. Flip, flop, libs, labor, back and forth with no real change - The country is spiralling down the gurgler with the 2 party preferred system. So Libs are in power again, then it'll be Labor, then Libs, then Labor. 2 legs on the same damned beast, slowly lumbering towards the abyss. If you keep doing the same thing, dont expect a different result, that's crazy. The only way to effect actual change is to change the broken political system.
+23. Swings and roundabouts...
+24. Ah so your rights will be untouched, and so everyone should not worry. It doesn’t effect you, so everyone chill, your the main character is this story.
+25. Are you a man, by any chance?
+26. I see you’re too young to remember them taking the plants from our offices under Newman. Even the ones I bought in from home.
+27. Goodbye to your greenspace Brisbane.
+28. This is the state of Joh Bielke-Peterson.
+29. Besides Campbell do we not remember joh bjelke-petersen. The lnp have already done a dictatorship in qld. I’m not saying they will again but that is the LNPs history in this state. I hate when people act like they have the memory of a goldfish.
+30. This is what democracy is, sometimes the other party wins. You'll get a chance of vote them out in 4 years if they do a bad job. OP is right.
+31. Yeah but Crisafooli & bleiji are getting sworn into all the ministries so they can start doibg whatever the hell they want.(what was that Scomo)
+32. Is the LNP far right yet?
+33. But people wanted their 50cent fares - now even cheaper to be beaten or stabbed on public transport!
+34. What's this... common sense on reddit?!! 🤯
+35. You can't miss your renewables targets if you don't have any! Big brain time for the next few years. I mean it was bad enough
+36. As my wife pointed out today after reading the email, it won’t be 10000 cuts in one go, it’ll be non-renewed contracts & suchlike so it’s a trickle not a flood, and it’ll start with something like Cross River Rail which won’t rustle anyone’s feathers (‘look at those high paid managers on a cost blowout project’), and then expand over the rest of the services.
+37. Some people are of colour, queer, women, disabled, or health workers, but thanks for your unneeded optimism!
+38. I don't mean to offend but were you around for the last LNP state government? Have you seen what the first day in parliament of the new Liberal government in the NT was like?
+39. Left wing party in the US? Pull the other one. The US has a centre right wing and right wing party. I’m not sure what lenses you’re wearing mate.
+40. Not gonna lie the reddit tears from left wing fanatics are amazing. So the majority of people voting labor are worried that the gravy train of doing nothing and getting paid in gov jobs are coming to an end.
+41. Can someone explain to this guy when a government doesn't have an upper house or Senate that's it's pretty much a dictatorship in the wrong hands. Then explain to him that qld only has a lower house. Then explain to him if they have the majority in the lower house they can vote for anything they want. Then explain to him some people might be concerned about that and are well within the right to voice their opinions without it seeming like they need to take a breather. All power to those people venting if it makes them feel better. They can take a breather if and when they want or they can keep talking shit about it until they are out of power again. Will only change your day if you want it too perhaps to the point of making a reddit thread about it.
+42. Why does this narrative persist that the usa is left leaning? It is not and never has been! The political establishment and culture is neoliberal with conservative and liberal leanings.
+43. You know, my mum always said to me: “be vigilant with your rights because they were hard fought for and they can all too easily be lost.” I think that applies to all human rights / civil rights. A lot of them didn’t exist within living memory. So I think there’s a balance. Don’t freak out; but also, PAY ATTENTION. Do not let any politician erode your rights.
+44. Ultimately the people of Queensland have spoken - you voted your way but the rest of Queensland voted another. It’s what’s beautiful about democracy - in 4 years we get to run the same experiment again. If Queenslanders want change then, they can have it. The last 24 hours has been nothing but a shit show on Queensland related subreddits of people throwing their toys out the crib. The majority of Queenslanders clearly wanted change….. If you get out of the South East Corner you will find Queenslander have different struggles and don’t care about 50 cent fares
+45. It is what is it... best we can do is just call them out on their shit if it comes to it. Never let politics become your identity, like it is in the US. We're so much better and sensible than that, and we don't judge friends, neighbors, or family on their political choices. In fact it's a private thing better not spoken about in the first place.
+46. Finally someone talking sense rather than the absolute bullshit that people are writing about the election result
+47. [removed]
+48. The sheer amount of vitriol in the comments section just proves my point. The fear mongering, the anxiety about things that have not, or may not even happen, the nastiness that's directed at people who didn't vote in the same way you did, its all so unnecessary. When/If there's an attempt on Abortion Laws, then fair enough. Hell, I'll even come protest with you. But getting yourself worked up over something that has not even happened or may not happen is not healthy. Maybe if you're getting to fired up, take a break from social media for a bit. Today is day 1 of a new government, and so far, life is exactly the same. Until that changes, maybe relax a bit.
+49. I have relatives dotted over the US and for them, shootings isn’t something that keeps them up at night worrying. Yes it happens, but they have bigger fish to fry quite frankly. This bizarre obsession or image some of you have with this “risk” beggars belief. You need to concern yourselves with the shit going on here.
+50. Even if kids are treated as adult crimes, they’ll be out in no time as the laws are too lenient anyway
+51. You don’t recall the Bjelke-Petersen years?
+52. You can tell which party is more heavily supported on reddit post election results.
+53. Wish everyone would calm the fuck down. It’s like they are shipping you off to a concentration camp.
+54. Get off my lawn!
+55. Given that the current top post in this sub is a meme about being surprised by the electron results, it's hard to take the amount of dooming seriously. How little connection to real politics do you have to have to be surprised by the outcome, how can there be any real foundation in the fears of someone who chooses to be in such an insulated echo chamber.
+56. They're both as bad as each other. We just had 10 years of Labor which has turned the state into South Africa and they think a 2 billion free lunch will fix everything.
+57. Every terminally ill person who currently has the right to die with dignity in Queensland also has a reason to be fearful and to be wondering if they need to move, because they don't have time to wait around and find out if the VAD laws get reversed as well. This government can usher in some genuinely scary stuff for people. Take away recently won rights. But we should all just chill out, take no action, let it wash over us. This sort of complacency is dangerous for a country. Just rolling over and letting our governments fuck us. We need to be more like the people of France not USA.
+58. Both my partner and I work in sectors that will have job loses and I'm super scared for our future honestly
+59. This. 100% this.
+60. Hope she doesn't lose her job. Would not trust Crisafoolery and his short sighted magoo treasurer one bit.
+61. I think public servants will be safe this time. It would be political suicide for the LNP to cut the public service. They’re heartless, not stupid. The real cuts are going to come from NGO’s reliant on government funding. Pretty much anything that could be construed as social work will be having massive funding cuts.
+62. Isnt the risk for every public servant? That there job is dependent on their quality of the work and decisions of the govt of the day. In the private sector, your job is dependent on the quality of your work and the market of the day. I hope it works out for you, but I think all people have a repatively similar battle with just different battle lines on the map.
+63. Same If I lose my job I won't be able to pay rent If I can't pay rent I have to terminate my lease early and move back in with my parents I have no other choice OP must be so privileged to say that this election doesn't effect them.
+64. It's great to see someone that actually admits that public service employment is just another form of welfare.
+65. Your wife is not entitled to a job. It’s not welfare. If she gets fired she can go look for work in the private sector.
+66. Boo hoo. Time for the wife to work for a private company then, rather than rely on the public teat. You can’t just expect taxes to be increased all the time just to benefit a select few
+67. [deleted]
+68. but they also won a landslide victory in 2012. They had a bit of challenge this time round, they know if they go full 2012 Newman they'll get booted next election bc it wont take much to get them out of goverment
+69. Once bitten and all that.
+70. Absolutely. I’m deeply sceptical. However, there is a rally against an abortion ban being planned *now*, when there isn’t any move by the LNP to limit or ban abortion yet. I fully support such a rally *when there is such legislation to rally against.* Doing it now is hysteria that is going to work against us when the time actually comes. OP is right. Take a deep breath in and let it out nice and slow. Go about your business as you normally would.
+71. You have a right to be sceptical but not hysterical. Suicide, immediate rioting, leaving the state tomorrow is overreacting and not warranted.
+72. [removed]
+73. Given that the current top post in this sub is a meme about being surprised by the electron results, it's hard to take the amount of dooming seriously. How little connection to real politics do people have to have to be surprised by the outcome, how can there be any real foundation in the fears of someone who chooses to be in such an insulated echo chamber.
+74. pregnant women?
+75. The reef will see more runoff? are you suggesting that an LNP win will result in a la niña phase for 4 years!!
+76. You do realise that there is no way for the government to actually force parents to send children who are not before the courts anywhere? Schools can’t even let kids see the free visiting speech pathologist without parent permission. Family and Child Connect and Intensive Family Support can’t force parents to engage with them. They will need parent permission. And acting like these are going to be anything other than Maroon Dam Outdoor Education Centre is pathetic. Someone needs to try something different and get to high risk kids before they follow their career goal of a cell next to Dad at Arthur Gorrie. What we have been doing isn’t working.
+77. So where have the LNP state that mining royalties are to be scraped? They don't need to scrap the new royalty system as the royalty system is on a sliding scale. When the commodity prices are high there will be high royalties. When the commodity prices are low the royalty price per tonne drops back to traditional levels. Right now the prices have dropped so royalties are at a low point.
+78. hey man, just make sure you shred as much as you can cause we’re moving in Monday. I hear 1 William has some good coffee options
+79. Get another job then? Lil bro acting like he’s stuck in the same job forever
+80. There is one fact about our incoming government. The highest number of Female LNP seats ever in Qld parliament. Over double what there have been for the last 10+ years. surely that will make a difference to the potential policies on women’s health
+81. Use your voice, don’t let these twerps silence you 😊
+82. That's right, upper house removed by the Labor regime of William Forgan Smith. Works a treat don't it?
+83. How very healthy to speak to someone you dont know who has an opinion different to yours.
+84. Bingo
+85. It used to be a very functional state.
+86. I would suggest we were still about 1-2 years from fully repairing the Newman Government damage. I work with people who say their departments still weren't fully recovered from back then to this day.
+87. or terminally ill, or LGBTQ+, or Indigenous. something tells me OP is none of these things!
+88. Sorry what does a 12 year old article in crikey have to do with the new government?
+89. With all due respect, i won't take any political opinion from crikey.com. Is that actually a bipartisan news source?
+90. r/circlejerkaustralia cured my depression for tonight.
+91. Decided to return the favour and check your post history also. Can confirm. We would not get along.
+92. Well said. Pressure and mental health trend together, and 'crime' follows right behind.
+93. I'd be curious to know if the LNP roll back these renewables plans and we can't hit our emissions targets how liable we will be to the Paris agreements. We might penalised by the unition nations with other counties applying tariffs and sanctions until we "clean up our act"
+94. No no didn’t you read the news lol, it was Lab importing US politics, not Lib. 😂
+95. I hope you dont take offence to being the comment i felt strongly to reply to. "Adult time, adult crime" is the biggest load of propaganda i have ever heard. The Youth Justices Act literally states that child detention is the last point of punishment for child offenders. In laymans terms, a child (murder and manslaughter excluded) *must* be dealt with by the provisions of the Youth Justices Act. Therefore, if a child commits an offence (be it, enter premise all the way up to sexual assault), they *must* be dealt with my way of caution first, fine, sespended sentence, parole, then an actual detention. In that order. Let that sink in, currently a child can commit a r@ape and be dealt with by way of caution. So, baring in mind that if a child commits r@pe, they have all of those options before being sent to detention an "adult crime" approach will not be legal, without change in legislation. So, to get to your point, a child being jailed for a "minor incident" is next to impossible. Needless to say, "adult time for adult crime" is hogwash. However, so is the current Youth Justice Act which allows child offenders to get away with serious offences.
+96. Yes, I'm sure the kids breaking and entering homes are stressed about the change in premier 😂 I'm a lifetime ALP voter but get a grip. This sub is really showing its age acting like the sky is going to fall because the Libs got in. We had Libs in Federal government for many years, it was fucked, but it's not the end of the world. And to those hypothetical teen criminals whose lives are about to be ruined, they've got ample time to change their ways and avoid their own legal woes.
+97. [removed]
+98. Wouldn’t the best way to avoid that just be for those kids not to commit crimes? Better for them, better for everyone.
+99. They sure have, just like the current head of the RBA wants the unemployment rate to go up. Its amazing how leaders can say these words and not think that the numbers are people, and those people start counting numbers, ie how much short they will be on their mortgage, rent, food or bills.
+100. If that's your take, then nothing I can say will change your mind. Having concerns and fears is totally fair, but I dont think people should be so venomous and hateful towards people who voted the opposite to them.
+101. Mustn’t live in Queensland then, because otherwise, he is your premier, and there’s nothing you can say for another 4 years to change it
+102. Thank-you! Someone who understands our reliance on sitting governments agreement with legislation to keep our basic rights. Even our freedoms of expression.
+103. Nice, your leaving frees up a house in the market too. Win win. Thanks for your service
+104. 😂😂😂😂
+105. respectfully, what's the alternative?
+106. >The country is spiralling down the gurgler with the 2 party preferred system. Well, you'll like that LNP is going to get rid of it.
+107. Queensland doesn't flip flop. It's been labor for decades with occasionally letting LNP get a single turn they royally stuff it up, every time.
+108. Bingo
+109. Wow that is brutal, gestapo type stuff.
+110. Get out of here with your common sense!
+111. Democracy is not just voting. Real sheep shit.
+112. Yep, in 2012, I had a government job in regional Queensland. Now, this is only my experience (it doesn't make it right or wrong), but in the field I was working in, a large number of senior management were made redundant. Anecdotally, those roles that were made redunant were absolutely bureaucratic bloat and needed to be culled. I totally concede that this was just my personal experience, and I understand yours or others may have been different. So politely, yes, I was around last time the LNP was in government.
+113. People being worried about losing their jobs is a legitimate concern due to the history of the LNP gutting services.
+114. You are right, regionals dont care about 50 cent fares. But they do care about jobs and affordability, and most importantly not defunding government services then centralising them down in SEQ like LNP did last time.
+115. The reason it changed is because some thought we apparently needed the change yet there was nothing wrong before. It’s the classic “they’ve been in too long” stigma and most pre voted based on that to shortly realise what they did and I’d say a lot have not realised until it’s too late. And a lot are upset because it took David being elected to actually announce his plan where ALP announced theirs immediately but was buried in the Queensland Liberal Medias branding of “Adult time Adult crime” so we only saw Liberal crap being washed over our screens.
+116. You’re correct. It was crazy to see this subreddit and r/brisbane react so quickly when the LNP won and go on to call the people of QLD idiots…
+117. Please tell me what planet you are living on because that place sounds great.
+118. I try to keep my personal political bias this round neutral only because i am personally a swing voter, but jesus, people are predicting the end of days. Being confined to political idealogy is no different from being obsessed with a football team, in my opinion. This tribalism is totally unnecessary.
+119. Way to say you have no understanding of the situation.
+120. Reddit leans left, in my opinion.
+121. Have you even been to South Africa? Stop overexaggerating and touch grass.
+122. This. I’ve had friends use the VAD laws and it gave them a dignified end to their pain. I am not a ‘professional protester’ by any stretch of the imagination, but I will campaign hard against any attempt to roll those laws back.
+123. My mother passed from cancer just before VAD became available but towards the end of her life it became something she focused on supporting, despite knowing she would pass before it took effect - writing to MPs, attending town hall type things. Our local member told her story as part of his conscience vote. I was already a supporter of it, but now ensuring it stays in means a lot more to me than it previously did, and I will absolutely take it personally if they go after VAD laws.
+124. I don't have a particularly high opinion of France, but I immensely respect their tradition of whenever the government fucks over the people the people go "Fuck it, Paris burns tonight." We should get used to doing that.

@@ -1,0 +1,135 @@
+Your job is to analye a series of Reddit Comments are drawn from sbumissions related to the 2024 Queensland State Election. The comments are drawn from a collection of comments before, during and after the election itself on the 26th of October. The parties that sought election were the Australian Labor Party (ALP), the Liberal National Party (LNP), the Queensland Greens (Greens), One Nation and Katter's Australian Party. The LNP prevailed in the election, with David Crisafulli becoming the new Premier of Queensland. 
+We have identified several key issues that the major parties campaigned on during the 2024 Queensland State Election: Youth Crime (YC), Cost of Living (COL), Health (H), Energy and Infrastructure (EI), and Abortion Laws (AL). Below is a summary of each party's position on these issues:
+Youth Crime (YC):
+- LNP: Advocated for stricter penalties for young offenders, including the 'Adult Crime, Adult Time' policy, proposing that serious offenses committed by youths be met with adult sentencing. 
+- Labor: Focused on rehabilitation and prevention programs, aiming to address the root causes of youth crime through community engagement and support services.
+
+Cost of Living (COL):
+- LNP: Proposed measures such as abolishing stamp duty on new builds for first home buyers and re-establishing the productivity commission to review building industry regulations, aiming to alleviate housing costs. 
+- Labor: Introduced initiatives like 50-cent public transport fares, a $1,000 energy rebate, and free lunches for state primary school students to ease cost-of-living pressures.
+
+Health (H):
+- LNP: Committed $590 million to an 'Easier Access to Health Services Plan,' aiming to reduce ambulance ramping and hire additional healthcare workers. 
+- Labor: Focused on maintaining and expanding healthcare services, addressing hospital capacity issues, and investing in new health infrastructure.
+
+Energy and Infrastructure (EI):
+- LNP: Criticized Labor's Pioneer-Burdekin Pumped Hydro Project as financially unviable and canceled it upon taking office, opting to explore smaller-scale hydro projects instead. 
+- Labor: Proposed large-scale renewable energy projects, including the Pioneer-Burdekin Pumped Hydro Project, to transition towards 80% renewable energy by 2035.
+
+Abortion Laws (AL):
+- LNP: Stated there would be 'no changes' to abortion laws under their government, maintaining the status quo established in 2018. 
+- Labor Party: Supported the existing abortion laws and opposed any attempts to repeal or amend them. Asserts that LNP intend to restrict access to abortion services based on the views of some of their members.
+
+Analyze Reddit comments and code them based on the positions they support or oppose concerning these issues. You will output JSON, so valid values are strings or null. Use the following codes: YC, COL, H, EI, AL. If a comment's position is unclear or does not pertain to these issues, output null.
+
+Secondly identify which party the comment appears to support. Use the party code ALP, LNP, Greens, ON, KAP if this can be determined, otherwise a null value if undetermined.
+
+Output JSON as a list of objects where each object has an "id" (integer) property of the comment id, an "issue" property set to the issue code string (or null value), and a "party" property set to the party code string or null value. Null means JSON null, not a string. Values MUST be quoted, e.g. {"party": "LNP"} unless they are null, e.g. {"party": null}. Comments follow:
+
+1. This is so disappointing. We've lived in Ipswich 10 years and when Russell lead Div. 4 and was Deputy Mayor, he was such an asset. When we had problems with a new development in our neighbourhood, he came out and met with the area, spoke to each and every one of us and actually actioned our concerns. And every time we've headed to the polling booths, he has been there and has always been ready for a friendly chat. Voters have really shat the bed with this one.
+2. He says he won't be swayed by the other councillors against the mayor. Pull the other one David. It plays Jingle Bells
+3. Ran into him at riverlink, made an effort not to talk, no chance was he getting my vote
+4. Aside from running for every single election in Ipswich for the last 300 years, what’s the issue with the guy?
+5. https://preview.redd.it/4fy6xj6uw7xd1.jpeg?width=1025&format=pjpg&auto=webp&s=cdd0eedd8495c4d0f44f2042511e508220a93d43 I’m not an accomplice!
+6. i don’t know much about him, why is this bad?
+7. Fuck I hate first-past-the-post, it’s an awful way to select leaders.
+8. Oh I love the rain
+9. https://preview.redd.it/k81pqknzd6xd1.jpeg?width=828&format=pjpg&auto=webp&s=84a71a07e1c84416ee481292a706e7922a4e1f36
+10. All the oldies would have votes for him no doubt. Stuck in their ways.
+11. You must have been walking around in a bubble of unreality, Dave was everywhere.
+12. What an absolute crap show the next 4 years will be. No idea what people were thinking.
+13. Yeah. I’m a bit surprised myself. Ugh ugh.
+14. Maybe because he was running against another Andrew (the incumbent) and people got them mixed up.
+15. He was a councillor in 2017 and was sacked as part of the corruption inquiry in 2018. Rumoured to have connections to property developers. Doesn't reside in division 4 (that may be wrong). And is a serial instigator of political rhetoric. On the other hand is a ipswich local through and through and has great background for politics. I personally wouldn't mind if he was actually present in the areas that make up div 4. Like I said. I've met spike a half dozen times and sue twice. Both had time to chat, were able to sympathise and advise on my particular local problems with personal experience and anecdotes. Oh and Martin's "how to vote cards" for this election were being investigated by the ECQ for irregularities - which probably comes from being a serial campaigner. Edit Links: https://www.ccc.qld.gov.au/corruption/outcome/allegations-corruption-related-ipswich-city-council-operation-windage https://www.ipswichtribune.com.au/council/political-comeback-for-former-mayor https://www.ipswichtribune.com.au/ipswich/ecq-to-investigate-invalid-martin-vote-cards
+16. Another dismissed councillor, stole from Bunnings - there’s articles if you Google
+17. Copium
+18. I saw lots of signs in Walloon, thagonna and Rosewood ( my div 4 bubble) but no physical presence. Where did you chat to him?
+19. Cheers mate
+20. Where did I say I had a chat with him?
+21. But he was everywhere right?
+22. Yep.
+23. Where did you see him?
+24. Out in the community. I don't think you can argue he hasn't been out campaigning... Oh wait, you are.
+25. What an insightful and revealing conversation full of good faith, data and insights from another community member. I'm so glad I tried to engage in dialogue with someone of an opposing opinion to better educate myself about the councillor for my division who seems so widely disliked yet secured a large vote without a physical presence in major population centres of the division. I even acknowledged in another comment he has a good background for politics. Like why be insuferable?
+26. I'm not in opposition to your opinion, I thought Russell should have won. Doesn't change the fact I saw Dave out and about in the community. I also saw Georgia Toft, Wendy Bourne, and Russell Milligan. But I honestly saw Dave Martin in more places than any of them
+27. I've seen Chris Cheney 'inthe community' before Doesn't mean he was out listening to people's concerns haha
+28. And I didn't talk to any of them, as I'm sure you are wondering.
+29. Personally, I think donations to political parties should only be able to be made by individuals- not companies, not lobby groups. Any donation over a small amount (say $500) should be on a public record, and donations should be capped per individual at a sensible value.
+30. I kinda wanna donate $1 so the justice party can show something.
+31. Let it never be said these elections are fair when corporations are trying to buy government members (and you know exactly of which party they’re trying)
+32. Have you seen there funding in EVERY election….
+33. I hope every cent of the Blue Bar, goes to waste.
+34. Pls vote Miles..
+35. That’s why there’s 20 LNP placards for every 5 Labor and every 1 Greens, I suppose.
+36. Not really surprising. The Liberal party are just millionaires paid by billionaires to create laws that benefit millionaires and billionaires.
+37. Makes Labor’s performance all the more impressive
+38. Hi Qld Minerals Council here, inexplicably we have misplaced $4,125,260. Last seen in a brown paper bad. If found don't worry about it, we reckon we'll get it back in spades.
+39. can we just round up all the greens people and send to alice springs
+40. What's the one at the top?
+41. i think all political donations should go to a bucket that gets equally shared to all political parties. and any attempt to donate to an individual be treated as a bribe that has corruption investigation charges follow it.
+42. Deliberately missing the unions and alp aligned groups
+43. Happy Labor lost. Bunch of bogans and tradies tide to CFMEU.
+44. Labor/Greens cucks crying I see.
+45. Is that surprising given the IR changes the labor party has implemented with essentially no industry consultation?
+46. Donations shouldn’t be allowed at all. Your success as a political party shouldn’t depend on whether those you’ll benefit have money or not. We also don’t want a US situation in which individuals are being told to donate to their preferred political party for “the survival of your country”. People talk about donating with pride. The politicians work for you. They are already funded, even for political campaigns. We do not want to set up a “pay to play” system where people feel that they need to pay for their preferred political party to have a chance to get in.
+47. I agree. There's just so many ways to evade it. Like the Greens MPs who routinely make $6k donations. There's no way to know how & what those donations actually are. Something needs to be done, but I admit that it's an incredibly complex issue to solve. All eyes will be on South Australia as they attempt to remove money from politics. It'll be a great opportunity to learn from.
+48. That only means so much when they can just run their own propaganda campaigns, like the Queensland Resources Candidates and their "Keep Queensland Competitive" BS.
+49. While you are at it. Put a cap on what the parties can spend on elections. Outlaw coalitions. If your party doesn’t have the asses in seats to form government, then they don’t form government. No teaming up with other parties to the detriment of everyone. Permit conscience voting regardless of party or the bill in question. Way to many are FORCED to vote with the party against their constituents.
+50. I'd agree with that if people on welfare were prohibited from voting if we are against potential conflicts of interest, let's be consistent
+51. Nothing would give me more satisfaction.
+52. Or better yet, vote for your local Ipswich Labor candidate so Milesy gets back in. Ipswich - Jennifer Howard Bundamba - Lance McCallum Ipswich West - Wendy Bourne Jordan - Charis Mullen
+53. Brown paper bag? I didn't know Mick Fuller was in Queensland.
+54. Only if we get a federal Labor majority in both houses. Pretty sure it's going to be an election promise.
+55. LNP.
+56. That's just party funding. Let's not pretend that the LNP didn't have the coal industry funding their aligned campaigns. It takes a special kind of bootlicker to think that workers supporting the party that supports them is the same as being funded by the coal industry. https://preview.redd.it/z4f506nn24xd1.png?width=1026&format=pjpg&auto=webp&s=dedf4d41142e99d60f6d350dbee5a2f92a053c5a
+57. This user would suck Waleed Aly off.
+58. Hint: it's from the coal industry in retaliation for Labor making them pay their fair share.
+59. Except then your preventing those who would otherwise run for government who now no longer have any funds to advertise etc. turning it into a situation in which only those of a richer background can afford to run for government in the first place.
+60. I haven't heard about what's happening in SA, I'll have a look
+61. The greens have some of the most stringent donation laws going around. Not sure why you're throwing stones here..
+62. Just ban political advertising altogether. Although that will never happen, neither of the majority parties would even support the truth in political advertising material
+63. Why would being on welfare mean you shouldn't vote? Most people with children that work are on welfare. Childcare subsidies are welfare.
+64. yes please
+65. Easy fix- Any person or group receiving election funding from an electoral commission over $x cannot receive donations. It can't be "if you get funding no donations" because you only need like 1% of primary votes to get funding for next election but the amount you get is based on number of votes.
+66. Not throwing stones. It's just interesting for a party that constantly talks about transparency to launder the majority of its donations between branches. I'll make a mental note to never ever talk about the Greens donations again, clearly a sensitive topic. 😐
+67. because it's clearly a conflict of interest if you are on welfare, you tend to vote for the party that will keep and potentially extend your welfare benefits so instead of voting what's best for the city/nation, you are voting uniquely for selfish reasons and I don't mean childcare subsidies, since that's a good thing for the country (more babies), I mean unemployed people for any reason / for any amount of time (while they are not generating wealth) you should only vote if you a contributor to society, be it as a businessman, an employee, a student, or a stay at home mum taking care of the next generation, etc. if you are a free rider, you shouldn't enjoy the same rights
+68. Can you provide examples? Greens do not take corporate donations, unlike the two majors, keen to see what you're speaking about exactly
+69. [deleted]
+70. Bro this is the most wild take I’ve heard, kudos
+71. Same could be said about anyone with invested interest in property investors, business owners ECT. Democracy states people get votes no matter what they think or do. It's not possible to make sure people vote for whatever the subjectivity right reasons. What you're suggesting is some ano-capitalist shit. That will definitely lead to a type of feudalism where those whom have means have much higher voting abilities furthering their own interests. Much like what happens with the aging demographic in south Korea.
+72. Freeloaders like the business owners that use donations to sway government policy to get tax breaks, subsidies and preferential treatment to get free money from the tax payer? Or the religious groups that pay zero tax? The state government has absolutely NO say on welfare payments, that is entirely the responsibility of the federal government- so your point is irrelevant
+73. I never said that, good attempt at moving the goal posts though. I said that they talk a lot about transparency but in fact their donations aren't that transparent. Other parties don't harp on about their transparency regarding donations like the Greens do.
+74. yeah I'm popular at parties... no
+75. Absolutely ridiculous right
+76. If you see his previous posts and community involvement, you'll understand
+77. [deleted]
+78. But where do HELP loans put people? Or Trade Support Loans? Is that considered welfare? Cause that’s a lot of people losing their vote. Hell retirees technically wouldn’t be contributing either.
+79. understand I want accountability? looks like most Queenslanders want that as well, bye bye Labor
+80. Um, that's not a gotcha. You suggested I said something I didn't. That's just a desperate attempt to deflect from my statement.
+81. Do NOT vote David Martin. That's all I'll say.
+82. The forums from the election earlier this year are still up (Bremer Radio if I remember correctly) You could watch the division 4 forum, and the mayoral forum to see David Martin. Worth a look if you have the time.
+83. Russell Milligan is the man to vote for.
+84. Check out Russell Milligans Facebook page. He has info and videos there
+85. [https://russellmilligan.com.au/](https://russellmilligan.com.au/)
+86. Russell Milligan all the way. They guy has real world experience in council and was Deputy Mayor last term.
+87. David Martin is real ipswich - once busted stealing from Booval Bunnings. https://www.couriermail.com.au/news/queensland/ipswich/teacher-stole-paint-and-lock/news-story/4e76c8a92a843768c952f1a12edce9bf
+88. Thanks everyone. Voted today ✌️
+89. He has such a punch able face.
+90. As much as I agree that he’s a piece of poo, I hate telling people who to vote for. But yeah please don’t vote for him
+91. Is it the same David Martin who’s running for mayor. Sorry I’m a bit confused :\ but he was running for mayor :s
+92. Yes, and now running in division 4 despite not living here.
+93. Just desperate to get into council any way he can. Serial candidate. Serial loser
+94. That's crazy. Where does he live?
+95. So he lost earlier… hmm interesting. Thank you
+96. What is the backstory on this person?
+97. Damn. Was going to vote for him!
+98. This sign is unauthorised election material. Has anyone reported this guy to the ECQ so they can prosecute?
+99. I don't know his back story, but I did meet him at the council election earlier this year. FWIW, I found him to be a genuinely lovely person, just wanting the best for everyone. He was passionate about actually solving problems.
+100. Kochardy ran for mayor earlier this year. The forums are still available online if you wanted to see him talking about his policies. I think he comes in around the one hour mark. I don’t think he has any social media presence. I think he hails from down Goodna way. He’s no dumbo. Just different. [https://westbremerradio.com/replay-mayoral-forum/](https://westbremerradio.com/replay-mayoral-forum/)
+101. I've come to think of them as a slightly alternative independent candidate whose chronic underfunding means using handmade campaign material. Because it's so rare to see any (and it's always in disrepair or tacked together) I think the joke is that it's like spotting a local artefact.
+102. He’s a serial candidate, a former or current academic, has zero online presence outside of West Bremer Radio debates, and is an old school hippie. Nice as anything, said some really outlandish things that were either cute or hilarious during the mayor’s debate, and I love him
+103. Clearly a victim of 5g vaccines /s
+104. He doesn't come from Goodna, he's my neighbour down the back of Yamanto behind the abattoir. Come drive down Suffield Drive if you want to check out the signs he erected on a neighbours fence and in a cattle paddock, or the black line up the middle of the road where the council had to come and paint over the lines he painted when he tried to bisect a one lane road.
+105. Serial is a big unfair. David Milne is more that category.
+106. Thanks for the info!
+107. He sounds like fun. Does he have a gun license?

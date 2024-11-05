@@ -1,0 +1,190 @@
+Your job is to analye a series of Reddit Comments are drawn from sbumissions related to the 2024 Queensland State Election. The comments are drawn from a collection of comments before, during and after the election itself on the 26th of October. The parties that sought election were the Australian Labor Party (ALP), the Liberal National Party (LNP), the Queensland Greens (Greens), One Nation and Katter's Australian Party. The LNP prevailed in the election, with David Crisafulli becoming the new Premier of Queensland. 
+We have identified several key issues that the major parties campaigned on during the 2024 Queensland State Election: Youth Crime (YC), Cost of Living (COL), Health (H), Energy and Infrastructure (EI), and Abortion Laws (AL). Below is a summary of each party's position on these issues:
+Youth Crime (YC):
+- LNP: Advocated for stricter penalties for young offenders, including the 'Adult Crime, Adult Time' policy, proposing that serious offenses committed by youths be met with adult sentencing. 
+- Labor: Focused on rehabilitation and prevention programs, aiming to address the root causes of youth crime through community engagement and support services.
+
+Cost of Living (COL):
+- LNP: Proposed measures such as abolishing stamp duty on new builds for first home buyers and re-establishing the productivity commission to review building industry regulations, aiming to alleviate housing costs. 
+- Labor: Introduced initiatives like 50-cent public transport fares, a $1,000 energy rebate, and free lunches for state primary school students to ease cost-of-living pressures.
+
+Health (H):
+- LNP: Committed $590 million to an 'Easier Access to Health Services Plan,' aiming to reduce ambulance ramping and hire additional healthcare workers. 
+- Labor: Focused on maintaining and expanding healthcare services, addressing hospital capacity issues, and investing in new health infrastructure.
+
+Energy and Infrastructure (EI):
+- LNP: Criticized Labor's Pioneer-Burdekin Pumped Hydro Project as financially unviable and canceled it upon taking office, opting to explore smaller-scale hydro projects instead. 
+- Labor: Proposed large-scale renewable energy projects, including the Pioneer-Burdekin Pumped Hydro Project, to transition towards 80% renewable energy by 2035.
+
+Abortion Laws (AL):
+- LNP: Stated there would be 'no changes' to abortion laws under their government, maintaining the status quo established in 2018. 
+- Labor Party: Supported the existing abortion laws and opposed any attempts to repeal or amend them. Asserts that LNP intend to restrict access to abortion services based on the views of some of their members.
+
+Analyze Reddit comments and code them based on the positions they support or oppose concerning these issues. You will output JSON, so valid values are strings or null. Use the following codes: YC, COL, H, EI, AL. If a comment's position is unclear or does not pertain to these issues, output null.
+
+Secondly identify which party the comment appears to support. Use the party code ALP, LNP, Greens, ON, KAP if this can be determined, otherwise a null value if undetermined.
+
+Output JSON as a list of objects where each object has an "id" (integer) property of the comment id, an "issue" property set to the issue code string (or null value), and a "party" property set to the party code string or null value. Null means JSON null, not a string. Values MUST be quoted, e.g. {"party": "LNP"} unless they are null, e.g. {"party": null}. Comments follow:
+
+1. To be fair, Labor did exactly the same thing when they were up in the two party preferred ranking. Then they changed it back when they needed preferences. Chrisafuli is only getting one term, and that's if no one in the LNP knifes him.
+2. We only stop being a democracy at the state level if FPTP is instated, and that requires a statewide referendum
+3. Piss off
+4. If the parents didn't have to work 3 jobs, maybe they would have the time to. I'm sure you would follow around your 16-17 year olds 24/7, they would love that.
+5. Well he did say his mates like to fare-dodge, sound like crims to me.
+6. That is voting on your own though right? If that's how you choose it's fine. I generally too, vote for the greater good for all
+7. Cry harder
+8. bahaaaa did you think the $1000 electricity subsidy would continue.
+9. They are a 1 hour old account. Downvote the cooker and move on.
+10. This person was raised in the internet era, they have everything they need at their fingertips to obtain a comprehensive understanding of every party's platform, and yet they make some poorly spelled & punctuated ramble vaguely questioning the policies that have been front & centre in the media for weeks. The fact you have to ask speaks volumes, "mate".
+11. Sounds good to me. The whole point is achieving the best outcome for the electorate, not cheering on your "team" because of the lure of tribalism.
+12. That's the whole point, genius...
+13. Welcome to the internet.
+14. sure thats pretty much the ACT right now. But you can always vote for independents and minor parties first then preference the major parties lower down. The only way to really tell both major parties they are bad is for people to stop putting a number 1 next to them.
+15. What if there’s more than one party? Holy crap there is! Well would you look at that
+16. That’s when you vote for a third party but always preference the less bad one
+17. There’s Fusion
+18. okay now 87 is beyond my imagination lol. I keep a Journal so ill write something about this and come back in 70 years to reflect.
+19. you're making me feel real young now. You got any good advice or quotes for me lol?
+20. Congrats! Do you feel 70?
+21. Are you saying that comment is factually incorrect?
+22. If we don’t learn from history we’re doomed to repeat it.
+23. Now you’re obviously speaking shit. Malcolm Turnbull was PM at the time. Penny Wong didn’t vote against it. Abbott actually didn’t even vote, he abstained despite the nation clearly wanting it. https://www.abc.net.au/news/2017-12-08/same-sex-marriage-who-didnt-vote/9240584 That’s why you don’t listen to tories glorifying swing voting.
+24. I’m sure Abbot would be so happy to hear you crediting him with the legislation of gay marriage 😂
+25. Yeah because it's a dumb one. I've supported an AFL team since I was a kid... if they're playing another team, am I just supposed to take my gear off and start supporting the other side "because don't be loyal to one team"? It's a stupid analogy, even if you think it isn't. In the words of you: sit down.
+26. He's either lying through his teeth or is going to fund it by gutting departments and ministries since he's getting rid of the mining royalties that pay for it.
+27. I’ll take the bet. How much do you want to put on it?
+28. I’ll say the same thing I’m saying to others. I’ll take any and all bets on this for any amount right now. The bet is that no anti abortion bill is passed into legislation in this state, in this LNP government.
+29. Like now ?
+30. Exactly hahaha
+31. People throw shit on Canberra, but having no Murdoch media impact is one of the best things about living in the ACT. We've had a Labor government for 23 years and they've just been re-elected for another term. It's extremely difficult for the Liberals to get elected here because a) educated population and b) there is no megaphone for their bullshit. The conservative media is a cancer in this country.
+32. Like exactly what you just said - there is an issue in other areas of Queensland.
+33. It's falling everywhere. Nine/Courier Mail/Sky News/talk back radio just drill the message to the contrary.
+34. Which does nothing but weaken our democracy and bring it one step closer to the disaster that is the US. First past the post is a terrible way to have people vote
+35. Optional Preferential Voting is in reality, a pseudo FPTP system. People can’t be fucked spending more than 3 seconds in a booth every 4 years. It’s worse than you think.
+36. They need to work 3 jobs, because of the cost of everything….. Which government has been in power for like the last 15 out of 18 years? It wasn’t the LNP.
+37. 😂😂😂
+38. further privatisation of the energy grid would do nothing but increase prices. Also the ALP actually did something about expanding our renewable energy generation which would bring prices down.
+39. Well considering that you clearly have such a comprehensive understanding of… seemingly everything. It seems like he’s chosen a solid place to ask his question hey? You gonna answer him or just keep whining dude?
+40. Sorry if my spelling was incorrect i was on a bus and was typing in a rush, also im not exactly caught up on the politics, witch is why i made this post (the last election was when I was 13).
+41. Yes if we were wanting to achieve the best outcome for the electorate, No one should be voting for the LNP.
+42. The whole point is insane and a recipe for corruption
+43. You sound like a pleasant individual.
+44. [removed]
+45. Thanks for the tip. Cool looking web site. Some interesting ideas but the people need to work on their presentation skills
+46. Alright be sure to reply back, I’ll be waiting (likely dead but hey)
+47. I’m only halfway, but my 2c: enjoy your freedom before you ever have kids.
+48. It’s an opinion (not “factually” correct or incorrect, just an opinion), which everyone is entitled to, and contributes nothing to the context of this thread. Sit down
+49. If you don’t look in the mirror and take a moment to consider your own actions you won’t learn shit to begin with. How about start there?
+50. [deleted]
+51. [deleted]
+52. He abstained from the vote. He wasn’t PM at the time. Penny Wong obviously didn’t vote no to it.
+53. I imagine you think it’s a stupid analogy because you’ve got it entirely backwards. Cheers anyway
+54. They don't have to win re-election for another four years and by then everyone will have forgotten to be angry.
+55. Do you cunts understand that the shit the LNP did last time they were in power still impacts us to this day??
+56. Public health never recovered from the damage.
+57. Correction. You have had a labor/greens coalition for 14 years. The most stable and effective government in Australia.
+58. Cost of living is a result of macroeconomic conditions, which are set at the federal level.
+59. Cost of living isn't fully under government control. Unless you can explain why there's the same issues in the rest of the developed world, you can't blame Queensland Labor for that. Especially nor when the few things they could do to help with cost of living are about to get scrapped.
+60. i don’t care centrelink and the land council takes care of our power bills 💵
+61. I'm not in the business of doing the bidding of lazy cunts who can't even be bothered googling the answer or reading the news, and all this after the fucking fact. I mean it's not like they sprung the election on us this morning.
+62. Don’t stress it dude, but like some other poster suggested elsewhere, keep an eye out for how this election result unfolds, it’s the best way to learn. Look through party policies and correlate claims to actual studies and how they are actually implemented. Care about your future and consider how policies affect others, not just yourself, and try your best to think long term, not just short. Side note: You’ll only get caught up in a pointless cross fire (like this one) on public forums.
+63. just ignore them they’re probably seething right now because their local one nation cooker didn’t win the seat. it’s awesome that you want to understand our political system and i think asking questions online can be a great way to learn- sometimes policies make more sense when a regular person can explain how it impacts them. don’t let people like this dissuade you from trying to learn and understand the world around you, keep it up
+64. Oh yeah sorry, they totally sprung the election on us this afternoon, probably why there hasn't been like a single thing in the media over the last few months about it, I totally understand why you wouldn't have been caught up until after the fact...makes sense.
+65. Welcome to democracy, where you get to sook about the outcome on the internet for a few days before moving on.
+66. Wat
+67. Such is the nature of volunteer organisations, but they gotta start somewhere right? :p
+68. who knows we might have time travel in 70 years, or maybe even anti aging stuff (I can dream lol)
+69. Except factually prior LNP governments have been bad for Queensland. The state has been worse off at the end of their tenures than at the start, every single time.
+70. After you mate
+71. Where’s your link for Tony Abbott?
+72. Swing voters are the problem. No ideology or principles, they dead read policies or decide on matters of substance. It’s all about feelings and trivial nonsense. The depressing thing is it’s swing voters who decide elections.
+73. Welcome to the post-truth, Sky News era, where Labor is always wrong and the facts don't matter.
+74. [deleted]
+75. [deleted]
+76. Are you taking the bet or not?
+77. This. Any time Labor tries to increase education or health funding, the LNP, Murdoch press, and 9 News start screaming about them being fiscally irresponsible. Then the LNP get in and reduce funding further.
+78. ….. which is labor.
+79. …….. the things they could do to help, which they did just before the election to get votes. Why didn’t they implement those things earlier?
+80. It’s for a non-voting 17 year old big boy, not asking you to step up on a podium and read out your manifesto.
+81. you are aware that nobody forced you to read this post or comment on it … right ..?
+82. thanks, i definitely will research alot more when i finally get the chance to vote.
+83. Welcome to Democracy where we have clowns voting for the LNP who will destroy the state, At least they will be gone in a singular term corruption bandits only know how to destroy never improve.
+84. Well??? Have you got time travel yet?
+85. I think you need to reconsider your definition of “factually”. Your opinions ain’t it
+86. Do it all the time dh, it’s part of being an adult. yOuR tUrN
+87. [deleted]
+88. [deleted]
+89. She voted for it when it passed. Abbott didn’t, he abstained. He wasn’t PM at the time. You’re full of shit.
+90. Talking down to people just because they think their beliefs are superior to others? That sounds like bigotry!
+91. I'll be back here next year when the Katters follow through.
+92. Yep, and those staff are never coming back. By now they secured stable contracts and careers interstate or overseas or in the private sector. And.it takes a long time to find 14000 replacements in the medical sector, let alone trying to then expand to meet population growth.
+93. To use your own question against you, which party was in power federally for 12 of the last 20 years?
+94. Because Miles was a better leader than Anastasia and they couldn't afford it due to needing to unfuck the state after what Newman did?
+95. That's ironic.
+96. Look you didn't care or pay attention to this a week or so ago, and the same will apply in another week or so. Let it go.
+97. The actual history of the LNP in QLD isn't opinion, it is actual fact and the fact is they have historically been the most corrupt governments in Australian history or are you saying Fitzgerald was wrong?
+98. He abstained when it came time for the vote. He may have contributed to money being wasted on a non-binding postal survey, the result of which he didn’t even bother voting for when it came to it.
+99. She voted in favour of it in 2018. You are spamming an article from 2018 where her view is being misrepresented. She was saying that marriage can remain between a man and a woman but civil unions should be recognised in the same light.
+100. [deleted]
+101. If you're so sure it'll happen why not take u/EmuCanoe up for a free $100, or even $500? Why throw away free money like that?
+102. So no? So you have little to no conviction in your own beliefs?
+103. Libs. Now they aren’t, and we are in a shit storm.
+104. are your parents cousins or something
+105. Yes we should let the LNP go from government so we don't have to deal with the state being destroyed by Corruption bandits who will do a Newman era re-run.
+106. Sir Joh was awesome for QLD /s (that's how you show it's sarcasm right? With the /s?)
+107. **Fact*** is Dan Andrews had the most corrupt government in Australian history.
+108. [deleted]
+109. You said Tony Abbott, come on my friendly neighbourhood bullshit artist, justify your BS.
+110. Because I'd have to doxx myself to someone who's likely lying any way? This is the internet, not my IRL friendship group.
+111. Inflation started spiking and interest rates started going up in the last months of the Morrison government.
+112. You realise when you try & add lame insults to the mix it means you lost the argument, right?
+113. "We should let"? Bro democracy happened, there's a clear mandate, what are you going to do? Revolt?
+114. Where is the gaol time for anyone associated with the Andrew’s government? Otherwise it is just your OPINION. The QLD LNP had a number of Ministers serve gaol time, this is an undeniable FACT
+115. Did you mean to put an /s here?
+116. Cookers being mad about medical advice being followed in a pandemic doesn't make a government corrupt. Bjelke-Petersen and Newman were. Chrisafuli, based on his business dealings, isn't looking so hot either.
+117. In 2010. When the Australian public opposed same sex marriage and supporting it was political suicide. So she took the path of civil unions instead. Then, EIGHT FUCKING YEARS LATER when she may have changed her mind but support for same sex marriage was certainly no longer political suicide, she voted in favour of it.
+118. there is no argument this is a reddit comment section
+119. What are you going to do when the LNP destroy queensland again, Vote for them again because you are clueless?
+120. So the corruption was so bad he avoided jail. Obviously that makes it worse. Fact*
+121. If you don’t understand the context of my comments I’m not surprised you’re having a hard time understanding a lot of things at the moment
+122. The irony of someone cooking up their immune system with drugs and calling other people cookers isn’t lost. Fact. And I love the way you’re just gonna ignore the CFMEU. Fact.
+123. Surely then he must be under active investigation, surely? Otherwise it is opinion and not fact
+124. It's not a problem with me not understanding the context, it is the fact the comments are idiocy and historically illiterate. I presumed you were making fun of the "hOw cOuLd DaN aNdreWs dO tHis!" cookers but I fear I gave you too much credit.
+125. Last time I checked, the CFMEU did not govern Victoria. They were however the only union getting meaningful pay and condition improvements for their members, and it turned out that the secret ingredient was crime. Conservatives are just mad that someone managed to get around the rules that are seeing every other profession go backwards relative to inflation and/or workload. The vaccines were properly tested and properly deployed. Joe Rogan and Jenny McCarthy are not experts and Bill Gates was not making you sterile with 5G nanobots.
+126. According to you every opinion is just a fact… so long as you agree with it of course.
+127. Actually I was making fun of labor cookers and that fact 😉 went straight over your head. Satire must suck when you’re the subject of it.
+128. Lol you didn’t check very well then, the CFMEU has had Victoria under the thumb for a decade or more. That’s why construction was never locked down while the rest of Melbourne was. For 263 days. Meanwhile every construction project is delayed and over budget, both significantly. When were the vaccines tested and why were the results so poor?
+129. No everything I’ve said is backed up by provable evidence which makes it what? You guessed it a fact
+130. Lol "Labor cookers" ok anti-vaxxer, if you say so.
+131. Wrong on both fronts. Construction was essential work and like other essential jobs, continued on site. Vaccines were tested and proved highly effective at preventing transmission and reducing the severity of symptoms. It's just that COVID mutated so rapidly and rampantly that the vaccines weren't a perfect cure, unlike smallpox or polio. They work like 'flu vaccines (in no small part because that's where the technology was derived from) in terms of being pretty good against specific strains, okay against most, but somewhat less useful if you get clobbered by a particularly divergent strain. The only people who think it should have resulted in 100% protection are the cookers.
+132. Can you please provide the data and definition points for “most corrupt in Australian history”? Additionally can you please prove that such a definition is not open to interpretation? Thanks but didn’t think so
+133. Ok drug addict, yes I do say so. Enjoy the rest of your Sunday :)
+134. [Did such a good job](https://imgur.com/a/j2Kgmzs) - that graph indicates deaths took off immediately after everyone got the jab and that makes it hard to imagine a worse result for the pro vaccine community? The effectiveness rate looks to be closer to -100%. Also I notice you conveniently didn’t answer my question. Cheers to ignorance hey
+135. Political party with most Ministers found guilty of corruption https://www.ccc.qld.gov.au/publications/fitzgerald-inquiry-report https://researchoutput.csu.edu.au/ws/portalfiles/portal/332311526/Official_Deviance_Exposed_An_Historical_Examination_of_Political_Scandals_in_Late_Twentieth_Century_Australia.pdf
+136. You know what ended at the same time? Lockdowns. You know what increases death rate? Infection rate. You know what prevents infections? Lockdowns. Without the vaccines that death rate would have been astronomically higher. The death rate was 0.2% of the infection rate. That says that the vaccines were highly effective.
+137. So you deny the claim that the most corrupt politicians don’t get found guilty? How bizarre. Anyway, my opinion is different to yours. Fact ;)
+138. You’ve just made the argument that lockdowns “worked”, but not vaccines. Why did the infection rate rise so astronomically immediately after everyone got the safe and effective vaccine, especially given the vaccine was so safe and effective? Let me guess, you got multiple jabs, then got Covid, and still couldn’t join the dots. Full retard
+139. Because the end of lockdowns coincided with the population reaching herd immunity. Cookers *hated* the lockdowns. The price of getting out of them was letting COVID tear through everyone like wildfire. The survival rates would have been way lower and the infection rates way higher (compounding the lower survival rates and causinga way higher death rate) without vaccines. This is basic logic.
+140. Again you’ve argued that lockdown worked but vaccines didn’t. Might need to increase your level of logic from basic to at least intermediate
+141. The vaccines prevented transmission by over 60% and reduced severity by 80% plus when compared to placebos.
+142. Who got the placebo?
+143. Do you not understand how medical trials work?
+144. Yes I do. Do you not understand how answering questions work? Cos you sure do a fair job of avoiding them. Back to it. Who?
+145. During the trial phase of the vaccine, one group gets a placebo and one group does not. They are then exposed to the virus to see if it works. This is done blindly and randomly. Nobody knows who goþ what until the analysis phase. You are trying to imply people were given a placebo in the general populace.
+146. I’m asking for details (a link?) to the study, not how studies normally work. Thanks
+147. There are many. Depending on when you look and the variants that we're circulating, you're looking 50-60% prevention of transmission and about 80% reduction in severity of symptoms. First one that popped up: https://www.cdc.gov/mmwr/volumes/73/wr/mm7304a2.htm I now await your "but how can you trust science/the government?" rebuttal.
+148. Nope, you’ve skipped ahead about 3 years. Going back to what we were talking about (late 2021 vaccine uptake and the results immediately thereafter), and without deflecting/projecting/denying/lying, answer the fucken question
+149. https://www.yalemedicine.org/news/covid-19-vaccine-comparison https://www.thelancet.com/journals/lanmic/article/PIIS2666-5247(21)00069-0/fulltext https://www.thelancet.com/journals/lancet/article/piis0140-6736(21)02183-8/fulltext "Oh but those studies weren't done in Australia! How do we know it was the same here?"
+150. Holy crap. None of those links are the study to which you refer. The third link is a study sponsored by Pfizer and directly conflicts the real world data we saw in Australia. And that’s the evidence you chose to best argue your case? Cool
+151. This is why nobody bothers engaging with cookers. Facts, logic, and reason are never enough. Basic science and experimental design isn't enough. They always know more than the experts, and it's always a conspiracy.
+152. Means nothing coming from someone who even acknowledges how [dumb their beloved vaccine has made them](https://imgur.com/a/YyQNDGZ)
+153. So not only don't you understand basic science, you have no reading comprehension. Long COVID is not related to vaccines. It's COVID.
+154. Oh so you’re not vaccinated?
+155. Long COVID is not caused by vaccination. Statistically, each time I did get it I was prevented from getting it over 50 times by the vaccines. Statistically, my cases were less severe with the vaccine than without it. Even then I nearly needed hospitalisation both times. Odds are good that without the vaccine I'd have just died the first time I got it.
+156. Haha fuck me the logic. And you’re a teacher
+157. Yes. And molecular biologist, so I can actually understand the studies you demanded to see then rejected because they didn't suit your narrative.
+158. I rejected because they literally directly conflicted real world data? Reminder, you’re the one who’s had multiple jabs and multiple instances of supposed long Covid. How does it feel? If you have the chance I recommend a chat to one of your psychology colleagues. You could chat about the following topics and how they relate to you: - The Dunning Kruger effect - Confirmation bias - Cognitive dissonance - Rationalisation - Non sequiter Could keep going but they might start charging you haha
+159. The real world data shows a 0.2% mortality rate for total COVID cases over four years despite infections going absolutely berserk after lockdowns were lifted. Prior to the vaccine rollout the mortality rate was significantly higher. The mortality rate dropped from 3.2% through 2020 to 0.2% aggregate across four years in 2024. For those of you playing along at home, getting the population 95% vaxxed dropped the mortality rate by a factor of sixteen. This was always the game. Lockdowns were the interim measure until herd immunity was in place. And the mortality rate through 2020 was only that low because lockdowns were allowing hospitals to keep up with cases. If the infections had spread as they did post lockdown, a lot more people would have needed critical care at once and not been able to get it. You have no idea what you're talking about.
+160. The real world data shows that some people who got multiple jabs also went on and got multiple rounds of Covid. Lol. Yes, I’m talking about you again. How does it feel? This did not happen to the unvaccinated community. The dissonance must irritate the shit out of you. The real world graph I sent earlier does not indicate we achieved herd immunity once everyone got jabbed, quite the opposite. How do you cope with your dissonance? I note in your comments that you rely on relative data instead of absolute. It implies, in your little dissonant world, that say 100 people infected and say 3 people dying from COVID is far worse that 100,000 people infected and 20 people dying because as a percentage 3/100 is higher than 20/100000. However I’d strongly disagree with you and argue that 20 people dead and 100,000 people sick is, in fact, the worse outcome. The real world data shows that hardly anyone is getting jabbed in 2024 and that lines up perfectly with a much lower infection rate and a much lower mortality rate. The exact opposite of what happened in 2021, when Covid, in your own words “went berserk” shortly after everyone got the first and second jabs. Your dissonance must be off the charts right now. Enjoy
+161. You don't understand statistics or probability.
+162. Lol sadly for you I do. Whilst I focus on real world results, your argument is classic of an academic: “this is all good and well in practice but how does it work in theory?” Enjoy your long COVID pal

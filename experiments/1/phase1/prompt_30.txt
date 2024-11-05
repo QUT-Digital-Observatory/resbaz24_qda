@@ -1,0 +1,168 @@
+Your job is to analye a series of Reddit Comments are drawn from sbumissions related to the 2024 Queensland State Election. The comments are drawn from a collection of comments before, during and after the election itself on the 26th of October. The parties that sought election were the Australian Labor Party (ALP), the Liberal National Party (LNP), the Queensland Greens (Greens), One Nation and Katter's Australian Party. The LNP prevailed in the election, with David Crisafulli becoming the new Premier of Queensland. 
+We have identified several key issues that the major parties campaigned on during the 2024 Queensland State Election: Youth Crime (YC), Cost of Living (COL), Health (H), Energy and Infrastructure (EI), and Abortion Laws (AL). Below is a summary of each party's position on these issues:
+Youth Crime (YC):
+- LNP: Advocated for stricter penalties for young offenders, including the 'Adult Crime, Adult Time' policy, proposing that serious offenses committed by youths be met with adult sentencing. 
+- Labor: Focused on rehabilitation and prevention programs, aiming to address the root causes of youth crime through community engagement and support services.
+
+Cost of Living (COL):
+- LNP: Proposed measures such as abolishing stamp duty on new builds for first home buyers and re-establishing the productivity commission to review building industry regulations, aiming to alleviate housing costs. 
+- Labor: Introduced initiatives like 50-cent public transport fares, a $1,000 energy rebate, and free lunches for state primary school students to ease cost-of-living pressures.
+
+Health (H):
+- LNP: Committed $590 million to an 'Easier Access to Health Services Plan,' aiming to reduce ambulance ramping and hire additional healthcare workers. 
+- Labor: Focused on maintaining and expanding healthcare services, addressing hospital capacity issues, and investing in new health infrastructure.
+
+Energy and Infrastructure (EI):
+- LNP: Criticized Labor's Pioneer-Burdekin Pumped Hydro Project as financially unviable and canceled it upon taking office, opting to explore smaller-scale hydro projects instead. 
+- Labor: Proposed large-scale renewable energy projects, including the Pioneer-Burdekin Pumped Hydro Project, to transition towards 80% renewable energy by 2035.
+
+Abortion Laws (AL):
+- LNP: Stated there would be 'no changes' to abortion laws under their government, maintaining the status quo established in 2018. 
+- Labor Party: Supported the existing abortion laws and opposed any attempts to repeal or amend them. Asserts that LNP intend to restrict access to abortion services based on the views of some of their members.
+
+Analyze Reddit comments and code them based on the positions they support or oppose concerning these issues. You will output JSON, so valid values are strings or null. Use the following codes: YC, COL, H, EI, AL. If a comment's position is unclear or does not pertain to these issues, output null.
+
+Secondly identify which party the comment appears to support. Use the party code ALP, LNP, Greens, ON, KAP if this can be determined, otherwise a null value if undetermined.
+
+Output JSON as a list of objects where each object has an "id" (integer) property of the comment id, an "issue" property set to the issue code string (or null value), and a "party" property set to the party code string or null value. Null means JSON null, not a string. Values MUST be quoted, e.g. {"party": "LNP"} unless they are null, e.g. {"party": null}. Comments follow:
+
+1. Nah mate. The inevitable 'I told you so' that's coming is enough to sustain me. She'll be a beauty!
+2. This is democracy I seen people say they riot or do other outlandish things. If you don't like the results vote next time.
+3. I don't live in QLD so to me it is
+4. You do that brother
+5. why you are you here then?
+6. It's coming... https://preview.redd.it/4uqazqdp59xd1.png?width=1080&format=pjpg&auto=webp&s=892ebd7157de9f74338d2b3f4ff2099399457d77
+7. NSW still have more ON backers. Strange but true.
+8. You using the expression ‘boils my clams’ really grinds my gears
+9. I've read the statements by a number of LNP rural members or candidates. There's a reason One Nation came out of Liberal MPs.
+10. Were you in Queensland when One Nation won big time in one of the elections years ago? I remember feeling so ashamed of the whole state the day after. LOL.
+11. The LNP can still be pretty racist, man.
+12. What did ON candidates say this election?
+13. I'm surprised it's that low.
+14. One Nation is just a scam to get working class, typical Labor voters, to preference the LNP. I can understand their appeal federally, being anti immigration, but have no idea how they are relevant at a state level.
+15. I'm a greens voter and climate change and that carry on is not a factor in my choice of vote. It came down to living costs, social inclusion and a hard push for inequality across the multiple minority groups I am a part of.
+16. Sadly, it's so much easier to incite hate into a population (the geriatric Cheeto in the US is a prime example) than meaningful progress or change. Fear is a strong motivator and critical thinking or questioning the motives behind politicians doesn't come easy to a lot of people. As a woman waking up in Queensland this morning, I fucking hate it here.
+17. One nation dosnt bother me as much as the cooker katters
+18. particularly when you find out that the candidates get $3.33 and the party gets $6.66, for each first preference vote they get if they get >4% of votes.
+19. Have you processed the fact that most of the incoming parliament is going to be rural members? QLD rural members don’t exactly have the best track record of being… logical.
+20. Yep it's really disappointing. There was a truck crash picture posted here a little while ago and the amount of racist comments that came out of nowhere from that wouldn't be far off 7.8%. To be racist you have to be living in fear, otherwise someone's race is irrelevant. It's so sad, but it's the people who are the saddest and most in pain that inflict the pain on others. My english partner told me she found Australians to be racist (she's white) and I fought her for ages before I realised she was right. There's so much more racism here than we'd like to admit to ourselves. Aside from the obvious overt racism, so often racism can come under the banner of "harmless" jokes because we're irreverent Aussies. There was an Asian bloke who came to play tennis at my local club and I heard people joking that they wouldn't be able to see him at night etc, it's comments like that that happen all the time and make me ashamed to be an Aussie. It's us white people who have no idea what it's like to be a minority and experience racism so we think it's funny to "other" minorities. No way would I want to live in Australia if I wasn't white.
+21. Katter getting votes also disgusts me
+22. It’s all the people in regional areas, they love her for some reason
+23. Not a ON voter. But tbf, Sen Malcolm Roberts Financial regulation bills are pretty on point. RBA and Treasury are selling the country on a firewall. Stopping that has to be a priority on this front. Of course there are many many many other areas to focus on but our financial well-being is driven by One Nation here
+24. 7.8% racists is fairly low I'd say. Not too bad at all. Unfortunately I don't think it's reflective of the level of racism here. I'd say it's higher.
+25. Sadly the greens are a long way removed from their once green environment roots. Sure it is a policy but they care far more about overseas rubbish than the environment these days
+26. What racist policy is one nation promoting?
+27. It was probably more 'who is less bad' rather than who is better.
+28. How about that nearly 2% family first vote. Oh god...
+29. How is ON “overtly racist”?
+30. lol "boils my clams" -
+31. Before I make this next statement there is no place for racism in the world. If we all supported the same things and wanted the same things political parties wouldn't be needed at all as there would no differing views. Democracy is a sound concept but you have to accept that some will have views that you do share. One Nation have dialled it down a lot over the last 20 years, still not enough but it appears they along with the greens are struggling for relevance.
+32. Less than 8% is actually a pretty terrible result for One Nation. They abandoned their one MP in the last parliament because, in James (tiny psychopath) Ashby's own words, he was lazy and wouldn't put in the work. Somewhat ironic that Stephen Andrew is now likely to stay on as an MP for KAP and James Ashby is doing nothing and was a striking failure in targeting Keppel. Oh well, they'll keep up the grift until Hanson decides to finally retire, but they're not a serious entity and now increasingly irrelevant.
+33. But none were elected so at least there's that. Most particularly that grub Ashby
+34. Yeh well cry about it… people are allowed to have different opinions mate, if you didn’t let them then you would be a Fascist rat
+35. maybe that member had better policies than the two party preferred?
+36. There's an entire subreddit dedicated to these kind of extremists. It's called r/australian
+37. 7.8% is just sad. Do we really have that many lost souls, wow.
+38. ONP is all about talking to ignorance and fear. They don’t offer hope, education, or resolution - they just echo the fear and it’s what some people will be drawn to.
+39. How do feel about informal votes?
+40. Unfortunately, a majority of Queenslanders aren't that bright. There are another mob that are rich Tory twats that do what their sponsors and mummy and daddy say. Well, not mummy because she's not allowed to, but you know what I mean.
+41. Thing is One Nation isn’t just for racists, it’s also for single and disenfranchised dad’s - which is actually quite a substantial vote out there, credit to them for listening - I’m pretty sure theyr one of the highest suicide demographics. (Not a one nation supporter, I voted legalise cannabis party 1 greens 2 and Labor 3, lnp last)
+42. Who would the ones be that voted for the environment? Surely you don't consider the Greens to be about the environment. They are a home for Marxists and Leftists of all different shades. Queenslanders have figured this out and have not given them a seat at the table.
+43. It makes perfect sense to me that One Nation gets votes every time. They use the same tactic every time, what has changed in the past 10 years that 30+ year olds disagree with, but are too afraid to say out loud for fear of alienation. For all I know Pauline Hanson doesn't even have her own opinions because her opinions shift so often to suit the flavour of the election cycle. What really boils my clams are young people voting LNP and people voting Greens. These people have no excuse.
+44. People care less about the environment when they can barely afford to keep food on the table. Renewable energy is going to make it even more expensive to live
+45. Maybe they see the “racism”, don’t like it all that much, but like some of their other policies. Lots of single fathers getting dragged through the court comes to mind. Edit: thanks for all the negs you left leaning knuckle draggers. I provided a reasonable explanation on why people vote ON. She also wants to stop the sale of houses to foreign investors and non citizens, so, next time you all whine about not being able to buy a house, maybe one of her policies could have helped you out. Eat a bag.
+46. Here is my logic #4 - Greens - we’ll, they’re communists in green … their economic concepts are simply stupid and will never work #3 - Labor - can’t stand pro union / leftist / woke / pronoun-politics, but at least they’re not completely retarded like the greens #1 LNP - in my eyes they’re the best option even though they’re far from being perfect … and this makes One Nation #2 on my list, as anything is better than the woke agenda etc. This is my thinking It’s right / far right-ish, simply because the left has become unacceptable to me
+47. There are so many racist white Australians in FNQ, I call out casual racism on a weekly basis, usually it's clients or people I don't know very well that start a conversation with me in a public setting.
+48. At the station I was at, a mother brought in her daughter -who seemed like a first time vote-. The daughter said, "I really like this green guy". Mom quickly went, "No! You fucking vote for One Nation. The green guy will steal your job"
+49. "nearly 10% care enough about the environment to try and make an impact" <<< who TF doesn't care about the environment to make an impact? Stopping World War's far more impacts the envrironment than anything else does.... https://public-health.uq.edu.au/article/2023/11/conflict-pollution-washed-landmines-and-military-emissions-%E2%80%93-here%E2%80%99s-how-war-trashes-environment#:\~:text=Chemical%20weapons%20and%20pollution%20from,longer%20than%20you'd%20think. #
+50. Queensland vote has been as high as 15-20% for One Nation Why I've always said they're the nutter State As far as Im concern 5% is the most you should get for extremist, anything above is problematic People vote for Liberal, because there's really not any other option People who vote for extremist like One Nation, actively choose to
+51. Sorry, didn’t mean to get your goat.
+52. You using the expression ‘grinds my gears’ really crushes my tomatoes
+53. This whole thread really put a cigarette in my sandwich.
+54. This whole thread really jams my clam
+55. Yeah, it really flips my pancakes.
+56. In 1998. 22.68% primary. Eleven seats. Made the 2CP in another 23 seats! ECQ didn't even bother doing a 2PP count IIRC cos it didn't make sense to do so.
+57. And the first electorate to fall to them was my old home town of Maryborough. I was very embarrassed but hardly surprised that all those old (and young) racists voted that way
+58. Literally still overtly racist. One Nation being more racist doesn’t make the lnp not racist.
+59. The amount of people that could barely speak English going through the polling places clutching blue fliers was disappointing. Like, you are the enemy to them Mr immigrant, why are you voting for them?
+60. I don't know how they can afford to. Being conservative isn't a white thing.
+61. Last I saw, Pauline was farting out some incoherent anti-trans bill, parroting the same ‘vibes-based’ talking points they do in the US/UK. Not sure if it was strictly election-related or just a sudden burst of grifter’s inspiration.
+62. They spoke in Monkey and Gibbon. Couldn't understand it.
+63. I think Family First took a bunch of their votes.
+64. Mte
+65. You forgot the part about lining Pauline's pockets for nearly 30 years, that's the real reason it exists.
+66. You do know the Greens blocked all those housing reforms right???
+67. You sound like someone from South Queensland then, every North Queenslander I know supports Katter, they won majority of North Queensland, there’s a reason they do because North Queensland is always left out, both Labor and Liberal only care about Brisbane and shit… they don’t really care about us Rural folk
+68. Let the corruption begin......
+69. Oh fucking city boy
+70. Europeans are a minority globally. Less than 8% of the global population.
+71. Casual racism is so heavily ingrained into Australian culture that it makes sense so many people don’t even recognise it
+72. I'm white and when my Australian ex learned my last name, his response was, "oh, you're a wog?"
+73. Soap dodgers are usually more racist than Australians
+74. The sad thing is, Australia is probably the best country for Asian people in the Anglosphere due to proximity and Asian people being the largest minority group. I cant imagine being in America and also having to go through the social struggles of interacting with other minority groups like Hispanics, and black Americans. But yes, as an ethnic minority I want to leave Australia when I finish my degree. This country has no ambition or hard-workers, with terrible public transport. I literally can't overstate how bad this shitty bus system is. This country is full of white bogans living in their privileged secluded bubble, I don't see a future here, especially when surrounded in a workplace by only white people in a corporate workplace. Actual living hell. What is Australian culture exactly? It sure isn't the amazing food, or the smart people, or the amazing manmade tourist destinations, all of which are nonexistent. This place has no culture, since the white colonizers plundered the land due to their greed. Australian culture is commonly described as laidback, chill, welcoming, all of which are false. At this point, Australia is just a watered down version of the USA. It's an embarassing culture, with no originality or respect, and blatant racism towards the Aboriginals. Like let's be honest, what culture have Australians built here? Literally nothing. The most boring culture on Earth definitely. Australia loves to rag on New Zealand but they incorporate the Maori far better than whatever Australia has. No ambition, no work-ethic, no nothing, just a.false sense of pride and superiority. White people here love to rag on the Aboriginals, despite them being the colonziers, immigrants and newcomers. The humour here is also trash. Just being snarky and thinking they're all funny, when it's just sad and pathetic. The only thing good about this country is the amazing nature, which the people did not build or create. Not gonna give you points there. Especially Brisbane, this place actually sucks so much. I can't believe this city was chosen for the Olympics, 😂 😂 😂, the entire world will laugh at this city and for good reason. Can't even get a fucking bus to arrive on time or even within 15 minutes, but think they can host the Olympics 😂 😂, it's so funny and sad. I feel sorry for you Australians. People are gonna downvote me, but I'm right. Or I'm gonna get a snarky reply that is "sooo funny and original". But they're just salty because they think Australia is some kind of amazing unique country with a great culture. It's none of those things. This place actually is terrible.
+75. I was thinking the same. Not an environmental party any longer.
+76. Ah yes, the one I swear is moderated by Rita the angry Chihuahua and Andrew Dolt
+77. this sub isn’t much better tbh, the downvotes are proof of that
+78. Informal votes are kinda stupid. Elections don't come around that often, at least put in the minimal amount of effort to learn about our political process and participate in it properly. Informal voting is lazy and entitled. If you informally vote, you shouldn't be complaining or talking about really anything that happens due to political forces because you chose not to participate in the process of influencing it.
+79. In what ways do One Nation help single disenfranchised dads? Last I saw all they care about is muslims
+80. I love how all these muppets call the greens marxists but they have no clue about what marxism is. The greens are so fucking far from marxist it's insane. They're ideologically opposed to gun ownership for a start. Marxism isn't. 'marxist' is just a buzzword used by idiots to describe anything they don't like but can't explain why they don't like it
+81. Yes, dumbass, environmentalists tend to be leftists. How is that at all suprising lmao
+82. Let me get this straight - non renewable energy which is pretty damn difficult to convert to electricity and, you know, not renewable, will lead to more expensive living than panels creating power from the sun? In the sunshine state...? I mean maybe in the very very short term, but any kind of long term view? Solar + EV = gone from $400/month on fuel to $50/month on charging when I need a top-up in a hurry
+83. Lol, family court issues are federal issues. If you voted One Nation in a state election for that, you're a racist and a moron. Seriously have to be brain dead to vote One Nation.
+84. Are any of their policies likeable?
+85. Foreign investment is already regulated though? Only approved foreign buyers can buy property here
+86. Miles is more conservative compared to Federal Labor.
+87. And then everyone clapped right?
+88. r/thatHappened Also "mom" gives you away as someone who probably doesn't live in Australia.
+89. And you think that voting One Nation in a state election for a middle power stops world wars...how?
+90. You two being all witty really sticks in my craw
+91. That expression really chaps my ass.
+92. You using the expression ‘crushes my tomatoes’ really chokes my chicken.
+93. That really grates my cheese
+94. Conversely, I was going to suggest it fluffs my buttons.
+95. Those figures really .make me clutch my pearls!
+96. This was backlash on the Borbidge Nationals over the compulsory Gun Buybacks wasn’t it?
+97. So one nation isn’t an lnp construct?
+98. Hating gay kids is a pretty big vote winner in a lot of immigrant communities.
+99. Legit I live in a suburb full of immigrants and there were soooo many LNP yard signs around... Like besties they hate you and want you deported 😭
+100. Maybe they realised they're in a crowded housing market and more immigration *also* hurts them? Not that hard to understand
+101. I'm pretty sure people who vote that are immigrants can speak English 🤓
+102. How does this happen? Aren't there minimum English requirements to become a citizen?
+103. Nothing is coming up under google search for that, do you have a link?
+104. 100% Always was and always will be about the grift.
+105. As if it's any different for any of the other politicians? It's the only reason any of them do it 🤣
+106. A bit ludicrous and personally didn't agree but not an election breaker.
+107. You mean the bills that would have made it more expensive to buy a house? We need policies that actually address the issues instead of giving handouts to companies that only build luxury apartments. If we want to actually do something about the housing crisis, then we need to actually do something that will increase the amount of affordable housing
+108. I lived in the UK for 3 years and that wasn't my experience
+109. Saw what you did there. Can’t help yourself?
+110. Hey, I am Indian origin and live in Brisbane. I moved up here from Melbourne and expected some racism. To my relief, nothing like that has happened. My white Aussie neighbours are welcoming and speak nicely. The local tradies that I contracted were very nicely behaved. Everyone at work, including born and bought up Brisbane old timers and younger ones do not go after me in any way. Even the qld public service that I interact with are respectful. Yes someday some rando in train will not doubt shout at me and I will chalk it up as exception. So please do not talk Brisbane down. Bus punctuality is an occasional issue I admit.
+111. You sound racist as hell. If you hate white people that's not their fault.
+112. You've obviously not had good experiences in Brisbane. Sorry it hasn't been welcoming. There's no sense being miserable and getting angrier and angrier by staying here. Why not transfer to somewhere else in Australia or elsewhere where you can be happy? Somewhere that's more in line with what you're looking for? I've travelled and lived in many countries and no country or place is perfect, there's always pros and cons that either suit you or don't. If you're looking for culture, Brisbane is not the place for you. You should have done a bit of research about Brisbane first and you wouldn't be so surprised when we have mullets and no shoes here mate. That's not why anyone would come to Brisbane, it's a big country town. People will downvote you because you're being snarky and making ridiculous sweeping statements about how everyone is a certain way, which obviously isn't possible, and it's the very thing you're deriding all Australians for being.
+113. "If you don't like it you can leave" actually applies here. Australia is a safe, beautiful country with endless natural sites to explore, high-quality food (of all different kinds), and friendly people. Is it perfect? No. But it doesn't need your negativity, which helps nothing and no one.
+114. Take a chill pill. As an minority living here, i didn't faced racism here in Brisbane. Maybe beacuse i live in the city and outside in the rural areas there's more chances to face it. The racism situation is very similar to Canada, in the city people are are open and progressive,outside in the rural there's a bunch of rednecks/bogans.But it's getting better everywhere now. I feel sorry for your small brain to not understand how public transportation works and not being happy in one of the nicest cities in the world, just gtfo and let people live their life.
+115. With all due respect, millions of people pay significant sums of money to migrate here and live among "white bogans".
+116. Still far more focused on environmental issues than any other party though...
+117. r/Queensland says hold my beer
+118. Yeah the radical extremists we have in this country really take offence when you call out their sub (r/Australian)
+119. I’m not sure they actually help them, but they are pretending to listen and forwarding proposals to change the family law court’s bias against them. Contentious issue I get that, but dismissing it is how one nation has grown to its current most popular state, imo.
+120. Marxism accurately describes the political views of the leader of the Greens. Perhaps you should go and read up about your leader. Now, would he be the only one in the Greens with those views, or would he be in the leadership position because he best exemplifies the views of his party?
+121. So just ignore all the stuff inside the solar panels as renewable?
+122. reading this guys comments he doesn’t seem remotely educated at all lol
+123. I didn’t. But thanks anyway.
+124. Obviously.
+125. The woke agenda of the left is unacceptable to me. I have never seen colours and never been racist - well, the left agenda managed to bring the worst out of me (just being honest)
+126. I grew up outside of Australia. It's almost like this country was built off immigration I interchange between mom and mum. But some evidence. Happened in Logan. Mom was wearing a tie dye shirt. Daughter had converse, black jeans and a baseball jacket. Sometimes, the improbable is true.
+127. OP mentioned the environment.... where did I mention about voting for One Nation?
+128. This comment thread really ruffles my feathers
+129. Is that before or after you've spanked the monkey?
+130. You using the expression 'chokes my chicken' really rumples my stiltkin.
+131. Not Queensland, but I remember reading that an area of Sydney with a large Maltese population being mad at the Labor MP for voting for gay marriage.
+132. You can't deport someone who can vote. They are a citizen
+133. Every western democracy is in a crowded housing market. It is a global issue not a state issue and the ‘solutions’ put forth by the LNP will exacerbate the problem not solve it. It is hard to understand because usually personal experience is the easiest way for people to understand and not fall for the lies of liberal policy.
+134. You would be surprised then. There are plenty of places that operate on getting people visas/citizenship in the same way licensing firms work, they give you the answers and walk you through the tests to make sure you pass.
+135. Sure, but the same as any license there are places you can go to that just give you the answers if you have the money to pay for it.
+136. [Here](https://www.onenation.org.au/sex-discrimination-bill-2024)'s the statement. Thankfully, looks like [it got thrown out](https://www.aph.gov.au/Parliamentary_Business/Hansard/Hansard_Display?bid=chamber/hansards/28051/&sid=0008)?
+137. I lived there for 8. Yes they are. I'm white and speak english 1st langsuge, but was told to "fuck off back to wherever". I was born with a British passport. Multiple times I have had to rescue Indians and Africans from mobs of cavs. The Welsh are worse than the English. Further North you go, the worse it gets.
+138. U wot guv?
+139. LMFAO true
+140. That’s how right wing populism always works. Pretend to listen and provide easy solutions to complex issues, like stopping immigration and blaming minority groups, to attract disenfranchised men who just want someone to blame other than themselves. It’s the exact same strategy the Nazi party used. It’s not that left wing parties dismiss men’s struggles, they’re the only ones with tangible systemic solutions that aren’t just blaming it all on everyone else. But the right wing parties embrace fear-mongering and lying to get these men on their side.

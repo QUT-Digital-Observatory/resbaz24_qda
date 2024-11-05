@@ -1,0 +1,157 @@
+Your job is to analye a series of Reddit Comments are drawn from sbumissions related to the 2024 Queensland State Election. The comments are drawn from a collection of comments before, during and after the election itself on the 26th of October. The parties that sought election were the Australian Labor Party (ALP), the Liberal National Party (LNP), the Queensland Greens (Greens), One Nation and Katter's Australian Party. The LNP prevailed in the election, with David Crisafulli becoming the new Premier of Queensland. 
+We have identified several key issues that the major parties campaigned on during the 2024 Queensland State Election: Youth Crime (YC), Cost of Living (COL), Health (H), Energy and Infrastructure (EI), and Abortion Laws (AL). Below is a summary of each party's position on these issues:
+Youth Crime (YC):
+- LNP: Advocated for stricter penalties for young offenders, including the 'Adult Crime, Adult Time' policy, proposing that serious offenses committed by youths be met with adult sentencing. 
+- Labor: Focused on rehabilitation and prevention programs, aiming to address the root causes of youth crime through community engagement and support services.
+
+Cost of Living (COL):
+- LNP: Proposed measures such as abolishing stamp duty on new builds for first home buyers and re-establishing the productivity commission to review building industry regulations, aiming to alleviate housing costs. 
+- Labor: Introduced initiatives like 50-cent public transport fares, a $1,000 energy rebate, and free lunches for state primary school students to ease cost-of-living pressures.
+
+Health (H):
+- LNP: Committed $590 million to an 'Easier Access to Health Services Plan,' aiming to reduce ambulance ramping and hire additional healthcare workers. 
+- Labor: Focused on maintaining and expanding healthcare services, addressing hospital capacity issues, and investing in new health infrastructure.
+
+Energy and Infrastructure (EI):
+- LNP: Criticized Labor's Pioneer-Burdekin Pumped Hydro Project as financially unviable and canceled it upon taking office, opting to explore smaller-scale hydro projects instead. 
+- Labor: Proposed large-scale renewable energy projects, including the Pioneer-Burdekin Pumped Hydro Project, to transition towards 80% renewable energy by 2035.
+
+Abortion Laws (AL):
+- LNP: Stated there would be 'no changes' to abortion laws under their government, maintaining the status quo established in 2018. 
+- Labor Party: Supported the existing abortion laws and opposed any attempts to repeal or amend them. Asserts that LNP intend to restrict access to abortion services based on the views of some of their members.
+
+Analyze Reddit comments and code them based on the positions they support or oppose concerning these issues. You will output JSON, so valid values are strings or null. Use the following codes: YC, COL, H, EI, AL. If a comment's position is unclear or does not pertain to these issues, output null.
+
+Secondly identify which party the comment appears to support. Use the party code ALP, LNP, Greens, ON, KAP if this can be determined, otherwise a null value if undetermined.
+
+Output JSON as a list of objects where each object has an "id" (integer) property of the comment id, an "issue" property set to the issue code string (or null value), and a "party" property set to the party code string or null value. Null means JSON null, not a string. Values MUST be quoted, e.g. {"party": "LNP"} unless they are null, e.g. {"party": null}. Comments follow:
+
+1. You think the LNP learns from their own mistakes? The only thing they learn is how to do things quieter. Newman had the problem of chest thumping and announcing all his shit, Crisafulli will do it from 1 William St, and duck and weave when questioned on it to ensure he doesn't say anything stupid for the next 4 years to hope he can score another 4 Queensland just told the LNP "Yeah, we don't care that you have no plans, no costings, and no actual hard proof of anything you're doing, you can lead for a bit"
+2. > No- one wants to be a one term government. What do they care? They can be a bull in a china shop for 4 years, make our lives miserable and gut all of our programs, then get voted out, then the weird collective amnesia that seems to fill every resident of Brisbane will kick in and we'll all vote them back in sometime in the near future for round #437 of fucking everything and everyone that isn't themselves. Then the average person will furrow their brow and ask with consternation of how did things get to this point? Completely oblivious to them constantly voting for the "we fucking hate you peasants" party time and time again.
+3. On what metric are you basing this? Can the government control the cost of oil? Can the government control the cost of groceries which Coles and Woolworths are continually selling at significantly higher prices than inflation because they can? Can the government control what people spend? Can the government control China's significant economic downturn? The only area in which the government bares responsibility is housing, but I'm choosing to believe you are smart enough to know both major parties are equally culpable in that crisis. Though Labor is still objectively better in that area than the LNP despite its failings.
+4. It’s smart policy and has not only educational benefits (the headlining rationale) but it’s also ethically right to make sure children aren’t hungry.
+5. Surely they get free lunches in the kiddy camps right? I mean, sure, the government is assuming you're guilty of something even if you haven't offended, but you get a free meal :S
+6. It won’t happen ever now. Every time Labor takes a risk on these progressive policies and lose they go into their shells. Look at shortens Labor vs albos.
+7. Just another silly non-targeted inflation inducing bribe at an inappropriate time, like all his bribes. Wheeled out just before an election, when they should be fighting inflation, this man was just spending like crazy.
+8. They'd be a fool not too, their were predictions that labor wouldn't even get 30 seats the fact that they might get 33-36 is a good result for them
+9. Yeah I reckon they'll do schoolies first. My partner is doing the drug testing at schoolies and they're all freaking out because everything is literally planned and ready to go. But it's the easiest first thing that LNP can do to look tough on crime and youth at the same time.
+10. Well in my neighborhood all the old ladies who are well past child bearing SMh
+11. Agree, I’m not of childbearing age but wouldn’t vote for this idiot. We have to think about our young women and future generations. I feel sick they won.
+12. Maybe they didn’t see the weeks of his slimey question dodging about the private members bill/ conscience vote and that he voted against decriminalisation and only saw the snip of him saying “there will be no change” at the debate. While acting like it was a scare campaign not based on reality.
+13. What moron actually believed that gutter politics character assassination. Zero probability of becoming policy.
+14. You are begging the question - these people don't think it's their body in question, it's the body of another human being which is just contained within theirs. Of course you won't understand their view if you inject the crux of the argument into your premise
+15. The difference between paying for a driver licence or paying for a driver licence plus a little bit of profit on top for LicenceCorp
+16. A private company does not have the same level of obligation to the public as the government does. The public also does not have as much sway over private companies than they do over their own government. If you feel the goverment was responsible for higher costs of living, you can vote them out. As they did here. If you feel a private company was responsible for higher costs of living, what are you gonna do about it? Vote them out? You can vote in a new government that can reign them in, but its a lot harder to take back something once you have given it away. Its a game of rock paper scissors. The public can vote out the government, the government can regulate private companies, and private companies do their best to squeeze as much profit out of the public as the government allows them to, because the public has no direct leverage over them
+17. In the 1990’s, the federal government sold telecom (the precursor to Telstra). This initially lead to the development of Optus, some even competition between the two, lower prices, and the such. But then Telstra ended up with the larger market share. They had more infrastructure. Then they sent call centre jobs to ‘cheaper fields’. Then they hiked the prices up. Optus followed suit. Repeat over and over, because they can. They answer to shareholders now, not the government.
+18. Leads to long-term loss of skill in the public sector and an overreliance on consultants that end up costing more in the long run.
+19. Example is energy infrastructure. The Government Owned Corporations like Stanwell (a generator) make decisions that aren’t always in their commercial interests, because they’re owned by the State. A private company would shut the lights off to Brisbane if it wasn’t viable to continue generating. And that’s how you get rolling blackouts
+20. If you run something as a for-profit business, it's gotta generate profit in order to be viable. Many public services, like the post office, garbage pick-up, healthcare, water, gas, sewerage, and electricity network supply, they're not a profitable thing to run, the services don't benefit from being run like a business, expecting exponential financial growth out of a public service means they're going to cost more year after year, and the way to make even more money out of it is to cut quality.
+21. They take state assets and turn them into to privately owned businesses. The people who own these businesses are very eager to obtain these assets, and so pay handsomely for the privilege. And while that amount may seem like a huge one, it’s a literal tiny fraction of what that state owned company would have made over the next decade. The thing is, LNP have consistently shown that they are more interested in short term decisions that line the pockets of the 1% at the expense of what would have been money coming in for the state. So for a few years things will seem to be getting cheaper, we’ll be getting a few extra tax breaks and that’s good isn’t it? Sure. For the ultra wealthy. Eventually those in power will fuck off with all the money and leave the state depleted. That’s the legacy we’ll be leaving for our kids. But nobody gives a fuck about that. They want the money now. For themselves. Privatisation can be a good thing for communities. But these mining royalties should be Queensland’s lifeline, and LNP have a track record of putting off hard decisions for future governments, while stuffing their pockets with cheques from privately owned mining firms.
+22. Public sector is meant to do what is best for the public when providing a service. A private company does what is best for profit when providing a service.
+23. Ndis has a lot of private providers. Immediately rorted every loophole they could find
+24. You might enjoy reading Vulture Capitalism. It’s not an Aus perspective, but it has heaps of examples
+25. The simple answer is that a private company is looking out for its ceo and shareholders only. If you think electricity in qld is expensive you just wait and see what happens when it gets privatised. At the moment it’s a huge revenue earner for the government, even with a tonne of that money being reinvested into the infrastructure and maintenance. If it gets privatised. Maybe the maintenance doesn’t need to happen as often so save a few bucks. Maybe the forward planning doesn’t happen to save a few bucks. Maybe we can let some staff go. Maybe we can lift the kWh price higher so we can get more revenue for our manager. Fast forward 10 years. Prices have steadily risen. Quality of the network has dropped. Maintenance has fallen behind and unplanned outages are increasing. All while the government has been missing out on huge revenue coming in. So you’ve spent your loot, things are worse for the public. And now you’ve got no chance of buying it back Oh, unless it’s like Telstra. Where they just let the infrastructure get so degraded we eventually fixed it with nbn for them.
+26. Those underutilised tunnels in Brisbane are a great example. When I work at one of my client's site: $25 per day in tunnel fees.
+27. Thank you for asking and wanting to learn, we need more people like you casting votes and not people who take everything at face value without thinking first!
+28. Public exists to provide a service, Private exists to make money. Ideally the end result would be a better or same service without the direct cost to the government/public. Problem it is rare that it does with how greedy goblin private can get and the overall dollars saved/made in the short term loses out (often significantly) over the long term. What's likely to happen now is a further straining of public health services in particular, which won't effect the top end of town but will absolutely further the squeeze for everyone else who need or who's only choice is public.
+29. No learning allowed it seems. You’ve been issued downvotes. Things are very reasonable in here lol
+30. This is in theory: Cons: Privatisation results in private companies effectively taking a cut from government spending. Pros: Due to a profit incentive, it incentivises said company to find more efficient ways of doing things. A good example of where Privatisation works, is where competition is strong, either naturally (like bakeries) or artificially (like QLDs CTP system which makes you select from 3 insurers in a simple drop down box, forcing them to compete on price)
+31. The fact you were downvoted for asking a legitimate question says enough about Reddit.
+32. It worked out ok for rail.
+33. Where there is real competition, privatisation works really well. This is because us consumers can choose which organisation to patronise. This incentives then to keep prices down and innovate. This will always be more efficient that any government run organisation. **HOWEVER** where there is no real competition such as electricity then privatisation doesn't achieve anything. Electricity is generated by mainly govt owned organisations which is then transmitted by Powerlink (gov owned) which is then delivered to retail distributor Energex (gov owned) which is then bought and sold by your retailers such as Origin etc. So when they privatised electricity, all they really did was privatise the customer service division of Energex. These retailers get their electricity from the same places at the prices set, they don't have a choice. There is no real competition. There is no room for innovation. The consumer doesn't have a real and meaningful choice. If anything, this is to an increase of cost to the consumer because these retailers need to turn a profit to exist.
+34. Not sure if this will let me post, as I just created a throw away account. I work in a place that should be privatised in Queensland. We are sooooooooo over paid, thousands of us on between 200-350k and very little work is getting done. We are over paying contractors millions because we are so risk adverse. People in a lot of the roles don’t have qualifications either, they get in via casual roles, get made automatically permanent after 2 years, then internally employed before a role can go externally. Car park is full of 300 series land cruisers, BMW and high end cars. I do not want to privatise our sector, but honestly we could have 30% of the staff we have and do the exact same job. A few people went camping a few weeks ago and “worked from the camp site with their families”. I am part of it and enjoy the benefits, but I have to admit I labour has let the pubic sector run wild lately. We work close with other departments and we compare stories and laugh. It’s similar across a lot of them, not all. But there is just soo much fat to cut.
+35. Wishful thinking. They'll stay until "Wow Labor left things much worse than we could even imagine, we have to make cuts to pay for this reckless spending" (By reckless spending they mean lack of royalty income)
+36. Don’t count on it. Crisafulli will start whinging about how the state nEeDs To BaLaNcE tHe BoOkS, and how 50c fares need to be one of the first things to go.
+37. Dude, there's no way something this in the pockets of Gina the Hutt and the mineral council keep the fares. Say goodbye to nationalized petrol, school lunches, 1000 dollar energy rebates, renewable energy projects, and the 50 c fares
+38. You spelt weeks wrong there…..
+39. Bah they’re gone: There’s nothing the LNP loves more than cutting public services.
+40. Hahaha good one… wouldn’t be surprised if this is overturned by end of year.
+41. lol no they won't. They will slowly increase the price to trick people into thinking it's not much.
+42. Wait what?? I thought it was only 6 months?
+43. I hope so mate. Doubful
+44. That’s optimistic of you
+45. How quaint.
+46. I have a bridge to sell you.
+47. That’s optimistic of you given they plan on cutting the mining royalties which fund the 50c fares
+48. People cared at the time but it’s the period afterwards people care about. A lot of people’s perspectives are “too right, that’s their job. No matter what it would’ve sucked”, instead of thinking “wow you did a good job”. People have a short term memory with politics, often only care about the past 12 months if that, and they get stuck with the weakest talking points in their head - youth crime, Olympics, “independence for public workers” - while they promised to not go back on labor’s good policies (which I doubt).
+49. Unfortunately thats true. We need laws to prevent advertisement lies, and misleading information. We have more protection as consumers against false advertising than we do as a nation against false political information with huge financial consequences.
+50. Nice low energy prices you have there QLD, it would be a shame if someone were to privatise your energy infrastructure.
+51. The “0.1 percent” at best
+52. I'm so shocked waking up this morning tbh
+53. It's not that there are more morons here than in any other state but that we have more misinformation and disinformation here because of the overwhelming dominance of the Murdoch media and other right wing propaganda. People here sound like morons and make moronic decisions because they are getting so much bad information they literally don't know any better.
+54. There's been a huge influx of morons since our last state election
+55. Sounds like my old hometown in FNQ. People used to be pretty progressive and left leaning, however in the past few years they seem to have gone too far left and come out on the far right.
+56. It wasn't sailing along perfectly at all. Miles was installed too late. It's a shame he wasn't given a proper go.
+57. How so?
+58. If this is attempted sarcasm, it’s in very poor taste.
+59. I sincerely hope you get it.
+60. [removed]
+61. They voted for Robbie Katter, so they clearly did want the other hack :S
+62. Are your parents and friends as equally disappointed in your as the rest of us?
+63. No, it literally won’t with liberal being in charge.
+64. So much of the problem here was peoples political and economic illiteracy and not understanding the difference between state and federal policy and issues eg. Cost of living. Sure, we’re under a labour federal government but most of the complaints made about the state government have been federal issues and many of those are legacy issues from the previous federal government/covid/global economic issues. And even with that, the state implemented statewide measures to combat federal issues. Fortunately they can’t take away our $1000 electricity credit or discounted car rego, but we’ll see about 50c fairs and there’s a definite no go on school lunches for hungry kids. People are stoopid.
+65. Until your democracy becomes like the US where Republicans realistically shouldn’t ever win an election again until they purge the MAGA rot from their party’s.
+66. The problem is that most of us don’t actually read policy and just wanted something different. They don’t realise that when you get pushed in a hole, digging down won’t solve anything
+67. yep, and on the topic of COVID, the state recorded more cases of COVID once we opened the boarder to to other states within 14 days, then it had in the 2 years prior! people simply dont understand the government made tough choices to protect us and it actually worked!
+68. Yep same. I can't handle how volatile and reactionary qld is. Labor absolutely pulled us into the 21st century with its progressive reforms and now they're all at risk of being repealed.
+69. Ultimately they are just punishing the government that was in power… they’d vote in a stick and still think it was a good idea. It’s exactly this that got as the Newman government, apparently every now and then QLd just needs a reminder of what worse looks like.
+70. cause they don't know how to use google. and think AI images are real!
+71. So I left Queensland 10 years ago and only ever visit briefly but is crime *really* that bad?
+72. You forget Sonny, they got their’s, now to them it’s all about ensuring as few as possible follow them and share in the limited amounts of fiscal rewards they are enjoying but worry about maybe getting a little bit of a reduction in.
+73. >Boomers who don't care about the younger generations The LNP won a majority. Your post shows very little understanding of the population demographics in this state - boomers are a small minority. The voting ineptitude is much, much wider than the boomers. Ignoring the problem and blathering on about an easy target will just perpetuate the shitshow that we now are stuck with.
+74. Yep, I said this exact comment this morning. All because “labour has been in the position too long.”
+75. They really don't give a flying fuck about us do they?
+76. It's not about Boomers, it's about regional australians who don't feel like they're being heard and having their needs met (we're very much a fossil fuel state), hence the katter party & pauline hanson continually winning seats. We do also have a lot of higher earning people who want their high end needs met. I'm also really sick of this boomer rhetoric, it's a lazy cop out. There are plenty of right leaning younger people.
+77. Moronic statement
+78. You had me at: >because their partner says to vote for them
+79. Mate, I am just a boomer and I can't stand the slimy bastard. He brings me back and reminds me of the Campell Newman era.
+80. 🌶️🌶️🌶️
+81. Can't wait for all youth crime reporting to suddenly stop too.
+82. I mean yeah. Let's stop pretending that right wing politics is anything but stupidity and cruelty.
+83. A BUS THAT’S AT LEAST 20 MINUTES LATE ON A GOOD DAY, AT THAT
+84. Didn’t we all?
+85. An abortion after ectopic pregnancy?
+86. It has been, but that doesn't mean that it can't get much, -much- worse.
+87. This is the thing that upsets me more than the actual outcome - what it says about the society that voted for it.
+88. >Why would anyone want to go backwards? Have you ever been to towns like Roma? Fully stuck in the 1950s and don't want any change.
+89. Because it was better for them before. To me this isn't the worst outcome, because if Crisafulli goes to full Newman the electorate will turn on Federal LNP at the next election which reduces the probability of a DUTTON government.
+90. I'm all for a more progressive Labor party if they can get voted in, but Greens voters will much more likely preference Labor over LibNat. So going progressive might not have been the best strategy.
+91. Gonna be even more fucked if what you said is true.
+92. Yeah , fucked that this slimeball is now in charge . Good job
+93. Uh the people who still have to suffer through the shit?
+94. Remember this when you can't get into a GP or hospital.
+95. Perhaps the thousands of public servants who will probably get the sack?
+96. See you all at Parliament House in about 2 weeks then
+97. I’ve never been part of a protest. But the second they put up a bill to criminalise abortion I’m there.
+98. > They riot because the party in power fucked up. Meanwhile Macron has basically declared their election null and refuses to honour it, yet silence.
+99. If this is what it takes? Yes. Because like fuck am I going to allow your backwater state to dictate abortion policy to the rest of the nation.
+100. I’m from Townsville, the absolute shame of it. Fucking gutted. First we elect a fucked up Mayor, then the state election sees the whole fucking city flip. I did not vote for either, let me tell ya. Fucking idiots.
+101. Rich cunts voting for rich cunts
+102. It’s a plague of anti vax cunts down there. They’re stupid enough to be convinced that they had it tough during Covid and it was Labor’s fault
+103. Boomer retirement zones
+104. Dear rat boy
+105. That's a cruel thing fo say about Tom Jones.
+106. That has absolutely nothing to do with what i said? But im glad you can google something. Good job buddy
+107. Until they say "Now we've ditched the royalties taxes, good fiscal governance requires us to ditch what it paid for..." Election promises are not legally binding.
+108. ….yet
+109. Hopefully Milesy hangs around! I reckon he's a goodun.
+110. To be fair nats never got in again and ceased being a political power in qld, but yeah the lnp are the same thing now.
+111. But everyone here claims to speak for their families, friend groups and broader communities. You'd be forgiven for thinking the ALP was going to win all seats based on the echo chamber in this subreddit.
+112. They are also committed to scrapping the coal royalties, the thing that is paying for it
+113. Okay. Thanks for the reply. What do you think will happen now?
+114. The states can absolutely interfere with it.
+115. Boom. Mic drop
+116. We’re the same dumbfucks that keep voting in Tom Tate, seems like we all have our heads up our asses politically
+117. GC was already LNP / ‘independent’
+118. I suspect tou will also find its the high levels of new migrant population from both interstate and overseas on the GC contributing to the swings
+119. Best 500 I ever spent mate you won't regret it.
+120. Yes but what does the LNP do for north QLD?
+121. Point of order: you're here spruiking the opposite position, which is literally the definition of "Not an echo chamber". Just because there's more of one side doesn't make it an echo chamber.
+122. Is that all you’ve got? Was a typo.
+123. I’m glad it wasn’t just me that noticed it was happening. I have been in this sub for nearly 7 years and had never seen anything like it before. I respect all sides of politics but it was just too Labor focused and the disregard and abuse other redditors here received for an opinion is not cool. It felt very “American” and not something Aussies should strive to be or how we should act during an election cycle.
+124. The irony is the Gabba needs to be torn down either way. I'd love to see us make use of Victoria Park. Maybe in an ideal work, a big round stadium at Vic Park, and a +80k stadium at the Gabba site.
+125. Ignoring the actual direct benifits, and 'sports ball'. 1) it's an opportunity to build legacy infrastructure, imagine Melbourne without the MCG, this is probably the premier venue in the country for all sports, concerts etc. But also things like Bridges and other infrastructure projects get greenlit for a major global event like the Olympics. 2) it's actually about putting Brisbane on the map, Brisbane would enter into a pretty small list of Cities who have hosted an Olympic games, exposing Brisbane & Queensland to billions of people in a way that can't be bought. Granted, if we were Sydney or Melbourne, I'd be all for not hosting the Olympics, since the exposure likely isn't as valuable, and they've hosted the games before. But for Brisbane it's a once in 1,000 year opportunity.
+126. ![gif](giphy|WxDZ77xhPXf3i|downsized)
+127. Yas queen you tell the rest of Queensland that you are smarter and better than them! That always is the best way to win 👍
+128. The smoothbrain insult was removed from leftist argument firmware a few updates ago. Time for a new one.
+129. >try their best to be supportive of LGBTQIA+ rights. You're joking, right? Russia is seen as one of, if not *the* least queer-friendly countries in all of Europe. Last year they banned all LGBTQ activism movements.

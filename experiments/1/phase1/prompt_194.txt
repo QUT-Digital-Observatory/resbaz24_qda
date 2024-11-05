@@ -1,0 +1,163 @@
+Your job is to analye a series of Reddit Comments are drawn from sbumissions related to the 2024 Queensland State Election. The comments are drawn from a collection of comments before, during and after the election itself on the 26th of October. The parties that sought election were the Australian Labor Party (ALP), the Liberal National Party (LNP), the Queensland Greens (Greens), One Nation and Katter's Australian Party. The LNP prevailed in the election, with David Crisafulli becoming the new Premier of Queensland. 
+We have identified several key issues that the major parties campaigned on during the 2024 Queensland State Election: Youth Crime (YC), Cost of Living (COL), Health (H), Energy and Infrastructure (EI), and Abortion Laws (AL). Below is a summary of each party's position on these issues:
+Youth Crime (YC):
+- LNP: Advocated for stricter penalties for young offenders, including the 'Adult Crime, Adult Time' policy, proposing that serious offenses committed by youths be met with adult sentencing. 
+- Labor: Focused on rehabilitation and prevention programs, aiming to address the root causes of youth crime through community engagement and support services.
+
+Cost of Living (COL):
+- LNP: Proposed measures such as abolishing stamp duty on new builds for first home buyers and re-establishing the productivity commission to review building industry regulations, aiming to alleviate housing costs. 
+- Labor: Introduced initiatives like 50-cent public transport fares, a $1,000 energy rebate, and free lunches for state primary school students to ease cost-of-living pressures.
+
+Health (H):
+- LNP: Committed $590 million to an 'Easier Access to Health Services Plan,' aiming to reduce ambulance ramping and hire additional healthcare workers. 
+- Labor: Focused on maintaining and expanding healthcare services, addressing hospital capacity issues, and investing in new health infrastructure.
+
+Energy and Infrastructure (EI):
+- LNP: Criticized Labor's Pioneer-Burdekin Pumped Hydro Project as financially unviable and canceled it upon taking office, opting to explore smaller-scale hydro projects instead. 
+- Labor: Proposed large-scale renewable energy projects, including the Pioneer-Burdekin Pumped Hydro Project, to transition towards 80% renewable energy by 2035.
+
+Abortion Laws (AL):
+- LNP: Stated there would be 'no changes' to abortion laws under their government, maintaining the status quo established in 2018. 
+- Labor Party: Supported the existing abortion laws and opposed any attempts to repeal or amend them. Asserts that LNP intend to restrict access to abortion services based on the views of some of their members.
+
+Analyze Reddit comments and code them based on the positions they support or oppose concerning these issues. You will output JSON, so valid values are strings or null. Use the following codes: YC, COL, H, EI, AL. If a comment's position is unclear or does not pertain to these issues, output null.
+
+Secondly identify which party the comment appears to support. Use the party code ALP, LNP, Greens, ON, KAP if this can be determined, otherwise a null value if undetermined.
+
+Output JSON as a list of objects where each object has an "id" (integer) property of the comment id, an "issue" property set to the issue code string (or null value), and a "party" property set to the party code string or null value. Null means JSON null, not a string. Values MUST be quoted, e.g. {"party": "LNP"} unless they are null, e.g. {"party": null}. Comments follow:
+
+1. Women are the world's last line of defence against birthing idiot men. They need the choice, and people trying to stop their control in politics very well know if their mum looked back she wouldn't have had them after how they turned out. Imagine knowing the future and knowing your kid would be peter Dutton, would you keep it
+2. There’s nothing like creating divisive issues to piss off the population. None of their bullshit is worth dividing the country over… again.
+3. Oh goodie... the left wing media have a new non-issue to chant... There is no federal coalition push to criminalise abortion and no constitutional power to leverage, even if it was desired.
+4. I seriously want Jacinta to keep talking and spreading falsehoods about terminations as it'll send Dutton's chance of becoming PM plummeting. I'll take any reasonable human as PM over someone like Dutton. Also, it'll be a massive fall from grace for Jacinta considering she seems to care about womens rights so much. As they say; play stupid games, win stupid prizes.
+5. Never stop an enemy from making a mistake.
+6. Please if their god is real let it happen.
+7. Which will also attack Trans Peoples access to medication. If you notice, they keep saying "Women", "abortion" and "pregnant". Therefore treating Trans Men as Women. Which these Men are not. It is a telltale sign they will attack the Trans community. Medical decisions do not belong in politics
+8. Religion.
+9. They're getting paid lots of money under the table by the church
+10. It's all about control. They even try to manipulate and control god when they pray. Religion has always been about control.
+11. I'd say the only one they don't check right now is Fraudulent Elections, and only because the AEC and various state Electoral Commissions haven't quite been corrupted by them yet.
+12. Which two are missing because i can think of examples for all of your points.
+13. yeah at this rate, the Coalition is probably just going to bleed more seats to independents, because they keep shifting right and abandoning moderate positions
+14. The media would blame the child and create some justification for forcing abused children to give birth. Something something adult crime adult time.
+15. Within a week of the ban, no doubt. This happens all the time.
+16. Funny how she hasn’t recognised that she’s only a token for the Coalition.
+17. Yes
+18. Or virtue signalling that you’re religious, I doubt a single one of them has ever lived their lives like their Bible told them to. It’s OK to sin for 6 days of the week as long as you pray on the 7th.
+19. Actually, there is an LNP plan to corrupt those systems. Crisafulli wants to change the preference voting rules to potentially rig future elections in the LNP’s favour. At the last debate, he called the current voting system “corrupt” https://www.theguardian.com/australia-news/2024/oct/16/queensland-election-david-crisafulli-lnp-developer-donations-ban
+20. How would we know if an election was fraudulent? I can remember a few times where things were done differently and much to the electorate's shocked surprise the LNP were returned *again*.
+21. Someone has their hand up his arse, he seems to be going for broke to shit on conventional procedures
+22. Essentially yes. Votes are sorted first by where the vote 1 is. In your case, there will be eight piles, 1 - 7 and informal. ECQ will tally the first preference votes. The lowest candidate is excluded and their votes are redistributed where the 2 is. The process continues until one candidate has 50% plus one votes. This is done at the booth, and both the first preference results are sent to the ECQ, the media, and sent to the parties by their scrutineers. A full booth count is performed by exhausting that process.
+23. Tomorrow night they do an "indicative" count. This is an unofficial count, and it's just done for the folks watching on TV etc hoping to get a result tomorrow night. To my knowledge the indicative count is pretty accurate. An official count is done in the days and weeks following the election, and it's the official count that really determines the outcome. How do preferences work? Once voting finishes, at 6pm tomorrow, each polling station dumps all the ballots into a big pile. Election staff, watched by scrutineers from some/all parties, then look at each ballot and sort them into formal and informal votes. Informal are ones that haven't been filled out correctly. Then the staff make 7 (in your example) piles, based on who everyone put the number 1 spot. 7 candidates, 7 piles. They then pick up the smallest pile, as this candidate is treated as if they can't win. This small pile is then redistributed, based on who these voters put number 2 (remember, their number 1 was eliminated). Now there are 6 piles. Repeat again. Smallest remaining pile is picked up, that candidate is "eliminated", and those ballots are redistributed to the remaining 5 piles. Repeat until 2 piles left. This is what we call "two party preferred". Why isn't the indicative count official? Every division has lots of polling places. My division has about a dozen. But on the night, each polling place only sees their own pile. To work out the actual smallest pile, all of the ballots from all of the polling places in each division must be bunched together. Each of the 12 (for example) polling places might have a different "smallest pile", based on luck etc. So all of the ballots are moved to a central counting place for the official distributions. Also, when doing formality checks, there are disputes, or some that aren't clear. These are re-checked by full-time election staff who know what they are doing, rather than the on-the-night check by casual/temp election staff.
+24. The greens being last on an LNP how to vote card is purely optics as murdoch has made the greens the enemy. As for counting every vote is counted and sorted into its 1st preference. After that if no one has over 50 percent any candidate that can no longer mathematically win has their votes recounted on the second preference this continues until one person is the winner with over 50 percent of votes. The most important thing to remember is the percentage of first preference votes is what decides that party’s amount of funding from the electoral commission next time. In that sense it’s why you vote for a minor party that may not win your seat as number 1 then the major you like as no 2
+25. Id expect on avg that lnp put greens last because lnp are ideologically more aligned with labor than the greens.
+26. I thought they would sort the ballots based on the party that got 1 in their box. So essentially there are 7 piles and another pile for informal votes. I am confused on what happens to those that got 2, 3, 4 etc. How are those counted?
+27. I wish we could number just one box. Having to give recognition to the rest of the loonies was frustrating
+28. Yep the 1s get put into piles after the counters have sorted throughfor informal votes. Then the smallest piles get resorted based on second preference and so on until there's 2-3 big piles. The whole process is observed by party scrutineers who can raise concerns if they feel like the numbers have been misinterpreted or informal votes haven't been counted properly. That's interesting they put the Greens last. Usually major parties put eachother last.
+29. In the seat of Moggill it's likely going to be LNP vs Greens. Better to put them last strategically.
+30. Ok this is useless AEC! https://www.ecq.qld.gov.au/elections/how-are-the-votes-counted
+31. The unofficial preliminary count on election night, the election staff at polling places will count all first preferences on the ballot, and publish those. Later on in the night, the ECQ will tell the electoral staff the two candidates that are most likely to win the electorate and then count those, that is the indicative count, and is also an unofficial count. In the next ten days after election night, the ECQ will do an official ‘full preference count’ which will count all first preferences, if no candidate with 50% of the vote, than the last place will be recounted with their second preference, and so on until a candidate has over 50% of the vote.
+32. 7?
+33. Booth only advises ECQ and scrutineers who're observing anyway
+34. Thank you
+35. It’s also the antisemitsm
+36. This explains it well https://www.chickennation.com/voting/
+37. Pretty much that. Once they’re separated, if no candidate has 50% then they take the candidate with the fewest and redistribute based on preference. Rinse repeat
+38. Ones counted first Then the 2nd preferences for the candidate who got the least votes are counted and distributed. And so it goes...
+39. ?7?
+40. Oh, we would alert media if we were winning :)
+41. We being scrutineers? Yes. But not "we" the ECQ officials.
+42. You are correct, yes, I phtased poorly.
+43. Creep, answer the question!!!
+44. He’s a bit of a sniveling cunt…. A touch of the Campbell Newman asshole about him
+45. "I thought you were a voter!" She is! You'll just never get hers.
+46. It’s a democracy innit? Freedom of speech and blah blah. She’s allowed to ask questions that you don’t like lol Also loved how CM put her down as a “Labour volunteer masquerading as a voter”…sooo…a voter? Ahaha
+47. My vote would be counted as a sure thing for LNP statisticians. I'm an early 30's, white male in a Defence adjacent industry, I have prior mining industry experience, with strong family ties to it, and a vested financial interest in the performance of producer price indexes. I'm hopeful that there are other's like myself out there who, even if they have been LNP Voters in the past, can see the absolute train wreck we are headed towards. Don't let facts get drowned out up by the noise, fear and doubt. Use your own critical analysis and do what's right, not only economically, but morally. To all the Husbands, Fathers, Brothers, Uncles and all Men... Don't let the women in your lives down. To all the people doing it tough at the moment, struggling to put food on the table and hoping a change to the LNP will help you, it won't, they never have and never will be a party for the people. Remember to vote tomorrow, and whoever you vote for, be respectful to the polling assistants and let's pull a 180 on this waiting disaster.
+48. The fact that this absolute wrong’un will, barring a significant upset, be Premier-elect this time tomorrow is an awful reminder of NewsCorp’s influence. Queensland Labor are *objectively* a world-class political party; their incumbency is a major positive of being a Queenslander at this time…and our voters, many of them misled are going to turf them out. To add to the frustration, I get home to my s/o’s family laughing about their donkey votes. 🤦🏼‍♂️
+49. I can understand females of all ilks feeling a bit "desperate" at the moment with an actual chance of these Neanderthals getting into office.
+50. Desperate to find out the truth I’d think.\ Something that isn’t come from him or anyone in his party.
+51. Scariest thing is how many people voting for him have just as much contempt for other people as he does.
+52. Who cares if she’s a staffer? Answer the question.
+53. It genuinely pissed me off to see women campaigning for LNP. They grew up in religious whacko households and were effectively brainwashed into becoming subservient housewives. I understand how that can severely fuck up your life and your mind but it's just so hard to see women voting and helping the people who will end up killing them. Abortion bans kill women.
+54. Calling her 'desperate' just shows he can’t handle the heat. How about answering the question instead?
+55. Classic mansplainig shit. Women in QLD are terrified we are going down the Donald Trump bullshit of outlawing medical care for women who want to terminate pregnancies early on or be able to go to a hospital and terminate if it's later on and poses a risk to their lives. This isn't fucking rocket science. No conscience vote by a majority of bible thumping men will stop women from saving themselves and their lives from hardships and hurt and death. The fact that that shitty little elf dodges the question and accused her of being a Labor plant when she confronts him is par for the course with him. He's never been equipped to be a leader. Fuck him
+56. What a dickhead. Calls people desperate when they question life changing policies! Never seen such a cunt b4
+57. i believe he sharted himself at woodridge hungry jacks right after this
+58. This is the same level of cringe as Scomo forcing a handshake on a bushfire survivor
+59. Not a Queenslander, but if these religious LNP freaks get in, it will be a sad day for Australia. Queensland will re-cement it's old reputation as being 'backward'. Please don't become Australia's equivalent of the US bible belt.
+60. Courier-Mail playing for their team. Shameless favouring of one Party over another. No hiding it, in plain sight. When will people learn. Politicians arent your team mates. They're public servants, nothing more. Our media is so corrupt
+61. According to these conservative plants they are crying about THEIR rights as old asshole white men It's hilarious Schadenfreude, motherfucker
+62. Everytime the LNP shoots itself in the foot I place a $20 bet on Sportsbet on Labor This is either the best idea I've had or the worst. I'll know in a while after I am or am not 2 grand richer
+63. Wow wee
+64. Abortion is murder. End of story.
+65. Look those have kids l don't care about,god and universe didn't let me have children so an old saying tough titties,only interested in cheaper houses,land.
+66. Wow it's getting desperate
+67. Planted stooge. ABC?
+68. I hope the LNP win and introduce some sort to truth in political advertising, the straight out lies told by labor in this campaign are just ridiculous
+69. Come on people, this was a clear attempt by Labour to get a cheap sound bite. Both sides do this shit. He called her out on her intentions, she wasn’t there in good faith. Both parties need to hold themselves to higher standards.
+70. She's an ALP plant just causing trouble.
+71. Desperate scare campaign. Thankfully only lefty nuts like this woman are affected. She's probably also a Labor staffer.
+72. [deleted]
+73. He has. Multiple times.
+74. More than a touch unfortunately.
+75. A bit???? Try '100%.
+76. touched Campbell Newman's arsehole?
+77. Crisafulli has a poor temperament. He can't handle opposition at all.
+78. Get with the program! Votes don't count if they aren't for the Liberals
+79. [deleted]
+80. I mean is she a volunteer, felt more like an assertion.
+81. Redditors are usually the first to point out that "akchuly Australia doesn't have "freedom of speech"" whenever that's brought up people on the right.
+82. Can you refer to them as the LNP please? Referring to them in the manner you did is really dehumanising for Neanderthals
+83. Can you refer to us as “women” please? “Females” can be referring to any animal or organism - it is very dehumanizing.
+84. We can have caveats in anti-abortion legislation that makes allowances for medical emergencies. At that point, if the doctors are still too cowardly to perform life-saving procedures, that is not our fault.
+85. I'm an Allied Health Professional in a regional area with enormous demand for my profession. If LNP win tomorrow, I start my plan to leave this state. If the QLD govt want the privilege of having working professionals living here, and paying taxes, I think basic human rights should be the bare fucking minimum, including the right to decide what happens to my own body.
+86. He could just answer the question properly and confirm if there will be a conscience vote or not instead of digging himself a deeper PR hole.
+87. I will be asking my LNP member tomorrow so I can decide if I want them to be 5th or 6th. Cheap sound bite or not, women are asking these questions because we’ve heard enough weasel words.
+88. Are you saying he shouldn’t have to answer a question because it was asked by someone from the other side of politics? You know that is one of the principals of our system of government right? Being held accountable by the opposition is part of the Westminster System of goverment.
+89. Then be a professional “premier elect”, answer the question and move on. If he can’t handle this so called move that both side try on at all time on not even his first day then maybe this isn’t the job for him.
+90. It's a scare campaign that would easily fall on its ass if he just grew a pair and confirm he's not allowing a conscience vote on abortion. Unless of course his plan is to actually allow one like he stated a year ago and what happened previously, in which case it's not a desperate scare campaign but a very real genuine threat given that 93% of LNP MPs voted against abortion including this guy who's now in charge. He knows he can't answer the question properly though because he'd have his MPs defect who want to ban it again. That's why he constantly dodges it.
+91. Wtf are you trying to say? Wordsalad bs.
+92. And then immediately started weaseling his way out of answering the conscience vote question and didn’t answer why he voted against abortion in the past. Judge people by their actions, not their words.
+93. Yeah the top issue is cost of living like how labor put in the $1000 energy rebate and 50c fares and plan to give all primary school students free lunches. And the lnps plan is to... Oh wait they haven't actually got any policy around that 🤯
+94. Your second point is important to remember. Especially LNPs policies to de-fund renewal energy and raise energy prices, de-fund healthcare to raise healthcare costs, increase prison populations at a cost to the taxpayer. All of this and more with no plans to reduce the cost of living.
+95. Oh yeah, when someone has voted yes to an abortion ban twice before, then avoids the question 120+ times, when they finally say no we should believe them on the spot! What a fucking stupid ass goddamn country we live in.
+96. That's not an answer. He will still vote to ban abortion, despite what he said he "believes"
+97. Oh I'm sorry good sir, the cost of groceries is more important than stripping women of their rights to free and safe healthcare? *Tips fedora* Good day, kind sir, may you choke on your overpriced avacado
+98. Yeah I think we can all agree a woman should have the right to choose. That's easy politik doublespeak. Don't buy into it. He knows what he's doing using that language. Because when he *was* asked if he believes in pro-choice or anti-choice, his answer was "it's, uhhh, not in the plan, uhhh." Bloke is as trustworthy as a wet bill.
+99. Probably would have been more respected if he just said no, we all know the yes is a lie, so now he is a person who disrespects women AND is a liar
+100. Well he has answered it: "It is not in our plans" "I'm pro choice" These are all answers, but they're not answering the question. A simple "No" or "Yes" would answer the question properly.
+101. At least once. Kinda. STOP ASKING ME!!!
+102. That's part of politics, repeating your message. Maybe he's not suited for politics.
+103. He was Can-Do Campbell's protege He's holding a Newman style bag of tricks The guy's oilier than a dipstick
+104. They call it “the Tunnel”
+105. Probably not considering she is a woman with a brain
+106. Technically it doesn’t but she’s speaking anyway and no one’s gonna punish her? So it’s allowed? You know what isn’t allowed? Hate speech. Which is also what some people exert all while under the supposed banner of freedom of speech that doesn’t exist anyway
+107. Thank you. 'Males' don't get it.
+108. Please accept my apologies. I had no idea that females was considered an offensive terms. I’ll just go with Sheilas from this point forward :)
+109. >We can have caveats in anti-abortion legislation that makes allowances for medical emergencies. Except conservatives never fucking do. Women are dying in the US because of these stupid fucking bans. In places where their leaders said they would make exceptions and didn't. Conservatives are the same everywhere, they do not give a shit about human life. Women WILL die if this ban goes through.
+110. They are welcome to say that's what they want then but they aren't. I don't think this is an instance where we give the benefit of the doubt.
+111. I'm very anxious about my healthcare work tomorrow too, hopefully the people pull through cause I love working here compared to NSW
+112. The resources that North Queensland has are already being run dry. Medical, Education, Social, etc. I really hope you don't leave but I can't blame you if you do.
+113. He answered the question multiple times, labour hanging on by their fingernails on this one. Majority of people in Queensland would put abortion laws about 10th on their list of priorities, if you are lucky. I respect Miles for having a crack over the last few months to make it close, but this issue will not decide the election.
+114. She pretended to be a concerned voter just passing by. He answered the question on sky news debate, she got media attention, job done.
+115. [deleted]
+116. How do we get that on a billboard? I have $5
+117. I don't think they meant that abortion being threatened isn't an issue, just that it being spun into an issue at all is bullshit. We have actual important shit to worry about it and all of a sudden an idiotic segment of our society's religious objections to a medical necessity is taking focus away from real problems like having a place to live or being able to afford food.
+118. To be fair, [he said yes a couple days ago.](https://www.reddit.com/r/brisbane/s/Wb39XKX0YC) Fuck him though.
+119. How is “there will be no changes,” not sufficient?
+120. Blugh-y being his deputy says it all. Worst AG ever.
+121. [deleted]
+122. Hate speech is just speech that offends you/a group. So why is screaming about abortions not *hate speech* in the context of it being considered similar to murder by people of certain religions, surely that would be offensive/hateful to them?
+123. Or you could use “women”? I also work in a corporate environment, and have never come across anyone requesting that “females” be used instead of “women”. Do these people also have a problem with the term “men”?
+124. We do give a shit about human life, that's literally why we want to stop abortion. The cases where women died were mainly because doctors were too afraid of litigation even when they had no reason to be. We could make another addendum saying that doctors are not only allowed, but obligated to perform abortions when the mother's life is at risk, but I suppose you'll say that creates a situation of "Damned if you do, damned if you don't."
+125. We don't want to kill women. You are free to believe whatever you want to believe. Pro-choicers think that we don't actually care about lives lost to abortion and that we're just looking for an excuse to be misogynist, which is hilarious.
+126. Have you spoken to women about this? Every woman I know is quite concerned about the prospect of the recriminalisation of abortion, and what that would mean for women’s reproductive health care going forward.
+127. Do you think opposition and concerned voters are mutually exclusive? Do you think politicians should only have to answer questions when they appear on a television network sympathetic to their ideology?
+128. Is it captain obvious day?
+129. Yeah, reproductive rights is apparently bullshit. Take your neckbeard Halloween moustache
+130. Down vote if you want but the inconvenient truth is the sth Australian labor party have allowed conscience votes because late term abortions deals with babies and who is speaking for them. It shouldn't be a political issue in an election, it's disgraceful. Here a midwife explains the reality to SA parliament for you down voters thinking qld is special on this issue. [midwife explains ](https://x.com/ProfJoannaHowe/status/1825512694507814970?s=19)
+131. He still hasn't ruled out a conscience vote.
+132. Well just like at Guantanamo bay, when ya put em under the pump they’ll say anything
+133. Well if there will be no change he can say the LNP will vote against the Katter's motion/private members bill. He has purposely chosen to not say that.
+134. Because it doesn't address the fact that Katter plans to introduce a bill to recriminalize abortion, and that Crisafulli has said before that the LNP would be allowed a conscience vote on abortion issues. 93% of the LNP voted *against* decriminalisation in the first place, including this little weasel, so he needs to outright say *"The LNP will vote against recriminalising abortion"* if he wants to actually rule it out. *"That's not part of the plan"* and *"there will be no changes"* don't cut it, he needs to be very fucking clear on the LNP's position on this.
+135. No changes put into parliament by the LNP, but by jingo if(when) Katter puts it forward you can be sure every LNP minister will line up behind him to ban abortions post haste. That there is where people are at with not believing him.

@@ -1,0 +1,170 @@
+Your job is to analye a series of Reddit Comments are drawn from sbumissions related to the 2024 Queensland State Election. The comments are drawn from a collection of comments before, during and after the election itself on the 26th of October. The parties that sought election were the Australian Labor Party (ALP), the Liberal National Party (LNP), the Queensland Greens (Greens), One Nation and Katter's Australian Party. The LNP prevailed in the election, with David Crisafulli becoming the new Premier of Queensland. 
+We have identified several key issues that the major parties campaigned on during the 2024 Queensland State Election: Youth Crime (YC), Cost of Living (COL), Health (H), Energy and Infrastructure (EI), and Abortion Laws (AL). Below is a summary of each party's position on these issues:
+Youth Crime (YC):
+- LNP: Advocated for stricter penalties for young offenders, including the 'Adult Crime, Adult Time' policy, proposing that serious offenses committed by youths be met with adult sentencing. 
+- Labor: Focused on rehabilitation and prevention programs, aiming to address the root causes of youth crime through community engagement and support services.
+
+Cost of Living (COL):
+- LNP: Proposed measures such as abolishing stamp duty on new builds for first home buyers and re-establishing the productivity commission to review building industry regulations, aiming to alleviate housing costs. 
+- Labor: Introduced initiatives like 50-cent public transport fares, a $1,000 energy rebate, and free lunches for state primary school students to ease cost-of-living pressures.
+
+Health (H):
+- LNP: Committed $590 million to an 'Easier Access to Health Services Plan,' aiming to reduce ambulance ramping and hire additional healthcare workers. 
+- Labor: Focused on maintaining and expanding healthcare services, addressing hospital capacity issues, and investing in new health infrastructure.
+
+Energy and Infrastructure (EI):
+- LNP: Criticized Labor's Pioneer-Burdekin Pumped Hydro Project as financially unviable and canceled it upon taking office, opting to explore smaller-scale hydro projects instead. 
+- Labor: Proposed large-scale renewable energy projects, including the Pioneer-Burdekin Pumped Hydro Project, to transition towards 80% renewable energy by 2035.
+
+Abortion Laws (AL):
+- LNP: Stated there would be 'no changes' to abortion laws under their government, maintaining the status quo established in 2018. 
+- Labor Party: Supported the existing abortion laws and opposed any attempts to repeal or amend them. Asserts that LNP intend to restrict access to abortion services based on the views of some of their members.
+
+Analyze Reddit comments and code them based on the positions they support or oppose concerning these issues. You will output JSON, so valid values are strings or null. Use the following codes: YC, COL, H, EI, AL. If a comment's position is unclear or does not pertain to these issues, output null.
+
+Secondly identify which party the comment appears to support. Use the party code ALP, LNP, Greens, ON, KAP if this can be determined, otherwise a null value if undetermined.
+
+Output JSON as a list of objects where each object has an "id" (integer) property of the comment id, an "issue" property set to the issue code string (or null value), and a "party" property set to the party code string or null value. Null means JSON null, not a string. Values MUST be quoted, e.g. {"party": "LNP"} unless they are null, e.g. {"party": null}. Comments follow:
+
+1. Fair enough. But leopards don't change their spots, if they voted against decriminalisation before then I'll take that as a marker they'll vote for criminalisation again. I might be wrong, and I hope I am, but politicians generally go downhill not up. If a politician has already signalled they are halfway down the hill I'm not going to hold hope that they'll climb up.
+2. As opposed to things like the courier mail or news.com
+3. Makes you wonder if that candidate was so open about it how many have the same view but just don't blab it in front of a camera
+4. https://www.theguardian.com/australia-news/2024/oct/18/qld-election-2024-freya-ostapovitch-lnp-stretton-candidate-abortion-ntwnfb Google is also your friend how about a video recording is that credible enough for you
+5. Making a "joke" about victim trauma (where did the bad man hurt you) is so on brand for LNP voters it's sickening. Saying "he said it won't change" when 95% of the LNP voted against decriminalisation in 2018. One Nation and most of the independents also voted against decriminalisation. It took the republicans 30 years to overturn Roe v Wade. Don't think conservatives don't want to drag us back to the 1950s here as well. But you probably don't give a monkey's because it doesn't affect you right?
+6. Why are you implying that someone hurt me?
+7. https://www.theguardian.com/australia-news/2024/oct/18/qld-election-2024-freya-ostapovitch-lnp-stretton-candidate-abortion-ntwnfb Apparently that view isn't mirrored in his party
+8. That's literally called birth. If the baby can survive outside the womb and it is removed from the womb then the baby is just born. No one is actually killing a perfectly healthy baby that is capable of surviving on its own.
+9. I will call out dog whistles as i see them.
+10. There are no orphanages. We don’t do that and haven’t in decades. You don’t sound informed enough so maybe keep your opinion to yourself.
+11. You can’t imagine, say: a domestic abuser raping and impregnating the victim? Is that not the most likely way this would happen?
+12. Firstly, that isn’t a defence of your position on the topic, it’s an oversimplified (and emotionally charged) statement used to detract from the discussion points I made above. Secondly, if already existing children are in position where they are exposed to domestic violence against their mother or they have been the victim themselves, should their wellbeing become irrelevant because of a 12 week pregnancy? Keep in mind that many pregnancies in DV situation are the result of coercive behaviour - woman feels like she must have sex with her abusive partner to keep him happy and avoid him becoming violent. Or he simply just rapes her. So what do you want from women? That they put up with being tied to an abuser for the rest of their lives? Because even if she gets away from the relationship with the baby, she will still have to ‘co-parent’ with an abuser because ‘he’s changed’ and ‘kids deserve to have their father in their lives.’ At the end of the day, the only time abortion should be your business is if it is you getting one. So if you are so vehemently against them, just don’t get one.
+13. Don’t bother. The left will never see an unborn baby as a human until it’s out of a uterus and even then they’ll still try to abort it out of habit. To them it’s a foetus until it’s breathing on its own and removed from the umbilical cord. An inconvenience for most of them and a hindrance to others.
+14. As the offspring of someone who suffered a lot of domestic violence, you'd be surprised how many folk don't give a rat's ass about how they get laid, so long as they get laid. Nagging is coercive control. Withholding affection is coercive control. It's more subtle a lot of the time than punching someone in the face and then forcing them into bed.
+15. Only a tiny minority of rape and sexual assault cases get prison time. How about we stop shaming her and keep access to abortions safe and accessible for all who need them?
+16. Yeah mate that’s what a walking red flag would say.
+17. I think being one is even worse. So go and sit with that before you put your mouth in it even further.
+18. Except ..they still didn't give the costings,it was more the vibe of the costings..
+19. Having lived in the north, can confirm (Thankfully escaped to Victoria)
+20. I've always described QLD as Australian Florida to my yankee mates
+21. More like cuntservatism
+22. That’s the problem with all politics these days, not just conservatism.
+23. Forcing more people to be homeless so you and your fuck-ass mates can swoop in and turn them into rentals?
+24. If I recall correctly (and I absolutely do), Miles implemented 50c fares, $1000 energy bill rebates, rego discounts, opened satellite hospitals and nurse led clinics, decriminalised abortion and more. He was in the process of also doing a lot of things that would benefit the state. So no, he wouldn’t have fucked us over.
+25. this guy: I DONT READ ANY POLICY WHATSOEVER also this guy: HAHA BOFE ARE BAD SUCK IT
+26. Woof woof big dawgg
+27. Or they just don't care that people live with that fear. They're fine with it because it's people they consider "lesser" that have to be afraid.
+28. Or men, who are 100% responsible for all unwanted pregnancies, can have a vasectomy when they become sexually active and have it reversed when they want to have kids. Why are women always blamed and expected to take 100% or the responsibility to stop unwanted pregnancies?
+29. Its not about evidence, most of the people here have no ability to research, its just about he said she said oh be ashamed you did this or didnt do this. Do they have any proof to substantiate it. Pfft yeah itd be whats substantiate mean.
+30. When Palaszczuk did the conscience vote, the majority of seats were held by Labor members who support reproductive rights. That wouldn’t be the case now. And it doesn’t have to be doomsday to have negative consequences like women dying or being baby-trapped in abusive relationships. How many deaths are you okay with for the sake of lower taxes for yourself?
+31. Yes and when there was a conscience vote all but three LNP members voted no. And one of those has retired now. Scuse our scepticism around this issue, especially when people like Amanda Stoker, Kerri-Ann Dooley and Donna Kirkland have all been elected and have been pretty explicit on the topic
+32. It’s not “the truth”. Just an ignorant arsehole opinion better left unsaid.
+33. And that's awesome for those living in SEQ - the other 50.7% of QLD residents have much more limited options. Decriminalisation opened up public health facilities in our regional areas to offer affordable and accessible reproductive healthcare, and any rollbacks resulting from the proposed member's bill will only disadvantage regional QLDers even further - some of the private clinics that previously offered abortion services have since closed down due to its availability through the public system. It will take years to implement solutions and unwanted pregnancies are obviously a very time-sensitive issue. We will be even worse off than before if this bill comes to fruition, and having it brought back to the table will almost certainly inspire further debate on restricting bodily autonomy - don't think that city folk are safe or that they're the only residents that matter.
+34. I voted for miles but still... get a grip love
+35. Did I mention them? No. But they are still marginally better than that trash
+36. So by that metric, the greens are universally for Beastiality and Necrophilia then? Biiiiiigg stretch there bro.
+37. 🤣🤣🤣🤣🤣 not an lnp voter. Nope I don't care about made up crap nor what the US has done. That's for them to decide. Nothing funnier than lefty meltdowns about whatifs.... Grow up.
+38. Using the experiences and trauma of sexual assault victims to discredit someone you don’t agree with is both reprehensible and disgusting.
+39. That’s also a lot older of an article. Also, source is The Guardian.
+40. Glad the LNP won if this is what the left stoop to.
+41. Then maybe we should start building some it would definitely help lower abortion rates to acceptable levels
+42. If that's the case, yea sure, go ahead and abort, but I doubt an abuser would let that happen
+43. You say DV they give you a house and money in Australia. An yes just because somebody is in DV isn't reason to commit violence against a defenceless human.
+44. [removed]
+45. What’s changing?
+46. Where did it say rape?
+47. A concept of the costings.
+48. Ever been to NT?
+49. That's all they did with YOUR tax money?
+50. I'm glad I could upset you so much.
+51. This too. The blame and shame is always on the woman.
+52. Regional Qld has always had a problem with access to any healthcare unfortunately.
+53. You seem kinda angry.... why is it okay to be angry but not sad? Why are you such a rude jerk to strangers on the internet? Is your life really so shitty that you have to be mean to others for no reason other than to feel good about yourself? I feel sorry for you, hoenstly.
+54. And that tells me all I need to know about you
+55. Right you're a cooker makes sense 🙄
+56. ABC is hardly unbiased either since scomo was in
+57. Women are not baby incubators. If they don’t want a foetus in their body, you can’t force them. Go outside and get some fresh air and talk to a real human.
+58. An abuser wouldn’t let them abort, or wouldn’t let them get pregnant? The original post here is about a woman in a DV situation secretly getting an abortion. It’s probably not easy, but it’s possible. It’s not uncommon for abusers to make their victims have their children. It makes the victim even more vulnerable, and makes it harder for them to leave. It benefits the abuser. Even if they don’t actively try to get them pregnant, they have no motivation to use protection.
+59. You are purposely ignoring most points I have made. I truely hope no one you love is ever put in a situation where they need to make a choice like this because I can’t imagine you would offer much support either way.
+60. Oh, fuck you. If my mum could have aborted her kids, she'd have been in a better situation. If it isn't enthusiastic consent, it's coerced.
+61. Your comment and your attitude says "I'm a rape apologists".
+62. Such a great reference lmao
+63. You mean the state that is not Queensland? Yeah, I've been there. Correction: "territory"
+64. Coal royalties, actually. Better the everyday person gets some relief than the rich getting richer. Why do you think the mining companies heavily heavily backed Libs.
+65. That's what taxes should be spent on mate Oh no, my taxes are paying for healthcare Oh no, my taxes are helping the poor and impoverished Oh no, more people are using public transport and I don't have to weave through an hour of traffic for a 10km drive And not to mention alot of this came from mining royalties that will soon be abolished as well as the state having been in a budget surplus Not for long
+66. We’re paying tax regardless, it isn’t MY money or YOUR money, and I’d rather it go to schools, infrastructure, health care and cleaner state owned energy. But that’s me personally. Hence you vote at your discression.
+67. No one's upset we're just laughing at you. If it's becoming too hard to write full sentences..... everyone here thinks you've said enough... Go waste our oxygen seeking something else... Grown ups are talking now. Go play in the road
+68. Womp womppppp
+69. Not that either champ. Again with the leftist smears.... enjoy the next 3 terms...
+70. Yeah well ABC is certainly left wing biased. Was actually funny seeing them get their hopes up last night to have it crash on them.
+71. Lol, if they are not incubators, then teach to say no to sex or have protection simple 🙄
+72. Bruh, dr's are going to ask questions, and the victim is going to be alone, which is a risk
+73. I find it funny that you advocate for killing babies yet are trying to make a stand on a moral high ground. An thanks for wishing me the best travels.
+74. I'm all for it, as I am for financial abortions for men who get baby trapped.
+75. But then we’d have lost your advocacy .. are the siblings you mentioned strong as you too?
+76. What I'm saying is, Territorians in my experience are way closer to Floridians than the QLDers are.
+77. Why do you think any of them serve your best intrest, is it because one side has a couple of policies you like? They'll all sell you down the river when the time comes.
+78. lol you think this literal jizzstain that evolved from a sock on the basement floor and somehow gained sentience enough to use a device to talk on the internet ever goes outside their house to use public transport rofl
+79. Your taxes will be spent how they want, you don't have a say.
+80. You don't even read what I write. I don't support any party or candidate. Neither side is better or has your best interests at heart. Two sides of the same coin. It works in your favour honestly, now you can understand why nothing ever really changes for the better.
+81. Upset
+82. Just a reminder of how upset you were yesterday.
+83. Why are you avoiding very basic questions and responding like a child? Are you a child?
+84. Even if they were how does that make up for how much of the media is bias towards LNP
+85. Males hate condoms though
+86. Stuff it, mate. If you can't understand that people can be coerced into sex - aka rape - by non-violent means, I don't want your false sympathy.
+87. They're a different flavour of nut, but they didn't spawn Hanson and company
+88. Not going to address the coal royalties point? Always like following along in these posts to see people like you come undone at the first point you have to critically think about what you are actually supporting.
+89. You have a say by voting. That's the whole point
+90. What's your point? One side buys its popularity?? well that's what politics is all about! Do you think we should like the party more that's taking the 50 cent fares and putting in the bank accounts of overseas mining companies?
+91. If “I know you are but what am I?” was a person, it’d be Muted_coffee lol
+92. It doesn’t. It’s not what we are talking about out here either. All I’m saying is ABC certainly isn’t right wing biased lol. They are even pro green before they are pro LNP.
+93. Only the stupid ones do. If they don't want to wear condoms than say no
+94. So you fundamentally can't understand what I said? Keep thinking it's about mining or I support mining or I come from a mining background. Changes nothing about my point, I hope you get want you want down the track so you can see it's two sides of the same coin. Lmfao syke it's me Gina.
+95. Keep telling yourself that.
+96. I love having so much power to make you all react it's hilarious. How was your weekend darling?
+97. That's why they are muted ;)
+98. Yeah like they’ll accept a no 😂
+99. Lesser of two evils perhaps? I’m not naive, I know any big party has vested self interests that they’ll spin to be “for the people”, but I’m also not an idiot - I can weigh up the options and objectively look at them from the POV of my own self interest and values. If you’re not benefiting from the mining investment, what are you going to get from LNP over Labor?
+100. If that happens, then it's a criminal act they have done...rape that's a one-way ticket to prison
+101. I get nothing from either, I'm not naive enough to think they care about anything other than current popular opinion to sway votes and gain/retain power. They tell you what you want to hear get your votes and stick it in you. This won't be the last time.
+102. It’s not though, it’s easy to get away with rape. Most rapist don’t go to jail. They just say she wanted it. I know of lesbians that have been raped but it was decided that the “sex” was consentual.
+103. Fuck imagine being so cynical and jaded that you vote for the objectively worse option just to stick it to the people under you on the social ladder
+104. Lol, it takes more than saying "ShE WaNTeD It" to disprove what they did 🙄
+105. And male perps have a higher chance of going to prison than females
+106. Imagine being this upset by a strangers opinion.
+107. And it takes a lot more than “he forced me” to prove anything. Her word against his.
+108. Both sides are the same is such dumb bullshit. As a transwoman I’m looking forward to having my rights and healthcare options backslide under this new government. When we’ve had fantastic progress for us and changes to what we can do when it comes to BDM and our personal documentation under labour. It’s not both sides are the same when people’s rights are in the balance depending on the choice. They might be the same to you but to people having their rights effected every time a party gets into power it’s absolutely not equivalent. Women and trans peoples healthcare and rights being fucked with is not the same between the parties.
+109. As an Emergency Doctor I know that when the wait times and ramping worsens from LNP budget cuts it will be LNP voters whinging the loudest and blaming me for it
+110. Oh mate... You just know that car rego is gonna go up again eh....
+111. Just the constant regurgitation of the media’s bullshit on “youth crime”
+112. This honestly makes me furious. As a Tasmanian who has suffered under LNP leadership for far too long now it makes me sick that people are still voting AND PUTTING THIS PARTY INTO POWER in 2024. How abysmally short-sighted, self interested and manipulated our voterbase is. And to top it off, the Greens appear to have lost both their seats too. When our fields are no longer arable and climate refugees flock to us in masses, we know who to point our fingers at.
+113. ALP voters voted for policies that would have benefitted the state. LNP voters voted against Miles.
+114. It’s pretty insane to think people willingly voted for things like banning abortion and giving mining companies tax cuts. We really are a state of bogans are rednecks. Special fuck you to the media.
+115. We need stronger misinformation laws, fuck Murdoch media
+116. ThEy WeRe In PoWèr FoR tOo LoNg. Media has too much control of the peeps with nothing better to do than sit in front of their TVs watching free to air.
+117. Boomers last hoorah before they leave this planet.
+118. Free to air Fox Ne.... I mean Sky New is a huge issue in QLD, NSW and NT
+119. Wouldn’t want to be working in a state government role right now. Always changes when a new government comes in.
+120. There goes the bulk-billing GPs too. I’m sure everyone who voted LNP will be real happy when they realise they are basically stuck paying for GP visits for at least 4 years.
+121. The LNP education policy specifically stated that they would increase the student to teacher ratio. So either they don’t understand how a ratio works or they are going to cram more kids into classes to deal with the teacher shortage. Either way it’s not great.
+122. I think it's worth considering that as a result of covid lockdowns and changing work circumstances, a lot of people migrated from southern states to sunny Queensland. And a lot of the people who did so were flush with cash. And that may have skewed the demographic make-up of the state in favour of the sorts of people who tend to vote LNP.
+123. This is why we can't have nice things
+124. Property down in Melbourne is now the same price as Brisbane and is a stable labor and greens state. Might be worth a move for a lot of people.
+125. Yep a state full of dumb fucks. Welcome to queensland
+126. The olympics was the final nail in the coffin
+127. Just hope federal Labor learns the right things from this: that progressive policy was responsible for the massive resurgence in the Labor vote. They won’t though, they’ll just say “we lost on progressive policy so we need to be more conservative”
+128. Don't you know, 12 year olds with spray cans is really scary you guys. God sometimes it's times like these that make me understand how dictators are made.
+129. Ultimately, an LNP win is a good thing for Labor voters. Newman was ousted in one term, and so will Crisafulli. He already promised to cut 17000 jobs and the coal excise. Once they clear land and fuck up the reef, north Queensland will revolt. 4 years of destruction is coming. And it'll take 8 years to repair the damage.
+130. My boomer mum said 50 cent public transport is ‘too cheap’
+131. Considering I was already seriously considering moving, this is it for me. I hate this backwards state and I’ll be happy with the long drive back home. How can you not recognise how beneficial this was for you guys. Cheaper basically everything at the expense of coal companies. This place is fucked, enjoy Campbell 2.0 for the next 4 years instead of 3 this time!
+132. You are right, and most of the mouth breathers complaining about youth crime never actually had anything done to them. They just had empty lives and wanted to be stuck in some sort of drama because then they have something to talk about.
+133. Heart goes out to Queensland. I could not imagine waking up to this shit. 😒
+134. Queensland is governed by Rupert Murdoch now.
+135. >It's your right to vote, but if you chose the LNP, it is of my and many others opinion you are a waste of space. I'm not an LNP voter but this is an awful reaction to an election that didn't go the way you wanted it to. There are people in this thread with some growing up to do. My wife and I lived in rural Queensland for a few years and youth crime was a huge issue in our town. We were lucky but we had neighbours who did get robbed. Our insurance premiums went through the roof. We frequently woke up in the dead of the night to noises thinking we were getting robbed. The government sat on its hands for years as the mayor, state MP and even local ALP members pleaded with the government to implement any one of the ideas being put forward. We were told 'it's not in the government's plans'. Nothing was done until it grabbed media headlines earlier this year and then all of a sudden there was a flurry of response from the government. It's not by accident Mackay and Rocky after a century of almost unbroken ALP representation voted the government out. There are people who finally had had enough. The ALP has a legitimate credibility issue across regional Queensland and without addessing this there is no hope of forming government at the next election. Ignoring these voters and calling them a waste of space does nothing to fix this. I hope people realise this sooner rather than later.
+136. Murdoch wins again. Australian public loses. But thank God the oligarchs will be all right.
+137. “‘I didn’t think the leopards would eat MY face”, exclaimed the woman who voted for the Leopards Eating Peoples Faces Party.’ Fuck anyone who voted LNP. I’m not going to hold my tongue about it when people complain about their miserable lives for the next four years.
+138. The reality is that even in an even media landscape, addressing a Gish gallop of lies and slogans that appeal to ‘intuition’ are going to be effective on people who aren’t politically engaged Reactionary people whose only expertise with child crime is they know someone who got their car stolen are going to naturally respond to “adult crime, adult time” over free school lunches, despite the fact that meeting needs like good help bring looks and families out of poverty to reduce crime, while contact with a retributive criminal justice system tends to lead to recidivism and increase in criminality. People will need to feel the squeeze on the LNPs regressive, business pandering policies, leaving people out to dry for a term before they realise that the campaign and slogans were paper thin. I wish people were more politically engaged and remembered Campbell Newman, but hey, they’d rather punish a few kids then feed all kids
+139. QLD is embarrassing when it comes to elections.They constantly just fail to educate themselves and put any effort into thinking long term.Very sad indeed. One step forward two steps back consistently 🤦😪
+140. Wait until they go back 40 years with women having to go across the border to tweed heads to get health care because their pregnancy isn’t viable.
+141. i feel ashamed & disappointed in our state for allowing this sort of thing to happen. when everyone says 'labor has been in too long' .... uhmmm steven miles hasn't??? different people have different goals.
+142. I really hope Hell exists just so the fuckwits who voted LNP can go there….

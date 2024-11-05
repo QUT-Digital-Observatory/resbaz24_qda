@@ -1,0 +1,149 @@
+Your job is to analye a series of Reddit Comments are drawn from sbumissions related to the 2024 Queensland State Election. The comments are drawn from a collection of comments before, during and after the election itself on the 26th of October. The parties that sought election were the Australian Labor Party (ALP), the Liberal National Party (LNP), the Queensland Greens (Greens), One Nation and Katter's Australian Party. The LNP prevailed in the election, with David Crisafulli becoming the new Premier of Queensland. 
+We have identified several key issues that the major parties campaigned on during the 2024 Queensland State Election: Youth Crime (YC), Cost of Living (COL), Health (H), Energy and Infrastructure (EI), and Abortion Laws (AL). Below is a summary of each party's position on these issues:
+Youth Crime (YC):
+- LNP: Advocated for stricter penalties for young offenders, including the 'Adult Crime, Adult Time' policy, proposing that serious offenses committed by youths be met with adult sentencing. 
+- Labor: Focused on rehabilitation and prevention programs, aiming to address the root causes of youth crime through community engagement and support services.
+
+Cost of Living (COL):
+- LNP: Proposed measures such as abolishing stamp duty on new builds for first home buyers and re-establishing the productivity commission to review building industry regulations, aiming to alleviate housing costs. 
+- Labor: Introduced initiatives like 50-cent public transport fares, a $1,000 energy rebate, and free lunches for state primary school students to ease cost-of-living pressures.
+
+Health (H):
+- LNP: Committed $590 million to an 'Easier Access to Health Services Plan,' aiming to reduce ambulance ramping and hire additional healthcare workers. 
+- Labor: Focused on maintaining and expanding healthcare services, addressing hospital capacity issues, and investing in new health infrastructure.
+
+Energy and Infrastructure (EI):
+- LNP: Criticized Labor's Pioneer-Burdekin Pumped Hydro Project as financially unviable and canceled it upon taking office, opting to explore smaller-scale hydro projects instead. 
+- Labor: Proposed large-scale renewable energy projects, including the Pioneer-Burdekin Pumped Hydro Project, to transition towards 80% renewable energy by 2035.
+
+Abortion Laws (AL):
+- LNP: Stated there would be 'no changes' to abortion laws under their government, maintaining the status quo established in 2018. 
+- Labor Party: Supported the existing abortion laws and opposed any attempts to repeal or amend them. Asserts that LNP intend to restrict access to abortion services based on the views of some of their members.
+
+Analyze Reddit comments and code them based on the positions they support or oppose concerning these issues. You will output JSON, so valid values are strings or null. Use the following codes: YC, COL, H, EI, AL. If a comment's position is unclear or does not pertain to these issues, output null.
+
+Secondly identify which party the comment appears to support. Use the party code ALP, LNP, Greens, ON, KAP if this can be determined, otherwise a null value if undetermined.
+
+Output JSON as a list of objects where each object has an "id" (integer) property of the comment id, an "issue" property set to the issue code string (or null value), and a "party" property set to the party code string or null value. Null means JSON null, not a string. Values MUST be quoted, e.g. {"party": "LNP"} unless they are null, e.g. {"party": null}. Comments follow:
+
+1. There is no argument against compulsory voting, and if there were it would favour the conservatives. When I was 18 my liberal boss used to tell me ‘ people like you shouldn’t be allowed to vote, it’s a waste’
+2. Unfortunately the flipside to compulsory voting is just the people with political motivations voting, i.e. billionaires for less tax, landlords for less rent control, mining companies for less environmental scrutiny. So it polarises even faster. The real solution is education which is why these parties cut it at all costs. Christofggeeryfdergpli wants to put kids in jail instead...
+3. I used to be against compulsory voting but watching the US and UK I’ve done a complete 180. A lot of people don’t know who they’re voting for, but having worked a polling booth one year it was pretty clear they know who they’re not voting for. It’s not perfect and the alternative they choose often doesn’t align with their interests and values. But it makes it hard for any party to become extremists and hold seats. It also drags everyone back from culture wars that get people upset enough to vote and re-focuses on the day to day for the average person.
+4. I told my mum ALP wanted to fund hospitals more and give kids free school lunch, and that LNP/KAP/ON wanted to fund prisons and allow kids to be put in them. I don’t actually know how accurate those claims are. I just decided that if she’s not going to educate herself, my uninformed lefty bullshit can’t be any worse than Sky/NewsCorp’s right-wing bullshit.
+5. 100%. Not many elections come up where I care who wins or whatever, there has been elections where I simply voted the way I did the previous time but for no particular reason. When I was 18 I was told who to vote for, what 18 year old gives a stuff about politics? So I would say more than half the state or federal elections Ive voted Ive done so so I didn't have to pay a small fine and there would be soooooo many people like me.
+6. No the worst part is that it’s not random at all- the are genuinely simple enough to be swayed by incredibly stupid and easily disproven lies/claims. So they very deliberately vote for charlatans.
+7. It has gone really high in the last few years though.
+8. Or, they should instead address the issues that lead to people being homeless, not "clear them out" because y'know, they're literal human beings?
+9. I know a lot of people with disabilities, including brain inquiries, who are pretty goddamn unhappy with the election results. Don't lump them in with the dipshits who voted LNP. Being a cunt isn't a disability.
+10. Come on man these jokes aren’t cool, people with these disabilities can make informed decisions as well.
+11. You seem very nice. I disagree with their reasoning and choices, but you do realise they are my family right?
+12. If I hadn't heard the same basic things from my coworkers, I'd be in as much disbelief as you.
+13. It was my mum also..
+14. I'm thankful we don't have a HR dept ( they can be problematic) where I work cause the business is fairly small, but then other times there is so much bs that goes on, there are times where it may actually be needed
+15. If employees would do their jobs properly they wouldn’t get screwed over
+16. The media have a great ability for doing that
+17. Isn’t it Labor cut ties with CFMEU already?
+18. Weird given Labor put them into administration
+19. The old mainstream media bullshit rhetoric wins again :(
+20. Yeah it’s a pity no one could seperate the Victorian branch from the QLD branch (nothing to do with Victoria) but that’s the Murdoch media for you. Even Mr Potato Head mentioned the union while he was standing next to old mate Crisafooli. Anyway let’s see how big his magic wand is, he’s already back tracked on resigning if he can’t fix crime. I predict…..they’ll outspend Labor, they won’t get much of what they said done, they’ll send us backwards in regards to the environment to suit their mining mates and they’ll take a lot of financial packages that Labor has given us to help with their budget that will also go into deficit all while blaming Labor for the next three years.
+21. So there is only one industry in Queensland and it's controlled by the CFMEU? Wow, you must have a small network.
+22. That’s hilarious 😆 (and true…)
+23. permanency wasn't a protection against Newman, I know people who still have stress from days of people just being called into an office to get walked out under Newman's cuts.
+24. She hates the unions but isn’t averse to keep receiving all the benefits they got her. Wouldn’t it be awesome if people who didn’t like working with unions just get a flat wage and see how far that gets them
+25. That’s what the white collar workers don’t realise, the unions blue collar rights that have been won through campaign has always trickled over to white collar workers. Do you like your holiday pay? Sick pay? Maternity/paternity leave? Stress leave? 40hr working week? Overtime? Etc etc All union fought for.
+26. > union behaviour can piss people off Why, because they argue for better conditions and rights for workers? > especially if your job is to negotiate with them Only if you're a manager who wants to exploit the fuck out of their workers.
+27. But we’re the second last developed nation on the planet to stabilise inflation and have them go back down.
+28. r/angryupote
+29. You're one post away from beginning to rant about the great replacement, huh?
+30. Okay? My family doesn’t use reddit so I don’t see how anything you said is relevant to what I said?
+31. Agreed. I’m a staunch Labor supporter, but the stadium flip-flopping was one of the few things I was genuinely disappointed about.
+32. Yeah man see the lions avi in your profile pic… really was a toxic walk back for Steven miles telling AFL fans no new home at Gabba but Suncorp stadium was getting a upgrade (our most recently built stadium)
+33. I’m no fan of Crisafulli though because he sidestepped the topic and pushed it out another 100 days… all I know is QSAC was going to be pretty embarrassing being on the world stage
+34. I actually thought that. New stadium backflip by both parties - just too toxic of a policy to announce when you campaigning on the back of a cost of living crisis
+35. The real problem was the messaging, that’s where they completely fucked it. a) championing the independent review for months only to then turn around and completely ignore the recommendation the day it dropped was *mind-bogglingly* stupid; especially when the option they went with was one that not only did nobody like; but that the independent review itself specifically called out as being an all-round terrible idea. b) Not once did I see mentioned anywhere that the stadium would effectively be paid for entirely by the IOC/Olympics revenue. It’s literally in the contract that is publicly available, that as part of the hosting rights you get all of the ticketing revenue, merchandising revenue and a large chunk of broadcast money that totals to >$2.5bn AUD. The media didn’t mention it, the government didn’t mention it, nobody. I only found out about it on a fucking football forum full of angry lions fans. How do you fuck that up? One of the biggest public issues with the stadium was the perceived cost to the taxpayer, and they could’ve avoided all that by saying the taxpayer wouldn’t actually be footing the bill - and it would be a win win because we needed a new stadium anyway so we essentially get one for free.
+36. I believe this. I mean, I think we sometimes forget how decentralised QLD is compared to other states. The extremely watered down plans for the Olympics was to not upset the regions (especially north QLD, we all know how many north Queenslanders despise the SE corner). Even though the ALP lost, I still think it was the right move politically.
+37. Yeah another flip flop woulda been horrible. But they absolutely snookered themselves
+38. So, you’d rather vote for the LNP and see assets privatised, services gutted, and workers sacked, all because you didn’t like their stadium proposal? Good job.
+39. Do you honestly think the premier is the sole hand responsible for things like choosing a stadium location? Damn dude. At least under ALP you would have gotten free lunches in primary school. You know, helps young minds learn.
+40. How can you be that shortsighted? Unbelievably stupid decision to waste your entire vote based on the Olympics plans 🙃
+41. None of whom are entitled to a job. Go into the private sector.
+42. Oh gosh, I really hope they don't do it again. Surely not? :(
+43. 14000 workers total. Which is still not great but let’s stick to facts.
+44. 'Public service contractors' just sounds so much more palatable than 'doctors, nurses and teachers who are on contracts' doesn't it?
+45. Our departments IT Capability is like 90% contractors. It's that way because we are about to recieve a whole bunch of people from elsewhere in government and we need to set a cultural expectation. On one hand, contractors are billed at 3x salary by the contracting agencies. It's good to save money. On the other, the incoming crew have such a strong apathy as a collective that it's absolutely the main reason we have issues. Sacking the contractors might be financial but it will doom us to the stone ages.
+46. Any reference? Curious as am one of said 'contractors'
+47. Literal lol if you think LNP will be offering better pay
+48. Remindme!in 1 year
+49. What, happy and get shit done vibe? Yea real bad taste...
+50. What he did for the state in the few months he was in...he can have his little jet ski ride. Dunno about you but my ego certainly isnt affected.
+51. Election bids are funded by the parties not the state?
+52. Where? And does it show the names? Or does it just show the creeps living in your area?
+53. Half price is no where near 50c. If you are calculating your shopping budget down to the loaf of bread, $5 or even $2 the difference between eating or not eating for a day.
+54. Noone under 16 can receive medical treatment without the consent of a parent/gaurdian. To get a child prescribed hormone therapy takes a lot more than just rocking up at a clinic and asking for it. Kids are prescribed hormone therapy for a multitude of medical conditions and no one bats an eye. The second it’s to stop them from k*lling themselves it’s a problem? The pill is prescribed to girls under 16 to help with the symptoms of pcos, endometriosis, or acne. That’s literally oestrogen hormone therapy. When a child has cancer, a growth deficiency, or delayed puberty they will be given anabolic steroids. Steroids are man made testosterone. Puberty blockers wear off if you stop taking them. It’s not surgery. It gives the person time to figure out their gender, and any other problems they may have and desperately reduces the risk of s*icide. If they hit 18 or older and decide they actually are their assigned gender they can taper off.
+55. Good thing what you think doesn't matter, and what peer reviewed studies have concluded does
+56. > We do have a gender clinic at the Queensland Childrens Hospital that will happily prescribe puberty blockers to children. Good, children cis or trans require this medication in order to treat a wide range of issues. > I, for one, don't think that is a good thing. Your opinion means nothing compared to actual peer reviewed studies and the medical community.
+57. Why though? Puberty blockers simply prolong the start of puberty. Once a child is old enough (18) to decide for themselves if they are trans and would like to continue HRT, then they stop the use of puberty blockers and start taking hormones. They need parental consent to go on HRT before the age of 18 and will be under the guidance of a doctor. If instead they realise they are not trans, they simply stop taking puberty blockers and they go through their body’s natural puberty.
+58. Tbf neither major party seems interested in public education. All their kids go to private schools.
+59. It's not in their interest for their constituents to have brains of their own.
+60. Or disability access lmao
+61. Honestly, it was Labor that brought in Equity and Excellence and downward pressure on school principals not to suspend or exclude horrifically violent children. It’s a Labor government that appointed a terrible, terrible Director General that destroyed any trust teachers had in their employer caring about them. It’s also a Labor government appointment that seeks to remove Civics and Citizenship from high schools to replace it with VET. It’s a Labor government policy to turn schools into diploma factories. It’s a Labor appointment that told teachers that they weren’t allowed to only work their paid hours of employment. It’s a Labor government that took the QTU to the QIRC for telling teachers to only work according to the award conditions under which they were employed.
+62. Especially the bush councils who believe EVERYTHING they’re fed by NewsCorp and SkyNews. I went to their convention once for work and could not believe to frankly hilariously maga-level rubbish they were all circle-jerking over.
+63. I'm not sure if their candidates in the relevant electorates promised those things during the campaign but given the amount of affection the Liberals, both state and federal, have always shown for education, the disabled, poor people, public transport and public infrastructure I think even the most optimistic LNP voter wouldn't be taking these as guarantees.
+64. Spoiler alert: the dog voted for the Legalise Cannabis party.
+65. Correct, this is the 102nd year with no State Senate
+66. Mining royalties - the coal lobbies put huge sums of money into the LNP to get rid of them Crime - Labor were too quiet about it in their campaign I think. Steven Miles could have used the opportunity as a new premier (like he did with the cost of living package, the 50c fares and the free school lunches) to turn up the heat on this against the LNP and promote an alternative solution instead of simply diverting attention to how shoddy the LNP’s plan is and pointing out stats. That just gave the LNP free rein to campaign hard on that one issue.
+67. To protect their own assets and fk everyone else. A lot of people flip flop once they've gained wealth.
+68. Yes, Labor in Qld used to be less progressive, so it makes sense their right wing dropped off
+69. Guarantee they all watch Sky News
+70. Pretty pathetic and self centred
+71. Mine too. It’s called cognitive decline.
+72. Not a scab mate, he’s done more time sitting on the grass than you’ve had hot dinners, as have I. I bet the CCC don’t have your happy snaps on their wall.
+73. Sure, but imagine having enough empathy to understand someone being pissed because a government wouldn't let them see a relative they loved as they were dying. People are allowed to have different views about the world.
+74. maybe I'm interrpurting it differently seems like that how most of the people have read it lol
+75. Just to clarify, the community don't want Stage 4 scrapped. We want the current route for Stage 4 to be realigned. There are routes which the community have now presented which instead of taking out houses, shops, schools and farmland will go through forestry and unfarmable spaces.
+76. https://www.tmr.qld.gov.au/projects/north-brisbane-bruce-highway-western-alternative-planning
+77. You've literally posted that 4 times now in this thread, are LNP paying you or do you just seriously care this much about a sex offender registry to bring it up in a thread that is barely relevant to it?
+78. Mmm yes, a sex offender registry from the party who famously protected a known rapist and big chungus.
+79. Nah, they're pretty happy to stick to the majors, and some are 1st and 2nd generation immigrant families (came with wealth though), so ON doesn't appeal. FF are a joke party, I don't think they take them seriously.
+80. Outstanding!
+81. You are not wrong. Nuclear takes him away from the energy concerns that he deals with, hence the lack of engagement with you. Personally, nuclear makes too much sense. We should of had it for years.
+82. It amazes me when public sector workers expect the LNP to ever do more than the bare-minimum when it comes to supporting the public sector. They'd sell the schools if they could get away with it.
+83. Well he knows labor aren't going to.
+84. I think it open to the public. this was qtu election journal https://www.qtu.asn.au/3d/2024StateElection/index.html
+85. You won't get a response lol
+86. My theory on that election is that people didn't want more change, and the government at the time was decent enough, clearly cared about science and public health
+87. That doesn’t really matter in reference to what I just said, no one is looking at historical evidence or even evidence this time will be better, what people know is that ALP has been in power the last 3 terms and have stopped servicing their needs or wants so they want a change. It’s easy to say right side bad left side good or vice versa because that serves the “values” you’ve aligned yourself with but clearly the majority don’t agree with you and want a change. And also a good amount of people obviously have switched from left to right since the ALP has been in majority power for so long, which should be a good indicator people aren’t happy with ALP and want change.
+88. Give the Shandee's Story podcast a listen!
+89. Point taken but I don't think it's necessarily people think that harsher laws would reduce crime. I think people think harsher punishments are more just and equitable in terms of consequences for the crime committed, regardless of whether that would discourage future crimes. People are sick of crimes committed but the punishment is not perceived to be commensurate with the extent of the crime committed.
+90. People don't want harsher sentences because they think it will "sort out" the scruffs who are already doomed. They want harsher sentences so that they can't commit a crime and be out committing more crimes the next day laughing about it. Rehabilitation doesn't work in it's current format, but if they are inside, at least they aren't out being little shitcunts making life miserable for normal people.
+91. Kids should be fed by parents who provide pack lunches, like we do. If kids are going without lunch, it’s not because their parents don’t have the money to provide it, it’s just that they prefer to spend the money on things like smokes and alcohol, and can’t be arsed to make it. As someone with two kids, a sandwich and apple costs next to nothing.
+92. Say it with me now. Two. Billion. Dollars. There are a whole lot of things that we’d do in an ideal world. But stuff costs, you know, money. Of which there is not an endless supply.
+93. Different party.
+94. So most of the world has it wrong with their tough sentencing? And we are right being soft?
+95. If they are going to jail they are already criminals.
+96. Average person doesn't even know who their local member is let alone difference between state and federal governments. I suspect federal labour is also going to have a hard time winning the next elections and from my point of view when I see [shit like this](https://www.abc.net.au/news/2024-09-05/gas-giant-australia-prepares-to-import-gas-as-shortage-looms/104303824) it makes me question what are they actually doing?
+97. Housing is a state responsibility, not federal. Labor could have, I don't know, stuck to any of their various housing policies they kept introducing to placate the masses. Why didn't Labor do anything at all about overhauling the public housing system? Why didn't they house people in order of wait time and need? Why do we have people on the waitlist for *multiple decades*. Why didn't they actually get rid of no grounds evictions for renters? We still have them when a fixed term expires. Why didn't they tie rent increases to CPI, like was done federally with NRAS, to stop people being priced into homelessness? These are responsibilities of states. I didn't vote LNP but I can see why there were so many protest votes. School fruit and a bit of electricity doesn't matter if you have nowhere to live.
+98. I am not sure this was actually meant to be a response to my post as it doesn't really seem relevant to what I said. But public housing is the worst...... in short - governments suck at building homes and providing the array of options that the market wants. Public housing = more expensive homes that don't suit the buyer as well. Refer to East Germany.
+99. Me too,
+100. Nope
+101. Is it normal for ALP voters to downvote anyone who doesn't agree with their views? Not spiteful at all. 🤣👍
+102. Not sure. I feel silly to have to explain to you that I joked. I voted LNP because Labour is taking us down the wrong path. 7/10 people didn't prefer them, so that should not be a surprise to you or anyone.
+103. Fkn helllll. So yous had a good gov that took responsibility and that wasn’t good enough? The abortion bill etc seems to be a hot topic atm, what else are they tryna pass? I’m actually moving to Australia on Tuesday, arriving Wednesday lol (only whv tho so shouldn’t impact me much) Many thanks!!!
+104. Their voting base benefits from projects being completed and more people moving here. The scarcity will never be caught up now.
+105. You clearly have no understanding of the issue. When unions push for 250k jobs flipping lollipops, all the residential builders leave the residential building sector for union jobs. This drives up the price of building, on top of everything else impacting the cost of building, and living.
+106. Your second sentence showed why the unions are at fault, the developer takes on all the risk. The unions slow the build. Of course the developer should get the majority of the profits. Which is why they are all back to forming their own construction arms. Unions are there to keep workers safe and ensure fair pay, not to control the projects. They have bitten the hand that feeds them too many times. The Labor policies also slowed any development.
+107. That's the thing about echo chambers. Opposing viewpoints don't have a lot of reason to want to give that opinion in fear of whatever retribution might come their way, be it down votes, or ridicule, both of which being the most likely outcome here. Is a lose/lose. Evidence by anyone actually voicing a legitimate reason in this thread.
+108. You’d be here all day as to why. Everyone has a different reason.
+109. It is strikingly similar to Crisafulli‘s approach to answering questions.
+110. Exactly. Ask stupid questions, win stupid prizes.
+111. As someone who works in the healthcare industry and was recently accused by my colleagues of "caring too much" I would like to think Im considerate and passionate about people other than myself. I am also quite proud to think of the many Australians whose quality of life has been improved by work. Abortion policies are understandably a hot topic and its easy to see why people on both sides are passionate themselves about the issue. Which speaks to why I have discontent over the fear campaign of the policies which parties stated they had no intentions to change. Robbie Katter is a good example, to my understanding he stated that while his party members had strong views on the matter they had no intention of raising a bill; with the only people to raise the topic during the election campaign being the media themselves repeatedly. I saw this as journalists, specifically in the ABC, imposing their views to swing voters to their personal preferences. I would say you should be careful of things such as this. I suspect that while we may share the same views on this policy, you were swayed by what I saw as a scare campaign.
+112. That's the point, they appeal to the phantasm of "the good ol days" which never really even existed
+113. It encourages fresh ideas from labour too, numpty.
+114. It encourages fresh ideas from labour too. The same party perpetually in power is a bad outcome for multiple ratings.
+115. Don't say a bad word about unions and you'll be voted down.
+116. [deleted]
+117. No irony, Quentin
+118. I'm not supporting this person's point but I don't think property prices in the US and UK grew anywhere near as dramatically as here and NZ, shouldn't be including those.
+119. You are missing the point. It doesnt matter as much as to who causes it, it is who is in power when it happens. This is how most voting is done.
+120. What's really scary is that sometimes if the incumbent side unexpectedly pulls out last minute, or has a big scandal revealed or whatever... these people sometimes win.
+121. A lot of LNP people seem to be Facebook community page admins. My local page is managed by the wife of a former MP. They talk up crime, talk up development and kick anyone who appears “woke”. All their developer mates get on and have a kick too. It’s a great way to start a coordinated pile on against non-LNP candidates right before an election. This is a deliberate political tactic.

@@ -1,0 +1,185 @@
+Your job is to analye a series of Reddit Comments are drawn from sbumissions related to the 2024 Queensland State Election. The comments are drawn from a collection of comments before, during and after the election itself on the 26th of October. The parties that sought election were the Australian Labor Party (ALP), the Liberal National Party (LNP), the Queensland Greens (Greens), One Nation and Katter's Australian Party. The LNP prevailed in the election, with David Crisafulli becoming the new Premier of Queensland. 
+We have identified several key issues that the major parties campaigned on during the 2024 Queensland State Election: Youth Crime (YC), Cost of Living (COL), Health (H), Energy and Infrastructure (EI), and Abortion Laws (AL). Below is a summary of each party's position on these issues:
+Youth Crime (YC):
+- LNP: Advocated for stricter penalties for young offenders, including the 'Adult Crime, Adult Time' policy, proposing that serious offenses committed by youths be met with adult sentencing. 
+- Labor: Focused on rehabilitation and prevention programs, aiming to address the root causes of youth crime through community engagement and support services.
+
+Cost of Living (COL):
+- LNP: Proposed measures such as abolishing stamp duty on new builds for first home buyers and re-establishing the productivity commission to review building industry regulations, aiming to alleviate housing costs. 
+- Labor: Introduced initiatives like 50-cent public transport fares, a $1,000 energy rebate, and free lunches for state primary school students to ease cost-of-living pressures.
+
+Health (H):
+- LNP: Committed $590 million to an 'Easier Access to Health Services Plan,' aiming to reduce ambulance ramping and hire additional healthcare workers. 
+- Labor: Focused on maintaining and expanding healthcare services, addressing hospital capacity issues, and investing in new health infrastructure.
+
+Energy and Infrastructure (EI):
+- LNP: Criticized Labor's Pioneer-Burdekin Pumped Hydro Project as financially unviable and canceled it upon taking office, opting to explore smaller-scale hydro projects instead. 
+- Labor: Proposed large-scale renewable energy projects, including the Pioneer-Burdekin Pumped Hydro Project, to transition towards 80% renewable energy by 2035.
+
+Abortion Laws (AL):
+- LNP: Stated there would be 'no changes' to abortion laws under their government, maintaining the status quo established in 2018. 
+- Labor Party: Supported the existing abortion laws and opposed any attempts to repeal or amend them. Asserts that LNP intend to restrict access to abortion services based on the views of some of their members.
+
+Analyze Reddit comments and code them based on the positions they support or oppose concerning these issues. You will output JSON, so valid values are strings or null. Use the following codes: YC, COL, H, EI, AL. If a comment's position is unclear or does not pertain to these issues, output null.
+
+Secondly identify which party the comment appears to support. Use the party code ALP, LNP, Greens, ON, KAP if this can be determined, otherwise a null value if undetermined.
+
+Output JSON as a list of objects where each object has an "id" (integer) property of the comment id, an "issue" property set to the issue code string (or null value), and a "party" property set to the party code string or null value. Null means JSON null, not a string. Values MUST be quoted, e.g. {"party": "LNP"} unless they are null, e.g. {"party": null}. Comments follow:
+
+1. > ...what relevance? To illustrate two different companies who have conducted newspoll do the very thing I'm describing. For example: > *Source of online sample: Selected from previously recruited online panels of research participants to fill quotas loosely based on weighting frame and past vote* Current Pyxis: https://www.pyxispolling.com/ws/media-library/73b9d7f814724d1daf342eaf252b46d3/newspoll-methodology-statement-14-october-2024-by-pyxis.pdf AND, whilst older (2022) same from YouGov: https://origin.go.theaustralian.com.au/wp-content/uploads/2022/05/220413-Public-Polling-Methodology-Statement.pdf Thus, my point stands. If you want a more detailed description of why samples of convienence can be problematic refer to google; plenty of awesome illustrations.
+2. I see, thankyou.
+3. No worries. Statistics is not an intuitive thing, and sometimes it feels like it's purposely and needlessly confusing. I only understand this stuff because I've spent nearly a decade engaged with it.
+4. My family always hands out how to vote cards and we all know how little impact that has. During COVID each party was allowed one card taped to the polling booth. That was so much easier, cheaper and less wasteful for everyone involved. I would like to see that become the standard
+5. I walk passed all the people handing out the how to vote cards because I already know how I will vote and they are just a waste.
+6. Tbh how many people take HTV, isnt any indication of how an election is going. I have worked at several elections also. Most people don't want to waste the paper and they know who will be 1 box. As for the other boxes, most of us wing it ... but HTV *is useful* in a tight election Totally agree some election workers / volunteers are really childish
+7. Not sure where everyone is voting but my early voting centre was fine. Labour and Greens where chatting. LNP was chatting with Labour, I just said “Im good” when I walked past and they left me alone. The only thing I found a bit annoying is when they asked me if I knew how to vote…. Im 30 and have been voting for 12 years… I know how it works
+8. I'm also in Brisbane and have had the exact opposite experience. The Greens have had about 6 official warnings from the returning officer to yelling over the Labor candidate and harassing voters. We've had Greens volunteers directed to follow the ALP candidate around to interrupt conversations with voters, stand in front of a frames to block them, and yell at Labor volunteers. Edit: I'm blown away this is getting downvoted lol. Apparently bullying is bad when the ALP does it but okay when the Greens do? What a sad state of affairs we live in.
+9. All that paper on how to vote 🗳️ when it all goes in the bin. Plus in the letterbox and it goes in the bin.
+10. Don't vote for LNP, unless you want our state to be stuffed again.
+11. Everyone regardless of party please remember this is the internet and people could be lying.
+12. Be nice if we end up with a progressive Greens govt.
+13. I had no issues with Labor, but I did early vote at king george Square and had an LNP htv lady shout at me "don't waste your vote!" When I grabbed a greens htv card. Nearly yelled back at her to mind her own damn business. Handing out cards is fine but how dare these people shout at voters. At best she was shouting at a member of the public, at worst she was trying to confuse a voter about how voting works (how can I waste a vote in a ranked choice voting environment?). Either way it is not acceptable.
+14. \>I think Liberal will overall win National. Well, the 'Liberal Nationals' but Nationals none the less. The Nationals are the primary conservative force in Queensland. Merging with the Liberals was their best attempt at seeming palatable to the wider urbanised electorate.
+15. Yeah the childishness is disappointing. Up there with taking away women’s health rights and decisions, giving the royalties back to…Canavan’s brother and his mates and losing the cheap PT fares but fuck those volunteers.
+16. Anecdotal, but in my area the Labor signs were vandalised. The LNP candidate sign was put up and the Labor sign was ripped off.
+17. Labor will win it
+18. I’m firmly on the right for most issues. But not voting LNP this year due to their stance on pill testing. No chance im voting labor lol But, I feel LNP will win, even after the “abortion” propaganda.
+19. yep, pathetic how both sides of the coin are tarnished.
+20. Labor volunteers were too preoccupied having a chat amongst themselves to even notice me walking in and therefore didn’t bother to offer a how to vote card. LNP guys were all over it.
+21. 😭
+22. Totally agree 💯👌 this is the way. Maybe if enough of us provide this feedback. They might do it again from now on
+23. So your whole family all routinely hand out how to vote cards, despite knowing how pointless and annoying it is?..... why?
+24. No - they tell you the way to order the votes for your candidate preferenced 1 to get in. Always use the how to vote cards.
+25. I have a policy of rejecting ANY political campaigning at the polls - including from the party I vote for. I don't approve of this kind of behaviour, I think the polls should be left alone, and political campaigns should be banned for a rather large radius away from the polls. I should be able to go to vote without encountering any in-person campaigns.
+26. Yeah, I tried to be polite about it, but I didn't take any of them this time. It's just a waste of paper for me - I already know how I'm voting.
+27. Went to pre poll this week, waste was consistently the reason given. A few folks had htv on their phone
+28. Same, I voted at Keperra & 3 of the candidates (Furner, Savanh & the Greenie) were all having a yap & the party types with them were really chill.
+29. Yeah, I wasn't at the polls for long today (I came down with Covid eleven days ago and I'm still very faintly testing positive, so I masked up and tried to get in and out as quickly as possible), but everyone seemed to be getting along at my polling booth. They were all sitting in the shade together.
+30. Has been the same for us as well. Greens have been aggressive and the ECQ has had numerous complaints from voters about being harassed.
+31. That's piss poor behaviour from a party that pitches themselves as taking the high road compared to the two majors.
+32. All my experiences of handing out how to vote cards have been the Labor and greens people getting along and bonding over how fucked the conservatives are. It's kind of nice and I really hope there's no bullshit drama on the weekend. If anyone pulls this shit though I'm out. A commitment to democratic norms is supposed to unite us despite differences in political beliefs.
+33. What electorate?
+34. This has never been my experience. I hand out HTV cards and this is my third election doing it. I’ve always had pleasant experiences with the greens Volunteers. The Last Federal election was a good one, ALP, Greens, Palmer and One nation mob all were very friendly to one another with the LNP mob being very uppity, we even covered the footpath with our gazebos during the rain to get voters out of the rain and held umbrellas. But I’m out in a safe LNP electorate, so I guess maybe it’s a difference when it’s not being on the side of the safe incumbent.
+35. Had a similar experience at local election earlier this. I voted at a church on Vulture Street in East Brisbane. There were greens supporters everywhere. They were very confrontational. They threw one of their how to vote cards in front of me which I said no thank you to. To which he replied I’m a fascist. I eventually told to little fucker to piss off. They have no respect for the democratic system nor have respect for it but only when it suits them.
+36. Max Chandler Mather is a little shit.
+37. I don't know if I'm just getting old but the Greens are really ticking me off lately. They are all unreasonable policies which is usual but they are blocking more reasonable ones which isn't helping anyone.
+38. These pricks give conservationists a bad name. Their bullshit is doing so much more harm than good for environmentalism.
+39. Most of it is collected and reused immediately across the day, then recycled at close. So voters please give your HTV card back to the volunteers when done
+40. A vote for LNP is a vote for Trumpism.
+41. Yes! I just want to see a video of an example of this behaviour. In this day in age I don't understand how it hasn't been recorded if it's happening. I have never seen anything like this from any party.
+42. Will never happen in a million years in Qld
+43. greens are ***great*** for putting positive pressure on the majors, but thoughtless ideas like BCC spending a few ***Billion*** on buying Eagle farm racecourse will ensure they would be just as bad as the majors if they got power inb4 "um actually, greens said they said theyd start negotiations at $40m" yes but the compulsory acquisition laws (plus a unique law specific to eagle farm) effectively puts the price at *min* $2bn, which makes their claim of $40m even more ridiculously thoughtless
+44. The practicality of some of their policies presents 'challenges' to say the least. Good as a pressure group.
+45. >don't waste your vote!" "That's why I'm not voting for you!"
+46. I ask this genuinely as find your comment interesting. As right leaning who's your 2nd choice if you are firmly against voting for Labor and you are against the LNP stance on pill testing?
+47. If only there was a third party we could vote for….
+48. I think QLD Labor have been doing a great job, what policies don't you agree with? Federal Labor on the other hand has been very disappointing
+49. I dunno about anyone else, but that's EXACTLY what I want. Let them talk to each other, I already know who I am voting for, I don't need to have crap thrown into my face while going there.
+50. Wait, they respected your personal space? That's good.
+51. How much carpet? It’s discounted, on sale per metre. I have a genuine Persian rug too. Cheap.
+52. It isn't pointless. It's like 10-15% of people that don't make up their mind up until election day. Which is a percentage that wins elections.
+53. Visibility and to help undecided voters or advise on various orders of preference (how to number boxes as there are 6 of them). The standing around also gives folks an opportunity to come and have a chinwag about anything they like
+54. No. Never used a how to vote card in my life and I’m not going to start now. As long as the person you don’t want is below the person you do want, it doesn’t matter what order they’re in.
+55. We should have a NZ style campaign blackout, plus no campaigning within 250 meters of prepoll
+56. The stuff they hand out doesn't even make half decent toilet paper...
+57. I agree. It's infuriating and so wasteful.
+58. They've never taken the high road :/
+59. Leftish behaviour has always had the veneer of thinking they are morally superior in everything they do. There's no high road.
+60. I am not inclined to believe any of this tbh. I'm yet to see a video of this behaviour and I have never once seen anything of the sort (I usually politely decline all how to vote cards). I have not had a rude interaction with anybody be that LNP, Labor, greens.
+61. Wouldn’t surprise me if it’s South Brisbane.
+62. 💯👌 they all seem like judgmental nutbags, and many of them look like they smell
+63. Living in his electorate, can confirm.
+64. I too live in his electorate and confirm
+65. Complains about aeroplanes and rides his bike to Canberra
+66. Good to know 👍
+67. Please don't hand them back. It's a pain in the arse receiving crumpled and sometimes dirty how to vote cards. Us volunteers can't re-use them if they look like that. I know you mean well, but please just put them in the recycling bin.
+68. The world is bigger than American politics.
+69. Same could be said of every other party…
+70. It’s a hard one for me, and I’m still not decided yet.
+71. I agree. I am not liking either big party. It is a vote for the least shittiest party.
+72. Someone posting on Reddit about politics is obviously pretty engaged but there is a massive % of the population who aren't engaged in the least, probably couldn't name the Premier or opposition leader even, and don't decide until they get there on polling day. That's why how to vote cards are important for the parties.
+73. I did volunteering for the greens on the council election and was literally told this. They put us in pairs so we could talk.
+74. It is pointless, how to vote cards have no actual useful information on them, other than how they want you to vote lol
+75. But its not heritage if you're "teaching someone how to vote, but teaching them how to vote for you lol
+76. >it doesn’t matter what order they’re in. I mean it definitely can matter, especially in a marginal seat, and if you want your first preference to go to a minor party / independent. I'm right there with you on never looking at HTV cards personally, but I can see why they might be useful to people who aren't as engaged, and simply want to support their preferred major party.
+77. It just smears.
+78. Yes, obviously and totes agree. I've worked several elections and helped filter them. At one election, someone placed a cardboard box near the door so they could be returned and sorted there. I think permission was granted to do that, was near but not in the doorway
+79. You know the LNP is an Australian political party, don't you? So naturally I'm taking about politics outside of America, right? I didn't think I had to explain that, but here we are...
+80. Well Labor is currently governing the state better than pretty much any other government I've seen in my lifetime, so no, I don't think the same can be said of all the others.
+81. Unless you are in an electorate where a minor party is likely to win, whoever you preference higher (labor or LNP) is effectively who you are voting for even if they aren’t your first preference.
+82. You may not make up part of them, but how is telling a potential 10-15% of people how to vote a pointless endeavour?
+83. Not just that. The volunteers also keep an eye out for PWD, seniors or folks who are struggling to get to the gate or up a path. They can drive closer and / or vote from car
+84. And to be honest, there's already enough shit on them as it is.
+85. Describing every conservative movement as "trumpism" is idiotic. Trumpism is loud authoritarian populism focused on culture war issues. Crisafulli's campaign has been quiet, small target conservatism, with some populist policies on crime added in (not even targetting immigrants or racial minorities). It hasn't even been focused on run of the mill culture war issues that are pretty core elements of any "trumpist" political movement. Not everything bad is related to Trump edit since you blocked me lol: I'm not defending the LNP, but if your definition of bad politics is calling it "trumpism" despite not resembling trump in any way other than "it's conservative" then you're showing how uneducated you are politically.
+86. Whilst I do agree with you (to some extent, and the Miles iteration hasn't had much time to implement some nice starts) - personally I'd still like to see more Greens in our parliament so we end up with even more progressiveness. For eg, I'm 54 and really not seen much progress - say on drug laws - since Joh introduced his Drugs Misuse Act of 1986. And the VAD laws took way too long to be implemented.
+87. Yeah, I understand that. Well, greens last, labour second last, libs third last. Just not sure who I’ll order first.
+88. Still seems predatory. If your helping someone who's disadvantaged to vote, you shouldn't have an agenda/bias.
+89. Well said.
+90. I think you're a short-sighted moron if you think the LNP won't be trump light if they had half a chance. We can't give them even a glimmer of hope, but with "people" like you turning a blind eye then they're likely to win. Be better.
+91. I would definitely like more progressive social policies, I agree, but I've been personally extremely disappointed by the greens economic policies, many of which sound nice in premise, but when you think about them more deeply are likely to be highly damaging.
+92. So you're effectively voting LNP because no chance of ON or FF getting enough 1st pref or going through to 2nd round.
+93. So despite mentioning that the policy you feel strongly about is access to Pill Testing, you'll knowingly put the two parties most likely to support it last?
+94. Damaging to who? Rich/monetary wealthy folk? As a society, and in order to receive those more progressive social policies - from my POV - we're probably needing to spread the wealth a lot more than it currently is / has been.
+95. Yeah, what’s your point?
+96. I disagree with more than one of the greens and labor policies lol…… Testing isn’t the ONLY issue I care about.
+97. No, damaging to ordinary people. The rent cap is a nice sounding idea that could easily backfire if not preceded by a significant expansion in public housing (which would take 5+ years in the best case scenario). Either the rent cap isn't enforced until housing supply increases, in which case it's useless, or the rent cap is enforced when there's already a shortage of rentals available (which would make it significantly harder to move and potentially increase the risk of homelessness particularly among those fleeing family violence) The developer tax they proposed at the council election would have resulted in individuals being allowed to profit from council upzoning when selling their land and handing a tax bill to any developer who wanted to build higher density housing on that land, directly punishing increasing housing supply, increasing prices and rents even more while allowing land owners to profit off the upzoning. Those are just two off the top of my head, but there's more policies like that which have put me off the greens.
+98. You're not truly undecided.
+99. Fair enough. Pill testing was the ONLY issue you mentioned, so I assumed it was fairly important to you. May all your pills be pure.
+100. Cool chat.
+101. Not the only issue, but cheqpoint is a super valuable resource in Brisbane, and needs to continue and have more funding, not less. And my drugs are always good :)
+102. Nope. Politicians and charities are excluded from the do not call register.
+103. Got an MMS from them. Google pretagged it as spam. Spot on.
+104. I just received a text from the LNP promoting Deb Frecklington. Annoyingly no opt out option either. It was addressed to someone else, when I’ve had this number nearly 20 years.
+105. Yes, I delete without reading. Doesn’t matter which party or candidate sends them, it’s straight to the trash!
+106. Yep, so I’ve just left a voicemail on christafulli’s office number. Felt good.
+107. Yeah I got a text from the member of Moggill. I reported it as spam.
+108. I’m having the same issue! About three texts from different numbers and two phone calls… no opt out option either which seems strange but I’m sure there’s some exemption for political communication…
+109. Yeah, went to voicemail and began with “Hi [my name]… He recorded individual messages for every one of us! So thoughtful and definitely didn’t feel invasive or anything.
+110. I've now had 6 missed or declined calls from 0480013567. My wife and son have had calls from the same number.
+111. Hello friend! Would you like everlasting happiness?
+112. I had a phone call from my LNP candidate’s office asking about local issues. I rattled off all my concerns and local issues, many of which she had created as the former LNP councillor. I gave the feedback to please ask her to call me to discuss my feedback. No call. She doesn’t currently have a job, so she has time on her hands. Spineless witch.
+113. Had from alp and LNP
+114. SMS from both
+115. Did you try responding?
+116. at 9pm tonight
+117. Yep I got that a few hours ago Edit: got one of those text messages too but it was automatically picked up as spam and moved by my phone. Good job phone, political parties should not be exempt from spam laws, I realise they only are as they made the laws.
+118. Nope. Had a call from the labor candidate early on (smart man, I voted first day of pre polling ) he has a chuckle when I said I think chrisafulli is a tool and replied with “well I can’t say that on the phone”
+119. Yeah, my husband got a text but the weird thing was it was addressed to our son's name and he wouldn't have used his Dad's phone number for anything in over ten years so I don't know where they scraped the number from.
+120. Yeah, got a couple texts from the LNP telling me they are the only ones who can rescue Queensland. Unfortunately political cold calling, political texts and mailers are all exempt from the do not call register. And you can't even opt out of their texts.
+121. Yeah I’ve gotten several texts from the LNP in Northern Gold Coast this past week. Maybe 3 or 4? I’ve already voted a week ago anyway so they’re doubly wasting their time.
+122. Yes
+123. Block, delete.
+124. Yeah, I received the voice message
+125. i have had 3 different text messages shitting on ALP.
+126. Just got one now And got one yesterday So annoying
+127. We get spammed by the QLD LNP (and various Clive Palmer derivatives) every single election. We live in Victoria and now have a gleeful plan for any one of these greedy, evil cretins if they inexplicably turned up on our doorstep in the middle of the night in the pouring rain complaining of car problems.
+128. I have a rule. The first party to spam me gets a line through them. Better luck next time LNP. Muppets.
+129. Go one from Labor just this arvo.
+130. I got an email.
+131. I'm being bombarded by calls and texts from my local Labor member's office. By 'bombarded', I mean 3.
+132. Just hang up or delete. Only happens every few years. Don’t stress about it. Will be over Saturday.
+133. # Has anyone else been contacted by the LNP or Labor by phone or text?
+134. No I had Labor come to my door tho I just laughed at them and shut the door.
+135. Same issue here with a different name which was coincidently one of our sons.
+136. I can’t remember which election it was but labor send out a text to a bunch of people and the media jumped on it and crucified them for it
+137. Same. 3 yesterday and 2 today.
+138. C'mon Steven,you know that's Annastacia's number.
+139. I’d rather get spammed by a party that cares than a party that pretends to care (*cough* LNP *cough cough*)
+140. no one cares
+141. ….. the lefties won’t like that 😂
+142. But you care enough to comment.
+143. it takes 5 seconds. congratulations, you're special
+144. It actually takes less for no one to care.![gif](emote|free_emotes_pack|shrug)
+145. keep yapping into the void
+146. The void keeps replying.
+147. How many strikes does he think you should get for insolvent trading?
+148. "Mr Crisafulli said believed drug use was a health issue that can lead to crime issues" Then why not treat it like a health issue instead of giving people legal problems for possession of miniscule amounts?
+149. Cunts fucked
+150. Great to be going back to the fifties. Why can’t governments base their policy on evidence instead of ideology?
+151. You have to remember that conservatives don't analyse their policies in the same way as you might. They believe that there are good people and bad people. A good person won't be caught with drugs. A bad person deserves to be charged with a crime or to die from taking an untested drug. No exceptions, no excuses, and maximum disapproval from the law because the bad people just have to have the personal responsibility. But when their child takes drugs? Well first off, how dare you, my little johnny would never do that, he's a good bou. Oh, he definitely did? Well he isn't a bad person, so that doesn't count, they're just a young boy who is learning. Don't ruin his life. When an aboriginal kid with no prospects in life jumps in the back of a car his friend stole? Well, he's a bad person, super jail.
+152. Another action that will drive youth crime upwards as kids are strip searched into a life of crime from drug possession
+153. Honestly we will have to protest this government, if we are dumb enough to elect it, on several things. Buckle up. This is going to be fucking shit.
+154. People laugh at America and here we are slowly becoming them
+155. Can we vote for parliament and staff to have random drug test then
+156. LNP's new slogan: Repent, you dirty heathens
+157. Conservative governments never believe in harm minimisation. They’d rather stick to the good old ‘lock ‘em up’ method.

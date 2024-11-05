@@ -1,0 +1,168 @@
+Your job is to analye a series of Reddit Comments are drawn from sbumissions related to the 2024 Queensland State Election. The comments are drawn from a collection of comments before, during and after the election itself on the 26th of October. The parties that sought election were the Australian Labor Party (ALP), the Liberal National Party (LNP), the Queensland Greens (Greens), One Nation and Katter's Australian Party. The LNP prevailed in the election, with David Crisafulli becoming the new Premier of Queensland. 
+We have identified several key issues that the major parties campaigned on during the 2024 Queensland State Election: Youth Crime (YC), Cost of Living (COL), Health (H), Energy and Infrastructure (EI), and Abortion Laws (AL). Below is a summary of each party's position on these issues:
+Youth Crime (YC):
+- LNP: Advocated for stricter penalties for young offenders, including the 'Adult Crime, Adult Time' policy, proposing that serious offenses committed by youths be met with adult sentencing. 
+- Labor: Focused on rehabilitation and prevention programs, aiming to address the root causes of youth crime through community engagement and support services.
+
+Cost of Living (COL):
+- LNP: Proposed measures such as abolishing stamp duty on new builds for first home buyers and re-establishing the productivity commission to review building industry regulations, aiming to alleviate housing costs. 
+- Labor: Introduced initiatives like 50-cent public transport fares, a $1,000 energy rebate, and free lunches for state primary school students to ease cost-of-living pressures.
+
+Health (H):
+- LNP: Committed $590 million to an 'Easier Access to Health Services Plan,' aiming to reduce ambulance ramping and hire additional healthcare workers. 
+- Labor: Focused on maintaining and expanding healthcare services, addressing hospital capacity issues, and investing in new health infrastructure.
+
+Energy and Infrastructure (EI):
+- LNP: Criticized Labor's Pioneer-Burdekin Pumped Hydro Project as financially unviable and canceled it upon taking office, opting to explore smaller-scale hydro projects instead. 
+- Labor: Proposed large-scale renewable energy projects, including the Pioneer-Burdekin Pumped Hydro Project, to transition towards 80% renewable energy by 2035.
+
+Abortion Laws (AL):
+- LNP: Stated there would be 'no changes' to abortion laws under their government, maintaining the status quo established in 2018. 
+- Labor Party: Supported the existing abortion laws and opposed any attempts to repeal or amend them. Asserts that LNP intend to restrict access to abortion services based on the views of some of their members.
+
+Analyze Reddit comments and code them based on the positions they support or oppose concerning these issues. You will output JSON, so valid values are strings or null. Use the following codes: YC, COL, H, EI, AL. If a comment's position is unclear or does not pertain to these issues, output null.
+
+Secondly identify which party the comment appears to support. Use the party code ALP, LNP, Greens, ON, KAP if this can be determined, otherwise a null value if undetermined.
+
+Output JSON as a list of objects where each object has an "id" (integer) property of the comment id, an "issue" property set to the issue code string (or null value), and a "party" property set to the party code string or null value. Null means JSON null, not a string. Values MUST be quoted, e.g. {"party": "LNP"} unless they are null, e.g. {"party": null}. Comments follow:
+
+1. We’d be asking powerful people to allow their power to be taken away. Why would they let that happen? They won’t. It’s not right or good, but it is true.
+2. Why should the taxpayer foot the bill for shit political options? I absolutely agree with the rest but all public funding will do is create two parties that are indistinguishable from each other where the voter losers. You're also paying for this privilege to reduce democracy.
+3. I see you know nothing of my campaign for King of Queensland... My major platform is ban all political donations, and ban all political advertising. 😅😂🤣 Vote 1 CorruptBoomerang for King of Queensland!
+4. And... No politician can move to ANY public sector job that has donated to them, OR that they enacted ANY kind of policies for... EVER.
+5. I think saying it's going the way of America does a great disservice to our own long history of homegrown shitfuckery. I don't believe Queensland or anywhere in Australia has ever been clean of it. It's just the done thing. Now there's more readily available information and more exposure to catch these shenanigans, however those same tools could be used to put it to bed once and for all. Trouble with all of it is it takes a willingness to act in the best interests of the people as opposed to your own. That's a tough ask for some of these career politicians who got in the game for the grift in the first place.
+6. Oh hell yeah. Stop that revolving door shite.
+7. Land doesn’t vote. It is just a rule to adjust the enrolment figures within districts. Some Examples: Cook, Gregory, Traeger, Warrego have this allowance. For each district the rule the enrolment quota amount = plus or minus 10% which is roughly 30k voters to 37k voters. Traeger has around 20k voters. (See 2020 ) this is well under the current enrolment quota. So they add roughly 10k notional enrolments because of the land size. This is to make the redistricting easier, fairer and more representative.
+8. I would prefer if it were more like Tasmania (or Ireland), with somewhat larger multi member districts
+9. Before the current law it was even worse. The current rule is a compromise to get it closer to one-vote-one-value than it was under Joh Bjelke-Petersen. I do hope we can abolish malapportionment in QLD one day. Imo we should merge QLD electorates into STV districts like Tasmania or the ACT. For example instead of 93 electorates we could have 31 elect each electing 3 MPs. This could involve merging Cook, Traegar, Gregory, and Warrego with 2 much geographically smaller electorates to their east.
+10. link to the (assumed) source: https://results.ecq.qld.gov.au/profiles/currentEnrolmentFigures.html Section 63 = 63 Gazettal of enrolment figures The commission must, in relation to each month, arrange for the gazettal of— (a)the number of enrolled electors for each electoral district; and (b)the average number of enrolled electors for electoral districts; and (c)the extent to which the number of enrolled electors for each electoral district differs from the average number of enrolled electors for electoral districts. More relevant information: Current Enrolment Figures The following figures have been calculated in accordance with Section 63 of the Electoral Act 1992. Figures shown in red are more than 10 per cent over or under the average number of enrolled electors for an electoral district. When more than one-third of all electoral districts fall into this category for two consecutive months a redistribution is triggered. *For an electoral district with an area of 100,000 km2 or more, two per cent of the total area of the electorate is taken to represent the number of 'notional electors'. This figure is added to the number of actual enrolled electors in the district to make the total number of electors fall within 10 per cent of the average number of enrolled electors for an electoral district. For example, an electoral district with an area of 250,000 km2 would have 5,000 'notional electors'. This is added to the actual number of electors when calculating whether the number of enrolled electors is within 10 per cent of the average number of enrolled electors.
+11. Where do the votes go? Who decides?
+12. What would be even more unfair is if the whole of the SE just decided to neglect everyone and anyone else in the state. That’s why land votes. Because if it didn’t, sparsely populated areas could be royally fucked, ignored and neglected.
+13. With proportional representation.
+14. …. Or like Canberra?
+15. Trouble is exactly these giant districts that OP has learned about today. They're already unmanageably physically huge without clumping them together with a few more
+16. Good old Bjelkemandering. For those who don't know, under a fully fair system, 2 Queensland electorates would basically cover half the state in terms of land area, because population density is very low in those areas. To counter this, good bloke Joh-Bjelke Petersen changed it so votes were pretty much weighted heavier to country seats. So his country party with 20% of the vote won 26 seats, and formed a coalition with the Liberals who had won 22% of the vote but only 21 seats. Labor won 46.7% of the vote but only 33 seats. This is a swing back from that that still falls short of one vote one value.
+17. The votes aren’t votes cast, it’s just adjusting the amount of people who need to vote for a member. But it does mean a voter in a zoned electorate does have more of a voice towards government. We used to have 3/4 levels of electorates back when we had Zonal districts, now we’re down to two.
+18. surely its not the only electorate, why dont they just merge this ultra small blocks, or use an AI to equally distribute votes so its doesnt take decades and is absolutely perfect.
+19. Yeah, federally for example Bob Katter often has one of the highest travel expenditures in parliament, even higher than some ministers who occasionally go overseas as part of their position. That's because his electorate is so physically massive and spread out that flying is pretty much the only way he can traverse it in any reasonable amount of time. It's at least a 10 hour drive in good conditions to get from the outskirts of Townsville, to Mount Isa, both of which are within his electorate. Robbie Katter's electorate is a bit smaller, but I wouldn't be surprised if he's in a similar situation.
+20. Yep, some country votes were worth up to four city votes under the Bjelkemander. Not only that, but some boundaries were…interesting. I don't recall exactly where it was, but an indigenous community somewhere in north Qld was an exclave of a nearby city electorate, so as not to dilute the Nationals vote in the rural one.
+21. Gotcha. Thanks
+22. The explanation is in link to the (assumed) source: https://results.ecq.qld.gov.au/profiles/currentEnrolmentFigures.html
+23. Sky News lying is just standard operating procedure at this point.
+24. Waiting for a retraction and apology but won't expect one.
+25. hahahahahahaha. uh
+26. Just a tip. You can download the video from instagram and upload it here.
+27. Sky news untruthful shocked pikachu
+28. Sky news have never said anything true ... ever
+29. Fancy Murdoch lying. Fancy that.
+30. Are we surprised by this trashy propaganda Murdoch mouthpiece?
+31. The school lunches are never going to happen. If the LNP somehow manage to lose the unlosable election and the ALP get back in I can guarantee this will be walked back at the earliest politically convenient time. The only purpose of the school lunches policy was to save the furniture and make sure the election loss wasn't too severe.
+32. Is this goose some sort of fact checker?
+33. Just remember Miles pulled the gabba rebuild figure out of his arse, so it is fair to say you can not believe anything miles says. Remember the $250 million quarantine centre. All that borrowed money pissed against the wall while women were having their babies on the side of the road because of health cutbacks.
+34. They just call it “opinion” then it’s somehow fine
+35. Sky news just working hand in hand with the LNP. Where does sky news start and the LNP begin. Nobody knows
+36. Haha, maybe after the election when their lie swayed whatever votes they wanted
+37. Thanks
+38. I think you're confusing the Labor with the LNP-s non-core promises policy.
+39. When you’re an LNP voter any suggested positive change would probably be hard to believe
+40. Well if Sky News won't do it, someone might as well.
+41. Honk
+42. Calling objectively wrong figures "opinion" is so infuriating. In an age seemingly defined by an information overload, major sources should be held accountable for peddling clear mis- and disinformation.
+43. nobody watching sky news is being swayed by anything
+44. Awwww, that's cute. You haven't realised both parties will lie as much as they have to to be elected. Or have have you forgotten "There will be no carbon tax under a government I lead" or "No we aren't going to be making changes to stage 3 tax cuts"
+45. Who said I'm an LNP voter? We are facing a 4th term Labor government, if this is such a good policy why have they only proposed it when they were facing an election wipe out. The green propose heaps of nice sounding stuff as well, they know they'll never have to implement any of it, though.
+46. So we can safely say this goose if full of shit then. No facts at all to the drivel he is spewing?
+47. I mean, yeah, they broke the promise about stage 3 tax cuts because they had the ability to read the room, it was clearly geared to benefit the wealthy, in a cost of living crisis. Julia Gillard is a moron, she kicked her own personal goal of being the first female prime minister, put herself above her party and the country, I believe Rudd would have stuck with no Carbon tax, but with or without it, we'd still be screwed today anyway just look colesworth etc.
+48. Did you even watch the clip mate? I know your attention span is shot but it's only 30 seconds or so. He provided sources and evidence to back up his claim. You should try it some time.
+49. WTF does "Colesworth" have to do with anything here? You asserted that it's only the LNP who break promises and I pointed out 2 very clear black and white examples of broken promises that have zero grey area from the ALP. I can guarantee that if Miles does manage to win, we won't have a government owned petrol station or supermarket, and we certainly won't have tax payer funded school lunches. I'm not sure why you brought up supermarkets but I can promise you that the 2 companies who are earning a combined $5.80 per week per household in the country are not the cause of whatever problem your trying to point at.
+50. Yeah I watched it but who is he? Did you follow up with his evidence to see if it was legit or just run with word of mouth, evidence be dammed?
+51. That colesworth comment is the most reddit thing ever
+52. Everyone was worried that the ETS would drive up the price of everything including groceries, here we are.. no carbon tax and increased price of groceries, I was using it as an example because we all have to eat, so its very relevant. No one can guarantee anything, and I do agree, even if he did create government owned service stations or supermarket, it's not going to make a lick of difference without some form of regulation in the market, and no politician is willing to touch that. Each to their own for whatever party they're willing to bat for, but any leader regardless of parties that has a vision to make the lives of Queenslanders better, is better than nothing, or worse, less.
+53. I've voted, but I didn't vote LNP. I put greens last, lnp second last and ALP 3rd last. I couldn't tell you who the other 2 preferences went to, but as long as all 3 of these parties know they aren't my 1st preference, I'm happy. I'm just under no illusion that the ALP are this fantastic, amazing party it seems most of reddit think they are. I am certain that all of these crazy promises made by Miles will be wound back if he wins, which is still unlikely tbh. I voted similarly in the last election, except I swapped LNP and ALP because I thought Deb Frecklington was a better leader than Palaszczuk.
+54. I haven’t been on crutches for too long! Time for a change! *shoots self in the foot!
+55. I have never understood the flip flop voter. Vote for someone when they're justifying their value, not because the other guy has been doing a good job too long.
+56. For change? Nay. When it comes to the Qld government, this will dismantle a machine that has taken a decade to get back in functioning order, and take 4 to 8 years to fix again. That is what is at stake under the LNP, they don't make the machine better. They smash it because it competes with their doners. We are about to let the fact some kids stole some cars up north, destory our state.
+57. don't let him make a crisa-fooly outta you!
+58. Media never made the same argument when we had federal LNP for a decade
+59. I wonder how many voters in Townsville that voted for the current mayor to get rid of Jenny Hill will reflect on how poorly that turned out.
+60. Just voted today. Not for lnp
+61. John Howard would like a word.
+62. I'm just trying to understand, but why would anyone vote LNP. Like a reason for something they are offering. And legitimately too, youth crime is going down. What are the actual reasons
+63. God no please don’t let this happen
+64. We need to go further left with more taxes and spending, not less taxes and social spending like LNP does. So if you want change, vote Greens to get the kind of change we need. For everyone who does not own home more social housing means better living conditions. No more horrible rentals with abusive landlords and real estate agents. However to get more social housing we need to tax those stinky landlords and their agents and use this money to build more government owned homes for us. That is Greens policy. We have around 30% renters, its a mystery why Green vote less than that number.
+65. It's so funny how every couple of years, qld decides to vote conservative. And immediately following, the proceed to destroy the state as there is no power check of a senate in qld. You elect these psychos qld, and they can do anything they fucking want. Think verrrry carefully about who is trustworthy enough that not fuck your life up futher.
+66. if people achual vote for lnp your voting for destroying queensland
+67. Well done, did you draw this in kindy today?
+68. Facts. Great job triggering the cookers below
+69. Hopefully the mad Katter amongst the pigeons will change the expected result.
+70. why is everyone listening to the polls, theyre never right.
+71. Arguments like this are lazy and low effort and won't convince a single person to change their vote. We all saw how the 'vote on my side or you're a fwit' rhetoric played out during the referendum.
+72. I must be the dumbest man in QLD because I have voted for LNP.
+73. I hope people sleep in the bed they made.
+74. Lol
+75. Could it be that there is no representation from any of the tip rats from any party?
+76. Hey OP, enjoy the election coverage on Saturday night! Christ-afulli, the Messiah, is going to DESTROY your mob! Yeeeeeeeeeew!
+77. Granted, that is a dumb reason.
+78. It must be cool to have such a high horse that you can try to influence people by insulting them… You are as bad as people voting for that crumb and you have a complete lack of awareness about it
+79. https://en.wikipedia.org/wiki/It%27s_Time_(Australian_campaign)
+80. "Do you believe in the woman's right to choose?" "Yes." ***Why he always lyin'?***
+81. Vote PHON!!!
+82. If you wonder why labor have been in so long, and plan to vote libs, have you ever thought about why labor was in for so long?
+83. Constructive comment. It’s likely people like you are the reason ALP will be voted out this weekend.
+84. Mum said it's my turn to run the state
+85. QLD is made up of mostly middle class blow ins now, not surprised it's going LNP again
+86. Giggles fwit
+87. This sub is going to be in absolute shambles on Saturday night. Waiting for an anti Trump style “Not my Premier” campaign.
+88. But skynews said crisafuckwit was good/s
+89. I put them down has a 3 👍
+90. Cope, and seethe! :)
+91. Steve miles? I swear his mother and father are brother and sister.
+92. Yeah… because labours clearly been doing a great job.
+93. here are my worst nightmare, if LNP wins. 1. selling power generators. 2. selling water utilities 3. cut budget to hospitals 4. make a deal with road infra company and add more toll roads.
+94. Miles is a lightweight and union puppet…
+95. odd to see warhammer content on here
+96. As long as it's not the labor or greens, you have my tick.
+97. I am not sure to say I am surprised or not. People are just fuckwits voting for Crisafooli. Nothing good is going to come from this. ALP will be back in 2028 having to undo campbell newman style damage again. Holy fuck, I am tempted to leave the state, worst 4 years ever coming.
+98. This is literally the LNP battle plan at every level of government!
+99. Divide QLD into two. At the Tropic.
+100. Good to see that most Queenslanders didn't fall for creepy Stevens quick money grab for votes. And fuck off to the greens aswell.
+101. Bye bye labour... Bye
+102. Just wait until all the prisons are filled with kids so they can be sold off, and womens rights to abortion are rolled back. Then we can point and laugh and say "told ya so"
+103. Big congrats to QLD for proving that they do, in fact, have the most fuckwits in the state.
+104. I vote for on nation simply to keep them slightly relevant just so they continue to upset people that is all also communism is cringe so liberals sit at the bottom of the vote
+105. I am from Victoria and was thinking the sixth reich is coming
+106. Keep calling your opponents dumb, that'll work. /s
+107. Good job. Name calling is sure to make those dirty bogans agree with your enlightened ways!
+108. Reddit has become a bastion for everything centre left or further left. I miss the days of reddit being somewhat impartial
+109. You're not voting for Labor because they've been in too long. I'm not voting for Labor because they are a bunch of degenerate thugs. We are not the same.
+110. Really sad desperate stuff. Give it a bone losers.
+111. By all means, stay with the ones giving away "Free" stuff with YOUR money. Enjoy your soon to be $10 loaf of bread.
+112. I'd rather this excuse then, 'i want coal companies to be richer'. A good democracy is meant to switch up from time to time.
+113. The dumbest people alive are the ones who vote in the first place
+114. I’m pretty sure the last time I broke my arm was when Newman was in. Guess it’s time to do it again…
+115. Queensland had discernible state goals beyond lowering taxes and hoping something cool happens.
+116. And that right there is the tragedy of democracy. Realising that exactly half the population is dimmer than the average voter.
+117. This is democracy. People can vote for ANY reason.
+118. So zoning & development laws are the biggest factor in high house prices, and they are controlled by state government, and every one here wants to return the same party the has done nothing for decades on the sole reason that the other guy cut something a decade ago. It’s a lose lose election. If labour win it will just be a few insignificant freebies while the real costs pile up around you.
+119. Tbf those same kids just sent a 5 year old tourist to hospital with a head injury resulting in a flight to a hospital in a different town due to severity…after throwing a rock through a moving train window. After throwing mangoes at moving cars for two weeks. Two weeks ago a guy got injured from being shot at with a slingshot. Went through his car window and a pellet hit him. I voted labour. But I don’t think the people down south understand the grip the issue of youth crime has up north. It’s not just stealing cars. It’s breakins/ knife threats/ daylight car jackings/ little children being attacked for their scooters on the way home from school. Majority of offenders were caught and released to recommit crime. For example, the injury to the little 5 year old boy this week could not have come at a worse time as it is now at the forefront of people’s mind when voting. Especially when there is a lib volunteer telling voters out the front of voting centres that they intend to be tougher on crime or the katter volunteer telling everyone about their plans for castle law. People here are terrified and angry, most don’t care about anything else at the moment and the votes will reflect this. Labour out the front have a big banner advertising what they have completed, it’s great. But there is nothing speaking about the youth crime issue and how they plan to tackle it. Whenever someone brings it up on the current member in power fb page, he blocks them. I feel labour really missed the market / target on the issues the north want addressed and it may cost them.
+120. Why are kids stealing cars or what not with little deterrent something that’s nothing to you? That’s not nothing and I myself was a victim to that recently. It’s shite and frustrating that they have no real deterrence. The root issue is their upbringing and home situation, but juvi should be something none of them want to go into, yet that’s not the case currently. The deterrence is too weak to make them care about it. I’m not saying that’s determining my vote, which I’m not sure where I stand on still, but concerning you seem to think it such a nothing issue. Maybe if it happens to you you’ll think otherwise. Hopefully just misunderstanding you
+121. Kev Rudds slogan in 2007 essentially was “it’s time for a change.”
+122. Sure did. That is how Kevin 07 was elected. Then we went from not debt to a $100b debt in 3 years.
+123. Many Murdoch papers supported Rudd for PM after 11 years of Howard.
+124. As a townsvillian myself, probably very few.
+125. Most of Townsvilles thought process was we've had enough of Jenny, we aren't gonna vote in a Indian, so we'll vote Troy. As shit as Jenny was she would've been better then Troy as we know now
+126. John Howard can go fuck himself.
+127. You misspelled Scott Morrison.
+128. Probably some tax cuts if you are very rich
+129. There are some people truly against abortion, perhaps religion driven. I’m not, in some circumstances it is the best decision to prevent further health problems.
+130. It's got to be kicking down hasnt it? Lots of people are being squeezed and are frustrated and want to be nasty. LNP offer a scapegoat, and instead of eating the rich who are actively bending them over, they turn on their own kids.
+131. I would have normally except there was that Greens member who recently suggested we make interest rates the responsibility of parliament instead of the RBA. Considering how monumentally stupid that statement was it feels like the Greens aren't putting their smartest people forward.
+132. More taxes no thanks government takes enough as is and no country has ever taxed its way to prosperity, the green's direction what they want with their ideas makes them undesirable.
+133. I completely agree with you, but I also don't think OP is trying to change minds here, I think they assumed this sub would just laugh and move on... which doesn't seem to be working out for them so far, time will tell I suppose. As somebody who already voted against the LNP this week, I may be on OPs 'side', but I do agree that just publicly calling the other side idiots isn't helping anybody.
+134. It’s as lazy and low effort as voting for lnp because labor has been in for too long
+135. Nah. Vote for LNP because you agree with their policies, not because Labor has been in to long is stupid, just like voting for Labor because federal LNP was in to long is stupid. Vote for a political party that you feel best represents you individually, not because of “it’s time for change”
+136. Yeah, agree. Ultimately you and I want the same result, and as much as it might tickle us to mock a third party that thinks differently, we're just estranging people that we might otherwise be able to convince and only hurt our odds of achieving what we want.
+137. Well you just voted to give away our resources instead of taxing mining companies to relieve cost of living
+138. He literally has voted against a woman’s right to choose in the past. When confronted with a politicians words and actions, you should take their words with a truckload of salt, and watch what they do.
+139. Get ready for four shit years of terrible healthcare then! Crisfuckwit's gutting it Margaret Thatcher style.
+140. still smarter than Crisafuckwit, so what does that say about him/
