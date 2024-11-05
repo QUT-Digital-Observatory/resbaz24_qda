@@ -38,6 +38,8 @@ In this case we suggest you look at these things in order:
 
 ![Visual report](analysis_results.png) 
 
+Note: If this was going to be a paper, we would have hand-coded a subset of the data and validated the AI coding. This was not done here. This project is primarily a demonstration of the process of running AI coding experiments.
+
 ## Reproducing the Queensland Election AI coding experiment
 
 All you need to do is get an API key from [Google AI Studio](Google) and put this in a `.env` file in the root of the project with a line like this:
@@ -50,5 +52,5 @@ When complete, generate the report with `python qda_03_analyse.py 1`.
 
 ## For more
 
-The Digital Observatory is a Research Infrastructure unit at Queensland University of Technology. We are particularly active in using generative AI to support qualitative data analysis. We are able to support QUT researchers and students, and are open to collaborations with other institutions. For more information and to contact us, please visit [https://www.digitalobservatory.net.au/](https://www.digitalobservatory.net.au/).
-
+The Digital Observatory is a Research Infrastructure unit at Queensland University of Technology. We are particularly active in developing data platforms for Australian social media analytics, and using generative AI to support qualitative data analysis.
+We are able to support QUT researchers and PhD students, and are open to collaborations with other institutions. For more information and to contact us, please visit [https://www.digitalobservatory.net.au/](https://www.digitalobservatory.net.au/).
