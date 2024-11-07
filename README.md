@@ -24,6 +24,7 @@ In the final part of the workshop we 'rip the backaid off' and switch to Python 
 - `qda_03_pipeline.py` - A class containing the main code to run an experiment.
 - `qda_03_run.py` - A script to run the experiments, must be given a version number as an argument.
 - `qda_03_analyse.py` - A script to analyse the results of the experiments and generate a text and visual report.
+- `qda_04_sample_errors.py` - A script to select a sample of coding values, specifically party = LNP and issue = AL. We'd use the output of this drill into the unexpected results set out in the workshop.
 
 ## The results
 
@@ -56,6 +57,12 @@ coded as
 ```
 
 `party` should be `ALP` not `LNP`. We leave prompt iteration to fix this coding error as an exercise for workshop participants.
+
+The program `qda_04_sample_errors.py` is provided to do this, it would be invoked as follows:
+
+```bash
+python qda_04_sample_errors.py experiments/1/phase1 2024_qld_election_reddit_dataset/comments.parquet
+```
 
 ## Reproducing the Queensland Election AI coding experiment
 
