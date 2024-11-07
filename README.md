@@ -6,10 +6,10 @@ This repo contains a freshly composed dataset of Australian Reddit data before a
 
 ## Folders
 
-`2024_qld_election_reddit_dataset` - The dataset of Reddit data before and after the 2024 Queensland State Election.
-`experiments` - Prompts and AI coding run data for part 3 of the workshop. Of particular interest is `experiments\1\phase1\phase1_assembled.csv` which contains coding data for all ~25k comments.
-`outputs` - simple demonstration outputs from parts 1 and 2 of the workshop.
-`resbaz24` - A Python package containing code to process documents, and run AI models.
+- `2024_qld_election_reddit_dataset` - The dataset of Reddit data before and after the 2024 Queensland State Election.
+- `experiments` - Prompts and AI coding run data for part 3 of the workshop. Of particular interest is `experiments\1\phase1\phase1_assembled.csv` which contains coding data for all ~25k comments.
+- `outputs` - simple demonstration outputs from parts 1 and 2 of the workshop.
+- `resbaz24` - A Python package containing code to process documents, and run AI models.
 
 ## Notebook files
 
@@ -25,9 +25,11 @@ In the final part of the workshop we 'rip the backaid off' and switch to Python 
 - `qda_03_run.py` - A script to run the experiments, must be given a version number as an argument.
 - `qda_03_analyse.py` - A script to analyse the results of the experiments and generate a text and visual report.
 
-## Just interested in what we found?
+## The results
 
-In this case we suggest you look at these things in order:
+First, beware. This is a workshop example, and cross-checking the AI coding and identifying errors is part of the workshop.
+
+To see the results in context you should refer to:
 
 1. `2024_qld_election_reddit_dataset/dataset_readme.md` which explains how we collected the source dataset of Reddit comments which were AI selected as being relevant for Qld politics.
 2. Then look at `qda_03_prompts.py` to see the prompt instruction that was used. The coding is based on election issues of interest, and a party alignment where the AI was able to infer support for that party based on their comment.
@@ -38,7 +40,22 @@ In this case we suggest you look at these things in order:
 
 ![Visual report](analysis_results.png) 
 
-Note: If this was going to be a paper, we would have hand-coded a subset of the data and validated the AI coding. This was not done here. This project is primarily a demonstration of the process of running AI coding experiments.
+There are errors in the analysis. We discuss a particular set of errors in the workshop, e.g. implausible alignment of LNP values for the party code associated with concern for abortion laws. For example in prompt 62:
+
+```
+12. Not looking forward to being a disability pensioner under an LNP State government. Less healthcare, longer wait times for urgent surgery, let alone what is considered elective. I'm so glad that I'm past menopause so my reproductive health won't be taken out of my hands by the LNP.
+```
+coded as
+```
+{
+    "id": "ltwyh9n",
+    "prompt_id": 12,
+    "issue": "AL",
+    "party": "LNP"
+}
+```
+
+`party` should be `ALP` not `LNP`. We leave prompt iteration to fix this coding error as an exercise for workshop participants.
 
 ## Reproducing the Queensland Election AI coding experiment
 

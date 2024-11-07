@@ -12,6 +12,7 @@ def main(version: int):
     experiment = ElectionExperiment(version=version)
     # Run the first phase of the experiment
     experiment.run_phase1()
+    # experiment.run_phase2() # if we had another phase that used the data from the previous phase
     experiment.assemble()
 
 if __name__ == "__main__":

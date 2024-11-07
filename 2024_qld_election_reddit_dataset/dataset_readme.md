@@ -98,7 +98,7 @@ The `comments.parquet` file contains the following fields:
 
 ## Generative AI 
 
-We used Google's Gemini Flash 1.5 002 model to determin topic relevance with the state election. The coding prompt is as follows:
+We used Google's Gemini Flash 1.5 002 model to determine topic relevance with the state election. The coding prompt is as follows:
 
 ```
 The following Reddit submissions are drawn from Australian subreddits in the state of Queensland. They were created in the last week, during which there was a Queensland state election. Please code these submissions as being relevant to the election (even generally) or not relevant. Output JSON as a simple object where the keys are the number of the item, and the value is true (for relevant) or false (for not relevant). Submissions follow:
