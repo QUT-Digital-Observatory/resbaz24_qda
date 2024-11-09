@@ -1,0 +1,146 @@
+Your job is to analyse a series of Reddit comments from discussions related to the 2024 Queensland State Election. The major parties that sought election were the incumbent Australian Labor Party (ALP) and the Liberal National Party (LNP) opposition. The Queensland Greens (Greens), One Nation and Katter's Australian Party were minor parties in the election. 
+
+The key five issues that the major parties campaigned on during the 2024 Queensland State Election were Youth Crime (YC), Cost of Living Crisis (COL), Health (H), Energy and Infrastructure (EI), and Abortion Laws (AL). We include some context of the major parties positions on these issues. 
+Youth Crime (YC):
+- LNP: Advocated for stricter penalties for young offenders, including the 'Adult Crime, Adult Time' policy, proposing that serious offenses committed by youths be met with adult sentencing. 
+- Labor: Downplayed claimed youth crimewave. Focused on rehabilitation and prevention programs, aiming to address the root causes of youth crime through community engagement and support services.
+Cost of Living Crisis (COL):
+- LNP: Proposed measures such as abolishing stamp duty on new builds for first home buyers and re-establishing the productivity commission to review building industry regulations, aiming to alleviate housing costs. 
+- Labor: Introduced initiatives like 50-cent public transport fares, a $1,000 energy rebate, and free lunches for state primary school students to ease cost-of-living pressures.
+Health (H):
+- LNP: Committed $590 million to an 'Easier Access to Health Services Plan,' aiming to reduce ambulance ramping and hire additional healthcare workers. 
+- Labor: Focused on maintaining and expanding healthcare services, addressing hospital capacity issues, and investing in new health infrastructure.
+Energy and Infrastructure (EI):
+- LNP: Criticized Labor's Pioneer-Burdekin Pumped Hydro Project as financially unviable and canceled it upon taking office, opting to explore smaller-scale hydro projects instead. 
+- Labor: Proposed large-scale renewable energy projects, including the Pioneer-Burdekin Pumped Hydro Project, to transition towards 80% renewable energy by 2035.
+Abortion Laws (AL):
+- LNP: Stated there would be 'no changes' to abortion laws under their government, maintaining the status quo established in 2018. 
+- Labor Party: Supported the existing abortion laws and opposed any attempts to repeal or amend them. Asserts that LNP intend to restrict access to abortion services based on the views of some of their members.
+
+Analyze the comments and code them according to two dimensions:
+1. The ISSUE the commenter is primarily discussing, if it is one of the five listed above. Use the codes YC, COL, H, EI, AL. If no issue applies, omit the code entirely.
+2. The PARTY the commenter appears to support. Use the party codes ALP, LNP, Greens, ON, KAP. Infer party support where possible, e.g. a commenter fearing the outcome of an LNP victory likely supports ALP, and vice versa. Ensure there is either direct or clearly inferable support for a party before assigning a party code. Assign a PARTY code only if the comment expresses explicit support for, or opposition to, a specific party or its policies. This support or opposition must be clearly discernible; mere mention of a policy is insufficient. Look for indicators such as positive or negative sentiment towards a party's actions or policies or explicit endorsements or condemnations. Comments may express opposition through sarcasm or irony. In cases where party support is not clear, omit the party code entirely.
+
+You will output JSON as a list of objects where each object has an "id" (integer) property of the comment id, an "issue" property set to the issue code string, and a "party" property set to the party code string. In cases where you cannot determine an ISSUE or a PARTY, do not set a null value, omit the appropriate JSON properties entirely,  e.g. If the first comment did not have a matching issue and you could not determine party support, then the object would simply be {id: 1}.
+
+Comments follow:
+
+1. Christianist and Christian are two different things, just like Usama bin Laden was an Islamist.
+2. But why should should my tax dollars prop up event organisers. These organisations charge money for schoolies to attend, they are not a not-for-profit outfit. We live in a user pays system so these turkeys should front up for any pill testing costs. They promote their services as safe for the kids and so should be responsible for them. [https://www.schoolies.com/parent-schoolies-information](https://www.schoolies.com/parent-schoolies-information) The same goes for music festivals. Do the right thing and cover these costs with the ticket price and if they won't and it is unsafe then don't hold these sorts of events and don't expect the tax payer to prop up your business model.
+3. As an employer, I don't supply my employees with beer and pot either, yet I still have an obligation to ensure all my employees are coming to work, fit for work. If one of my employee's get injured at work because they are under the influence, I am still liable. This is why I have to reduce my liability risk through education (inductions and training) and random drug and alcohol testing, all at my cost. Same goes for these event organisers and promoters. They are a commercial venture chasing profit, so any pill testing should be at their cost in an effort to reduce their liability for litigation should the worst happen. This is not a tax payer cost.
+4. I think it would be reasonable to assume marijuana use and head lice infestation are both more prominent in younger and lower socio-economic groups. There is likely insufficient evidence to determine a causal or correlative relationship. Maybe someone should do a study.
+5. Yes and? What's that got to do with what I said?
+6. There is a difference. You are looking after your staff, that’s you meeting your obligations as an employer. While there are employees at these events the employer will have the same obligations that you have. The people attending these events are not staff members, they are participants of an event.
+7. Here ya go mate, I think you definitely need some https://www.alternaleaf.com.au
+8. Yes participants that have paid to go to these events. Someone is making money from this commercial venture. If you hold an event you have an obligation to patrons attending. That is why security is provided etc. If they know illicit drug use is typically prevalent, then they would have an obligation for their patrons safety at said event, especially if it is known that overdose is a significant risk.
+9. Not the point? Stop pushing your agenda down people throats and read what I actually said if you're going through the effort of replying.
+10. would be nice if the last image was Miles with his campaign planner, because the strategy was brilliant. Really hitting the hammer where it hurts against his opponent in a perfectly timed manner.
+11. Please let Miles stay opposition leader if he loses. Has clawed back most of a huge margin. Would be great to have an opportunity to vote for an actually progressive labour candidate again, especially if we are about to have 4 years of LNP
+12. The fact it's close at all just shows who the media actually work for
+13. Crisafulli was a key member of the Campbell Newman Cabinet. Everyone should have been well aware of how toxic his government would be.
+14. Weirdo LNP cookers are complaining about all the posts on this site trying to get them removed. This one will be targeted for sure.
+15. ***The best option by Miles*** would have been a great campaign slogan.
+16. Has anyone ask political staffers or public servants who have had to deal with Miles about his bullying behaviour
+17. Is it the CPSU or AWU that’s using MS Paint again to make this?
+18. How would you be, looking in your rear view mirror and seeing that idiot Miles there, uuggghhh!
+19. You are flogging. Dead horse and democracy by pushing another Labor gov.
+20. I’m really quite impressed that they’ve managed to take the election from guaranteed LNP landslide to a bit of a toss up. I imagine the LNP might still slip ahead barely because I still think lots of people are voting out Palaszcuk rather than voting in anyone But still impressive https://www.abc.net.au/news/2024-10-25/queensland-election-campaign-poll-shows-ground-shifting/104516204
+21. ALP has gone from 8.00 to 7.50 on sports bet. LNP rose from 1.06 to 1.07. Lol.
+22. Sure. What a joke. They have campaigned like they governed. Empty shirts. Crisafulli is just such a useless wanker that he has taken a solid opportunity to win to a possible loss. Neither of them are worth voting for and the lack of choice is maddening.
+23. Fully agree providing they take the same progressive policies to the next election. In other word don't do a federal Labor who became gutless after Bill Shortens leadership failure and blaming the loss on their progressive negative gearing policy.
+24. Yeah no matter what the outcome, Miles and his campaign staff deserve great credit on both effort and tactical brilliance
+25. I hope that labour win, but if not I hope LNP get majority. LNP minority with ON or KAP would be very bad
+26. I really hope it has shifted we don’t need an Italian Bruz 2 running Queensland, Bruz One(Barilaro) did a a bad enough job down in NSW we don’t need it up here too
+27. Betting odds still have Labor paying out 8:1. Which are surprisingly good odds for how close it actually seems. LNP paying out 1.08
+28. But also put some credit on the lnp campaign for allowing a runaway victory to be this too close to call
+29. Lack of choice? You are lucky to live in a place with preferential voting. You get to put exactly who you want first, without thinking the american way of "oh no, I need to not waste my vote". Secondly, you only mention two parties on [the right wing](https://www.politicalcompass.org/aus2022) federally, but most states reflect the federal parties. LNP is getting far too close to the far-right, and Labor has drifted past centre and centre-right in the last eight years. Feel free to select from the other side of the political spectrum if you feel these two parties don't represent you.
+30. >federal Labor who became gutless after Bill Shortens leadership failure and blaming the loss on their progressive negative gearing policy. I mean they were kinda proven right weren't they?
+31. Unlikely, they all would have done their postal vote already so they don’t have to leave the house.
+32. Is the economy good now is it? Women - I like them that much I want them to be able to choose to stay home and raise a family and not worry financially
+33. But Crisafooli has said he won't do minority, so we have nothing to worry about. And he's such a trustworthy guy we can believe him.. Right???
+34. Likewise, I hope that Labor wins minority with Greens. Some of the best, most productive governments have been run in this set up (eg.Gillard's Federal government with Greens).
+35. I am centre right and couldnt vote for a watermelon.
+36. I think Miles' performance is making me doubt this theory. There may have been other issues. Miles' progressive agenda helped him close the gap instead of increasing it. Albo should be taking notes and considering making room for transition to a bold progressive pm.
+37. I think it was just misdirection from both Labor and the media on where the blame lay. I also think a fair percentage Australians are shallower than we give them credit for hence why I think they have the ability to get it over the line with the right team.
+38. Right and privatising business is going to help make the average Australian better off how exactly? Don't you want the mining companies that are basically stealing our resources to pay their fair share?
+39. Policies can be twisted or elaborated but finding a flaw in your opponents policies that matter to a large percentage of voters and hammering it in before they had a chance to defend or retract is a great way to run a campaign.
+40. Is there any appetite (both by Miles himself and the party as a whole) to sit in opposition for a term if it comes to that and then potentially try and pick off the LNP next term if they’re true to form.
+41. >There may have been other issues Quite a few Labor MPs were reshuffled after 2019, and Bill Shorten was replaced as leader with Anthony Albanese which may have made a significant though unnoticed difference.
+42. I think a lot of Australians hate to vote and want to have one single issue that they vote on. For a lot that’s obviously “tough on crime” or “think of the dead babies” Having a simple voting measure is so much easier than actually looking at the whole picture and weighing the complex differences between to political parties to determine which is marginally better than the other. I’m happy to vote for the party that taxes mining companies.
+43. What good have labour done this whole time they have been in? You think it’s getting better? Honestly get a clue mate.
+44. Personally I’d prefer not, but they’re in a great position to absolutely destroy the lnp at the next one if they’re unsuccessful. If labor do manage to pull it off, if miles and co can keep this momentum to scrape by this election, I think it’ll be nigh on impossible for the lnp to form a government for probably 2 more election cycles
+45. > Anthony Albanese which may have made a significant though unnoticed difference. I don't think the switch to Albo did make a difference though, because Albo didn't win his election - Scotty lost it. That's how government usually changes hands in this country, the incumbents *lose* rather than the opposition winning. You could have put a Koala wearing a sombrero in as the Labor leader and they'd have still won against Morrison.
+46. so you can't answer... got it, i would have thought if you were so confident in crisafulli it would be pretty easy to answer is it his plan to walk back the progressive drug laws and removal of pill testing at schoolies? removal of abortion laws? removal of the 50c public transport fares? is it his backtracking on campaign promises already? is it his referral to the corruption council recently? is it his plan to cut down on crime with a costing of just 2 million dolars? i can keep asking you how if you want but clearly you don't want to answer lol a protest vote is a perfectly good reason to vote, just don't try and play it off as the LNP are actually a good party to choose
+47. You do realise it's not a democracy if power doesn't frequently change hands, right?
+48. The people have spoken. Get your head out of the sand.
+49. Democracy isn't fucking pass the parcel mate. If one party has shit policies, they don't just get a turn because "democracy"
+50. So you're saying Japan has been a dictatorship since the 60s?
+51. lol, you still got nothin the irony, telling me to get my head out of the sand while you can never give any answer at all, typical conservative supporter behaviour, why do you all live in your own little made up reality but still have the nerve to try and make out like anyone who asks you to prove something is delusional or has no idea what they are talking about? lol winning an election doesn't mean the party picked was the correct decision at. all.
+52. Except it's true. Look up any study of politics and what is important to democracy.
+53. Now now ALP, it's time for you to fuck up really badly and give the LNP a turn, they've been very patient. Remember when we talked about sharing?
+54. At the very least, Japan is far from a model society.
+55. We have the opportunity to change government every X years. We shouldn’t frequently change hands just because, especially if the other side has zero substance to offer the general public, often obfuscating what they’re about. If they actually do govern for the populace, Happy to be proven wrong. Doubt i will be though.
+56. If democracy is about taking turns, it seems to me that the Greens are due theirs.
+57. Everyone knows the Greens can't be trusted not to mess up everything the LNP and ALP have carefully created /s
+58. Like most democracies, we have a 2 party system. Other parties can win seats, but they won't get a majority. That's what makes our democracy flawed. Thankfully we have runoff voting, unlike the US, which mitigates the spoiler effect, but it still tends toward a 2 party system. This is a problem because it doesn't give a lot of options, and you may have to vote for a party even though you disagree with a lot of their policies. For example, I'm conservative, but fiscally liberal. I hate capitalism. If there's any party most likely to dismantle capitalism in this country, it's labor. Capitalism doesn't look like it's going away anytime soon, however, so I vote LNP, because their policies are more important.
+59. KAP probably will go on I feel it will be a family dynasty. ON will probably go after Pauline does, I always like to remind people that they had 11 seats in the Queensland Parliament post the 1998 election, now they have 0, they simply tear them selves apart. Possibly FF and ON would last longer here if there was an upper house in Queensland.
+60. KAP is well liked in its region (north Queensland) and has several competent, well-liked MPs; they aren't going away anytime soon. One Nation, on the other hand, has a lot of issues, and personally I don't believe they're sincere politically - from my perspective, they frequently have low-quality candidates, and their whole thing largely seems to be emotionally appealing to poorly informed bogans.
+61. One of the few actual policies LNP have announced is that they will change voting methods to make it harder for third parties to win seats.
+62. I consider KAP, ON and FF fringe and dying. They may merge with other rising fringe loonies and carry on for a bit, or they may fade away. Either way, best ignored. FF just keeps popping up in different forms - with names including "Conservative" and "Christian".
+63. Every election for 20+ has had at least one party pop up targeted at the disillusioned right wing vote. ON, KAP, FF and UAP have all risen and fallen here in Toowoomba without ever gaining more than 15%. I suspect that once Pauline Hanson disappears and Clive Palmer finally gives up there will be another demagogue trying to capture their demographic.
+64. KAP will continue to exist in some form as long as regional Qld feels underrepresented. They're also not as stupid as people make them seem. This whole abortion thing has screwed over the LNP big time and may actually win KAP another 1 or 2 seats.
+65. Weirdly what might kill them is Cris's plan to make PR voting optional, minor parties die when preferences aren't a thing because most people just lazily vote the minimum for red or blue when given the choice and minors die without preferences.
+66. Robbie Katter is young But anyway. It's really between ALP & LNP. Do you even have any KAP or ON etc candidates in your electorate? Probably not if you live in Brisbane or SE Qld. I like hearing those minor parties rant & rave. But don't take them seriously really. ON will wrap up once Pauline goes. KAP will probably live on in Mt Isa with Robbie. Unless someone else comes along up there. Unlikely. FF are religious loons.
+67. Officially Robbie is already leader of the KAP. Probably keep going after Bob. One Nation may not last long past Pauline. They'd need a new cult leader. Probably need one now because I don't think she has a personal following anymore. Their base is very specific and if they don't find a new cult leader someone else will step up and start a new party that will replace PHON.
+68. There will always be a party in Qld in some form for the disgruntled cookers and hillbillies
+69. Everyone loves minor parties, until they don’t align with your views.
+70. KAP is certainly not dying. They may even end up with more MPs this election. ON does a good job of tearing themselves apart every few years, and FF is largely irrelevant.
+71. It is a very Qld thing, I am observing, due to its large regional population.
+72. Jeez I sometimes wonder. The whole new extra state stuff from people who want less government seems a bit odd.
+73. It's called the Greens, though ALP are trying their best to imitate them.
+74. I like that minor parties exist. I like if they accidentally end up with influence but not power, even the ones I like.
+75. I am not liking any party. Minors like ON, I really wish they vanish. Majors are also corrupt and they spent more time politicking than governing for the good. What appeals me are true independents and even the teals. Honestly, I would vote for a teal, if they manage to put up a candidate for upcoming federal election, in my seat with a very high profile incumbent.
+76. I’m just curious as to why people like the teals so much. I couldn’t even state one thing they have done, who they are, what they stand for… and yet Reddit has this obsession with them.
+77. I just checked online, ON has candidates in all 93 seats.
+78. Because the candidates have integrity and their policies are good. They haven't come through a political career and are successful on their own. They can't do much yet directly as the numbers are not there, but they are certainly influencing policies. See how teals won the bluest Sydney northern beaches seat in NSW by-election. More such seats will fall.
+79. Well that IS interesting! Thanks. Just looked ours up. We don't have a KAP. All others we do.
+80. I just want to know what they HAVE done. Like it’s been years now. They must have actually done something.
+81. Search for Queensland state election candidates in Wikipedia. KAP only a handful. FF about 60%.
+82. They are not in government to actually do anything. That is why it is important to vote more of them so that lab or lnp becomes minority and have to take their support.
+83. You can still absolutely do things when you aren’t in govt. Your purpose there is to hold the govt accountable. I have literally heard nothing from the Teals.
+84. Arnt you from New Zealand? Not sure with your fit into this narrative
+85. Correct. But obviously I live here, so it effects me as much as anyone else residing here. Not only that, I will one day vote here, so it’s probably even more imperative I learn what the politicians here do. So far, I’m completely unsure what the Teals have done that made it to Parliament.
+86. *Posts ceaseless propaganda about the ALP's budget debt* *Proceeds to submit budget with unchanged debt* Classic LNP move.
+87. 🫱🫱 We have a plan and that plan is go fuck yourself 🖕
+88. >"We've long argued that building capacity in the public service and empowering it to manage projects will drive down project overruns." This is unquestionably the most shameless lie told throughout the entire campaign. The fucking gall of this guy.
+89. Debt will be about the same by 2028 and the difference is that Queensland will have no pumped hydro under the LNP at that point. What a deal!
+90. I mean.. we all knew this would be the case, right? Let em rip electricity prices. Especially if they do end up selling off Energex.
+91. This chrisafool couldn't even run a company profitably that was getting government funding and he was still trading while insolvent and he's going to bankrupt qld if we vote him in and we are going back to 1000 dollar electric bills ,woohoo. Literally voting ourselves back to the dark ages . Im getting ready to put all my prices up by 30 % if the lnp gets in just to cover the cost of power bills .
+92. What a shock the LNP haven't planned for energy production. Like their Federal LNP brethren, QLD LNP will leave QLD with an energy crisis. Same idiots that voted for the LNP. Will be the first to scream, next year, their electricity bill is to high. Then blame Labor for making it that way.
+93. That means long term baked in power bill increases for Queenslanders.
+94. The lack of a plan WAS the plan all along.
+95. That’s brutal. I knew this was going to happen, but it’s so sad to hear it nonetheless
+96. Well.....duh, that's the lnp's core ideology now days, do nothing then cry about the place falling apparently in the weekend australian when their back in opposition.
+97. What a shock. Yet another blatant lie to the people.
+98. And then we'll have to say yes to Duttons nuclear non-plan that Crisafulli has sort of but not really said no to, how very convenient.
+99. Can I read these costings anywhere or is it only news articles written about them.
+100. The LNP will cut you the moment that they get in.
+101. I wrote an email to the Greens about the crime in West End and all they did was blame Labor and the LNP
+102. Good Stuff. Some common sense needs to prevail here so Qld's not stuck with this Palletjack vanity project of a unreliable and expensive net-zero roll out that has been thrust upon us. Lets get some adults in the room to review the biased figures that have been presented to the public so we can see the real world cost to this transition and steer Qld back on a course that will not bankrupt the state or its residents.
+103. 'Baseload' is the minimum amount of power massive coal fired power stations need to produce before they shut down. Think of it like dropping below idle speed of your car's engine. It's irrelevant to renewable power supply. Using the term in that context is nonsense.
+104. If burning coal is cheaper than renewables, what is the immediate benefit to regional, lower income communities? Why not let NSW and VIC do first ?
+105. If great people like the Liberals don’t like renewables, it could be time to ask why? These are great members of the human race. Anyway, watch Rowan Deans “ice age watch” on Sky News for the truth.
+106. How do they even put this to paper with a straight face? This guy was there in the Newman government, arguably the greatest calamity to befall the public service in QLD’s history.
+107. But the LNP will give us years and years of slow expensive research into the viability of nuclear. That's basically the same thing right?
+108. As a new home battery owner. Im feeling like I'm goona see the ROI on my investment start to dial up significantly
+109. Careful, trickle down sounds dangerously like pumped hydro. Unless the trickle is pieces of coal rolling down the embankment.
+110. You've heard the joke about trickle down economics? You won't get it.
+111. Just like the ALP numpties who's favourite catch cry is "but it was Newman's fault or Murdoch made me do it"....
+112. Thankyou bot, relevant contribution to the topic bot, really organic discussion there bot.
+113. >Baseload' is the minimum amount of power massive coal fired power stations need to produce before they shut down. Sorry, that's not correct. 'Baseload' is the mimimum electricity demand from the grid over a time period, typically 24 hours. It's effectively the combined demand from stuff that's always plugged in and switched on - things like fridges and freezers, cold rooms, modems and servers - that kind of thing. The generation on the grid needs to constantly meet that demand, in addition to the load added by every light that gets switched on for a few minutes, every pump and fan and oven that runs intermittently etc.
+114. Until the sun don't shine and the wind doesn't blow..
+115. So I watch the show that admitted they are satire and that only a moron would consider them news to get out of a lawsuit for lying, to find the truth?
+116. Here is the perfect example why the government should have never enabled Murdoch to televise his propaganda outlet free to the regions.
+117. Yeah except for the fact that nuclear won’t come online until 2050 at EARLIEST. Ik you’re sarcastic but seriously, now is not the time to go nuclear (tbh the best time was in the late 80s and early 90s when clean alternatives didn’t exist, but something happened in 1986 as tech really hasn’t moved that far since as gen 3 (current gen) started construction in the late 80s)
+118. You sure will! Great purchase will have to seek out a battery soon enough myself.
+119. Sure will. You will avoid any sun tax payments with a home battery.

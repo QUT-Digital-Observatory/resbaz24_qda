@@ -1,0 +1,154 @@
+Your job is to analyse a series of Reddit comments from discussions related to the 2024 Queensland State Election. The major parties that sought election were the incumbent Australian Labor Party (ALP) and the Liberal National Party (LNP) opposition. The Queensland Greens (Greens), One Nation and Katter's Australian Party were minor parties in the election. 
+
+The key five issues that the major parties campaigned on during the 2024 Queensland State Election were Youth Crime (YC), Cost of Living Crisis (COL), Health (H), Energy and Infrastructure (EI), and Abortion Laws (AL). We include some context of the major parties positions on these issues. 
+Youth Crime (YC):
+- LNP: Advocated for stricter penalties for young offenders, including the 'Adult Crime, Adult Time' policy, proposing that serious offenses committed by youths be met with adult sentencing. 
+- Labor: Downplayed claimed youth crimewave. Focused on rehabilitation and prevention programs, aiming to address the root causes of youth crime through community engagement and support services.
+Cost of Living Crisis (COL):
+- LNP: Proposed measures such as abolishing stamp duty on new builds for first home buyers and re-establishing the productivity commission to review building industry regulations, aiming to alleviate housing costs. 
+- Labor: Introduced initiatives like 50-cent public transport fares, a $1,000 energy rebate, and free lunches for state primary school students to ease cost-of-living pressures.
+Health (H):
+- LNP: Committed $590 million to an 'Easier Access to Health Services Plan,' aiming to reduce ambulance ramping and hire additional healthcare workers. 
+- Labor: Focused on maintaining and expanding healthcare services, addressing hospital capacity issues, and investing in new health infrastructure.
+Energy and Infrastructure (EI):
+- LNP: Criticized Labor's Pioneer-Burdekin Pumped Hydro Project as financially unviable and canceled it upon taking office, opting to explore smaller-scale hydro projects instead. 
+- Labor: Proposed large-scale renewable energy projects, including the Pioneer-Burdekin Pumped Hydro Project, to transition towards 80% renewable energy by 2035.
+Abortion Laws (AL):
+- LNP: Stated there would be 'no changes' to abortion laws under their government, maintaining the status quo established in 2018. 
+- Labor Party: Supported the existing abortion laws and opposed any attempts to repeal or amend them. Asserts that LNP intend to restrict access to abortion services based on the views of some of their members.
+
+Analyze the comments and code them according to two dimensions:
+1. The ISSUE the commenter is primarily discussing, if it is one of the five listed above. Use the codes YC, COL, H, EI, AL. If no issue applies, omit the code entirely.
+2. The PARTY the commenter appears to support. Use the party codes ALP, LNP, Greens, ON, KAP. Infer party support where possible, e.g. a commenter fearing the outcome of an LNP victory likely supports ALP, and vice versa. Ensure there is either direct or clearly inferable support for a party before assigning a party code. Assign a PARTY code only if the comment expresses explicit support for, or opposition to, a specific party or its policies. This support or opposition must be clearly discernible; mere mention of a policy is insufficient. Look for indicators such as positive or negative sentiment towards a party's actions or policies or explicit endorsements or condemnations. Comments may express opposition through sarcasm or irony. In cases where party support is not clear, omit the party code entirely.
+
+You will output JSON as a list of objects where each object has an "id" (integer) property of the comment id, an "issue" property set to the issue code string, and a "party" property set to the party code string. In cases where you cannot determine an ISSUE or a PARTY, do not set a null value, omit the appropriate JSON properties entirely,  e.g. If the first comment did not have a matching issue and you could not determine party support, then the object would simply be {id: 1}.
+
+Comments follow:
+
+1. I’ve been on the polling booths. Heaps of people are changing to Greens 1, Labor 2, as the vote flows to labor anyway, (in a standard seat).
+2. Absolutely not. The LNP are still cunts and I don’t want them in.
+3. I voted ALP because all I care about is upvotes in r/Queensland
+4. Actually yeah, I was quite conflicted at the early voting and was/am concerned that I couldn't place one nation any lower.
+5. No change of heart, just further confirmation I voted the right way.
+6. I voted early and the LNP peeps were out in force with straight up lies. It was pretty upsetting being told Labor is taking away our reproductive rights when as far as I know the opposite is true. They're just so brash about it.
+7. Nope. Best part of the process is walking past Red and Blue flyers to happily take a Green one and hope they see that I did so
+8. I’ve been voting the same since I was 18, so no. There’s only a couple political parties that come close to representing my values and that’s not going to change. I vote early because I don’t like crowds either - the political party volunteers are painful enough to deal with.
+9. Nope. I knew which way I'd vote a couple of decades ago and the only thing that changes is the names of the candidates.
+10. Nah, I love walking down to the voting place and giving the LNP workers an earful as I take their HTV and rip it up in front of them.
+11. Nothing new has come up in the last few months, so no.
+12. Voted early as I was already set on my preferences
+13. Just voted & can confirm both myself & my partner voted entirely as discussed months ago. NOTHING that was announced in the last weeks influenced our decision making in any way.
+14. I voted early as I prefer to miss the crowds on the day.
+15. Several years ago, my MP blocked me on social media and ignores all correspondence. Makes it a super easy decision when the candidate has a track record of not bothering to turn up for work.
+16. I am genuinely curious what the stats look like for media platform/demographic/political lean. Does reality match the trope? Big (captured by the right CM, fB) Media = uninformed, boomers +, mostly cookers and LNP Redditers = vocal articulate mix of green/lnp/teal and shitposting savants of every party. TikTok = AuHD drifters on a socialist greenwashed whimsy. [ShitPosting Savants…. Language is hilarious]
+17. I didn’t put LNP last as I thought I would. Cause here in Cairns we have Shane Cuthbert.
+18. Voted early for Labor. I don't understand how anyone has a swing-able vote unless they are oblivious to the world, but apparently there's enough of them that the polls have swung towards Labor in the last few weeks thanks to the media elite being scared about abortions (rather than economic factors which they are immune to). As I get older there is no chance I'll ever vote for the liberals or the nationals. There is a night and day difference between the two and I can't understand why anyone with an above room temperature IQ would vote for the LNP unless they own vast swathes of land with valuable fossil fuels underneath.
+19. Yes I wonder if I should've put One Nation last instead of Family First.
+20. Nope. Voted at 8:05am on the day they opened. I'm a swing voter but I'm fairly well informed on politics/geopolitics as they are an interest of mine so I generally know which way I'm voting by the time polls open.
+21. Nah, although it would be interesting to the political landscape to see a One Nation majority government here in Queensland.
+22. Hell no. I couldn’t wait to put the Greens last, been waiting months for the privilege.
+23. I've voted early a few times. I always vote the same way. I don't hear new information and think "oh, wait" then realise it wouldn't have changed my vote.
+24. A little bit. I have a no junk mail sign on my mailbox and one candidate has been shoving their crappy flyers in day and night. Regret voting for the twat.
+25. Never any line up at our local place. Go in. Vote. Leave! Always over in tops 5 minutes. In theory i coukd have voted a month ago. Havent changed my mind. But ill just go down in the morning.
+26. No way. But I’m glad all this stuff came out about libs and allowed people to see them for who they are. I’m happy with mine but wish I’d put a few further down the preferences.
+27. Voted early, and for the first time in my voting life I'm a swing voter. No regrets, as such. Just disappointment that I had to vote the way I did. Labor did something Bad™. Something that I can't accept from my government. So they lost my vote/preference. I've had this discussion a few times, and the Laborites say "you shouldn't punish Labor for doing something Bad™, you should punish the LNP because they might do something just as Bad™, or worse". That makes no sense to me. It's reality vs possibility. Something that did happen vs something that might.
+28. Yeh a bit. I was going to vote labor because I felt the financial relief of energy rebates and discount rego very helpful but then liberal said they would match that. So then I switched to liberal for their promise of the reinsurance pool and that’s a huge cost. But now I’m not sure.
+29. Yeah, I’ve had my vote set for a while. I’d rather not have to attend a voting centre the day of, just seems like more hassle when I can just go do it on my work break
+30. Not really? Early voters don’t want to wait in lines.
+31. Yep. The only thing I wasn't sure of was who to put last. 1st and 2nd preferences were pretty much set in stone for awhile now.
+32. I feel like most early voters just can't be arsed wasting their Saturday or dealing with the queues. I'll swing between parties nearly every election, so just need the important info before then.
+33. So are you for or against women having control over their own bodies? Edit: Calm down with the downvotes. Okay so obviously they're for, that's fantastic. There's a bunch of LNP wackadoodles out and about, I just wanted to check.
+34. The problem with 'adult crime adult time' is that 1. The 'crime wave' is primarily a media narrative rather than reflective of the truth; crime rates are signifcantly down from a decade ago, 2. It runs counter to how to actually 'solve' crime - address its socioeconomic causes e.g. poverty, social services, education, community spaces etc. 3. Instead of the above, increased punitive measures condemn kids to permanently inhabiting the criminal 'justice' system (because it affects their education, further traumatises them, stigmatises them etc. Etc., making things worse.
+35. Adult crime, adult time is absolutely bonkers!! Like we’re going in the opposite direction. How about fund things that keep kids out of crime.
+36. Same but the Indie in my seat is an anti-abortion cooker. Still haven't decided how to order the cooker options before putting the lnp last.
+37. Same. Progressives and Greens first. LNP get the 'high score'.
+38. The whackos are worse than LNP in my electorate, and there are no decent indies. But otherwise very similar!
+39. What makes you interested in voting greens first? The way I look at it they're pro-environment but not good at much else? I don't think Labor is very far away from their environmental stance?
+40. It would be good if they could continue the hydro work without displacing thousands of people, risking platypus populations and destroying grazing land for farmers.
+41. FWIW The Greens are too small to hold a government in & of their own. Since there’s no senate in state politics, if the Greens happened to win your electorate because you put them first, they’d have to form a government with Labor (and that’s a good thing!). However if they didn’t win your electorate and you put them first, your vote flows to your second choice (therefore Labor). It’s smart to put a smaller independent/green for your first choice before you preferred major party.
+42. Yeah we had seven candidates in my seat and my biggest regret is being unable to put the racists lower than last.
+43. One nation actually scored higher than an independent for me! It takes a lot to unseat them from the bottom of my ballot but they managed it
+44. In a standard seat, your vote will rest with the first major party you put forward. So it doesn’t matter where you put LNP or ON - if it’s after labor (or greens in a greens seat).
+45. Right? Like, Crisafulli hasn’t really come up with anything. Miles only keeps making better promises. Greens still hold onto their promises (which ALP have taken some inspiration from). What would change someone’s mind?
+46. If you're well informed, as you claim, why are you a swing voter? Lol.
+47. That would be many things, and “interesting” is definitely one of them.
+48. 'Interesting' in the sense that it would make us a laughingstock when we're supposed to be the best state? Pauline wouldn't even want it, since it would mean she'd actually have to work, and she's only in politics for the pay and retirement benefits.
+49. Yeh fuck progress, humanity has never benefited from moving forwards!!
+50. Lmao. Last last? Or just behind (what I assume is LNP and ALP)?
+51. On first glance I read your opening line as “I voted early a few times” and thought, hang on a minute….
+52. Moved to Qld ten years ago and still don't get this. I'm from NSW and love the lining up, the chats, the democracy sauso etc etc etc
+53. I just don't want to take my kids with me and deal with the circus on voting day. It's way easier to pop in while the kids are with dad or at kindy and be in and out in 2 minutes.
+54. If he was an LNP voter what would you be doing about it
+55. Thems would not be a decent indie, but slide to the whacko/nutjob section then, IMO. Nice you’re thinking about it all in a positive/progressive way for us all though, thanks ☺️
+56. The whacko parties don't have a chance of forming government, the LNP do. Therefore, LNP last.
+57. The whack jobs can't form government so LNP goes last. In my electorate we had a horrific line up to choose from but I still put the lying bastards last.
+58. In a standard seat, your vote will rest with the first major party you put forward. So it doesn’t matter where you put LNP or ON - if it’s after labor (or greens in a greens seat).
+59. Nah still gotta put the lnp last for strategy purposes. Gotta put as many roadblocks between them and your primary vote.
+60. In a standard seat, your vote will rest with the first major party you put forward. So it doesn’t matter where you put LNP or ON - if it’s after labor (or greens in a greens seat).
+61. You'll find most of Labors "people" policies are decades old greens policies, e.g. Cheap/free busses, Cheap/free lunches Both greens policy from 8 years ago Also if you ever do a differential examination on greens policy vs "decent indies" the alignment is usually 90+%. Xenophon's entire policy document was almost a word for word copy of greens national policy a few elections back, with the exception of the one or two things he was actually able to write his own policy for, to suit his platforms
+62. Greens push Labor to be half decent. They also don't take corporate donations so they can't be corrupted unlike the other 2 majors. I share the same values as them, and they do a LOT more than just push for better environmental laws. So I vote Greens 1 because I agree with their stance on just about everything, and I agree with their method of doing things.
+63. >The way I look at it they're pro-environment but not good at much else? Which Greens policy don't you like?
+64. I'm not a rabid Greens person. However the thing that attracts me and many others to them is that they actually have policies on lots of things and they're publicly available right on their website.
+65. I’ve voted for them in the past, but I’ve found my greens MP to be a huge disappointment to be honest.
+66. Greens are the protest party. They will never achieve anything they just promise their followers the world but know they will never form any majority government to implement. The Greens MPs in Brisbane keep blocking housing developments. They want to keep people vulnerable and homeless as who will keep buying their BS if they are in a home.
+67. I'll keep that to myself. When I mention it, as I said, all I get is "ignore Labor doing it, LNP might be worse".
+68. You enjoying standing in long lines? I take it watching paint dry is also one of your hobbies?
+69. I still couldn’t morally put ON or FF above LNP even if my vote was never going to get there, and I’m a little horrified that some people here are okay with that.
+70. Agreed! I take zero pride in putting the other conservative off the deep end parties above them, but since the LNP is a major party that I happen to despise, they go last always.
+71. Well there you go, taking the best of the greens and liberal policies and rejecting the worst ends up working to be pretty good government!
+72. Number one on the reverse of the Greens “How to Votes” is Stop new coal and gas.
+73. Well what do they actually stand for? The only person I see making head lines is that ex-green federal senator, I know she's pretty adamantly anti-abortion.
+74. they are protesting for what they believe in, just how all political parties operate when they arnt in power since they can’t influence change themselves?
+75. May as well have just said "vibe check" thats how much value an opinion like this has.
+76. Guarantee it’s either COVID, Immigration, or foreign policy related. Two of which aren’t a state problem and the former being a cooker problem
+77. Can't abide paint, but watching grass grow? That's a fun week off work!!
+78. The Greens HTV on the sunny coast do exactly that ….LNP, FF, ON
+79. Look at it this way - ON and FF have policies that are even worse than LNP, yes. But LNP being in power hurts a lot more people than ON and FF getting some votes. Greens Independents who aren't RWNJs (unless you actually prefer them to Greens, in which case this goes first) Labor RWNJs LNP
+80. It's a shame they don't/won't take policies like "stop opening more thermal coal mines" or "stop taking tons of money from vested interest parties". On the whole though the QLP do make for a reasonable 2nd or 3rd preference, which is why they are in government. At some point though they'll have to realise that my enemy's enemy is my friend, and stop bashing each other in Central Brisbane.
+81. if it's on the reverse, it's not No.1. What's on the front side?
+82. I'd say rent caps and no new coal and gas are the two main things that differentiate them from Labor. And just kind of doing similar things as labor but just more. This only applies in qld because miles is proper Labor left. I consider federal Labor and greens very different parties in comparison. But for example free school lunches in schools was something the Greens originally suggested.
+83. https://greens.org.au/qld is pretty straight forward, the environment doesn't even get a mention.. QLD platform is >We’ll take on the big corporations that are ripping off Queenslanders. We’ll cap rents and tax big corporations fairly to build 100,000 public homes. We’ll also use that money to fully fund schools, hospitals and essential services. Federal platform is >We'll tackle the cost of living with free essential services - like dental into Medicare - and increased wages. >We're tackling the housing crisis and fighting for a future where everyone has a place to call home. >We'll make billionaires and big corporations pay their fair share in tax and build a better life for all of us. Though for an honorable mention I will note the campaign material about the place makes a good case that they are actually hoping to represent palestine (That's what the flags mean right?).
+84. Yeah and sea coconut obviously doesn’t believe in the same things, so who cares.
+85. Nah. I just find trying to discuss the matter Laborites to be a complete waste of time.
+86. Miles isn't proper labor left. He makes over 400k a year in rent. Double Albo before he sold them to buy his $4m mansion
+87. Oh thanks for sharing that! Dr Google gave me a different webpage that was completely useless. Interesting policies for sure! I do worry about the ability to govern though. And I hope by Palestine you mean the country, not they would support their terrorist government?
+88. youve missed the point of the conversation, sea coconut isn't talking about polices, he's just whinging that a political party is protesting for change, which is literally their job when not in power lol
+89. Because you know it’s bullshit and you’re either always an LNP voter or you know you fucked up and are in denial
+90. How much he earns is the nature of the position as cristafulli would earn the same should the lnp win. If you're left of Labor left then I understand the points of criticism. But considering his policies within a purely Labor left / right context, they're clearly Labor left.
+91. Slightly off topic but I have noticed Google's search results for non-purchasable searches are getting more and more useless.
+92. ?? Except he’s not, he even listed a specific policy the greens keep opposing that he doesn’t agree with. You literally just assumed that straight from the initial comment that he was definitively not voting greens.
+93. No, miles earns >400k in rental income from his investment properties. That's before the 400k he gets as premier He's a rent seeking landlord, he's not a progressive man
+94. the greens are not in power! The greens are opposing a policy that will benefit housing developers at the expense of native wildlife and protected land, weird thing to be angry with greens for lol
+95. Not justifying it but most of them are unfortunately because of what we've done to housing in this country. That doesn't mean his policies aren't progressive though, just that he's a class traitor. Sometimes things can both be true and it's not as black and white as the way you've constructed it. The Vic socialists have an anti landlord policy but are running a candidate who's a family violence perpetrator. Their policies are progressive, but their candidate is a piece of shit. The same thing is true with Miles.
+96. Yeah like how dare they... Stick to their well-established ideals? Guess that's more than can be said for Labor and LNP though lmfao
+97. If you had half a brain cell you'd realise the reason doesn't prove anything. If you had a whole brain cell, you'd realise I'm one of the main voters who preferenced Labor above LNP at the previous election, but didn't this time
+98. Miles is literally the premier, under a labor prime minister
+99. LNP at all levels loves to go against the advice of experts. To the point I'd call them the anti science and technology party.
+100. And invariably cause more crime and more violence by sending nonviolent drug users to jail, making them bitter and teaching them violence through our terrible jail system.
+101. Yes, let's go back to demonising drug users because that'll solve... Erm...
+102. "Legalize marijuana party" got my (primary) vote legalizing marijuana has not caused societal collapse in other countries and similar fearmongering by the LNP on "gay marriage" turned out to be nothing but hot air being so consistently wrong on every issue must be a record
+103. If you disagree with this proposal, there's a way you can let your voice be heard... Hint: less than 24 hours time
+104. I fucking despise the LNP and anyone who supports them. Fuck the lot of you.
+105. Harm prevention. Cheaper than jail or hospital. That's why LNP opposes it, because a war on drugs is a waste of money.
+106. As a drug diversion counsellor, getting rid of this program would be collosally fucking stupid and clog up the courts over what amounts to just teenagers getting caught with a bit of weed. We would also not be able to assist those trying to make real and better choices. Don't vote for this
+107. It's going to hurt people - always remember when you're stuck wondering why the LNP and Christians do what they do. Cruelty is the point.
+108. Ignoring the (obviously very bad) outcome of these laws, this is stupid just at a political level, because when (probably young) people inevitably do die, this will be pinned squarely on the party that changed the law.
+109. Whenever I hear about something the LNP does I feel like I'm usually against it.
+110. Yrs. That IS the point. To do as much harm as possible.
+111. At this point, I'm just waiting to say, "I told you so." To the fuckwits that vote LNP in.
+112. How does it feel Daivid Crisafulli, raising highly oppressed daughters and disrespecting your wife and daughters' rights to make safe choices
+113. There are other opinions than the AMAQ on this. There are plenty of Aussies who believe that any legalisation pathway, particularly for harder drugs is simply counter-productive. Having police forced away from doing enforcement at an event because there is a pill test booth will obviously increase the prevalence of drugs at such an event. The fear of a pill being laced with poison/badly manufactured is an effective deterrent to taking them in the first place. Drugs kill people, ruin lives and cause enormous community harm (through people resorting to crime to pay for them). Any policy that diverts focus or responsibility away from buying and taking drugs being illegal is not something that most people agree with.
+114. Are public floggings on the agenda - I wouldn't be surprised if the Mad Hatters party wanted to bring that back as well and at least half of the LNP members supported it
+115. Pretty much all of their policies will cost lives. Women will die in agony if they are allowed to ban abortions, this is already happening in America. I don't give a fuck if dipshits think there will be medical exemptions, they can't prove that and the LNP are no different to American conservatives, aka brain dead. There will be no exemptions, women will die.
+116. Why should my tax dollars go towards pill testing? Wouldn't that cost be borne but the organisers of such events?
+117. That's why labor put them 1st. preference on their how to vote cards
+118. >legalizing marijuana has not causes societal collapse in other countries I do wonder if marijuana use 'has causes' an effect on the grasp of basic grammar.
+119. Great addition to the conversation. Always room for more anger and hate while level heads to try prevail.
+120. Drug diversion is harm minimisation and saves a lot of money
+121. Your tax dollars can go towards cheaper pill testing, OR those tax dollars can go towards more expensive: -emergency services -hospital care -death and associated expenses from people being effected by the death (mental health services, lost wages and productivity) -ads and services to warn about substances causing that death. I think I'd prefer the cheaper pill testing, lives saved, emergency services not tied up (and others needing emergency care getting it in a timely manner)...
+122. I disagree. The organisation operating the event is not supplying drugs. Not every single person attending these events are doing illegal drugs. We know the drugs are there though because people have died in the past. And the people making them available are always going to be there, they are going to find a way, they don’t follow the law. If these sites can save a person’s life and educate them in regard to illegal drug use, I’ll happily have my tax dollars going towards it.
+123. given that "s" and "d" are next to each other on a keyboard, you should have led with..... ......I do wonder if marijuana use 'has causes' mistyping if your premise is that the sentence has an unnecessary "has", then your reply is grammatically incorrect as "causes" renders "an effect" redundant
+124. That'd be auto fill/auto correct. Voice to text can also turn the simplest of messages into an indecipherable mess. Marijuana can also do both of these but to a much lower incidence.
+125. I'd say this was autocarrot on the weed, not the commenter.
+126. People who support taking rights from women, putting children in jail, defunding healthcare, and lowering tax on multi-billion dollar companies while also increasing the cost of living are inherently evil and/or brainwashed.
+127. If you support a party which willfully ignores science and data, then fuck you, jesus freak.

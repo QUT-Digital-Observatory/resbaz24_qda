@@ -1,0 +1,151 @@
+Your job is to analyse a series of Reddit comments from discussions related to the 2024 Queensland State Election. The major parties that sought election were the incumbent Australian Labor Party (ALP) and the Liberal National Party (LNP) opposition. The Queensland Greens (Greens), One Nation and Katter's Australian Party were minor parties in the election. 
+
+The key five issues that the major parties campaigned on during the 2024 Queensland State Election were Youth Crime (YC), Cost of Living Crisis (COL), Health (H), Energy and Infrastructure (EI), and Abortion Laws (AL). We include some context of the major parties positions on these issues. 
+Youth Crime (YC):
+- LNP: Advocated for stricter penalties for young offenders, including the 'Adult Crime, Adult Time' policy, proposing that serious offenses committed by youths be met with adult sentencing. 
+- Labor: Downplayed claimed youth crimewave. Focused on rehabilitation and prevention programs, aiming to address the root causes of youth crime through community engagement and support services.
+Cost of Living Crisis (COL):
+- LNP: Proposed measures such as abolishing stamp duty on new builds for first home buyers and re-establishing the productivity commission to review building industry regulations, aiming to alleviate housing costs. 
+- Labor: Introduced initiatives like 50-cent public transport fares, a $1,000 energy rebate, and free lunches for state primary school students to ease cost-of-living pressures.
+Health (H):
+- LNP: Committed $590 million to an 'Easier Access to Health Services Plan,' aiming to reduce ambulance ramping and hire additional healthcare workers. 
+- Labor: Focused on maintaining and expanding healthcare services, addressing hospital capacity issues, and investing in new health infrastructure.
+Energy and Infrastructure (EI):
+- LNP: Criticized Labor's Pioneer-Burdekin Pumped Hydro Project as financially unviable and canceled it upon taking office, opting to explore smaller-scale hydro projects instead. 
+- Labor: Proposed large-scale renewable energy projects, including the Pioneer-Burdekin Pumped Hydro Project, to transition towards 80% renewable energy by 2035.
+Abortion Laws (AL):
+- LNP: Stated there would be 'no changes' to abortion laws under their government, maintaining the status quo established in 2018. 
+- Labor Party: Supported the existing abortion laws and opposed any attempts to repeal or amend them. Asserts that LNP intend to restrict access to abortion services based on the views of some of their members.
+
+Analyze the comments and code them according to two dimensions:
+1. The ISSUE the commenter is primarily discussing, if it is one of the five listed above. Use the codes YC, COL, H, EI, AL. If no issue applies, omit the code entirely.
+2. The PARTY the commenter appears to support. Use the party codes ALP, LNP, Greens, ON, KAP. Infer party support where possible, e.g. a commenter fearing the outcome of an LNP victory likely supports ALP, and vice versa. Ensure there is either direct or clearly inferable support for a party before assigning a party code. Assign a PARTY code only if the comment expresses explicit support for, or opposition to, a specific party or its policies. This support or opposition must be clearly discernible; mere mention of a policy is insufficient. Look for indicators such as positive or negative sentiment towards a party's actions or policies or explicit endorsements or condemnations. Comments may express opposition through sarcasm or irony. In cases where party support is not clear, omit the party code entirely.
+
+You will output JSON as a list of objects where each object has an "id" (integer) property of the comment id, an "issue" property set to the issue code string, and a "party" property set to the party code string. In cases where you cannot determine an ISSUE or a PARTY, do not set a null value, omit the appropriate JSON properties entirely,  e.g. If the first comment did not have a matching issue and you could not determine party support, then the object would simply be {id: 1}.
+
+Comments follow:
+
+1. Felt good to vote against him this week. Doesn’t feel great knowing he’s almost guaranteed the win. Groom federally, and Toowoomba South in state are classic seats for the LNP to keep their important members in.
+2. Pressure will be on for cop bosses to get creative with the stats, lol
+3. It's depressing that this article took so many words to explain why crime should be measured per capita. That the average reader requires this.
+4. i hope he does, he has more then proved his ability, and i would hate to lose him to federal labor
+5. Your logic isn’t wrong but I can’t imagine the fentiman backers will allow that. He’ll be deemed to have had his chance and she’ll take the top spot.
+6. Depends how much backlash there was from him resigning a seat he just won. However there does need to be a high profile candidate to run against Dutton.
+7. 8% votes in already . They might hold this actually.
+8. I feel the same, the state has made big strides in the clean energy transition, and minuscule increases to royals have gone a long way to help fight inflation. ALP have created jobs, given back to the people and from what i’ve seen, LNP just want to wind back all progress so a handful of grubs can make more money. Then all of th Olympic contracts are going to be signed this next term and the mismanagement and rorting with be beyond vile. They are just going to line them and their donors pockets and leave us with a lackluster country fair olympics.
+9. If they win, which they very well might, I doubt their approach will help. Teenage reeducation camps and increases incarceration has worked wonders in... basically nowhere. It costs an absolute fortune, which won't help anybody, and all it will probably do it ruin kids lives and increase recidivism. But 'tough on crimes' wins votes the world over still, for some reason.
+10. Wouldn't have been able to if they answered the question, "conscious vote? Yes or no?" Should have been very easy.
+11. One sentence and the LNP could have shut that all down, but they refused to outright oppose changing abortion laws.
+12. Huh? The ALP isn't going to remove abortion rights, it's the LNP who have previously nearly all voted against it and have party members saying they can't say what they're planning until they win, wink wink nudge nudge.
+13. Chris Minns is in a minority . Makes no difference. Labor federally are effectively a couple seats off a minority.
+14. Ye those are the worst things I can imagine. I don’t expect them to materialise but I voted against LNP because I was afraid of them.
+15. And which services will you accept being cut for this to happen? Bearing in mind Crisafulli has said he will cut consultants and contractors who are doing public service work because there is a cap on the number of public servants.
+16. I love my north qld countrymen but this is election is an abortion and should be illegal
+17. And think the solution to this problem is to lock up kids and throw the book at them. 😱
+18. Well to be fair it is! And I know numbers are down apparently but that doesn’t mean there isn’t an issue that needs to be addressed. I didn’t vote for the LNP but I acknowledge that it is an issue that needs to be addressed seriously. There are a lot of victims of crime both petty and serious and a lot of it is from our youth which is our future and that is concerning.
+19. I wish we could just have the rules apply to the people who voted for it. Like can't the labor people get the labor benefits and the lnp people be forced to have the child after a rape because that's what they wanted
+20. People in their late 20s have had COVID-19 and now the LNP to fuck the best years of their lives
+21. Sure, no way the LNP would get rid of that… RemindMe! 1 year
+22. Well that's a positive I guess. Leaving something good alone
+23. Are you aware stuff like this is paid for due to the current taxes on coal companies? Of which Crusafili has pledged to stop and is instead getting the funding from public services cuts
+24. The youth crime thing really did it hey. The campaigning, also made boomers hate young people more
+25. Time will tell I guess. Will see how they perform
+26. Do some research into the abortion propaganda after it’s all said and done. You’re embarrassingly blind.
+27. "Doing what matters for Queensland" - ALP 2024 election slogan.
+28. "Terrible, but simple." That is a great description of the general public.
+29. If they’re going to allow funding by interests like the coal parties it should at very least be a legal requirement for the donor to be front and centre on the marketing. Like FRONT AND CENTER. Not a quick blurb at the end. It should be extremely clear who paid for it if it was part of funding from a major donor or interest group
+30. The regions don’t feel like they get any attention compared to SEQ. Even though youth crime is going down, it’s still a massive topic of conversation in places like Townsville. Progressive approaches are usually long-term and will take a long time to see any tangible changes. They’re fed up and just want the kids stealing cars thrown in jail because it’s the fastest solution, even if it’s flawed and doesn’t change the root cause really. That’s my take. Also this is anecdotal, but my in laws live in Townsville and attempted break ins and car thefts have absolutely gone up in their area. People in community pages talk and form echo chambers.
+31. You’re about 20-30 years too late for nuclear. There is a reason most other countries either 1) already had nuclear and 2) are moving away from nuclear for other renewables.
+32. So it’s now basically guaranteed ALP has lost? What’s even the point of watching then? Can anything crazy still happen like LNP not wanting to work with KAP? What happens then? Just disappointed cause I had some hope for ALP
+33. I can see that happening, ALP on 37, LNP on 40, it’s too close to call imo so I have no idea why people already are saying LNP has won
+34. As a QLD'er I'm genuinely terrified for what's to come, myself and none of my family members voted for this but now we're to suffer the consequences the majority have voted for.. it sucks.
+35. The irony being that nurses in Qld are paid a lot more (I think it's about 18%, but I could be wrong with that figure) than nurses in NSW ... thanks to the progressive Labor govt that Qlders have, today, voted out. Sad. There was an exodus of nurses, police and electricity workers from NSW to Qld over the past year or two, thanks to the generous and DESERVED higher pay and conditions offered to these essential workers by Qld Labor. I really wish Qlders the best of luck with their new govt ... you'll need it.
+36. Hasn't that been said at pretty much every election ever, and then they have anyway?
+37. part of that will just be posturing ahead of time to avoid giving their opponents attack vectors, i imagine they will be more opening to negotiating if they have to
+38. I do live here, and I agree it's a massive problem and understand why people voted with it as their deciding issue. The thing is I ALSO don't think LNP (or Labor) is actually capable of doing anything about it, at least not with immediacy (or at least, not moreso than what the ALP has already done) because of how deep rooted and complex the issue is and how it's been developing for decades. But they will have an easier time making so many other things (healthcare, education, subsidies, sustainability) worse than they will improving youth crime. Unfortunately it's as you say, people are just so desperate to get the crime issue resolved that they will vote around that anyway even though the cost/benefit of LNP being in is almost certainly going to be net worse for them as a whole :/
+39. I don't, but my partner's from there and I've visited a few times. So much fearmongering and thinly veiled racism. Youth crime numbers are actually down.
+40. I lived in Townsville in 2022, was never robbed and felt safe the entire time because I'm not a massive sook
+41. You realise that if it does become part of the plan, they will be gone as quick as you can say abortion. They won't
+42. It’s about letting women control their own bodies rather than governments sticking their fingers in everyone’s personal business.
+43. There are literally ZERO babies being killed by abortion. In order to be a "baby" it must be born. Medicine and the law agree on this.
+44. I don't like women needlessly dying in a forced pregnancy when an abortion could have saved them: https://www.google.com/amp/s/amp.theguardian.com/global-development/2022/may/07/killed-by-abortion-laws-five-women-whose-stories-we-must-never-forget https://www.bmj.com/content/386/bmj.q2073 Nor do I like little girls having to give birth to a rapists' child: https://www.google.com/amp/s/amp.theguardian.com/world/2023/aug/14/mississippi-abortion-ban-girl-raped-gives-birth https://www.google.com/amp/s/7news.com.au/news/world/argentinian-girl-12-forced-to-give-birth-after-rape-because-doctors-refused-an-abortion-c-1744643.amp Abortions are important and here's some facts about them provided by the Victorian State Government: https://www.betterhealth.vic.gov.au/health/healthyliving/myths-and-facts-about-abortion#what-is-abortion Also, abortions are the termination of either an embryo or fetus, NOT a baby. Did you know that a miscarriage is also known as a spontaneous abortion? I fucking dare you to find a women who miscarried, point and say "fuck you, baby killer." Get some fucking perspective. Edit: Fucking hell, forget the dare. That shit has already happened: https://www.google.com/amp/s/www.bbc.com/news/world-61995250.amp https://www.google.com/amp/s/www.nbcnews.com/news/amp/rcna33035
+45. Labor have their own problems. Borrowing money to buy votes with 50c fares and free school lunches is a big nono. LNP with their mealy mouths on minority govt and reproductive rights are the bigger threat
+46. I liked a lot of their policies... and I dont smoke weed (it doesn't agree with me, I get too paranoid and sleepy).
+47. See how quickly they dump their [100 day plan](https://archive.is/9q38G) and break promises.
+48. I've never seen a Government that on the face of things was doing good work turfed for 'feelings of change' like this before. Guess you get the Government you deserve though.
+49. I am betting it will be more then LNP voters will want to admit. They keep talking about how us Labor voters are going to cry when we lose, but I am waiting for LNP voters to cry when they realise they made a mistake. I will just be sitting here saying "I told you so".
+50. Yes, that fckn Lizard Newmann’s destruction of all helpful community organisations is still being felt today. I went into a years long depression after that election, but Queensland always reverts to deep north type. The place will be a massive coal dust covered hole in 4 years. These LNP fcks will drag us SO far backwards. Good luck when the inevitable natural disasters hit us too.
+51. If Anna stepped down earlier I feel like things could've been different.
+52. Why do people keep saying Miles won't be leader? He's a Labor hero for turning things around, even though they won't win. He'll be leading the charge in opposition, and he'll only be 50 at the next election...ready to rule for 3 terms.
+53. I completely agree. I have been more than pleased with Miles and I think he should indeed stay on. I believe they’ll lose confidence from a lot of QLD labor voters if they turf Miles.
+54. I’d reconsider my vote for Labor if they turf him. He championed a lot in the months he had as leader
+55. They said that ALP rule is that leadership is vacant when government is lost. That doesn’t mean he should not be chosen again.
+56. Borbidge gaining power in 1996 was an interesting one, as the results of Mudingburra were actually disputed in court, and the results were thrown out causing the by-election, which the Liberals then won to leave both parties tied. The independent then supported the Coalition. Although it is hypothetically possible, I think it's very unlikely in 2024, as I couldn't see KAP supporting Labor. But they would have enough sway to have the LNP change leader. The real loser in this election to me was The Greens, which may have just been a happy accident from the KAP announcing their plans on introducing the abortion bill, and pushing those voters towards Labor.
+57. There usually is. Polling indicates that among the 18-25 year old demographic, the Greens usually get about as many votes as the LNP, with Labor roughly picking up about half the entire demographic alone.
+58. Opposite goes for x and youtube comments. They are very anti Labor and whatever Miles does is absolutely chastised.
+59. Best of luck for you and your wife. I can’t believe this is going to happen to our essential, life changing services.
+60. More power to you and good luck - my wife *just* got a job essentially triaging social work in a regional hospital - absolutey understaffed as it is. A bit frightened here also
+61. Because that’s the reality of this situation - doom and gloom. I worry about the children I work with and how their lives are even more fucked under this government. I’m also likely going to lose my job, so of course I’m not running through a field of flowers right now. ALP did no fear mongering here. All the LNP and their fake crime crisis.
+62. This just in, local reddit user thinks social workers are the same as cops
+63. No, I don’t think they’re going to commit serious violent crimes. I think the kids I work with are going to be criminalised because of their trauma and life experience hand they’ve been given. They will lock up kids who just offend. Take out the ‘serious crime’ Petty crimes. LNP don’t care the category of offending. My heart hurts for them that the therapeutic supports they receive that actually prevent them from offending, they will be cut.
+64. it's the opposite, without her they will how hard is that to understand?
+65. Jesus what a horrid way to twist someone's words. Do better.
+66. And when they get out of jail, they will be hardened criminals and shank you. Then you get treated at the hospital with no staff. HAVE FUN
+67. As Antony Green explained, the Premier continues until the parliament votes otherwise.
+68. Wonder how that will work when both parties say they won’t negotiate
+69. And they'll be convinced by the media that it is somehow labors fault and the LNP are doing their best to fix it. Bloody fools.
+70. Do we at least get our own version of “Florida man”?
+71. Conscience vote is nothing like party lines. It ain't over yet.
+72. I worked at pre-poll, from what I've gathered this is pretty accurate. You'd see people walk in either with no how to vote cards and a determined look on their face, or a handful of how to vote cards and a look of complete confusion. Extra confusion if they end up with a ballot that doesn't match the how to vote cards they were given. We straight up had *multiple* people get us to hold their ballots while they went outside to ask for other ones.
+73. Ye I have some hard core Greens voters in my household and they are disappointed in the Greens messaging. To the point that they want to vote for a Greens Greens party - the People’s Front of Judea
+74. So their core voters aren’t uni kids concerned with social issues but middle class gen z/boomers with environmental concerns? Who knew?
+75. That was caused by first past the post which Australia does not use. Australia uses preference voting that scenario would not happen here
+76. That’s not what Gerrymandering is, it’s prefence voting causing it
+77. It’s a odd system that only works when there’s 2-3 parties
+78. That's not what that means. You need to get 50% of the votes to win an electorate. Splitting 30% three ways won't win you an electorate. The electorates are drawn fairly, but the system's based on electorates instead of a statewide vote so you can have a local representative which you might have a problem with but which isn't gerrymandering
+79. It may not take 4 years. It's not impossible for the LNP to lose its majority through a few members crossing the floor or a few by elections.
+80. i know, but take the silver linings where we can, at least know that the LNP will likely be a 1 term government again and get massacred in 2028, damage will be damage, but life will continue on
+81. I'd wager not too many tbh. The kinds of people who pre-poll are the ones who are pretty clear as to who they want to vote for already, or the ones who don't pay any attention to anything and just follow the how to vote cards of whoever they usually vote for.
+82. >I think she is right regarding volunteers who are unpaid. It's a slog. Well, that's why they're volunteers. They don't *have* to do it, but they do because they're passionate. They also don't have to volunteer to do the entire time, many volunteers at the pre-polls did it in shifts or only on certain days.
+83. I agree. It’s very dramatic of the boomers and bogans to have done this to the state. They should stop being so dramatic.
+84. 100%. I don't take public transport. I don't go to primary school. I don't need to worry about abortion personally. But labor's policies for the entire state that I live in are still in my best interest, because they'll make it better while the LNP shafts it. Plenty of LNP voters will be indirectly screwing themselves over.
+85. That is what I feel. They have gone too far from their roots and diluted their message.
+86. I think the issue is that it's pretty difficult for the greens to pick up seats if you have a progressive, pragmatic alternative. The greens stonewalling policy on a federal level has not helped at all either imo.
+87. It's a radical strategy but what if they campaigned on environmental policy instead of blocking it and then moaning endlessly about foreign wars and blocking housing policy?
+88. Almost like the demographic they're pandering this cycle goes contrary against their target Australian demographics who are very pro-LGBT rights.
+89. Yeah, but the government is not to blame really. The LNP will if anything be worse with crime and they have used it to take Townsville's seats
+90. Yea NQ is the one place where you can 100% there is no ‘fake narrative’ and there is an actual youth crime problem. It’s out of control in Townsville and cairns specifically
+91. Yep. Go to any regional town in Qld or the NT and it’s crazy.
+92. Yeah I am also trying to decipher the comment. Are they Labor or LNP?
+93. 100%. All regional media in Qld is run by Murdoch. There is no balanced reporting and people repeat shit in an echo chamber of toxic Facebook groups
+94. This is correct, when asking my very progressive boomer mother why she voted LNP was told because of the parroted line as old as time "want Labor out, they put us in too much debt" and when pressed couldn't answer any further specifics... We are truly in the darkest timeline
+95. Common sense how? It doesn't make any sense to me...
+96. Sounds like she needed to take that to Michael Berkman hey. Poor volunteers, I thanked them all on way out....
+97. Not suppression since they are allowed to vote, just optional
+98. By that argument, KAP shouldn't have got 3 seats for winning 2.5% of the vote.
+99. Do you not understand how preferential voting works? Green are the party that most closely align with my own views on government and politics. Are you suggesting I not vote for the people I think are best suited to represent my own ideals?
+100. I buy all of this, it’s an interesting thought. I guess we’ll see re caution—I’m curious if he’ll tone down the strongarming QLD LNP love to do. If I had to bet, I’d say we’ll see a recreation of SA in the last decade where they threw the Libs a bone then immediately booted them the next election.
+101. I'm not sure if Dutton is as popular as you think.
+102. They won't do that, not even accidentally. Best we can hope for is that the damage they do is more readily reversible than the last time.
+103. Reread my comment. I didn’t say anywhere I hope they ruin things. I said I hope the idiots who voted them in feel regretful for the choice they’ve made. I hope for the sake of my friends and family back home Crisafulli’s plan to get in bed with developers, mutilate the health system, and roll back women’s rights with Katter doesn’t come to fruition. And for the people who voted for that agenda because “it’s time for someone else to have a go”, I hope they realise what a stupid decision they’ve made. Time will tell if Crisafulli’s portrait appears in the hall of beloved and esteemed LNP Premiers, alongside Joh Bjelke-Petersen and Campbell Newman.
+104. The problem is most media in western Qld is sky news and murdog media who much like fox lean in one direction only and a very biased in the reporting
+105. Previous government only cares about etu and cfmeu. Fuck all the other public service. Traffic controllers getting paid more then ambulance and police firefighters is a joke.
+106. Well reasoned and intellectual counter, thank you for your valuable contribution
+107. Why would I be salty, lol? You have to live with the consequences of your actions now, I don’t. A new generation who didn’t witness Newman’s reign of terror are about to discover why the QLD LNP have only been elected three times in a century. Fiscal mismanagement, corruption, handouts for property developers while the everyman can’t pay the bills. That’s your future now, enjoy.
+108. It’d be a lot easier to swallow if the majority was informed. Guess we all just wait and see what happens to women’s reproductive rights because the LNP refused to be clear. If they go ahead with removing it you guys can’t pretend that you had no idea they’d do that and hopefully it helps you sleep at night.
+109. You are presumably in your 20s and still using "salty" and "based".
+110. That’s more of an indictment on the majority of QLDers than anything else. I’m not a Labor voter (although I have voted for them in the past), but how you can look at a policy-barren party like the LNP with a sterling track record for corruption, mismanagement and social regression and decide that’s who you want running the state baffles me.
+111. Yet Cairns voted Labor? We will see how incarcerating kids will do to the long term crime rate, but I'm sure most of the experts won't be wrong that it will just continue the poverty cycle and go up. We live by our corporate overlords whim.
+112. The fringe minority should absolutely be making policy decisions for the majority of the population, keep it up Queensland, you're doing just fine.
+113. Different vote on a different bill. KAP said they will introduce a *new* bill *after* the election.
+114. There’s a lot of crossover here between people who want newly born babies to be left to die without medical assistance and also want teenagers convicted of violent crimes to go unpunished.
+115. Labor and the Greens would have formed a minority government and they preference each other. The problem isn't the Greens, it's ten years of bullshit from Modoch and Nine.
+116. The greens don't seem to have any real policies at all, they are just motherhood statements. [QLD Policies | Queensland Greens](https://greens.org.au/qld/policies) For example: "Support the development and growth of both research based commercial activities and leading-edge technological industries" OK... great policy. Can mean anything from money to mates to doing nothing.
+117. You can repeat what your care home nurse told you all you want boomer.
+118. Seems more like lack of support is loosing Labor votes. Honestly I don't.think it's that big a deal for either of them, on the ground campaigns by the Greens tend to focus on local issues any way.
+119. I thought it showed she's smart. She can't exactly call him out but she made sure not to endorse it
+120. Sure, but don't come out and say it's unlikely the other side will form majority when that's patently untrue. He didn't need to speak that early, or could have said it's too early to tell
+121. 17% of voters who voted for one nation or the greens will receive no party representation. The 'startegy' can only be employed by the majors 2 parties. Under proportional representation they would have had 13-14 seats.
+122. Right, but they are complaining about the way the system works and the rules and not the strategy?
+123. Not a Queenslander so no, just happened to be following this time. ANY election that does not reflect the voting results should be reformed and Labor is just as complicit for not fixing (and causing) this.
+124. That creates a problem with vote splitting like in the USA and UK. ACT has the most representation system from memory.

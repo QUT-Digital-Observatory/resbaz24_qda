@@ -1,0 +1,111 @@
+We tasked a genewrative AI to code ~17k reddit comments drawn from a newly created dataset on the Queensland state election. The dataset was drawn from Queenslanders posting on Reddit over a two week period with the election in the middle of the dataset. The submissions were filtered by a generative AI to extract submissions that were relevant to the election.
+
+This is the final comment coding prompt instructions which provided the data we will ask you to summarise later:
+
+"Your job is to analyse a series of Reddit comments from discussions related to the 2024 Queensland State Election. The major parties that sought election were the incumbent Australian Labor Party (ALP) and the Liberal National Party (LNP) opposition. The Queensland Greens (Greens), One Nation and Katter's Australian Party were minor parties in the election. 
+
+The key five issues that the major parties campaigned on during the 2024 Queensland State Election were Youth Crime (YC), Cost of Living Crisis (COL), Health (H), Energy and Infrastructure (EI), and Abortion Laws (AL). We include some context of the major parties positions on these issues. 
+Youth Crime (YC):
+- LNP: Advocated for stricter penalties for young offenders, including the 'Adult Crime, Adult Time' policy, proposing that serious offenses committed by youths be met with adult sentencing. 
+- Labor: Downplayed claimed youth crimewave. Focused on rehabilitation and prevention programs, aiming to address the root causes of youth crime through community engagement and support services.
+Cost of Living Crisis (COL):
+- LNP: Proposed measures such as abolishing stamp duty on new builds for first home buyers and re-establishing the productivity commission to review building industry regulations, aiming to alleviate housing costs. 
+- Labor: Introduced initiatives like 50-cent public transport fares, a $1,000 energy rebate, and free lunches for state primary school students to ease cost-of-living pressures.
+Health (H):
+- LNP: Committed $590 million to an 'Easier Access to Health Services Plan,' aiming to reduce ambulance ramping and hire additional healthcare workers. 
+- Labor: Focused on maintaining and expanding healthcare services, addressing hospital capacity issues, and investing in new health infrastructure.
+Energy and Infrastructure (EI):
+- LNP: Criticized Labor's Pioneer-Burdekin Pumped Hydro Project as financially unviable and canceled it upon taking office, opting to explore smaller-scale hydro projects instead. 
+- Labor: Proposed large-scale renewable energy projects, including the Pioneer-Burdekin Pumped Hydro Project, to transition towards 80% renewable energy by 2035.
+Abortion Laws (AL):
+- LNP: Stated there would be 'no changes' to abortion laws under their government, maintaining the status quo established in 2018. 
+- Labor Party: Supported the existing abortion laws and opposed any attempts to repeal or amend them. Asserts that LNP intend to restrict access to abortion services based on the views of some of their members.
+
+Analyze the comments and code them according to two dimensions:
+1. The ISSUE the commenter is primarily discussing, if it is one of the five listed above. Use the codes YC, COL, H, EI, AL. If no issue applies, omit the code entirely.
+2. The PARTY the commenter appears to support. Use the party codes ALP, LNP, Greens, ON, KAP. Infer party support where possible, e.g. a commenter fearing the outcome of an LNP victory likely supports ALP, and vice versa. Ensure there is either direct or clearly inferable support for a party before assigning a party code. Assign a PARTY code only if the comment expresses explicit support for, or opposition to, a specific party or its policies. This support or opposition must be clearly discernible; mere mention of a policy is insufficient. Look for indicators such as positive or negative sentiment towards a party's actions or policies or explicit endorsements or condemnations. Comments may express opposition through sarcasm or irony. In cases where party support is not clear, omit the party code entirely."
+
+We batch coded all the comments and the following is a quantitive report based on the results:
+
+=== Issue Distribution ===
+
+Counts:
+issue
+YC     2132
+AL     1714
+COL    1441
+EI      945
+H       471
+Name: count, dtype: int64
+
+Percentages:
+issue
+YC     31.81
+AL     25.57
+COL    21.50
+EI     14.10
+H       7.03
+Name: proportion, dtype: float64
+
+=== Party Distribution ===
+
+Counts:
+party
+ALP       5883
+LNP       3378
+Greens     412
+KAP        138
+ON          56
+AL           1
+COL          1
+Name: count, dtype: int64
+
+Percentages:
+party
+ALP       59.61
+LNP       34.23
+Greens     4.17
+KAP        1.40
+ON         0.57
+AL         0.01
+COL        0.01
+Name: proportion, dtype: float64
+
+=== Cross-tabulation (ALP vs LNP) ===
+issue   AL  COL   EI    H   YC
+party                         
+ALP    634  523  247  156  625
+LNP    362  316  174  132  518
+
+=== Chi-square Test Results ===
+Chi-square statistic: 24.34
+p-value: 0.0001
+
+=== Normalized Issue Distribution by Party (%) ===
+issue     AL    COL     EI     H     YC
+party                                  
+ALP    29.02  23.94  11.30  7.14  28.60
+LNP    24.10  21.04  11.58  8.79  34.49
+
+=== Party-Issue Association Strength ===
+(Percentage points deviation from overall average)
+
+ALP:
+YC: -3.20%
+COL: 2.44%
+H: 0.11%
+EI: -2.79%
+AL: 3.45%
+
+LNP:
+YC: 2.68%
+COL: -0.46%
+H: 1.76%
+EI: -2.51%
+AL: -1.47%
+
+Can you provide a text summary of these results given the full context of the election issues and the Reddit results we obtained. Bare in mind that in the context of the large state of Queensland, Reddit posters are likely drawn from the urban elites and are more likely to support Labour and the Greens.
+Nevertheless, we know the LNP secured 51 seats in the 93-member Legislative Assembly, surpassing the 47 seats required for a majority, with a 6.8% swing, and there are conservative voices represented on Reddit. 
+From this report what can we say about the issues that helped the LNP to victory?
+
+

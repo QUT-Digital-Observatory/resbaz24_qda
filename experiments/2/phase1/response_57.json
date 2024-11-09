@@ -1,0 +1,336 @@
+{
+    "cost": 0.000737475,
+    "model": "gemini-1.5-flash-002",
+    "responses": [
+        {
+            "id": "ltx2vfm",
+            "prompt_id": 1,
+            "issue": "COL",
+            "party": "ALP"
+        },
+        {
+            "id": "ltx6x2t",
+            "prompt_id": 2,
+            "issue": "COL",
+            "party": "LNP"
+        },
+        {
+            "id": "ltx7amb",
+            "prompt_id": 7,
+            "issue": "AL",
+            "party": "LNP"
+        },
+        {
+            "id": "ltwox5j",
+            "prompt_id": 7,
+            "issue": "EI",
+            "party": "LNP"
+        },
+        {
+            "id": "ltx6oj9",
+            "prompt_id": 7,
+            "issue": "COL",
+            "party": "ALP"
+        },
+        {
+            "id": "ltx802d",
+            "prompt_id": 8,
+            "issue": "COL",
+            "party": "Greens"
+        },
+        {
+            "id": "ltukj2i",
+            "prompt_id": 8,
+            "issue": "AL",
+            "party": "Greens"
+        },
+        {
+            "id": "ltwprf7",
+            "prompt_id": 8,
+            "issue": "EI",
+            "party": "ALP"
+        },
+        {
+            "id": "ltuovnf",
+            "prompt_id": 8,
+            "issue": "COL",
+            "party": "ALP"
+        },
+        {
+            "id": "ltv6oe7",
+            "prompt_id": 9,
+            "issue": "COL",
+            "party": "LNP"
+        },
+        {
+            "id": "ltwu5s3",
+            "prompt_id": 9,
+            "issue": "AL",
+            "party": "ALP"
+        },
+        {
+            "id": "ltxbfvl",
+            "prompt_id": 10,
+            "issue": "EI",
+            "party": "ALP"
+        },
+        {
+            "id": "ltwk4tg",
+            "prompt_id": 10,
+            "issue": "EI",
+            "party": "LNP"
+        },
+        {
+            "id": "ltum27k",
+            "prompt_id": 10,
+            "issue": "AL",
+            "party": "Greens"
+        },
+        {
+            "id": "ltx4k67",
+            "prompt_id": 11,
+            "issue": null,
+            "party": "Greens"
+        },
+        {
+            "id": "ltulwnh",
+            "prompt_id": 12,
+            "issue": "YC",
+            "party": "Greens"
+        },
+        {
+            "id": "ltukvp8",
+            "prompt_id": 13,
+            "issue": null,
+            "party": "Greens"
+        },
+        {
+            "id": "ltx8gld",
+            "prompt_id": 14,
+            "issue": null,
+            "party": "Greens"
+        },
+        {
+            "id": "ltun9ay",
+            "prompt_id": 15,
+            "issue": null,
+            "party": "Greens"
+        },
+        {
+            "id": "ltwsd2r",
+            "prompt_id": 16,
+            "issue": null,
+            "party": "LNP"
+        },
+        {
+            "id": "ltuw0es",
+            "prompt_id": 17,
+            "issue": "COL",
+            "party": "Greens"
+        },
+        {
+            "id": "ltyif66",
+            "prompt_id": 18,
+            "issue": null,
+            "party": "ALP"
+        },
+        {
+            "id": "ltwirp1",
+            "prompt_id": 19,
+            "issue": null,
+            "party": "Greens"
+        },
+        {
+            "id": "ltuq9d1",
+            "prompt_id": 20,
+            "issue": null,
+            "party": "Greens"
+        },
+        {
+            "id": "ltwh8jq",
+            "prompt_id": 21,
+            "issue": null,
+            "party": "Greens"
+        },
+        {
+            "id": "ltv4ixb",
+            "prompt_id": 22,
+            "issue": null,
+            "party": "ALP"
+        },
+        {
+            "id": "ltwzv9p",
+            "prompt_id": 23,
+            "issue": null,
+            "party": "Greens"
+        },
+        {
+            "id": "ltuodxp",
+            "prompt_id": 25,
+            "issue": null,
+            "party": "ALP"
+        },
+        {
+            "id": "ltuzv5s",
+            "prompt_id": 26,
+            "issue": null,
+            "party": "ALP"
+        },
+        {
+            "id": "ltuulz1",
+            "prompt_id": 26,
+            "issue": "AL",
+            "party": "LNP"
+        },
+        {
+            "id": "ltwuq84",
+            "prompt_id": 26,
+            "issue": "COL",
+            "party": "ALP"
+        },
+        {
+            "id": "ltx0kmq",
+            "prompt_id": 27,
+            "issue": null,
+            "party": "Greens"
+        },
+        {
+            "id": "ltuv478",
+            "prompt_id": 28,
+            "issue": null,
+            "party": "Greens"
+        },
+        {
+            "id": "ltxdkqc",
+            "prompt_id": 29,
+            "issue": null,
+            "party": "Greens"
+        },
+        {
+            "id": "ltz5vtl",
+            "prompt_id": 30,
+            "issue": null,
+            "party": "Greens"
+        },
+        {
+            "id": "ltxrnzu",
+            "prompt_id": 31,
+            "issue": null,
+            "party": "Greens"
+        },
+        {
+            "id": "ltxhcv7",
+            "prompt_id": 32,
+            "issue": null,
+            "party": "Greens"
+        },
+        {
+            "id": "ltwlj3l",
+            "prompt_id": 33,
+            "issue": null,
+            "party": "Greens"
+        },
+        {
+            "id": "ltvfws6",
+            "prompt_id": 34,
+            "issue": null,
+            "party": "KAP"
+        },
+        {
+            "id": "ltxikm9",
+            "prompt_id": 35,
+            "issue": null,
+            "party": "ALP"
+        },
+        {
+            "id": "lty0gqs",
+            "prompt_id": 36,
+            "issue": null,
+            "party": "Greens"
+        },
+        {
+            "id": "ltzvzy6",
+            "prompt_id": 37,
+            "issue": null,
+            "party": "Greens"
+        },
+        {
+            "id": "ltur5k6",
+            "prompt_id": 38,
+            "issue": null,
+            "party": "Greens"
+        },
+        {
+            "id": "ltusnnx",
+            "prompt_id": 39,
+            "issue": null,
+            "party": "Greens"
+        },
+        {
+            "id": "ltwwv1b",
+            "prompt_id": 40,
+            "issue": null,
+            "party": "Greens"
+        },
+        {
+            "id": "ltut0ec",
+            "prompt_id": 41,
+            "issue": null,
+            "party": "LNP"
+        },
+        {
+            "id": "ltuoeug",
+            "prompt_id": 42,
+            "issue": null,
+            "party": "Greens"
+        },
+        {
+            "id": "ltwt4c3",
+            "prompt_id": 43,
+            "issue": null,
+            "party": "Greens"
+        },
+        {
+            "id": "ltyu8zk",
+            "prompt_id": 44,
+            "issue": null,
+            "party": "Greens"
+        },
+        {
+            "id": "ltwlb21",
+            "prompt_id": 45,
+            "issue": null,
+            "party": "Greens"
+        },
+        {
+            "id": "ltv0aji",
+            "prompt_id": 46,
+            "issue": null,
+            "party": "Greens"
+        },
+        {
+            "id": "ltxlnjr",
+            "prompt_id": 47,
+            "issue": null,
+            "party": "Greens"
+        },
+        {
+            "id": "lty01nu",
+            "prompt_id": 48,
+            "issue": null,
+            "party": "Greens"
+        },
+        {
+            "id": "ltxhncr",
+            "prompt_id": 49,
+            "issue": null,
+            "party": "Greens"
+        },
+        {
+            "id": "ltxt7bv",
+            "prompt_id": 50,
+            "issue": null,
+            "party": "Greens"
+        }
+    ]
+}

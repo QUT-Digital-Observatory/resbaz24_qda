@@ -2,121 +2,78 @@
 
 Counts:
 issue
-YC     2835
-AL     2345
-COL    2248
-EI     1797
-H       592
+YC     2132
+AL     1714
+COL    1441
+EI      945
+H       471
 Name: count, dtype: int64
 
 Percentages:
 issue
-YC     28.88
-AL     23.89
-COL    22.90
-EI     18.30
-H       6.03
+YC     31.81
+AL     25.57
+COL    21.50
+EI     14.10
+H       7.03
 Name: proportion, dtype: float64
 
 === Party Distribution ===
 
 Counts:
 party
-LNP       6435
-ALP       2792
-Greens     823
-KAP        278
-ON         140
-FF           7
-EI           2
+ALP       5883
+LNP       3378
+Greens     412
+KAP        138
+ON          56
 AL           1
-UAP          1
+COL          1
 Name: count, dtype: int64
 
 Percentages:
 party
-LNP       61.41
-ALP       26.64
-Greens     7.85
-KAP        2.65
-ON         1.34
-FF         0.07
-EI         0.02
+ALP       59.61
+LNP       34.23
+Greens     4.17
+KAP        1.40
+ON         0.57
 AL         0.01
-UAP        0.01
+COL        0.01
 Name: proportion, dtype: float64
 
 === Cross-tabulation (ALP vs LNP) ===
-issue    AL  COL   EI    H    YC
-party                           
-ALP     196  652  336  106   328
-LNP    1166  596  492  305  1110
+issue   AL  COL   EI    H   YC
+party                         
+ALP    634  523  247  156  625
+LNP    362  316  174  132  518
 
 === Chi-square Test Results ===
-Chi-square statistic: 528.18
-p-value: 0.0000
+Chi-square statistic: 24.34
+p-value: 0.0001
 
 === Normalized Issue Distribution by Party (%) ===
 issue     AL    COL     EI     H     YC
 party                                  
-ALP    12.11  40.30  20.77  6.55  20.27
-LNP    31.78  16.24  13.41  8.31  30.25
+ALP    29.02  23.94  11.30  7.14  28.60
+LNP    24.10  21.04  11.58  8.79  34.49
 
 === Party-Issue Association Strength ===
 (Percentage points deviation from overall average)
 
 ALP:
-YC: -8.61%
-COL: 17.40%
-H: 0.52%
-EI: 2.46%
-AL: -11.77%
+YC: -3.20%
+COL: 2.44%
+H: 0.11%
+EI: -2.79%
+AL: 3.45%
 
 LNP:
-YC: 1.37%
-COL: -6.65%
-H: 2.28%
-EI: -4.90%
-AL: 7.89%
+YC: 2.68%
+COL: -0.46%
+H: 1.76%
+EI: -2.51%
+AL: -1.47%
 
-=== Anthropic Claude Sonnet 3.5 summary of results ===
-
-1. Reddit Discussion Composition:
-- Despite Reddit's typical urban/progressive skew, LNP-supporting comments dominated the discussion (61.41% vs 26.64% for ALP)
-- This is particularly notable given the actual election result was closer (the LNP achieved a 6.8% swing to secure 51/93 seats)
-- The Greens presence in discussions was relatively small (7.85%), with minor parties like KAP and ON having minimal representation
-
-2. Key Issues Distribution:
-- Youth Crime (YC) was the most discussed issue (28.88% of coded comments)
-- Abortion Laws (AL) was the second most discussed (23.89%)
-- Cost of Living (COL) was third (22.90%)
-- Health was notably under-discussed (only 6.03%)
-
-3. Party-Issue Associations:
-The data shows clear issue ownership patterns:
-
-LNP Strengths:
-- Strong association with Youth Crime discussion (+1.37% above average)
-- Very strong association with Abortion Laws (+7.89%)
-- These align with their "tough on crime" campaign messaging
-
-ALP Strengths:
-- Dominated Cost of Living discussions (+17.40% above average)
-- Slightly positive on Energy/Infrastructure (+2.46%)
-- Slightly positive on Health (+0.52%)
-
-What This Suggests About LNP Victory:
-1. Issue Salience: The two most discussed issues (Youth Crime and Abortion Laws) showed strong LNP association, suggesting these issues helped drive their narrative
-2. Volume Advantage: The LNP's dominance in Reddit discussions might reflect successful message penetration even in traditionally non-conservative spaces
-3. Cost of Living Paradox: While the ALP dominated COL discussions (+17.40%), this traditional strength apparently didn't translate into electoral success
-4. Narrative Control: The high volume of discussion around Youth Crime suggests the LNP successfully made this a central election issue, playing to their law-and-order messaging
-
-The chi-square test result (p < 0.0001) confirms these party-issue associations are statistically significant, not random chance.
-
-This data suggests the LNP's victory was helped by:
-1. Successfully elevating Youth Crime as a major issue
-2. Strong messaging around Abortion Laws
-3. Possibly neutralizing ALP's traditional COL advantage
-4. Achieving message penetration even in typically progressive spaces like Reddit
-
-The fact that this pattern appears on Reddit, which typically skews progressive, suggests these messages had particular resonance in the broader electorate.
+Analysis results saved as analysis_results.png
+Analysis complete.

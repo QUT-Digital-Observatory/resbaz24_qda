@@ -1,0 +1,55 @@
+Your job is to analyse a series of Reddit comments from discussions related to the 2024 Queensland State Election. The major parties that sought election were the incumbent Australian Labor Party (ALP) and the Liberal National Party (LNP) opposition. The Queensland Greens (Greens), One Nation and Katter's Australian Party were minor parties in the election. 
+
+The key five issues that the major parties campaigned on during the 2024 Queensland State Election were Youth Crime (YC), Cost of Living Crisis (COL), Health (H), Energy and Infrastructure (EI), and Abortion Laws (AL). We include some context of the major parties positions on these issues. 
+Youth Crime (YC):
+- LNP: Advocated for stricter penalties for young offenders, including the 'Adult Crime, Adult Time' policy, proposing that serious offenses committed by youths be met with adult sentencing. 
+- Labor: Downplayed claimed youth crimewave. Focused on rehabilitation and prevention programs, aiming to address the root causes of youth crime through community engagement and support services.
+Cost of Living Crisis (COL):
+- LNP: Proposed measures such as abolishing stamp duty on new builds for first home buyers and re-establishing the productivity commission to review building industry regulations, aiming to alleviate housing costs. 
+- Labor: Introduced initiatives like 50-cent public transport fares, a $1,000 energy rebate, and free lunches for state primary school students to ease cost-of-living pressures.
+Health (H):
+- LNP: Committed $590 million to an 'Easier Access to Health Services Plan,' aiming to reduce ambulance ramping and hire additional healthcare workers. 
+- Labor: Focused on maintaining and expanding healthcare services, addressing hospital capacity issues, and investing in new health infrastructure.
+Energy and Infrastructure (EI):
+- LNP: Criticized Labor's Pioneer-Burdekin Pumped Hydro Project as financially unviable and canceled it upon taking office, opting to explore smaller-scale hydro projects instead. 
+- Labor: Proposed large-scale renewable energy projects, including the Pioneer-Burdekin Pumped Hydro Project, to transition towards 80% renewable energy by 2035.
+Abortion Laws (AL):
+- LNP: Stated there would be 'no changes' to abortion laws under their government, maintaining the status quo established in 2018. 
+- Labor Party: Supported the existing abortion laws and opposed any attempts to repeal or amend them. Asserts that LNP intend to restrict access to abortion services based on the views of some of their members.
+
+Analyze the comments and code them according to two dimensions:
+1. The ISSUE the commenter is primarily discussing, if it is one of the five listed above. Use the codes YC, COL, H, EI, AL. If no issue applies, omit the code entirely.
+2. The PARTY the commenter appears to support. Use the party codes ALP, LNP, Greens, ON, KAP. Infer party support where possible, e.g. a commenter fearing the outcome of an LNP victory likely supports ALP, and vice versa. Ensure there is either direct or clearly inferable support for a party before assigning a party code. Assign a PARTY code only if the comment expresses explicit support for, or opposition to, a specific party or its policies. This support or opposition must be clearly discernible; mere mention of a policy is insufficient. Look for indicators such as positive or negative sentiment towards a party's actions or policies or explicit endorsements or condemnations. Comments may express opposition through sarcasm or irony. In cases where party support is not clear, omit the party code entirely.
+
+You will output JSON as a list of objects where each object has an "id" (integer) property of the comment id, an "issue" property set to the issue code string, and a "party" property set to the party code string. In cases where you cannot determine an ISSUE or a PARTY, do not set a null value, omit the appropriate JSON properties entirely,  e.g. If the first comment did not have a matching issue and you could not determine party support, then the object would simply be {id: 1}.
+
+Comments follow:
+
+1. Easy fix- Any person or group receiving election funding from an electoral commission over $x cannot receive donations. It can't be "if you get funding no donations" because you only need like 1% of primary votes to get funding for next election but the amount you get is based on number of votes.
+2. Not throwing stones. It's just interesting for a party that constantly talks about transparency to launder the majority of its donations between branches. I'll make a mental note to never ever talk about the Greens donations again, clearly a sensitive topic. 😐
+3. because it's clearly a conflict of interest if you are on welfare, you tend to vote for the party that will keep and potentially extend your welfare benefits so instead of voting what's best for the city/nation, you are voting uniquely for selfish reasons and I don't mean childcare subsidies, since that's a good thing for the country (more babies), I mean unemployed people for any reason / for any amount of time (while they are not generating wealth) you should only vote if you a contributor to society, be it as a businessman, an employee, a student, or a stay at home mum taking care of the next generation, etc. if you are a free rider, you shouldn't enjoy the same rights
+4. Can you provide examples? Greens do not take corporate donations, unlike the two majors, keen to see what you're speaking about exactly
+5. Bro this is the most wild take I’ve heard, kudos
+6. Same could be said about anyone with invested interest in property investors, business owners ECT. Democracy states people get votes no matter what they think or do. It's not possible to make sure people vote for whatever the subjectivity right reasons. What you're suggesting is some ano-capitalist shit. That will definitely lead to a type of feudalism where those whom have means have much higher voting abilities furthering their own interests. Much like what happens with the aging demographic in south Korea.
+7. Freeloaders like the business owners that use donations to sway government policy to get tax breaks, subsidies and preferential treatment to get free money from the tax payer? Or the religious groups that pay zero tax? The state government has absolutely NO say on welfare payments, that is entirely the responsibility of the federal government- so your point is irrelevant
+8. I never said that, good attempt at moving the goal posts though. I said that they talk a lot about transparency but in fact their donations aren't that transparent. Other parties don't harp on about their transparency regarding donations like the Greens do.
+9. If you see his previous posts and community involvement, you'll understand
+10. But where do HELP loans put people? Or Trade Support Loans? Is that considered welfare? Cause that’s a lot of people losing their vote. Hell retirees technically wouldn’t be contributing either.
+11. understand I want accountability? looks like most Queenslanders want that as well, bye bye Labor
+12. Um, that's not a gotcha. You suggested I said something I didn't. That's just a desperate attempt to deflect from my statement.
+13. The forums from the election earlier this year are still up (Bremer Radio if I remember correctly) You could watch the division 4 forum, and the mayoral forum to see David Martin. Worth a look if you have the time.
+14. Check out Russell Milligans Facebook page. He has info and videos there
+15. Russell Milligan all the way. They guy has real world experience in council and was Deputy Mayor last term.
+16. David Martin is real ipswich - once busted stealing from Booval Bunnings. https://www.couriermail.com.au/news/queensland/ipswich/teacher-stole-paint-and-lock/news-story/4e76c8a92a843768c952f1a12edce9bf
+17. As much as I agree that he’s a piece of poo, I hate telling people who to vote for. But yeah please don’t vote for him
+18. Is it the same David Martin who’s running for mayor. Sorry I’m a bit confused :\ but he was running for mayor :s
+19. Yes, and now running in division 4 despite not living here.
+20. Just desperate to get into council any way he can. Serial candidate. Serial loser
+21. This sign is unauthorised election material. Has anyone reported this guy to the ECQ so they can prosecute?
+22. I don't know his back story, but I did meet him at the council election earlier this year. FWIW, I found him to be a genuinely lovely person, just wanting the best for everyone. He was passionate about actually solving problems.
+23. Kochardy ran for mayor earlier this year. The forums are still available online if you wanted to see him talking about his policies. I think he comes in around the one hour mark. I don’t think he has any social media presence. I think he hails from down Goodna way. He’s no dumbo. Just different. [https://westbremerradio.com/replay-mayoral-forum/](https://westbremerradio.com/replay-mayoral-forum/)
+24. I've come to think of them as a slightly alternative independent candidate whose chronic underfunding means using handmade campaign material. Because it's so rare to see any (and it's always in disrepair or tacked together) I think the joke is that it's like spotting a local artefact.
+25. He’s a serial candidate, a former or current academic, has zero online presence outside of West Bremer Radio debates, and is an old school hippie. Nice as anything, said some really outlandish things that were either cute or hilarious during the mayor’s debate, and I love him
+26. He doesn't come from Goodna, he's my neighbour down the back of Yamanto behind the abattoir. Come drive down Suffield Drive if you want to check out the signs he erected on a neighbours fence and in a cattle paddock, or the black line up the middle of the road where the council had to come and paint over the lines he painted when he tried to bisect a one lane road.
+27. Serial is a big unfair. David Milne is more that category.
+28. He sounds like fun. Does he have a gun license?

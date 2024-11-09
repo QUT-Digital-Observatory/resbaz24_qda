@@ -1,0 +1,148 @@
+Your job is to analyse a series of Reddit comments from discussions related to the 2024 Queensland State Election. The major parties that sought election were the incumbent Australian Labor Party (ALP) and the Liberal National Party (LNP) opposition. The Queensland Greens (Greens), One Nation and Katter's Australian Party were minor parties in the election. 
+
+The key five issues that the major parties campaigned on during the 2024 Queensland State Election were Youth Crime (YC), Cost of Living Crisis (COL), Health (H), Energy and Infrastructure (EI), and Abortion Laws (AL). We include some context of the major parties positions on these issues. 
+Youth Crime (YC):
+- LNP: Advocated for stricter penalties for young offenders, including the 'Adult Crime, Adult Time' policy, proposing that serious offenses committed by youths be met with adult sentencing. 
+- Labor: Downplayed claimed youth crimewave. Focused on rehabilitation and prevention programs, aiming to address the root causes of youth crime through community engagement and support services.
+Cost of Living Crisis (COL):
+- LNP: Proposed measures such as abolishing stamp duty on new builds for first home buyers and re-establishing the productivity commission to review building industry regulations, aiming to alleviate housing costs. 
+- Labor: Introduced initiatives like 50-cent public transport fares, a $1,000 energy rebate, and free lunches for state primary school students to ease cost-of-living pressures.
+Health (H):
+- LNP: Committed $590 million to an 'Easier Access to Health Services Plan,' aiming to reduce ambulance ramping and hire additional healthcare workers. 
+- Labor: Focused on maintaining and expanding healthcare services, addressing hospital capacity issues, and investing in new health infrastructure.
+Energy and Infrastructure (EI):
+- LNP: Criticized Labor's Pioneer-Burdekin Pumped Hydro Project as financially unviable and canceled it upon taking office, opting to explore smaller-scale hydro projects instead. 
+- Labor: Proposed large-scale renewable energy projects, including the Pioneer-Burdekin Pumped Hydro Project, to transition towards 80% renewable energy by 2035.
+Abortion Laws (AL):
+- LNP: Stated there would be 'no changes' to abortion laws under their government, maintaining the status quo established in 2018. 
+- Labor Party: Supported the existing abortion laws and opposed any attempts to repeal or amend them. Asserts that LNP intend to restrict access to abortion services based on the views of some of their members.
+
+Analyze the comments and code them according to two dimensions:
+1. The ISSUE the commenter is primarily discussing, if it is one of the five listed above. Use the codes YC, COL, H, EI, AL. If no issue applies, omit the code entirely.
+2. The PARTY the commenter appears to support. Use the party codes ALP, LNP, Greens, ON, KAP. Infer party support where possible, e.g. a commenter fearing the outcome of an LNP victory likely supports ALP, and vice versa. Ensure there is either direct or clearly inferable support for a party before assigning a party code. Assign a PARTY code only if the comment expresses explicit support for, or opposition to, a specific party or its policies. This support or opposition must be clearly discernible; mere mention of a policy is insufficient. Look for indicators such as positive or negative sentiment towards a party's actions or policies or explicit endorsements or condemnations. Comments may express opposition through sarcasm or irony. In cases where party support is not clear, omit the party code entirely.
+
+You will output JSON as a list of objects where each object has an "id" (integer) property of the comment id, an "issue" property set to the issue code string, and a "party" property set to the party code string. In cases where you cannot determine an ISSUE or a PARTY, do not set a null value, omit the appropriate JSON properties entirely,  e.g. If the first comment did not have a matching issue and you could not determine party support, then the object would simply be {id: 1}.
+
+Comments follow:
+
+1. > Reference to Miles’ guns Did you see him bench the 100?
+2. "Surprise sitting MP ousted" Please be Jarrod Bleijie but considering the Sunny Coast is deep blue, I can only dream.
+3. This was my fave election night piece of all time - Newman losing Ashgrove: [https://www.youtube.com/watch?v=a4KrYlCOMqc](https://www.youtube.com/watch?v=a4KrYlCOMqc)
+4. Too many boxes = low chances of winning. THE SYSTEM IS RIGGED!!!
+5. What time do the booths close? I’ve got the curried democracy sausage ready for dinner…
+6. I have the technical glitch for the cook island Fiji game
+7. My observation of reddit - users are strongly ALP biased. There is no square for 'qld reddit users crying about an LNP victory'. I'm a swing voter, but I'm looking forward to any downvotes 😂
+8. We’re doing our usual Indian takeaway- but a new restaurant as our old favourite closed. Here’s hoping for an ALP victory 🤞🏼
+9. About the only thing that clown can do… see ya peanut
+10. god i still hate that little worm SO much. So much.
+11. That bloke was trying so hard to not accept the loss...based on those numbers but there's still votes to count but based on those numbers... ahh ..errr...ahhh yes well.. 😂
+12. So you're actually a "what's in it for me?" voter.
+13. I've got Indian takeaway, too! Also hoping for an ALP win 🤞
+14. Yeah! He can't even expertly avoid a simple question over a hundred times like our man Dave!!
+15. -100 comment karma is crazy work have you thought about getting a job
+16. I prefer 'let's cut through the shit and vote for what's best for the majority of the electorate'.
+17. You good there champion, Seem to have a raging hatred of Labor.
+18. Stevie will have to look for a job… maybe cleaning up a gym???
+19. Only the shit they do champ, but won’t be for long
+20. i know you’ve never been to a gym before but it’s not the same thing as parliament house buddy
+21. So replacing quite a competent government with a Incompetent newman era politician, sounds like it'll turn out excellently and not a complete dumpster fire like it was in 2012-2015.
+22. Just cut back on the meth champ, you should be ok
+23. awww it’s okay buddy i know sometimes people disagreeing with you can cause a lot of big feelings
+24. 😩 hopefully you can cope from Stevie loss. Life carry’s on. You’ll be fine
+25. lmao it’s cute that you think i care that much. i won’t be in queensland by the time the peanut gallery start wrecking the place, miles will keep his seat even if labor can’t form government and the chance of the lnp actually keeping a majority for more than one term is next to zero. hopefully you can cope with the three labor terms that will come after this trainwreck. life carries (not carry’s- sorry bud, i know you’re trying really hard) on, you’ll be fine
+26. The single issue ones are more for the senate normally aren't they? And qld doesn't have a senate.
+27. Perhaps they've put the money they'd have wasted campaigning into an investment property.
+28. It will make zero difference - your number 4 preference won't flow to them
+29. Very left leaning seat. Right wing third parties would pull very few votes and lose money.
+30. Most electorates only have a few candidates in QLD, and outside North Queensland there's only three parties that ever manage to get anyone elected (ALP, LNP, and in trendier parts of Brisbane, The Greens). Most other candidate tend to realise they're wasting their time and money running a serious campaign, so tend to be doing it on principle rather than practicality - although some of them really are deluded into thinking they might actually get elected, despite all the electoral history in their area for decades showing otherwise.
+31. Lucky you. My electorate had so many racist, homophobic, misogynistic idiots that it was genuinely tough separating the bottom 4. Ugh.
+32. We only had 5 here in McConnell. First time in my life I put ON (4) above LNP (5). Tells you how much I hate that shit stain Crissafulli..
+33. I read this as Canadians and was very confused about why you expected there to be a high portion of Canucks.
+34. I did rank the one nation candidate higher than 5 anyway, because they sure as shit won’t be getting in where I live.
+35. same as me, and that is really odd But what happened to John Meyer Independent Green :-D
+36. Wait until you only have the LNP and One Nation. Not me but I'm sure there's somewhere.
+37. Yeah...i had to stop and think if i put ON or Greens last!? Big decision to be made
+38. South Brisbane should have flipped to One Nation, the salt would be refreshing.
+39. Number 4 for the Greens was way too high a number for me
+40. If only there was a system where we didn’t have to decide
+41. I’m sure we used to have a guy legally named Free Marijuana on the ballot
+42. Are they usually senate seats? My citizenship was approved before, but I didn’t get my ceremony until after the last Federal Election. Will keep a look out for the single issue parties next year.
+43. I’m not saying it makes sense for them to run candidates; just disappointed I could only rank ALP, LPN, Green and One Nation candidates.
+44. But I had to rank them as high as 4th. 4 out of 4 still seems too high for the PHONeys.
+45. For an independent, it depends on how high a profile (if any) they have. Generally people who have been a local councillor or mayor meets this criteria. Examples from previous parliaments have been Peter Wellington and Liz Cunningham. Sandy Bolton is another example. Looking at the current election, in addition to Sandy Bolton in Noosa, Margaret Strelow (former mayor) is a candidate in Rockhampton and polling shows she has a good chance, depending on preference flows. But then you get people who try again, again and again, only polling about 1% to 3% of the total votes each time. The epitome of the definition of madness.
+46. Im in McConnell too, both my wife and I put ON last.
+47. That literally sounds like hell. I wouldn’t wish that upon anyone.
+48. I would never downvote someone on reddit for an opinion I disagree with, but as I assume you are an LNP voter (and I apologise if I've assumed incorrectly) can you tell me why you've voted for them this election? I only ask because I'm a swing voter and I've struggled to come up with a compelling reason to vote LNP this year. They simply haven't offered anything but blatant dishonesty (the abortion debacle with certain members surreptitiously promising to walk back laws, crisafulli walking back promises like resigning if victim numbers not falling) and I just don't think I can trust them. Labor isn't a perfect party, there are plenty of genuine criticisms that can be levelled against them but it seems this time around there are even less compelling reasons to vote against them. I also really appreciate them operating on a platform of using our natural resources to help us thrive and feel like it has been long overdue. I will be sad to see it go if they lose. Anyway, just looking for genuine discussion, no hate to you. Democracy needs to be made up of different opinions.
+49. They aren’t my first choice this year, but living in South Brisbane I am expecting them to win the seat.
+50. Probably does pop up in some districts. Nothing stopping you from running but it's not a stateside vote like the senate is so you chances of getting in would be pretty slim. Where I am it was just Labor, LNP, Greens and ON. Same where I work.
+51. I think Nigel used to stand in my old electorate of greenslopes. I always put him first, and Hanson party last. Maybe he did any by-election he could.
+52. In federal elections you'll see a huge list of random one issue parties running for the senate. QLD doesn't have a senate it's the only state I've voted in so I don't know what other states are like with theirs. I'm just extrapolating from federal voting. The senate form for the national election is wild. It's huge. Should be a federal election in about May of next year which will include voting for half the senate.
+53. Of all the seats I would have expected legalise cannabis to run in this one
+54. I had the pleasure of putting them last. Other potential last options were LNP, Katter and Family First. It was a really tough call in who is the shittiest out of a list of very shit candidates.
+55. In south central Brisbane it’s an ALP/Greens race. All my dyed in the wool Labor mates are increasingly anti Greens, they see them as promising unrealistic things to take votes from people who are trying to effect practical change.
+56. Would an LNP voter complain about putting PHON anywhere higher than a 5?
+57. I don’t mind the downvotes but I appreciate the respectful dialogue. I am an LNP voter. I’m a female, 42 and an RN (used to work for Queensland Health now a business owner). I view myself as more right wing but not the religious extremist sort. I think Miles is better than Anna but also I have seen the health system crumble into a shell of what it was. Are LNP perfect? Not at all but I am genuinely keen to see if they can make any changes. I live in inner city Brisbane and the crime here is repulsive. People coming into houses here in the middle of the day with knives. Can’t walk through musgave park it’s completely unsafe and now a ghetto. I’m so sick of the Greens and ALP party. Brisbane city council is LNP run and they do a great job. You may not agree with the above and I’ll probably get rinsed from the left but that is my opinion and stance on the issue 🤷‍♀️
+58. Yeh I’m same electorate and Amy is the favourite to win. I actually put $50 on LNP and Labor because I’m hoping for a miracle 🤪
+59. In the last Vic state election there was about 40 parties and I think around 60 squares you could number if you voted below the line. The ballot paper was massive
+60. I was talking to a few people about the senate ballot today about whether they mark above or below the line. Found it interesting that no one apart from myself filled out every number below the line.
+61. Maybe I should look into it and run for them next time here.
+62. yeah me too, in fact it looks like they don't have any Brisbane based seats, just some on the outskirts like Morayfield, Logan and Redlands.
+63. This is my electorate and I would 💯 prefer Labor over the Greens. We have them at council, state and federal level and they are full of hate and division.
+64. I used to vote greens, but have switched to voting ALP. I see a lot more optimism in the labor campaigns whereas the greens have switched to fear campaigns and nimby-ism which feels disingenuous as if to win votes (rather than being what they believe in). I have found Amy MacMahon to be really disappointing - I couldn’t tell you one positive thing she has achieved during her time in office. She says she stopped the relocation of the school (I don’t see that as a win personally) but I haven’t seen any other achievements spruiked. When I’ve contacted her office I found them to be a bit condescending which surprised me. I think Jackie Trad had a more positive effect on the electorate (even though she was problematic). I feel like I’ve seen a lot less greens corflutes outside houses in this election, but in fairness I haven’t seen many for the other parties either. I guess we will see what the electorate thinks tonight, but I imagine the greens have the edge over labor as the sitting member and with the predicted swing against ALP.
+65. You own trump memorabilia as an Australian but don’t see yourself as an extremist? Curious…
+66. Thanks for the response. As an RN I actually find your opinion more interesting than many others. What do you think of ERs releasing real time patient wait list data? I've seen mixed responses about it but none from actual medical staff.
+67. Didn’t you say you voted ALP in the other comment?
+68. I’m West End and I’m hoping Labor swing in and win. Amy is the favourite but the ALP isn’t far behind on the bookies so it’s not impossible. She has done absolutely nothing but oppose housing developments.
+69. Yeh I’m a Trump supporter. He’s said some stupid things but he loves his country and is great leader.
+70. Nah mate. I said I’d prefer ALP over the Greens but always an LNP voter
+71. If anything, we simply have to hope labor somehow wins as what the LNP is proposing is definitely not what we want in Queensland especially when they are going to undermine the future of our energy grid and basic health rights etc.
+72. No. I'm expecting a razor thin LNP victory. > A uniform swing of 3.1% would cost Labor five seats and reduce the party to a minority position. The LNP need 12 seats for majority government which requires a uniform swing of 5.6%. A swing between those figures would leave no one party with control of the Legislative Assembly. https://www.abc.net.au/news/elections/qld/2024/guide/preview
+73. Personally, a very slim LNP majority is the most likely option in my mind. It seems logical to me that Labor is going to be completely wiped out everywhere north of Hervey Bay, and likewise the LNP is going to struggle to snipe seats from Labor in Brisbane and the Sunshine Coast, given their abysmal performance these last two weeks. I'm not expecting any change from the Gold Coast or anywhere west of the Lockyer. The election is going to be decided in Brisbane's outer suburbs and the string of cities up North. I *hope* for a razor thin miracle in Labor taking minority government, but I don't see it being particularly likely.
+74. My predictions based on nothing but my own vibes is that LNP will make gains in the regions, Labor will do better in Brisbane, and Greens will increase their primary vote but not their number of seats. Predict LNP will win the most seats (even though I do not want this to happen) but unsure if it will be enough for a majority.
+75. LNP minority. Labor will lose seats but some will go to Katter and one nation. LNP won't win enough seats from labor for a majority and labor will hold seats the greens are targeting.
+76. I hope the greens/independants get more votes! and labor over liberal
+77. Central Queensland ultimately decides which party forms the government depending on how they vote.
+78. razor thin LNP majority, Greens might pick up a seat or 2, and Labor just loses some seats to pretty much everyone, but it won't be as bad for Labor compared to when Newman won (also expecting the LNP government will just end up being 1 term again because they won't do anything to actually alleviate inflation and housing, and that they will likely restrict abortion due to the Katter bill, and they will get blamed for that)
+79. A part of me wants there to be a ALP/Greens coalition just to piss off the cookers. I don't care how effective it would be. I just want there to be cries of 'socialism' and 'tyranny'. And even better if they forced the Olympics to then make that disgusting bin chicken the Olympic mascot.
+80. I generally think Labor have done nothing on the big issues (housing and zoning etc.), and last minute freebies leave a really bad taste in the mouth of anyone who doesn't immediately benefit from them. I'm predicting strong swing to liberals anywhere outside of 50c zone and for any demographic without state school age children. That should give it to LNP.
+81. I think Labor will get smashed in North qld but hold on in Brisbane. Cairns will be interesting because it's always been Labor. The Katters will probably do well up north and maybe steal a seat or two off the LNP. Maybe 4 or 5 for Katter. One nation will get 1 seat max. I think the Greens will get 4 seats max but get close in a few others - there might be a few 3-way races with Labor winning those seats off greens preferences. As for the main race, I predict an LNP minority with Katter.
+82. why do you think the LNP is going to win? The polls are never true and they are seriously just Murdoch propaganda. labor may lose a handful of seats (6) but the greens and independents will probably snipe enough from the libs that any gain is muted. btw seats like noosa and maroochydore are probably the few places in the state where a libs -> greens flip is possible.
+83. I'm genuinely astonished that people would vote for one of Newman's cabinet members. Once Crisafulli has been voted in we'll remember how Newman behaved.
+84. She seems fairly popular and has a good profile. I think you're right.
+85. why doesnt state labor just coalition with the greens and independents. it would literally save the state despite the very few almost redundant comprimises theyll have to make.
+86. Better than the wipeout they were predicted to have at the start of the month.
+87. Early voting was over a million so I think people had already made up their minds before abortion entered the discussion.
+88. is it stat labor policy not to form coalition? honestly would rather that than liberals
+89. to be honest even though I support labor using first preference to virtue signal is an absolute must while we have it (yikes).
+90. Worst possible outcome. Mining Company proxies dragged further right by KAP and ON. I gav the lno my second preference (my highest ever) because of this
+91. Yes but I'm disappointed to be right. Part of me thought it would be much closer.
+92. Queensland follows a path of voting LNP after 3-4 terms of Labor, regretting it and going back to Labor.
+93. Murdoch's media outlets are propaganda clinging to a few nuggets of credibility. They usually use the most reliable pollsters who trade on their fairness. Then, of course, Murdoch spins the results. In polls you really have to go on trends. Lab had shown a rapid improvement so I hold out hope for a minority lab govt
+94. The polls have been right 7 out of 8 of the last elections, denying them is pure cope.
+95. Bro newman ragged the idiot out, the libs having literally been riding on all of labor policies its astonishing and i am legit concerned that somehow people can see.!!!
+96. Really hoping she holds on. Has there been any word on who will be the Labor Leader after the election? Depending on how many seats Labor hold would be good if Miles gets another crack. I just don’t know how he would go as an opposition leader.
+97. Mining royalties. Greens don’t necessarily want more mining royalties, they want less mines. Also I don’t think they’d partner with Labor even if Labor wanted to.
+98. Independents by virtue of the name, won't enter a formal coalition. There may be an agreement on supply, but, they won't follow the ALP line. The Greens won't ally with Labor as they want to replace Labor. They love sniping at us from the political left completely aware they're doing damage to the overall concept of progressive politics. Politically they've proven to be untrustworthy as they're more interested in destruction than governing. An example of this in the Federal sphere, Max Chandler-Mather voted against a housing bill because the Greens wanted a specific rider added to it that the ALP refused. Completely forgot bigger picture, all about negative politics. https://theyvoteforyou.org.au/people/representatives/griffith/max_chandler-mather/policies/117
+99. abortion has been apart of the discussion the whole time. early voters knew.
+100. its actually funny, because that may be the biggest deciding factors, state government benefits arent really convincing people which is strange but KAP may have nuked the libs and any possibility of passing any change by announcing it before the election
+101. It's not policy, but they've previously indicated they wouldn't govern with the Greens, which all but rules out any minority government on their end.
+102. It's actually a pretty normal result. Labor saved the furniture and cast doubt on the new premier's leadership skills. Amanda Stoker is running around and she's trouble. The Greens are clearly disconnected from reality, ten seats some said, their supporters are moving through the stages of grief, but they probably need to move on from denial and anger. They'll lose even more oxygen now the LNP is in power.
+103. Miles has support from some unions. It might come down to how badly they lose. He's done well to claw back ground.
+104. it’s pretty unfortunate because king smiles is definitely left enough to make awesome progress with the greens if only both sides would drop the beef. definitely gonna be sad to see him lose and i say that as a hardcore federal greens supporter
+105. You're right. Katter announced intentions to recriminalise abortion on 8 October, before prepolls opened. I voted on 11 October and there was a line of people which usually signalls a change of government.
+106. bruh, LNP or compromise with the greens and they choose the LNP for the rest of like WTF!!!
+107. Both parties have said they won't do minority deals but I feel like they're going to have a change of heart when it becomes the only path to power
+108. That's just Labor in a nutshell isn't it? They're a centre right party, on both the federal and state level they vote *far* more often with the LNP than anyone else. Two pro-landlord, pro-environmental destruction cheeks of the same ass, really. I've held my nose and voted for them this election, but only after preferencing the Greens and the legalized marijuana party ahead of them.
+109. Thank god we have preference vote for this shit, I did something similar but i live in union heartland. wait till david cuts preferencing voting bruj
+110. Qld labor should take a few notes from NSW labor on housing, who very recently passed a very pro tenant piece of legislation. Also going to point out that the LNP are even worse at the whole environmental destruction thing given what was said on their campaign trail
+111. Thank you. I normally do early votes but I even tried wearing headphones and both major parties still tried to pester me with how-to-vote cards.
+112. Long time gonna, first time postal voter this election, very easy process, no need to make an account, just the name and address I think, you number one to whatever, tear off the perforated edge and slip it in the envelope provided freepost. Chuck it in a big red box a few streets away, on your way past. You can't ask for much than that, no urges to punch a politician in the face mentally, no queue, no fine.
+113. I early voted for the first time this year and was in and out in less than 60 seconds. Sad I missed out on my sausage but I fired up the BBQ today in recognition of election day
+114. Yeah, I’ve been postal voting for years, way better to just have it sent to me.
+115. My postal vote came so late, I couldn't use it. Thankful for the ote-polling options now so I was still able to vote!
+116. I voted on Saturday at lunchtime. Was literally 1 other voter in the basketball court. No line. Was in and out within 2 minutes
+117. Just go and vote early. We voted on Thursday - walked in, voted, and out in under five minutes.
+118. You need to master your Resting Bitch Face. I'm a tiny shortie but I paste on the RBF, put on my 1000m stare, shoulders back and pretend I'm the tallest person there. I get looks but no one tries to stop me or put a card in my hand. I do the same with kiosk operators and charity muggers. It's only 9/10 I can get past the chuggers though.
+119. I even get that they might ask once, but the fact that if you politely decline at the entrance you still get bombarded multiple times all the way to the door. Obviously if I am not holding anything I have already said no and know how I want to vote. Although I somehow managed to turn up at a super non-busy time, so there were multiple people standing around waiting to pounce and next to no other voters... eep.
+120. I'm curious to know if there are laws about how far these people can attempt to engage. I deliberately and obviously steer clear and keep my distance but they don't relent or even make snide comments about you sometimes.
+121. Postal votes are accepted up to two weeks after election day so long as they are posted before the election day This is the actual reason it takes a couple of weeks to declare close races. It’s not the speed of the count, it’s the legal requirement to wait for declaration votes such as postals to arrive.

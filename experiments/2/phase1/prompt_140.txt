@@ -1,0 +1,159 @@
+Your job is to analyse a series of Reddit comments from discussions related to the 2024 Queensland State Election. The major parties that sought election were the incumbent Australian Labor Party (ALP) and the Liberal National Party (LNP) opposition. The Queensland Greens (Greens), One Nation and Katter's Australian Party were minor parties in the election. 
+
+The key five issues that the major parties campaigned on during the 2024 Queensland State Election were Youth Crime (YC), Cost of Living Crisis (COL), Health (H), Energy and Infrastructure (EI), and Abortion Laws (AL). We include some context of the major parties positions on these issues. 
+Youth Crime (YC):
+- LNP: Advocated for stricter penalties for young offenders, including the 'Adult Crime, Adult Time' policy, proposing that serious offenses committed by youths be met with adult sentencing. 
+- Labor: Downplayed claimed youth crimewave. Focused on rehabilitation and prevention programs, aiming to address the root causes of youth crime through community engagement and support services.
+Cost of Living Crisis (COL):
+- LNP: Proposed measures such as abolishing stamp duty on new builds for first home buyers and re-establishing the productivity commission to review building industry regulations, aiming to alleviate housing costs. 
+- Labor: Introduced initiatives like 50-cent public transport fares, a $1,000 energy rebate, and free lunches for state primary school students to ease cost-of-living pressures.
+Health (H):
+- LNP: Committed $590 million to an 'Easier Access to Health Services Plan,' aiming to reduce ambulance ramping and hire additional healthcare workers. 
+- Labor: Focused on maintaining and expanding healthcare services, addressing hospital capacity issues, and investing in new health infrastructure.
+Energy and Infrastructure (EI):
+- LNP: Criticized Labor's Pioneer-Burdekin Pumped Hydro Project as financially unviable and canceled it upon taking office, opting to explore smaller-scale hydro projects instead. 
+- Labor: Proposed large-scale renewable energy projects, including the Pioneer-Burdekin Pumped Hydro Project, to transition towards 80% renewable energy by 2035.
+Abortion Laws (AL):
+- LNP: Stated there would be 'no changes' to abortion laws under their government, maintaining the status quo established in 2018. 
+- Labor Party: Supported the existing abortion laws and opposed any attempts to repeal or amend them. Asserts that LNP intend to restrict access to abortion services based on the views of some of their members.
+
+Analyze the comments and code them according to two dimensions:
+1. The ISSUE the commenter is primarily discussing, if it is one of the five listed above. Use the codes YC, COL, H, EI, AL. If no issue applies, omit the code entirely.
+2. The PARTY the commenter appears to support. Use the party codes ALP, LNP, Greens, ON, KAP. Infer party support where possible, e.g. a commenter fearing the outcome of an LNP victory likely supports ALP, and vice versa. Ensure there is either direct or clearly inferable support for a party before assigning a party code. Assign a PARTY code only if the comment expresses explicit support for, or opposition to, a specific party or its policies. This support or opposition must be clearly discernible; mere mention of a policy is insufficient. Look for indicators such as positive or negative sentiment towards a party's actions or policies or explicit endorsements or condemnations. Comments may express opposition through sarcasm or irony. In cases where party support is not clear, omit the party code entirely.
+
+You will output JSON as a list of objects where each object has an "id" (integer) property of the comment id, an "issue" property set to the issue code string, and a "party" property set to the party code string. In cases where you cannot determine an ISSUE or a PARTY, do not set a null value, omit the appropriate JSON properties entirely,  e.g. If the first comment did not have a matching issue and you could not determine party support, then the object would simply be {id: 1}.
+
+Comments follow:
+
+1. I'd rather three states, I live in CQ and if it stays with the south, nothing will change, but if it goes with the north, Townsville will just be the one fucking us. I preferenced Labor first and LNP last, by the way.
+2. I feel like this is an artificial division created by the media... Their talking points are built around it.
+3. Huh? Southern Downs all the way to Coomera and Currumbin with the exception of maybe Gaven and even Lockyer is most likely going to fall to the LNP. Even Pine rivers, Everton, Aspley, Clayfield and Redcliffe. Same with the entirety of the Sunshine Coast less the Noosa independent and Nanago through to Burnett. Not a supporter of the LNP but but handwaving this swing off to simply North and South differences is not going to explain or solve anything.
+4. I'm a CQ voter who votes Greens or Labor, and think that's a total dickhead thing for you to say-- how do you think that helps. Really fucking inclusive hey.
+5. While the North always bangs on about wanting to split into its own state, this will never happen since North QLD and FNQ are pretty much subsidised by the southern end. Splitting would pretty much result in the North shooting themselves in the foot. Politically though, it could actually end up benefiting them. A big part of the issue is that you’ve pretty much got to run 2 campaigns, one to please the south and another the north, without pissing off either group. If there was a split, groups like Labor and the Greens could work on making a campaign more dedicated to pleasing these areas, without necessarily hurting their Brisbane vote.
+6. Let us have our legal abortion, 50c transport, daylight savings etc. and anyone north of the Sunshine coast can deal with their own crap
+7. We wish you could also so we don't have to pay for your socialist fantasies. Best result of the night was the greens being awarded zero seats.
+8. Yeah that's true actually. Someone said to me at work that free school lunches is the same as communism 😅🥲 but don't politicians get free lunches?
+9. This isn't to say Queensland Labor were to blame for things being hard, but you often lash out where you can. The EU was definitively not the cause of hardship in the UK but poorer areas were much more likely to vote Leave because they wanted any kind of change.
+10. You're hurting buddy take a breath and put your feet on the grass. I didn't say Newman was good I said he was a razorman and what we needed at the time.
+11. If they’re your minerals why don’t YOU dig them out of the ground?
+12. I think this should be run by a third-party volunteer organisation that's not affiliated with any of the political parties or media outfit. Four years is a good enough time to make this work for the next election.
+13. It’s not free if your taxes are paying for it champ
+14. You kind of sound rusted on as well. Pretty hypocritical to be honest
+15. “Well the CM told me and they are never wrong” /s
+16. please, these people just screech their feelings and start saying people are arrogant when they politely show them they are incorrect Insufferable
+17. My experience is not the issue . Its the experience of the majority who voted the ALP out . BTW , who is Murdoch?
+18. Not enough for the Majority. Thats why they voted this lame duck party OUT.
+19. I've never actually seen someone make that comment so I can't say anything about it...
+20. I have used it and I do use it. But I won’t lie, I do love wanking in the mirror.
+21. Mate I’ve used it for like 10 years straight. It’s just cheap vote buying and I don’t like it
+22. Some of us live where there is no worthwhile public transport. I have not benefited from 50c fares at all.
+23. Not particularly, but also don’t want governments bringing in cynical and unsustainable policies in order to win an election
+24. I’m happy to pay fair price for my fare. We just need everyone else to do the same.
+25. “‘*Getting rid of it will be unpopular that’s why they introduced it*’ Hmmm. Something does not quite compute there. If you honestly believe this was not a vote buying exercise then I don’t really know what to say to you.
+26. Like back in the day when you were either a Holden or a Ford man.
+27. They can do as they see fit, they have the same voting rights as you.
+28. Shit show? The richest state in the 4th richest country in the world.
+29. Spoken like someone who thinks they'll never need this health service ever.
+30. It's not an abortion "fear" campaign when it's genuinely being proposed by the katter party and the LNP voted against abortion in the past. Youth crime was a fear campaign because youth crime is down and they're lying to say it's not.
+31. Wow, sometimes someone says something that really shows just how little capability they have for critical thinking. If you really honestly believe the abortion thing was a fear campaign and Labor has been a shit show, then you have very much signalled your inability to think. Mainly because everything you said is demonstrably wrong via any amount of actual data and facts. So given you have allowed your emotion to cloud your mind to actual facts and data proves my point.
+32. I never said the LNP won on a policy platform. Personally I think it won on "we're not Labor and it's time for Labor to go, and don't we all hate those Brisbane politicians thinking they know what counts for us here in the country? Let's show em what for! And crime! We're going to be so much better at dealing with crime!" There was a deliberate effort to not present policies, in fact. It's called a small target strategy. But that stuff works in politics.
+33. Count me in. This place is gonna be cooked in 6 months when all his "promises" cough cough, get canned.
+34. cringe lol, chin up tho holy fuck - we're in for a fun ride I hope SM stays around as leader to get on the blow torch
+35. Nah they just aren’t magic and won’t work with out time effort and funding. It’s always easy to nay say something hard and undermine it for being either to slow, to hard l or to expensive. LNPs only solution is ti hide the problem in adult jails and kick the can down the road.
+36. That’s what I believed once too but SM was X - not cool after all.
+37. What do school curriculums have to do with public vs private?
+38. Albanese is flat refusing to pay the federal share to fully fund state schools. But you’d know that if you actually cared about education because you’d be well aware that the National Schools Reform Agreement is currently in negotiations with the federal government stonewalling state governments over funding.
+39. That's on the labour party to fix. Rural Queensland is where the labour party was born and they've become so focused on Brisbane that they've lost touch with the voters who believed in them. Let's not forget how damaging the CFMEU administration is to rural QLD which cut off a big piece of support.
+40. You sincerely believed that the media being against Labor is a recent phenomenon and not one that has been around since federation?
+41. Lol. Mate, you can believe Labours lies all you like. I don't. Send me a message in 4 years time and we can discuss whether I was right or wrong.
+42. Unions have very little membership in the house building sector. Heavy industry, utilities, and large industrial/commercial construction is where they exist. Residential is largely sub contractor independent builder/tradesman arena and unionisation is a waste for them.
+43. The taxes have been safeguarded by the introduction of legislation in late September. So pick another catch-cry
+44. You have a link their plans to cut the health budget?
+45. Jon Oliver did a piece not long ago about the issue, with people taking away school lunches or making it difficult to supply them and the knock-on effects that was really illuminating
+46. Even feeding kids breakfast was found to increase attendance and focus. (And where we did that was in the mountains in nsw and it was primarily donated food like older bread woolies etc would throw out) It became a community thing not kids who are just poor, to line up and get a piece of toast and a warm milk.
+47. Schools already put a portion of their stretched thin budgets to provide lunches to those truly in need. And they will continue to do so (because they do care for the kids that walk through the gates everyday) but alas it is what it is. Perhaps in another life the Federal Government will employ a similar policy to drive home their stance on healthy eating…
+48. Kids are breaking into houses and stealing cars because they're hungry?
+49. I don't think Labor did a very good job communicating the reasons behind free school lunches..
+50. You're a Labor voter. So you yourself clearly lack critical thinking skills...
+51. I said nowhere I thought it was a bad idea, in fact I agree with it. But I am saying the liberal voters I know genuinely care about kids in fact a lot of them have kids in state primary but decided to vote for whatever reason for liberal and that’s up to them. I’m not arguing the policy I’m saying lay off categorising people based on their vote as it’s everyone right to vote for who they want.
+52. As an American you should be terrified that the LNP is using the same rhetoric as Trump to get into power.
+53. Ahh I didn’t know that. But I was a new south welshman until only recently… it’s grossly unfair for former governments to bind future governments like ruling from the grave
+54. Couple stories up, it's hard to see from ground level lol
+55. Not necessarily. My electorate had four to choose from, Labor, Green, ON and LNP.
+56. You shouldn’t answer a question with a question. Why do you think LNP voters changed their mind after voting?
+57. I know, imagine having a now foreign owned entity controlling the media and have significantly more power in Australia then even the most well connected individual. What happened to Australian patriotism...
+58. I hadn’t even noticed that, but good point. I don’t get any joy out of any of it, but it’s frustrating to be the butt of state and nation jokes come election time, when you can see other areas are a problem too.
+59. Doesn't matter who you prefer. Labor has its downsides too but really this is how we'll solve it?
+60. I mean people like you are awesome mate and there's always good people no matter where you are but we all know the demographic inclinations...
+61. Any details or data on monetary flows between regions and SEQ? The regions cost a lot due to distributed populations, but SEQ costs a lot due to the sheer number of people. Regions also generate a lot of economic activity due to mining (and tourism, agriculture to a lesser degree). Both will point the finger at the other to claim they produce more value and the other costs more to support.
+62. Exactly, look at some of the replies to my post to get an idea...
+63. Where would you get your coal royalties to pay for your cheap transportation?
+64. Holy shit, they said bumpkins and one appeared. Like beetlejuice, but stupid.
+65. Exactly thank you and it's fine to disagree on things without turning it into a whinge fest or personal attack.
+66. Why? What exactly about the public service at the time was bloated? I want specifics
+67. Free at the point of service you dope. Nobody thinks it's magicked up out of the fucking ether. Did the good Samaritan charge the person for services rendered?
+68. I voted green the last 2 times and only Labor this time
+69. That Liberal Party lady on ABC last night admitting it is feelings over facts was pretty wild lol
+70. There is one above as an example that is unsure where they will pluck $1000 from now for their next power bill.
+71. You dont like 50 cents fares, you use it. Thats oxymoron
+72. 😂 OP exposing themselves for not using public transport as well. Typical fool on their high horse.
+73. ...you don't like coal companies heavily subsiding your public transport fees, putting money directly back in your pocket?
+74. Why is lowering the cost of getting on a train cynical? There are a bunch of studies showing the benefits and as I stated before will lower congestion which will have savings for businesses trying to transport goods over the road network. The policy itself is not that expensive so I'm trying to figure out why you are opposing something that saves money for basically everyone.
+75. like lowering..... checks notes...... youth crime, that has gone down? What wait, I am confused. You are just spineless and stand for nothing and screech your feelings into the wind? Ohhhh ok got it.
+76. I think it's a secondary benefit but not the primary aim. Queensland has had lower public transport patronage since the pandemic and roads were becoming increasingly gridlocked. That's terrible for everyone affected and worse for the environment too. There's an obvious primary (and worthwhile) goal there. If a by-product of a policy is that it wedges the opposition that is really just an added benefit.
+77. I never said they can’t… They can do whatever they like, doesn’t mean they aren’t idiots for being politically illiterate.
+78. With people living in tents or their cars. It's nothing but paper money.
+79. The overwhelming opinion of many people was that Queensland is incredibly bad financial state they don't know why they thought that they just did I heard it so many times
+80. And i bet you look over at your neighbours new mercedes and mansion and think wow they are so rich. While completely oblivious to the level of debt they are swimming in to maintain that illusion.
+81. Have needed it, Have used it. I am thankful it exists. But as ive mentioned to a few here, abortions were being done in qld for literally decades before 2018. 2018 was the final dotting i and crossing t. I dont want it reversed and will actively oppose any that seek to reverse it. Its not changing. calm down, there are far more issues facing us than an abortion law that is decriminalised. Might as well get out and say the lnp are going to reverse indigenous rights. Its fear porn when they had nothing else to campaign on. thankfully it was seen through.
+82. uh huh. And in 4 years when we are both here and abortion is still the law of the land will you still be afraid? The war is over. Go home soldier.
+83. Facts over feelings until you're so conservatively brain rotted then you just screech your feelings everywhere and ignore the facts.
+84. Most elections are not won, they are lost. Just as a fear campaign works, just not well enough this time to outweigh the negatives of Labor.
+85. If it makes you feel any better the entire earth is cooked in soon enough time. /r/collapse
+86. The moment he says anything about making "Strong Choices" you know Campbell Newman has stuck his hand up Crisafooli's arse and is doing the talking.
+87. For the LNP, every complex problem has a simplistic slogan to fix it.
+88. Can't knock em on the head so lock em up is the next best option. They will never be any good regardless.
+89. Crime is going down my dude, you can screech all you want about it.
+90. What? I wasn't debating public v private..I was answering a question that had nothing to do with public v private.. Did you go to school at all?
+91. Still in negotiations. Still gonna be better than the last 20 years. Let me know what happens.
+92. Society is stupid. Beliefs over facts. The people failed themselves. Simple.
+93. They were so busy trying to get rid of the greens in brisbane etc, they forgot large regional cities like Mackay and Rockie which they’ve lost for the first time ever. Regional qld focussed on voting Libs.
+94. Sure. Hope you're ready for higher state debt and worse crime rates, because that is my prediction.
+95. True however prices are relative. If a trade sees his mates on the big bucks for the same work he's going to be quoting with that as a reference.
+96. well yeah, neglect, food insecurity and growing up in poverty are all extremely traumatic and the correlation between crime and trauma is far stronger than any correlation between crime and sentencing
+97. Hungry, not getting a good education, cost of living pressure on parents leading to abuse or neglect… just a couple reasons.
+98. These sorts of interventions are multi-faceted. The idea is that malnutrition damages brain development, which can lead to behavioural issues and leads to worse outcomes .
+99. They're bored dude. They feel forgotten by society. There's very little community and third spaces that are free, parks have less and less benches and it isn't even mandatory for class rooms to have Aircon in QLD classrooms yet. They want to be seen and heard but there's nowhere to organise in rural areas and their frustrations leak out as public nuisance and destruction of property. This isn't new, it's the most basic form of protest. I'm unhappy = I'm going to break stuff till people look. It's childish. They're children....
+100. Get insurance. It’s a car. Should we then lock these kids up forever? You know you will pay for that right? Shouldn’t we be investing in the issue before it becomes stealing cars?
+101. you see what you do is you feed these kids when they're 5 and their brain physicallyy develops, I know a developed brain is a difficult concept for somebody like you to grasp but then this miracle of evolution happens.. they actually develop past the age of 12, which again I am going slow just so you're not left out.. and become participating members of... a society and in general uplifts that fabric of.. society. oh who am I kidding, I'm wasting my time here
+102. Break into the house, grab anything they can use to buy food, steal the car to drive to the shops and get food then drive off to somewhere quiet they can eat? Seems like a reasonable set of events that could be the thought process of a child. And if they get caught, sentenced, and sent to juvie then they get three meals a day and a secure place to sleep.
+103. ...shouldn't the reasons behind "free school lunches" be obvious? All children get to eat. Children who are fed are more likely to be content and less likely to fall into undesirable things. I am not sure why this is something that needs to be explained.
+104. Yeah that’s a fair point - it’s a fine line between explaining/educating a policy and patronising the constituents.
+105. lol cute. I’m a swing voter (even voted for Clive once)… but the more I get involved and read the more I realise that LNP are just a bunch of self interested rats who don’t actually give a toss about the public. I’m not interested in having a leopard eat my face. Read and research, you might learn something.
+106. Yes, but people who vote for a Lying Nasty Party are just dumb - in my opinion.
+107. Liberal voters in QLD aren't compassionate. They have voted on a single issue without thinking of all the harm that is going to come to them, women, or kids that aren't theirs
+108. 100% but a bigger issue for gaining access to an abortion in that part of Queensland is currently whether there's the appropriate medical staff available to provide that service.
+109. If you feel like none of these 4 parties represent you and you feel that your views and positions are going to be shared by a large number of your electorate, why don't you run as an independent or set up your own party. Even a looney like Pauline Hanson was able to do it.
+110. Green -> Labor -> ON -> Lying Nasty Party would have been a good direction of preferences in my opinion.
+111. Okay I will rephrase then. The mood was turning on the LNP the closer we got to election day. The election day results have higher Labor percentages and I think this was driven by a change in the views of the electorate as a whole. But many people voted before this change occurred. I think if everyone has voted election day LNP wins 1-2 seat or minority government.
+112. Ironically the people supporting those beliefs claim to be true blue...
+113. Over the years our politicians (often aligned with various Christian-style religious beliefs) have allowed our media laws to do so. Geez, they’ve also been exceptionally reluctant to implement “truth” in advertising, in particular political, advertising. Also the majority of our voters seem to vote on slogans and are not willing to read policies, as often there are not any to read. We live in quite sad times.
+114. But you'll have journalist students refusing to entertain the need for media reform and truth telling laws
+115. Its a stupid and counterproductive outcome of the Reddit circle jerk. This particular election wasn't lost because the North of whatever arbitrary line they wish to the draw are all rural hicks. Its just easy to write off the loss to "inherent unchangeable differences" between half the state. because no further thinking needs to be done.
+116. I just added that in case someone called me a dirty LNP voter just for being born and raised in the regions
+117. I think what people forget is that mining jobs are what put food on the table in my region. They're people's livelihoods. Calling people stupid for supporting the industry that pays a good wage and supports them really misses the point. I'm a strong environmentalist - the kind that barely drives, minimizes consumption, all of that stuff. I believe that we have to shift to clean energy. I don't think the way to get there is to insult people in my region. We have an opportunity to show that we can have prosperity in the regions through a shift to renewables. We can back a battery project at stanwell, a solar and battery project at biloela, etc and make the case that there is a future for people down that path without dehumanizing them for wanting liveable jobs. Isn't that a better path?
+118. if you say dickhead three times in the mirror they’ll show up behind you
+119. Hahahahaa I have 3 degrees, grew up in brisbane and own my company.... a long way from a bumpkin but nice attempt at the smearing label... Back to the corner to cry to mummy with you.
+120. Hahaha OH HE HIT YOU WITH THE "YOU CAN LOOK UP MY ARGUMENT" Oh you got fuckin railed my dude
+121. I don't care nor like you enough to provide them if you want a detail run down on his career look him up. Beauty of Reddit mate.
+122. There's one comment that says rich people don't need the rebate, not that it was ongoing, I did a search for the term rebate and that was the only thing saying anything remotely close to what you implied
+123. I’m responding to the person saying I haven’t used public transport
+124. Where exactly did I say I am in favour of that policy? Also, projecting much?
+125. lol I’m sure you don’t think the true cost is 50c
+126. Nice take, simply for being conservative. I hope they hack labor’s policies to pieces.
+127. Makes it all the more depressing when we are a very rich country. The paper is there, just the distribution model that is fucked.
+128. That is an absolutely bullshit comparison. Not only comparing domestic wealth to state wealth. Labor has the funds to run all these social programs and complete a restructure of the fire service AND Justice Department along with delivering extra policing resources and firefighting resources, etc. Etc. The state is in a surplus for the third year in a row.
+129. Holy shit, this doesn't even make sense. I'm stunned you even know how to keep a device powered. Let alone use it to communicate the drivel that is swimming around in your brain.
+130. That's great and all but what happens when they're released from prison? Do you really believe that locking them up means they won't re-offend when they're out? Does locking these people up mean others won't also do the same thing? In your opinion, what works? What does 'working' look like? And what makes you think it will work?
+131. Your inability to admit fault, or even just acknowledge your ignorange, is not at all endearing. You acting stupid wasn't cool in high school, and it's not cool now, a year later.
+132. How when Albo is refusing to increase the federal share above what has been in place?

@@ -1,0 +1,152 @@
+Your job is to analyse a series of Reddit comments from discussions related to the 2024 Queensland State Election. The major parties that sought election were the incumbent Australian Labor Party (ALP) and the Liberal National Party (LNP) opposition. The Queensland Greens (Greens), One Nation and Katter's Australian Party were minor parties in the election. 
+
+The key five issues that the major parties campaigned on during the 2024 Queensland State Election were Youth Crime (YC), Cost of Living Crisis (COL), Health (H), Energy and Infrastructure (EI), and Abortion Laws (AL). We include some context of the major parties positions on these issues. 
+Youth Crime (YC):
+- LNP: Advocated for stricter penalties for young offenders, including the 'Adult Crime, Adult Time' policy, proposing that serious offenses committed by youths be met with adult sentencing. 
+- Labor: Downplayed claimed youth crimewave. Focused on rehabilitation and prevention programs, aiming to address the root causes of youth crime through community engagement and support services.
+Cost of Living Crisis (COL):
+- LNP: Proposed measures such as abolishing stamp duty on new builds for first home buyers and re-establishing the productivity commission to review building industry regulations, aiming to alleviate housing costs. 
+- Labor: Introduced initiatives like 50-cent public transport fares, a $1,000 energy rebate, and free lunches for state primary school students to ease cost-of-living pressures.
+Health (H):
+- LNP: Committed $590 million to an 'Easier Access to Health Services Plan,' aiming to reduce ambulance ramping and hire additional healthcare workers. 
+- Labor: Focused on maintaining and expanding healthcare services, addressing hospital capacity issues, and investing in new health infrastructure.
+Energy and Infrastructure (EI):
+- LNP: Criticized Labor's Pioneer-Burdekin Pumped Hydro Project as financially unviable and canceled it upon taking office, opting to explore smaller-scale hydro projects instead. 
+- Labor: Proposed large-scale renewable energy projects, including the Pioneer-Burdekin Pumped Hydro Project, to transition towards 80% renewable energy by 2035.
+Abortion Laws (AL):
+- LNP: Stated there would be 'no changes' to abortion laws under their government, maintaining the status quo established in 2018. 
+- Labor Party: Supported the existing abortion laws and opposed any attempts to repeal or amend them. Asserts that LNP intend to restrict access to abortion services based on the views of some of their members.
+
+Analyze the comments and code them according to two dimensions:
+1. The ISSUE the commenter is primarily discussing, if it is one of the five listed above. Use the codes YC, COL, H, EI, AL. If no issue applies, omit the code entirely.
+2. The PARTY the commenter appears to support. Use the party codes ALP, LNP, Greens, ON, KAP. Infer party support where possible, e.g. a commenter fearing the outcome of an LNP victory likely supports ALP, and vice versa. Ensure there is either direct or clearly inferable support for a party before assigning a party code. Assign a PARTY code only if the comment expresses explicit support for, or opposition to, a specific party or its policies. This support or opposition must be clearly discernible; mere mention of a policy is insufficient. Look for indicators such as positive or negative sentiment towards a party's actions or policies or explicit endorsements or condemnations. Comments may express opposition through sarcasm or irony. In cases where party support is not clear, omit the party code entirely.
+
+You will output JSON as a list of objects where each object has an "id" (integer) property of the comment id, an "issue" property set to the issue code string, and a "party" property set to the party code string. In cases where you cannot determine an ISSUE or a PARTY, do not set a null value, omit the appropriate JSON properties entirely,  e.g. If the first comment did not have a matching issue and you could not determine party support, then the object would simply be {id: 1}.
+
+Comments follow:
+
+1. lol no they won't. They will slowly increase the price to trick people into thinking it's not much.
+2. That’s optimistic of you given they plan on cutting the mining royalties which fund the 50c fares
+3. People cared at the time but it’s the period afterwards people care about. A lot of people’s perspectives are “too right, that’s their job. No matter what it would’ve sucked”, instead of thinking “wow you did a good job”. People have a short term memory with politics, often only care about the past 12 months if that, and they get stuck with the weakest talking points in their head - youth crime, Olympics, “independence for public workers” - while they promised to not go back on labor’s good policies (which I doubt).
+4. Unfortunately thats true. We need laws to prevent advertisement lies, and misleading information. We have more protection as consumers against false advertising than we do as a nation against false political information with huge financial consequences.
+5. Nice low energy prices you have there QLD, it would be a shame if someone were to privatise your energy infrastructure.
+6. It's not that there are more morons here than in any other state but that we have more misinformation and disinformation here because of the overwhelming dominance of the Murdoch media and other right wing propaganda. People here sound like morons and make moronic decisions because they are getting so much bad information they literally don't know any better.
+7. There's been a huge influx of morons since our last state election
+8. Sounds like my old hometown in FNQ. People used to be pretty progressive and left leaning, however in the past few years they seem to have gone too far left and come out on the far right.
+9. It wasn't sailing along perfectly at all. Miles was installed too late. It's a shame he wasn't given a proper go.
+10. If this is attempted sarcasm, it’s in very poor taste.
+11. They voted for Robbie Katter, so they clearly did want the other hack :S
+12. Are your parents and friends as equally disappointed in your as the rest of us?
+13. So much of the problem here was peoples political and economic illiteracy and not understanding the difference between state and federal policy and issues eg. Cost of living. Sure, we’re under a labour federal government but most of the complaints made about the state government have been federal issues and many of those are legacy issues from the previous federal government/covid/global economic issues. And even with that, the state implemented statewide measures to combat federal issues. Fortunately they can’t take away our $1000 electricity credit or discounted car rego, but we’ll see about 50c fairs and there’s a definite no go on school lunches for hungry kids. People are stoopid.
+14. Until your democracy becomes like the US where Republicans realistically shouldn’t ever win an election again until they purge the MAGA rot from their party’s.
+15. The problem is that most of us don’t actually read policy and just wanted something different. They don’t realise that when you get pushed in a hole, digging down won’t solve anything
+16. yep, and on the topic of COVID, the state recorded more cases of COVID once we opened the boarder to to other states within 14 days, then it had in the 2 years prior! people simply dont understand the government made tough choices to protect us and it actually worked!
+17. Yep same. I can't handle how volatile and reactionary qld is. Labor absolutely pulled us into the 21st century with its progressive reforms and now they're all at risk of being repealed.
+18. Ultimately they are just punishing the government that was in power… they’d vote in a stick and still think it was a good idea. It’s exactly this that got as the Newman government, apparently every now and then QLd just needs a reminder of what worse looks like.
+19. cause they don't know how to use google. and think AI images are real!
+20. So I left Queensland 10 years ago and only ever visit briefly but is crime *really* that bad?
+21. You forget Sonny, they got their’s, now to them it’s all about ensuring as few as possible follow them and share in the limited amounts of fiscal rewards they are enjoying but worry about maybe getting a little bit of a reduction in.
+22. >Boomers who don't care about the younger generations The LNP won a majority. Your post shows very little understanding of the population demographics in this state - boomers are a small minority. The voting ineptitude is much, much wider than the boomers. Ignoring the problem and blathering on about an easy target will just perpetuate the shitshow that we now are stuck with.
+23. Yep, I said this exact comment this morning. All because “labour has been in the position too long.”
+24. They really don't give a flying fuck about us do they?
+25. It's not about Boomers, it's about regional australians who don't feel like they're being heard and having their needs met (we're very much a fossil fuel state), hence the katter party & pauline hanson continually winning seats. We do also have a lot of higher earning people who want their high end needs met. I'm also really sick of this boomer rhetoric, it's a lazy cop out. There are plenty of right leaning younger people.
+26. You had me at: >because their partner says to vote for them
+27. Mate, I am just a boomer and I can't stand the slimy bastard. He brings me back and reminds me of the Campell Newman era.
+28. Can't wait for all youth crime reporting to suddenly stop too.
+29. I mean yeah. Let's stop pretending that right wing politics is anything but stupidity and cruelty.
+30. A BUS THAT’S AT LEAST 20 MINUTES LATE ON A GOOD DAY, AT THAT
+31. It has been, but that doesn't mean that it can't get much, -much- worse.
+32. This is the thing that upsets me more than the actual outcome - what it says about the society that voted for it.
+33. >Why would anyone want to go backwards? Have you ever been to towns like Roma? Fully stuck in the 1950s and don't want any change.
+34. Because it was better for them before. To me this isn't the worst outcome, because if Crisafulli goes to full Newman the electorate will turn on Federal LNP at the next election which reduces the probability of a DUTTON government.
+35. I'm all for a more progressive Labor party if they can get voted in, but Greens voters will much more likely preference Labor over LibNat. So going progressive might not have been the best strategy.
+36. Gonna be even more fucked if what you said is true.
+37. Yeah , fucked that this slimeball is now in charge . Good job
+38. Uh the people who still have to suffer through the shit?
+39. Remember this when you can't get into a GP or hospital.
+40. Perhaps the thousands of public servants who will probably get the sack?
+41. See you all at Parliament House in about 2 weeks then
+42. I’ve never been part of a protest. But the second they put up a bill to criminalise abortion I’m there.
+43. > They riot because the party in power fucked up. Meanwhile Macron has basically declared their election null and refuses to honour it, yet silence.
+44. If this is what it takes? Yes. Because like fuck am I going to allow your backwater state to dictate abortion policy to the rest of the nation.
+45. I’m from Townsville, the absolute shame of it. Fucking gutted. First we elect a fucked up Mayor, then the state election sees the whole fucking city flip. I did not vote for either, let me tell ya. Fucking idiots.
+46. It’s a plague of anti vax cunts down there. They’re stupid enough to be convinced that they had it tough during Covid and it was Labor’s fault
+47. That has absolutely nothing to do with what i said? But im glad you can google something. Good job buddy
+48. Until they say "Now we've ditched the royalties taxes, good fiscal governance requires us to ditch what it paid for..." Election promises are not legally binding.
+49. To be fair nats never got in again and ceased being a political power in qld, but yeah the lnp are the same thing now.
+50. But everyone here claims to speak for their families, friend groups and broader communities. You'd be forgiven for thinking the ALP was going to win all seats based on the echo chamber in this subreddit.
+51. They are also committed to scrapping the coal royalties, the thing that is paying for it
+52. Okay. Thanks for the reply. What do you think will happen now?
+53. We’re the same dumbfucks that keep voting in Tom Tate, seems like we all have our heads up our asses politically
+54. I suspect tou will also find its the high levels of new migrant population from both interstate and overseas on the GC contributing to the swings
+55. Best 500 I ever spent mate you won't regret it.
+56. Yes but what does the LNP do for north QLD?
+57. Point of order: you're here spruiking the opposite position, which is literally the definition of "Not an echo chamber". Just because there's more of one side doesn't make it an echo chamber.
+58. I’m glad it wasn’t just me that noticed it was happening. I have been in this sub for nearly 7 years and had never seen anything like it before. I respect all sides of politics but it was just too Labor focused and the disregard and abuse other redditors here received for an opinion is not cool. It felt very “American” and not something Aussies should strive to be or how we should act during an election cycle.
+59. The irony is the Gabba needs to be torn down either way. I'd love to see us make use of Victoria Park. Maybe in an ideal work, a big round stadium at Vic Park, and a +80k stadium at the Gabba site.
+60. Ignoring the actual direct benifits, and 'sports ball'. 1) it's an opportunity to build legacy infrastructure, imagine Melbourne without the MCG, this is probably the premier venue in the country for all sports, concerts etc. But also things like Bridges and other infrastructure projects get greenlit for a major global event like the Olympics. 2) it's actually about putting Brisbane on the map, Brisbane would enter into a pretty small list of Cities who have hosted an Olympic games, exposing Brisbane & Queensland to billions of people in a way that can't be bought. Granted, if we were Sydney or Melbourne, I'd be all for not hosting the Olympics, since the exposure likely isn't as valuable, and they've hosted the games before. But for Brisbane it's a once in 1,000 year opportunity.
+61. Yas queen you tell the rest of Queensland that you are smarter and better than them! That always is the best way to win 👍
+62. The smoothbrain insult was removed from leftist argument firmware a few updates ago. Time for a new one.
+63. >try their best to be supportive of LGBTQIA+ rights. You're joking, right? Russia is seen as one of, if not *the* least queer-friendly countries in all of Europe. Last year they banned all LGBTQ activism movements.
+64. Sure, but it achieves the intended result of cheap fares AND doubles the income from it. That seems like an even better winning formulae than the marketing - 50 cent pitch.
+65. My point around unions is the top line issue for me. The flow on from that are as you described with diminishing income comes the pressure to reign in spending. With a more targeted spending approach I'm hopeful that we can still take care of our weakest members of society whilst also keeping in check our economic management.
+66. I get that non LNP voters would be feeling sad today. Thanks for the advice. I still think it's worth making a comment to give people the opportunity to experience a different point of view and to ensure that the majority of no longer silent in these types of online spaces. (I normally don't comment that much for a fear is being shouted down. Normally I do default to a "what's the point" type approach.) But at the end of the day, If people can't retain personal control or social decency, then that's on them and shouldn't stop a reasoned discussion. After all that's how we got so woke in the first place as we left commentators to keep commentating only in their own views. Here's to getting more centered/even balanced.
+67. I would suggest that every time the leadership of the lnp were asked about abortion laws, they said they had no plan to make changes to the law. Every. Single. Time. That whole thing was simply the Katter party trying to engineer themselves as the minority government partner. No more no less. I have lost immense respect for them as a result. I hope Robbie’s constituents don’t get a single project up as a result.
+68. Aye, and this response to you will only attract more downvotes, which shows a major problem with reddit and how it cultivates an echochamber. Opposing thoughts are shunned, no matter if it's actually mainstream in reality.
+69. Do you ever think that maybe nobody loves you because because you say stupid shit like leftard? Of course you don’t - think that is.
+70. Haha will do, there's certainly a lot of saltiness in the air on reddit tonight! I'm sure another circlejerk topic will start tomorrow, however.
+71. They'll get it the LNP way. Step 1. Sell off the last remaining public assets to private companies with zero oversight, no buy-back ability, and tremendously open ended wording on pricing Step 2. Change the nursing ratio to 1 Nurse per 20 patients. Fire the now useless nurses, decimate the Doctor pool, completely cut out administration support staff, earn big bucks Step 3. Any new gov infrastructure being built, operate it after opening for 1 year, sell it to a private company to then lease back to the government at significantly higher cost to the taxpayer for perpetuity Step 4. Remove all oversight on the new casino, cash in on taxes from pokies. Step 5. Remove all funding for services that you are unable to sell because no one can see profit in them Step 6. Overcrowd the prisons, don't actually build new ones. Step 7. Profit
+72. They'll almost entirely get it from gutting things like Education and Healthcare, it's the same thing they've always done and hinted at all along the way.
+73. If we aren't getting it from increased revenues from multinational corps, really only 3 ways to get it, borrow the money, cut services or sell assets.
+74. They state they want to go back to optional preferences, which I think most people who vote progressive will still preference, it would only be a silly person who doesn't preference when given the opportunity. Bad policy all the same, but not so bad as fptp
+75. Saying they did not contribute to inflation is objectively wrong - I’m saying this from a non-partisan perspective. It is basic economics that the cost of living relief, provided at both a state and federal level (not just in QLD), is resulting in inflation being stickier. Sure, energy subsidies and the like reduce headline inflation - but this is just a mirage, trimmed mean inflation is what is actually used when making monetary policy decisions. The RBA have come out and said one of the primary determinants of the cash rate not being cut is due to public demand - I.e. loose fiscal spending at both a state and federal level, primarily in the form of cost of living relief. To say the cost of living measure have not fanned the inflation flames is honestly just completely wrong.
+76. It’s almost like there were other issues with the ALP government over the last 9+ years
+77. But we have a sub-population of disease control and immunology experts so we’re smarterer than ever.
+78. This is not a new thing, always been the same all over the world.
+79. CO2, PFAS, and microplastics - not to mention hyperconsumerism and "black mirror" syndrome.
+80. I live here and you can buy stupid off the shelf at supermarkets … in packets of 10
+81. Likely was because of the covid demographic shift from southerner..
+82. Just setting up an argument where the Government has no accountability for anything. Then pulling out the opposition are no better argument. Cost of Living has been rising rapidly as a result of Government overspending. The constant bribes to win favour in the face of hot inflation. The same standard arguments from the comfortable yuppies.
+83. Would have done a lot more to lower youth crime than lnps totally not north Korean family punishment camps.
+84. Yep, Labor losing was always a good result. You’re as delusional as Miles as not conceding last night. Can’t accept reality and a poor loser. Sums up all Labor backers right now.
+85. The same ones who believed the retirement tax, death tax, stealing children's futures, stealing your Ute etc from 2019 federal election.
+86. Good old fashioned Labor fear campaign. People run around claiming that LNP voters are not educated, then they go and believe these fear campaigns hook line and sinker.
+87. Also add a cut in services to push profits to their shareholders.
+88. Sorry mate, but this is a SafeRoads.inc toll route, so your LicenceCorp permit won't actually register with the scanner and you can't be driving here. That's why we at SafeRoads offer far more comprehensuve road coverage than our nearest compettitors for far more affordable rates What I can offer you is our casual subscription rates at only $14.95 per month or a digital SafeRoads licence, valid as proof of driving competancy on all public and SafeRoads policed roads. Alternatively I can offer you our disncounted yearly rate of $179.35 (tcs and cs apply, SafeRoads reserves the right to cancel all subscriptions at any time without notice or refund, all subscriptions are auto-renewing and lock in for 10 years.) If not then I'm sorry but I'm going to have to detain you for unlicenced driving, impound your car as property of SafeRoads, and issue you a fine of $14.95 to get it back, along with your first month free for an auto-renewing monthly licence subscription! (ts and cs apply)
+89. The other problem is that you can regulate in a very limited manner after the fact. A government that comes in after a public service is privatised can only legally do so much. It is also a well known fact that, when selling off assets, the incumbent government is focussed only on the short term (aka "cash grab"). This makes them less focussed on putting limiting terms like regulation on prospective buyers and dissuading them from buying what the government is trying to sell.
+90. Also with the Telstra example, because it wasn't profitable they never bothered upgrading the infrastructure. They were happy to keep us all on ADSL & copper wires from 1920. It took the government coming in and building the NBN for Australia's telecommunications network to finally get upgraded to 21st century standards.
+91. Organisational knowledge and once it is gone it's gone. Someone was complaining on the pills about the fact labor are blaming Newman for things that happened 10 years ago. I had to explain... well maybe not had to, but i explained. The biggest issue was if they sacked someone with 30 years of knowledge and replace them with someone with 0 because they were cheaper, it takes them 30 years to have 30 years of knowledge, but that's still not the same historical knowledge that is the why.
+92. The black Saturday fires in Victoria were caused by the private electricity company not maintaining the poles and lines properly, yes they were fined, no that didn't bring the people who died. In Qld if you have branches over hanging your electricity lines of you call ergon they are or that day to trim them, as well as running regular line checks so that doesn't happen.
+93. Yes while suburban arterial roads are carparks most of the day because they weren't upgraded before the mega subdivisions were put in. The money went for the tunnels no one can afford to use.
+94. Mind u reddit isnt the best place for me to learn 😂but ive got some great examples of why its a bad thing!
+95. You mean "Wow after we roll back mining royalties we can't afford anything for the plebs"
+96. Is it leaving a bad relationship for a worse one The buses are going to be sold to their mates for cheap, the fare would 10x at some point because private companies have to make a profit. The CEO is going to fire a bunch of drivers but get huge bonuses
+97. How about we let that happen before we get up in arms about hypotheticals? Wowee that's a lot of downvotes for merely pointing out that there haven't been any signs that LNP wouldn't honour their commitment to continue it, as yet. r/brisbane bit hysterical tonight.
+98. Yup. Calling it now the first thing he does is axe 50c fares
+99. Fares only covered about 10% of running costs. They were token at best. Reintroducing them won’t make much difference to the bottom line.
+100. Balancing the books is important, but you leave that to the grown-ups, kiddo.
+101. Two of those things we never got to say hello to.
+102. Don’t complain about fuel. Bligh is the one that took the fuel subsidy.
+103. Or worse, remove the resource royalty tax that’s paying for so many of the cost of living measures we have all been enjoying since its introduction. And to think, the LNP screamed and ranted and raved about how every single miner would pack up and leave the state because of the tax, yet strangely, they kept on mining, they kept on making millions on massive profits and we the people finally started to see some rewards for miners stripping our country of it’s one off load of resources.
+104. Except it hasn't, you'd have to ignore a pretty long history of moronism within the state to make such a claim.
+105. its not had a look at there profile and they are trump supporter to
+106. We can check back in a year ok? !RemindMe 365
+107. The MAGA rot seems to be crossing oceans. Many LNP over here I could swear are closest MAGA lapdogs. They certainly seem to elude to it when they open their mouth.
+108. >The problem is that most of us don’t actually read
+109. Couldn't even get the "just try something different" logic right either, by that reasoning they shoulda voted Greens
+110. I said at the time if we did it right it would look like we overreacted. I stand by that. I absolutely think we did it right.
+111. No, just like it has been for the past two decades, it's trending down. There's been a couple of young gangs committing a lot of crime in some regional areas though. Even though this was a small number of hard core offenders some people believed that it was a crime wave
+112. You realise Labor has been in power for most of the last 3 decades? How's that going for you?
+113. Most LGAs the median age is over 40, while not quite boomerish, certainly makes it harder for progressives to win. https://www.qgso.qld.gov.au/issues/3111/population-age-sex-regions-qld-2023.pdf
+114. I know there are a few good boomers kicking about. My boomer mum will be picking fights with my aunt and any other Tories for the next 4 years 💯💯💯💯
+115. Don’t forget delusional selfishness! Point out to a right wing voter that hey that party is going to take away rights, or cut public funding or whatever and their response is typically “yeah but it’s going to fix my issue” (even if it definitely won’t).
+116. Yeah, I live in Mundingburra, voted ALP, but I knew it was a forgone conclusion. You can't leave those three candidates in and expect a win, no matter the party. They were clowns in the strongest sense.
+117. Well by your assertion Miles should have sided with the LNP.
+118. He's my local member and a top fella, has honestly done a great job as premier and local member.
+119. I. Rob Borbridge was the last National Premier and Springborg last National leader. 2. I didn’t mean it exactly as The National party back in power but if their LNP talking points were to be action then they would be in the neighbourhood of Joh -Newman, to what level that is what we will see.
+120. Then I hope you aren’t just warming a desk in the public service.
+121. The truth is I don’t know but the people of NQ under their democratic right have decided that it is more than the other parties.
+122. Feel free to take a look around while you’re here.
+123. This is my a new account but I’ve been here for almost 13 years now and agree. It used to be very very moderate here to the point you’d barely see political views posted much at all.
+124. Whatever they try to, it’s not going to be ready in time.
+125. Good answer, but this is an example of people speaking from their wheelhouse with inability to sympathize with common people who clearly enjoy and benefit from sports.

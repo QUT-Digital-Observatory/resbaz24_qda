@@ -1,0 +1,146 @@
+Your job is to analyse a series of Reddit comments from discussions related to the 2024 Queensland State Election. The major parties that sought election were the incumbent Australian Labor Party (ALP) and the Liberal National Party (LNP) opposition. The Queensland Greens (Greens), One Nation and Katter's Australian Party were minor parties in the election. 
+
+The key five issues that the major parties campaigned on during the 2024 Queensland State Election were Youth Crime (YC), Cost of Living Crisis (COL), Health (H), Energy and Infrastructure (EI), and Abortion Laws (AL). We include some context of the major parties positions on these issues. 
+Youth Crime (YC):
+- LNP: Advocated for stricter penalties for young offenders, including the 'Adult Crime, Adult Time' policy, proposing that serious offenses committed by youths be met with adult sentencing. 
+- Labor: Downplayed claimed youth crimewave. Focused on rehabilitation and prevention programs, aiming to address the root causes of youth crime through community engagement and support services.
+Cost of Living Crisis (COL):
+- LNP: Proposed measures such as abolishing stamp duty on new builds for first home buyers and re-establishing the productivity commission to review building industry regulations, aiming to alleviate housing costs. 
+- Labor: Introduced initiatives like 50-cent public transport fares, a $1,000 energy rebate, and free lunches for state primary school students to ease cost-of-living pressures.
+Health (H):
+- LNP: Committed $590 million to an 'Easier Access to Health Services Plan,' aiming to reduce ambulance ramping and hire additional healthcare workers. 
+- Labor: Focused on maintaining and expanding healthcare services, addressing hospital capacity issues, and investing in new health infrastructure.
+Energy and Infrastructure (EI):
+- LNP: Criticized Labor's Pioneer-Burdekin Pumped Hydro Project as financially unviable and canceled it upon taking office, opting to explore smaller-scale hydro projects instead. 
+- Labor: Proposed large-scale renewable energy projects, including the Pioneer-Burdekin Pumped Hydro Project, to transition towards 80% renewable energy by 2035.
+Abortion Laws (AL):
+- LNP: Stated there would be 'no changes' to abortion laws under their government, maintaining the status quo established in 2018. 
+- Labor Party: Supported the existing abortion laws and opposed any attempts to repeal or amend them. Asserts that LNP intend to restrict access to abortion services based on the views of some of their members.
+
+Analyze the comments and code them according to two dimensions:
+1. The ISSUE the commenter is primarily discussing, if it is one of the five listed above. Use the codes YC, COL, H, EI, AL. If no issue applies, omit the code entirely.
+2. The PARTY the commenter appears to support. Use the party codes ALP, LNP, Greens, ON, KAP. Infer party support where possible, e.g. a commenter fearing the outcome of an LNP victory likely supports ALP, and vice versa. Ensure there is either direct or clearly inferable support for a party before assigning a party code. Assign a PARTY code only if the comment expresses explicit support for, or opposition to, a specific party or its policies. This support or opposition must be clearly discernible; mere mention of a policy is insufficient. Look for indicators such as positive or negative sentiment towards a party's actions or policies or explicit endorsements or condemnations. Comments may express opposition through sarcasm or irony. In cases where party support is not clear, omit the party code entirely.
+
+You will output JSON as a list of objects where each object has an "id" (integer) property of the comment id, an "issue" property set to the issue code string, and a "party" property set to the party code string. In cases where you cannot determine an ISSUE or a PARTY, do not set a null value, omit the appropriate JSON properties entirely,  e.g. If the first comment did not have a matching issue and you could not determine party support, then the object would simply be {id: 1}.
+
+Comments follow:
+
+1. Don't bother with the police at Palm Beach. I was assaulted by "Tamara", well known local homeless lady drinking a goon bag and high on meth at 2.30pm one midweek afternoon in that park. Got punched in the face and police made it seem like it was nothing when I reported it in person. I left without making a statement even though I had footage on my phone, cameras in the busstop where I was chased then assaulted and had rung 000 immediately after it happened! A few weeks later around 10.30 am I came across Tamara sober, begging for money outside Woollies metro. I approached her after I had shopped, I bought her a sausage roll with sauce and offered to roll her a cigarette. We went to the carpark to smoke and I basically got her life story. She obviously didn't remember punching me, but i asked about her circumstances and listened to her sad and tragic life story. It actually gave me closure for what happened to me. OP if you do report it and are made to feel the same way as me, a time- waster in police eyes, you should maybe mention the police are covering this up and encouraging people not to report. I was actually more emotionally hurt by the police response than I was by the actual assault!
+2. Unfortunately it’s going to get a lot worse before it gets better.
+3. Burleigh is a mess these days… most born and bred locals are getting out of dodge for good
+4. Sorry that happened to you and your family. No excuse for this bullshit, this is the result of meth and zero repercussions where the police do nothing
+5. Charge them with assault for the spitting. Aside from that, all you can do is report. I ONLY say the following because I've worked with homeless drug addicts in a professional capacity and it was an eye opening experience. Completely changed the way I see them. Cut them some slack for being homeless, turn a blind eye to the drugs, you don't know their circumstances, but don't ignore abuse or assault. Always report that or any vandalism. And any theft that isn't food. I might cop shit for saying that, but I've seen the other side and its not nice at all.
+6. If he spat on you, that’s common assault. The police should have arrested him.
+7. Long term the best solution would be the re-allocation of funding from the police into social outreach & rehabilitation programs. As the cost of living & housing go up more people will find themselves doing it tough, sleeping in the cars or the rough. This can lead to impacts on mental health which in turn can lead to substance abuse as a coping mechanism. I’m sorry you & yours were spat on, but the solution isn’t in moving these people out, it’s by helping them where they are.
+8. Where do you want them to go? I agree, it’s horrible that you and your family had to experience this. But this problem is the result of mentally ill people being completely blocked out of the rental market. I imagine doing drugs makes it easier to cope with homelessness and the feeling of being either scorned by or forgotten by their community. As a country we have let down our most vulnerable people and this is the repercussions our society faces as a result.
+9. Burleigh Heads has a problem right now as it gentrifies.
+10. The situation in Burleigh highlights a significant and troubling issue regarding homelessness and public safety.
+11. You could hassle the council and state government to take housing and mental health seriously. Or you can complain to the same to make their individual circumstances worse.
+12. A friend of mine was spat on near the Woolies there last year while getting a coffee. Walking past, completely unprovoked. Guy with buzz cut who does laps, well known to police but nothing seems to change. I avoid going to that area on my own now.
+13. What’s the police going to do.. take him in, and, give him a bed for the night :-p
+14. The saddest thing about this post, is that most people know the ‘local homeless and or drug addicts’…. These are the same ones that were in Miami when the methadone clinic was there, then they moved it to palm beach on 5th ave. This is nothing new. Despicable nonetheless, as most of the ‘usuals’ were never abusing people, and heavily relied on others to give them money.
+15. I hope you defended your wife and son from physical danger by immobilising the offender until the QPS came. Spitting is a serious offence, irrespective of his predicament with mental health or substance abuse, we should all be entitled to public safety and offenders like him prosecuted.
+16. You would be mortified if you went to Southport. The Gold Coast is literally Logan with a beach.
+17. My hairdresser is just near the woolies. I had an appointment on Thursday and there was a drugged affected fellow carrying on. The shop tenants & public deserve at minimum roving security like shopping centres. We live in Burleigh & 5 yrs ago would go to restaurants etc in James Street not anymore.
+18. Burleigh is fucked at the moment with the light rail extension how long is that shit going on for
+19. Man up and deal with him, this is fundamentally whats wrong with society, males need to get their balls back and protect your family, don’t wait for police to do it.
+20. Wait till your arm heals. Get a base ball bat from kmart. Wait till dark, go do gods work.
+21. What the fuck why didn't you smack him in the fucken mouth first he disrespects your woman then calls your kid ugly.
+22. All of this stuff has gotten much much worse with the current gvt.You cannot for a second say it was as bad as this before this current gvt came in.Absolute worst in history.
+23. That’s crazy a guy abused your women and you didn’t do anything
+24. This has always been happening to act like it’s new or anything is just showing your true colours as a Murdoch media sheep. Theres very few social programs going on to help the homeless and this guy was clearly having a bit of a hard day, so when you go back to your home and type this up just spare a thought for him who doesn’t have anywhere to go. Maybe next time common sense will prevail and you guys can talk it out, maybe even end up giving him some money for lunch.
+25. Stop going back to the same place if you know it’s bad? Not rocket science is it.
+26. Take matters into your own hands and put them up in your spare room. You're benefiting from the lower socioeconomic being priced out of the market so give a little back.
+27. Spitting is attempted murder and gets the immediate response it deserves. animals spit... not humans. .
+28. People are doing this shit in their homes every day. Drug use. Domestic Violence. Child abuse. Mental health issues. The only difference between us and them is that we have a roof over our heads and they dont and it’s easier for us to hide what we do between 4 walls. How many of you complaining live pious perfect lives? Yep didn’t think so. Stop acting entitled and be part of the solution
+29. Report it to Hermann Vorster as if the LNP win the election he’ll be our representative.
+30. How many avocado on toasts does it take to buy a $2.3M property you ask? I've done the maths for you. 153,000. People just have no discipline.
+31. Like it being $500 a week just to rent a caravan at Nobby Beach (some were paying more than that when I had to live there for a while when I first moved back from Sydney). Yeah, no excuse. Sure 🙄 Like what homeless person can afford $500? Building housing does not equal building affordable housing I wonder what OP of the post has done to get more homeless into housing
+32. Agree. Even if you have to ride the police to get them to charge the guy it might be worth it.
+33. Yes and spoke to Wollies who are handing over video footage
+34. Nah was wearing black outfit with sunnies on in his late 50s. You won’t miss him cause he will be yelling at anyone for a fight. I think I know who you’re talking about the red haired fella. He tends to be pretty mellow and have never seen him abusing people.
+35. I have the camera footage now and the Woolies lady said he is a regular and a dangerous man they will know who he is.
+36. Just wait 20 years when GC becomes the new California. Dystopian future with homeless next to rich people.
+37. Well said, the amount of issues we know have in Australia cause of those diverts has just sky rocketed
+38. What do you mean by unknowingly? There are plenty that have seen this coming, but you know what they are called
+39. That’s terrible experience. Yeh it dosnt suprise me that you felt that way with the police I have been through that with them before for a different reason and it’s disappointing that you end up feeling worse off.
+40. What do you mean these days as long as i can remember burleigh has always been a circus goin back to when centrelink was near the caravan park its always had societies despots its only since they tried to draw in the manbun crowd with dirty ass craft beer a piss poor attempt to polish a turd burleigh is a rats nest
+41. Yeah nah mate, doing crack in front of kids is a get fucked from me. I'm not throwing shit, but you shouldn't be getting high in front of little ones, or even really in very public spaces.
+42. No, the solution is giving these abusive cunts a fucking rough up. You have no fucking right to spit on and abuse random innocent people because of your own life fuck ups and mistakes.
+43. Wish I could have broken arm was holding me back, went to get the security guard in Woolies but they clock on at 9 and they were all females workers and are tiered of these people doing shit like this also hence they brought in security a few months back
+44. Lol getting downvoted for criticising crapitalism on a Mould Coast forum is like shooting fish in a barrel 🙄
+45. They need help they need a safe spot to be that’s where I want them to go. I very much understand what’s going on with them and feel for them. I agree with you totally how this has happened. I just wanna feel safe with my family that’s all
+46. You did the right thing, imagine if they had a needle or worse on them. They don’t care, obviously. People saying ‘you should have done something’ nah, like you said you had your child there, and the most important thing was for you to get them away from the situation. Broken arm or not.
+47. I personally didn’t ask for that shit show to come down here that’s for sure! I catch public transport and rely on it heavily but even I’m against it specially in palm beach and further down south. Just stupid
+48. Broken arm atm also not possible with wife and child too close to the situation as I didn’t want them coping a bit from him. Trust me I wanted to smack him real bad and took a lot of my power not to.
+49. What I was thinking ong tho why didn’t he do it on the spot? When he was calling his wife a dirty whore etc. I woulda never take that disrespect like that I would rather die
+50. It’s gotten worse since the bikies started ramping up the fentanyl and meth dealing and preying on damaged people.
+51. 100% is a lot worse specially this year. I have been living in Burleigh 15+ years. Now considering moving cause when that tram comes it’s not going to be the Burleigh we know
+52. Dark hair late 50s early 60s? reasonably tall black outfit with sunglasses
+53. I have a broken arm and a 1 year old to protect if shit kicked of infront of my child it could be dangerous for him I thought first. I followed him to the Woolworths where there was cameras and sometime security. Not much I can do with one arm except support my wife and kid at the time unfortunately.
+54. What's your address I'll send some over they are spitting at the bit to be welcomed by your family
+55. Send me your address please, I will send a few over to your way. If you don’t have a spare room, you can give yours up to better help the community
+56. Haha was that a joke? Yeh sounds safe for me to invite a verbally and possibly physically abusive man into our home with a 1 year old living here too… not to mention a drug addict
+57. I don't think this point of view truly accounts for the complexities and risks of taking in a homeless person into your home. Lets say for example, they have a mental illness, drug abuse and/or history of abuse. What makes you think you have the skills and resources to adequately support this person towards long term positive change? In all likelihood the situation is going to have a significant negative impact on your family's life. Also if you have young children how could this ever be a good idea?
+58. What’s fake about this? Were you there with me and my family? Go ask Woolworths in James street if you feel the need for confirmation. Why would I write a fake post about this?
+59. If you ate avocado on toast, for three meals a day, for 140 years that's 153,000. I'll stop tomorrow.
+60. If someone spat on my daughter my first thought is not reporting anything I'm gonna wail on that person
+61. Yeah I was thinking it sounded like Ryan who is always carrying the V can. When he’s on it, I’ve seen him get very abusive, throwing chairs at people, yelling and abusing people. Most of the homeless are pretty harmless. The church in Park street look after the homeless.
+62. Maybe the crew I know are all just all grumpy with old age..
+63. I'm sure they'd happily do their drugs at home. Only they can't afford rent now because our pollies are too scared of losing their investment properties. The country voted for this bullshit dystopian future when everyone lost their minds over removing negative gearing, being the first step to unfucking this tangle. Gold Coast voters especially deserve a front row seat for this fucked up dystopian shit we are headed into.
+64. Just take your kids away from there if you know its happening. Obviously it's better if they go do it somewhere else, but maybe they don't care if they get locked up. A night in lockup is a bed and possibly breakfast. I'd be more on your side if it was public masturbation, sex or any other revealing shit, but smoking a pipe is just dirty, not traumatising.
+65. So your solution for dealing with the homeless/drug addicts is to assault them? Rather than deal with the root causes that lead to their situations in the first place?
+66. I agree - however would you be happy to an extra 5% of your income in tax each week to fix the problem accomodate them?
+67. Yeah because that fixes the issue. Incarceration is not the answer to someone who is quite clearly mentally unstable.
+68. Sorry not really directed at you but just feel as a society those that don’t want to abide by the expected standards should “cast” out. The pendulum of acceptance and accountability has swung to far to apart.
+69. It's so sad.So many people will have such beautiful fond memories of the place before it turned like this.Could have all been avoided too if it was planned properly and the gvt actually cared for it's people. What a world.😪
+70. I think it may be worth contacting Catherine Osborne a member running for the Burleigh seat. Would be good to get her response and action. I have seen far too many instances happen in Burleigh!
+71. The saying "The best time to plant a tree is 140 years ago" has never been more relevant, aye.
+72. Yeh currently have a broken arm I did take the sling off to get ready. Not going to lie it was first thing that came to my mind protect the family even a broken arm but when he started walking I just followed him to where more cameras where in Woolies.
+73. Yeh okay, terrible drug. Yeh that where the man came from out of the church.
+74. Yeah sure dude defend getting cracked up infront of 3 year olds what a stand up fucking idea.
+75. It's called self defense, sorry if that is difficult for someone with under 2 braincells like you.
+76. Taxpayers already pay enough each week - it’s the incompetence of the government that don’t allocate the tax dollars properly.
+77. Why the fuck would that be necessary? How about we just spend less on nuclear submarines and missiles?
+78. To solve homelessness in this country? Yes, I would. Gladly.
+79. Lol, if only you knew how much the government is paying out right now to put them up in motels for weeks, sometimes months at a time.
+80. None. I’m not the one suggesting people take them in.
+81. Well done on not taking action mate. Would have been hard, but suspect seeing Dad kick the shit out of a junkie would have multiplied the impact in everyone’s memory.
+82. Pretty much this, more money won't fix the issue. Don't ask for more money if you're going to squander it. [https://www.theguardian.com/environment/2021/jul/30/coalition-criticised-after-great-barrier-reef-foundation-receives-351000-in-jobkeeper-payments](https://www.theguardian.com/environment/2021/jul/30/coalition-criticised-after-great-barrier-reef-foundation-receives-351000-in-jobkeeper-payments)
+83. That works too mate - I don’t disagree with you.
+84. And how much would that be..?? They did for a month or so. But apparently there is no accommodation due to holiday makers, events etc.. I've no doubt that much of that allocated cash is being held onto for whatever else. And those unfortunate enough to be put up are in a trap. Would love to stay and discuss the issue, but I'm time poor and busy with my hustle to ensure I got safe shelter, habits and food sorted.
+85. Yeh it definitely took a lot of power to not do something with my short fuse and this was prob the first time I didn’t snap and I feel better for not to be honest was a learning experience and shit experience at once
+86. Pros, it's close to Surfers Paradise. Cons, it's close to Surfers Paradise. As long as you don't plan on getting to work on time, the traffic on Chevron can be an absolute joke especially during event times like Indy (or whatever they call it now) and Schoolies. These days if I was to guess I'd say anywhere you want to rent there will either be insanely expensive and/or probably quite dated too.
+87. I know of 2 people that live there and they always have a nightmare with traffic. Usually late to work or stupidly early (as they go early to skip the traffic). Lots of drunks fumbling about there. Very close to Surfers… which is great in early 20’s. Not so much after that unless you’re a crackhead. Other than that it’s great!
+88. Great place to live if you’re 20 and plan on partying every night
+89. Do not drive often if you live there. You are trapped
+90. Great place. But have a look today/this weekend, you can’t get in or out because of the car race.
+91. Only 2 ways on/off the island, so traffic at peak hours is terrible.
+92. Don’t live there if you have to drive. Better off elsewhere in SP.
+93. The traffic is really bad there, a 10 minutes drives usually turns 40 minutes at peak hours (around 8:00 and 16:00)
+94. Fuck you just nailed it. Either a shit hole or priced 3x what it’s worth
+95. The whole gold coast is basically road works at the moment, with all the light rail going in the whole city on the coast side is a dogs breakfast. It's a short term pain for long term gain situation, but the short term pain is horrible at the moment.
+96. The amount of underground services that need to be relocated for this job to happen is unbelievable. Installing new conduits for power and data and then getting cut overs done at times to not cause issues. Also water and sewer in the area also. Being a government agency, also must follow all health and safety regulations etc and no shortcuts. Comparing in to a green fields site with all new infrastructure is ridiculous and shows how little you know about construction and the dealing with existing services. I’d also requires consultation with Queensland rail and the hospital to ensure no clashes and issues with trains or hospital access.
+97. Man, every time I drive through here I lose the plot. Absolutely atrocious nobody has been working here for months and the road wreaks havoc on cars
+98. It's a constantly busy intersection that they can't close, and have to build it while letting people drive across from all 4 directions. Yeah it's slow.
+99. My favourite part was when they closed the pedestrian crossing on Laver drive and had 4 traffic controllers manning the crossing. 2 to walk out with stop signs and 2 observing / controlling pedestrians on the foot path.
+100. “The roads are so bad! This is ridiculous!” *Roads get fixed causing road works* “OMG WHY IS THERE ROAD WORKS!”
+101. Looks like they're putting all the pieces into place this weekend - the intersection is closed this weekend.
+102. Working at one of the buildings there is a pain but at least with the station right next to us and the shops not too far the road works ain't that bad
+103. They've updated their page, but it used to say June 2025
+104. Might be time to leave for some of you. I get it, the dream is rarely the reality. How improvement upgrades done under LNP.
+105. It is horrendous! Pedestrians can’t even cross the road there anymore
+106. Laver and Robina town centre drive are roads that are owned and maintained by City of Gold Coast Council
+107. It took about a year to redo about a 40 metre stretch of Teemangum Street in Currumbin. The road was closed, no excuse about traffic, just total incompetence and 'unforeseen delays'.
+108. Simple government incompetence, corruption, red tape And politics. And gate keeper for all that TATE
+109. True. If you take on a job though do it and get it done. Most days this job site is devoid of anyone. It doesn’t take 14+ months to do an intersection.
+110. I used to work dinner time in Eight mile plains during 2020 and the M1 was a full of roadwork. It's now 2024 and most of the same parts are STILL under construction. It can't take so fucking long!
+111. Long term gain. Love the optimism. I'm not jaded, I'm not!!
+112. This is very useful information for us idiots who don’t know about these sort of things. Appreciate it!
+113. And they can’t just shut it off like they did with Wardoo st between Cotlew st and benowa rd (I think that’s right!!!) it’s a VERY busy intersection AND some short term pain for long term gain…. That intersection has always been a nightmare pain in the ass(to make a few around there! Probably the easiest to fix?!?!) And as last poster said- all the underground works (and other things you can’t see) take FOREVER… coming from a civil plumbing family, we get the same complaints !
+114. Night works exist for a reason. It’s basically dead at night.
+115. You realise that’s the government that dictates that shit. People don’t just make up traffic management plans they submit them and have to get approval. People who don’t work in the industry don’t understand that 99% of the bullshit is due to government, and 99% of that comes from members of public having no common sense getting hurt than suing, so they bring in ridiculous rules that everyone else complains about to the workers on the ground like we have anything to do with it.
+116. That was literally building a bridge. Bit more involved than just redoing some road pavement
+117. If you watch Utopia (Aussie comedy, on Netflix) it sums up why stuff like this takes so long perfectly.
+118. Wardoo ave in Benowa was closed off before I went interstate for placement in September last year and it’s still not done… it’s one lane with pavement still dug up and a road block in place. Since when does shit ever get done fast especially with torrential weather stopping things for weeks lol
+119. Tell me about it. The signage here is terrible too.

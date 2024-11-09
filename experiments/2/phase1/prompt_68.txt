@@ -1,0 +1,167 @@
+Your job is to analyse a series of Reddit comments from discussions related to the 2024 Queensland State Election. The major parties that sought election were the incumbent Australian Labor Party (ALP) and the Liberal National Party (LNP) opposition. The Queensland Greens (Greens), One Nation and Katter's Australian Party were minor parties in the election. 
+
+The key five issues that the major parties campaigned on during the 2024 Queensland State Election were Youth Crime (YC), Cost of Living Crisis (COL), Health (H), Energy and Infrastructure (EI), and Abortion Laws (AL). We include some context of the major parties positions on these issues. 
+Youth Crime (YC):
+- LNP: Advocated for stricter penalties for young offenders, including the 'Adult Crime, Adult Time' policy, proposing that serious offenses committed by youths be met with adult sentencing. 
+- Labor: Downplayed claimed youth crimewave. Focused on rehabilitation and prevention programs, aiming to address the root causes of youth crime through community engagement and support services.
+Cost of Living Crisis (COL):
+- LNP: Proposed measures such as abolishing stamp duty on new builds for first home buyers and re-establishing the productivity commission to review building industry regulations, aiming to alleviate housing costs. 
+- Labor: Introduced initiatives like 50-cent public transport fares, a $1,000 energy rebate, and free lunches for state primary school students to ease cost-of-living pressures.
+Health (H):
+- LNP: Committed $590 million to an 'Easier Access to Health Services Plan,' aiming to reduce ambulance ramping and hire additional healthcare workers. 
+- Labor: Focused on maintaining and expanding healthcare services, addressing hospital capacity issues, and investing in new health infrastructure.
+Energy and Infrastructure (EI):
+- LNP: Criticized Labor's Pioneer-Burdekin Pumped Hydro Project as financially unviable and canceled it upon taking office, opting to explore smaller-scale hydro projects instead. 
+- Labor: Proposed large-scale renewable energy projects, including the Pioneer-Burdekin Pumped Hydro Project, to transition towards 80% renewable energy by 2035.
+Abortion Laws (AL):
+- LNP: Stated there would be 'no changes' to abortion laws under their government, maintaining the status quo established in 2018. 
+- Labor Party: Supported the existing abortion laws and opposed any attempts to repeal or amend them. Asserts that LNP intend to restrict access to abortion services based on the views of some of their members.
+
+Analyze the comments and code them according to two dimensions:
+1. The ISSUE the commenter is primarily discussing, if it is one of the five listed above. Use the codes YC, COL, H, EI, AL. If no issue applies, omit the code entirely.
+2. The PARTY the commenter appears to support. Use the party codes ALP, LNP, Greens, ON, KAP. Infer party support where possible, e.g. a commenter fearing the outcome of an LNP victory likely supports ALP, and vice versa. Ensure there is either direct or clearly inferable support for a party before assigning a party code. Assign a PARTY code only if the comment expresses explicit support for, or opposition to, a specific party or its policies. This support or opposition must be clearly discernible; mere mention of a policy is insufficient. Look for indicators such as positive or negative sentiment towards a party's actions or policies or explicit endorsements or condemnations. Comments may express opposition through sarcasm or irony. In cases where party support is not clear, omit the party code entirely.
+
+You will output JSON as a list of objects where each object has an "id" (integer) property of the comment id, an "issue" property set to the issue code string, and a "party" property set to the party code string. In cases where you cannot determine an ISSUE or a PARTY, do not set a null value, omit the appropriate JSON properties entirely,  e.g. If the first comment did not have a matching issue and you could not determine party support, then the object would simply be {id: 1}.
+
+Comments follow:
+
+1. Bruce Highway is a Federal highway. LNP at Federal level were in power for decades yet they didn’t properly fund it then, so you can’t blame QLD State Government for it entirely. The blame is on both parties. It is a very long highway, it’s not an easy fix unless you pour many billions on it.
+2. Hi, you seem to misunderstand the difference between a local road and a federal highway! I suggest expanding your knowledge on the subject
+3. Why is it that conservatives are the biggest cunts after a win? Says something about you. Your politics are entirely based on trying to make people mad.
+4. I don't think any of us really thought the ALP had a chance. Surprising to see the LNP didn't win by as much as everyone predicted though, which only raises the chances of a one-term LNP government yet again.
+5. If you're one of his mates, sure. The rest of us aren't gonna have a great time. I'm happy to be proven wrong though but judging by the LNP's track record, that's not likely.
+6. Are we getting DST before xmas, as that will help the brightness.
+7. It's not really an echo chamber though, it's just that no one bothers to post anything positive about the LNP because there's not really anything positive to post about them.
+8. Yes I will be interested to see how they insult the voters if it doesn’t go their way
+9. TBF some of it is actually on ALP implementing progressive policy (see 50c fares)
+10. You need to look at the swing mate. Over 2% is better than the swing for the LNP
+11. Queensland rejects socialism. Now introduce a law to classify them as a hate party and deregister them as a party.
+12. You would hope so I think he wrote a victory speech couldn’t change it as opposed to writing two
+13. 🎶 Conquistador of Mexico 🎶 The Zulu and the Navajo 🎶 The Belgians in the Congo 🎶 Plantation in Virginia 🎶 The Raj in British India 🎶 The deadline in South Africa
+14. Once again, conservatives showing they only vote to piss people off and nothing more.
+15. you love to see conservatives being absolutely sore losers when they lose and sore winners when they win. children, the absolute lot of you. Looking forward to next election when LNP ends up being a one-term government yet again
+16. And Miles had just said no majority government for LNP lol - he will need to take that back now
+17. Bloody oath brother, I love collecting downvotes in this labour echochamber
+18. People who don't care about politics get the politicians they deserve.
+19. Please don't. Stay awake. Take notice. Watch what a majority conservative government actually does in the next 4 years. Don't go into the next election with your eyes closed, this isn't State of Origin.
+20. They've got just the brand of crazy their electorates like. They held three last election all bordering one another - they're a North Queensland populist party, and it works. North Queenslanders feel underrepresented, rural NQ even more so. KAP gives them exactly what they want.
+21. One Nation had a seat and the MP flipped to Katter
+22. are you new to QLD or just spend all your time in Brisbane?
+23. You're surprised that low SES electorates are voting for the guy who will give them money off they're power bills, money off their rego, feed their kids at school, and several other measures to ease cost of living in favor of the guy who's hasn't promised anything at all? You're so dense that if I dropped you in magma I'm sure you'd sink.
+24. They're probably smart enough to realise that the crime wave is a lie and that the LNP doesn't have any policy to improve their lives either.
+25. Woolies is shut, did they break in? I hope they weren't teenagers.
+26. You're really proving that LNP supporters are sore winners, aren't you? It's not about improving Queensland for you, it's about shitting on the opposition.
+27. You bunch are more easily triggered than those you claim to hate.
+28. Shocking speech. Very ungracious. Just wait if you aren’t ready to concede
+29. I find it baffling how promising to spend some of our TWO BILLION DOLLAR BUDGET SURPLUS on things that would help cost of living for a lot of QLDers is considered "vote buying." Fuck me, it's not like he was promising to give $1000 to every person to buy weed.
+30. I'm seriously curious about this concept of "buying votes", don't you want politicians to use our tax money to make things...cheaper?
+31. They're super socially conservative, but are a lot closer to labor on economic issues, driven by an oldschool 'agrarian socialist' mindset (farmers should own the farms). In a minority situation, they'd probably hold up a number of LNP economic policies, but they are the biggest proponents of limiting or banning abortion, being super tough on crime, etc. so all that sort of thing would fly through.
+32. Can you take the other Covid mexicans with you while you're at it?
+33. In 4 years, probably. Look at NZ for what happens when people reactionary vote.
+34. Great night if you're mates with the LNP or not gay, trans, a woman, disabled, poor, not white or not christian.
+35. Celebrating women and lgbtqi becoming second class citizens. Will you proudly proclaim your hoy for that to your female and lgbtqi friends or only type it online? Why not let them see the kind of person you are and what you truly think of them?
+36. You have to number every box, or your vote will be informal. Essentially the way it work, the candidate you put last won't get your vote because as soon as any candidate gets >50% from first or subsequent preferences, no other preferences are counted. It's mathematically impossible for your lowest preference to actually go towards the winning candidate. If it gets down to a race been 2, one of them will have >50% and be declared the winner.
+37. Best to play it safe and number the lot, leaving any boxes blank risks an informal vote (and an LNP government). It may depend on the ECQ staff/scrutineers. I’ve heard an opinion that leaving 1 blank and numbering the rest will cause an informal vote, whereas leaving your last preference blank won’t - the preference will be assumed.
+38. https://www.ecq.qld.gov.au/how-to-vote/voting-systems#:~:text=in%20a%20state%20election%20you%20must%20number%20all%20boxes%20in%20order%20of%20your%20preference%2C%20this%20is%20full%20preferential%20voting%20(fpv). >“In a state election you must number all boxes in order of your preference, this is full preferential voting (FPV).”
+39. The lnp would get nothing from you either way. But, technically your vote would count as your voting intentions are still clear. However, if you were to leave two boxes or more blank then it would be invalid.
+40. That is technically a formal vote and will be counted according to current guidelines, however it'll just be counted the same as if you numbered every box and put LNP last.
+41. Labor ahead in that seat and you think the candidate should have been replaced with someone unknown?
+42. Given the late Thursday announcement to insource consultants (and that is a broad brush), there will be a lot of nervous direct and indirect roles wondering how they have left in their jobs. 7B was the stated target in savings, that's going to be interesting to watch play out.
+43. He has plenty of charisma. His problem is that he only had 10 months in charge and Queenslanders are morons
+44. Idk. David on the other hand has as much charisma as a lizard.
+45. How does Crisafulli have more? The guy exudes slimebag vibes.
+46. It just sucks that we seem to elect people based on charisma and not on policy. We might get a decent stadium but human rights and the rest of the economy are gonna go backwards.
+47. Do I need to smack my head on a wall before voting like this makes sense?
+48. I'd sooner gouge my own eyeballs out and eat them than vote for PHON. Shitty, regressive, backwards ass party. Why the fuck would I vote for a libertarian party who has no plan for anything other than making LGBT people's lives worse and privatising everything and completely closing the borders?
+49. Which early results are you looking at? It looks like they’re doing better than 2012 so they’re not breaking that record?
+50. The current projected is at 51-49, even if you want to increase it a bit, thats no where near record breaking
+51. Yep instead with the LNP plan they will be locked up and turned into hardened criminals further down the road resulting in making the problem much worse. That’s to say nothing of there 1930s Germany style reeducation camps idea.
+52. It's not too late to delete this comment and try again Edit: Don't look at this blokes profile comments, wtf hahaha
+53. Why don't you learn to spell the party properly first.
+54. It's 0.35% of the count at this point, at least give it to 30% before starting to call it
+55. Party Totals tab on the ABC page has what you're looking for
+56. What do you mean by this? What would an example be?
+57. Lmao no. Prepolls def will favour LNP, even more than normal. But not that much
+58. > our debt is out of control The government has delivered surpluses for the last 3 budgets, our debt is hardly out of control. [As at 30 June 2023, the state's total borrowings were $132.2 billion, and net debt was $24.3 billion](https://www.qao.qld.gov.au/reports-resources/reports-parliament/managing-queenslands-debt-investments-2023)
+59. The LNP's response in regards to the Olympics has consistently been, "we don't have one"
+60. The fact you think LNP policy is going to make your suburb safer is the level of intelligence I'd expect from someone voting for them.
+61. How is our debt out of control? >Queensland’s 2024–25 estimated net debt to revenue ratio of 31 per cent compares favourably to its peers at 88 per cent for New South Wales (2023–24 Half-yearly Review) and 163 per cent for Victoria (2024–25 Budget). That's like a single bloke on $100k thinking borrowing to buy a $30k shack will put him in out of control debt
+62. Enjoy your downvote mate No one in Reddit will support your opinion
+63. The bright and shiny future of gutting the state's infrastructure and robbing Queensland to fill corporate pockets. Oh boy, can't wait...
+64. Heck yeah! Liberals around going to.. Uh.. Benefit Queenslanders by... Giving them-wait no that's not right, Liberals don't give. They're going to cut energy rebates, increase taxes, cut public sectors, fuck over our energy sector, take away womans rights, and demonize children with trauma. Fuck yeah!
+65. Exactly what was said when Newman was elected and we all know how that turned out. They will enviably go too hard, piss everyone off after a single term and Lab will be back to clean up their mess and once things start straightening out after a few terms the cycle will repeat yet again.
+66. There's no future under the LNP unless you're one of their mates. They've never made life better for the majority whenever they've held government at any level. Looking forward to them being a one term government yet again
+67. #FYI, this guy is on another sub having a cry about this comment being downvoted without the slightest realisation of the irony in that.
+68. They won't accept a democratic process here on reddit. I admire your courage to point out how biased they all are in the giant echo chamber.
+69. What does the size of the state have to do with the ability to feed school kids?
+70. We can afford it by stopping subsidies to billion dollars companies.
+71. Do you understand the difference between land area and population champion?
+72. The UK has like 12x the population that we have.
+73. Yeah, we've got 1/15th of their population. It should be a breeze.
+74. Like as in if you don't number all the boxes? It's an informal vote if you don't number all the boxes
+75. Set a timer for an election day "boats are on the way" SMS in 4 years.
+76. They also put out ads saying greens wanted to legalise all drugs including heroin and ice. I wish we had laws around truthfulness in political advertising
+77. Yeah right? What do you think happens if you lock up young people? I'll tell you, more often they get into organised crime "crime university" indeed.
+78. Watched an LNP volunteer basically sprint at the most aggressively Afrikaner-looking man I've ever seen.
+79. I think a lot of people don't take climate change and renewable policies seriously. and/or they look at the trend of fossil fuels making record profits the past 5 years so naturally, trying to make a quick buck, they hop on the gravy train and do whatever they can to keep that train running on fumes
+80. God she sucks Her response to Crisafulli saying it was a scare campaign when she went “yes. And I’m so scared.” God if Labour sack Miles for her it would be an all time blunder
+81. She was so reactive as Health Minister... seemed to react to any negative news story instead of backing QH staff.
+82. Excellent. I spent yesterday baking so people can get some yummy cake and the P&C can keep paying for much needed equipment, civil works, books and playgrounds.
+83. I didn't know this was a thing and honestly, this is beautiful 😭
+84. That's literally him every time I see him doing a news interview. Cheesy looking fucker.
+85. They were always going to get cunted in those 3 tsv seats. They're overperforming my baseline by a big margin
+86. squirming is not part of our plan and we've been very clear about it
+87. Just texted my husband to say this is the reason I'll never move back to Toowoomba.
+88. Chugga chugga Choo Choo big red bar graph. Political issue hot potato hot potato Has to be something to do with crocodiles as well. Maybe one going Fruitcake candidate yummy yummy?
+89. I think the Greens failed on two, maybe three key fronts. First and foremost their state election campaign was very much focused on federal issues. Rent freezes, and capping grocery prices aren't particularly popular policies in inner Brisbane, outside of The Greens 15 - 20% core voters. Moreover the reason Maiwar and South Brisbane flipped to the Greens originally was due to a focus on broadly popular local issues (improving public transport, new schools, free school lunches, urban revitalisation of traffic sewers etc). It was an absurd strategy misstep to focus on broadly unpopular, unrealistic, unimplimentable, economically illiterate federal policies. Secondly, the Greens won their QLD state and Federal Brisbane seats due to middle aged suburbanites and preference flows. I.e. much of Greens support is soft support. If they want to win seats they need to be careful to avoid marginalising centre-left voters by obstructing fairly progressive federal Labor policies, by being overly critical of Labor in general (i.e. the Greens ad calling out a handful of Labor MPs who voted against abortion), and by focusing on divisive (and ultimately unwinnable) issues like Israel/ Palestine, and Rent Freezes. Thirdly, they ceded a lot of bread and butter policy to Labor with 50c public transport fairs, and free school lunches. I believe The Greens would have had a very different result if their focus had been on local issues like a westside bus network expansion to reduce school traffic in Maiwar, a new school on the westside to reduce overcrowding, a green pedestrian corridor from woolongabba to southbank regardless of the stadium outcome, etc.
+90. Yeah bullshit. Couldn't even get Australians to care about Indigenous Australians.
+91. yeah KAP is interesting because they have both conservative policies and progressive policies depending on the subject
+92. They agree on social policy on the whole though so life will demonstrably get worse for women and minority groups.
+93. つ ◕_◕ ༽つ TAKE MY ENERGY Edit. They did not in fact take my energy
+94. Stupid question but what order do they count the votes?
+95. I’m still confused. I think she realised she fucked the opening sentence up and after that she was scrambling. Poor thing.
+96. he said bouncing between 46-47 so might be slim minority but they definitely get in
+97. Makes them more likely to win seats in the South East though, so... swings and roundabouts
+98. It'll be exhaustive like at council level. It benefits the LNP a lot.
+99. It's her views that she will bring to Parliament that I don't like. I doubt they know who she is at all, people rarely know who their local candidate is unless they're engaged. I'm sure if she'd walked around Cleveland talking about her forced-birth, pro-religious discrimination bill, anti-euthanasia, pro-nuclear, 'sexuality is a choice', super conservative Christian views - she might have gotten a few less votes. I really look forward to her having a say over my children's bodily autonomy.
+100. ABC says 2 million pre-polled. I voted 12:30pm today at Woolloongabba and zero line.
+101. I voted in person, but early in the local election earlier this year and hated every second of it. Postal vote this time.
+102. I'd read somewhere it wasn't far off 50% early voting which is unreal. Went past a poll booth today and there was NO ONE there
+103. He had a rocky start too with the whole olympic stadium thing and everyone having an opinion on it (as far as voter issues go I think this is the most benign thing ever, but hey whatevs, Crisfulli's problem to juggle now). But yeah, if Miles had more opportunity to really have a presence and institute policy, I think we'd be having a different conversation right now. Really hope to see him back as premier next time around.
+104. I actually don’t think so DC just had a better strategy
+105. As long as they don't sabotage the plans for wind, solar and the energy grid - that's the least I'm hoping for. I fully expect that we'll be saying adios to the coal royalties and see a bunch of services cut because of the huge void in the budget that will bring, but hopefully Crisafulli won't go full Campbell and institute another 10-year royalties freeze.
+106. Because he was 'buying' votes with these supposed cost of living policies, that's why. Free lunch for the kiddies was never going to buy enough votes. He continued to ignore what the public were telling him (and by public I mean not just the people on Brisbane reddit) and they have spoken
+107. I've not yet seen the LNP meet a highway project they didn't like. Knowing them they'll keep the route and make it twice as wide.
+108. And unfortunately if you vote on a local basis it condemns children to imprisonment without due process, removal of women's reproductive rights, the destruction of our public sector, and cancellation of important infrastructure projects. Hell of a catch 22.
+109. > nothing much off the island. Beachmere road is finally fixed after thirty years, that's something she's done off the island. Just because you haven't looked into what she's done doesn't mean she doesn't do stuff.
+110. You've unknowingly consented to giving your phone and name to an organisation at some point, they've sold it to LNP
+111. It boggles my mind. If I hadn’t worked out who I was voting for (I already voted) then disturbing me late at night isn’t going to help your cause.
+112. It’s 2PP that matters and Labor is well ahead. 58% vs 42%. No one cares about primary votes. Learn to learn elections.
+113. LNP directed preferences to greens last time which got them the win over trad, this time their preferencing labor. Unless labor slip into third the greens have almost certainly lost
+114. early voters tend to lean heavily right probably a high proportion of retirees
+115. Yup. I always take the negative flyers to be a negative for whoever is paying for them. I want problems fixed, I don't care why you think they exist.
+116. LNP was given like 10x the amount of donations, mainly from fossil fuel industry, compared to Labors entire donations they had a shitload more to spend
+117. I'm in an electorate that's been state and federal Labor for as long as I can remember and there's probably about 6-7 LNP signs for every Labor sign, plus the LNP and PHON volunteers were way way more aggressive. They were standing in the middle of the carpark, harassing people before they even got out of their cars.
+118. I just assumed they were all coming from Labor and they’ve just used a different colour scheme to try and highlight the issue
+119. I got labor at 32. Don’t think it will be a majority though, but would be a welcome return :)
+120. Reddit is the biggest echo chamber going. I wish you luck, but I wouldn't put money down based on anything posted here.
+121. Not substantive of course or that she was better in the ways that matter, but I think Deb Frecklington was a more appealing character to be a party leader. She looked more like your typical suburban mum with kids (and palaszczuk I think was single at the time) whereas David Crisafulli looks like a shady car salesman.
+122. A lot. I’m in my mid 40s and born in QLD
+123. Libs. Crisafulli just seems like a terrible person , let alone leader. Haven’t heard him say a single positive thing Also like 50c fares that ALP bought in. Great idea that benefits many ie promotes public transport , gets cars off road, saves ppl money
+124. They’ve nakedly changed from a party that persued policy you might disagree with to one that talks about it and is only in it for graft. Say what you like about Howard era federal but they ran a surplus for a long term goal, come to the more recent stint and they print money and just talk about economic management. They’re currently running a leader who ran a dodgy training org which to most people is just a way to siphon money out of the coffers. That’s just not good enough.
+125. LNP candidates have said they will vote to repeal abortion rights. School lunches fix a majority of issues. They address some of the root causes of the issues people complain about. Placating the symptoms doesn't fix the issues. I don't think Labor is amazing (i don't vote Labor) but suggesting LNP would fix the problem is false. As someone in healthcare, you should be aware of all the cuts the LNP made to healthcare under Newman and Crisafulli.
+126. Working in healthcare and voting LNP feels like a giant own goal.
+127. You understand the lnp are cutting jobs in healthcare right?
+128. Yeah I work in healthcare and absolutely do not trust the LNP to fix anything about our health system
+129. We have an idea of a concept of a proposal that we are acting on!
+130. I've come around to him, but he was very smug during COVID. I was someone who was negatively affected by the COVID lockdowns (my now wife was stuck outside the country) and whenever he was doing press conferences, he spent a lot of time downplaying that there were any negative side effects from their policies. Things can be necessary but still suck - he didn't need to pretend things were rosy for everyone. He certainly seems to be more likeable in his role as premier as opposed to deputy. I also think his government has enacted some really good policies, and that is more important than how likeable he is. I'm not in his electorate, so I voted Greens and preferenced Labor - if I were in his electorate I probably would have put him as 1 because I think he should keep his seat.
+131. I don't particularly dislike the guy, but he is PR managed just like everyone else. His public behaviour the last couple of months has been because he has had nothing to lose.
+132. LNP single handedly turned me into a single issue voter. Even the most magical policies could not make up for the desire to take away my right to control my body.
+133. Yep, not looking forward to potentially another few years of fighting for basic human rights for people who live around me.
+134. Yeah, I'm pretty sure I actually put LNP third on my ballot - they fucking suck, but not as much as PHON, KAP or FF
+135. Miles? Hes a good bloke.. seen him at Kinn Thai at Westfield North Lakes a few times before he was premier and he seems like a down-to-earth family man. What you see is what you get type.
+136. If it was legal why would they choose the streets to get high? I'd be netflixing and heroin chill all day over shooting up in an alley
+137. From the day he got elected he has been 100% toeing the party line.
+138. See - every vote counts! No, it hasn't changed a seat, but really does send a message all the same
+139. I live across the road from a polling booth. Nothing. It makes me sad every election.
+140. I heard it's because more and more people are voting early, making it less financially viable for the community groups that run them.

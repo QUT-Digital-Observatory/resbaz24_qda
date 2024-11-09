@@ -1,0 +1,642 @@
+{
+    "cost": 0.0008716499999999999,
+    "model": "gemini-1.5-flash-002",
+    "responses": [
+        {
+            "id": "ltu3yn1",
+            "prompt_id": 1,
+            "issue": "AL",
+            "party": "ALP"
+        },
+        {
+            "id": "ltu5z2t",
+            "prompt_id": 2,
+            "issue": null,
+            "party": null
+        },
+        {
+            "id": "ltu5wed",
+            "prompt_id": 3,
+            "issue": "EI",
+            "party": null
+        },
+        {
+            "id": "ltttdgj",
+            "prompt_id": 4,
+            "issue": null,
+            "party": "ALP"
+        },
+        {
+            "id": "lttv9cg",
+            "prompt_id": 5,
+            "issue": null,
+            "party": null
+        },
+        {
+            "id": "ltud35g",
+            "prompt_id": 6,
+            "issue": null,
+            "party": null
+        },
+        {
+            "id": "ltwd8a0",
+            "prompt_id": 7,
+            "issue": "AL",
+            "party": null
+        },
+        {
+            "id": "ltuafou",
+            "prompt_id": 8,
+            "issue": "AL",
+            "party": "ALP"
+        },
+        {
+            "id": "ltucz8o",
+            "prompt_id": 9,
+            "issue": "AL",
+            "party": "ALP"
+        },
+        {
+            "id": "ltubdq5",
+            "prompt_id": 10,
+            "issue": null,
+            "party": null
+        },
+        {
+            "id": "ltuahgo",
+            "prompt_id": 11,
+            "issue": "AL",
+            "party": "ALP"
+        },
+        {
+            "id": "ltu2ndl",
+            "prompt_id": 12,
+            "issue": "EI",
+            "party": "LNP"
+        },
+        {
+            "id": "ltu1b78",
+            "prompt_id": 13,
+            "issue": null,
+            "party": "LNP"
+        },
+        {
+            "id": "ltuc9ju",
+            "prompt_id": 14,
+            "issue": "YC",
+            "party": "ALP"
+        },
+        {
+            "id": "lttotik",
+            "prompt_id": 15,
+            "issue": null,
+            "party": null
+        },
+        {
+            "id": "lttvysj",
+            "prompt_id": 16,
+            "issue": null,
+            "party": null
+        },
+        {
+            "id": "lttyu4o",
+            "prompt_id": 17,
+            "issue": null,
+            "party": null
+        },
+        {
+            "id": "ltu08ln",
+            "prompt_id": 18,
+            "issue": null,
+            "party": null
+        },
+        {
+            "id": "lttw6si",
+            "prompt_id": 19,
+            "issue": null,
+            "party": null
+        },
+        {
+            "id": "ltu8df2",
+            "prompt_id": 20,
+            "issue": null,
+            "party": null
+        },
+        {
+            "id": "ltu6imf",
+            "prompt_id": 21,
+            "issue": "AL",
+            "party": "ALP"
+        },
+        {
+            "id": "ltu8ygg",
+            "prompt_id": 22,
+            "issue": null,
+            "party": null
+        },
+        {
+            "id": "ltv76ep",
+            "prompt_id": 23,
+            "issue": "AL",
+            "party": "KAP"
+        },
+        {
+            "id": "ltuc692",
+            "prompt_id": 24,
+            "issue": null,
+            "party": "LNP"
+        },
+        {
+            "id": "ltu3ire",
+            "prompt_id": 25,
+            "issue": null,
+            "party": "LNP"
+        },
+        {
+            "id": "ltu41ma",
+            "prompt_id": 26,
+            "issue": null,
+            "party": null
+        },
+        {
+            "id": "ltucqkg",
+            "prompt_id": 27,
+            "issue": null,
+            "party": null
+        },
+        {
+            "id": "ltub48g",
+            "prompt_id": 28,
+            "issue": null,
+            "party": null
+        },
+        {
+            "id": "ltum1a4",
+            "prompt_id": 29,
+            "issue": null,
+            "party": "LNP"
+        },
+        {
+            "id": "ltuy5fw",
+            "prompt_id": 30,
+            "issue": null,
+            "party": "ALP"
+        },
+        {
+            "id": "ltwo0kc",
+            "prompt_id": 31,
+            "issue": null,
+            "party": "ALP"
+        },
+        {
+            "id": "ltunpdf",
+            "prompt_id": 32,
+            "issue": null,
+            "party": "ALP"
+        },
+        {
+            "id": "ltxboop",
+            "prompt_id": 33,
+            "issue": null,
+            "party": null
+        },
+        {
+            "id": "ltumpnj",
+            "prompt_id": 34,
+            "issue": "AL",
+            "party": "ALP"
+        },
+        {
+            "id": "ltum5nr",
+            "prompt_id": 35,
+            "issue": null,
+            "party": null
+        },
+        {
+            "id": "ltum7xj",
+            "prompt_id": 36,
+            "issue": null,
+            "party": "ALP"
+        },
+        {
+            "id": "ltueqom",
+            "prompt_id": 37,
+            "issue": null,
+            "party": null
+        },
+        {
+            "id": "ltuf5dj",
+            "prompt_id": 38,
+            "issue": null,
+            "party": null
+        },
+        {
+            "id": "ltumu8b",
+            "prompt_id": 39,
+            "issue": null,
+            "party": "LNP"
+        },
+        {
+            "id": "ltucjru",
+            "prompt_id": 40,
+            "issue": null,
+            "party": "ALP"
+        },
+        {
+            "id": "ltuv8os",
+            "prompt_id": 41,
+            "issue": null,
+            "party": "ALP"
+        },
+        {
+            "id": "ltumjdi",
+            "prompt_id": 42,
+            "issue": null,
+            "party": "ALP"
+        },
+        {
+            "id": "lturplh",
+            "prompt_id": 43,
+            "issue": null,
+            "party": "ALP"
+        },
+        {
+            "id": "ltu6da2",
+            "prompt_id": 44,
+            "issue": null,
+            "party": null
+        },
+        {
+            "id": "ltuct7e",
+            "prompt_id": 45,
+            "issue": null,
+            "party": "ALP"
+        },
+        {
+            "id": "ltuikw0",
+            "prompt_id": 46,
+            "issue": null,
+            "party": null
+        },
+        {
+            "id": "ltua90g",
+            "prompt_id": 47,
+            "issue": null,
+            "party": "ALP"
+        },
+        {
+            "id": "lttyc5a",
+            "prompt_id": 48,
+            "issue": null,
+            "party": null
+        },
+        {
+            "id": "lttyg8x",
+            "prompt_id": 49,
+            "issue": null,
+            "party": null
+        },
+        {
+            "id": "ltu0pzn",
+            "prompt_id": 50,
+            "issue": null,
+            "party": null
+        },
+        {
+            "id": "ltttjo0",
+            "prompt_id": 51,
+            "issue": null,
+            "party": null
+        },
+        {
+            "id": "lttu6ym",
+            "prompt_id": 52,
+            "issue": null,
+            "party": null
+        },
+        {
+            "id": "ltu9git",
+            "prompt_id": 53,
+            "issue": null,
+            "party": "LNP"
+        },
+        {
+            "id": "ltu9cxc",
+            "prompt_id": 54,
+            "issue": null,
+            "party": null
+        },
+        {
+            "id": "ltu6ue5",
+            "prompt_id": 55,
+            "issue": "YC",
+            "party": "ALP"
+        },
+        {
+            "id": "ltu3mks",
+            "prompt_id": 56,
+            "issue": null,
+            "party": null
+        },
+        {
+            "id": "lttlqxu",
+            "prompt_id": 57,
+            "issue": null,
+            "party": null
+        },
+        {
+            "id": "lttpy57",
+            "prompt_id": 58,
+            "issue": null,
+            "party": null
+        },
+        {
+            "id": "ltu8egk",
+            "prompt_id": 59,
+            "issue": "AL",
+            "party": "LNP"
+        },
+        {
+            "id": "ltu45vy",
+            "prompt_id": 60,
+            "issue": "AL",
+            "party": "ALP"
+        },
+        {
+            "id": "ltu83yv",
+            "prompt_id": 61,
+            "issue": null,
+            "party": "ALP"
+        },
+        {
+            "id": "ltttqcw",
+            "prompt_id": 62,
+            "issue": null,
+            "party": null
+        },
+        {
+            "id": "lttvtyi",
+            "prompt_id": 63,
+            "issue": null,
+            "party": "ALP"
+        },
+        {
+            "id": "lttvhd3",
+            "prompt_id": 64,
+            "issue": null,
+            "party": null
+        },
+        {
+            "id": "ltuce9b",
+            "prompt_id": 65,
+            "issue": "YC",
+            "party": null
+        },
+        {
+            "id": "ltudeoo",
+            "prompt_id": 66,
+            "issue": "AL",
+            "party": "LNP"
+        },
+        {
+            "id": "ltulh8c",
+            "prompt_id": 67,
+            "issue": "YC",
+            "party": "LNP"
+        },
+        {
+            "id": "lttow11",
+            "prompt_id": 68,
+            "issue": null,
+            "party": null
+        },
+        {
+            "id": "lttxtc6",
+            "prompt_id": 69,
+            "issue": null,
+            "party": null
+        },
+        {
+            "id": "ltu6oev",
+            "prompt_id": 70,
+            "issue": "AL",
+            "party": "ALP"
+        },
+        {
+            "id": "ltucvxa",
+            "prompt_id": 71,
+            "issue": null,
+            "party": null
+        },
+        {
+            "id": "ltuae1v",
+            "prompt_id": 72,
+            "issue": null,
+            "party": "ALP"
+        },
+        {
+            "id": "ltuccxe",
+            "prompt_id": 73,
+            "issue": null,
+            "party": "ALP"
+        },
+        {
+            "id": "ltun1ic",
+            "prompt_id": 74,
+            "issue": null,
+            "party": "ALP"
+        },
+        {
+            "id": "ltwoi88",
+            "prompt_id": 75,
+            "issue": null,
+            "party": null
+        },
+        {
+            "id": "lu4i6wg",
+            "prompt_id": 76,
+            "issue": null,
+            "party": "ALP"
+        },
+        {
+            "id": "lu4kd3b",
+            "prompt_id": 77,
+            "issue": "AL",
+            "party": null
+        },
+        {
+            "id": "ltz3ldh",
+            "prompt_id": 78,
+            "issue": null,
+            "party": "ALP"
+        },
+        {
+            "id": "ltunc2l",
+            "prompt_id": 79,
+            "issue": null,
+            "party": "LNP"
+        },
+        {
+            "id": "ltxwgoo",
+            "prompt_id": 80,
+            "issue": null,
+            "party": "LNP"
+        },
+        {
+            "id": "ltudywv",
+            "prompt_id": 81,
+            "issue": null,
+            "party": "ALP"
+        },
+        {
+            "id": "ltulrom",
+            "prompt_id": 82,
+            "issue": null,
+            "party": "LNP"
+        },
+        {
+            "id": "lttysib",
+            "prompt_id": 83,
+            "issue": null,
+            "party": "ALP"
+        },
+        {
+            "id": "lttzk42",
+            "prompt_id": 84,
+            "issue": null,
+            "party": null
+        },
+        {
+            "id": "ltv6m8q",
+            "prompt_id": 85,
+            "issue": null,
+            "party": null
+        },
+        {
+            "id": "lttufeb",
+            "prompt_id": 86,
+            "issue": null,
+            "party": null
+        },
+        {
+            "id": "ltua9ct",
+            "prompt_id": 87,
+            "issue": "YC",
+            "party": null
+        },
+        {
+            "id": "ltu7k4v",
+            "prompt_id": 88,
+            "issue": null,
+            "party": "LNP"
+        },
+        {
+            "id": "ltwqxka",
+            "prompt_id": 89,
+            "issue": null,
+            "party": "ALP"
+        },
+        {
+            "id": "ltxcq7c",
+            "prompt_id": 90,
+            "issue": null,
+            "party": "ALP"
+        },
+        {
+            "id": "lttm2yd",
+            "prompt_id": 91,
+            "issue": null,
+            "party": "LNP"
+        },
+        {
+            "id": "lttqdlj",
+            "prompt_id": 92,
+            "issue": null,
+            "party": "LNP"
+        },
+        {
+            "id": "ltu9eys",
+            "prompt_id": 93,
+            "issue": "AL",
+            "party": "ALP"
+        },
+        {
+            "id": "lttvqxg",
+            "prompt_id": 94,
+            "issue": null,
+            "party": null
+        },
+        {
+            "id": "lttvxtm",
+            "prompt_id": 95,
+            "issue": "COL",
+            "party": "LNP"
+        },
+        {
+            "id": "lttzwa3",
+            "prompt_id": 96,
+            "issue": null,
+            "party": null
+        },
+        {
+            "id": "lttp3q8",
+            "prompt_id": 97,
+            "issue": null,
+            "party": null
+        },
+        {
+            "id": "ltu9uhr",
+            "prompt_id": 98,
+            "issue": "AL",
+            "party": null
+        },
+        {
+            "id": "ltugnil",
+            "prompt_id": 99,
+            "issue": null,
+            "party": "ALP"
+        },
+        {
+            "id": "lu4vfb8",
+            "prompt_id": 100,
+            "issue": null,
+            "party": null
+        },
+        {
+            "id": "ltz9ll9",
+            "prompt_id": 101,
+            "issue": "AL",
+            "party": "ALP"
+        },
+        {
+            "id": "lub78os",
+            "prompt_id": 102,
+            "issue": "AL",
+            "party": "ALP"
+        },
+        {
+            "id": "ltuqdrn",
+            "prompt_id": 103,
+            "issue": null,
+            "party": null
+        },
+        {
+            "id": "ltumb36",
+            "prompt_id": 104,
+            "issue": null,
+            "party": null
+        },
+        {
+            "id": "ltuef6b",
+            "prompt_id": 105,
+            "issue": null,
+            "party": "ALP"
+        },
+        {
+            "id": "ltumg5v",
+            "prompt_id": 106,
+            "issue": null,
+            "party": null
+        }
+    ]
+}

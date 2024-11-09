@@ -5,8 +5,7 @@ from qda_03_pipeline import ElectionExperiment
 def main(version: int):
     path = f"experiments/{version}/phase1"
     if not os.path.exists(path):
-        print(f"Error: The path {path} does not exist.")
-        return
+        os.makedirs(path)
     
     # Create an instance of the ElectionExperiment class with the version we provided
     experiment = ElectionExperiment(version=version)

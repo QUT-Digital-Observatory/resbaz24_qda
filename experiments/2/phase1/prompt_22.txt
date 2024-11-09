@@ -1,0 +1,153 @@
+Your job is to analyse a series of Reddit comments from discussions related to the 2024 Queensland State Election. The major parties that sought election were the incumbent Australian Labor Party (ALP) and the Liberal National Party (LNP) opposition. The Queensland Greens (Greens), One Nation and Katter's Australian Party were minor parties in the election. 
+
+The key five issues that the major parties campaigned on during the 2024 Queensland State Election were Youth Crime (YC), Cost of Living Crisis (COL), Health (H), Energy and Infrastructure (EI), and Abortion Laws (AL). We include some context of the major parties positions on these issues. 
+Youth Crime (YC):
+- LNP: Advocated for stricter penalties for young offenders, including the 'Adult Crime, Adult Time' policy, proposing that serious offenses committed by youths be met with adult sentencing. 
+- Labor: Downplayed claimed youth crimewave. Focused on rehabilitation and prevention programs, aiming to address the root causes of youth crime through community engagement and support services.
+Cost of Living Crisis (COL):
+- LNP: Proposed measures such as abolishing stamp duty on new builds for first home buyers and re-establishing the productivity commission to review building industry regulations, aiming to alleviate housing costs. 
+- Labor: Introduced initiatives like 50-cent public transport fares, a $1,000 energy rebate, and free lunches for state primary school students to ease cost-of-living pressures.
+Health (H):
+- LNP: Committed $590 million to an 'Easier Access to Health Services Plan,' aiming to reduce ambulance ramping and hire additional healthcare workers. 
+- Labor: Focused on maintaining and expanding healthcare services, addressing hospital capacity issues, and investing in new health infrastructure.
+Energy and Infrastructure (EI):
+- LNP: Criticized Labor's Pioneer-Burdekin Pumped Hydro Project as financially unviable and canceled it upon taking office, opting to explore smaller-scale hydro projects instead. 
+- Labor: Proposed large-scale renewable energy projects, including the Pioneer-Burdekin Pumped Hydro Project, to transition towards 80% renewable energy by 2035.
+Abortion Laws (AL):
+- LNP: Stated there would be 'no changes' to abortion laws under their government, maintaining the status quo established in 2018. 
+- Labor Party: Supported the existing abortion laws and opposed any attempts to repeal or amend them. Asserts that LNP intend to restrict access to abortion services based on the views of some of their members.
+
+Analyze the comments and code them according to two dimensions:
+1. The ISSUE the commenter is primarily discussing, if it is one of the five listed above. Use the codes YC, COL, H, EI, AL. If no issue applies, omit the code entirely.
+2. The PARTY the commenter appears to support. Use the party codes ALP, LNP, Greens, ON, KAP. Infer party support where possible, e.g. a commenter fearing the outcome of an LNP victory likely supports ALP, and vice versa. Ensure there is either direct or clearly inferable support for a party before assigning a party code. Assign a PARTY code only if the comment expresses explicit support for, or opposition to, a specific party or its policies. This support or opposition must be clearly discernible; mere mention of a policy is insufficient. Look for indicators such as positive or negative sentiment towards a party's actions or policies or explicit endorsements or condemnations. Comments may express opposition through sarcasm or irony. In cases where party support is not clear, omit the party code entirely.
+
+You will output JSON as a list of objects where each object has an "id" (integer) property of the comment id, an "issue" property set to the issue code string, and a "party" property set to the party code string. In cases where you cannot determine an ISSUE or a PARTY, do not set a null value, omit the appropriate JSON properties entirely,  e.g. If the first comment did not have a matching issue and you could not determine party support, then the object would simply be {id: 1}.
+
+Comments follow:
+
+1. How is it the liberals that want to ban abortion it’s normally the purple hairs that want to get them all the time….ehh that’s why I vote one nation because they exist just to spite left wing rejects
+2. Man you guys really bit on this one hook, line and sinker.
+3. Lmfao you guys really gobbled up that ALP fear mongering. Abortion will never be illegal in this country get a fucking grip.
+4. The idea has now been placed and I feel fairly certain that a referendum would either be a landslide to keeping the laws as they are or they would be neck and neck and like covid, it’ll be pretty much another thing to divide us ideologically as a first base.
+5. Take abortion rights away from women and learn how many are still not educated/financed enough for proper contraception ways ... but will be willing to return to barbarian ways to keep their future safe. Surprised usa and historical stat's aren't good enough for Australia to re-raise that issue into morden world.
+6. I think it's a waste of effort.They have no plans atm to change it.
+7. Wow so many clowns fell into the Labour scare tactics, he is not changing the law. And if anyone has any clue the first abortion clinic was introduced into QLD in early 70s while Sir Joh was in power a National member. It is so surprising every election that labour are looking at losing they throw some scare tactics out there.
+8. This is stupid sorry and won’t solve anything he already said there will be no change!
+9. I’m totally pro-choice. That said, having a rally when there’s no move or even concrete plan to limit abortion access is going to look like crying wolf. It’s going to make later pro-choice events easier to dismiss at more crucial moments. This is a bad idea at this time.
+10. Never been but kinda thinking Brisbane might have a lotta slags.
+11. OP's name is very racist. Says a lot about them and their supporters.
+12. abortion up till the moment of birth has never been agreed to by the rest of us, 3 months it was and it was working then it was taken up to the moment of birth. Sick.
+13. Brisbanite here. Please fuck off with your protests that don't work. Thanks!
+14. So what's the goal here - how will the protesters know they've achieved their aim? Are we doing this for 4 years?
+15. There is no mention that they want to repeal abortions all together ... Here is the actual bill ..... An Act to amend the [*Termination of Pregnancy Act 2018*](https://www.legislation.qld.gov.au/link?version.series.id=033c0f2b-7bf5-478c-b57e-b6e843692562&doc.id=act-2018-023&date=current&type=act) to clarify particular matters relating to the provision of medical care and treatment to persons born as a result of a termination The Parliament of Queensland enacts— **1**Short title >This Act may be cited as the *Termination of Pregnancy (Live Births) Amendment Act 2024*. **2**Commencement >This Act commences, or is taken to have commenced, immediately after the commencement of the *Health and Other Legislation Amendment Act (No. 2) 2024*, part 6. **3**Act amended >This Act amends the [*Termination of Pregnancy Act 2018*](https://www.legislation.qld.gov.au/link?version.series.id=033c0f2b-7bf5-478c-b57e-b6e843692562&doc.id=act-2018-023&date=current&type=act). **4**Insertion of new s 9A >After [section 9](https://www.legislation.qld.gov.au/link?guid=_897637a0-1852-4351-b3e1-f63cd5496227&id=sec.9&version.series.id=033c0f2b-7bf5-478c-b57e-b6e843692562&doc.id=act-2018-023&date=current&type=act)— *insert—*
+16. OMG i can't understand why we aren't allowed to kill these parasites. I don't want to give up sex but I don't want to be a parent either. Don't let them stop abortion!
+17. abortion past the first trimester is ethically very questionable and past the second is literal murder.
+18. To the thousands of Labor supporters claiming they were the only pro-abortion option. I hope I see every one of you at every rally with that same energy.
+19. should have a wear condoms and use protection rally too
+20. I can't believe people have been memed into killing themselves off, to the point that they fight to do so. Talk about going against your own interests.
+21. Do they not know that abortion is illegal past 22 weeks unless there is a risk to life? Here is Curtis Means who was born at 21 weeks and is now 4 years old. [https://www.guinnessworldrecords.com/news/2024/7/most-premature-baby-ever-is-thriving-as-he-celebrates-4th-birthday](https://www.guinnessworldrecords.com/news/2024/7/most-premature-baby-ever-is-thriving-as-he-celebrates-4th-birthday)
+22. Never stop the hate, even when it's full of lies
+23. How would this help? I'm very much in favour of bodily autonomy not being violated but what makes you think there's any amount of protesting that will prevent the LNP from violating body autonomy when they clearly don't care about it?
+24. The Liberal government is just responding to the electorate's pressure to increase tenants' rights and to increase penalties if landlords continue to conduct premature evictions.
+25. Oh no getting cummed in has consequences. Maybe dont get cummed in its the easiest time in the world to not get pregnant
+26. How about keep your vagina free from sperm protest. 2 birds one stone.
+27. I love ending the growth of the life of my off spring man. I would do it more if I could
+28. If I learned anything from this election, it’s that sex education is lacking in this state and that many people use abortion as a contraceptive and not a medical procedure.
+29. I'm here to remind you because the murdered babies can't, abortion in 99% of cases is murder and not healthcare. If it's not rape or incest then you should have used protection.
+30. Ha ha ha ha ha ha ha ha fucking cookers voted this clown in. Live with it.
+31. Looks like the Palestinian protests are getting boring for the purple haired Karens of Reddit. Get out there and protest your right to kill a child (the irony based on their Palo stance) because you made a poor sexual choice. Yes, yes I know every abortion is because of rape and incest and not some self centred person (can’t say woman anymore) choosing convenience over responsibility.
+32. You had a right to choose and you chose to let a guy dump his load in you. Then there’s consequences. Note - I support abortion for rape, incest and medical reasons.
+33. Why not just use the myriad of birth control options already available ?
+34. If it helps, I think the backlash during the campaign made them rethink how big of an issue this is and if they want to be competitive for 2028, they wouldn’t want to touch it.
+35. It's about the messages of these rallies. These same people didn't have a problem with antivaxxers shutting down traffic for weeks on end, or literal Nazis marching through parks down in Melbourne. They only support rights to assembly for cause they agreed.
+36. Interestingly, the constitution was not designed to provide rights. It just so happens to provide rights with the original intent to provide restrictions on parliament and governments
+37. Well, protests about COVID mandates were clamped down on, so Govt makes their own rules
+38. It already exists, it's the *Termination of Pregnancy (Live Birth) Bill* or commonly known as the "Born Alive After Abortion" Bill. [https://ranzcog.edu.au/news/queensland-abortion-bill-amendment/](https://ranzcog.edu.au/news/queensland-abortion-bill-amendment/) It's already been tabled in the QLD Parliament, SA Parliament, and Federal Parliament. Last night on Channel 7's election broadcast, KAP confirmed they will table this Bill again, followed by repealing the remaining 2018 legislation, culminating into the criminalisation of Abortion in QLD. The reforms in 2018 included decriminalisation of Abortion, banning the filming of patients entering and exiting Abortion clinics, creating the 150m safe access space for Abortion clinics, guaranteeing funding to Women's reproductive health frontline services, expanding the provision of medical abortion via GPs etc.
+39. It certainly sends a message. I’d personally want my politicians I don’t trust to be afraid of public outcry but maybe that’s just me ☹️
+40. It's proactivity based on issues raised during the election campaign. Also you can't really fear monger in response to fear mongering.
+41. That’s a fair point. But, on the other hand, it does send a clear message to your government.
+42. we want them to get rid of the policy before they decide it's been too long to abort it
+43. One policy to stop before it starts, if possible. That said, I don't think that the LNP will cause a problem with women's rights when they have mining taxes to cut and a renewable energy plan to change.
+44. nah, get in there first and show them that drafting/introducing a bill would be a bloody terrible idea and get them to stop before they even start. mind you this is Katter, who has about 4 braincells, so the chances of that happening are about zero. damn fool that he is.
+45. You're 100% right, but this is a major concern. I think there's no harm in being pre-emptive. Might make them think before drafting a bill
+46. Rally loud and often is the approach. Then if they attempt to pass a bill, strike and disrupt.
+47. I'm just merely sharing the event. Whether you choose to attend or not is complete you your choice.
+48. Yeah I’m not a fan of the LNP but he did say he’d keep current legislation the same (he still didn’t answer Mile’s question regarding his beliefs though, I understand that) but yeah you’re spot on
+49. That count fea tmongering or *insert* excuse too attack protest. Better start early too remind politicians that it's not welcome
+50. An anti-abortion bill just got shot down here in SA. Ben Hood was trying to fear monger that unnecessary late term abortions were being performed. It's total BS. In order to have a late term abortion performed here 2 medical professionals have to sign off agreeing that it's life threatening either due to mental or physical health.
+51. Call me naive, but I can't imagine the LNP doing anything worse than a conscience vote if a bill was brought to parliament and I can't see it would ever have the numbers assuming ALP be voting as a block.
+52. I know, right? They haven't even opened for business yet and everyone's already shitting themselves. Calm your tits, people. It's not the end of the world, yet. That said, if you really want to get together and have a good shout about it, more power to you.
+53. It is just fear mongering. The LNP are on the record saying they won't be making any changes to these laws. It would be political suicide.
+54. Typically I'm against LNP leading the country as they're nowhere near the competence levels they once were. However, nothing has improved or changed under Albo at all. It's all been hollow ideas, no backbone and no vision. Would Dutton and crew be better? Doubtful. Leaving Albo and his crew of idiots in isn't the answer either tho.
+55. What a load of shit. There’ll be no changes to abortion laws so stop working yourself up over nothing. Most people are pro choice and it would be a cold day in hell before that ever got through.
+56. Like hell. We do not need labour in federal again. Ffs just vote for a third party, vote for Pauline or greens or fucking anyone except for labour or liberal. We are being fucking railed as a country because of dumbasses who think that one is better than the other. They’re both fucking shit.
+57. Honestly man, try to contact various student organisations since those are the demographics that are most likely to protest about the cause they believe in, and COL is something that affects them. Once you have the number, then people will follow suit.
+58. Same. I try to stay out of politics these days but as a healthcare professional who has cared for women post termination and has seen the heartbreak these brave women go through, I have a moral obligation to be there on Friday.
+59. Well now you can cross that out of your bucket list :)
+60. Thank you. You are a good human. I'll be there protesting with you.
+61. That’s exactly what people said in the US about abortion. It’s what people said to me right here in Queensland about civil unions when Campbell Newman was running. People have short memories. A decade wasn’t that long ago and Crisafulli and Bleigh were neck deep in that mess.
+62. She sounds loathsome. I wish these Christofascists would migrate to the US and leave the rest of us alone
+63. In all seriousness, what makes anyone think a rally or protest will pursuade a newly elected government that has just won a comfortable majority? The new government did not rule out a conscience vote on abortion legislation. The majority of Queenslanders, for better or worse, have backed the new government, including the government's stance on abortion legislation and conscience voting.
+64. sadly, there are a LOT of younger conservatives out there. particularly in the regional areas. and a lot of immigrants coming from Asia are very conservative as well. This debate, instead of being dead and buried, is just going to keep resurfacing, sadly.
+65. My dad thinks the LNP are full of it so don’t generalize.
+66. Exactly this - I had a pair of them tell me they were glad the change of government would help my partner (a paramedic) manage better at work. I informed them to their surprise that things were going to be much worse for health workers under this government.
+67. You are getting mad about something that hasn’t happen and will never happen. Please go outside and get your life together.
+68. Yeah no. Blame labour for it. If they weren’t fucking shit there would be no need to get rid of them. But labour has been fucking awful and has been in power for 30 of the last 35 years. They are SOLELY to blame for the issues we have in Queensland now. If they weren’t shit Libs wouldn’t have won
+69. hahahah wait till its your baby on the chopping block and see if it doesnt matter then
+70. I wish I disagreed with you because you are insufferable
+71. Abortion has never been a Christian value. Anyone who claims it is and takes a stance based on that and not based on their personal morals simply doesn't understand their own faith.
+72. Yeah they really want to pay for your kids for 18 years when instead they could just import someone at 18
+73. This is frankly naive. Just a few years ago 90% of the LNP politicians, including Crisafulli, voted against making abortion legal. They were not worried about their jobs then. They voted for what they thought was right then. The LNP will not bring the vote to the table themselves, but when Katter does they will have a conscience vote and each LNP member will have to make the decision to vote for "God and saving babies" or do what is politically expedient. It is right to worry that they will put their religious principles over the rights of women in this state. I would bet they won't get 90% again, but they will get a lot.
+74. I think the comparisons between US and here are somewhat fair, in that people thought it was kind of a done deal in general, not going anywhere, etc. In the US some states had trigger laws, so that as soon as it was overturned federally it was immediately illegal in their state. That's very different to here, of course. What is similar, is the ease with which the legislation could be altered with an LNP majority who have been very clear on this issue previously. Yes, they would have to amend the legislation or replace it with something else, OR scrap it and amend the criminal code to include abortion again. Any of those things are possible with the majority, but you are right - there is not an insignificant chance it would be political suicide for the next election BUT if they are cocky enough (and some are so deeply religious it would not concern them) this may not matter if the legislation is tabled.
+75. "We don't have a plan to change abortion rules". Which is carefully worded to not take into account if someone else has a plan to do so (Katter) and then they have a conscience vote.
+76. And you can trust a guy who voted in 2018 for abortion to be illegal? Pull the other one.
+77. If they could read they would be very upset right now sir, the crazies think this is Merica
+78. And do you realise... That LNP is shit at keeping their promises.
+79. How would you know the woman has been raped ? Most rape cases don’t even go to court as lack of evidence. So how could you prove ?
+80. Ban men having a say over women’s bodies and choices.
+81. Easy to not be concerned when you have balls and the gov isn’t trying to control your body.
+82. I agree with the sentiment, but let's not advocate violence against those we don't like. We do not want to have the same political divide like USA.
+83. Its in Katters plan, and several LNP MPs have admitted before the current uproar they would vote to repeal. The leader and 'the plan' won't be able to stop them voting how they please if katter (or anyone else) puts in that legislation.
+84. Forcing women to care for unwanted babies is evil imo
+85. The protest will be at King George Square 🙄 Beside, where was the same vitriol for the antivax protests that regularly shut down roads?
+86. That's the kind of attitude that gets clowns saying things like "I won't change the legislation" despite their voting record saying otherwise elected.
+87. He never said that. He specifically refused to say those words. They all parroted the “that’s not our plan” line because as we all know, plans can change.
+88. I dunno, but I'm gonna go out on a limb here and say that supporting women's rights is actually a big deal, which includes supporting the rights of the women within your own life.
+89. There ARE plans to change that from Katter, just not from the LNP. And the LNP refuses to rule out a conscience vote for their members, who 90% voted against legalisatiion just a few years ago. Unless most of them have had a change of heart and now just a few years later think abortion should be legal, abortion is at real risk of failing. All Crisafulli needed to do was say he will not allow a conscience vote on this issue and will direct his party to vote against any Katter bills, but he refused to or couldn't say that.
+90. Only redditors believe this shit. I work in the legal profession, everyone knows not much is going to change.
+91. Ha! KAP will introduce the bill as soon as they are able. LNP will have a conscience vote. Many voted against abortion in 2018. I'm not even a QLDer and I know this. Stop kidding yourself. LNP said *they* have no **intention** of changing it. Not that they wouldn't change the law if the opportunity came about.
+92. Yup, because politicians are known for following through with promises! Idiot.
+93. It was illegal in Queensland 7 years ago. It may not have been actively pursued, but there was a change of law in 2018 for a reason.
+94. Genuine question, are you female? Cause if not this is probably one of the most misogynistic and ignorant things I ever saw. If not then you are just misogynistic.
+95. I’m completely with you on this. Please downvote away you cry babies
+96. It isn't a referendum, we don't get to vote, we already did and put the guys in who opposed making abortion legal in the first place. It is a bill that Katter is going to put to parliament that wants to make it illegal again, and the same guys who voted against legalisation will be given a conscience vote on that bill.
+97. Care to post some statistics? Better to regret having an abortion than regret birthing a kid you don't want and are not prepared for.
+98. This is the party that said no cuts to the public service in 2012.
+99. This! Oh well if they want to waste a Friday night protesting against something that isn't happening, let them.
+100. Campbell Newman also said he won't sack 12,000 medical professionals in 2012, we all know what happened.
+101. Complacency like this is a big reason for the state of abortion rights in the USA.
+102. It didn't occur to you that maybe OP's name is Kan?
+103. The ones that do occur after 22 weeks are 'abortions' in the way they are ending a pregnancy, but it's usually because of a medical issue or reason that continuing with the pregnancy is unsafe or the baby will be still born. It's cruel to force a mother to carry to full term, if her baby won't survive birth. People who have these after 22 weeks are usually going home to a house with an empty crib and unused baby items. After 22 weeks two doctors must assess and agree, no one is doing it at 8.5 months for funsies and so suggest so is ridiculous.
+104. According to Queensland Health, abortion is legal until 22 weeks into gestation, with exception for rape, incest, and threat to mother's life. Source: Termination of Pregnancy Act 2018
+105. Good thing that medical professionals and anyone with a brain disagrees with you.
+106. 99 percent of abortions are done in the first 20 weeks, the only time it'd be done after that is if there are complications and risk to the health of the mother which would be deemed necessary by medical doctors.
+107. Yes, in the case of risk of life or health to the mother or baby. The vast majority of late abortions are medically necessary, so what banning them does is put women's lives at risk. The decision should be between a woman, her partner and the medical professionals.
+108. Also Brisbanite here. Fuck off to Russia with that mindset. You'll fit right in. Thanks.
+109. This was tabled in March and knocked back. KAP then said they would put in a separate, new bill to recriminalise abortion when this whole topic came up about a fortnight or so ago. Then more recently he backtracked and said he would re-table this one at least. So yes, there was a clear mention of fully repealing it, and then somewhat of a backtrack saying he would have another crack at this one - which is really no less problematic and unnecessary.
+110. People like you don't give a fuck about the child. What about all the trauma the unwanted child would endure, are you going to offer free mental health care? What about if the parents can't afford the child, are you going to feed, cloth and shelter the child? What if the mother had been r@%ed and got pregnant, she didn't decide to get r@%ed and have a child.
+111. Yep pretty much. Taking responsibility for actions is too much for a lot of people so they'd rather just murder a child and take the easy way out.
+112. It's literally not murder. It doesn't meet the legal definition of murder.
+113. the fact theres people down voting you for basic human rights is horrible and shows the state of this site.
+114. Well no both Labor and Greens were the pro bodily autonomy options. LNP ON and the transphobia party (which are the options I had) were the pro forced birth options
+115. Good one! We should make sure rapists use protection! Or we could make sure no pregnancy ever has medical complications by praying before the act!? What if we just sterilise the poor? Any more grand ideas fuckwit?
+116. So what's the implication here? We should change it to 21 weeks instead?
+117. You're getting downvoted for stating actual fact, this right here is peak reddit.
+118. Don’t post this, the clump of cells crowd will get mad
+119. Maybe children who aren't old enough to vote shouldn't be speaking on the recent election.
+120. ^ This, and if you can't abstain and get pregnant. Accept it and not kill a life. They lost their choice once they spread their legs
+121. How about you think about medical issues that aren’t necessarily to do with sperm but that affect women and that the abortion “procedure” actually help. For medical reasons nothing to do with babies. Or perhaps you’d like to bleed for over six months while in pain and not have access to medical care because a procedure is taken away which can help? Ban abortion, you ban a medical procedure that is widely used. Ask a gyn.
+122. oh yeah bro, i totally have an abortion after every time i have sex, they're so much fun and a really great way to spend your saturday what a moron
+123. This argument is brain dead and always has been, abortion is an expensive and painful procedure that takes days to recover from: no one is doing that every other month as a form of contraception.
+124. Says this one single Redditor, and not a single other soul.
+125. If that’s what you learned then you’re an absolute fuckwit that gets 0 pussy.
+126. Where are the women using abortion as a contraception method?

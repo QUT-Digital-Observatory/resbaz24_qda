@@ -1,0 +1,154 @@
+Your job is to analyse a series of Reddit comments from discussions related to the 2024 Queensland State Election. The major parties that sought election were the incumbent Australian Labor Party (ALP) and the Liberal National Party (LNP) opposition. The Queensland Greens (Greens), One Nation and Katter's Australian Party were minor parties in the election. 
+
+The key five issues that the major parties campaigned on during the 2024 Queensland State Election were Youth Crime (YC), Cost of Living Crisis (COL), Health (H), Energy and Infrastructure (EI), and Abortion Laws (AL). We include some context of the major parties positions on these issues. 
+Youth Crime (YC):
+- LNP: Advocated for stricter penalties for young offenders, including the 'Adult Crime, Adult Time' policy, proposing that serious offenses committed by youths be met with adult sentencing. 
+- Labor: Downplayed claimed youth crimewave. Focused on rehabilitation and prevention programs, aiming to address the root causes of youth crime through community engagement and support services.
+Cost of Living Crisis (COL):
+- LNP: Proposed measures such as abolishing stamp duty on new builds for first home buyers and re-establishing the productivity commission to review building industry regulations, aiming to alleviate housing costs. 
+- Labor: Introduced initiatives like 50-cent public transport fares, a $1,000 energy rebate, and free lunches for state primary school students to ease cost-of-living pressures.
+Health (H):
+- LNP: Committed $590 million to an 'Easier Access to Health Services Plan,' aiming to reduce ambulance ramping and hire additional healthcare workers. 
+- Labor: Focused on maintaining and expanding healthcare services, addressing hospital capacity issues, and investing in new health infrastructure.
+Energy and Infrastructure (EI):
+- LNP: Criticized Labor's Pioneer-Burdekin Pumped Hydro Project as financially unviable and canceled it upon taking office, opting to explore smaller-scale hydro projects instead. 
+- Labor: Proposed large-scale renewable energy projects, including the Pioneer-Burdekin Pumped Hydro Project, to transition towards 80% renewable energy by 2035.
+Abortion Laws (AL):
+- LNP: Stated there would be 'no changes' to abortion laws under their government, maintaining the status quo established in 2018. 
+- Labor Party: Supported the existing abortion laws and opposed any attempts to repeal or amend them. Asserts that LNP intend to restrict access to abortion services based on the views of some of their members.
+
+Analyze the comments and code them according to two dimensions:
+1. The ISSUE the commenter is primarily discussing, if it is one of the five listed above. Use the codes YC, COL, H, EI, AL. If no issue applies, omit the code entirely.
+2. The PARTY the commenter appears to support. Use the party codes ALP, LNP, Greens, ON, KAP. Infer party support where possible, e.g. a commenter fearing the outcome of an LNP victory likely supports ALP, and vice versa. Ensure there is either direct or clearly inferable support for a party before assigning a party code. Assign a PARTY code only if the comment expresses explicit support for, or opposition to, a specific party or its policies. This support or opposition must be clearly discernible; mere mention of a policy is insufficient. Look for indicators such as positive or negative sentiment towards a party's actions or policies or explicit endorsements or condemnations. Comments may express opposition through sarcasm or irony. In cases where party support is not clear, omit the party code entirely.
+
+You will output JSON as a list of objects where each object has an "id" (integer) property of the comment id, an "issue" property set to the issue code string, and a "party" property set to the party code string. In cases where you cannot determine an ISSUE or a PARTY, do not set a null value, omit the appropriate JSON properties entirely,  e.g. If the first comment did not have a matching issue and you could not determine party support, then the object would simply be {id: 1}.
+
+Comments follow:
+
+1. Yes, obviously and totes agree. I've worked several elections and helped filter them. At one election, someone placed a cardboard box near the door so they could be returned and sorted there. I think permission was granted to do that, was near but not in the doorway
+2. You know the LNP is an Australian political party, don't you? So naturally I'm taking about politics outside of America, right? I didn't think I had to explain that, but here we are...
+3. Well Labor is currently governing the state better than pretty much any other government I've seen in my lifetime, so no, I don't think the same can be said of all the others.
+4. Unless you are in an electorate where a minor party is likely to win, whoever you preference higher (labor or LNP) is effectively who you are voting for even if they aren’t your first preference.
+5. You may not make up part of them, but how is telling a potential 10-15% of people how to vote a pointless endeavour?
+6. Not just that. The volunteers also keep an eye out for PWD, seniors or folks who are struggling to get to the gate or up a path. They can drive closer and / or vote from car
+7. And to be honest, there's already enough shit on them as it is.
+8. Describing every conservative movement as "trumpism" is idiotic. Trumpism is loud authoritarian populism focused on culture war issues. Crisafulli's campaign has been quiet, small target conservatism, with some populist policies on crime added in (not even targetting immigrants or racial minorities). It hasn't even been focused on run of the mill culture war issues that are pretty core elements of any "trumpist" political movement. Not everything bad is related to Trump edit since you blocked me lol: I'm not defending the LNP, but if your definition of bad politics is calling it "trumpism" despite not resembling trump in any way other than "it's conservative" then you're showing how uneducated you are politically.
+9. Whilst I do agree with you (to some extent, and the Miles iteration hasn't had much time to implement some nice starts) - personally I'd still like to see more Greens in our parliament so we end up with even more progressiveness. For eg, I'm 54 and really not seen much progress - say on drug laws - since Joh introduced his Drugs Misuse Act of 1986. And the VAD laws took way too long to be implemented.
+10. Yeah, I understand that. Well, greens last, labour second last, libs third last. Just not sure who I’ll order first.
+11. Still seems predatory. If your helping someone who's disadvantaged to vote, you shouldn't have an agenda/bias.
+12. I think you're a short-sighted moron if you think the LNP won't be trump light if they had half a chance. We can't give them even a glimmer of hope, but with "people" like you turning a blind eye then they're likely to win. Be better.
+13. I would definitely like more progressive social policies, I agree, but I've been personally extremely disappointed by the greens economic policies, many of which sound nice in premise, but when you think about them more deeply are likely to be highly damaging.
+14. So you're effectively voting LNP because no chance of ON or FF getting enough 1st pref or going through to 2nd round.
+15. So despite mentioning that the policy you feel strongly about is access to Pill Testing, you'll knowingly put the two parties most likely to support it last?
+16. Damaging to who? Rich/monetary wealthy folk? As a society, and in order to receive those more progressive social policies - from my POV - we're probably needing to spread the wealth a lot more than it currently is / has been.
+17. I disagree with more than one of the greens and labor policies lol…… Testing isn’t the ONLY issue I care about.
+18. No, damaging to ordinary people. The rent cap is a nice sounding idea that could easily backfire if not preceded by a significant expansion in public housing (which would take 5+ years in the best case scenario). Either the rent cap isn't enforced until housing supply increases, in which case it's useless, or the rent cap is enforced when there's already a shortage of rentals available (which would make it significantly harder to move and potentially increase the risk of homelessness particularly among those fleeing family violence) The developer tax they proposed at the council election would have resulted in individuals being allowed to profit from council upzoning when selling their land and handing a tax bill to any developer who wanted to build higher density housing on that land, directly punishing increasing housing supply, increasing prices and rents even more while allowing land owners to profit off the upzoning. Those are just two off the top of my head, but there's more policies like that which have put me off the greens.
+19. Fair enough. Pill testing was the ONLY issue you mentioned, so I assumed it was fairly important to you. May all your pills be pure.
+20. Not the only issue, but cheqpoint is a super valuable resource in Brisbane, and needs to continue and have more funding, not less. And my drugs are always good :)
+21. Nope. Politicians and charities are excluded from the do not call register.
+22. Got an MMS from them. Google pretagged it as spam. Spot on.
+23. I just received a text from the LNP promoting Deb Frecklington. Annoyingly no opt out option either. It was addressed to someone else, when I’ve had this number nearly 20 years.
+24. Yes, I delete without reading. Doesn’t matter which party or candidate sends them, it’s straight to the trash!
+25. Yep, so I’ve just left a voicemail on christafulli’s office number. Felt good.
+26. Yeah I got a text from the member of Moggill. I reported it as spam.
+27. I’m having the same issue! About three texts from different numbers and two phone calls… no opt out option either which seems strange but I’m sure there’s some exemption for political communication…
+28. Yeah, went to voicemail and began with “Hi [my name]… He recorded individual messages for every one of us! So thoughtful and definitely didn’t feel invasive or anything.
+29. I've now had 6 missed or declined calls from 0480013567. My wife and son have had calls from the same number.
+30. I had a phone call from my LNP candidate’s office asking about local issues. I rattled off all my concerns and local issues, many of which she had created as the former LNP councillor. I gave the feedback to please ask her to call me to discuss my feedback. No call. She doesn’t currently have a job, so she has time on her hands. Spineless witch.
+31. Yep I got that a few hours ago Edit: got one of those text messages too but it was automatically picked up as spam and moved by my phone. Good job phone, political parties should not be exempt from spam laws, I realise they only are as they made the laws.
+32. Nope. Had a call from the labor candidate early on (smart man, I voted first day of pre polling ) he has a chuckle when I said I think chrisafulli is a tool and replied with “well I can’t say that on the phone”
+33. Yeah, my husband got a text but the weird thing was it was addressed to our son's name and he wouldn't have used his Dad's phone number for anything in over ten years so I don't know where they scraped the number from.
+34. Yeah, got a couple texts from the LNP telling me they are the only ones who can rescue Queensland. Unfortunately political cold calling, political texts and mailers are all exempt from the do not call register. And you can't even opt out of their texts.
+35. Yeah I’ve gotten several texts from the LNP in Northern Gold Coast this past week. Maybe 3 or 4? I’ve already voted a week ago anyway so they’re doubly wasting their time.
+36. i have had 3 different text messages shitting on ALP.
+37. Just got one now And got one yesterday So annoying
+38. We get spammed by the QLD LNP (and various Clive Palmer derivatives) every single election. We live in Victoria and now have a gleeful plan for any one of these greedy, evil cretins if they inexplicably turned up on our doorstep in the middle of the night in the pouring rain complaining of car problems.
+39. I have a rule. The first party to spam me gets a line through them. Better luck next time LNP. Muppets.
+40. I'm being bombarded by calls and texts from my local Labor member's office. By 'bombarded', I mean 3.
+41. Just hang up or delete. Only happens every few years. Don’t stress about it. Will be over Saturday.
+42. # Has anyone else been contacted by the LNP or Labor by phone or text?
+43. No I had Labor come to my door tho I just laughed at them and shut the door.
+44. Same issue here with a different name which was coincidently one of our sons.
+45. I can’t remember which election it was but labor send out a text to a bunch of people and the media jumped on it and crucified them for it
+46. I’d rather get spammed by a party that cares than a party that pretends to care (*cough* LNP *cough cough*)
+47. How many strikes does he think you should get for insolvent trading?
+48. "Mr Crisafulli said believed drug use was a health issue that can lead to crime issues" Then why not treat it like a health issue instead of giving people legal problems for possession of miniscule amounts?
+49. Great to be going back to the fifties. Why can’t governments base their policy on evidence instead of ideology?
+50. You have to remember that conservatives don't analyse their policies in the same way as you might. They believe that there are good people and bad people. A good person won't be caught with drugs. A bad person deserves to be charged with a crime or to die from taking an untested drug. No exceptions, no excuses, and maximum disapproval from the law because the bad people just have to have the personal responsibility. But when their child takes drugs? Well first off, how dare you, my little johnny would never do that, he's a good bou. Oh, he definitely did? Well he isn't a bad person, so that doesn't count, they're just a young boy who is learning. Don't ruin his life. When an aboriginal kid with no prospects in life jumps in the back of a car his friend stole? Well, he's a bad person, super jail.
+51. Another action that will drive youth crime upwards as kids are strip searched into a life of crime from drug possession
+52. Honestly we will have to protest this government, if we are dumb enough to elect it, on several things. Buckle up. This is going to be fucking shit.
+53. People laugh at America and here we are slowly becoming them
+54. Can we vote for parliament and staff to have random drug test then
+55. Conservative governments never believe in harm minimisation. They’d rather stick to the good old ‘lock ‘em up’ method.
+56. This is an own goal. By making the laws more strict, crime will go up “on the LNP’s watch”.
+57. Queensland quickly became a pretty weird and psycho police state in the Newman years. Sounds like he wants to bring that all back
+58. How's this fucker even going to run a surplus while building two new prisons every year? Still, I guess it'll help with homelessness. </s>
+59. Right wingers are fucking nutso. Whatever happened to a nice, balanced, accepting but equitable centrist party? Holy cow... Thank god everyone eventually dies. Can you imagine if we didn't
+60. It genuinely depresses me that Australia is about to vote this dude in.
+61. I dread the next 4 years. Fuck these backwards cunts. I'm so fucking sick and tired of conservatives wanting to drag us back to the 1850s because they're pissy that women can vote now and you can't lynch First Nations people anymore. Wish these cunts would just fuck off into obscurity.
+62. Yeah how good is fighting a war on drugs. But when Barnaby Joyce ends up drunk off his ass lying down in the street raving his munted head off, it’s all “calls for compassion” and “we should respect his privacy.” I fucken loathe these insidious cunts who think that everyone who isn’t them is some insolent poor that ought to be subjected to the harshest punishment. Seriously, if QLD lets these shysters in, they’re gonna regret it.
+63. The funny thing at this extremely late stage of the election is how they release this today to divert attention away from their costings in order to try and confuse the hell out of the electorate. They have been extremely devious throughout this whole election.
+64. Hi from Melbourne. I’m encouraged reading all your scorn and derision. I hope those pricks don’t get up on Saturday.
+65. This goon seems extremely competent at ignoring all evidence, including well known things such as the concept of harm minimisation, which advocates for policies such as what we have because it minimises the overall financial, social, etc costs to society and results in better outcomes for those participating in drug use. What a clown show.
+66. how can someone in modern times be so out of touch with modern problems and issues, back to the dark ages we go folks if this guy wins.
+67. This guy is really good at making himself less likeable with every passing day.
+68. Young Liberals would never be caught with Charlie. Never. This could never backfire.
+69. "We don't believe." Go away, your beliefs are not a justification against a medical reality.
+70. Did they just drop all their policies today or something? I would struggle to say what they were going to do 2 weeks ago and today this is the 3rd thing I have seen.
+71. Not that I particularly like Miles, but Crisafulli is an even more useless, smug and arrogant twat. He wants to take Queensland back 20 years with his populist-conservative garbage. Fingers crossed people don't buy the media hype at all. Hope this prick loses...
+72. And that includes members of his own party, right? Of course not. One rule for thee different rules for me and mu friends.
+73. LNP would bring back the death penalty for people with haircuts they didn’t like if they could.
+74. What a way to drive up youth crime. Get em while theyre young and stick em in the programs, and when that inevitably doesnt work, just shove em all in the jails!
+75. The LNP make policy based on this mystical illusion that the world is perfect, and perfect means in perfect alignment with their own views. Drug testing is a compromise that allows people to make mistakes (or not a mistake depending on your own views) and not pay for it with their life. Limiting that access stands for valuing "what's right" over what's moral... Bold move for someone who "believes in victims".
+76. At some point someone needs to ask the fool why he is pro-crime. Criminalising drug users leads to further criminal activity, worse social outcomes, unemployment, etc so like why?
+77. Ok, here it is one last time. I’m still not convinced LNP will take the seat of Mackay 😐[https://www.brisbanetimes.com.au/national/queensland/deputy-mayors-wife-labels-racegoers-ugly-freaks-20100603-x04v.html](https://www.brisbanetimes.com.au/national/queensland/deputy-mayors-wife-labels-racegoers-ugly-freaks-20100603-x04v.html)
+78. LNP is just so far away from their liberal principles it’s not even funny. They should be forced to dropped liberal and be called grumpy conservative fuckwits
+79. So which companies has Crisafulli picked out to profit from building and running the extra prisons? And how much have they donated to the LNP to get this retrograde policy up and running?
+80. This man need to go to hell, certainly not Parliament House.
+81. That isn't a reminder to go and not vote for these fucks, it's a directive.
+82. Sorry kids, if you do ecstasy at schoolies then you DESERVE to overdose on cheap pills. They really can't help themselves can they? They can't just try to be the big oil and gas party while also genuinely serving the public, they need to make the worst choice at every turn.
+83. Everything he says just makes me want to knock him out. What a regressive outlook he has on everything. This is the approach America had and it landed a lot of fairly innocent people in extremely bad legal situations over a tiny amount of illegal substances. Drugs are not going away and people are always going to take them. Why is alcohol and tobacco legal? 2 of the worst drugs there are. Give me a comedown over a hangover any day.
+84. Does this dude have any ideas other than throwing people in jail?
+85. He knows his votebank's the 50-60 yos who don't give a fuck about anything but themselves, so he's doing good to appease them
+86. The LNP, small government for rich people and big companies; big government for poor people.
+87. "I'm a fuckwit and I want to win the fuckwit vote! So if you're a fuckwit, you should vote for my party, we're all fuckwits!"
+88. "we want to be tough on crime. That is why we want to make more things into crimes, meaning that more crimes are committed" seems to be their entire platform
+89. While people who can read scientific studies know this is a big step backwards, this is going to win a lot of votes.
+90. Can anyone elaborate on why the AMA seem to spring up everywhere around the LNP? This is the second time I’ve seen them backing LNP/speaking against the ALP. Just curious Edit: sooorrrrryy, I misread. Sleep deprived mum here just trying to survive lol.
+91. It’s never good when small town spivs, hillbillies and religious whackos get to run a major urban area like SE Qld. I’m starting to get a bit worried at what these cretins are going to do.
+92. So we're just going to follow the US with privatised prisons soon right?
+93. Screw what the experts think and the statistics show, it's time for the LNP's gut feelings about issues.
+94. https://www.reddit.com/r/australia/s/42q575Lj85 You reckon Duttons boy would end up in Court?
+95. "Mr Crisafulli said believed drug use was a health issue that can lead to crime issues" cocaine usage often leads to white collar crime, just ask anyone in the LNP.
+96. This is some Nixon level BS. It didn’t work then and it won’t work now.
+97. The list of people I'd hurt if I knew I'd get away with it is pretty damn short, all things considered. But he's definitely there.
+98. Pretty sure Dutton's kid was in qld when that pic was taken
+99. Treating drug use as a health issue instead of criminalizing it makes so much more sense
+100. Liberals seems to think the death penalty for minor possession is the solution… I just don’t get why when all the evidence shows this is not a viable solution at all.
+101. Parents can discuss drugs and safety as much as you want, kids experiment and will most likely at some point try it. Being able to test at events was a safety net. Not encouraging, but accepting they will and offering a level of protection. I think it is foolish to take it away and question how many lives will be lost.
+102. https://preview.redd.it/tk8r6z7mdrwd1.png?width=434&format=png&auto=webp&s=1bcc56568ab23725cf51f80074bc9da20a5f8be9 chemical name for CanKet is 2′-Fluoro-2-Oxo-PCE \-not an opioid
+103. Let's lower crime by... Making it more common to be charged with a crime than to go to diversion Fuck me, what a genius
+104. This guy is about as usual as an extra hole in the ass.
+105. Good luck QLD, I hope this fool doesn’t win. 🫣
+106. I don't understand what the government's role thinks it is. The government's role is to manage the economy and workers rights. I'm against all federal funding against drugs because tax payers don't benefit from anti drug laws. I don't see why my taxes should go towards anti drug laws.
+107. As an ex-cop, this is a terrible idea. The types of people who benefit from the drug diversion program are people who are caught smoking a joint, or with a tiny bag of weed in their pocket. They have no criminal histories and are just normal decent people who have likely been smoking weed recreationally for years while ALSO contributing to a healthy, functioning society and community. The diversion program lets them cop a slap on the wrist without their entire future being thrown down the drain from a drug conviction.
+108. Stop it David I can only vote against you so much!
+109. This just ruined my high (don’t worry Mr crisacryboy it’s medical I’m not a criminal) I am genuinely scared that the LNP will win and how fucked our state will be in a matter of years. Catch me October 30th weeping silently infront of the Tele at 3am so my wife and kids don’t see me.
+110. What the fuck is it with sleazy, Italian blokes trying to get into power and shill this country?
+111. Queensland is so fucked if the LNP win this election. It will be 4 years of failed policies. Nothing the LNP do ever benefits Australians. They are the party of big business and fuck everyone else. Their mantra is how do we make it so, you the taxpayer. Are bled dry of every cent you have. New and creative ways to fuck over the little guy. The LNP way. If these idiot politicians on both sides had any fucking sense. They'd legalised cannabis and tax the fuck out of it. Stipulate all tax revenue from cannabis will go to health care, schools, TAFE, job training. They'd have the most mellow, well trained workforce in the world within 4 years. Hospitals that are state of the art. Schools that are world class. Job training second to none in the entire world. Instead they'll keep going after weed. Because it wins them votes with conservative idiots. Who think people will become lazy because of weed. But its OK for people to get shit faced drunk every weekend. Never seen someone violent on weed. Seen a lot of brawls between drunk fuckheads on weekends though.
+112. Prisons will be full in a couple of weeks and will just produce 'even harder addicts'...
+113. Two steps forward ten giant steps back… we were all warned…
+114. I cant believe this fucking idiot is going to win
+115. I missed the good old Sir Joh days. Only been here since 2000. This guy and his party is the most screwed up backward policies I've witnessed in my 24 years as an Aussie. Newman seems great compared to this. Gonna be a shit few years :(
+116. Has the LNP run out of ideas and figure "FUCK IT WHY NOT" or been watching FOX for the last couple months?
+117. "we don't believe in a soft approach to drugs"... Acting like they don't think drugs exist. Like what, if you don't offer testing for them, then there are no drugs that could need testing in the first place? Or does he think that a one strike rule will suddenly mean that every person in possession would get caught, thus rendering testing redundant?
+118. Except pot is legal and quite easy to get a script online for... This guy's a Muppet.
+119. Drug use should always be seen as a health issue not a criminal one. Sale and distribution is different, but use should never be criminalised! If Cisafail does this he is doing what the LNP do best and that's sending things backwards, it's 2024 criminalising drug use has been proven time and time again to be not the right way to approach it, instead we should be looking at ways to stop the dealers and top of the chain or think about legalising and regulating as the positive socio economic benefits by doing so and taxing the hell out of it are enormous. It's just everyone is too scared to discuss!
+120. This owned career politician is the most vile type of sycophant. Career politicians are all Corrupt at the core..
+121. What a fucking dead shit. How tf can anyone vote for LNP?
+122. The hand that giveth also taketh. He will give you reason to turn to a life of crime, and no way out of it
+123. As a drug diversion counsellor I urge everyone to see this as an attempt to piggy back off the youth-crime scare and to garner last minute votes. Getting rid of drug diversion will massively clog up the courts and raise costs significantly. It's a terrible decision and one that would not help the current situation with youth crime
+124. I cannot stand Crisafulli and his horse shit policies. Blokes an absolute flog.
+125. The party of lowkey yet widespread political violence. These policies ***will*** kill. Their weasel words on abortion will too. Same for their youth detention hysteria. And I wish I could say that was out of character for these morbid goons
+126. Why is this always the case for anything right of centrism, seriously what is wrong with conservatives (I’m asking unironically I want to know what evolutionary purpose there would be to produce such stupid ingrates like that)
+127. its like... every. single. idea they come up with is terrible you'd think there would be at least one that would earn at least a "hmmmm ok" but jesus christ, put some effort in dave

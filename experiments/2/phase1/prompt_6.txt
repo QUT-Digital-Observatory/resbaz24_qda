@@ -1,0 +1,138 @@
+Your job is to analyse a series of Reddit comments from discussions related to the 2024 Queensland State Election. The major parties that sought election were the incumbent Australian Labor Party (ALP) and the Liberal National Party (LNP) opposition. The Queensland Greens (Greens), One Nation and Katter's Australian Party were minor parties in the election. 
+
+The key five issues that the major parties campaigned on during the 2024 Queensland State Election were Youth Crime (YC), Cost of Living Crisis (COL), Health (H), Energy and Infrastructure (EI), and Abortion Laws (AL). We include some context of the major parties positions on these issues. 
+Youth Crime (YC):
+- LNP: Advocated for stricter penalties for young offenders, including the 'Adult Crime, Adult Time' policy, proposing that serious offenses committed by youths be met with adult sentencing. 
+- Labor: Downplayed claimed youth crimewave. Focused on rehabilitation and prevention programs, aiming to address the root causes of youth crime through community engagement and support services.
+Cost of Living Crisis (COL):
+- LNP: Proposed measures such as abolishing stamp duty on new builds for first home buyers and re-establishing the productivity commission to review building industry regulations, aiming to alleviate housing costs. 
+- Labor: Introduced initiatives like 50-cent public transport fares, a $1,000 energy rebate, and free lunches for state primary school students to ease cost-of-living pressures.
+Health (H):
+- LNP: Committed $590 million to an 'Easier Access to Health Services Plan,' aiming to reduce ambulance ramping and hire additional healthcare workers. 
+- Labor: Focused on maintaining and expanding healthcare services, addressing hospital capacity issues, and investing in new health infrastructure.
+Energy and Infrastructure (EI):
+- LNP: Criticized Labor's Pioneer-Burdekin Pumped Hydro Project as financially unviable and canceled it upon taking office, opting to explore smaller-scale hydro projects instead. 
+- Labor: Proposed large-scale renewable energy projects, including the Pioneer-Burdekin Pumped Hydro Project, to transition towards 80% renewable energy by 2035.
+Abortion Laws (AL):
+- LNP: Stated there would be 'no changes' to abortion laws under their government, maintaining the status quo established in 2018. 
+- Labor Party: Supported the existing abortion laws and opposed any attempts to repeal or amend them. Asserts that LNP intend to restrict access to abortion services based on the views of some of their members.
+
+Analyze the comments and code them according to two dimensions:
+1. The ISSUE the commenter is primarily discussing, if it is one of the five listed above. Use the codes YC, COL, H, EI, AL. If no issue applies, omit the code entirely.
+2. The PARTY the commenter appears to support. Use the party codes ALP, LNP, Greens, ON, KAP. Infer party support where possible, e.g. a commenter fearing the outcome of an LNP victory likely supports ALP, and vice versa. Ensure there is either direct or clearly inferable support for a party before assigning a party code. Assign a PARTY code only if the comment expresses explicit support for, or opposition to, a specific party or its policies. This support or opposition must be clearly discernible; mere mention of a policy is insufficient. Look for indicators such as positive or negative sentiment towards a party's actions or policies or explicit endorsements or condemnations. Comments may express opposition through sarcasm or irony. In cases where party support is not clear, omit the party code entirely.
+
+You will output JSON as a list of objects where each object has an "id" (integer) property of the comment id, an "issue" property set to the issue code string, and a "party" property set to the party code string. In cases where you cannot determine an ISSUE or a PARTY, do not set a null value, omit the appropriate JSON properties entirely,  e.g. If the first comment did not have a matching issue and you could not determine party support, then the object would simply be {id: 1}.
+
+Comments follow:
+
+1. The reality is that 99% of policy from a government comes from the public service, not the politician. The 50c trial would have come out of a public service working group on the Olympics and the need to do a pressure test to fix things. Most of the things they announced during an election are their own ideas, and they usually pop out without any understanding of what it would actually take to enact it. They just know the public servants will do their thing.
+2. >*"When I worked for Meghan Scanlon a while back, she was a vocal supporter for all of these policy's and the greens weren't acknowledged in ANY policy discussion."* I hope you realise that, logically, that doesn't mean that policies about free public transport and free school lunches didn't originate with the Greens. Rather, all it means is that the Labor Left took those policies from the Greens, without giving the Greens any attribution. The Greens' platform has included free public transport for years now. Of course, "borrowing" policies from other parties is a very common strategy in politics - Labor and the Liberals frequently poach policies from each other when it suits them to do so.
+3. "Iv seen a lot of people saying that the greens were the ones who came up with the 'free public transport' idea and Miles stole it. While this statement is incorrect, it also shows a lot of misconceptions." Except this is exactly what happened. Same with free primary school breakfasts. Greens thought of it first.
+4. You guys are writing up some narrative that the Greens are chucking a hissy about Labor adopting these policies. They’re not. They’re claiming it as a win for the people and highlighting that Labor’s versions fall short of the radical changes we need to reform a broken system.
+5. What percentage of votes did the greens lose from last time that makes it an abysmal performance?
+6. The push for assisted dying has been around decades but took a corner in 2012 after [QCCL](http://qccl.org.au) and several other orgs held a big forum and advocated until the VAD was passed Jan 2023 But tbh, who cares who came up with this or that as long as it happens?
+7. ALP's right faction had all the juice for fucking forever and I'm DAMN sure it was only losing seats to the Greens that gave the left faction the evidence they needed to get a turn.
+8. Maybe the greens should get back to basic and practice a bit of direct climate action...
+9. A bit more ranty but if the 'greens policies' are so popular, why do they do so bad in every major city except Brisbane?
+10. It's a lesson I feel Federal Labor is going to learn far too late. Miles, despite doing more than any other political leader in our country on Cost of Living relief, still lost on Cost of Living.
+11. The left wing of the Labor party has been around for 70 years with minor policy goal changes, what they publicly announce as policy is based on pragmatism and incremental change. Penny Wong is a gay woman that opposed gay marriage in the 2000's when it was unpopular. But pushed for gay marriage in 2016, being one of the main forces behind same sex couples having basic rights. Penny Wong for her WHOLE life supported gay marriage, but she bit her tongue in favour of pragmatism and it paid off big time. So officially she only became pro same sex marrige in the mid 2010's Every single member of Left Labor supports free public transit, and they finally got there time in the sun!!
+12. Yep.The Queensland Greens proposed the same lunch scheme back in 2021 and it was costed at $1.14b. Queensland Labor attacked it as a waste of Taxpayer funds, irresponsible spending etc.
+13. Sure, but it's hardly like a policy 'belongs' to any one party. Free PT, school food, whatever - this is shit proposed in lots of places and "we thought of it first" isn't the same as ownership.
+14. Attitudes like this are why the greens vote dropped. The greens should be helping Australians lean left instead of worrying about their own branding. Are they green policies? Yeah. Should you all be happy they were going to come in. Also yes. Greens are more interested in not becoming left-labour and establishing their own brand, that they would vote against a greens policy that only committed 500 mill instead of the 1 billion. I say this as someone who goes between green and Labor.
+15. Again, these are Left Labor policies, the faction thats been around since gough whitlam. The faction that made uni free (for a bit) and created our modern social-welfate state :)
+16. Never said that the greens were upset, i was pointing out that this was a 'Left Labor' Government with no policy input from the Greens!!
+17. lost a seat and almost lost another, when everyone exspected them to win 4 in total, vote percentage does not matter. the KAP won 2.6% of the vote but is looking at 4 seats won, its all about where the votes are!!
+18. Yeah, I agree. I have said IRL that federally, there has been lots of tinkering around the edges, but no real change. No major reforms. Albo is not perfect but at least he's not actually bad for Australia, like scomo. I do understand why they are hesitant, though. Look at Shorten. Everyone is complaining about property but got scared away by the media when someone was actually going to do something about it a few years ago. I have a very good federal Labor MP, though. Anika Wells. She's hugely active in the community and comes to school assembly when I invite her as part of the P&C. Has helped our school financially and never mentioned it to the media. So my vote lands there too.
+19. The whole cost of living thing though it a protest vote by... can I say less informed voters? It's a worldwide issue. The cost of living issue is really an issue with capitalism. Corporate profits drove the inflation Worldwide. But people, me included, see less money in their pocket on the same pay. Natural thing is to blame the government, which I do understand. But in reality, we have a system designed that CEOs are fired with a 1% growth in profit. Where there are shareholders influencing the media and political parties (looking at the LNP) that mining companies would leave if we taxed part of their 100s of billions of profit. Anyway. Ranted more than I wanted lol
+20. It was Education Minister at the time Grace Grace who laughed at the idea of free lunches.
+21. Yes, the right wing of the labor party disagrees with free lunches!!
+22. So when the state's voters are swinging right, and the most left side party barely loses any votes, that's abysmal?
+23. Really, didn't know that. Good to see they have seen the error of their waya, a bit late tho
+24. its called 'flatlining the vote', there was -0.1% swing, but they failed in picking up any seats when there was a 7% state wide swing against the ALP. Along with losing south Brisbane. With issues like abortion on the ballot, the green's could not capitalize on anything and did abysmally when all the polls exspected them to gain cooper and mcconnel!!
+25. They played her response from when it was first flagged on the radio a couple of weeks ago.
+26. I guess it comes down to why people abandoned the Labor party. If they responded to the Law and Order narrative from the LNP why would the Greens of all parties benefit from that?
+27. And to think it could have become an LNP campaign, Labor is lucky heh
+28. Depending where you are in Morayfield you could catch the train to and from work. So then somewhere along the train line maybe Wooloowin or Eagle Junction Station would suit, great schools and parks around that area.
+29. I’m assuming you know your dog will have to quarantine in Melbourne on arrival https://www.agriculture.gov.au/biosecurity-trade/import/arrival/post-entry-quarantine
+30. Commute - You are correct that you'd be looking at a reverse commute. But even so, Gympie Rd (the main arterial road which you will take out of Brisbane on the way to Morayfield), is a timesink even when traffic is light. So I'd suggest picking a location which limits your exposure here. School - [MySchool](https://myschool.edu.au/) gives you all the details you need. Assess the catchment maps of areas you are looking at to determine the state schools you will be in catchment for. Out of catchment applications are not guaranteed. Obviously if you want to go private, thats different (pay to play). Highsteet - Brisbane is going to disappoint you here I think. Most of our neighbourhoods are sprawling and few have what you'd be used to in London. I have some experience here, as I lived in Ealing for 2ish years. You will certainly struggle to find many spots that have something within walking distance of your front door thats for sure. Locations - Ascot and Hamilton are certainly nice (if you can afford it). They are up there in terms of some of the priciest locales on the Northside. Ascot also has what is probably the closest thing to a traditional highstreet in Racecourse Road, so there's that too.
+31. Redcliffe or Scarborough if you want to be closer. Hamilton or Ascot is def nice tho if you don mind the drive. Edit: haven't been for London for over 10 years, but James Street in the valley probably is the closest to the high street vibe you want
+32. I would definitely consider Sandgate/Shorncliffe. The only one of your needs it doesn’t meet is super easy access to the Valley/CBD, but personally I would trade that for being so close to the shorefront.
+33. Just adding Paddington to the list for the brief (commute would be closer to 1 & 1/4 hours Nundah, Clayfield, could also be worth looking at Scarborough, Sandgate also come to mind
+34. What about Sunshine Coast area? The commute is definitely manageable and the amount of traffic between Sunshine Coast and Morayfield is generally good (peak hour traffic is usually the worst between north lakes and Brisbane, so you would avoid that). You could look at Caloundra, Mooloolaba, Alexandra headland, Buderim or Maroochydore.
+35. If you don’t mind the commute from Brisbane Paddington or Nunduh sound like they’d suit you, or further north there are Redcliffe and North Lakes, or even Nudgee (but it isn’t really a beach, just so you know it’s more mangroves)
+36. If you’re working in morayfield and wanted a relaxed lifestyle, Sunshine Coast which is north of Brisbane. A great choice.
+37. I'd probably check out the nicer parts of Redcliffe. It seems to be coming along these days. I don't think the commute would be a problem from there. Some quite nice little bars and restaurants there and some beach. I've done a stint commuting to Caboolture Hospital from near the city (Auchenflower, near paddington that you looked at) and it wasn't too bad. Although I probably wouldn't want to do that long term as it's still a long while in a car.
+38. Commute from Hamilton to Morayfield during peak hour will be 2 hours+. That's one of the major problems with Northside travel in Brisbane the Bruce highway is mega fucked
+39. If you want a high street, Ascot, Bulimba, Paddington and West End all have them and are all very nice suburbs that also have great schools. Can't really comment on the commute though, but you would be a short distance from the CBD and river.
+40. Graceville or Chelmer. Lots of parks and on the river. Just check the flood map first for flood locations.
+41. I would also check out West End, Highgate Hill and Dutton park. Only just over the river. Google Maps puts it at 45 mins to 1.25 to arrive at 8:30am. The 1hr 25 would be an anomaly I would reckon.
+42. A couple of alternatives to Ascot and Hamilton would be Hendra or Clayfield. Both nice suburbs with easy access to the gateway motorway north Edit - also there is r/movingtobrisbane which has lots of these types of questions
+43. Pretty sure they would’ve done their research quite a while ago.
+44. Yes I think that’s basically why we are being drawn to Ascot. Seems to be a home from home which I know sounds a bit silly but I can’t imagine not being able to nip to the shops. Perhaps I’m fixating on this too much and would just get used to it
+45. Felt like little New Zealand when I was working there.
+46. Redcliffe would be nice for the kids too with the beach (much like an English beach apparently) and the foreshore has a lot of shops, cafes, bars etc. It’s also got nice schools, the train, and not far from Morayfield.
+47. Thanks yes Paddington also seemed to fit the bill but perhaps just too long a commute
+48. Haha see this is the thing. We are London born and bred so whilst a relaxed lifestyle sounds good I think I’d miss the buzz
+49. Yes forgot to mention- we don’t necessarily have to work 8-5. So we could avoid the rush
+50. Thanks yes I was wondering if venturing just over the river would be an option
+51. There’s a heap of suburbs where you’ve got a few cafes/bars/shops (grocery and pharmacy) within walking distance. If you work near Morayfield/Caboolture train station, you can catch a train in too. A lot of people seem to have an issue with the trains but I’ve found them to be reliable and good frequency in the last 15 years that I’ve been using them regularly. Google Maps tends to be really good for public transport planning in Brisbane.
+52. As Shopkeeper56 said, highstreets are not common here unless you are right in the most inner city suburbs. Ascot is good, there are a lot of cafes/shops, but not in high density one street like in London. You'll probably still have to drive to the supermarket or to go out for breakfast unless you luck out on a great location. Ascot to Morayfield is still a significant commute to and from, especially during peak hour traffic.
+53. I figured so haha! But always an option for future.
+54. The main issue is that highway is the main and pretty much only route from Brisbane to Caboolture. So traffic occurs most of the day. Though currently as of 2pm local time it seems to be about a 45 minute drive.
+55. you'll be going in the opposite direction to traffic. it will not be 2 hours. \~50 mins probs
+56. Jump onto realestate.com and use the map function to get an idea on where properties are in relation to where you are going to be working. That may help too.
+57. Yes that’s about what we expect. To be honest it’s not unusual at all coming from London to have to commute for an hour or so to work. The main difference is that would not normally involve driving it would be a train. But the actual idea of an hour to and from work is pretty normal for us. Especially to live in an area we love
+58. Yes. I actually came over in September and did the commute so I think less than an hour from Hamilton or Ascot is achievable most days, obviously some days there will be an incident but that’s life
+59. There is a train line from Eagle Junction to Morayfield. Since you are going out of the city though you won't get peak hour scheduling and it runs every 30 minutes.. Now Hamilton or Ascot don't sit exactly on that rail line but there is a station at Ascot which will take you to Eagle Junction in 5 minutes but that again only runs every 30 minutes and not sure how out of sync the train schedules will be.
+60. Oh wow that could be a real game changer! Do you know the name of the website to check the train times?
+61. Haha, gotta love the shovel, my favourite recently is “Tupperware Files for Bankruptcy After Being Unable to Find a Single F**king Lid For the 10 Million Containers in Their Warehouse”
+62. No need for 50 cent bus tickets we’re bringing back the horse and buggy.
+63. I feel its more like Newman back to the future again 2012!
+64. I still fail to see the advantage to daylight savings in Queensland. 17:38 here in Brisbane and still daylight, waiting for the sun to go down to drop the temperature a bit.
+65. If Labor wants to mend its relationship with the regions this is one idea they need to drop
+66. Seriously this sub has become so pathetic. Election is democracy, it’s not like anyone put a gun on your head threatening you to vote for someone you don’t like. You vote, you express your view, and whoever has more votes wins, simple as that. ALP lost because the other party simply got more votes, how hard is it to understand this?
+67. *yawn The shovel sets clock back to 70 years to find that joke
+68. Ya had me in the first half, and I'm not gonna lie, I got very excited.
+69. The people have decided. I guess you are out of touch with the common Queenslander and should revise your thinking ;)
+70. This link has been shared 1 time. First Seen [Here](https://redd.it/1gdnvzj) on 2024-10-27. --- **Scope:** Reddit | **Check Title:** False | **Max Age:** None | **Searched Links:** 0 | **Search Time:** 0.00321s
+71. Newsflash not everyone is a cuck leftist who wants everyone to work for State Government and wants to chop up babies
+72. You don’t find the sun blasting through your windows at 4:15am in the summer annoying?
+73. You go to work, come home and it’s dark. That’s life without daylight savings. It’s so stupid.
+74. The cows wont know when to get milked and the curtains will fade!!! ![gif](giphy|69QYIqHQQEVbO)
+75. It’s not even two days after a pretty eventful state election, one which is likely to have significant changes for a lot of Queenslanders. Things will calm down in a few weeks. In the meantime, if you’re not interested, you’re not forced to engage.
+76. Under democracy, people also have a right to make fun of candidates they don't like, and that goes for all spectrums. LNP supporters have every right to make fun at Miles and co. Same way Labor/Greens have the right to make fun of Crisafulli and co. Or would you rather us be like Russia, where making fun of Putin will land you a one-way trip to a gulag in Siberia?
+77. Why do so many people keep equating the mentioning of someone being unhappy with an election result to not believing in the democratic process. I don't think I've seen one person on here state that the win for the lnp was undemocratic, just that, who would have thought, a lot of people in a subreddit dedicated to a city would be unhappy about the result It requires such a fucking leap in judgement to to derive the thought process to begin with
+78. You need to loosen your grip there. Its a national past time to take the piss out of whoever is elected. Getting upset at people discussing the outcome is flat out strange.
+79. Why are you *so* upset people are using their democratic right to complain and post political satire? A number of countries in the world don't get to do this. Political satire is democracy.
+80. Everyone understands how democracy works mate. You can still comment on the outcome if you’re not happy with it, it’s a free country.
+81. Mate you’re on the subreddit for Brisbane. Just look at the election results and you’ll see that the majority of electorates within the city stayed with Labor. I’m sure you’d see people celebrating in regional pubs full of oldies. Just like you see (generally younger) city based redditors unhappy. No one is complaining about the election being undemocratic. We have a good trustworthy system here unlike the US.
+82. Shitting on democracy in a democracy is probably the most democratic thing you can do.
+83. Your understanding isn't quite correct. It's not the party with the most votes that wins - it's not a popular vote system. It's the party with the most *seats* that wins. It's possible to win an election and have had overall less votes than another party (a famous example is Hilary v Trump in 2016 - Trump received less votes than Hillary but still won).
+84. It's a joke, why are you crying over this? Political satire is the backbone of this country
+85. I'd much rather we have the current system where anyone can poke fun at any government or politician rather than what conservatives seem to want where you're not allowed to poke fun at them because it hurts their feelings :(((
+86. Democracy only works if people actually know what they are voting for.
+87. This is Reddit -if you come here and speak truth or state facts, you’re going to get downvoted because it’s all they can do to show the shallow end of the human gene pool disagrees.
+88. You've been able to make funny articles about Labor for years, don't have a sook when someone pokes fun at your favourite politician. Get a sense of humour and make some jokes of your own, maybe you'll stop being such a sore winner/loser depending on the election results at the time. oh never mind, you're a 2 month old account that posts almost exclusively racist/bigoted/misogynistic shit on the other australian sub and is obsessed with praising the LNP and PHON. boring
+89. Your account has only existed for less than a month and almost exclusively seems to exist to post solely about this election. How authentic.
+90. Imagine getting salty over a satire article. Get a sense of humour and harden the fuck up princess.
+91. Are the North-Koreaboo baby killers in the room with us right now?
+92. But if we don't do that how will we control the weather?
+93. DST is a solution to a problem that didn't exist. You already have extra daylight in the summer months, get up earlier and go for a walk if you want to use it. Really want extra afternoon specifically? Plenty of jobs with flexible times, find one.
+94. As someone who has lived across Australia, I am genuinely so curious about why Queenslanders want daylight savings. How does it benefit you?
+95. Less annoying than the sun being up at 8 pm
+96. I’m a morning person, and I love it. Brisbane is too humid to have everyone gong to bed an hour early
+97. If it takes you that long to commute maybe you need a different job.
+98. Ah my god!!! There’s nothing we can do about it!!!
+99. Wait something is free? Don't tell the Libs or they'll privatise it!
+100. Just like how people in this sub can’t stop calling anyone who don’t vote ALP “stupid boomer”/“dumb bogan”
+101. > Your understanding isn't quite correct. It's not the party with the most votes that wins - it's not a popular vote system. And be fucking thankful we don't, if we ran on popular vote first past the post we'd almost only ever have LNP governments.
+102. Nah if you come here and have a sook about a satire article because it picks on your favourite politician then you'll get downvoted for being a softie.
+103. Because all that is on here is 'election' related. This place should be renamed r/qldpolitics
+104. Yep the LaborGreens and promiscuous hoes of inner Brisbane love the baby chopping rituals to Moloch
+105. Sounds like it shouldn’t bother you if it’s implemented then…. Don’t like it, plenty of jobs with flexible times, find one.
+106. Not sure why people want it, but it is widely studied that it's bad for the human body
+107. The sun coming up at 430 is a bit of a prick
+108. After I've left work, commuted through the city, picked up my kid and got home, it's 4:30-5pm. It starts getting dark by 5:30, and sunset at 6. I leave work around 3:30-4pm.
+109. I must say, I do enjoy leaving home at 2am for those early Lismore/Casino starts at this time of year...............
+110. Move Brisbane to GMT+11 permanently, please. North Queensland can do whatever they want, as proven on Saturday clearly Brisbane and the rest of the state are absolutely nothing alike.
+111. This coming from someone detached enough to think that changing the clocks gives them more daylight....
