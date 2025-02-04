@@ -1,7 +1,7 @@
 from qda_03_prompts import versioned_prompts
 from os import path, makedirs
-from resbaz24.genai_google import GeminiAIModel
-from resbaz24.documents import SimpleDocument, documents_to_prompts
+from qdaai.genai_google import GeminiAIModel
+from qdaai.documents import SimpleDocument, documents_to_prompts
 import pandas as pd
 from tqdm import tqdm
 import json

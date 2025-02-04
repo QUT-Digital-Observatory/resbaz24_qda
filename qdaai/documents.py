@@ -1,5 +1,5 @@
 from typing import NamedTuple, Optional
-from resbaz24.text_cleaning import truncate_words, strip_whitespace
+from qdaai.text_cleaning import truncate_words, strip_whitespace
 import random
 
 class PromptDocument(NamedTuple):

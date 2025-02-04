@@ -1,24 +1,31 @@
 # Qualitative Data Analysis with AI
 
-This is the code to support the ResBaz 2024 workship on Qualitative Data Analysis with AI by Mat Bettinson <mat.bettinson@qut.edu.au>.
+This repository contains:
+* A dataset of Australian Reddit data before and after the 2024 Queensland State Election. See [readme](2024_qld_election_reddit_dataset/dataset_readme.md).
+* A Python package to process documents, and run AI models with strict JSON schema-defined responses.
+* Jupyter notebooks to illustrate the basics of importing data, assembling prompts, and calling AI models.
+* PDF of the [QDA workshop slides](qda_workshop_slides.pdf).
 
-This repo contains a freshly composed dataset of Australian Reddit data before and after the 2024 Queensland State Election. There is a [separate readme](2024_qld_election_reddit_dataset/dataset_readme.md) for that.
+It was created to support a Qualitive Data Analysis with AI workshop, initially at ResBaz 2024 and was revised for the 2025 DMRC summer school.
+
+It was created by Mat Bettinson <mat.bettinson@qut.edu.au> and with feedback and presentation assistance from Robert Fleet <robert.fleet@qut.edu.au>, staff members of The Digital Observatory at Queensland University of Technology.
+
 
 ## Folders
 
 - `2024_qld_election_reddit_dataset` - The dataset of Reddit data before and after the 2024 Queensland State Election.
 - `experiments` - Prompts and AI coding run data for part 3 of the workshop. Of particular interest is `experiments\1\phase1\phase1_assembled.csv` which contains coding data for all ~25k comments.
 - `outputs` - simple demonstration outputs from parts 1 and 2 of the workshop.
-- `resbaz24` - A Python package containing code to process documents, and run AI models with strict JSON schema-defined responses.
+- `qdaai` - A Python package containing code to process documents, and run AI models with strict JSON schema-defined responses.
 
 ## Notebook files
 
-- `qda_01_making_prompts.ipynb` - A Jupyter notebook to illustrate the basics of importing data and assembling prompts using the `resbaz24` package.
+- `qda_01_making_prompts.ipynb` - A Jupyter notebook to illustrate the basics of importing data and assembling prompts using the `qdaai` package.
 - `qda_02_ai_responses.ipynb` - A Jupyter notebook illustrating calling AI models, and handling JSON responses
 
 ## Python files
 
-In the final part of the workshop we 'rip the backaid off' and switch to Python files to illustrate the basics of running and organising a series of experiments, cf. the experiments folder.
+In the final part of the workshop we switch to Python files to illustrate the basics of running and organising a series of experiments, cf. the experiments folder.
 
 - `qda_03_prompts.py` - Versioned prompts for our Queensland Election dataset analysis experiments.
 - `qda_03_pipeline.py` - A class containing the main code to run an experiment.
